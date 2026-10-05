@@ -8,7 +8,8 @@ and was verified against the **City Never Sleeps** major update (2026-09-29).
 shadow casting, glows, viewmodel and tracers. The CPU/GPU savings that don't hurt
 readability are kept.
 
-**Target setup:** Ryzen 7 9800X3D, NVIDIA GPU, DirectX 11 (the Windows default), Windows 11.
+**Target setup:** Ryzen 7 9800X3D (SMT off), RTX 5070, 2560x1440 @ 270 Hz, DirectX 11, Windows 11.
+Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, which the SearchPaths already mount).
 
 | File | What it is |
 | --- | --- |
