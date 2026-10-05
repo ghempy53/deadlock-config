@@ -664,12 +664,10 @@ GameInfo
         // panorama_max_overlay_fps                   "30"    // Fps In the settings/esc menu.                                    [def: "60"] // (convar gone post-CNS)
 
         // --- 6. Camera Tweaks ---
-        citadel_melee_shake_duration 0
         // citadel_camera_listening_offset    "-1"   // To be completely honest I have no idea but I want to test this.  [def: "0"]
         citadel_camera_soft_collision_angle         "75"    //                                                                  [def: "75"]
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
-        citadel_camera_wobble_disable               "true"  // I believe this disables the camera wobble when heavy melee'd or talking walker/guardian damage. I like it
-        citadel_melee_shake_amplitude               "0"     // I believe this properly disables the camera shake on heavy melee                 [def: 0.55]
+        citadel_camera_wobble_disable               "true"  // Client-side; disables camera wobble when heavy melee\'d or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]
         engine_accurate_input_processing_delta_time "true"  // When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) [def: false]
         r_citadel_clip_sphere_min_opacity           "0"     // Removes the blur from the pinhole camera                         [def: "40"]
 
@@ -688,7 +686,7 @@ GameInfo
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
-        r_texture_stream_mip_bias      "0"   // Worth adjusting, practically how good your textures will look (higher = blurrier).   [def: "0"]
+        r_texture_stream_mip_bias      "2"   // Matches in-game Texture quality Low (Low=2, High=0; the menu writes this). Higher = blurrier. [def: "0"]
         // r_texturefilteringquality      "5"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x [def: "1"]
 
         // ================ IMPORTANT ================
@@ -727,7 +725,6 @@ GameInfo
         r_citadel_shadow_quality                 "0"    // Deadlock/Citadel shadow quality level (0 = lowest).              [def: "1"]
         r_size_cull_threshold_shadow             "2.4"  // Threshold of shadow map size percentage below which objects get culled (higher = cull more to save shadow cost). [def: "0.2"]
         sparseshadowtree_disable_for_viewmodel   "1"    // Disable SST generation and runtime for viewmodel (use original CSM rendering).   [def: "1"]
-        sparseshadowtree_enable_rendering        "0"    // Sparse Shadow Tree (static geometry into shadow cascades). Default became true in CNS, so "0" now actively disables it. [def: "1"]
 
         // ================ Lighting ================
         cl_retire_low_priority_lights               "1"    // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"]
@@ -879,7 +876,7 @@ GameInfo
         // snd_mixahead                             "0.05"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
         snd_soundmixer_version                   "2"     // [def: "2"]
         snd_steamaudio_reverb_order_rendering    "0"     // The amount of directional detail in the rendered audio by Steam Audio. [def: "0"]
-        snd_steamaudio_num_threads               "4"     // Audio thread count. Upstream used 6; 4 chosen for an 8-core 9800X3D. Code default is 2 (cheat flag). [def: "2"]
+        snd_steamaudio_num_threads               "2"     // Steam Audio thread count. Code default (cheat flag). Upstream used 6. [def: "2"]
         audio_enable_spawn_mask_mix_layer        "false" // Disabling these should help with performance, Yay! [def: "true"]
         snd_boxverb_simd                         "false" // Disabling these should help with performance, Yay! [def: "true"]
         snd_enable_subgraph_corenull_passthrough "false" // Disabling these should help with performance, Yay! [def: "true"]
