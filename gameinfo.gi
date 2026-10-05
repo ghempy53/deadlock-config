@@ -75,12 +75,12 @@ GameInfo
             Game_UILanguage "citadel_*LANGUAGE*"
             Game_LowViolence "citadel_lv"
 
-            Mod                 citadel
-            Write               citadel
-            Game                citadel/custom
-            Game                citadel/addons
-            Game                citadel
-            Game                core
+            Mod   "citadel"
+            Write "citadel"
+            Game  "citadel/custom"
+            Game  "citadel/addons"
+            Game  "citadel"
+            Game  "core"
         }
 
         LegacyUserSettingsPathID "MOD"
@@ -95,18 +95,18 @@ GameInfo
     {
         RenderModes
         {
-            game "Default"
-            game "Forward"
-            game "Deferred"
-            game "Outline"
-            game "Depth"
-            game "FrontDepth"
-            game "ShadowSilhouette"
+            game Default
+            game Forward
+            game Deferred
+            game Outline
+            game Depth
+            game FrontDepth
+            game ShadowSilhouette
 
-            dev "ToolsVis"       // Visualization modes for all shaders (lighting only, normal maps only, etc.)
-            dev "ToolsWireframe" // This should use the ToolsVis mode above instead of being its own mode\
+            dev ToolsVis // Visualization modes for all shaders (lighting only, normal maps only, etc.)
+            dev ToolsWireframe // This should use the ToolsVis mode above instead of being its own mode\
 
-            tools "ToolsUtil" // Meant to be used to render tools sceneobjects that are mod-independent, like the origin grid
+            tools ToolsUtil // Meant to be used to render tools sceneobjects that are mod-independent, like the origin grid
         }
     }
 
@@ -119,33 +119,35 @@ GameInfo
     {
         BetaUniverse
         {
-            FakeLag  "40"
-            FakeLoss ".1"
+            FakeLag			40
+            FakeLoss		.1
             //FakeReorderPct 0.05
             //FakeReorderDelay 10
             //FakeJitter "low"
             // Turning off fake jitter for now while I work on making the CQ totally solid
-            FakeReorderPct   "0"
-            FakeReorderDelay "0"
-            FakeJitter       "off"
+            FakeReorderPct 0
+            FakeReorderDelay 0
+            FakeJitter "off"
         }
 
-        SkipRedundantChangeCallbacks "1"
+        "SkipRedundantChangeCallbacks"	"1"
     }
 
     RenderSystem
     {
-        IndexBufferPoolSizeMB              "128"  // Not fully sure, in cs2 this is 64        [def: "32"]
-        LowLatency                         "1"    //      [def: "1"]
-        MinStreamingPoolSizeMB             "2048" // In CS2 this is 500, not sure why      [def: "1024"]
-        MinStreamingPoolSizeMBTools        "2048" //      [def: "2048"]
-        Use32BitDepthBuffer                "0"    //      [def: "0"]
-        Use32BitDepthBufferWithoutStencil  "0"    //      [def: "0"]
-        UseReverseDepth                    "1"    // Also not fully sure.                     [def: "1"]
-
-        MaxPreloadTextureResolution           "0" // this stems from the dll so you can assume that there is no default value.
-        AllowPartialMipChainImmediateTexLoads "1"
-
+        IndexBufferPoolSizeMB 32
+        UseReverseDepth 1
+        Use32BitDepthBuffer 0
+        Use32BitDepthBufferWithoutStencil 0
+        VulkanMutableSwapchain 1
+        "LowLatency"								"1"
+        "VulkanRequireSubgroupWaveOpSupport"		"1"
+        "VulkanRequireDescriptorIndexing"			"1"
+        "VulkanStagingPMBSizeLimitMB" "384"
+        "VulkanOnlyTestProbability" "0"
+        "VulkanDefrag"				"1"
+        "MinStreamingPoolSizeMB"	"1024"
+        "MinStreamingPoolSizeMBTools" "2048"
     }
 
     NVNGX
@@ -156,21 +158,21 @@ GameInfo
 
     Engine2
     {
-        HasModAppSystems "1"
-        Capable64Bit     "1"
-        URLName          "citadel"
+        HasModAppSystems 1
+        Capable64Bit 1
+        URLName citadel
         RenderingPipeline
         {
-            SupportsMSAA  "0"
-            DistanceField "1"
+            SupportsMSAA 0
+            DistanceField 1
         }
-        PauseSinglePlayerOnGameOverlay "1"
-        PauseOnCtrlConsole             "0" // Src2 issues a 'setpause' on holding down CTRL + toggleconsole key, disable this for Deadlock.
-        DefensiveConCommands           "1"
-        DisableLoadingPlaque           "1"
-        LocalServerClientAccess        "1"
+        PauseSinglePlayerOnGameOverlay 1
+        PauseOnCtrlConsole 0 // Src2 issues a 'setpause' on holding down CTRL + toggleconsole key, disable this for Deadlock.
+        DefensiveConCommands 1
+        DisableLoadingPlaque 1
+        LocalServerClientAccess 1
 
-        MapMaxCoord "32768"
+        "MapMaxCoord" "32768"
     }
 
     ContentBuilder
@@ -430,92 +432,51 @@ GameInfo
 
     WorldRenderer
     {
-
-        //================= In Base WorldRender =================
-        BindlessSceneObjectDesc      "CitadelBindlessDesc"
-        EnvironmentMapCacheSizeTools "2"              // I believe this is the map cache size for the tools. We don't have the tools yet.                     [def: "300"]
-        EnvironmentMapColorSpace     "linear"         // Colorspace. Options should be gamma or linear.                                                       [def: "linear"]
-        EnvironmentMapFaceSize       "256"            //                                                                                                      [def: "256"]
-        EnvironmentMapFormat         "BC6H"           // These values don't seem to be able to be changed but this should change the texture format           [def: "BC6H"]
-        EnvironmentMapMipProcessor   "GGXCubeMapBlur" // this is the default
-        EnvironmentMapPreviewFormat  "BC6H"           // ^                                                                                                    [def: "BC6H"]
-        EnvironmentMapRenderSize     "1024"           // There does not seem to be any downside to messing with this value so it is currently in experimentation. [def: "1024"]
-        EnvironmentMapUseCubeArray   "1"              // I don't know why disabling this would cause any problems
-        EnvironmentMaps              "1"              //                                                                                                      [def: "1"]
-        GrassCastsShadows            "0"              // whether or not grass casts shadows. We could care less                                               [def: "1"]
-
-        //================= In The Worldrenderer.dll or cs2 =================
-        // EnvironmentMapPreviewFormat  "RGBA16161616F" // This is from CS2 where it is also commented out. I would imagine setting it enables HDR of some format considering this is the integer HDR format, but I do not have an HDR monitor to test
-        AggregateInstanceStream    "1"    // This from the dll, no default
-        AggregateRTProxyDesc       "1"    // This from the dll, no default
-        AggregateSceneObjectDesc   "1"    // This from the dll, no default
-        AggregateVertexColorStream "1"    // This from the dll, no default
-        EnvironmentMapCacheSize    "1024" //
-        LPVEdgeBlending            "0"    // Don't apply the edge fade distance to LPV bounds, we don't blend LPVs in CS2 shaders
-
+        EnvironmentMaps					1
+        EnvironmentMapFaceSize			256
+        EnvironmentMapRenderSize		1024
+        EnvironmentMapFormat			BC6H
+        EnvironmentMapPreviewFormat 		BC6H
+        EnvironmentMapColorSpace		linear
+        EnvironmentMapMipProcessor		GGXCubeMapBlur
+        // Build cubemaps into a cube array instead of individual cubemaps.
+        "EnvironmentMapUseCubeArray" 	1
+        "EnvironmentMapCacheSizeTools"  300
+        BindlessSceneObjectDesc			CitadelBindlessDesc
+        GrassCastsShadows				1
     }
 
     SceneSystem
     {
-        //================= In Base SceneSystem =================
-        CSMCascadeResolution                        "0"          // [def: "2048"]
-        CubemapFog                                  "0"          // [def: "1"]
-        DefaultShadowTextureHeight                  "0"          // [def: "6144"]
-        DefaultShadowTextureWidth                   "0"          // [def: "6144"]
-        DynamicShadowResolution                     "1"          // [def: "1"]
-        FogCachedShadowAtlasHeight                  "0"          // [def: "2048"]
-        FogCachedShadowAtlasWidth                   "0"          // [def: "2048"]
-        FogCachedShadowTileSize                     "0"          // [def: "128"]
-        FrameBufferCopyFormat                       "R11G11B10F" // [def: "R11G11B10F"]
-        GpuLightBinner                              "1"          // [def: "1"]
-        GpuLightBinnerSunLightFastPath              "1"          // [def: "1"]
-        HDRFrameBuffer                              "0"          // [def: "1"]
-        NonTexturedGradientFog                      "0"          // [def: "1"]
-        SunLightManagerCount                        "0"          // [def: "0"]
-        SunLightManagerCountTools                   "0"          // [def: "0"]
-        SunLightMaxCascadeSize                      "2"          // [def: "4"]
-        SunLightShadowRenderMode                    "Depth"      // [def: "Depth"]
-        Tonemapping                                 "0"          // [def: "0"]
-        TransformTextureRowCount                    "1024"       // [def: "1024"]
-        TransformTextureRowCountToolsMode           "6144"       // [def: "6144"]
-        VolumetricFog                               "0"          // [def: "1"]
+        GpuLightBinner 1
+        FogCachedShadowAtlasWidth 2048
+        FogCachedShadowAtlasHeight 2048
+        FogCachedShadowTileSize 128
+        GpuLightBinnerSunLightFastPath 1
+        CSMCascadeResolution 2048
+        SunLightManagerCount 0
+        SunLightManagerCountTools 0
+        DefaultShadowTextureWidth 6144
+        DefaultShadowTextureHeight 6144
+        DynamicShadowResolution 1
 
-        //================= A String in SceneSystem.dll =================
-        //CMTAtlasHeight                      "0"     // dll var, default unknown this will cause issues with ginnis' wall
-        //CMTAtlasWidth                       "0"     // dll var, default unknown
-        CharacterDecals                       "0"     // dll var, default unknown
-        FogCachedShadowTileMaxFilterRadius    "0"     // dll var, default unknown
-        DisableShadowFullSort                 "1"     // dll var, default unknown
-        EnableAlphaTint                       "0"     // dll var, default unknown
-        EnableSunlight                        "0"     // dll var, default unknown
-        EnableViewModelSunlight               "0"     // dll var, default unknown
-        GpuLightBinnerSupportViewModelCascade "0"     // dll var, default unknown
-        HairShading                           "false" // dll var, default unknown
-        GpuLightBinnerBinEnvMaps              "1"     // dll var, default unknown
-        GpuLightBinnerBinLPVs                 "0"     // dll var, default unknown
-        LightCookieAllocGranularity           "1"     // dll var, default unknown
-        LightCookieMinAllocSize               "0"     // dll var, default unknown
-        SupportsInstancedFade                 "0"     // dll var, default unknown
-        ParticleBufferSize                    "512"   // dll var, default unknown
-        PerVertexLighting                     "0"     // dll var, default unknown
-        PointLightShadowsEnabled              "0"     // dll var, default unknown
-        PointLightShadowsEnabled              "0"     // dll var, default unknown
-        PunctualContactShadows                "0"     // dll var, default unknown
-        SelfShadowStrength                    "0"     // dll var, default unknown
-        ShadowAtlas                           "0"     // dll var, default unknown
-        ShadowDepth                           "0"     // dll var, default unknown
-        ShadowDepthBuffer                     "0"     // dll var, default unknown
-        ShadowDepthBufferNoCmp                "0"     // dll var, default unknown
-        ShadowmapMaxFilterRadius              "0"     // dll var, default unknown
-        SparseShadowTrees                     "0"     // dll var, default unknown
-
+        TransformTextureRowCount	1024
+        TransformTextureRowCountToolsMode 6144
+        SunLightMaxCascadeSize		4
+        SunLightShadowRenderMode	Depth
+        NonTexturedGradientFog		1
+        CubemapFog 1
+        VolumetricFog 1
+        FrameBufferCopyFormat R11G11B10F
+        Tonemapping 0
+        
         WellKnownLightCookies
         {
-            blank      "materials/effects/lightcookies/blank.vtex"
-            flashlight "materials/effects/lightcookies/flashlight.vtex"
+            "blank" "materials/effects/lightcookies/blank.vtex"
+            "flashlight" "materials/effects/lightcookies/flashlight.vtex"
         }
 
-        ComputeShaderSkinning "1"
+        ComputeShaderSkinning 1
     }
 
     NavSystem
@@ -555,20 +516,11 @@ GameInfo
 
     Particles
     {
-        //================= In Base Particles =================
-        BindlessParticleShader               "1"
-        EnableParticleShaderFeatureBranching "1"
-        Features                             "non_homogenous_forward_layer_only"
-        Float16HDRBackBuffer                 "1"
-        PET_SupportFadingOpaqueModels        "1"
-
-        //================= In Particles.dll =================
-        EnableMixedResolution         "1" // dll var, default unknown
-        MPropertyFlattenIntoParentRow "1"
-        ParticleTraceOffsetOnlyHit    "1"
-        ParticlesFoggedByDefault      "0"
-        PerVertexLighting             "0"
-        PostSimulate                  "0"
+        "EnableParticleShaderFeatureBranching"	"1"
+        "Float16HDRBackBuffer" "1"
+        "PET_SupportFadingOpaqueModels" "1"
+        "BindlessParticleShader" "1"
+        "Features" "non_homogenous_forward_layer_only"
     }
 
     Physics
@@ -680,8 +632,6 @@ GameInfo
         // citadel_camera_see_distance_max         "7000"  // Reverted: default 20000. 7000 may hide entities at long range; FPS gain unproven. [def: "20000"]
         // citadel_shoot_forward_offset            "0"
         // citadel_tightcamera_alternative         "1"
-        nav_edit_use_camera                     "0"
-        rpg_camera_yaw                          "0"
 
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
@@ -788,12 +738,10 @@ GameInfo
         cl_particle_fallback_base                "5"   // Base for falling back to cheaper effects under load.             [def: "0"]
         // r_particle_mixed_resolution_viewstart    "16"     // I don't know if this does anything but I didn't notice anything terrible out the gate and lowering particle resolution can't hurt [def: "500"]
         //r_particle_timescale                  "1"      // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
-        cl_aggregate_particles                   "true"    // Doesn't seem to cause any issues but a benchmark proper should be conducted [def: "false"]
         cl_particle_batch_mode                   "1"       // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
         r_draw_particle_children_with_parents    "1"       // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
         r_limit_particle_job_duration            "true"    // Seems to help with particle clutter, although I am not sure.             [def: "false"]
         r_particle_allowprerender                "true"    // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
-        r_particle_batch_collections             "true"    // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
         r_particle_fixedrandomseeds              "true"    // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance. That being said it does make flames from paige 1 always appear on the left, so your call ig [def: "false"]
         r_particle_max_texture_layers            "4"       // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
         r_particle_min_timestep                  "0.00241" // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values could negatively impact performance. [def: "0"]
@@ -836,15 +784,12 @@ GameInfo
         //r_low_latency                                     "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
         // cc_captiontrace                                   "0" // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
         citadel_bullet_shot_offset_fade_time              "0"
-        citadel_show_survey                               "true"
         cl_batch_entity_list_ops_during_latch             "true"  // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]
-        cl_interp_parallel                                "true"  // Run interpolation in parallel for entities with no children.     [def: "false"]
         cl_modifier_parallel_gather_status_effect_updates "false" // Not sure                                                         [def: "false"]
         cl_phys_assume_fixed_tick_interval                "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
         csm_viewmodel_max_shadow_dist                     "1"     //
         csm_viewmodel_max_visible_dist                    "1"     //
         csm_viewmodel_nearz                               "512"   //
-        debug_draw_enable                                 "false" //
         engine_max_ticks_to_simulate                      "2"     // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
         r_citadel_gpu_preview_denoise_passes              "0"     // [def: "3"]
         r_drawropes                                       "false" // [def: "true"]
@@ -858,8 +803,6 @@ GameInfo
         r_particle_newinput                               "true"  //
         r_pixelvisibility_partial                         "false" // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"]
         r_render_hair                                     "false" // [def: "true"]
-        r_renderdoc_auto_shader_pdbs                      "false" // Automatically generate shader debug info on capture.             [def: "true"]
-        r_skip_precache_validation_check                  "true"  // I believe this checks to see if things are properly cached in a debug context, which we shouldn't need   [def: "false"]
         r_strip_invisible_during_sceneobject_update       "1"     // idk ngl    [def: "false"]
         sparseshadowtree_leaf_precision_viewmodel         "0"     //            [def: "0.0005"]
 

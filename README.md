@@ -2,6 +2,7 @@
 
 A personal `gameinfo.gi` for Deadlock on Windows 11. It is based on
 [OptimizationLock 3.4](https://github.com/Sqooky/OptimizationLock) (Sqooky's .gi, `main @ 2b994f6`, 2026-10-03)
+(checked against `main @ e2e9925`, 2026-10-05: no new convars upstream)
 and was verified against the **City Never Sleeps** major update (2026-09-29).
 
 **Goal: balanced clarity + FPS.** Upstream's heaviest visual cuts are reverted: lighting, sun,
@@ -14,7 +15,7 @@ Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, whic
 | File | What it is |
 | --- | --- |
 | `gameinfo.gi` | The config. Drop-in replacement for the game's file. |
-| `CHANGES.txt` | Every difference from upstream 3.4, plus the post-patch cleanup. This is the source of truth for re-applying. |
+| `CHANGES.txt` | Every difference from upstream 3.4, the post-patch cleanup, and the engine-section reset. Source of truth for re-applying. |
 | `WINDOWS11.md` | OS, driver and in-game settings that pair with this config. |
 
 ## Install
@@ -57,8 +58,8 @@ Commenting that line out makes `citadel/cfg/video.txt` usable, but it also force
 
 Keep them minimal. `-dx11` is unnecessary because it is the Windows default. `-novid` (skip the intro video) is harmless.
 Most flags in upstream's `launch_options.txt` are a raw dump of engine/dev options and are not recommendations.
-All Vulkan settings were removed from this config, so it is DX11-only. Don't launch with `-vulkan`; restore the
-stock `Vulkan*` RenderSystem keys first if you ever switch.
+The `RenderSystem` section is Valve stock (including its six `Vulkan*` keys, which are inert on DX11). The Vulkan-only
+convar `r_vma_defrag_algorithm` was removed. Don't launch with `-vulkan` without testing.
 
 ## After every Deadlock update
 
@@ -73,6 +74,8 @@ Major updates overwrite `gameinfo.gi`, and sometimes minor ones do too.
    (`DumpSource2/convars.txt`). Diff it from before vs after the patch. Most tweaked convars are `developmentonly`,
    so the in-game console hides them (typing the name prints nothing), even though this file still applies them.
 4. Check `[def:]` comments and min/max ranges against the same dump. Values below the minimum are clamped.
-5. Queue a match. The client has an "Unable to enter matchmaking while any party member has changes to ConVars in
-   Gameinfo.gi" message. It was not enforced against this file as of 2026-10-05, but check after each update.
+5. Keep the seven guarded sections stock. The client's matchmaking guard (not enforced as of 2026-10-05, but fully
+   wired: `pgi_hash`/`pgi_verified` in the GC protocol) names `Engine2, MaterialSystem2, NetworkSystem, Particles,
+   RenderSystem, SceneSystem, WorldRenderer`. ConVars are not on the list. After an update, diff those seven sections
+   against the new stock file and keep them identical; put all tuning in `ConVars`. Then queue a match.
 6. Log any change in `CHANGES.txt`.
