@@ -45,8 +45,8 @@ Header credits/donation text removed; all setting comments kept.
   line 681   citadel_shoot_forward_offset                 "0"  ->  (commented -> engine default)
   line --    citadel_stuck_camera_trace_extra_length      "0"  ->  (line removed -> engine default)
   line 682   citadel_tightcamera_alternative              "1"  ->  (commented -> engine default)
-  line 689   r_texture_stream_mip_bias                    "3"  ->  "2"   (matches in-game Texture quality Low)
-  line 690   r_texturefilteringquality                    "0"  ->  (commented -> engine default 1)   GPU-stability review
+  line 689   r_texture_stream_mip_bias                    "3"  ->  "0"   (full-res; in-game Texture quality set to High)
+  line 690   r_texturefilteringquality                    "0"  ->  "5" (anisotropic 16x; not menu-controlled)
   line 693   thread_pool_option                           "2"  ->  "-1"
   line 706   closecaption                                 "false"  ->  (commented -> engine default)   UI reset
   line 707   panorama_allow_transitions                   "false"  ->  (commented -> engine default)   HUD reset
