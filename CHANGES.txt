@@ -1,98 +1,98 @@
 DEADLOCK gameinfo.gi - personal changes vs OptimizationLock 3.4 (Sqooky's .gi, main @ 2b994f6, 2026-10-03)
 Verified against the City Never Sleeps major update (2026-09-29) on 2026-10-05: stock sections match the post-patch
-stock gameinfo.gi; convars checked against the post-patch cvar dump (OptimizationLock convars.txt, 2026-09-30).
+stock gameinfo.gi; convars checked against Valve's dumps in SteamTracking GameTracking-Deadlock (latest 2026-10-04).
 Every change is a value swap, a commented-out line, or an added line. Line numbers refer to gameinfo.gi.
 Header credits/donation text removed; all setting comments kept.
 
 85 settings changed vs upstream (plus the post-patch cleanup section below):
 
-  line 596   citadel_portrait_world_renderer_off          "false"  ->  (commented -> engine default)   UI reset
-  line 597   citadel_trooper_glow_disabled                "1"  ->  "0"
-  line 600   r_citadel_enable_pano_world_blur             "true"  ->  (commented -> engine default)   UI reset
-  line 603   r_size_cull_threshold                        "0.9"  ->  (commented -> engine default)
+  line 591   citadel_portrait_world_renderer_off          "false"  ->  (commented -> engine default)   UI reset
+  line 592   citadel_trooper_glow_disabled                "1"  ->  "0"
+  line 595   r_citadel_enable_pano_world_blur             "true"  ->  (commented -> engine default)   UI reset
+  line 597   r_size_cull_threshold                        "0.9"  ->  (commented -> engine default)
   line --    sc_screen_size_lod_scale_override            "0.55"  ->  (line removed -> engine default)
-  line 604   steam_inputhandler_enabled                   "true"  ->  "false"
+  line 598   steam_inputhandler_enabled                   "true"  ->  "false"
   line --    r_farz                                       "7000"  ->  (line removed -> engine default)
   line --    r_mapextents                                 "7000"  ->  (line removed -> engine default)
-  line 615   citadel_boss_glow_disabled                   "1"  ->  "0"
-  line 616   citadel_damage_offscreen_indicator_disabled  "true"  ->  (commented -> engine default)   UI reset
-  line 620   citadel_unit_status_width                    (absent)  ->  added "100"
-  line 624   r_aspectratio                                "2.9"  ->  (commented -> engine default 0, native 16:9)
+  line 609   citadel_boss_glow_disabled                   "1"  ->  "0"
+  line 610   citadel_damage_offscreen_indicator_disabled  "true"  ->  (commented -> engine default)   UI reset
+  line 614   citadel_unit_status_width                    (absent)  ->  added "100"
+  line 623   r_aspectratio                                "2.9"  ->  (commented -> engine default 0, native 16:9)
   line --    default_fov                                  "0"  ->  (line removed -> engine default)
   line --    viewmodel_fov                                "0"  ->  (line removed -> engine default)
-  line 639   citadel_unit_status_stamina_low_pips         "7"  ->  (commented -> engine default 1)   new in 3.4; reverted while checking ability bar
-  line 640   citadel_damage_report_enable                 "1"  ->  (commented -> engine default)   UI reset
-  line 643   citadel_damage_text_new_bullet_offset_y      (absent)  ->  added "-10000"
-  line 644   citadel_damage_text_new_ability_offset_y     (absent)  ->  added "-10000"
-  line 645   citadel_damage_text_new_melee_offset_y       (absent)  ->  added "-10000"
-  line 646   citadel_damage_text_new_pure_offset_y        (absent)  ->  added "-10000"
-  line 647   citadel_damage_text_cumulative_offset        (absent)  ->  added "-50 -15 0"
-  line 648   citadel_distance_mouse_move_for_minimap_drawing "1"  ->  (commented -> engine default)   UI reset
-  line 651   citadel_hud_objective_health_debug_show_midboss "false"  ->  (commented -> engine default)   UI reset
-  line 652   citadel_hud_objective_health_enabled         "2"  ->  (commented -> engine default)   UI reset
-  line 653   v8_maximum_heap_size_mb                      "1024"  ->  (commented -> engine default)   HUD reset
-  line 654   panorama_comp_layer_lru_lifetime             "4"  ->  (commented -> engine default)   HUD reset
-  line 664   lb_enable_baked_shadows                      "false"  ->  "true"
-  line 665   lb_enable_stationary_lights                  "false"  ->  "true"
-  line 669   panorama_max_fps                             "30"  ->  (commented -> engine default)   HUD reset
-  line 670   panorama_max_overlay_fps                     "30"  ->  (commented -> engine default)   HUD reset
-  line 674   citadel_camera_listening_offset              "-1"  ->  (commented -> engine default)
-  line 683   cam_idealdelta                               "0"  ->  (commented -> engine default)
-  line 684   cam_ideallag                                 "0"  ->  (commented -> engine default)
+  line 633   citadel_unit_status_stamina_low_pips         "7"  ->  (commented -> engine default 1)   new in 3.4; reverted while checking ability bar
+  line 634   citadel_damage_report_enable                 "1"  ->  (commented -> engine default)   UI reset
+  line 637   citadel_damage_text_new_bullet_offset_y      (absent)  ->  added "-10000"
+  line 638   citadel_damage_text_new_ability_offset_y     (absent)  ->  added "-10000"
+  line 639   citadel_damage_text_new_melee_offset_y       (absent)  ->  added "-10000"
+  line 640   citadel_damage_text_new_pure_offset_y        (absent)  ->  added "-10000"
+  line 641   citadel_damage_text_cumulative_offset        (absent)  ->  added "-50 -15 0"
+  line 642   citadel_distance_mouse_move_for_minimap_drawing "1"  ->  (commented -> engine default)   UI reset
+  line 645   citadel_hud_objective_health_debug_show_midboss "false"  ->  (commented -> engine default)   UI reset
+  line 646   citadel_hud_objective_health_enabled         "2"  ->  (commented -> engine default)   UI reset
+  line 647   v8_maximum_heap_size_mb                      "1024"  ->  (commented -> engine default)   HUD reset
+  line 648   panorama_comp_layer_lru_lifetime             "4"  ->  (commented -> engine default)   HUD reset
+  line 658   lb_enable_baked_shadows                      "false"  ->  "true"
+  line 659   lb_enable_stationary_lights                  "false"  ->  "true"
+  line 663   panorama_max_fps                             "30"  ->  (commented -> engine default)   HUD reset
+  line 664   panorama_max_overlay_fps                     "30"  ->  (commented -> engine default)   HUD reset
+  line 668   citadel_camera_listening_offset              "-1"  ->  (commented -> engine default)
+  line 677   cam_idealdelta                               "0"  ->  (commented -> engine default)
+  line 678   cam_ideallag                                 "0"  ->  (commented -> engine default)
   line --    citadel_camera_height                        "0"  ->  (line removed -> engine default)
-  line 685   citadel_camera_height_ceiling_distance       "0"  ->  (commented -> engine default)
-  line 687   citadel_camera_pitch_default                 "0"  ->  (commented -> engine default)
-  line 689   citadel_shoot_forward_offset                 "0"  ->  (commented -> engine default)
+  line 679   citadel_camera_height_ceiling_distance       "0"  ->  (commented -> engine default)
+  line 681   citadel_camera_pitch_default                 "0"  ->  (commented -> engine default)
+  line 683   citadel_shoot_forward_offset                 "0"  ->  (commented -> engine default)
   line --    citadel_stuck_camera_trace_extra_length      "0"  ->  (line removed -> engine default)
-  line 690   citadel_tightcamera_alternative              "1"  ->  (commented -> engine default)
-  line 697   r_texture_stream_mip_bias                    "3"  ->  "0"
-  line 698   r_texturefilteringquality                    "0"  ->  (commented -> engine default 1)   GPU-stability review
-  line 701   thread_pool_option                           "2"  ->  "-1"
-  line 714   closecaption                                 "false"  ->  (commented -> engine default)   UI reset
-  line 715   panorama_allow_transitions                   "false"  ->  (commented -> engine default)   HUD reset
-  line 716   panorama_disable_blur                        "true"  ->  (commented -> engine default)   HUD reset
-  line 718   panorama_panel_occlusion                     "true"  ->  (commented -> engine default)   HUD reset
-  line 719   r_dashboard_render_quality                   "1"  ->  (commented -> engine default)   HUD reset
-  line 729   lb_enable_shadow_casting                     "0"  ->  "true"
-  line 747   r_lightmap_size                              "2048"  ->  "65536"
-  line 748   r_lightmap_size_directional_irradiance       "0"  ->  "-1"
-  line 750   r_rendersun                                  "0"  ->  "1"
-  line 761   enable_boneflex                              "0"  ->  (commented -> engine default)
-  line 762   ik_fabrik_align_chain                        "1"  ->  (commented -> engine default)
-  line 763   ik_final_fixup_enable                        "0"  ->  (commented -> engine default)
-  line 827   sc_allow_dithered_lod                        "false"  ->  (commented -> engine default)
+  line 684   citadel_tightcamera_alternative              "1"  ->  (commented -> engine default)
+  line 691   r_texture_stream_mip_bias                    "3"  ->  "0"
+  line 692   r_texturefilteringquality                    "0"  ->  (commented -> engine default 1)   GPU-stability review
+  line 695   thread_pool_option                           "2"  ->  "-1"
+  line 708   closecaption                                 "false"  ->  (commented -> engine default)   UI reset
+  line 709   panorama_allow_transitions                   "false"  ->  (commented -> engine default)   HUD reset
+  line 710   panorama_disable_blur                        "true"  ->  (commented -> engine default)   HUD reset
+  line 712   panorama_panel_occlusion                     "true"  ->  (commented -> engine default)   HUD reset
+  line 713   r_dashboard_render_quality                   "1"  ->  (commented -> engine default)   HUD reset
+  line 723   lb_enable_shadow_casting                     "0"  ->  "true"
+  line 738   r_lightmap_size                              "2048"  ->  "65536"
+  line 739   r_lightmap_size_directional_irradiance       "0"  ->  "-1"
+  line 740   r_rendersun                                  "0"  ->  "1"
+  line 751   enable_boneflex                              "0"  ->  (commented -> engine default)
+  line 752   ik_fabrik_align_chain                        "1"  ->  (commented -> engine default)
+  line 753   ik_final_fixup_enable                        "0"  ->  (commented -> engine default)
+  line 816   sc_allow_dithered_lod                        "false"  ->  (commented -> engine default)
   line --    sc_fade_distance_scale_override              "100"  ->  (line removed -> engine default)
   line --    r_citadel_gpu_culling                        "true"  ->  (line removed -> engine default "true", no effect)
-  line 842   sc_allow_dithered_lod                        "false"  ->  (commented -> engine default)
-  line 852   cc_captiontrace                              "0"  ->  (commented -> engine default)   UI reset
+  line 830   sc_allow_dithered_lod                        "false"  ->  (commented -> engine default)
+  line 840   cc_captiontrace                              "0"  ->  (commented -> engine default)   UI reset
   line --    r_citadel_glow_health_bar_debug              "false"  ->  (line removed -> engine default)   UI reset
-  line 871   r_drawtracers_firstperson                    "false"  ->  "true"
-  line 872   r_drawviewmodel                              "false"  ->  "true"
-  line 873   r_enable_rigid_animation                     "false"  ->  (commented -> engine default)
-  line 896   snd_mixahead                                 "0.05"  ->  (commented -> engine default)
+  line 854   r_drawtracers_firstperson                    "false"  ->  "true"
+  line 855   r_drawviewmodel                              "false"  ->  "true"
+  line 856   r_enable_rigid_animation                     "false"  ->  (commented -> engine default)
+  line 879   snd_mixahead                                 "0.05"  ->  (commented -> engine default)
   line --    snd_occlusion_bounces                        "0"  ->  (line removed -> engine default)
 
   line --    snd_occlusion_rays                           "0"  ->  (line removed -> engine default)
   line --    snd_ui_positional                            "false"  ->  (line removed -> engine default)   UI reset
-  line 924   enable_boneflex                              "false"  ->  (commented -> engine default)
-  line 925   ik_constraints_enabled                       "false"  ->  (commented -> engine default)
-  line 926   ik_debug_dogleg3bone_enabled                 "false"  ->  (commented -> engine default)
-  line 927   ik_debug_fabrik_backwards_enabled            "false"  ->  (commented -> engine default)
-  line 928   ik_debug_fabrik_forwards_enabled             "false"  ->  (commented -> engine default)
+  line 907   enable_boneflex                              "false"  ->  (commented -> engine default)
+  line 908   ik_constraints_enabled                       "false"  ->  (commented -> engine default)
+  line 909   ik_debug_dogleg3bone_enabled                 "false"  ->  (commented -> engine default)
+  line 910   ik_debug_fabrik_backwards_enabled            "false"  ->  (commented -> engine default)
+  line 911   ik_debug_fabrik_forwards_enabled             "false"  ->  (commented -> engine default)
   line --    ik_enable                                    "false"  ->  (line removed -> engine default)
-  line 929   ik_fabrik_backwards_enabled                  "false"  ->  (commented -> engine default)
-  line 930   ik_fabrik_forwards_enabled                   "false"  ->  (commented -> engine default)
-  line 931   ik_final_fixup_enable                        "false"  ->  (commented -> engine default)
-  line 932   ik_planetilt_enable                          "false"  ->  (commented -> engine default)
-  line 936   animgraph_footlock_calculate_tilt            "false"  ->  (commented -> engine default)
-  line 937   animgraph_footlock_enabled                   "false"  ->  (commented -> engine default)
-  line 938   animgraph_footlock_ground_roll               "false"  ->  (commented -> engine default)
-  line 939   animgraph_footlock_hip_offset_enable         "false"  ->  (commented -> engine default)
+  line 912   ik_fabrik_backwards_enabled                  "false"  ->  (commented -> engine default)
+  line 913   ik_fabrik_forwards_enabled                   "false"  ->  (commented -> engine default)
+  line 914   ik_final_fixup_enable                        "false"  ->  (commented -> engine default)
+  line 915   ik_planetilt_enable                          "false"  ->  (commented -> engine default)
+  line 919   animgraph_footlock_calculate_tilt            "false"  ->  (commented -> engine default)
+  line 920   animgraph_footlock_enabled                   "false"  ->  (commented -> engine default)
+  line 921   animgraph_footlock_ground_roll               "false"  ->  (commented -> engine default)
+  line 922   animgraph_footlock_hip_offset_enable         "false"  ->  (commented -> engine default)
   line --    animgraph_footlock_ik_enable                 "false"  ->  (line removed -> engine default)
-  line 940   animgraph_footlock_trace_ground_enabled      "false"  ->  (commented -> engine default)
-  line 941   animgraph_footlock_use_hip_shift             "false"  ->  (commented -> engine default)
-  line 942   animgraph_slowdownonslopes_enabled           "false"  ->  (commented -> engine default)
-POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 25 settings
+  line 923   animgraph_footlock_trace_ground_enabled      "false"  ->  (commented -> engine default)
+  line 924   animgraph_footlock_use_hip_shift             "false"  ->  (commented -> engine default)
+  line 925   animgraph_slowdownonslopes_enabled           "false"  ->  (commented -> engine default)
+POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 46 settings
   Removed by the patch (no longer exist after the HUD/health bar rework, so these lines did nothing):
   line --    citadel_unit_status_dpi                      "10"  ->  (line removed; convar gone)
   line --    citadel_unit_status_allies_see_thru_walls_max_distance "40"  ->  (line removed; convar gone)
@@ -101,29 +101,59 @@ POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 25 settings
   line --    citadel_unit_status_use_new                  "true"  ->  (line removed; convar gone, new bars are the only bars)
   line --    citadel_unit_status_use_v2                   "0"  ->  (line removed; convar gone)
   line --    citadel_unit_status_use_v2_for_nonplayers    "0"  ->  (line removed; convar gone)
-  line 641   citadel_damage_text_batching_window_ability  "1000"  ->  (commented; convar gone, replaced by _individual / _cumulative, kept at defaults)
+  line 635   citadel_damage_text_batching_window_ability  "1000"  ->  (commented; convar gone, replaced by _individual / _cumulative, kept at defaults)
   Invalid or reverted:
-  line 837   citadel_video_preset                         "9"  ->  (commented; post-patch range is 0-3 and the in-game video menu owns it)
-  line 688   citadel_camera_see_distance_max              "7000"  ->  (commented -> engine default 20000; clarity over unproven FPS)
+  line 825   citadel_video_preset                         "9"  ->  (commented; range is 0-3 (already before CNS) and the in-game video menu owns it)
+  line 682   citadel_camera_see_distance_max              "7000"  ->  (commented -> engine default 20000; clarity over unproven FPS)
   Hardware (Ryzen 7 9800X3D, 8 cores):
-  line 899   snd_steamaudio_num_threads                   "6"  ->  "4" (stock)
+  line 882   snd_steamaudio_num_threads                   "6"  ->  "4" (code default is 2; the earlier "stock 4" note was wrong)
   FPS limits removed (stock-tail values, changed on request):
-  line 1099  fps_max                                      "400"  ->  "0" (no limit; in-game Max FPS setting can still override)
-  line 1100  fps_max_ui                                   "120"  ->  "0" (no limit while UI is shown)
+  line 1080  fps_max                                      "400"  ->  "0" (no limit; in-game Max FPS setting can still override)
+  line 1081  fps_max_ui                                   "120"  ->  "0" (no limit while UI is shown)
   Vulkan removed (DX11 user; all inert unless launched with -vulkan, changed on request):
   line --    RenderSystem Vulkan* keys (11)               VulkanAdditionalShaderCache, VulkanDefrag, VulkanMutableSwapchain,
              VulkanOnlyTestProbability, VulkanOnly_Linux, VulkanRequireDescriptorIndexing, VulkanRequireSubgroupWaveOpSupport,
              VulkanStagingPMBSizeLimitMB, VulkanSteamAppShaderCache, VulkanSteamDownloadedShaderCache, VulkanSteamShaderCache
              ->  (lines removed; 6 of these are also in Valve's stock file, so the stock-section diff now shows them)
   line --    r_vma_defrag_algorithm                       "0"  ->  (line removed; Vulkan memory allocator setting)
+  Full convar audit vs Valve's dumps (SteamTracking GameTracking-Deadlock, latest e0b9830, 2026-10-04):
+  Removed - convars no longer exist (9 removed in CNS, 2 before it, 2 by the 10-01/10-02 hotfixes):
+  line --    r_particle_explicit_fetch                    "false"  ->  (line removed; gone in 10-02 hotfix)
+  line --    mat_async_shader_load                        "1"  ->  (line removed; gone in CNS)
+  line --    r_citadel_ssao_thin_occluder_compensation    "0"  ->  (line removed; gone in CNS)
+  line --    r_lightmap_bicubic_filtering                 "1"  ->  (line removed; gone in CNS)
+  line --    r_multiscattering                            "1"  ->  (line removed; gone 09-07, before CNS)
+  line --    r_citadel_screenspace_particles_full_res     "true"  ->  (line removed; gone in CNS)
+  line --    citadel_test_ranked_summary                  "true"  ->  (line removed; gone 07-31)
+  line --    cl_enable_eye_occlusion                      "false"  ->  (line removed; gone in CNS)
+  line --    csm_viewmodel_farz                           "1"  ->  (line removed; gone in CNS)
+  line --    r_async_compute_fog                          "true"  ->  (line removed; gone in CNS)
+  line --    r_citadel_depth_prepass_dynamic_objects      "false"  ->  (line removed; gone in CNS)
+  line --    fog_enableskybox                             "false"  ->  (line removed; gone in 10-01 hotfix)
+  line --    citadel_npc_force_animate_every_tick         "false"  ->  (line removed; gone in CNS)
+  Raised to the engine minimum (old values were already clamped, so no in-game change expected):
+  line 722   lb_dynamic_shadow_resolution_base            "16"  ->  "128"
+  line 724   lb_ssss_samples                              "0"  ->  "3"
+  line 759   r_character_decal_resolution                 "4"  ->  "256"
+  Duplicate removed:
+  line --    sc_layer_batch_threshold_fullsort            "120"  ->  (line removed; stock tail sets "20", and Valve moved
+             SceneSystem LayerBatchThresholdFullsort into this convar in CNS)
+  Non-ConVars keys Valve deleted from stock gameinfo.gi in CNS:
+  line --    RenderSystem GraphicsPipelineLibrary         "1"  ->  (line removed)
+  line --    RenderSystem SwapChainSampleableDepth        "1"  ->  (line removed)
+  line --    SceneSystem DisableLateAllocatedTransformBuffer "1"  ->  (line removed)
+  line --    SceneSystem LayerBatchThresholdFullsort      "200"  ->  (line removed; superseded by the convar above)
+  line --    SceneSystem MinimumLateAllocatedVertexCacheBufferSizeMB "64"  ->  (line removed)
   Comment-only changes (values unchanged):
   - citadel_unit_status_width "100": noted that the post-patch default is 200 (kept narrow on purpose).
-  - Defaults corrected from the dump: r_texture_stream_mip_bias (0), r_texturefilteringquality (1), stamina_low_pips (1).
-  - lb_enable_baked_shadows / lb_enable_stationary_lights / lb_enable_shadow_casting / r_rendersun / steam_inputhandler_enabled:
-    comments now describe what the set value does instead of "Disables...".
-  - sc_layer_batch_threshold_fullsort "120" (line 842): flagged that the stock tail sets it again to "20" (line 1103).
-  - 11 lines tagged "unverified post-CNS": absent from the 09-30 dump, which is not exhaustive (some stock-tail convars are
-    missing from it too). Check each one with `find <name>` in the console; see README.
+  - Defaults corrected from Valve's dump: r_texture_stream_mip_bias (0), r_texturefilteringquality (1),
+    citadel_unit_status_delta_decay_delay (0.3), cl_ragdoll_limit (20), r_citadel_shadow_quality (1),
+    snd_steamaudio_num_threads (2), sparseshadowtree_enable_rendering (true since CNS, so "0" is now an active change).
+  - FOV cap (75-90) and citadel_video_preset range (0-3) are NOT new in CNS; comments corrected.
+  - citadel_unit_status_stamina_low_pips (commented): added in CNS, removed in the 09-30 hotfix.
+  - Damage batching note now lists _individual_heal (0.1) too.
+  - lb_enable_* / r_rendersun / steam_inputhandler_enabled comments describe the set value.
+  - 12 commented-out convars tagged "(convar gone post-CNS)".
 
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.

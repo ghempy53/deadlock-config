@@ -33,9 +33,10 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 - **Damage numbers:** on, with cumulative mode *"show the total once damage stops"*
   (`citadel_damage_text_cumulative_mode 2`). Per-hit numbers are pushed off-screen by the
   `citadel_damage_text_new_*_offset_y` lines, so only the totals show.
-- **Camera FOV:** use the in-game slider. Since City Never Sleeps, `citadel_camera_hero_fov` is clamped to 75–90.
+- **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). To go past 90, City Never Sleeps
+  added camera overrides in Settings (`citadel_camera_override_fov`, 50–150).
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
-- **Video preset:** set it in the in-game menu. `citadel_video_preset` only accepts 0–3 now, and the menu owns it.
+- **Video preset:** set it in the in-game menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
 - **Health bars:** the patch's new bars are the only bars. This config only narrows them
   (`citadel_unit_status_width 100`; the default is 200).
 
@@ -60,16 +61,11 @@ Major updates overwrite `gameinfo.gi`, and sometimes minor ones do too.
    (everything except the `ConVars` tweak block, and the stock tail after `END OF CONFIG`).
 2. Prefer re-applying `CHANGES.txt` on top of the newest upstream OptimizationLock release
    over copying this file onto a newer game build.
-3. Most tweaked convars are `developmentonly`. A normal client hides them: typing the name prints nothing and
-   `find` doesn't list them, even though this file still applies them at startup. To query them, launch once with
-   `-convars_visible_by_default` (untested; `-dev` is the fallback), check, then remove the launch option.
-   With that on, run `find <name>` for each line tagged `unverified post-CNS` and remove any that don't exist:
-   `r_async_compute_fog`, `r_multiscattering`, `mat_async_shader_load`, `r_lightmap_bicubic_filtering`,
-   `r_citadel_depth_prepass_dynamic_objects`, `r_citadel_screenspace_particles_full_res`,
-   `r_citadel_ssao_thin_occluder_compensation`, `cl_enable_eye_occlusion`, `csm_viewmodel_farz`,
-   `citadel_test_ranked_summary`, `citadel_npc_force_animate_every_tick`.
-4. Check the duplicate key the same way: `sc_layer_batch_threshold_fullsort`. If it reports `20`
-   (the stock tail's value), the tweak-block `120` line is dead and can be removed.
+3. Check every active convar still exists, using Valve's own dump in
+   [SteamTracking/GameTracking-Deadlock](https://github.com/SteamTracking/GameTracking-Deadlock)
+   (`DumpSource2/convars.txt`). Diff it from before vs after the patch. Most tweaked convars are `developmentonly`,
+   so the in-game console hides them (typing the name prints nothing), even though this file still applies them.
+4. Check `[def:]` comments and min/max ranges against the same dump. Values below the minimum are clamped.
 5. Queue a match. The client has an "Unable to enter matchmaking while any party member has changes to ConVars in
    Gameinfo.gi" message. It was not enforced against this file as of 2026-10-05, but check after each update.
 6. Log any change in `CHANGES.txt`.
