@@ -23,6 +23,8 @@ readability are kept.
 3. Back up the stock `gameinfo.gi` (for example as `gameinfo.gi.stock-YYYY-MM-DD`).
 4. Copy this repo's `gameinfo.gi` over it.
 5. Launch the game and open the console. There should be no gameinfo/KeyValues parse errors.
+   Console noise from Valve content (response-rule "Multiple definitions", missing `ui_hero_reveal` clips,
+   Panorama CSS warnings, localization misses) is normal and unrelated to this file.
 
 To undo, restore the backup, or use Steam → Deadlock → Properties → Installed Files → *Verify integrity*.
 
@@ -57,12 +59,15 @@ Major updates overwrite `gameinfo.gi`, and sometimes minor ones do too.
    (everything except the `ConVars` tweak block, and the stock tail after `END OF CONFIG`).
 2. Prefer re-applying `CHANGES.txt` on top of the newest upstream OptimizationLock release
    over copying this file onto a newer game build.
-3. In the console, run `find <name>` for each line tagged `unverified post-CNS`. Remove any that no longer exist:
+3. Most tweaked convars are `developmentonly`. A normal client hides them: typing the name prints nothing and
+   `find` doesn't list them, even though this file still applies them at startup. To query them, launch once with
+   `-convars_visible_by_default` (untested; `-dev` is the fallback), check, then remove the launch option.
+   With that on, run `find <name>` for each line tagged `unverified post-CNS` and remove any that don't exist:
    `r_async_compute_fog`, `r_multiscattering`, `mat_async_shader_load`, `r_lightmap_bicubic_filtering`,
    `r_citadel_depth_prepass_dynamic_objects`, `r_citadel_screenspace_particles_full_res`,
    `r_citadel_ssao_thin_occluder_compensation`, `cl_enable_eye_occlusion`, `csm_viewmodel_farz`,
    `citadel_test_ranked_summary`, `citadel_npc_force_animate_every_tick`.
-4. Check the duplicate key: type `sc_layer_batch_threshold_fullsort` in the console. If it reports `20`
+4. Check the duplicate key the same way: `sc_layer_batch_threshold_fullsort`. If it reports `20`
    (the stock tail's value), the tweak-block `120` line is dead and can be removed.
 5. Queue a match. The client has an "Unable to enter matchmaking while any party member has changes to ConVars in
    Gameinfo.gi" message. It was not enforced against this file as of 2026-10-05, but check after each update.
