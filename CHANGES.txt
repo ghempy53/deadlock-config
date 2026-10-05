@@ -190,6 +190,13 @@ ENGINE SECTIONS RESET TO VALVE STOCK (2026-10-05)
   line --    r_particle_batch_collections                 "true"  ->  (tweak-block copy removed; stock tail sets "1")
   line --    cl_interp_parallel                           "true"  ->  (tweak-block copy removed; stock tail sets "1")
 
+UPSTREAM SYNC CHECK (2026-10-05, OptimizationLock main @ e2e9925)
+  Sqooky's .gi changed since 3.4 (2b994f6) only cosmetically: donor list, quoted SearchPaths values, and a quoted
+  citadel_melee_shake_duration (removed here). No new convars. Matched the SearchPaths quoting (also Valve stock style):
+  line 78-83  SearchPaths Mod/Write/Game                  unquoted  ->  quoted (no behaviour change)
+  All 161 upstream keys not active here are deliberate: guarded engine-section keys (reset to stock), personal
+  reverts (commented or removed), or convars the patch deleted. See the sections above.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.

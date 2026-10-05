@@ -75,12 +75,12 @@ GameInfo
             Game_UILanguage "citadel_*LANGUAGE*"
             Game_LowViolence "citadel_lv"
 
-            Mod                 citadel
-            Write               citadel
-            Game                citadel/custom
-            Game                citadel/addons
-            Game                citadel
-            Game                core
+            Mod   "citadel"
+            Write "citadel"
+            Game  "citadel/custom"
+            Game  "citadel/addons"
+            Game  "citadel"
+            Game  "core"
         }
 
         LegacyUserSettingsPathID "MOD"
