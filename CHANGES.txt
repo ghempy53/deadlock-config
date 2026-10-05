@@ -92,7 +92,7 @@ Header credits/donation text removed; all setting comments kept.
   line 952   animgraph_footlock_trace_ground_enabled      "false"  ->  (commented -> engine default)
   line 953   animgraph_footlock_use_hip_shift             "false"  ->  (commented -> engine default)
   line 954   animgraph_slowdownonslopes_enabled           "false"  ->  (commented -> engine default)
-POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 11 settings
+POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 13 settings
   Removed by the patch (no longer exist after the HUD/health bar rework, so these lines did nothing):
   line --    citadel_unit_status_dpi                      "10"  ->  (line removed; convar gone)
   line --    citadel_unit_status_allies_see_thru_walls_max_distance "40"  ->  (line removed; convar gone)
@@ -107,6 +107,9 @@ POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 11 settings
   line 699   citadel_camera_see_distance_max              "7000"  ->  (commented -> engine default 20000; clarity over unproven FPS)
   Hardware (Ryzen 7 9800X3D, 8 cores):
   line 911   snd_steamaudio_num_threads                   "6"  ->  "4" (stock)
+  FPS limits removed (stock-tail values, changed on request):
+  line 1111  fps_max                                      "400"  ->  "0" (no limit; in-game Max FPS setting can still override)
+  line 1112  fps_max_ui                                   "120"  ->  "0" (no limit while UI is shown)
   Comment-only changes (values unchanged):
   - citadel_unit_status_width "100": noted that the post-patch default is 200 (kept narrow on purpose).
   - Defaults corrected from the dump: r_texture_stream_mip_bias (0), r_texturefilteringquality (1), stamina_low_pips (1).

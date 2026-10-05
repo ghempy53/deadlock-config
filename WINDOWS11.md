@@ -20,8 +20,8 @@ over the same in-game scenario. Sandbox works well for this.
 - **With a G-SYNC / VRR monitor:** turn G-SYNC on and **V-Sync On in the NVIDIA Control Panel** (off in game),
   and set **Reflex On** in game. Reflex then caps fps just under refresh automatically, which keeps you inside the VRR range with
   low latency. If you'd rather cap by hand, use a cap a few fps below refresh.
-- **Without VRR:** V-Sync off, Reflex On, and cap fps to a stable value. The stock config tail sets
-  `fps_max 400`; use the in-game max-FPS setting to pick your own.
+- **Without VRR:** V-Sync off, Reflex On. This config uncaps fps (`fps_max 0`, `fps_max_ui 0`); set Max FPS
+  to unlimited in game too, or the menu value overrides it. Add a cap there only if frametimes are uneven.
 - **Shader Cache Size:** 10 GB or Unlimited. Big updates such as City Never Sleeps invalidate shaders, so expect
   stutter for the first few matches after a patch while the cache rebuilds.
 - Leave Low Latency Mode in the Control Panel at its default. Reflex in game supersedes it.
