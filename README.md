@@ -35,6 +35,7 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
   `citadel_damage_text_new_*_offset_y` lines, so only the totals show.
 - **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). To go past 90, City Never Sleeps
   added camera overrides in Settings (`citadel_camera_override_fov`, 50–150).
+- **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Video preset:** set it in the in-game menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
 - **Health bars:** the patch's new bars are the only bars. This config only narrows them

@@ -664,12 +664,10 @@ GameInfo
         // panorama_max_overlay_fps                   "30"    // Fps In the settings/esc menu.                                    [def: "60"] // (convar gone post-CNS)
 
         // --- 6. Camera Tweaks ---
-        citadel_melee_shake_duration 0
         // citadel_camera_listening_offset    "-1"   // To be completely honest I have no idea but I want to test this.  [def: "0"]
         citadel_camera_soft_collision_angle         "75"    //                                                                  [def: "75"]
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
-        citadel_camera_wobble_disable               "true"  // I believe this disables the camera wobble when heavy melee'd or talking walker/guardian damage. I like it
-        citadel_melee_shake_amplitude               "0"     // I believe this properly disables the camera shake on heavy melee                 [def: 0.55]
+        citadel_camera_wobble_disable               "true"  // Client-side; disables camera wobble when heavy melee\'d or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]
         engine_accurate_input_processing_delta_time "true"  // When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) [def: false]
         r_citadel_clip_sphere_min_opacity           "0"     // Removes the blur from the pinhole camera                         [def: "40"]
 
