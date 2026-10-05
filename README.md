@@ -5,7 +5,7 @@ A personal `gameinfo.gi` for Deadlock on Windows 11. It is based on
 and was verified against the **City Never Sleeps** major update (2026-09-29).
 
 **Goal: balanced clarity + FPS.** Upstream's heaviest visual cuts are reverted: lighting, sun,
-shadow casting, full-res textures, glows, viewmodel and tracers. The CPU/GPU savings that don't hurt
+shadow casting, glows, viewmodel and tracers. The CPU/GPU savings that don't hurt
 readability are kept.
 
 **Target setup:** Ryzen 7 9800X3D, NVIDIA GPU, DirectX 11 (the Windows default), Windows 11.
@@ -37,6 +37,10 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
   added camera overrides in Settings (`citadel_camera_override_fov`, 50–150).
 - **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
+- **Video settings (Settings → Video → Performance, as of 2026-10-05):** Stretch upscaling at 100%, FXAA,
+  SSAO Off, Shadow Low, Fog Low, Texture Low, bloom/area lights/depth of field Off, VSync Off, max FPS 1,000, DX11.
+  The menu owns these, so the config's matching lines (`r_texture_stream_mip_bias "2"`, `r_citadel_shadow_quality "0"`,
+  `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
 - **Video preset:** set it in the in-game menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
 - **Health bars:** the patch's new bars are the only bars. This config only narrows them
   (`citadel_unit_status_width 100`; the default is 200).
