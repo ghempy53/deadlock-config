@@ -667,7 +667,7 @@ GameInfo
         // citadel_camera_listening_offset    "-1"   // To be completely honest I have no idea but I want to test this.  [def: "0"]
         citadel_camera_soft_collision_angle         "75"    //                                                                  [def: "75"]
         citadel_camera_use_vmdl_flatten_horizontal  "false" // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"]
-        citadel_camera_wobble_disable               "true"  // Client-side; disables camera wobble when heavy melee\'d or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]
+        citadel_camera_wobble_disable               "true"  // Client-side; disables camera wobble when heavy melee'd or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]
         engine_accurate_input_processing_delta_time "true"  // When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) [def: false]
         r_citadel_clip_sphere_min_opacity           "0"     // Removes the blur from the pinhole camera                         [def: "40"]
 
@@ -686,8 +686,8 @@ GameInfo
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
-        r_texture_stream_mip_bias      "2"   // Matches in-game Texture quality Low (Low=2, High=0; the menu writes this). Higher = blurrier. [def: "0"]
-        // r_texturefilteringquality      "5"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x [def: "1"]
+        r_texture_stream_mip_bias      "0"   // Full-res textures. Matches in-game Texture quality High (Low=2, High=0; the menu writes this). Higher = blurrier. [def: "0"]
+        r_texturefilteringquality      "5"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x [def: "1"]
 
         // ================ IMPORTANT ================
         thread_pool_option "-1" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]

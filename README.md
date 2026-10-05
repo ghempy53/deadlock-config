@@ -8,7 +8,8 @@ and was verified against the **City Never Sleeps** major update (2026-09-29).
 shadow casting, glows, viewmodel and tracers. The CPU/GPU savings that don't hurt
 readability are kept.
 
-**Target setup:** Ryzen 7 9800X3D, NVIDIA GPU, DirectX 11 (the Windows default), Windows 11.
+**Target setup:** Ryzen 7 9800X3D (SMT off), RTX 5070, 2560x1440 @ 270 Hz, DirectX 11, Windows 11.
+Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, which the SearchPaths already mount).
 
 | File | What it is |
 | --- | --- |
@@ -38,9 +39,10 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 - **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Video settings (Settings → Video → Performance, as of 2026-10-05):** Stretch upscaling at 100%, FXAA,
-  SSAO Off, Shadow Low, Fog Low, Texture Low, bloom/area lights/depth of field Off, VSync Off, max FPS 1,000, DX11.
-  The menu owns these, so the config's matching lines (`r_texture_stream_mip_bias "2"`, `r_citadel_shadow_quality "0"`,
+  SSAO Off, Shadow Low, Fog Low, Texture High, bloom/area lights/depth of field Off, VSync Off, max FPS 1,000, DX11.
+  The menu owns these, so the config's matching lines (`r_texture_stream_mip_bias "0"`, `r_citadel_shadow_quality "0"`,
   `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
+  Texture filtering is not in the menu; the config sets anisotropic 16x (`r_texturefilteringquality "5"`).
 - **Video preset:** set it in the in-game menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
 - **Health bars:** the patch's new bars are the only bars. This config only narrows them
   (`citadel_unit_status_width 100`; the default is 200).
