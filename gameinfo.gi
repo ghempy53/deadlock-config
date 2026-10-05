@@ -725,7 +725,6 @@ GameInfo
         r_citadel_shadow_quality                 "0"    // Deadlock/Citadel shadow quality level (0 = lowest).              [def: "1"]
         r_size_cull_threshold_shadow             "2.4"  // Threshold of shadow map size percentage below which objects get culled (higher = cull more to save shadow cost). [def: "0.2"]
         sparseshadowtree_disable_for_viewmodel   "1"    // Disable SST generation and runtime for viewmodel (use original CSM rendering).   [def: "1"]
-        sparseshadowtree_enable_rendering        "0"    // Sparse Shadow Tree (static geometry into shadow cascades). Default became true in CNS, so "0" now actively disables it. [def: "1"]
 
         // ================ Lighting ================
         cl_retire_low_priority_lights               "1"    // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"]
