@@ -144,17 +144,6 @@ GameInfo
         Use32BitDepthBuffer                "0"    //      [def: "0"]
         Use32BitDepthBufferWithoutStencil  "0"    //      [def: "0"]
         UseReverseDepth                    "1"    // Also not fully sure.                     [def: "1"]
-        VulkanAdditionalShaderCache        "vulkan_shader_cache.foz"
-        VulkanDefrag                       "1"   //      [def: "1"]
-        VulkanMutableSwapchain             "1"   //      [def: "1"]
-        VulkanOnlyTestProbability          "0"   // Jasper said that "[when set to 1] this makes users have a 1% chance of using Vulkan" [def: "0"]
-        VulkanOnly_Linux                   "1"   //      [def: "1"]
-        VulkanRequireDescriptorIndexing    "1"   // Setting this command to zero causes my wayland compositor to crash upon launching the game. I would imagine don't fiddle with it      [def: "1"]
-        VulkanRequireSubgroupWaveOpSupport "1"   //      [def: "1"]
-        VulkanStagingPMBSizeLimitMB        "768" // Jasper (my beloved) said to not mess withthis
-        VulkanSteamAppShaderCache          "1"   //      [def: "1"]
-        VulkanSteamDownloadedShaderCache   "1"   //      [def: "1"]
-        VulkanSteamShaderCache             "1"   //      [def: "1"]
 
         MaxPreloadTextureResolution           "0" // this stems from the dll so you can assume that there is no default value.
         AllowPartialMipChainImmediateTexLoads "1"
@@ -846,7 +835,6 @@ GameInfo
         //r_force_zprepass               "0"     // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"] // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary.
         //sc_aggregate_render_mesh_shader                    "true" // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
         // citadel_video_preset          "9"     // Post-CNS range is 0-3 (9 was clamped) and it is an archive setting owned by the in-game video menu. [def: "3"]
-        r_vma_defrag_algorithm        "0"     // Should speed up vulkan defragging, which could increase performance if you're  getting bad performance the longer a match goes on [def: "1"]
         rtx_dynamic_blas              "false" // Don't think that raytracing is used, but I'm making sure         [def: "true"]
         rtx_dynamic_blas_caching      "true"  //                                                                  [def: "true"]
         rtx_force_default_hitgroup    "true"  //                                                                  [def: "false"]

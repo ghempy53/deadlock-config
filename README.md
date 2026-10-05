@@ -49,7 +49,8 @@ Commenting that line out makes `citadel/cfg/video.txt` usable, but it also force
 
 Keep them minimal. `-dx11` is unnecessary because it is the Windows default. `-novid` (skip the intro video) is harmless.
 Most flags in upstream's `launch_options.txt` are a raw dump of engine/dev options and are not recommendations.
-The `Vulkan*` keys in `RenderSystem` only matter if you launch with `-vulkan`.
+All Vulkan settings were removed from this config, so it is DX11-only. Don't launch with `-vulkan`; restore the
+stock `Vulkan*` RenderSystem keys first if you ever switch.
 
 ## After every Deadlock update
 
