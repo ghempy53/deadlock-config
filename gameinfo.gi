@@ -877,7 +877,7 @@ GameInfo
         // snd_mixahead                             "0.05"  // Adds some latency that shouldn't be percivable to save cpu       [def: "0.001"]
         snd_soundmixer_version                   "2"     // [def: "2"]
         snd_steamaudio_reverb_order_rendering    "0"     // The amount of directional detail in the rendered audio by Steam Audio. [def: "0"]
-        snd_steamaudio_num_threads               "4"     // Audio thread count. Upstream used 6; 4 chosen for an 8-core 9800X3D. Code default is 2 (cheat flag). [def: "2"]
+        snd_steamaudio_num_threads               "2"     // Steam Audio thread count. Code default (cheat flag). Upstream used 6. [def: "2"]
         audio_enable_spawn_mask_mix_layer        "false" // Disabling these should help with performance, Yay! [def: "true"]
         snd_boxverb_simd                         "false" // Disabling these should help with performance, Yay! [def: "true"]
         snd_enable_subgraph_corenull_passthrough "false" // Disabling these should help with performance, Yay! [def: "true"]
