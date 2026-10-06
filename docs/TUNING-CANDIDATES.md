@@ -67,6 +67,12 @@ Already tested or already set here and not worth revisiting: `sc_instanced_mesh_
 `cl_batch_entity_list_ops_during_latch`, `cl_simulate_dormant_entities false`, cloth prediction zeros, bone flex, morphing,
 foot lock.
 
+## B2. Live console test from forum reports
+
+| ConVar | This config | Test | Why |
+| --- | --- | --- | --- |
+| `engine_low_latency_sleep_after_client_tick` | false (pinned default) | `engine_low_latency_sleep_after_client_tick 1` in the console during a fight, Reflex On | Release flag, so it changes live. Valve: with Reflex on, moves the low-latency sleep on tick frames to after client simulation. Forum users recommend true for FPS. Adopt only if fight 1% lows improve; see [FORUM-RESEARCH-2026-10-06.md](FORUM-RESEARCH-2026-10-06.md). |
+
 ## C. One in-game check: the `video.txt` path for blocked convars
 
 Community `video.txt` files carry `setting.r_shadows 0`, `setting.csm_max_shadow_dist_override 0`,
