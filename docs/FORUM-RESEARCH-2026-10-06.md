@@ -74,6 +74,81 @@ options were checked against Valve's convar dump (build 6753) and the engine's l
 - One particle-performance thread reports that lighting, shadow and particle config edits gave minimal gains even on
   old hardware, consistent with the CPU-bound picture.
 
+## BIOS, SMT, memory and overclocking (added 2026-10-06)
+
+Same method as above: search-result titles and excerpts only. These are the reports most relevant to this repo's
+hardware (9800X3D with SMT off, DDR5-6000 EXPO, RTX 5070) and to the 2026-10-06 Sandbox crash, which stopped the log
+with no error a few minutes in.
+
+**SMT / Hyper-Threading off.** A Ryzen 7 5700X + RTX 3070 owner reports going from unstable 150 to 240 FPS with low
+GPU use to 200 to 300 FPS with 90 to 100% GPU use after disabling SMT. Others report fewer drops, and call it a
+workaround that costs performance elsewhere. Consistent with the single-main-thread picture. **This repo already runs
+SMT off**, so nothing to change.
+
+**Memory overclock (EXPO / XMP) is the most-cited crash cause.** Repeated claim: Source 2 exposes RAM instability that
+other games and stress tests miss. Reported fixes: disable EXPO/XMP to test at default speed; drop one step (one user
+went from **6000 to 5800 MT/s** and the crashes stopped); or add a little voltage. A crash with exception code
+**0xc0000005** (access violation) is described as almost always memory instability. Disabling XMP also stopped
+recurring `pak01.vpk is corrupt` errors for some, and those corruption loops have led to wrongful bans in one
+thread. **Relevant here:** the owner runs DDR5-6000 EXPO, the same speed as the user who fixed crashes at 5800.
+
+**Out-of-date BIOS.** A thread marked fixed ("Game keeps crashing all the time, no errors, no crash report") was solved
+by a BIOS update from F5 to F33 that fixed board-to-CPU voltage issues. Others report BIOS update plus `-dx11` stopped
+crashes, including the RTX 5090 `materialsystem2.dll` thread. Counterpoint: on Intel 13th/14th gen, one user's
+microcode BIOS update made crashes worse until the CPU was downclocked.
+
+**The 5 to 6 minute crash.** One thread matches the 2026-10-06 symptom closely: the screen freezes with sound still
+playing about 5 to 6 minutes in, then the game closes. The dump shows 0xc0000005, a NULL dereference in
+`client.dll`. It happened only on the first launch after a boot. Fixes players report: turn off Steam's
+*Enable Shader Pre-caching* (Steam Settings, Downloads), cap CPU boost under 5 GHz or use a lower power mode, or BIOS
+update plus `-dx11`.
+
+**CPU boost and PBO.** Several reports tie Deadlock-only crashes to aggressive boost: downclocking (5.2 to 5.0 GHz on
+Intel), reducing PBO/PPT limits on Zen 3 X3D for heat, and the "under 5 GHz" workaround above. A 9800X3D owner reports
+crashes that ended in GPU driver corruption, and a 7800X3D owner about 15 crashes in 3 matches after an update. No
+9800X3D-specific BIOS fix was found.
+
+**GPU overclock and undervolt.** Mixed. Some fixed black-screen crashes and LiveKernelEvent 141 driver resets with a
+-100 MHz core offset or an undervolt plus an NVIDIA Control Panel frame cap. Others report that undervolts cause
+Deadlock crashes and recommend removing them. AMD users report a -20% power limit helping.
+
+**Other BIOS items.** Resizable BAR (Above 4G Decoding) is recommended on by one user and toggled off as a VRAM
+workaround by another; no consistent result. On a dual-CCD X3D (7950X3D), players pin the game to the V-Cache CCD with
+Process Lasso; not relevant to the single-CCD 9800X3D.
+
+**Other no-error crash fixes from the same threads:** rename `video.txt` to reset graphics settings (relevant: the
+owner's `video.txt` contains a community key the game cannot read), use *Stretch* instead of FSR/DLSS, and turn off
+low-latency features while testing.
+
+### Suggested order for the 2026-10-06 crash, from these reports
+
+1. Check Event Viewer for the faulting module and exception code. `client.dll` or `materialsystem2.dll` with
+   0xc0000005 points at the engine bugs above or at memory; an NVIDIA module points at the driver.
+2. If it is 0xc0000005: run memory at 5800 MT/s (or EXPO off) for a few sessions. If the crashes stop, memory
+   stability is the cause, whatever the config.
+3. Update the BIOS if it is not current, since AGESA updates matter for 9800X3D memory stability.
+4. Turn off Steam shader pre-caching, and rename `video.txt` once so the game writes a clean one.
+5. Only then continue the config bisect (step 3, particle fallbacks).
+
+### Sources (BIOS, SMT, memory, overclocking)
+
+- [Hyper threading (or) SMT off give more stable FPS and better GPU utilization](https://forums.playdeadlock.com/threads/hyper-threading-or-smt-off-give-more-stable-fps-and-better-gpu-utilization.91848/)
+- [Game freezes on first launch after boot and crashes after ~5–6 minutes (Access Violation)](https://forums.playdeadlock.com/threads/game-freezes-on-first-launch-after-boot-and-crashes-after-5%E2%80%936-minutes-access-violation.125256/)
+- [[FIXED READ THREAD] Game keeps crashing all the time, no errors, no crash report](https://forums.playdeadlock.com/threads/fixed-read-thread-game-keeps-crashing-all-the-time-many-times-no-errors-no-crash-report.124611/)
+- [Game Crash to desktop due to Access Violations](https://forums.playdeadlock.com/threads/game-crash-to-desktop-due-to-access-violations.79900/)
+- [Repeat Crashing randomly](https://forums.playdeadlock.com/threads/repeat-crashing-randomly.81269/)
+- [pak01.vpk Corruption Workaround](https://forums.playdeadlock.com/threads/pak01-vpk-corruption-workaround.67321/)
+- [Wrongfully Banned due to Pak01.vpk Corruption Bug](https://forums.playdeadlock.com/threads/wrongfully-banned-due-to-pak01-vpk-corruption-bug.74694/)
+- [Latest Update Instability](https://forums.playdeadlock.com/threads/latest-update-instability.141222/)
+- [CPU Temp Issue](https://forums.playdeadlock.com/threads/cpu-temp-issue.20342/)
+- [i9 14900k instability issues](https://forums.playdeadlock.com/threads/i9-14900k-instability-issues.8083/)
+- [Deadlock crashing so much it is impossible to continue playing](https://forums.playdeadlock.com/threads/deadlock-crashing-so-much-if-is-impossible-to-continue-playing-it.128102/)
+- [GPU Crash almost every game](https://forums.playdeadlock.com/threads/gpu-crash-almost-every-game.83103/)
+- [I think I have solved my nvidia related crashing issue](https://forums.playdeadlock.com/threads/i-think-i-have-solved-my-nvidia-related-crashing-issue.25826/)
+- [Game hard crashes randomly](https://forums.playdeadlock.com/threads/game-hard-crashes-randomly.104324/)
+- [Video memory starts to get clogged](https://forums.playdeadlock.com/threads/video-memory-starts-to-get-clogged.156440/)
+- [Still extreme optimization problems](https://forums.playdeadlock.com/threads/still-extreme-optimization-problems.146599/)
+
 ## Sources (forum threads, via search results)
 
 - [Frametime stutter / hitching that scales with teamfight size — 9800X3D + RTX 4070](https://forums.playdeadlock.com/threads/frametime-stutter-hitching-that-scales-with-teamfight-size-%E2%80%94-9800x3d-rtx-4070-high-avg-fps.150957/)
