@@ -56,7 +56,7 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 - **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Video settings (Settings → Video → Performance, as of 2026-10-05):** Stretch upscaling at 100%, FXAA,
-  SSAO Off, Shadow Low, Fog Low, Texture High, bloom/area lights/depth of field Off, VSync Off, max FPS 1,000, DX11.
+  SSAO Off, Shadow Low, Fog Low, Texture High, bloom/area lights/depth of field Off, VSync Off, max FPS 400, DX11.
   The menu owns these, so the config's matching lines (`r_texture_stream_mip_bias "0"`, `r_citadel_shadow_quality "0"`,
   `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
   Texture filtering is not in the menu; the config sets anisotropic 16x (`r_texturefilteringquality "5"`).
