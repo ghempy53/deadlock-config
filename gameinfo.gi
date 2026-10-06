@@ -652,7 +652,7 @@ GameInfo
         r_texture_stream_mip_bias                        "0"        // [def: 0]
         // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x,
         // 5: Aniso 16x.
-        r_texturefilteringquality                        "5"        // [def: 1]
+        r_texturefilteringquality                        "4"        // Aniso 8x. [def: 1]
         // Reduce texture memory pool size when this percentage of the budget is full.
         // r_texture_budget_threshold                       "0.7"      // [def: 0.9]
         // r_texture_budget_update_period                   "0.5"      // Time (in seconds) between updating texture memory budget. [def: 0.1]
@@ -823,9 +823,9 @@ GameInfo
         // This does what it says on the tin, should save more performance the lower fps gets. Restored from the
         // 2026-10-04 config.
         r_update_particles_on_render_only_frames         "true"     // [def: false]
-        // I don't know if this does anything but I didn't notice anything terrible out the gate and lowering particle
-        // resolution can't hurt.
-        // r_particle_mixed_resolution_viewstart            "16"       // [def: 500]
+        // Particles farther than this distance render at reduced resolution (cheaper fill on the GPU). Nothing is
+        // removed; distant smoke and fire get a little softer. Upstream used 16 (almost everything low-res).
+        r_particle_mixed_resolution_viewstart            "250"      // Halved from stock 500. [def: 500]
         // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably
         // with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with.
         // r_particle_timescale                             "1"        // [def: 1]

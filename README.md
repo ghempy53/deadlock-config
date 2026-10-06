@@ -79,7 +79,7 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
   SSAO Off, Shadow Low, Fog Low, Texture High, bloom/area lights/depth of field Off, VSync Off, max FPS 1,000.
   The menu owns these, so the config's matching lines (`r_texture_stream_mip_bias "0"`, `r_citadel_shadow_quality "0"`,
   `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
-  Texture filtering is not in the menu; the config sets anisotropic 16x (`r_texturefilteringquality "5"`).
+  Texture filtering is not in the menu; the config sets anisotropic 8x (`r_texturefilteringquality "4"`).
 - **Video preset:** set it in the in-game menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
 - **Health bars:** the patch's new bars are the only bars, at Valve's default width (200). The old narrow-bar line
   (`citadel_unit_status_width "100"`) is kept commented out in group 1c if you want it back.

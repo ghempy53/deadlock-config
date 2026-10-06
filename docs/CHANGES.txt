@@ -494,6 +494,19 @@ DAMAGE NUMBERS: 4 S FINAL TOTAL, NO BIG-HIT EMPHASIS (2026-10-06)
   commented (Valve defaults). Untested in game.
   Line numbers unchanged.
 
+GPU TRIMS: ANISO 8X, LOWER-RES DISTANT PARTICLES (2026-10-06)
+  line 655   r_texturefilteringquality                     "5"  ->  "4"
+  line 828   r_particle_mixed_resolution_viewstart         (commented, "16")  ->  "250"
+  Why: the owner reports being GPU-bound and asked for 8x anisotropic filtering and slightly cheaper particles.
+  Aniso 8x is visually close to 16x and only differs on floors and walls at steep angles; the saving is small.
+  r_particle_mixed_resolution_viewstart (no Valve description; default 500) is the distance past which particles
+  render at mixed (lower) resolution, so halving it moves more mid-range smoke, fire and ability effects to the
+  cheaper pass. Nothing is removed and close effects stay full resolution. Upstream's 16 was judged too aggressive.
+  developmentonly: needs a game restart to test. Untested in game: look for softer or haloed edges on mid-range
+  effects (Infernus fire, Paige, Seven ult) and compare fight 1% lows. Undo: set line 655 back to 5, comment out
+  line 828.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
