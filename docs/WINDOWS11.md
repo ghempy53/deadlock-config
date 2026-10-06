@@ -11,7 +11,11 @@ over the same in-game scenario. Sandbox works well for this.
 - **Chipset driver:** install AMD's current chipset driver. The 9800X3D has a single CCD with all 8 cores on
   the V-Cache die, so the dual-CCD core-parking / Game Bar "is this a game" dependency of the 7950X3D/9950X3D
   **does not apply**. No Process Lasso or affinity tricks are needed.
-- **BIOS:** EXPO is on and SMT is off (Turbo Game Mode). No further BIOS changes are planned.
+- **BIOS:** EXPO is on and SMT is off (Turbo Game Mode). Keep the BIOS current: AGESA updates affect 9800X3D memory
+  stability, and an out-of-date BIOS is a common fix on the Deadlock forums for crashes with no error.
+- **If Deadlock crashes with exception 0xc0000005 (Event Viewer):** forum reports most often trace it to memory
+  instability that Source 2 exposes and stress tests miss. Test at 5800 MT/s (one step below EXPO 6000) or with EXPO
+  off for a few sessions. Details in [FORUM-RESEARCH-2026-10-06.md](FORUM-RESEARCH-2026-10-06.md).
 - **Power plan:** *Balanced* is fine with a current chipset driver. *High performance* mostly adds idle power.
 
 ## NVIDIA
