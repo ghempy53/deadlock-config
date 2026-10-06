@@ -44,9 +44,9 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 
 ## In-game settings this config assumes
 
-- **Damage numbers:** on, with cumulative mode *"show the total once damage stops"*
-  (`citadel_damage_text_cumulative_mode 2`). Per-hit numbers are pushed off-screen by the
-  `citadel_damage_text_new_*_offset_y` lines, so only the totals show.
+- **Damage numbers:** on, with cumulative damage set to *Final total only* (`citadel_damage_text_cumulative_mode 2`).
+  All damage-number positions are Valve defaults. The old lines that pushed per-hit numbers off-screen are kept
+  commented out in group 1d. Don't re-enable them: the game shows no total for a single hit, so the first hit disappears.
 - **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). To go past 90, City Never Sleeps
   added camera overrides in Settings (`citadel_camera_override_fov`, 50–150).
 - **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
