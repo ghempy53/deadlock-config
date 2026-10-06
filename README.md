@@ -48,6 +48,21 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 - **Health bars:** the patch's new bars are the only bars. This config only narrows them
   (`citadel_unit_status_width 100`; the default is 200).
 
+## Troubleshooting: greyed-out or miscoloured HUD (mods)
+
+If the ability-upgrade pips look grey, or the console shows Panorama warnings like
+`Invalid value for property 'wash-color': deadlockGreen` or `Unknown panel type in style selector:
+CitadelSettingsEnumDropDown` in `citadel_base_styles.css`, a mod is overriding Valve's HUD stylesheet with an
+old copy. Valve's City Never Sleeps `citadel_base_styles.css` defines `deadlockGreen` and has no
+`CitadelSettingsEnumDropDown` selectors; the pre-patch (July) copy is the reverse. `citadel/custom` and
+`citadel/addons` are mounted before `citadel`, so any VPK there that contains
+`panorama/styles/citadel_base_styles.vcss_c` wins. This is not caused by `gameinfo.gi`.
+
+Fix: move everything out of `citadel/addons` (and `citadel/custom`) temporarily, confirm the HUD is correct, then put
+the mods back in halves until the HUD breaks again. Update or drop the mod that ships the stylesheet (Source 2 Viewer
+can open a VPK to check). The same applies to hero effects: a Shiv skin that replaces `particles/abilities/shiv/*`
+can hide the Killing Blow "killable" indicator.
+
 ## Where settings live
 
 `UserSettingsPathID "USRLOCAL"` is left as stock, so your video settings are in
