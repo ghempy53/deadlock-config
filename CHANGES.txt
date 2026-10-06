@@ -16,7 +16,7 @@ Header credits/donation text removed; all setting comments kept.
   line --    r_mapextents                                 "7000"  ->  (line removed -> engine default)
   line 555   citadel_boss_glow_disabled                   "1"  ->  "0"
   line 557   citadel_damage_offscreen_indicator_disabled  "true"  ->  (commented -> engine default)   UI reset
-  line 564   citadel_unit_status_width                    (absent)  ->  added "100"
+  line 564   citadel_unit_status_width                    (absent)  ->  added "100"   -> commented 2026-10-06 (back to default 200)
   line 597   r_aspectratio                                "2.9"  ->  (commented -> engine default 0, native 16:9)
   line --    default_fov                                  "0"  ->  (line removed -> engine default)
   line --    viewmodel_fov                                "0"  ->  (line removed -> engine default)
@@ -154,7 +154,7 @@ POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 49 settings
              optimisation (pre-built static-geometry shadows for cascade 2); with this config's sun shadows cut and
              in-game Shadow quality Low it has no practical effect either way.
   Comment-only changes (values unchanged):
-  - citadel_unit_status_width "100": noted that the post-patch default is 200 (kept narrow on purpose).
+  - citadel_unit_status_width "100": post-patch default is 200. Commented out 2026-10-06 so the default applies (HUD felt small at 1440p).
   - Defaults corrected from Valve's dump: r_texture_stream_mip_bias (0), r_texturefilteringquality (1),
     citadel_unit_status_delta_decay_delay (0.3), cl_ragdoll_limit (20), r_citadel_shadow_quality (1),
     snd_steamaudio_num_threads (2).

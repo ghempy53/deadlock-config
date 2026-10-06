@@ -561,7 +561,7 @@ GameInfo
         // --- 1c. Health bars ---
         // Removed post-CNS (convars no longer exist after the HUD rework): citadel_unit_status_dpi, _allies_see_thru_walls_max_distance,
         //   _old_update_rate, _single_bar_mode, _use_new, _use_v2, _use_v2_for_nonplayers. The new health bar is the only one now.
-        citadel_unit_status_width                  "100"  // Health bar width. Post-CNS default is 200; 100 = narrow bars (personal choice). [def: "200"]
+        // citadel_unit_status_width               "100"  // Default 200 since 2026-10-06 (UI felt small at 1440p). Uncomment for narrow bars. [def: "200"]
         // citadel_unit_status_delta_decay_delay   "0"    // The delay between doing damage and havin the yellow damage indicator appear [def: "0.3"]
         // citadel_unit_status_delta_decay_rate    "10"   // How quickly the yellow "you're dealing damage" indicator fades [def: "0.5"]
         // citadel_unit_status_recent_damage_time  "inf"  // how long to show someone's numerical health value when you shoot them. Inf means infinite, but will cause the healthbar to jiggle/shake forever. [def: "0.25"]
