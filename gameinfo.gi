@@ -567,16 +567,17 @@ GameInfo
         // citadel_unit_status_recent_damage_time  "inf"  // how long to show someone's numerical health value when you shoot them. Inf means infinite, but will cause the healthbar to jiggle/shake forever. [def: "0.25"]
         // citadel_unit_status_stamina_low_pips    "7"    // Gone: added in CNS, removed again in the 09-30 hotfix.
 
-        // --- 1d. Damage numbers (in-game cumulative mode must be: show the total once damage stops) ---
+        // --- 1d. Damage numbers (per-hit numbers at default spots, kept small; total moved up-left; any in-game cumulative mode) ---
         // citadel_damage_text_batching_window_ability removed post-CNS. _individual [def: "0"] and _individual_heal [def: "0.1"] stay default.
         citadel_damage_text_batching_window_cumulative "3"    // Seconds after your last hit before the total closes. [def: "1.5"]
         citadel_damage_text_cumulative_final_delay     "0"    // Extra wait before the final total shows. [def: "0.75"]
         citadel_damage_text_cumulative_final_lifetime  "2"    // How long the final total stays. [def: "3"]
-        citadel_damage_text_new_bullet_offset_y   "-10000"
-        citadel_damage_text_new_ability_offset_y  "-10000"
-        citadel_damage_text_new_melee_offset_y    "-10000"
-        citadel_damage_text_new_pure_offset_y     "-10000"
+        // citadel_damage_text_new_bullet_offset_y   "-10000"  // Hid per-hit numbers. Off since 2026-10-06: a single hit never makes a total. [def: "10"]
+        // citadel_damage_text_new_ability_offset_y  "-10000"  // [def: "-10"]
+        // citadel_damage_text_new_melee_offset_y    "-10000"  // [def: "30"]
+        // citadel_damage_text_new_pure_offset_y     "-10000"  // [def: "0"]
         citadel_damage_text_cumulative_offset     "-50 -35 0"  // x y z. Lower y is higher on screen. Was -50 -15 0 until 2026-10-06. [def: "10 25 0"]
+        citadel_damage_text_dynamic_emphasis      "false"  // Big hits no longer scale up 150%. Only size control exposed as a convar; crits still scale 130%. [def: "true"]
         // citadel_damage_report_enable           "1"          // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
 
         // --- 1e. Camera ---
