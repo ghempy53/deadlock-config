@@ -1,0 +1,766 @@
+convar,valve_default,valve_flags,status,ghempy53,valve_stock,sqooky_main,sqooky_test,sqooky_maxfps,eskay,piggy,kaiz_minspec,kaiz_extremelow,boot_maxfps,optilock_recommended,optilock_potato,compylock,abyzz
+ai_async_queue_max_jobs,-1,developmentonly gamedll,ok,,,,,,,,,,1,1,1,,1
+ai_disable,,,NOT IN VALVE DUMP (removed/renamed),//1,,//1,//1,//1,//1,,,,,,,,
+ai_disabled,false,gamedll clientdll replicated cheat,ok,,,//1,//1,//1,//1,,,,,,,,
+ai_expression_optimization,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,1,1,1,,1
+ai_foot_sweep_enable,true,developmentonly gamedll,ok,,,,,,,,,,false,false,false,,false
+ai_gather_conditions_async,false,developmentonly gamedll defensive,ok,,,,,,,,,,true,true,true,,true
+ai_lod_auto_enabled,false,developmentonly gamedll,ok,,,,,,,,,,//1,true,true,,//1
+ai_strong_optimizations_no_checkstand,false,developmentonly gamedll defensive,ok,,,,,,,,,,1,1,1,,1
+ai_think_interval,0.1,"min: 0.01, developmentonly gamedll defensive",ok,,,,,,,,,,0.3,0.3,0.3,,0.3
+ai_think_interval_lod_low,0.5,"min: 0.01, developmentonly gamedll defensive",ok,,,,,,,,,,1,1,1,,1
+ai_think_interval_lod_med,0.25,"min: 0.01, developmentonly gamedll defensive",ok,,,,,,,,,,,0.4,0.4,,
+ai_use_async_ragdoll_fixup,false,developmentonly gamedll,ok,,,,,,,,,,true,true,true,,true
+always_perform_full_spatial_partition_update,false,developmentonly gamedll clientdll replicated,ok,1,,1,1,1,1,,1,,,,,1,
+anim_decode_forcewritealltransforms,false,developmentonly,ok,,,,,,,,,,true,true,true,,true
+anim_disable,false,developmentonly gamedll clientdll replicated,ok,,,,,,,,,,true,,true,,true
+anim_resource_validate_on_load,true,release,ok,,,,,,,,0,0,,,,,
+animated_material_attributes,true,clientdll cheat,ok,,,,,,,,0,0,,,,,
+animgraph_enable_dirty_netvar_optimization,true,developmentonly replicated defensive,ok,,,,,,,,,,,true,true,,
+animgraph_enable_parallel_op_evaluation,,,NOT IN VALVE DUMP (removed/renamed),//1,,//1,//1,//1,//1,,,,1,1,1,,1
+animgraph_enable_parallel_preupdate,,,NOT IN VALVE DUMP (removed/renamed),//1,,//1,//1,//1,//1,,,,1,1,1,,1
+animgraph_footlock_calculate_tilt,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+animgraph_footlock_enabled,true,developmentonly replicated defensive,ok,false,,false,false,false,false,,,,false,false,false,,false
+animgraph_footlock_ground_roll,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+animgraph_footlock_hip_offset_enable,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+animgraph_footlock_ik_enable,true,replicated cheat,ok,,,false,false,false,false,,,,,,,,
+animgraph_footlock_trace_ground_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+animgraph_footlock_use_hip_shift,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+animgraph_slowdownonslopes_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,false,false,false,,false
+audio_enable_spawn_mask_mix_layer,true,developmentonly clientdll defensive,ok,//false,,false,false,false,false,,,,,,,false,
+audio_enable_vmix_mastering,true,clientdll cheat,ok,//false,,false,false,false,false,,,,0,0,0,false,0
+audio_enclosure_calc_enabled,true,developmentonly gamedll clientdll replicated,ok,0,,0,0,0,0,,0,,,,,0,
+battery_saver,,,NOT IN VALVE DUMP (removed/renamed),//0,,//0,//0,//0,//0,,,,0,0,0,,0
+cam_idealdelta,4,clientdll archive,ok,//0,,0,0,0,0,,,,,,,0,
+cam_idealdist,150,clientdll archive,ok,//0,,//0,//0,//0,//0,,,,,,,,
+cam_ideallag,4,clientdll archive,ok,//0,,0,0,0,0,,,,,,,0,
+cc_captiontrace,1,developmentonly clientdll defensive,ok,//0,,0,0,0,0,,,,,,,0,
+citadel_auto_ping_window,0.35,developmentonly clientdll,ok,//0,,//0,//0,//0,//0,,,,,,,,
+citadel_boss_glow_disabled,false,clientdll release,ok,0,,1,1,1,1,1,1,1,0,1,1,,0
+citadel_bullet_shot_offset_fade_time,0.5,developmentonly clientdll defensive,ok,0,,0,0,0,0,,0,0,,,,0,
+citadel_camera_dist,150,developmentonly gamedll clientdll replicated,ok,//0,,//0,//0,//0,//0,,,,,,,,
+citadel_camera_height,63,clientdll cheat,ok,,,0,0,0,0,,,,,,,0,
+citadel_camera_height_approach_speed,80,clientdll cheat,ok,800,,//0,//0,//0,//0,,,,,,,,
+citadel_camera_height_ceiling_distance,,,NOT IN VALVE DUMP (removed/renamed),,,0,0,0,0,,,,,,,0,
+citadel_camera_hero_fov,90,"min: 75, max: 90, clientdll archive per_user",ok,//106,,//106,//106,//106,//106,,,,90,100,100,,90
+citadel_camera_listening_offset,0,developmentonly clientdll defensive,ok,//-1,,-1,-1,-1,-1,,,,,,,-1,
+citadel_camera_parrot_smoothing_rate,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,0,,,0,0,,
+citadel_camera_pitch_default,20,developmentonly clientdll defensive,ok,//0,,0,0,0,0,,,,,,,0,
+citadel_camera_see_distance_max,20000,developmentonly gamedll clientdll replicated,ok,//7000,,7000,7000,7000,7000,,,,,,,7000,
+citadel_camera_soft_collision,1,developmentonly clientdll replicated defensive,ok,,,,,,,,0,0,0,0,0,,0
+citadel_camera_soft_collision_angle,75,developmentonly clientdll defensive,ok,75,,75,75,75,75,,,,,,,75,
+citadel_camera_use_vmdl_flatten_horizontal,true,developmentonly clientdll defensive,ok,//false,,false,false,false,false,,,,,,,false,
+citadel_camera_use_vmdl_flatten_vertical,true,developmentonly clientdll defensive,ok,true,,true,true,true,,,,,,,,true,
+citadel_camera_wobble_disable,false,developmentonly clientdll defensive,ok,//true,,true,true,true,true,true,true,true,1,1,1,true,1
+citadel_cinematic_intro_duration_npc,7.5,gamedll cheat,ok,,,,,,,,,,0.01,0.01,0.01,,0.01
+citadel_cinematic_intro_duration_player,9.5,gamedll cheat,ok,,,,,,,,,,0.01,0.01,0.01,,0.01
+citadel_cinematic_intro_enabled,0,gamedll cheat,ok,,,,,,,,,,-1,-1,-1,,-1
+citadel_commend_toast_enemy_seconds,3,developmentonly clientdll,ok,,,,,,,,,,0,,,,0
+citadel_commend_toast_seconds,5,developmentonly clientdll,ok,,,,,,,,,,0,,,,0
+citadel_crosshair_hit_marker_duration,0.1,clientdll archive,ok,//0.00001,,//0.00001,//0.00001,//0.00001,//0.00001,,,,0.01,//0.01,//0.01,,0.01
+citadel_custom_ui_colors,false,clientdll archive per_user,ok,,,,,,,,,,,,,0,
+citadel_damage_offscreen_indicator_disabled,true,clientdll release,ok,//true,,true,true,true,true,,1,1,1,1,1,,1
+citadel_damage_report_enable,true,developmentonly clientdll,ok,//1,,1,1,1,1,1,,,1,1,1,1,1
+citadel_damage_text_batching_window_ability,,,NOT IN VALVE DUMP (removed/renamed),,,1000,1000,1000,1000,,,,,,,1000,
+citadel_damage_text_batching_window_cumulative,1.5,developmentonly clientdll,ok,3,,,,,,,,,,,,,
+citadel_damage_text_cumulative_final_delay,0.75,developmentonly clientdll,ok,0,,,,,,,,,,,,,
+citadel_damage_text_cumulative_final_lifetime,3,developmentonly clientdll,ok,2,,,,,,,,,,,,,
+citadel_damage_text_cumulative_offset,"[10, 25, 0]",developmentonly clientdll,ok,-50 -35 0,,,,,,,,,,,,,
+citadel_damage_text_dynamic_emphasis,true,developmentonly clientdll,ok,false,,,,,,,,,,,,,
+citadel_damage_text_lifetime,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,0.01,0.01,0.5,0.5,0.5,,0.5
+citadel_damage_text_lifetime_new,1.5,developmentonly clientdll,ok,,,,,,,,0.1,0.1,,,,,
+citadel_damage_text_new_ability_offset_y,-10,developmentonly clientdll,ok,//-10000,,,,,,,,,,,,,
+citadel_damage_text_new_bullet_offset_y,10,developmentonly clientdll,ok,//-10000,,,,,,,,,,,,,
+citadel_damage_text_new_melee_offset_y,30,developmentonly clientdll,ok,//-10000,,,,,,,,,,,,,
+citadel_damage_text_new_pure_offset_y,0,developmentonly clientdll,ok,//-10000,,,,,,,,,,,,,
+citadel_damage_text_show_effectiveness,false,clientdll cheat,ok,,,//0,//0,//0,//0,,,,0,0,0,,0
+citadel_death_ragdoll_duration,5,"min: 0, max: 10, developmentonly clientdll",ok,,,,,,,,0,0,,,,,
+citadel_distance_mouse_move_for_minimap_drawing,15,clientdll release,ok,//1,,1,1,1,1,,//1,//1,,,,15,
+citadel_enable_new_ping_particle,false,developmentonly clientdll,ok,,,,true,true,,,,,,,,,
+citadel_enable_vdata_sound_preload,true,developmentonly clientdll,ok,true,,true,true,true,true,true,true,,true,true,true,true,true
+citadel_fibonnaci_sphere_trace_los_max,160,developmentonly gamedll clientdll replicated,ok,,,,80,80,,,,,,,,,
+citadel_first_person,false,developmentonly clientdll defensive,ok,//true,,//true,//true,//true,//true,,,,,,,,
+citadel_hideout_ball_show_juggle_count,0,developmentonly gamedll defensive,ok,//1,,1,1,1,1,,,,1,1,1,1,1
+citadel_hideout_ball_show_juggle_fx,0,developmentonly gamedll defensive,ok,//1,,1,1,1,1,,,,1,1,1,1,1
+citadel_hideout_enable_testing_tools,false,developmentonly clientdll,ok,//true,,//true,//true,//true,//true,,,,true,true,true,,true
+citadel_hud_objective_health_debug_show_midboss,false,developmentonly clientdll,ok,//false,,false,false,false,false,false,,,,,,false,
+citadel_hud_objective_health_enabled,2,developmentonly clientdll,ok,//2,,2,2,2,2,2,,,2,2,2,2,2
+citadel_hud_objective_health_idle_timeout,7,developmentonly clientdll,ok,,,,,,,,0,0,4,4,4,,4
+citadel_in_world_item_panel_dpi,2,developmentonly clientdll defensive,ok,//0,,//0,0,0,//0,,,,0.25,0.75,0.75,,0.25
+citadel_match_details_lane_stats_time,540,developmentonly clientdll,ok,,,,,,,,,,360,360,360,,360
+citadel_melee_shake_amplitude,0.55,developmentonly gamedll defensive,ok,,,0,0,0,0,0,,,,0,0,0,
+citadel_melee_shake_duration,0.1,developmentonly gamedll defensive,ok,,,0,0,0,0,,,,,0,0,0,
+citadel_minimap_overlap_scan_distance,12.5,clientdll release,ok,,,,0,0,,,,,,,,,
+citadel_minimap_use_canvas_for_neutrals,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+citadel_minimap_use_canvas_for_shop,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+citadel_npc_disable_cockroaches,false,developmentonly gamedll replicated defensive,ok,,,,,,,,,,true,true,true,,true
+citadel_npc_disable_floor_point_caching,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,false,false,false,,false
+citadel_npc_force_animate_every_tick,,,NOT IN VALVE DUMP (removed/renamed),,,false,false,false,false,,0,,false,false,false,,false
+citadel_orb_debug_draw_state,-1,developmentonly gamedll,ok,,,,1,1,,,,,,,,,
+citadel_outer_radius_scaler,0.2545,developmentonly clientdll defensive,ok,//0,,//0,//0,//0,//0,,,,//0.25,,,,//0.25
+citadel_per_weapon_per_surface_impact_effects,true,developmentonly gamedll clientdll replicated defensive,ok,//false,,,,,,,,,true,false,false,,true
+citadel_perf_interval_report_s,60,developmentonly gamedll,ok,//100000,,//100000,//100000,//100000,//100000,,,,,,,,
+citadel_ping_wheel_activation_radius,0.6,developmentonly clientdll,ok,//1,,//1,//1,//1,//1,,,,,,,,
+citadel_player_glow_disabled,false,clientdll cheat release gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,0,,,0,0,0,,0
+citadel_player_outline_enemies,true,developmentonly clientdll gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,false,false,,,,,true,true,true,,true
+citadel_portrait_unit_ag2_enable,,,NOT IN VALVE DUMP (removed/renamed),,,,false,false,,,,,,,,,
+citadel_portrait_world_renderer_off,false,developmentonly clientdll,ok,//false,,false,false,false,false,,1,1,true,false,false,false,true
+citadel_reduce_camera_shake,false,clientdll archive per_user,ok,,,,,,,,,,,true,,,
+citadel_roster_select_force_enable_priority_token,false,developmentonly clientdll,ok,//true,,//true,//true,//true,//true,,,,,,,,
+citadel_rp_show_dev_messages,false,developmentonly clientdll,ok,//true,,//true,//true,//true,//true,,,,,,,,
+citadel_shoot_forward_offset,35,developmentonly gamedll clientdll replicated defensive,ok,//0,,0,0,0,0,,,,,,,0,
+citadel_show_chat_wheel_angle_threshold,,,NOT IN VALVE DUMP (removed/renamed),//30,,//30,//30,//30,//30,,,,,,,,
+citadel_show_chat_wheel_time,0.23,clientdll archive,ok,//15,,//15,//15,//15,//15,,,,,,,,
+citadel_show_new_damage_feedback_numbers,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+citadel_show_survey,false,developmentonly clientdll,ok,,,true,true,true,true,,,,,,,true,
+citadel_stuck_camera_trace_extra_length,100,gamedll clientdll replicated cheat,ok,,,0,0,0,0,,,,,,,0,
+citadel_test_ranked_summary,,,NOT IN VALVE DUMP (removed/renamed),,,true,true,true,true,,,,,,,true,
+citadel_tightcamera_alternative,1.3,clientdll archive,ok,//1,,1,1,1,1,,,,,,,1,
+citadel_trooper_friendly_glow_disabled,true,clientdll release,ok,,,,,,,,,,false,1,1,,false
+citadel_trooper_glow_disabled,false,clientdll release,ok,0,,1,1,1,1,1,false,false,0,1,1,0,0
+citadel_trooper_outline_enabled,false,clientdll release,ok,,,,,,,,true,,true,true,true,,true
+citadel_unit_status_allies_see_thru_walls,true,developmentonly clientdll defensive,ok,true,,true,true,true,true,true,,,,,,,
+citadel_unit_status_allies_see_thru_walls_max_distance,,,NOT IN VALVE DUMP (removed/renamed),,,40,40,40,40,40,,,,,,,
+citadel_unit_status_delta_decay_delay,0.3,developmentonly clientdll,ok,//0,,//0,//0,//0,,,,,0,0,0,,0
+citadel_unit_status_delta_decay_rate,3,developmentonly clientdll,ok,//10,,//10,//10,//10,,,,,10,10,10,,10
+citadel_unit_status_dpi,,,NOT IN VALVE DUMP (removed/renamed),,,10,10,10,10,,,,,,,,
+citadel_unit_status_hide_names,false,clientdll cheat release,ok,,,,true,true,,,,,,1,1,,
+citadel_unit_status_old_update_rate,,,NOT IN VALVE DUMP (removed/renamed),,,15,15,15,15,15,,,15,15,15,30,15
+citadel_unit_status_recent_damage_time,0.25,developmentonly clientdll,ok,//inf,,//inf,//inf,//inf,,,,,,,,,
+citadel_unit_status_single_bar_mode,,,NOT IN VALVE DUMP (removed/renamed),,,false,false,false,false,,,,,,,false,
+citadel_unit_status_stamina_low_pips,,,NOT IN VALVE DUMP (removed/renamed),//7,,7,7,7,,,,,,,,,
+citadel_unit_status_use_new,,,NOT IN VALVE DUMP (removed/renamed),,,true,true,true,true,,,,0,1,1,,0
+citadel_unit_status_use_v2,,,NOT IN VALVE DUMP (removed/renamed),,,0,0,0,0,0,,,,,,,
+citadel_unit_status_use_v2_for_nonplayers,,,NOT IN VALVE DUMP (removed/renamed),,,0,0,0,0,0,,,,,,,
+citadel_unit_status_width,200,developmentonly clientdll,ok,//100,,,,,,,,,,,,,
+citadel_use_pvs_for_players,false,developmentonly gamedll,ok,,,,,,,,1,1,true,true,true,,true
+citadel_use_spectator_team_colors,false,developmentonly clientdll defensive,ok,,,,,,,,,,,,,0,
+citadel_video_preset,3,"min: 0, max: 3, clientdll archive",ok,//9,,9,9,9,9,,0,0,,,,9,
+cl_aggregate_particles,false,developmentonly defensive,ok,true,,true,true,true,true,true,true,1,true,1,1,true,true
+cl_async_usercmd_send,true,developmentonly,ok,false,,false,false,false,false,false,false,,true,false,false,false,true
+cl_async_usercmd_send_disabled_recvmargin_min,,,NOT IN VALVE DUMP (removed/renamed),0.5,,0.5,0.5,0.5,0.5,0.5,0.5,,0.5,0.5,0.5,0.5,0.5
+cl_batch_entity_list_ops_during_latch,false,developmentonly clientdll,ok,true,,true,true,true,true,,1,1,1,1,1,true,1
+cl_bone_cache_optimization,true,developmentonly clientdll,ok,,,,,,,,,,1,1,1,,1
+cl_clock_buffer_ticks,0,developmentonly,ok,1,,1,1,1,1,1,1,,1,1,1,1,1
+cl_disable_ragdolls,false,clientdll cheat,ok,0,,0,1,1,0,,1,1,1,0,0,0,1
+cl_disconnect_soundevent,"""core.stop_all_soundevents""",developmentonly defensive,ok,citadel.convar.stop_all_game_layer_soundevents,,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents,citadel.convar.stop_all_game_layer_soundevents
+cl_enable_eye_occlusion,,,NOT IN VALVE DUMP (removed/renamed),,,false,false,false,false,,0,0,,true,true,false,
+cl_entityiter_allow_world_occlusion,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,0,0,,
+cl_eye_yaw_multiplier,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+cl_fasttempentcollision,5,developmentonly clientdll defensive,ok,//1000,,1000,1000,1000,1000,,,,999999,999999,999999,1000,999999
+cl_globallight_freeze,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,1,1,,,,,
+cl_globallight_shadow_mode,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,0,0,0,0,0,,0
+cl_glow_brightness,1,clientdll cheat,ok,,,,,,,,0,,0,0,0,,0
+cl_hud_telemetry_frametime_show,1,clientdll archive release,ok,,,,,,,,,,,0,0,,
+cl_impacteffects,true,developmentonly clientdll defensive,ok,//0,,,,,,,0,0,1,0,0,,1
+cl_input_enable_raw_keyboard,false,release,ok,//1,,//1,//1,//1,//1,,,,1,1,1,,1
+cl_interp,,,NOT IN VALVE DUMP (removed/renamed),//0.01,,//0.01,//0.01,//0.01,//0.01,,,,//0.01,,,,//0.01
+cl_interp_parallel,false,developmentonly clientdll defensive,ok,1,,1,1,1,1,,1,1,1,1,1,1,1
+cl_interp_ratio,2,clientdll userinfo,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+cl_joystick_enabled,true,archive,ok,0,,0,0,0,0,0,0,,0,1,1,0,0
+cl_max_particle_pvs_aabb_edge_length,0,release,ok,100,,100,100,100,100,100,100,50,100,10,100,100,100
+cl_modifier_parallel_gather_status_effect_updates,false,developmentonly clientdll replicated,ok,false,,false,false,false,false,,,,,,,false,
+cl_parallel_readpacketentities,true,developmentonly defensive,ok,,,,,,,,,,1,1,1,,1
+cl_parallel_readpacketentities_threshold,2,developmentonly defensive,ok,,,,,,,,,,2,2,2,,2
+cl_particle_batch_mode,1,developmentonly defensive,ok,1,,1,1,1,1,1,1,1,1,1,1,1,1
+cl_particle_fallback_base,0,developmentonly defensive,ok,5,,5,5,5,5,5,1,1,//10,1,1,5,//10
+cl_particle_fallback_multiplier,0,developmentonly defensive,ok,10,,10,10,10,10,10,2,2,//10,10,10,10,//10
+cl_particle_max_count,0,developmentonly defensive,ok,//1500,,//1500,//1500,//1500,//1500,,,,0,800,800,,0
+cl_particle_newinit,true,developmentonly,ok,,,,,,,,,,,true,true,,
+cl_particle_sim_fallback_base_multiplier,5,developmentonly defensive,ok,100,,100,100,100,100,100,10,10,//5,100,100,100,//5
+cl_particle_sim_fallback_threshold_ms,6,developmentonly defensive,ok,1,,1,1,1,1,1,1,1,//0,0,0,1,//0
+cl_phys_animated_hierarchy,true,developmentonly clientdll defensive,ok,,,,,,,,,,,false,false,,
+cl_phys_assume_fixed_tick_interval,true,developmentonly clientdll,ok,true,,true,true,true,true,,,,,,,true,
+cl_phys_enabled,true,clientdll cheat,ok,true,,true,false,false,true,true,,,true,true,true,true,true
+cl_phys_networked_start_sleep,false,developmentonly clientdll,ok,,,,,,,,,,true,true,true,,true
+cl_phys_sleep_enable,true,clientdll cheat,ok,,,,,,,,,,1,1,1,,1
+cl_phys_timescale,1,developmentonly clientdll defensive,ok,,,,,,,,,,1,1,1,,1
+cl_physics_highlight_active,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+cl_poll_network_early,true,release,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+cl_pred_optimize,true,developmentonly clientdll defensive,ok,,,,,,,,,,,true,true,,
+cl_pred_parallel_postnetwork,true,developmentonly clientdll defensive,ok,,,,,,,,,,,true,true,,
+cl_predict_after_every_createmove,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,//0,,,,//0
+cl_prediction_savedata_postentitypacketreceived,false,clientdll release,ok,,,,,,,,,,1,1,1,,1
+cl_predictioncopy_runs,true,developmentonly clientdll defensive,ok,,,,,,,,,,//0,,,,//0
+cl_ragdoll_default_scale,1,developmentonly clientdll,ok,,,,,,,,0,0,0,,,,0
+cl_ragdoll_limit,20,clientdll archive,ok,//8,,0,0,0,0,1,0,0,0,1,1,0,0
+cl_removedecals,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1,,,
+cl_resend,0.5,"min: 0.1, max: 2, release",ok,//15,,//15,//15,//15,//15,,,,15,15,15,,15
+cl_retire_low_priority_lights,false,developmentonly clientdll defensive,ok,//1,,1,1,1,1,,1,1,1,1,1,1,1
+cl_show_splashes,true,developmentonly clientdll,ok,//0,,0,0,0,0,0,0,0,0,0,0,0,0
+cl_simulate_dormant_entities,true,developmentonly clientdll defensive,ok,false,,false,false,false,false,,0,0,0,0,0,false,0
+cl_skel_constraints_enable,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,0,0,,
+cl_skip_hierarchy_update_for_unchanged_entities,true,developmentonly gamedll clientdll replicated,ok,,,,,,,,,,,true,true,,
+cl_skip_update_animations,false,developmentonly clientdll,ok,//true,,//true,//true,//true,//true,,,,,,,,
+cl_smooth,true,developmentonly clientdll defensive,ok,,,,,,,,,,true,true,true,,true
+cl_smooth_draw_debug,false,clientdll cheat,ok,,,,,,,,,,0,0,0,,0
+cl_smoothtime,0.2,"min: 0.01, max: 2, developmentonly clientdll defensive",ok,//0.01,,//0.01,//0.01,//0.01,//0.01,,0.01,,0.01,0.01,0.01,,0.01
+cl_tickpacket_desired_queuelength,0,"min: 0, max: 5, userinfo",ok,1,,1,1,1,1,0,1,,0,0,0,1,0
+cl_tickpacket_recvmargin_desired,5,developmentonly,ok,5,,5,5,5,5,5,5,,5,5,5,5,5
+cl_updaterate,20,clientdll archive userinfo,ok,128,,128,128,128,128,,128,,128,128,128,128,128
+cl_usesocketsforloopback,false,developmentonly defensive,ok,1,,1,1,1,1,1,1,,1,1,1,1,1
+closecaption,false,clientdll archive userinfo per_user,ok,//false,,false,false,false,false,,,,false,false,false,,false
+cloth_filter_transform_stateless,false,developmentonly defensive,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+cloth_sim_on_tick,true,developmentonly clientdll,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+cloth_update,true,developmentonly clientdll,ok,,,,,,,,,,1,1,1,,1
+con_enable,false,archive per_user,ok,,,,true,true,,,,,,,,,
+cpu_level,2,developmentonly clientdll defensive,ok,//1,,//1,//1,//1,//1,,0,0,1,1,1,,1
+cq_buffer_bloat_msecs_max,150,replicated release,ok,120,,120,120,120,120,120,120,,120,120,120,120,120
+csm_bias_override_0,1,cheat,ok,,,,,,,,,,,1,,,
+csm_bias_override_1,1,cheat,ok,,,,,,,,,,,1,,,
+csm_bias_override_2,1,cheat,ok,,,,,,,,,,,1,,,
+csm_bias_override_3,1,cheat,ok,,,,,,,,,,,1,,,
+csm_cascade0_override_dist,-1,cheat,ok,0,,0,0,0,0,,,,0,1,0,,0
+csm_cascade1_override_dist,-1,cheat,ok,0,,0,0,0,0,,,,0,1,0,,0
+csm_cascade2_override_dist,-1,cheat,ok,0,,0,0,0,0,,,,0,1,0,,0
+csm_cascade3_override_dist,-1,cheat,ok,0,,0,0,0,0,,,,0,1,0,,0
+csm_cascade_viewdir_shadow_bias_scale,2,cheat,ok,,,,,,,,,,,0.1,,,
+csm_max_dist_between_caster_and_receiver,15000,cheat,ok,0,,0,0,0,0,,,,0,0,0,,0
+csm_max_num_cascades_override,-1,developmentonly defensive,ok,0,,0,0,0,0,,1,1,0,0,0,,0
+csm_max_shadow_dist_override,-1,developmentonly defensive gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,1000,1000,0,0,0,,0
+csm_max_visible_dist,7500,cheat,ok,0,,0,0,0,0,,1000,1000,0,1,0,,0
+csm_res_override_0,0,cheat,ok,1,,1,1,1,1,,,,1,1,1,,1
+csm_res_override_1,0,cheat,ok,1,,1,1,1,1,,,,1,1,1,,1
+csm_res_override_2,0,cheat,ok,1,,1,1,1,1,,,,1,1,1,,1
+csm_res_override_3,0,cheat,ok,1,,1,1,1,1,,,,1,1,1,,1
+csm_sst_max_visible_dist,2000,cheat,ok,,,,,,,,500,500,,10,,,
+csm_sst_pushback_distance,1500,cheat,ok,,,,,,,,,,,100,,,
+csm_sst_shadow_focus_region_caster_headroom,256,clientdll cheat,ok,,,,,,,,,,,8,,,
+csm_sst_shadow_focus_region_maxz,2000,cheat,ok,,,,,,,,,,,-1000,,,
+csm_sst_shadow_focus_region_minz,-2000,cheat,ok,,,,,,,,,,,-2000,,,
+csm_sst_vertical_depth_shear_enable,true,cheat,ok,,,,,,,,,,,false,,,
+csm_viewmodel_farz,,,NOT IN VALVE DUMP (removed/renamed),,,1,1,1,1,,1,1,,,,1,
+csm_viewmodel_max_shadow_dist,21,cheat,ok,1,,1,1,1,1,,1,1,,1,,1,
+csm_viewmodel_max_visible_dist,1000,cheat,ok,1,,1,1,1,1,,1,1,,100,,1,
+csm_viewmodel_nearz,0.5,cheat,ok,512,,512,512,512,512,,,,,0.1,,512,
+csm_viewmodel_shadows,false,developmentonly defensive,ok,false,,false,false,false,false,,,,false,false,false,,false
+debug_draw_enable,true,developmentonly replicated,ok,,,false,false,false,false,,,,,,,false,
+default_fov,70,clientdll cheat,ok,,,0,0,0,0,,,,,,,0,
+disable_source_soundscape_trace,false,developmentonly gamedll defensive,ok,1,,1,1,1,1,1,1,,1,1,1,1,1
+dsp_slow_cpu,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,1,1,1,,1
+dsp_volume,0.8,archive demo,ok,,,,,,,,,,0,0,0,,0
+enable_boneflex,true,clientdll archive,ok,false,,false,false,false,false,0,0,0,false,false,false,0,false
+enable_priority_boost,,,NOT IN VALVE DUMP (removed/renamed),//true,,//true,//true,//true,//true,,,,1,true,true,,1
+engine_accurate_input_processing_delta_time,false,developmentonly defensive,ok,true,,true,true,true,true,,,,,true,true,true,
+engine_allow_multiple_simulates_per_frame,false,developmentonly defensive,ok,,,,,,,,,,//false,true,true,,//false
+engine_allow_multiple_ticks_per_frame,true,developmentonly defensive,ok,,,,,,,,,,//0,,,,//0
+engine_low_latency_sleep_after_client_tick,false,release,ok,false,,false,true,true,false,,1,1,1,1,1,false,1
+engine_max_ticks_to_simulate,-1,developmentonly defensive,ok,2,,2,2,2,2,,2,2,33,33,33,2,33
+engine_no_focus_sleep,20,archive,ok,,,,,,,,0,0,0,0,0,,0
+ent_joint_lines,true,gamedll cheat,ok,,,//false,//false,//false,//false,,,,,,,,
+ent_joint_names,true,gamedll cheat,ok,,,//false,//false,//false,//false,,,,,,,,
+fog_enable,true,clientdll cheat,ok,false,,false,false,false,false,false,0,0,0,0,0,,0
+fog_enableskybox,,,NOT IN VALVE DUMP (removed/renamed),,,false,false,false,false,false,0,0,0,0,0,,0
+fps_max,120,archive release,ok,0,,400,400,400,400,400,400,0,0,0,0,400,0
+fps_max_tools,120,archive,ok,,,,,,,,60,60,,,,,
+fps_max_ui,0,archive,ok,0,,120,120,120,120,120,120,60,120,120,120,120,120
+fs_async_threads,-1,developmentonly defensive,ok,,,,,,,,,,//8,-1,-1,,//8
+func_break_max_pieces,15,gamedll archive replicated,ok,,,,,,,,0,0,1,1,1,,1
+fx_drawmetalspark,true,developmentonly clientdll,ok,,,,,,,,0,0,false,false,false,,false
+g_ragdoll_important_maxcount,2,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,0,0,1,1,1,,1
+g_ragdoll_maxcount,5,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,,1,1,,
+gpu_level,3,developmentonly clientdll defensive,ok,//1,,//1,//1,//1,//1,,0,0,1,1,1,,1
+gpu_mem_level,2,developmentonly clientdll defensive,ok,//1,,//1,//1,//1,//1,,0,0,1,1,1,,1
+hud_free_cursor,0,clientdll release,ok,,,,,,,,,,0,0,0,,0
+ik_constraints_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+ik_debug_dogleg3bone_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+ik_debug_fabrik_backwards_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+ik_debug_fabrik_forwards_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+ik_enable,true,replicated cheat,ok,,,false,false,false,false,,,,,0,0,,
+ik_fabrik_align_chain,true,developmentonly replicated defensive,ok,//1,,1,1,1,1,,,,0,0,0,1,0
+ik_fabrik_backwards_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+ik_fabrik_forwards_enabled,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+ik_final_fixup_enable,true,developmentonly replicated defensive,ok,//0,,false,false,false,false,0,,,0,0,0,0,0
+ik_planetilt_enable,true,developmentonly replicated defensive,ok,//false,,false,false,false,false,,,,,,,,
+in_button_double_press_window,0.22,developmentonly gamedll clientdll replicated defensive,ok,0.3,,0.3,0.3,0.3,0.3,0.3,0.3,,0.3,0.3,0.3,0.3,0.3
+instant_replay,true,developmentonly defensive,ok,//true,,//true,//true,//true,//true,,,,,,,,
+iv_parallel_restore,false,developmentonly clientdll defensive,ok,1,,1,1,1,1,,1,,1,1,1,1,1
+lb_allow_time_sliced_shadow_map_rendering,,,NOT IN VALVE DUMP (removed/renamed),,,,false,false,,,,,,false,false,,
+lb_barnlight_shadow_use_precomputed_vis,true,developmentonly defensive,ok,,,,,,,,,,0,0,0,,0
+lb_barnlight_shadowmap_scale,1,release,ok,0,,0,0,0,0,,0.5,0.5,0.01,0.001,0.01,0,0.01
+lb_bin_slices,8192,developmentonly defensive,ok,,,,0,0,,,,,,,,,
+lb_csm_cascade_size_override,-1,developmentonly defensive,ok,1,,1,1,1,1,,1,1,0.25,0.25,0.25,1,0.25
+lb_csm_cross_fade_override,-1,developmentonly defensive,ok,,,,,,,,0,0,0,0,0,,0
+lb_csm_distance_fade_override,-1,developmentonly defensive,ok,,,,,,,,0,0,0,0,0,,0
+lb_csm_draw_alpha_tested,true,developmentonly defensive,ok,0,,0,0,0,0,,0,0,0,0,0,0,0
+lb_csm_draw_translucent,true,developmentonly defensive,ok,0,,0,0,0,0,,0,0,0,0,0,0,0
+lb_csm_override_staticgeo_cascades,false,developmentonly defensive,ok,//true,,true,true,true,true,,,,0,0,0,true,0
+lb_csm_override_staticgeo_cascades_value,-1,developmentonly defensive,ok,//true,,true,true,true,true,,,,0,0,0,true,0
+lb_csm_receiver_plane_depth_bias,0.000015,developmentonly defensive,ok,,,,,,,,,,0.00002,0.00002,0.00002,,0.00002
+lb_csm_receiver_plane_depth_bias_transmissive_backface,0.00015,developmentonly defensive,ok,,,,,,,,,,0.0002,0.0002,0.0002,,0.0002
+lb_cubemap_normalization_max,32,developmentonly defensive,ok,1,,1,1,1,1,,1,,1,1,1,1,1
+lb_cubemap_normalization_roughness_begin,0.1,developmentonly defensive,ok,,,,,,,,0.01,,0.01,0.01,0.01,,0.01
+lb_cull_onscreen_bounce_light_shadows,false,developmentonly cheat,ok,,,,,,,,1,1,,,,,
+lb_dynamic_shadow_penumbra,true,developmentonly defensive,ok,,,,,,,,0,0,false,false,false,,false
+lb_dynamic_shadow_resolution,true,developmentonly defensive,ok,,,,,,,,0,0,false,false,false,,false
+lb_dynamic_shadow_resolution_base,1024,"min: 128, max: 2048, developmentonly defensive",ok,128,,16,16,16,16,,16,16,32,32,32,16,32
+lb_dynamic_shadow_resolution_base_cmp_shadowmapsize,false,developmentonly,ok,,,,,,,,,,,true,true,,
+lb_dynamic_shadow_resolution_quantization,64,"min: 8, max: 128, developmentonly defensive",ok,,,,,,,,32,,32,32,32,,32
+lb_enable_baked_shadows,true,developmentonly cheat menubar_item,ok,true,,false,false,false,false,false,1,1,0,false,false,false,0
+lb_enable_binning,true,developmentonly menubar_item defensive,ok,,,,,,,,0,0,,false,false,,
+lb_enable_dynamic_lights,true,developmentonly cheat,ok,true,,true,false,false,true,false,0,0,0,true,false,true,0
+lb_enable_envmaps,true,developmentonly cheat menubar_item,ok,,,//false,//false,//false,//false,,,,//0,//0,//0,,//0
+lb_enable_fog_mixed_shadows,true,developmentonly cheat menubar_item,ok,,,,false,false,,,0,0,0,0,0,,0
+lb_enable_lights,true,developmentonly cheat menubar_item,ok,,,,,,,,0,0,0,true,false,,0
+lb_enable_newsum,,,NOT IN VALVE DUMP (removed/renamed),,,,false,false,,,0,0,,false,false,,
+lb_enable_shadow_casting,true,developmentonly defensive,ok,true,,0,false,false,0,false,0,0,0,0,0,0,0
+lb_enable_stationary_lights,true,developmentonly cheat,ok,true,,false,false,false,false,false,0,0,0,false,false,false,0
+lb_enable_sunlight,true,developmentonly cheat menubar_item,ok,,,,false,false,,,0,0,false,false,false,,false
+lb_max_visible_barn_lights_override,-1,developmentonly cheat,ok,,,,,,,,1,1,1,1,1,,1
+lb_max_visible_envmaps_override,-1,developmentonly cheat,ok,,,,,,,,-1,-1,4,10,4,,4
+lb_mixed_shadows,true,developmentonly cheat menubar_item,ok,,,,false,false,,,0,0,false,false,false,,false
+lb_precomputed_shadowmap_depth_bias,0.00035,developmentonly,ok,,,,,,,,,,,1,1,,
+lb_precomputed_shadowmap_enable,true,developmentonly,ok,,,,false,false,,,0,0,false,false,false,,false
+lb_shadow_map_cull_empty_mixed,false,cheat,ok,,,,,,,,1,1,true,true,true,,true
+lb_shadow_map_culling,true,cheat,ok,,,,,,,,,,,1,,,
+lb_shadow_texture_height_override,-1,developmentonly defensive,ok,,,,,,,,16,,,1,1,,
+lb_shadow_texture_width_override,-1,developmentonly defensive,ok,,,,,,,,16,,,1,1,,
+lb_ssss_samples,11,"min: 3, max: 15, developmentonly defensive",ok,3,,0,0,0,0,,1,1,0,0,0,0,0
+lb_sun_csm_size_cull_threshold_texels,10,developmentonly defensive,ok,60,,60,60,60,60,,100,100,30,30,30,60,30
+lb_timesliced_shadows_dynamic_size,true,developmentonly defensive,ok,,,,,,,,0,0,,true,true,,
+m_rawinput,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,1,1,1,,1
+mat_async_shader_load,,,NOT IN VALVE DUMP (removed/renamed),,,1,1,1,1,,1,1,1,1,1,1,1
+mat_colcorrection_disableentities,false,developmentonly clientdll defensive,ok,,,,,,,,,1,0,1,1,,0
+mat_colorcorrection,true,developmentonly,ok,1,,1,1,1,1,,,0,1,false,false,1,1
+mat_depthbias_shadowmap,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,0,,,0.00000001,0.00000001,,
+mat_disable_dynamic_shader_compile,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,//1,,,,//1
+mat_max_lighting_complexity,8,cheat,ok,//0,,0,0,0,0,,0,0,1,1,1,0,1
+mat_set_shader_quality,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,0,0,0,0,0,,0
+mat_shading_complexity_max_instruction_count,1024,cheat,ok,,,,,,,,,,,1,,,
+mat_shading_complexity_max_register_count,128,cheat,ok,,,,,,,,,,,1,,,
+mat_slopescaledepthbias_shadowmap,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,0,,,1,1,,
+mat_tonemap_bloom_scale,-1,cheat,ok,,,,,,,,0,,0,0,0,,0
+mat_tonemap_boost,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1.15,1.15,,
+mat_tonemapping_occlusion_use_stencil,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,0,0,,
+mat_viewportscale,1,"min: 0.001563, max: 1, developmentonly clientdll defensive",ok,//0.01,,//0.01,//0.01,//0.01,//0.01,,,,1,1,1,,1
+mem_level,2,developmentonly clientdll defensive,ok,,,,,,,,1,1,,,,,
+mesh_calculate_curvature_smooth_pass_count,3,gamedll clientdll replicated cheat,ok,,,,,,,,,,0,0,0,,0
+minimap_trooper_update_rate_hz,5,developmentonly gamedll,ok,,,,,,,,2,2,,,,,
+minimap_update_rate_hz,30,developmentonly gamedll,ok,,,,,,,,,,,30,30,,
+mm_idle_enabled,true,developmentonly clientdll defensive,ok,,,,,,,,,,false,false,false,false,false
+mm_idle_show_warning_at_s,300,developmentonly clientdll defensive,ok,,,,,,,,,,999,999,999,,999
+mm_prefer_solo_only,false,clientdll archive release,ok,//true,,//true,//true,//true,,,,,,true,true,true,
+movement_stats_debug_draw,false,gamedll cheat,ok,,,//true,//true,//true,//true,,,,,,,,
+music_hideout_debug_enabled,false,developmentonly clientdll,ok,//true,,//true,//true,//true,//true,,,,,,,,
+nav_edit_use_camera,true,gamedll cheat,ok,,,0,0,0,0,,,,,,,0,
+nav_gen_connect_dist_a,1,gamedll cheat,ok,2.0,,2.0,2.0,2.0,2.0,,2.0,,,,,2.0,
+nav_obstruction_async_update,false,developmentonly gamedll,ok,,,,,,,,,,true,true,true,,true
+nav_pathfind_multithread,false,gamedll cheat,ok,,,,,,,,,,1,1,1,,1
+net_async_clientconnect,true,developmentonly defensive,ok,,,,,,,,,,1,1,1,,1
+net_gather_child_fields_only,false,release,ok,1,,1,1,1,1,,1,,,,,1,
+net_skip_redundant_change_callbacks,false,developmentonly clientdll,ok,,,,,,,,,,//true,,,,//true
+panorama_alignment_fixes,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,,,true,
+panorama_allow_transitions,true,developmentonly hidden defensive,ok,//false,,false,false,false,false,false,0,0,false,false,false,,false
+panorama_async_compute_mipgen,true,developmentonly clientdll,ok,,,,,,,,,,1,1,1,,1
+panorama_classes_perf_warning_threshold_ms,,,NOT IN VALVE DUMP (removed/renamed),0.75,,0.75,0.75,0.75,0.75,0.75,0.75,,0.75,0.75,0.75,0.75,0.75
+panorama_clear_frames_on_device_restore,2,developmentonly hidden defensive,ok,,,,,,,,,,,0,0,,
+panorama_comp_layer_lru_lifetime,1,developmentonly hidden defensive,ok,//4,,4,4,4,4,4,4,4,,,,1,
+panorama_content_size_fixes,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,,,true,
+panorama_disable_blur,false,developmentonly hidden defensive,ok,//true,,true,true,true,true,true,1,1,1,1,1,,1
+panorama_disable_box_shadow,false,developmentonly hidden defensive,ok,//true,,//true,//true,//true,//true,,1,1,1,1,1,,1
+panorama_disable_descendant_filtering,false,developmentonly hidden defensive,ok,//true,,//true,//true,//true,//true,,,,,true,true,,
+panorama_disable_draw_fancy_quad,false,developmentonly hidden defensive,ok,//true,,//true,//true,//true,//true,,,,,,,,
+panorama_disable_render_target_cache,true,developmentonly hidden defensive,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+panorama_draw_text_fast_path,true,developmentonly hidden defensive,ok,,,,,,,,,,,1,1,,
+panorama_draw_text_fast_path_text_shadow,true,developmentonly hidden defensive,ok,,,,,,,,,,,1,1,,
+panorama_enable_secondary_layout_pass,true,developmentonly hidden defensive,ok,//false,,//false,//false,//false,//false,,,,,,,true,
+panorama_hsbc_through_fast_path,true,developmentonly hidden defensive,ok,,,,,,,,,,,1,1,,
+panorama_joystick_enabled,true,archive,ok,0,,0,0,0,0,0,0,,0,1,1,0,0
+panorama_js_minidumps,false,developmentonly hidden defensive,ok,1,,1,1,1,1,1,1,,1,1,1,1,1
+panorama_max_fps,,,NOT IN VALVE DUMP (removed/renamed),//30,,30,30,30,30,30,30,30,15,15,15,,60
+panorama_max_overlay_fps,,,NOT IN VALVE DUMP (removed/renamed),//30,,30,30,30,30,30,30,30,15,15,15,,60
+panorama_max_text_shadow_strength,10,developmentonly hidden defensive,ok,//10,,//10,//10,//10,//10,,,,,,,,
+panorama_panel_occlusion,true,developmentonly hidden defensive,ok,//true,,true,true,true,true,true,,,,,,,
+panorama_render_target_cache_max_size,31457280,developmentonly hidden defensive,ok,//134217728,,//134217728,//134217728,//134217728,//134217728,134217728,67108864,67108864,,,,,
+panorama_script_cache_enabled,true,developmentonly hidden defensive,ok,,,,,,,,,,,1,1,,
+panorama_skip_composition_layer_content_paint,true,developmentonly hidden defensive,ok,1,,1,1,1,1,1,1,,1,1,1,1,1
+panorama_temp_comp_layer_min_dimension,512,developmentonly hidden defensive,ok,//128,,//128,//128,//128,//128,,,,128,128,128,,128
+panorama_transition_time_factor,1,developmentonly hidden defensive,ok,,,,,,,,,,2,2,2,,2
+panorama_use_backbuffer_directly,true,developmentonly hidden defensive,ok,,,,,,,,,,,1,1,,
+panorama_use_new_occlusion_invalidation,true,developmentonly hidden defensive,ok,,,,,,,,,,1,1,1,,1
+panorama_worldpanel_update_culling,false,developmentonly clientdll defensive,ok,//true,,//true,//true,//true,//true,,,,,,,,
+parallel_perform_invalidate_physics,false,developmentonly gamedll clientdll replicated,ok,1,,1,1,1,1,,1,,,,,1,
+parallel_update_surrounding_bounds_in_spatial_partition_update,false,developmentonly gamedll clientdll replicated,ok,1,,1,1,1,1,,1,,,,,1,
+particle_cluster_nodraw,false,developmentonly gamedll clientdll replicated defensive,ok,//1,,//1,//1,//1,//1,,1,1,0,1,1,,0
+particle_cluster_use_collision_hulls,true,developmentonly gamedll clientdll replicated defensive,ok,//false,,//false,//false,//false,//false,,false,false,true,false,false,,true
+phys_agg_world_compounds,false,developmentonly gamedll clientdll replicated,ok,0,,0,0,0,0,,0,,,,,0,
+phys_batch_ray_test,0,developmentonly clientdll defensive,ok,//16,,//16,//16,//16,//16,,,,,,,,
+phys_continuous_kinematic_update,1,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,,0,0,,
+phys_cull_internal_mesh_contacts,false,developmentonly replicated defensive,ok,//true,,true,true,true,true,,1,1,true,true,true,true,true
+phys_dynamic_scaling,true,gamedll clientdll replicated cheat,ok,,,,,,,,,,false,false,false,,false
+phys_expensive_shape_threshold,6,clientdll cheat,ok,,,,,,,,,,100,100,100,,100
+phys_highlight_expensive_objects_strength,0.02,cheat,ok,,,,,,,,,,0,0,0,,0
+phys_multithreading_enabled,true,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,1,1,1,,1
+phys_threaded_cloth_bone_update,false,developmentonly gamedll clientdll replicated defensive,ok,//1,,//1,//1,//1,//1,,,,1,1,1,,1
+phys_threaded_kinematic_bone_update,false,developmentonly gamedll clientdll replicated defensive,ok,//1,,//1,//1,//1,//1,,,,1,1,1,,1
+phys_threaded_transform_update,false,developmentonly gamedll clientdll replicated defensive,ok,//1,,//1,//1,//1,//1,,,,1,1,1,,1
+pred_cloth_pos_max,2,developmentonly clientdll,ok,0,,,,,,,,,0,0,0,,0
+pred_cloth_pos_multiplier,0.5,developmentonly clientdll,ok,0,,,,,,,,,0,0,0,,0
+pred_cloth_pos_strength,0.25,developmentonly clientdll,ok,0,,,,,,,,,0,0,0,,0
+pred_cloth_rot_high,0.1,developmentonly clientdll,ok,0,,,,,,,,,0,0,0,,0
+pred_cloth_rot_low,0.01,developmentonly clientdll,ok,0,,,,,,,,,0,0,0,,0
+pred_cloth_rot_multiplier,0.3,developmentonly clientdll,ok,0,,,,,,,,,0,0,0,,0
+presettle_cloth_iterations,30,developmentonly clientdll defensive,ok,0,,,,,,,,,0,0,0,,0
+props_break_apply_radial_forces,true,developmentonly gamedll clientdll replicated,ok,,,,,,,,,,0,0,0,,0
+props_break_max_pieces_perframe,16,developmentonly gamedll clientdll replicated defensive,ok,//0,,0,0,0,1,1,1,1,0.5,0.1,0.5,1,0.5
+r_RainParticleDensity,1,developmentonly clientdll defensive gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,0,0,0,0,0,0,,0
+r_add_views_in_pre_output,false,developmentonly clientdll defensive,ok,1,,1,1,1,1,,1,,,1,1,1,
+r_ambientboost,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1,1,,
+r_ambientfactor,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,12,12,,
+r_ambientmin,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,0.35,0.35,,
+r_animatable_mesh_shaders,false,cheat,ok,,,,,,,,1,1,,,,,
+r_aoproxy_cull_dist,12,developmentonly defensive,ok,,,,,,,,0.01,,0.01,0.01,0.01,,0.01
+r_aoproxy_min_dist,3,developmentonly defensive,ok,,,,,,,,,,9999,9999,9999,,9999
+r_aoproxy_min_dist_box,1,developmentonly defensive,ok,,,,,,,,,,9999,9999,9999,,9999
+r_arealights,true,developmentonly clientdll defensive,ok,,,,,,,,0,0,false,false,false,,false
+r_aspectratio,0,developmentonly defensive,ok,//2.15,,2.9,2.9,2.9,2.2,2.3,2.3,2.3,2.15,2.15,2.15,2.4,2.49
+r_async_compute_fog,,,NOT IN VALVE DUMP (removed/renamed),,,true,true,true,true,,,,true,true,true,true,true
+r_bloom_tent_filter_radius,0,developmentonly clientdll cheat,ok,,,,,,,,0,0,,,,,
+r_character_decal_monitor_render_res,512,developmentonly,ok,,,,,,,,,,64,8,32,,64
+r_character_decal_resolution,1024,"min: 256, developmentonly defensive",ok,//256,,4,4,4,4,,128,128,0.01,0.01,0.01,4,0.01
+r_citadel_antialiasing,1,developmentonly clientdll defensive,ok,,,,,,,,0,0,0,0,0,,0
+r_citadel_clip_sphere_min_opacity,0.4,developmentonly clientdll cheat,ok,0,,0,0,0,0,0,0,0,,0,0,0,
+r_citadel_cloak_blur_amount,0.01,developmentonly clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,0,0,,0,0,,
+r_citadel_cloak_refract_amount,0,developmentonly clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,,,,0,0,,
+r_citadel_depth_prepass_dynamic_objects,,,NOT IN VALVE DUMP (removed/renamed),,,false,false,false,false,,0,0,false,false,false,false,false
+r_citadel_depthoffield_enable,false,developmentonly clientdll gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,0,0,false,false,false,,false
+r_citadel_disable_npr_lighting,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,1,1,false,false,false,,false
+r_citadel_distancefield_ao_quality,0,developmentonly clientdll defensive,ok,,,,,,,,0,0,,,,,
+r_citadel_distancefield_blur,true,developmentonly clientdll gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,0,0,false,false,false,,false
+r_citadel_distancefield_down_sample,1,"min: 0, max: 2, developmentonly clientdll gameinfo_cannot_override",BLOCKED (gameinfo_cannot_override),,,,,,,,0,0,6,6,6,,6
+r_citadel_distancefield_farfield_enable,true,developmentonly clientdll gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,0,0,0,0,0,0,,0
+r_citadel_distancefield_shadows,true,developmentonly clientdll defensive,ok,,,,,,,,0,0,false,false,false,,false
+r_citadel_enable_pano_world_blur,,,NOT IN VALVE DUMP (removed/renamed),//true,,true,true,true,true,,0,0,//false,true,true,true,//false
+r_citadel_fog_quality,1,"min: 0, max: 1, developmentonly clientdll defensive",ok,,,,,,,,0,0,0,0,0,,0
+r_citadel_fsr_enable_mip_bias,true,developmentonly clientdll defensive,ok,,,,false,false,,,0,0,,,,,
+r_citadel_glow_health_bar_debug,false,clientdll cheat,ok,,,false,false,false,false,,,,,,,false,
+r_citadel_glow_health_bars,true,developmentonly clientdll defensive,ok,,,,,,,,,,false,false,false,,false
+r_citadel_gpu_culling,true,developmentonly clientdll cheat menubar_item gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,true,true,true,true,true,,,,,,true,
+r_citadel_gpu_culling_shadows,false,developmentonly clientdll cheat menubar_item gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,1,1,true,true,true,,true
+r_citadel_gpu_culling_two_pass,true,developmentonly clientdll cheat menubar_item gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,//false,//false,//false,//false,,,,,,,,
+r_citadel_gpu_preview_baked_shadows,true,developmentonly clientdll defensive,ok,,,,,,,,0,0,,false,false,,
+r_citadel_gpu_preview_denoise,true,developmentonly clientdll defensive,ok,,,,,,,,0,0,,,,,
+r_citadel_gpu_preview_denoise_passes,3,developmentonly clientdll defensive,ok,//0,,0,0,0,0,,0,0,,,,0,
+r_citadel_gpu_preview_denoise_shadow_passes,1,developmentonly clientdll defensive,ok,,,,,,,,0,0,,,,,
+r_citadel_half_res_noisy_effects,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,true,,,,,,,
+r_citadel_npr_force_solid_outline,,,NOT IN VALVE DUMP (removed/renamed),//false,,//false,//false,//false,//false,,1,1,true,,,,true
+r_citadel_npr_outlines,true,developmentonly clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,//false,//false,//false,//false,,,,true,true,true,,true
+r_citadel_npr_outlines_max_dist,1000,"min: 0, developmentonly clientdll cheat gameinfo_cannot_override",BLOCKED (gameinfo_cannot_override),,,//1,//1,//1,//1,,,,600,600,600,,600
+r_citadel_outlines,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1,1,,
+r_citadel_screenspace_particles_full_res,,,NOT IN VALVE DUMP (removed/renamed),,,true,true,true,true,,0,0,0,0,0,true,0
+r_citadel_selection_outline2_alpha,0.8,clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,//0.2,//0.2,//0.2,//0.2,,,,255,0.8,0.8,,255
+r_citadel_selection_outline2_offset,0.3,clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,,,,2,2,,
+r_citadel_selection_outline2_width,4,clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,,,,50,50,,
+r_citadel_shadow_caching,true,developmentonly clientdll defensive,ok,true,,true,true,true,true,,0,0,,,,true,
+r_citadel_shadow_quality,1,developmentonly clientdll defensive,ok,0,,0,0,0,0,0,1,1,0,0,0,0,0
+r_citadel_shadowdb,2048,developmentonly clientdll defensive,ok,,,,,,,,,,256,256,256,,256
+r_citadel_ssao_bent_normals,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,false,false,false,,false
+r_citadel_ssao_denoise_passes,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+r_citadel_ssao_quality,3,developmentonly clientdll defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_citadel_ssao_radius,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+r_citadel_ssao_thin_occluder_compensation,,,NOT IN VALVE DUMP (removed/renamed),,,0,0,0,0,,0,0,0,0,0,0,0
+r_citadel_sun_shadow_slope_scale_depth_bias,3.54,developmentonly clientdll defensive,ok,//0,,0,0,0,0,,0,0,1.0,1.0,1.0,0,1.0
+r_citadel_upscaling,4,developmentonly clientdll defensive,ok,,,,,,,,0,0,,,,,
+r_dashboard_render_quality,true,developmentonly clientdll snapshot_ignored defensive,ok,//1,,1,1,1,1,1,0,0,0,0,0,,0
+r_decals,2048,developmentonly gamedll clientdll replicated defensive,ok,//1,,//1,//1,//1,//1,,,,1,0,1,,1
+r_decals_default_fade_duration,3,developmentonly gamedll clientdll replicated defensive,ok,//1,,//1,//1,//1,//1,,,,0.001,0.001,0.001,,0.001
+r_decals_default_start_fade,30,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,0.001,0.001,0.001,,0.001
+r_decals_max_on_deformables,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+r_decals_overlap_threshold,0,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,5,5,5,,5
+r_depth_of_field,true,developmentonly clientdll defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_directional_lightmaps,true,developmentonly defensive,ok,,,,,,,,0,0,false,false,false,,false
+r_directlighting,true,cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,0,0,true,false,true,,true
+r_distancefield_enable,true,developmentonly clientdll defensive,ok,1,,1,1,1,1,,0,0,0,0,0,1,0
+r_dopixelvisibility,true,cheat,ok,,,//0,//0,//0,//0,,,,//false,//false,//false,,//false
+r_draw3dskybox,true,developmentonly clientdll defensive,ok,//0,,//0,//0,//0,//0,,0,0,0,0,0,,0
+r_draw_first_tri_only,false,cheat,ok,,,//true,//true,//true,//true,,,,,,,,
+r_draw_instances,true,cheat,ok,,,//0,//0,//0,//0,,,,,,,,
+r_draw_overlays,,,NOT IN VALVE DUMP (removed/renamed),//0,,//0,//0,//0,//0,,,,//false,//false,//false,,//false
+r_draw_particle_children_with_parents,-1,cheat,ok,//1,,1,1,1,1,,,,0,false,false,1,0
+r_drawdecals,true,cheat,ok,,,//1,//1,//1,//1,,,,0,1,0,,0
+r_drawmodeldecals,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0,0,0,,0
+r_drawparticles,true,cheat menubar_item gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,,,true,true,true,,true
+r_drawropes,true,clientdll cheat,ok,//false,,false,false,false,false,false,0,0,0,0,0,false,0
+r_drawskybox,true,cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,//true,//true,//true,//true,,0,0,0,,,,0
+r_drawtracers,true,clientdll cheat,ok,,,//0,//0,//0,//0,,,,0,0,0,,0
+r_drawtracers_firstperson,true,clientdll archive release,ok,true,,false,false,false,false,,,,0,0,0,false,0
+r_drawviewmodel,true,clientdll cheat,ok,true,,false,false,false,false,,,,,,,false,
+r_dx11_software_cmd_lists,true,developmentonly defensive,ok,//0,,//0,//0,//0,//0,,,,,,,,
+r_effects_bloom,true,developmentonly clientdll defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_enable_cubemap_fog,true,developmentonly clientdll cheat menubar_item gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,false,false,,false,0,0,0,0,0,,0
+r_enable_gradient_fog,true,developmentonly clientdll cheat menubar_item gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,false,false,,false,0,0,0,0,0,,0
+r_enable_rigid_animation,false,developmentonly clientdll,ok,//false,,false,false,false,false,,,,0,0,0,false,0
+r_enable_volume_fog,true,developmentonly clientdll cheat menubar_item gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,false,false,,false,0,0,0,0,0,,0
+r_environment_map_roughness_range,"[0.2, 0.3]",developmentonly clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,0.01 0.01,0.01 0.01,0.01,0.01,0.01,,0.01
+r_extra_render_frames,0,cheat,ok,,,//1,//1,//1,//1,,,,,,,,
+r_fallback_texture_lod_scale,2,cheat,ok,,,,,,,,8,8,4,4,4,,4
+r_farz,-1,clientdll cheat,ok,,,7000,7000,7000,,,4500,4500,6000,8000,8000,-1,6000
+r_fastzreject,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1,1,,
+r_flashlightambient,0,clientdll cheat,ok,,,,,,,,,,,0,0,,
+r_flashlightbrightness,1,clientdll replicated cheat,ok,,,,,,,,,,0,0,0,,0
+r_flashlightconstant,0,clientdll replicated cheat,ok,,,,,,,,,,,0,0,,
+r_flashlightfar,1500,clientdll replicated cheat,ok,,,,,,,,,,0,0,0,,0
+r_flashlightshadowatten,0.35,clientdll cheat,ok,,,,,,,,,,0,0,0,,0
+r_flush_on_pooled_ib_resize,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,false,false,,
+r_force_ambient,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,2,2,,
+r_force_thick_hair,false,developmentonly cheat,ok,,,,,,,,0,0,,,,,
+r_force_zprepass,,,NOT IN VALVE DUMP (removed/renamed),//0,,//0,//0,//0,//0,,,,,,,,
+r_frame_sync_enable,true,developmentonly defensive,ok,//false,,//false,//false,//false,//false,,0,0,//0,0,0,,//0
+r_fullscreen_gamma,2.2,"min: 1, max: 4, archive snapshot_ignored",ok,,,,,,,,,,2.2,2.2,2.2,,2.2
+r_gbuffer_disable_npr_lighting,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,true,true,true,,true
+r_grass_allow_flattening,false,developmentonly defensive,ok,,,,,,,,0,0,,,,,
+r_grass_alpha_test,0,developmentonly defensive,ok,,,,,,,,,,,0,0,,
+r_grass_density_mode,0,developmentonly defensive,ok,,,,,,,,,,,0,0,,
+r_grass_end_fade,3000,developmentonly defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_grass_quality,2,developmentonly defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_grass_start_fade,2000,developmentonly defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_grass_vertex_lighting,0,developmentonly defensive,ok,,,,,,,,0,0,,,,,
+r_hair_ao,true,developmentonly defensive,ok,//0,,0,0,0,0,,0,0,0,0,0,0,0
+r_hair_indirect_transmittance,true,developmentonly defensive,ok,,,,,,,,0,0,false,false,false,,false
+r_hair_shadowtile,true,developmentonly defensive,ok,,,,,,,,0,0,false,false,false,,false
+r_hair_wind_motion_scale,0.07,developmentonly defensive,ok,,,,,,,,0,0,,,,,
+r_hair_wind_noise,0.2,developmentonly defensive,ok,,,,,,,,0,0,,,,,
+r_haircull_percent,-1,developmentonly cheat,ok,,,,,,,,,,100,100,100,,100
+r_impacts_alt_orientation,true,developmentonly clientdll defensive,ok,,,,,,,,0,0,,false,false,,
+r_indirectlighting,true,cheat,ok,,,,,,,,,,,true,true,,
+r_late_particle_job_sync,false,developmentonly clientdll defensive,ok,1,,,,,,,,,,1,1,,
+r_light_flickering_enabled,true,developmentonly gamedll clientdll replicated defensive,ok,//0,,//0,//0,//0,//0,,0,0,false,false,false,,false
+r_light_sensitivity_mode,false,clientdll archive per_user,ok,,,,,,,,,,true,true,true,,true
+r_lightmap_bicubic_filtering,,,NOT IN VALVE DUMP (removed/renamed),,,1,1,1,1,,,,1,1,1,1,1
+r_lightmap_size,65536,developmentonly defensive,ok,65536,,2048,2048,2048,2048,,1,1,4,4,4,2048,4
+r_lightmap_size_directional_irradiance,-1,developmentonly defensive,ok,-1,,0,0,0,0,,0,0,0,0,0,0,0
+r_limit_particle_job_duration,false,developmentonly defensive,ok,//true,,true,true,true,true,,,,1,true,true,true,1
+r_lod,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,-5,-5,,
+r_low_latency,1,developmentonly defensive,ok,//0,,//0,//0,//0,//0,,,,1,1,1,,1
+r_mapextents,16384,clientdll cheat,ok,,,7000,7000,7000,,,4500,4500,4500,100,100,16384,4500
+r_max_portal_render_targets,2,developmentonly clientdll defensive,ok,2,,2,2,2,2,,,,2,2,2,2,2
+r_mixed_shadows_fade_out_time,0.5,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,,0.0001,0.0001,,
+r_monitor_3dskybox,true,developmentonly clientdll defensive,ok,,,,,,,,0,0,0,0,0,,0
+r_morphing_enabled,true,cheat,ok,false,,,false,false,,,0,0,false,false,false,,false
+r_multiscattering,,,NOT IN VALVE DUMP (removed/renamed),,,1,1,1,1,,0,0,1,1,1,1,1
+r_muzzleflashbrightness,0.4,clientdll replicated cheat,ok,,,,,,,,,,0.01,0.01,0.01,,0.01
+r_nearz,-1,clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,12,12,,10,10,,
+r_opaque,,,NOT IN VALVE DUMP (removed/renamed),//false,,//false,//false,//false,//false,,,,,,,,
+r_particle_allowprerender,true,developmentonly,ok,true,,true,true,true,true,,,,true,,,true,true
+r_particle_batch_collections,false,developmentonly,ok,1,,1,1,1,1,,1,1,true,true,true,1,true
+r_particle_batch_simulate,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1,1,,
+r_particle_cables_cast_shadows,true,developmentonly defensive gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,0,0,0,0,false,false,,0
+r_particle_cables_culling,1,developmentonly defensive gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,,,,1,1,,
+r_particle_cables_render,true,developmentonly defensive gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,1,1,false,false,false,,false
+r_particle_cables_render_meshlets,true,developmentonly defensive gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,,,0,false,false,,0
+r_particle_depth_feathering,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,false,,,,,,,
+r_particle_explicit_fetch,,,NOT IN VALVE DUMP (removed/renamed),,,false,false,false,false,false,,,,,,false,
+r_particle_fixedrandomseeds,false,developmentonly,ok,//true,,true,true,true,true,,1,1,,,,true,
+r_particle_gpu_implicit_lds_cache,false,developmentonly,ok,,,,,,,,1,1,,,,,
+r_particle_max_detail_level,3,developmentonly defensive gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,0,0,0,1,0,0,,1
+r_particle_max_draw_distance,1000000,cheat,ok,,,,,,,,300000,300000,300000,100000,300000,,300000
+r_particle_max_size_cull,1200,developmentonly defensive,ok,//900,,900,900,900,900,,256,256,1600,126,256,600,1600
+r_particle_max_texture_layers,-1,developmentonly defensive,ok,//4,,4,4,4,4,4,4,4,4,4,4,4,4
+r_particle_min_timestep,0,developmentonly defensive,ok,//0.00241,,0.00241,0.00241,0.00241,0.00241,,,,0.001,0.001,0.001,0.00241,0.001
+r_particle_mixed_resolution_viewstart,500,developmentonly,ok,//16,,//16,//16,//16,//16,,100,100,800,800,800,,800
+r_particle_model_new,false,developmentonly,ok,false,,false,false,false,false,,,,,,,false,
+r_particle_model_new8,true,developmentonly,ok,//false,,false,false,false,false,,,,0,false,false,false,0
+r_particle_model_per_thread_count,32,developmentonly,ok,64,,64,64,64,64,,,,32,32,32,64,32
+r_particle_newinput,false,developmentonly,ok,//true,,true,true,true,true,,1,1,,,,true,
+r_particle_parallel_simulation,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1,1,,
+r_particle_shadows,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,0,,,,,,,
+r_particle_skip_postsim,false,developmentonly,ok,//true,,true,true,true,true,,1,1,1,true,true,true,1
+r_particle_timescale,1,developmentonly defensive,ok,//1,,//1,//1,//1,//1,,,,,1.1,1.1,,
+r_physics_particle_op_spawn_scale,1,developmentonly,ok,//0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_pipeline_stats_use_flush_api,true,developmentonly defensive,ok,,,,,,,,,,false,false,false,,false
+r_pixelvisibility_partial,true,cheat,ok,//false,,false,false,false,false,,,,,,,false,
+r_post_bloom,false,developmentonly clientdll defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_postprocess_enable,true,clientdll cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,true,,0,true,true,true,,true
+r_propsmaxdist,1200,developmentonly clientdll defensive,ok,,,,,,,,600,600,700,600,600,,700
+r_render_hair,true,developmentonly cheat,ok,//false,,false,false,false,false,,0,0,0,0,0,false,0
+r_render_portals,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,true,true,true,,true
+r_renderdoc_auto_shader_pdbs,true,developmentonly defensive,ok,,,false,false,false,false,,0,0,0,0,0,false,0
+r_rendersun,true,cheat,ok,1,,0,0,0,0,,0,0,false,false,false,0,false
+r_ropetranslucent,true,developmentonly clientdll defensive,ok,,,,,,,,0,0,0,0,0,,0
+r_shadows,true,cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,0,0,0,0,0,0,,0
+r_showdebugoverlays,false,cheat,ok,,,//true,//true,//true,//true,,,,,,,,
+r_size_cull_threshold,0.8,developmentonly,ok,//0.9,,0.9,1.4,1.4,0.9,1.0,1.75,1.75,1.6,0.8,0.8,0.9,1.6
+r_size_cull_threshold_shadow,0.2,cheat,ok,2.4,,2.4,2.4,2.4,2.4,,1.0,1.0,200,200,200,2.4,200
+r_skinning_enabled,true,cheat,ok,,,//false,//false,//false,//false,,,,,,,,
+r_skip_precache_validation_check,false,developmentonly defensive,ok,,,true,true,true,true,,1,1,,,,true,
+r_smooth_morph_normals,true,release,ok,,,,,,,,0,0,0,0,0,,0
+r_ssao,true,developmentonly defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+r_ssao_blur,true,developmentonly defensive,ok,,,,,,,,0,0,0,0,0,,0
+r_ssao_strength,1.2,developmentonly defensive,ok,0,,0,0,0,0,0,,,0,0,0,0,0
+r_strip_invisible_during_sceneobject_update,false,developmentonly clientdll defensive,ok,//1,,1,1,1,1,,1,1,1,1,1,1,1
+r_texture_budget_dynamic,true,developmentonly defensive,ok,,,,,,,,,,1,1,1,,1
+r_texture_budget_threshold,0.9,developmentonly defensive,ok,//0.7,,0.7,0.7,0.7,0.7,0.7,,,0.7,0.7,0.7,0.7,0.7
+r_texture_budget_update_period,0.1,developmentonly defensive,ok,//0.5,,0.5,0.5,0.5,0.5,0.5,,,0.5,0.5,0.5,0.5,0.5
+r_texture_lod_scale,1,cheat,ok,,,,,,,,2,2,4,4,4,,4
+r_texture_nonstreaming_load,true,developmentonly defensive,ok,,,,,,,,,,,1,1,,
+r_texture_pool_reduce_rate,256,developmentonly defensive,ok,,,,,,,,,,512,512,512,,512
+r_texture_pool_size,1600,developmentonly defensive,ok,,,,,,,,,,256,256,256,,256
+r_texture_stream_max_resolution,2147483647,"min: 512, developmentonly defensive",ok,,,,,,,,1,1,128,128,128,,128
+r_texture_stream_mip_bias,0,developmentonly defensive,ok,0,,3,3,3,3,4,,,8,8,8,3,8
+r_texture_stream_resolution_bias,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,0.01,0.01,0.01,,0.01
+r_texture_stream_throttle_amount,10,developmentonly defensive,ok,,,,,,,,4,4,,,,,
+r_texture_stream_throttle_count,3,developmentonly defensive,ok,,,,,,,,1,1,,,,,
+r_texture_stream_throttle_count_over_budget,1,developmentonly defensive,ok,,,,,,,,,,,0,0,,
+r_texturefilteringquality,1,developmentonly snapshot_ignored defensive,ok,5,,0,0,0,0,0,0,0,0,0,0,5,0
+r_threaded_particles,true,developmentonly defensive,ok,,,,,,,,,,,1,1,,
+r_translucent,true,cheat,ok,,,//false,//false,//false,//false,,,,true,true,true,,true
+r_update_particles_on_render_only_frames,false,developmentonly clientdll defensive,ok,true,,true,true,true,true,true,1,1,,,,true,
+r_vma_defrag_algorithm,1,developmentonly,ok,,,0,0,0,0,,,,,,,0,
+r_wait_on_present,false,developmentonly defensive,ok,//true,,//true,//true,//true,//true,,,,,,,,
+r_world_wind_frequency_grass,0.03,developmentonly defensive,ok,,,,,,,,0,0,0,0,0,,0
+r_world_wind_frequency_trees,0.003,developmentonly defensive,ok,,,,,,,,0,0,0,0,0,,0
+r_world_wind_strength,40,developmentonly defensive,ok,0,,0,0,0,0,0,0,0,0,0,0,0,0
+ragdoll_parallel_pose_control,false,developmentonly gamedll clientdll replicated defensive,ok,//1,,//1,//1,//1,//1,,,,1,1,1,,1
+reset_voice_on_input_stallout,false,userinfo,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+rope_collide,1,developmentonly clientdll defensive,ok,,,,,,,,0,0,0,0,0,,0
+rope_smooth_enlarge,1.4,developmentonly clientdll defensive,ok,,,,,,,,,,0,0,0,,0
+rope_smooth_maxalpha,0.5,developmentonly clientdll defensive,ok,,,,,,,,,,0,0,0,,0
+rope_smooth_maxalphawidth,1.75,developmentonly clientdll defensive,ok,,,,,,,,,,0,0,0,,0
+rope_smooth_minalpha,0.2,developmentonly clientdll defensive,ok,,,,,,,,,,0,0,0,,0
+rope_smooth_minwidth,0.3,developmentonly clientdll defensive,ok,,,,,,,,,,0,0,0,,0
+rope_subdiv,2,"min: 0, max: 8, developmentonly clientdll defensive",ok,,,,,,,,,,0,0,0,,0
+rope_wind_dist,1000,developmentonly clientdll defensive,ok,,,,,,,,,,0,0,0,,0
+rpg_camera_yaw,90,developmentonly clientdll replicated cheat,ok,,,0,0,0,0,,,,,,,0,
+rtx_dynamic_blas,true,developmentonly defensive,ok,//false,,false,false,false,false,,,,,,,false,
+rtx_dynamic_blas_caching,true,developmentonly defensive,ok,true,,true,true,true,true,,,,,,,true,
+rtx_force_default_hitgroup,false,developmentonly defensive,ok,//true,,true,true,true,true,,,,,,,true,
+rtx_texture_resolution,512,"min: 64, max: 2048, developmentonly defensive",ok,//64,,64,64,64,64,,,,,,,64,
+sc_aggregate_bvh_threshold,128,developmentonly,ok,//256,,256,256,256,256,,,,16,16,16,256,16
+sc_aggregate_gpu_culling,true,developmentonly defensive,ok,,,,,,,,,,,true,true,,
+sc_aggregate_gpu_culling_show_culled,false,developmentonly menubar_item,ok,//true,,//true,//true,//true,//true,,,,,,,,
+sc_aggregate_gpu_occlusion_culling,true,developmentonly defensive,ok,,,,,,,,,,,1,1,,
+sc_aggregate_gpu_vis_culling,,,NOT IN VALVE DUMP (removed/renamed),,,,true,true,,,,,,1,1,,
+sc_aggregate_indirect_draw_compaction_threshold,8,"min: 1, release",ok,//1,,//1,//1,//1,//1,,,,,,,,
+sc_aggregate_render_mesh_shader,true,developmentonly,ok,//true,,//true,//true,//true,//true,,,,,,,,
+sc_aggregate_rtproxy_instanced_geo,true,developmentonly cheat,ok,,,//false,//false,//false,//false,,,,,,,,
+sc_aggregate_rtproxy_unique_geo,true,developmentonly cheat,ok,,,//false,//false,//false,//false,,,,,,,,
+sc_aggregate_show_outside_vis,false,developmentonly,ok,//true,,//true,//true,//true,//true,,,,,,,,
+sc_allow_dithered_lod,true,developmentonly defensive,ok,//false,,false,false,false,false,,0,0,false,false,false,false,false
+sc_allow_dynamic_constant_batching,true,developmentonly defensive,ok,,,,,,,,,,,1,1,,
+sc_allow_precomputed_vismembers,true,developmentonly defensive,ok,,,,,,,,,,,1,1,,
+sc_barnlight_enable_precomputed_vis,true,developmentonly defensive,ok,,,,,,,,,,,1,1,,
+sc_cache_envmap_lpv_lookup,true,developmentonly defensive,ok,,,,,,,,,,false,false,false,,false
+sc_clutter_density_full_size,0.0075,developmentonly defensive,ok,,,,,,,,,,0.5,0.5,0.5,,0.5
+sc_clutter_density_none_size,0.0035,developmentonly defensive,ok,,,,,,,,,,0.1,0.1,0.1,,0.1
+sc_clutter_enable,true,developmentonly menubar_item,ok,false,,false,false,false,false,false,0,0,0,0,0,false,0
+sc_disable_baked_lighting,false,developmentonly defensive,ok,,,,,,,,,,true,true,true,,true
+sc_disable_culling_boxes,false,cheat,ok,,,,,,,,,,,1,1,,
+sc_disable_procedural_layer_rendering,false,cheat,ok,,,//false,//false,//false,//false,,,,,,,,
+sc_disable_shadow_materials,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,1,1,1,,1
+sc_disable_spotlight_shadows,false,cheat gameinfo_cannot_override,BLOCKED (gameinfo_cannot_override),,,,,,,,1,1,1,1,1,,1
+sc_dithered_lod_transition_amt,0.075,"min: 0, max: 0.2, developmentonly defensive",ok,,,,,,,,,,0,0,0,,0
+sc_enable_discard,true,developmentonly defensive,ok,,,,,,,,,,true,true,true,,true
+sc_fade_distance_scale_override,-1,cheat,ok,,,100,100,100,//100,,100,100,180,5,180,100,180
+sc_force_materials_batchable,false,cheat,ok,,,//true,//true,//true,//true,,1,1,true,true,true,,true
+sc_force_single_display_list_per_layer,false,developmentonly defensive,ok,,,,,,,,,,,1,1,,
+sc_hdr_enabled_override,-1,developmentonly defensive,ok,,,,0,0,,,,,0,0,0,,0
+sc_instanced_mesh_enable,true,developmentonly cheat menubar_item,ok,,,,false,false,,,,,,,,,
+sc_instanced_mesh_gpu_culling,true,developmentonly defensive,ok,,,,,,,,,,,true,true,,
+sc_instanced_mesh_gpu_density_culling,true,developmentonly defensive,ok,,,,false,false,,,,,,,,,
+sc_instanced_mesh_lod_bias,1.25,developmentonly defensive,ok,5,,//0.001,//0.001,//0.001,//0.001,,3,3,15,15,15,,15
+sc_instanced_mesh_lod_bias_shadow,1.75,developmentonly defensive,ok,//0.001,,//0.001,//0.001,//0.001,//0.001,,,,10,10,10,,10
+sc_instanced_mesh_mesh_shader,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,false,false,false,,false
+sc_instanced_mesh_motion_vectors,true,developmentonly defensive,ok,0,,0,0,0,0,,0,0,0,0,0,0,0
+sc_instanced_mesh_opaque_fade,true,developmentonly defensive,ok,//false,,false,false,false,false,,0,0,false,false,false,false,false
+sc_instanced_mesh_size_cull_bias,1.5,developmentonly defensive,ok,//4,,//10,//10,//10,//10,,3,3,10,10,10,,10
+sc_instanced_mesh_size_cull_bias_shadow,2,developmentonly defensive,ok,10,,10,10,10,10,,10,10,10,10,10,10,10
+sc_layer_batch_threshold,128,developmentonly defensive,ok,//256,,256,256,256,256,,,,16,16,16,256,16
+sc_layer_batch_threshold_fullsort,80,developmentonly defensive,ok,20,,20,20,20,20,,20,,20,20,20,20,20
+sc_max_framebuffer_copies_per_layer,1,developmentonly defensive,ok,,,,,,,,,,0,0,0,,0
+sc_screen_size_lod_scale_override,-1,cheat,ok,,,0.55,0.00001,0.00001,0.55,,0.000001,0.000001,0.001,0.8,0.001,0.55,0.001
+sc_skip_traversal,false,cheat,ok,,,//true,//true,//true,//true,,,,,,,,
+sc_throw_away_all_layers,false,developmentonly defensive,ok,//true,,//true,//true,//true,//true,,,,,,,,
+scene_clientflex,true,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,0,0,,,,,
+shake_show,false,developmentonly clientdll defensive,ok,,,,,,,,,,,false,false,,
+skeleton_instance_lod_optimization,false,developmentonly gamedll clientdll replicated,ok,//false,,//false,//false,//false,//false,,1,1,//1,1,1,,//1
+snd_boxverb_simd,true,developmentonly defensive,ok,//false,,false,false,false,false,,,,,,,false,
+snd_disable_mixer_duck,false,cheat,ok,,,,,,,,,,,1,1,,
+snd_enable_subgraph_corenull_passthrough,true,developmentonly defensive,ok,//false,,false,false,false,false,,,,,,,false,
+snd_envelope_rate,0.9,cheat,ok,100.0,,100.0,100.0,100.0,100.0,100.0,100.0,,100.0,100.0,100.0,100.0,100.0
+snd_event_browser_default_stack,,,NOT IN VALVE DUMP (removed/renamed),citadel_default_3d,,citadel_default_3d,citadel_default_3d,citadel_default_3d,citadel_default_3d,citadel_default_3d,citadel_default_3d,,citadel_default_3d,citadel_default_3d,citadel_default_3d,citadel_default_3d,citadel_default_3d
+snd_event_browser_focus_events,,,NOT IN VALVE DUMP (removed/renamed),true,,true,true,true,true,true,true,,true,true,true,true,true
+snd_mix_async,true,developmentonly cheat,ok,,,,,,,,,,1,1,1,,1
+snd_mixahead,0.001,archive snapshot_ignored,ok,//0.05,,0.05,0.05,0.05,0.05,,,,0.05,0.05,0.05,0.05,0.05
+snd_occlusion_bounces,1,replicated cheat,ok,,,0,0,0,0,0,,,0,0,0,0,0
+snd_occlusion_rays,4,replicated cheat,ok,,,0,0,0,0,0,,,,,,0,
+snd_report_audio_nan,false,release,ok,1,,1,1,1,1,1,1,,1,//1,//1,1,1
+snd_sos_max_event_base_depth,4,developmentonly defensive,ok,10,,10,10,10,10,10,10,,10,10,10,10,10
+snd_soundmixer,"""Default_Mix""",developmentonly defensive,ok,Default_Mix,,Default_Mix,Default_Mix,Default_Mix,Default_Mix,Default_Mix,Default_Mix,,Default_Mix,Default_Mix,Default_Mix,Default_Mix,Default_Mix
+snd_soundmixer_update_maximum_frame_rate,10,cheat,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+snd_soundmixer_version,2,developmentonly defensive,ok,2,,2,2,2,2,,,,,,,2,
+snd_spatialize_lerp,0,archive release,ok,,,,,,,,,,0,0,0,,0
+snd_steamaudio_active_hrtf,0,developmentonly,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+snd_steamaudio_baked_dimensions_probelookup_usealternate,false,developmentonly defensive,ok,1,,1,1,1,1,,1,,,,,1,
+snd_steamaudio_custombake_dimensions_outsidefield_bake_enabled,true,developmentonly defensive,ok,0,,0,0,0,0,,0,,,,,0,
+snd_steamaudio_custombake_dimensions_size_and_inout_bake_enabled,true,developmentonly defensive,ok,1,,1,1,1,1,,1,,,,,1,
+snd_steamaudio_custombake_dimensions_smallsizefield_bake_enabled,true,developmentonly defensive,ok,0,,0,0,0,0,,0,,,,,0,
+snd_steamaudio_dimensions_grid_height_max,100,developmentonly defensive,ok,100,,100,100,100,100,,100,,,,,100,
+snd_steamaudio_dimensions_max_ray_length,0,developmentonly defensive,ok,2500,,2500,2500,2500,2500,,2500,,,,,2500,
+snd_steamaudio_enable_custom_hrtf,false,developmentonly defensive,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+snd_steamaudio_enable_pathing,false,cheat,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+snd_steamaudio_enable_perspective_correction,false,archive release,ok,,,,,,,,,,0,0,0,,0
+snd_steamaudio_enable_reverb,0,release,ok,0,,0,0,0,0,,0,,0,0,0,0,0
+snd_steamaudio_invalid_path_length,0,developmentonly defensive,ok,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,,0.0,0.0,0.0,0.0,0.0
+snd_steamaudio_ir_duration,2,cheat,ok,,,,,,,1.0,,,1.0,1.0,1.0,,1.0
+snd_steamaudio_load_dimensions_data,true,developmentonly defensive,ok,1,,1,1,1,1,,1,,,,,1,
+snd_steamaudio_load_materials_data,true,developmentonly defensive,ok,0,,0,0,0,0,,0,,,,,0,
+snd_steamaudio_load_occlusion_data,true,developmentonly defensive,ok,0,,0,0,0,0,,0,,,,,0,
+snd_steamaudio_load_pathing_data,true,developmentonly defensive,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+snd_steamaudio_load_reverb_data,true,developmentonly defensive,ok,0,,0,0,0,0,0,0,,0,0,0,0,0
+snd_steamaudio_max_occlusion_samples,64,cheat,ok,//32,,32,32,32,32,32,,,,,,32,
+snd_steamaudio_max_probes_customdata_dimensions,4294967295,developmentonly defensive,ok,100000,,100000,100000,100000,100000,,100000,,,,,100000,
+snd_steamaudio_num_diffuse_samples,2048,cheat,ok,//512,,512,512,512,512,512,,,,,,512,
+snd_steamaudio_num_threads,2,cheat,ok,2,,6,6,6,6,,,,4,4,4,6,4
+snd_steamaudio_pathing_order,1,cheat,ok,3,,3,3,3,3,,3,,,,,3,
+snd_steamaudio_pathing_order_rendering,1,cheat,ok,3,,3,3,3,3,,3,,,,,3,
+snd_steamaudio_reverb_level_db,-3,release,ok,-6,,-6,-6,-6,-6,,-6,,,,,-6,
+snd_steamaudio_reverb_order_rendering,1,developmentonly defensive,ok,//0,,0,0,0,0,,,,,,,0,
+snd_steamaudio_reverb_update_rate,30,developmentonly defensive,ok,,,,,,,10.0,,,10.0,10.0,10.0,,10.0
+snd_ui_positional,false,developmentonly cheat,ok,1,,1,1,1,1,1,1,,1,false,false,1,1
+snd_ui_spatialization_spread,1,developmentonly cheat,ok,2.4,,2.4,2.4,2.4,2.4,2.4,2.4,,2.4,2.4,2.4,2.4,2.4
+snd_use_baked_occlusion,0,replicated cheat release,ok,,,,,,,,,,1,1,1,,1
+sos_use_guid_filter,false,developmentonly gamedll clientdll replicated defensive,ok,1,,1,1,1,1,1,1,,1,1,1,1,1
+soundsystem_update_async,true,developmentonly defensive,ok,,,,,,,,,,1,1,1,,1
+sparseshadowtree_disable_add_layers,false,developmentonly,ok,,,,false,false,,,1,1,,1,1,,
+sparseshadowtree_disable_for_viewmodel,true,developmentonly,ok,1,,1,1,1,1,,1,1,1,1,1,1,1
+sparseshadowtree_enable_rendering,true,developmentonly,ok,,,0,0,0,0,,0,0,0,0,0,0,0
+sparseshadowtree_leaf_precision_viewmodel,0.0005,developmentonly,ok,//0,,0,0,0,0,,0,0,,,,0,
+sparseshadowtree_parallel_generation,2,developmentonly,ok,,,,,,,,,,2,2,2,,2
+steam_inputhandler_enabled,true,developmentonly clientdll defensive,ok,false,,true,false,false,true,,,,,0,0,false,
+subtick_buttons_enabled,false,developmentonly clientdll defensive,ok,//true,,//true,//true,//true,//true,,,,,,,,
+sv_force_transmit_players,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,1,1,,
+sv_hide_ent_in_pvs,-1,developmentonly gamedll,ok,,,,,,,,,,,1,1,,
+sv_lagcomp_filterbyviewangle,true,gamedll cheat,ok,false,,false,false,false,false,false,false,,false,false,false,false,false
+sv_maxunlag,1,"min: 0, max: 1, gamedll release",ok,0.500,,0.500,0.500,0.500,0.500,0.500,0.500,,0.500,0.500,0.500,0.500,0.500
+sv_maxunlag_player,-1,"max: 1, gamedll release",ok,0.200,,0.200,0.200,0.200,0.200,0.200,0.200,,0.200,0.200,0.200,0.200,0.200
+sv_minrate,5000,"min: 0, max: 1000000, replicated release",ok,98304,,98304,98304,98304,98304,98304,98304,,98304,98304,98304,98304,98304
+sv_parallel_checktransmit,0,gamedll release,ok,2,,2,2,2,2,,2,,,,,2,
+sv_parallel_sendsnapshot,2,release,ok,,,,,,,,,,2,2,2,,2
+sv_pvs_max_distance,0,replicated release,ok,,,,,,,,,,8500,4000,6500,,8500
+sv_remove_ent_from_pvs,0,developmentonly gamedll,ok,,,,,,,,,,1,1,1,,1
+sv_waterdist,12,developmentonly gamedll clientdll replicated,ok,,,,,,,,,,0,0,0,,0
+think_limit,10,gamedll clientdll replicated release,ok,,,,,,,,,,10,10,10,,10
+this_is_an_example_comment,,,NOT IN VALVE DUMP (removed/renamed),//true,,//true,//true,//true,//true,,,,,,,,
+thread_pool_option,-1,hidden release,ok,-1,,2,2,2,2,,0,0,,-1,-1,2,
+threadpool_thread_limit,,,NOT IN VALVE DUMP (removed/renamed),,,,,,,,,,,0,0,,
+thumper_use_plane_reflection,true,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,false,false,false,,false
+tv_enable_delta_frames,true,release,ok,,,,false,false,,,,,,,,,
+update_all_keyframed_in_spatial_partition_update,true,developmentonly gamedll clientdll replicated,ok,0,,0,0,0,0,,0,,,,,0,
+update_voices_low_priority,false,developmentonly defensive,ok,true,,,,,,,,,true,true,true,,true
+v8_maximum_heap_size_mb,512,developmentonly,ok,//1024,,1024,1024,1024,1024,1024,1024,1024,,512,512,1024,
+viewmodel_fov,54,clientdll cheat,ok,,,0,0,0,0,,,,,,,0,
+violence_ablood,true,archive,ok,//0,,0,0,0,0,0,,,false,false,false,0,false
+violence_agibs,true,archive,ok,//0,,0,0,0,0,0,0,0,false,false,false,0,false
+violence_hblood,true,archive,ok,//0,,0,0,0,0,0,0,0,false,false,false,0,false
+violence_hgibs,true,archive,ok,//0,,0,0,0,0,0,0,0,false,false,false,0,false
+vis_sunlight_enable,true,developmentonly cheat,ok,,,,false,false,,,0,0,0,0,0,,0
+voice_in_process,false,developmentonly defensive,ok,1,,1,1,1,1,1,1,,1,1,1,1,1
+voice_input_stallout,2,userinfo,ok,0.5,,0.5,0.5,0.5,0.5,0.5,0.5,,0.5,0.5,0.5,0.5,0.5
+volume_fog_density_scale,1,developmentonly cheat,ok,,,,,,,,0,0,,,,,
+volume_fog_enable_jitter,true,cheat,ok,false,,false,false,false,false,false,0,0,,,,,
+volume_fog_intermediate_textures_hdr,true,developmentonly defensive,ok,false,,false,false,false,false,false,0,0,0,0,0,false,0
+volume_fog_temporal_filter,true,developmentonly defensive,ok,,,,,,,,0,0,,,,,
+vulkan_batch_size,500,developmentonly defensive,ok,,,,,,,,1000,1000,,,,,
+wind_system_default_resolution_xy,256,developmentonly defensive,ok,,,,,,,,,,64,64,64,,64
+wind_system_temporal_smoothing,true,developmentonly defensive,ok,,,,,,,,,,false,false,false,,false
+zipline_use_new_latch,2,developmentonly gamedll clientdll replicated defensive,ok,,,,,,,,,,0,0,0,,0

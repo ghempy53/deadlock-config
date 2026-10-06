@@ -15,8 +15,23 @@ Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, whic
 | File | What it is |
 | --- | --- |
 | `gameinfo.gi` | The config. Drop-in replacement for the game's file. |
-| `CHANGES.txt` | Every difference from upstream 3.4, the post-patch cleanup, and the engine-section reset. Source of truth for re-applying. |
-| `WINDOWS11.md` | OS, driver and in-game settings that pair with this config. |
+| `docs/CHANGES.txt` | Every difference from upstream 3.4, the post-patch cleanup, and the engine-section reset. Source of truth for re-applying. |
+| `docs/WINDOWS11.md` | OS, driver and in-game settings that pair with this config. |
+| `docs/RESEARCH-2026-10-06.md` | Research report (2026-10-06): matchmaking guard timeline, the 77 convars Valve now ignores from gameinfo.gi, Valve file changes, launch options, video.txt, tooling. |
+| `docs/BLOCKED-CONVARS.md` | The ignored-convar list and how to re-check it after a patch. |
+| `docs/CONFIG-COMPARISON.md` | Comparison with twelve other public configs (Sqooky, OptiLock, Kaizuchaneru, Boot, compylock, ...). |
+| `docs/TUNING-CANDIDATES.md` | What is left to test, and what is deliberately not adopted. |
+| `docs/data/convar-matrix.csv` | Every convar any config sets, across all configs, with Valve defaults and flags. |
+
+All documentation lives in `docs/` ([index](docs/README.md)). Key research findings as of 2026-10-06:
+
+- Valve's matchmaking guard names seven engine sections, not ConVars. The "changes to ConVars" wording existed for one
+  day (2026-03-26) and was replaced on 2026-03-27. Enforcement is still unconfirmed either way, so the seven sections
+  stay stock here.
+- Since 2026-09-24 the game ignores 77 convars when they are set from `gameinfo.gi` (`gameinfo_cannot_override`:
+  enemy outlines, glow, cloak, `r_shadows`, fog master switches, particle detail level, `sv_cheats`). This config uses
+  none of them; every other public config carries 1 to 31 dead lines because of it. The levers this config relies on
+  (shadow quality and cascades, SSAO, `fog_enable`, grass, clutter, LOD bias, particle fallbacks) still work.
 
 ## Layout of the ConVars block
 
@@ -104,15 +119,18 @@ Major updates overwrite `gameinfo.gi`, and sometimes minor ones do too.
 
 1. Back up the new stock file, then compare it with the stock section of this config
    (everything except the `ConVars` tweak block, and the stock tail after `END OF CONFIG`).
-2. Prefer re-applying `CHANGES.txt` on top of the newest upstream OptimizationLock release
+2. Prefer re-applying `docs/CHANGES.txt` on top of the newest upstream OptimizationLock release
    over copying this file onto a newer game build.
 3. Check every active convar still exists, using Valve's own dump in
    [SteamTracking/GameTracking-Deadlock](https://github.com/SteamTracking/GameTracking-Deadlock)
    (`DumpSource2/convars.txt`). Diff it from before vs after the patch. Most tweaked convars are `developmentonly`,
    so the in-game console hides them (typing the name prints nothing), even though this file still applies them.
 4. Check `[def:]` comments and min/max ranges against the same dump. Values below the minimum are clamped.
-5. Keep the seven guarded sections stock. The client's matchmaking guard (not enforced as of 2026-10-05, but fully
-   wired: `pgi_hash`/`pgi_verified` in the GC protocol) names `Engine2, MaterialSystem2, NetworkSystem, Particles,
-   RenderSystem, SceneSystem, WorldRenderer`. ConVars are not on the list. After an update, diff those seven sections
+5. Keep the seven guarded sections stock. The client's matchmaking guard (enforcement unconfirmed as of 2026-10-06,
+   but fully wired: `pgi_hash`/`pgi_verified` in the GC protocol, string present since build 6417 on 2026-03-27) names
+   `Engine2, MaterialSystem2, NetworkSystem, Particles, RenderSystem, SceneSystem, WorldRenderer`. ConVars are not on
+   the list (they were, in the string only, for one day on 2026-03-26). After an update, diff those seven sections
    against the new stock file and keep them identical; put all tuning in `ConVars`. Then queue a match.
-6. Log any change in `CHANGES.txt`.
+6. Check that no active or commented line is on Valve's ignore list (`gameinfo_cannot_override` in the same dump;
+   77 convars as of build 6753). The one-liner is in `docs/BLOCKED-CONVARS.md`.
+7. Log any change in `docs/CHANGES.txt`.

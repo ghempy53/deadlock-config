@@ -427,3 +427,12 @@ NOTES
   - All FOV settings are at game defaults; use the in-game Camera FOV slider (max 90). Detailed notes are in the config under Field of View.
   - Mod search paths ship in upstream itself (citadel/addons, citadel/custom), so no edit is needed there.
   - On the next upstream update: re-apply this list to the new file rather than copying this file over it.
+
+DOCUMENTATION MOVED AND RESEARCH ADDED (2026-10-06)
+  No config value changed. gameinfo.gi line 3 comment now points to docs/CHANGES.txt. CHANGES.txt and WINDOWS11.md moved
+  into docs/. New: docs/RESEARCH-2026-10-06.md, docs/BLOCKED-CONVARS.md, docs/CONFIG-COMPARISON.md,
+  docs/TUNING-CANDIDATES.md, docs/data/convar-matrix.csv, docs/README.md.
+  Correction to the ENGINE SECTIONS RESET note above: the Citadel_StartMatchmaking_UnverifiedPGI string was added on
+  2026-03-26 (build 6416, wording "changes to ConVars") and reworded to the seven sections on 2026-03-27 (build 6417),
+  not 2026-07-31. The 2026-07-31 dump was merely the first one this repo compared against.
+  Audit result: no active or commented line hits Valve's gameinfo_cannot_override list (77 convars, build 6753).
