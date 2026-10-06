@@ -702,18 +702,18 @@ GameInfo
         // cl_fasttempentcollision           "1000"  // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         cloth_sim_on_tick                 "0"     // Update the cloth simulation every tick                           [def: "1"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
 
-        // --- 2g. Particles (all default since 2026-10-06; fallbacks and throttles can hide ability cues such as Shiv Killing Blow) ---
+        // --- 2g. Particles (load-based fallbacks on at moderate values since 2026-10-06 stage 4; comment those four out if cues such as Shiv Killing Blow go missing) ---
         cl_particle_batch_mode                       "1"        // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
         r_particle_allowprerender                    "true"     // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
         r_particle_model_new                         "false"    // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "false"]
         // r_particle_model_new8                     "false"    // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "true"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_newinput                       "true"     // // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_max_size_cull                  "900"      // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value. // reset to default 2026-10-05 (particles; low/unproven perf impact)
-        // cl_particle_sim_fallback_base_multiplier     "20"      // How hard to push systems to cheaper fallbacks once sim time passes the threshold. Upstream 100; 20 is moderate for a 9800X3D. [def: "5"]  // Off since 2026-10-06: full effects at all times.
-        // cl_particle_sim_fallback_threshold_ms        "2"        // Particle sim time per frame (ms) before new systems fall back to cheaper versions. 2 ms is ~half a frame at 270 Hz; upstream 1. [def: "6"]  // Off since 2026-10-06: full effects at all times.
+        cl_particle_sim_fallback_base_multiplier     "20"      // How hard to push systems to cheaper fallbacks once sim time passes the threshold. Upstream 100; 20 is moderate for a 9800X3D. [def: "5"]  // Stage 4 cut 2026-10-06.
+        cl_particle_sim_fallback_threshold_ms        "2"        // Particle sim time per frame (ms) before new systems fall back to cheaper versions. 2 ms is ~half a frame at 270 Hz; upstream 1. [def: "6"]  // Stage 4 cut 2026-10-06.
         // cl_particle_sim_fallback_threshold_ms     "0.3"      // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
-        // cl_particle_fallback_multiplier              "5"       // Multiplier for falling back to cheaper effects under load. Upstream 10. [def: "0"]  // Off since 2026-10-06: full effects at all times.
-        // cl_particle_fallback_base                    "2"        // Base for falling back to cheaper effects under load. Upstream 5. [def: "0"]  // Off since 2026-10-06: full effects at all times.
+        cl_particle_fallback_multiplier              "5"       // Multiplier for falling back to cheaper effects under load. Upstream 10. [def: "0"]  // Stage 4 cut 2026-10-06.
+        cl_particle_fallback_base                    "2"        // Base for falling back to cheaper effects under load. Upstream 5. [def: "0"]  // Stage 4 cut 2026-10-06.
         // r_draw_particle_children_with_parents     "1"        // I believe this handles the drawing of little visual flourish particles. [def: "-1"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_limit_particle_job_duration             "true"     // Seems to help with particle clutter, although I am not sure.             [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_fixedrandomseeds               "true"     // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance. That being said it does make flames from paige 1 always appear on the left, so your call ig [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
@@ -779,15 +779,15 @@ GameInfo
         // cc_captiontrace                           "0"      // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
 
         // ================================================================================================
-        // 4. VISUAL EFFECTS  (default except bullet impact effects, cut 2026-10-06 for fight-time CPU; uncomment a line to cut more)
+        // 4. VISUAL EFFECTS  (cut 2026-10-06 for fight-time FPS: impact effects, splashes, wind, ropes; the rest default)
         // ================================================================================================
         // violence_ablood                              "0"      // Disables alien/other blood effects.                              [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // violence_agibs                               "0"      // Disables alien/other gibs.                                       [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // violence_hblood                              "0"      // Disables human blood effects.                                    [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // violence_hgibs                               "0"      // Disables human gibs.                                             [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
-        // cl_show_splashes                             "0"      // Disables splash effects (water/impact splashes).                 [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
-        // r_world_wind_strength                        "0"      // Disables wind effects, cosmetic only.                            [def: "40"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
-        // r_drawropes                                  "false"  // [def: "true"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
+        cl_show_splashes                             "0"      // Disables splash effects (water/impact splashes).                 [def: "1"]  // Stage 4 cut 2026-10-06.
+        r_world_wind_strength                        "0"      // Disables wind effects, cosmetic only.                            [def: "40"]  // Stage 4 cut 2026-10-06.
+        r_drawropes                                  "false"  // [def: "true"]  // Stage 4 cut 2026-10-06.
         // r_character_decal_resolution                 "256"    // Resolution of character decal textures. Engine min 256 (was "4", clamped). [def: "1024"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_render_hair                                "false"  // [def: "true"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_hair_ao                                    "0"      // Disables hair ambient occlusion/shading pass.                    [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
