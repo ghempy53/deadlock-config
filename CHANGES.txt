@@ -40,7 +40,7 @@ Header credits/donation text removed; all setting comments kept.
   line 589   cam_idealdelta                               "0"  ->  (commented -> engine default)
   line 590   cam_ideallag                                 "0"  ->  (commented -> engine default)
   line --    citadel_camera_height                        "0"  ->  (line removed -> engine default)
-  line 591   citadel_camera_height_ceiling_distance       "0"  ->  (commented -> engine default)
+  line --    citadel_camera_height_ceiling_distance       "0"  ->  (line removed 2026-10-06; convar gone post-CNS)
   line 592   citadel_camera_pitch_default                 "0"  ->  (commented -> engine default)
   line 594   citadel_shoot_forward_offset                 "0"  ->  (commented -> engine default)
   line --    citadel_stuck_camera_trace_extra_length      "0"  ->  (line removed -> engine default)
@@ -282,6 +282,19 @@ DEBRIS, EFFECTS AND TROOPERS BACK TO DEFAULT (2026-10-06)
   Already default and left as is: cl_particle_batch_mode, r_particle_allowprerender, r_particle_model_new,
   citadel_trooper_glow_disabled, cl_disable_ragdolls, cl_phys_enabled, group 4 visual effects.
   Bloom and depth of field lines stay: they mirror the in-game menu, which owns them.
+
+CAMERA FEEL RESTORED (2026-10-06)
+  line 587   citadel_camera_use_vmdl_flatten_horizontal  (default true)  ->  "false"
+  line 616   engine_accurate_input_processing_delta_time (default false) ->  "true"
+  line 738   engine_max_ticks_to_simulate                (default -1)    ->  "2"
+  line 591   citadel_camera_height_approach_speed        (default 80)    ->  "800"
+  Why: the camera felt wrong after City Never Sleeps. The first three were active in the 2026-10-04 config and were
+  reset on 2026-10-05 as low or unproven perf impact; they are camera/input feel, not performance. CNS cut the camera
+  height approach speed from 800 to 80 (cheat flag; applies from this file), so height changes settle 10x slower.
+  The dead citadel_camera_height_ceiling_distance comment line was replaced. Line numbers unchanged.
+  Also corrected: the new citadel_camera_override_* settings (including the 50-150 FOV) are Valve's Custom spectator
+  camera, not the player camera. Valve's settings text: place the camera with the offsets below instead of each hero's
+  own camera, for the spectated hero.
 
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
