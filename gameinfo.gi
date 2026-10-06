@@ -574,7 +574,7 @@ GameInfo
         citadel_damage_text_new_ability_offset_y  "-10000"
         citadel_damage_text_new_melee_offset_y    "-10000"
         citadel_damage_text_new_pure_offset_y     "-10000"
-        citadel_damage_text_cumulative_offset     "-50 -15 0"
+        citadel_damage_text_cumulative_offset     "-50 -35 0"  // x y z. Lower y is higher on screen. Was -50 -15 0 until 2026-10-06. [def: "10 25 0"]
         // citadel_damage_report_enable           "1"          // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
 
         // --- 1e. Camera ---

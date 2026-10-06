@@ -26,7 +26,7 @@ Header credits/donation text removed; all setting comments kept.
   line 574   citadel_damage_text_new_ability_offset_y     (absent)  ->  added "-10000"
   line 575   citadel_damage_text_new_melee_offset_y       (absent)  ->  added "-10000"
   line 576   citadel_damage_text_new_pure_offset_y        (absent)  ->  added "-10000"
-  line 577   citadel_damage_text_cumulative_offset        (absent)  ->  added "-50 -15 0"
+  line 577   citadel_damage_text_cumulative_offset        (absent)  ->  added "-50 -15 0"   -> "-50 -35 0" 2026-10-06 (nudged up)
   line 840   citadel_distance_mouse_move_for_minimap_drawing "1"  ->  (commented -> engine default)   UI reset
   line 838   citadel_hud_objective_health_debug_show_midboss "false"  ->  (commented -> engine default)   UI reset
   line 839   citadel_hud_objective_health_enabled         "2"  ->  (commented -> engine default)   UI reset
@@ -244,6 +244,11 @@ PARTICLE FALLBACKS RE-ENABLED (2026-10-06, tuned for a 9800X3D)
   line 712   cl_particle_fallback_multiplier            (default 0)  ->  "5"   (upstream 10)
   line 713   cl_particle_fallback_base                  (default 0)  ->  "2"   (upstream 5)
   The other particle lines (skip_postsim, children drawing, pixel visibility, fixed seeds, texture layers) stay default.
+
+CUMULATIVE DAMAGE TOTAL NUDGED UP (2026-10-06)
+  line 577   citadel_damage_text_cumulative_offset      "-50 -15 0"  ->  "-50 -35 0"
+  Only y changed, so the total moves straight up by 20 px. Lower y is higher on screen. Per-hit lines stay at -10000.
+  A brief detour to Valve defaults (per-hit numbers visible, total at 10 25 0) was reverted the same day.
 
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
