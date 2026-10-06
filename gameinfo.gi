@@ -684,8 +684,8 @@ GameInfo
         r_grass_end_fade                      "0"      // When to cull grass when far                                      [def: "300"]
         sc_clutter_enable                     "false"  // Disables clutter props, improves visibility & FPS.               [def: "true"]
         // r_size_cull_threshold              "0.9"    // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
-        // sc_instanced_mesh_size_cull_bias   "10"     // Bias for size culling of instanced meshes                        [def: "1.5"]
-        // sc_instanced_mesh_lod_bias         "0.001"  // Bias for LOD selection of instanced mesh                         [def: "1.25"]
+        sc_instanced_mesh_size_cull_bias   "4"      // Culls tiny instanced meshes (small props) sooner by screen size. Upstream 10. [def: "1.5"] // Stage 3 cut 2026-10-06.
+        sc_instanced_mesh_lod_bias         "3"      // Switches instanced meshes to lower LODs sooner (higher = earlier). [def: "1.25"] // Stage 3 cut 2026-10-06.
         // sc_instanced_mesh_lod_bias_shadow  "0.001"  // Bias for LOD selection of instanced meshes in shadowmaps         [def: "1.75"]
         // sc_allow_dithered_lod              "false"  // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal [def: "true"]
         // sc_allow_dithered_lod              "false"  // This should dither the lod to make it less obtrusive             [def: "true"]
@@ -696,7 +696,7 @@ GameInfo
         // props_break_max_pieces_perframe      "0"     // Makes boxes and troopers break into a single piece               [def: "16"]  // Say thank you to jasper that this can be set to 0 now <3  // Off since 2026-10-06: boxes and troopers break into debris again.
         cl_phys_enabled                      "true"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
         cl_disable_ragdolls                  "0"     // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
-        // cl_ragdoll_limit                  "0"     // Limit of how many ragdolls can be rendered at once.              [def: "20"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
+        cl_ragdoll_limit                  "8"     // Max ragdolls shown at once; older bodies vanish sooner in teamfights. Archive var. [def: "20"] // Stage 3 cut 2026-10-06.
         cl_phys_assume_fixed_tick_interval   "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
         // phys_cull_internal_mesh_contacts  "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // cl_fasttempentcollision           "1000"  // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
@@ -796,7 +796,7 @@ GameInfo
         cl_impacteffects                             "0"      // Bullet impact sparks and dust on walls and floors. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
         citadel_per_weapon_per_surface_impact_effects "false" // Per-weapon, per-surface impact variations. Server-synced. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
         // mat_max_lighting_complexity                  "0"      // Doesn't seem to do anything but throwing it in for posterity.    [def: "8"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
-        // cl_retire_low_priority_lights                "1"      // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
+        cl_retire_low_priority_lights                "1"      // Low-priority dynamic lights are replaced by high-priority ones (fewer minor lights in fights). [def: "false"] // Stage 3 cut 2026-10-06.
         // r_pixelvisibility_partial                    "false"  // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
         // r_strip_invisible_during_sceneobject_update  "1"      // idk ngl    [def: "false"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
         // r_enable_rigid_animation                     "false"  // [def: "true"]
