@@ -567,14 +567,14 @@ GameInfo
         // citadel_unit_status_recent_damage_time  "inf"  // how long to show someone's numerical health value when you shoot them. Inf means infinite, but will cause the healthbar to jiggle/shake forever. [def: "0.25"]
         // citadel_unit_status_stamina_low_pips    "7"    // Gone: added in CNS, removed again in the 09-30 hotfix.
 
-        // --- 1d. Damage numbers (all default: per-hit numbers plus the in-game Final total only mode) ---
+        // --- 1d. Damage numbers (in-game cumulative mode must be: show the total once damage stops) ---
         // citadel_damage_text_batching_window_ability removed post-CNS (no longer exists). Successors at defaults suit cumulative mode 2:
         //   citadel_damage_text_batching_window_individual [def: "0"], _individual_heal [def: "0.1"], _cumulative [def: "1.5"]
-        // citadel_damage_text_new_bullet_offset_y   "-10000"  // Hid per-hit numbers. Off since 2026-10-06: a single hit shows no total, so the first hit was invisible. [def: "10"]
-        // citadel_damage_text_new_ability_offset_y  "-10000"  // [def: "-10"]
-        // citadel_damage_text_new_melee_offset_y    "-10000"  // [def: "30"]
-        // citadel_damage_text_new_pure_offset_y     "-10000"  // [def: "0"]
-        // citadel_damage_text_cumulative_offset  "-50 -15 0"  // Moves the total to the hero. Off since 2026-10-06: default spot. [def: "10 25 0"]
+        citadel_damage_text_new_bullet_offset_y   "-10000"
+        citadel_damage_text_new_ability_offset_y  "-10000"
+        citadel_damage_text_new_melee_offset_y    "-10000"
+        citadel_damage_text_new_pure_offset_y     "-10000"
+        citadel_damage_text_cumulative_offset     "-50 -15 0"
         // citadel_damage_report_enable           "1"          // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
 
         // --- 1e. Camera ---
