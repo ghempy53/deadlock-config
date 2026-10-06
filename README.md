@@ -62,9 +62,10 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 
 ## In-game settings this config assumes
 
-- **Damage numbers:** every damage-number line in group 1d is commented out for now, so Valve's defaults apply while
-  the in-game damage number settings are being tested. Use any in-game mode. The previous layout (total up-left of the
-  target, 3 s batch window, no extra delay, 2 s on screen, no big-hit emphasis) comes back by uncommenting those lines.
+- **Damage numbers:** while the in-game damage number settings are being tested, group 1d uses Valve's defaults with
+  two exceptions: the final total stays 4 s (default 3), and big hits don't scale up
+  (`citadel_damage_text_dynamic_emphasis "false"`). Use any in-game mode. The rest of the previous layout (total up-left
+  of the target, 3 s batch window, no extra delay) comes back by uncommenting those lines.
   Don't push per-hit numbers off-screen: the game makes no total for a single hit, so the first hit would disappear.
 - **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). It can be saved per hero, so check
   Hero-Specific Settings if one hero feels different. The City Never Sleeps camera overrides (`citadel_camera_override_*`,
