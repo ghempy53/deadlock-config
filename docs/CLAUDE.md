@@ -15,7 +15,7 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
 | File | Role |
 | --- | --- |
 | `gameinfo.gi` | The config. KeyValues. All tuning lives in the `ConVars` tweak block. |
-| `docs/CHANGES.txt` | Source of truth for every difference from upstream 3.4, in dated sections. Append, never rewrite history. |
+| `docs/CHANGES.txt` | Source of truth for every difference from upstream 3.4, in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
 | `README.md` | Install, assumed in-game settings, troubleshooting, the after-update checklist. |
 | `docs/WINDOWS11.md` | OS, driver and BIOS guidance. Independent of game patches. |
 | `docs/BLOCKED-CONVARS.md` | Convars Deadlock ignores from `gameinfo.gi` (`gameinfo_cannot_override`). Never add one. |
@@ -34,10 +34,11 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
 3. **Stock tail:** everything after `END OF CONFIG` and the `SV commands` documentation block is Valve's own ConVars
    tail. Keep it identical to stock, except `fps_max "0"` and `fps_max_ui "0"`.
 4. **Tweak-block line format** (aligned columns: 8-space indent, value's opening quote at column 58, note's `//` at
-   column 69):
+   column 69). A commented-out line is the active line with `// ` put in front of the name, so its columns shift
+   right by 3 (61 and 72):
    ```
            name                                             "value"    // Short note. [def: X]
-           // name                                          "value"    // Off: engine default applies. [def: X]
+           // name                                             "value"    // Off: engine default applies. [def: X]
    ```
    `[def: X]` is Valve's default from the convar dump. `[def: gone]` means the convar no longer exists. Long notes go
    on their own `//` line above the setting. Wrap comments near 120 columns. Don't put dated history in
@@ -51,7 +52,7 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
 
 ## Deciding whether a convar change is valid
 
-Check `python utils/convars.py lookup <name>` before proposing or making a change:
+Check `python3 utils/convars.py lookup <name>` before proposing or making a change:
 - **Not in the dump:** removed or renamed. Don't add it.
 - **`gameinfo_cannot_override`:** the line is ignored. Don't add it.
 - **`gamedll` without `clientdll` or `replicated`:** server-only, so it does nothing online and only affects
@@ -86,8 +87,9 @@ Check `python utils/convars.py lookup <name>` before proposing or making a chang
      Lines after N moved down by K.   (or: Line numbers unchanged.)
    ```
    Removed lines use `line --`. Every `line N` must point at the current line of that convar.
-3. Run `python utils/check.py --fix` to renumber stale `line N` references across all of `docs/CHANGES.txt`, then run
-   `python utils/check.py`. It must report 0 errors. (Hooks run it automatically; see `.claude/settings.json`.)
+3. Run `python3 utils/check.py --fix` to renumber stale `line N` references across all of `docs/CHANGES.txt`, then run
+   `python3 utils/check.py`. It must report 0 errors. Hooks run the check (not `--fix`) after each Edit/Write and
+   before a turn ends; see `.claude/settings.json`. Edits made through Bash only get the end-of-turn check.
 4. Update `README.md` if an assumed in-game setting or user-visible behavior changed.
 5. Keep each PR to one theme. Branch names look like `claude/<short-topic>`. Commit subjects are plain English
    describing the effect (for example "Camera wobble to default; restore aim/frame feel lines").
