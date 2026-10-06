@@ -1,6 +1,6 @@
 // Deadlock gameinfo.gi - based on OptimizationLock (Sqooky's .gi), ver. 3.4
 // Source: https://github.com/Sqooky/OptimizationLock
-// Personal changes are listed in CHANGES.txt (kept outside this file).
+// Personal changes are listed in docs/CHANGES.txt (kept outside this file).
 
 GameInfo
 {
