@@ -18,6 +18,18 @@ Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, whic
 | `CHANGES.txt` | Every difference from upstream 3.4, the post-patch cleanup, and the engine-section reset. Source of truth for re-applying. |
 | `WINDOWS11.md` | OS, driver and in-game settings that pair with this config. |
 
+## Layout of the ConVars block
+
+The tweak block in `gameinfo.gi` is grouped so you can toggle things without hunting:
+1. **Personal / readability**: restored lighting, glows and viewmodel, health bars, damage numbers, camera, FOV, input, textures.
+2. **Performance cuts** (the lines that actually cost or save frame time): sun shadows/CSM, SSAO, fog, post-processing, grass/clutter/LOD, props/physics, particles, threading/engine.
+3. **Audio**, 4. **Visual effects** (all default), 5. **Animation/IK** (all default), 6. **UI/HUD/menus** (all default),
+7. **Network** (do not change), 8. **Reference** (broken or dev-only convars, documentation only).
+
+An active line applies at game start; a line starting with `//` is off and the engine default applies. Toggle by
+adding or removing the `//`; change values only inside the quotes. Never add double quotes inside a comment
+(Deadlock Mod Manager's parser trips on odd quote counts).
+
 ## Install
 
 1. Close Deadlock.
