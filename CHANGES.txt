@@ -270,6 +270,19 @@ PER-HIT DAMAGE NUMBERS BACK, KEPT SMALL (2026-10-06)
   150% with an extra pop, and moves an emphasized total 100 px right. Crits still scale 130% (no convar).
   Lines after 579 moved down by 1.
 
+DEBRIS, EFFECTS AND TROOPERS BACK TO DEFAULT (2026-10-06)
+  line 696   props_break_max_pieces_perframe            "0"   ->  (commented -> engine default 16)
+  line 712   cl_particle_sim_fallback_base_multiplier   "20"  ->  (commented -> engine default 5)
+  line 713   cl_particle_sim_fallback_threshold_ms      "2"   ->  (commented -> engine default 6)
+  line 715   cl_particle_fallback_multiplier            "5"   ->  (commented -> engine default 0)
+  line 716   cl_particle_fallback_base                  "2"   ->  (commented -> engine default 0)
+  Why: breaking boxes showed no debris. With 0 pieces per frame, boxes and troopers vanish instead of breaking.
+  The convar is replicated, so in online matches the server value likely applied anyway; the 0 mainly hit Hideout,
+  Sandbox and bot matches. Particle fallbacks swapped effects for cheaper versions under load; now off.
+  Already default and left as is: cl_particle_batch_mode, r_particle_allowprerender, r_particle_model_new,
+  citadel_trooper_glow_disabled, cl_disable_ragdolls, cl_phys_enabled, group 4 visual effects.
+  Bloom and depth of field lines stay: they mirror the in-game menu, which owns them.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
