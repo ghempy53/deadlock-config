@@ -72,8 +72,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - Map lighting stays on: dynamic/stationary lights, shadow casting, sun, baked shadows, lightmaps.
 - `citadel_camera_use_vmdl_flatten_horizontal` stays default (false made aiming down sights far too zoomed in).
   The gun-aim pose override was tried and reverted.
-- Per-hit damage numbers stay visible (a single hit never makes a total). All group 1d damage-number lines are
-  commented out (Valve defaults) while the owner tests in-game settings; the old up-left layout is kept commented.
+- Per-hit damage numbers stay visible (a single hit never makes a total). While the owner tests in-game settings, group 1d
+  is at Valve defaults except final lifetime 4 and dynamic emphasis off; the old up-left layout is kept commented.
 - Particle fallbacks are at upstream values. Bone flex, morphing and foot lock are off (fight-time CPU).
 - `steam_inputhandler_enabled "false"`, anisotropic 16x, full-res textures.
 - The same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
@@ -100,6 +100,10 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 4. Update `README.md` if an assumed in-game setting or user-visible behavior changed.
 5. Keep each PR to one theme. Branch names look like `claude/<short-topic>`. Commit subjects are plain English
    describing the effect (for example "Camera wobble to default; restore aim/frame feel lines").
+6. **Open a pull request into `main` after every change**, without being asked. The owner tracks version history
+   through pull requests, so each change must land as its own PR. If the branch's previous PR is already merged,
+   restart the branch from the latest `main` first. To see past versions or earlier reasoning, read the merged pull
+   requests (title, body, diff) rather than guessing from `git log`.
 
 ## External sources
 

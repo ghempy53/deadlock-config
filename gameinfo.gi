@@ -576,20 +576,20 @@ GameInfo
         // citadel_unit_status_recent_damage_time           "inf"      // [def: 0.25]
         // citadel_unit_status_stamina_low_pips             "7"        // Gone: added in CNS, removed again in the 09-30 hotfix. [def: gone]
 
-        // --- 1d. Damage numbers (all lines off: Valve defaults apply while in-game damage number settings are tested;
-        //   uncomment a line to bring back the previous layout or timing) ---
+        // --- 1d. Damage numbers (testing in-game settings: Valve defaults except a 4 s final total and no big-hit emphasis;
+        //   the other lines here are the previous layout and timing, kept commented) ---
         // citadel_damage_text_batching_window_ability removed post-CNS. _individual [def: '0'] and _individual_heal [def: '0.1']
         //   stay default.
         // citadel_damage_text_batching_window_cumulative   "3"        // Seconds after your last hit before the total closes. [def: 1.5]
         // citadel_damage_text_cumulative_final_delay       "0"        // Extra wait before the final total shows. [def: 0.75]
-        // citadel_damage_text_cumulative_final_lifetime    "2"        // How long the final total stays. [def: 3]
+        citadel_damage_text_cumulative_final_lifetime    "4"        // How long the final total stays. [def: 3]
         // citadel_damage_text_new_bullet_offset_y          "-10000"   // Hid per-hit numbers. Off: a single hit never makes a total. [def: 10]
         // citadel_damage_text_new_ability_offset_y         "-10000"   // [def: -10]
         // citadel_damage_text_new_melee_offset_y           "-10000"   // [def: 30]
         // citadel_damage_text_new_pure_offset_y            "-10000"   // [def: 0]
         // citadel_damage_text_cumulative_offset            "-50 -35 0" // X y z. Lower y is higher on screen. Was -50 -15 0 until 2026-10-06. [def: 10 25 0]
         // Big hits no longer scale up 150%. Only size control exposed as a convar; crits still scale 130%.
-        // citadel_damage_text_dynamic_emphasis             "false"    // [def: true]
+        citadel_damage_text_dynamic_emphasis             "false"    // [def: true]
         // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay)
         // citadel_damage_report_enable                     "1"        // [def: true]
 
