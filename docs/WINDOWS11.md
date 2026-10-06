@@ -1,7 +1,7 @@
 # Windows 11 tuning for Deadlock
 
 This is general OS and driver guidance for the target setup: **Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB,
-32 GB DDR5-6000 EXPO, 2560x1440 @ 270 Hz, DX11**.
+32 GB DDR5-6000 EXPO, 2560x1440 @ 270 Hz, DX11 (Vulkan supported for testing)**.
 It does not depend on any Deadlock patch. The game-side settings are in `gameinfo.gi` and the README.
 Change one thing at a time, and compare frametimes before and after (for example with CapFrameX or PresentMon)
 over the same in-game scenario. Sandbox works well for this.
@@ -23,13 +23,18 @@ over the same in-game scenario. Sandbox works well for this.
 - **Shader Cache Size:** 10 GB or Unlimited. Big updates such as City Never Sleeps invalidate shaders, so expect
   stutter for the first few matches after a patch while the cache rebuilds.
 - Leave Low Latency Mode in the Control Panel at its default. Reflex in game supersedes it.
+- **Vulkan/OpenGL present method** (Manage 3D Settings, driver 526.61 or newer): only matters with `-vulkan`. Leave it
+  on *Auto*. *Prefer layered on DXGI swapchain* routes Vulkan through the DXGI flip model in borderless windows, which
+  usually helps latency and VRR. It has also caused stutter and freezes in CS2 under Vulkan, where *Prefer native* was
+  the fix. If Vulkan stutters in Deadlock, try *Prefer native* first, then *Prefer layered*, one at a time.
 
 ## Windows 11
 
 - **Game Mode:** On (the default).
 - **Hardware-accelerated GPU scheduling:** On (Settings → Display → Graphics → Advanced graphics settings).
 - **Optimizations for windowed games:** On (same page). Borderless DX11 then uses the flip model, so
-  latency is close to exclusive fullscreen.
+  latency is close to exclusive fullscreen. This setting only applies to DX10/DX11; for Vulkan, the NVIDIA present
+  method above plays the same role.
 - **Xbox Game Bar captures / background recording:** Off, unless you use them.
 - **Overlays:** disable the ones you don't use (Discord, GeForce/NVIDIA App overlay, third-party monitors).
   Keep only one fps/frametime overlay.

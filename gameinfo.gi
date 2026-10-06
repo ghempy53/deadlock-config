@@ -888,6 +888,17 @@ GameInfo
         // -1 Default
         // -2 removes it from boot.vcfg
 
+        // --- 2i. Renderer: DX11 and Vulkan ---
+        // Every active line in this file is renderer-neutral, so the config runs unchanged on DX11 (the Windows default)
+        // and with the -vulkan launch option. The Vulkan keys in RenderSystem are Valve stock (a guarded section) and are
+        // only read under Vulkan. The renderer-specific convars stay at default because Valve defaults are already the
+        // fast path: vulkan_unpause_workers_after_each_texture_deallocation false, r_dx11_software_cmd_lists and
+        // r_vulkan_sw_cmd_lists true (group 8: 0 causes a lot of issues), r_vma_defrag_* Vulkan memory defrag on.
+        // Vulkan only. False uses the whole render target as each render pass area; Valve says true results in more
+        // render passes. Release flag, so it can be A/B tested live from the console. Untested risk: wrong clears where
+        // several viewports share one target. Uncomment only if the console test shows a gain and no artifacts.
+        // r_vulkan_accurate_renderarea                     "false"    // [def: true]
+
         // ================================================================================================
         // 3. AUDIO  (defaults; snd_steamaudio_num_threads is the code default of 2)
         // ================================================================================================
