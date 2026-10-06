@@ -1,4 +1,4 @@
-"""Shared helpers for reading gameinfo.gi, CHANGES.txt and Valve's convar dump.
+"""Shared helpers for reading gameinfo.gi, docs/CHANGES.txt and Valve's convar dump.
 
 Standard library only, so every script runs with a plain Python 3.9+ on Windows or Linux.
 """
@@ -13,7 +13,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 GI = REPO / "gameinfo.gi"
-CHANGES = REPO / "CHANGES.txt"
+CHANGES = REPO / "docs" / "CHANGES.txt"
 README = REPO / "README.md"
 CACHE = Path(__file__).resolve().parent / ".cache"
 

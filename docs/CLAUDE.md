@@ -15,9 +15,12 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
 | File | Role |
 | --- | --- |
 | `gameinfo.gi` | The config. KeyValues. All tuning lives in the `ConVars` tweak block. |
-| `CHANGES.txt` | Source of truth for every difference from upstream 3.4, in dated sections. Append, never rewrite history. |
+| `docs/CHANGES.txt` | Source of truth for every difference from upstream 3.4, in dated sections. Append, never rewrite history. |
 | `README.md` | Install, assumed in-game settings, troubleshooting, the after-update checklist. |
-| `WINDOWS11.md` | OS, driver and BIOS guidance. Independent of game patches. |
+| `docs/WINDOWS11.md` | OS, driver and BIOS guidance. Independent of game patches. |
+| `docs/BLOCKED-CONVARS.md` | Convars Deadlock ignores from `gameinfo.gi` (`gameinfo_cannot_override`). Never add one. |
+| `docs/TUNING-CANDIDATES.md` | What is still worth testing, and what was deliberately not adopted. Check it before proposing a change. |
+| `docs/RESEARCH-2026-10-06.md`, `docs/CONFIG-COMPARISON.md`, `docs/data/` | Research notes, comparison with other public configs, convar matrix. |
 | `utils/` | Python 3 (stdlib only) checks and lookups. See `utils/README.md`. |
 
 ## Hard rules for `gameinfo.gi`
@@ -38,7 +41,7 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
    ```
    `[def: X]` is Valve's default from the convar dump. `[def: gone]` means the convar no longer exists. Long notes go
    on their own `//` line above the setting. Wrap comments near 120 columns. Don't put dated history in
-   `gameinfo.gi`; that goes in `CHANGES.txt`.
+   `gameinfo.gi`; that goes in `docs/CHANGES.txt`.
 5. **Groups:** 1 Personal/readability (1a lighting, 1b glows/viewmodel, 1c health bars, 1d damage numbers, 1e camera,
    then FOV/input/textures), 2 Performance cuts, 3 Audio, 4 Visual effects, 5 Animation/IK, 6 UI/HUD/menus,
    7 Network (**never change**), 8 Reference (broken/dev-only, never enable). Put new lines in the right group.
@@ -74,7 +77,7 @@ Check `python utils/convars.py lookup <name>` before proposing or making a chang
 ## Workflow for every change
 
 1. Look up each convar (`utils/convars.py lookup`). Edit `gameinfo.gi`.
-2. Add a dated section at the end of `CHANGES.txt` before `NOTES`, matching the existing style:
+2. Add a dated section at the end of `docs/CHANGES.txt` before `NOTES`, matching the existing style:
    ```
    SHORT TITLE IN CAPS (YYYY-MM-DD)
      line 603   citadel_camera_wobble_disable              "true"   ->  (commented -> engine default false)
@@ -83,7 +86,7 @@ Check `python utils/convars.py lookup <name>` before proposing or making a chang
      Lines after N moved down by K.   (or: Line numbers unchanged.)
    ```
    Removed lines use `line --`. Every `line N` must point at the current line of that convar.
-3. Run `python utils/check.py --fix` to renumber stale `line N` references across all of `CHANGES.txt`, then run
+3. Run `python utils/check.py --fix` to renumber stale `line N` references across all of `docs/CHANGES.txt`, then run
    `python utils/check.py`. It must report 0 errors. (Hooks run it automatically; see `.claude/settings.json`.)
 4. Update `README.md` if an assumed in-game setting or user-visible behavior changed.
 5. Keep each PR to one theme. Branch names look like `claude/<short-topic>`. Commit subjects are plain English
@@ -92,12 +95,12 @@ Check `python utils/convars.py lookup <name>` before proposing or making a chang
 ## External sources
 
 - Valve data: https://github.com/SteamTracking/GameTracking-Deadlock (`DumpSource2/convars.txt`,
-  `game/citadel/gameinfo.gi`). Record the commit or build you checked against in `CHANGES.txt`.
+  `game/citadel/gameinfo.gi`). Record the commit or build you checked against in `docs/CHANGES.txt`.
 - Upstream: https://github.com/Sqooky/OptimizationLock, file `Sqooky's .gi/gameinfo.gi`. The last synced commit is
-  recorded in the latest `UPSTREAM SYNC CHECK` section of `CHANGES.txt`.
+  recorded in the latest `UPSTREAM SYNC CHECK` section of `docs/CHANGES.txt`.
 - Skills in `.claude/skills/`: `convar-change`, `upstream-sync`, `patch-verify`.
 
 ## Can't verify here
 
-Nothing can be tested in game from a session. Mark gameplay-affecting changes "Untested in game" in `CHANGES.txt`, and
+Nothing can be tested in game from a session. Mark gameplay-affecting changes "Untested in game" in `docs/CHANGES.txt`, and
 say what the owner should look for when they test.

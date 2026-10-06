@@ -6,7 +6,7 @@ Refs that move, like `master` and `main`, are re-downloaded on every run.
 
 | Script | Offline | What it does |
 | --- | --- | --- |
-| `check.py` | yes | Validates `gameinfo.gi` and `CHANGES.txt`. `--fix` renumbers stale `line N` references. |
+| `check.py` | yes | Validates `gameinfo.gi` and `docs/CHANGES.txt`. `--fix` renumbers stale `line N` references. |
 | `convars.py` | no | `lookup` a convar in Valve's dump, `audit` every setting, `diff` two GameTracking commits. |
 | `stock_diff.py` | no | Compares every section and the stock ConVars tail with Valve's stock `gameinfo.gi`. |
 | `upstream_diff.py` | no | Lists what changed in OptimizationLock since the last synced commit. |
@@ -18,14 +18,14 @@ All scripts exit 1 on errors, so they can run in CI.
 
 ```
 python3 utils/check.py           # errors + warnings
-python3 utils/check.py --fix     # also rewrite stale `line N` numbers in CHANGES.txt
+python3 utils/check.py --fix     # also rewrite stale `line N` numbers in docs/CHANGES.txt
 ```
 
 Errors:
 - KeyValues parse failures.
 - A line with an odd number of `"` (breaks Deadlock Mod Manager).
 - A convar set twice.
-- A `CHANGES.txt` `line N  name` entry whose line in `gameinfo.gi` does not mention `name`.
+- A `docs/CHANGES.txt` `line N  name` entry whose line in `gameinfo.gi` does not mention `name`.
 
 Warnings:
 - A `"` inside a comment.
@@ -35,8 +35,8 @@ Warnings:
 match is left for you to fix by hand.
 
 Claude Code runs it through hooks in `.claude/settings.json`:
-- **After every edit** to `gameinfo.gi` or `CHANGES.txt`, it runs the structural checks, but not the line references,
-  which lag mid-edit.
+- **After every edit** to `gameinfo.gi` or `docs/CHANGES.txt`, it runs the structural checks, but not the line
+  references, which lag mid-edit.
 - **Before Claude finishes a turn** with uncommitted changes to either file, it runs the full check. If that fails,
   Claude is sent back once to fix it.
 
@@ -71,4 +71,4 @@ python3 utils/upstream_diff.py [--from <sha>] [--to main]
 ```
 
 `--from` defaults to the commit in the last `UPSTREAM SYNC CHECK (..., OptimizationLock main @ <sha>)` line of
-`CHANGES.txt`.
+`docs/CHANGES.txt`.

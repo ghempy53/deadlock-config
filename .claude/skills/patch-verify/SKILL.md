@@ -6,7 +6,7 @@ description: Verify gameinfo.gi after a Deadlock game update. Covers removed, re
 # Post-update verification
 
 Valve data comes from SteamTracking/GameTracking-Deadlock, which commits each build. Find the last checked commit in
-`CHANGES.txt`: search for `GameTracking`, which appears as `latest <sha>` or `GameTracking-Deadlock <sha>`.
+`docs/CHANGES.txt`: search for `GameTracking`, which appears as `latest <sha>` or `GameTracking-Deadlock <sha>`.
 
 ## 1. What changed in Valve's convars
 
@@ -40,7 +40,7 @@ The expected `stock_diff` result is 0 errors, with only the FileSystem SearchPat
 
 ## 3. Record it
 
-Add a section to `CHANGES.txt` above `NOTES`, as in the earlier audits:
+Add a section to `docs/CHANGES.txt` above `NOTES`, as in the earlier audits:
 `<UPDATE NAME> CHECK (YYYY-MM-DD; Valve data: GameTracking-Deadlock <sha>, build <n>)`. List each change with
 `line N`/`line --` rows and a short why. Update the README header's "verified against" line and any in-game settings
 the patch moved. Run `python3 utils/check.py --fix` last.

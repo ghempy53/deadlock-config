@@ -1,6 +1,6 @@
 ---
 name: convar-change
-description: Add, change, toggle or revert one or more convars in gameinfo.gi, including the CHANGES.txt entry and line renumbering. Use for any request that changes a setting value, comments one in or out, or asks for more FPS or a visual or feel fix through convars.
+description: Add, change, toggle or revert one or more convars in gameinfo.gi, including the docs/CHANGES.txt entry and line renumbering. Use for any request that changes a setting value, comments one in or out, or asks for more FPS or a visual or feel fix through convars.
 ---
 
 # Changing convars in gameinfo.gi
@@ -31,7 +31,7 @@ reports back, so suggest one stage at a time when the change is about performanc
 - No `"` in any comment text.
 - Revert to default = comment the line out (`// ` before the name, keeping the alignment of the other commented lines).
 
-## 3. Log it in CHANGES.txt
+## 3. Log it in docs/CHANGES.txt
 
 Append a dated section just above `NOTES` (see the template in `docs/CLAUDE.md`). Give one `line N` row per convar with
 the old -> new state, then a `Why:` paragraph covering cost, caveats and whether it's untested in game, then whether
@@ -40,7 +40,7 @@ line numbers moved.
 ## 4. Validate
 
 ```
-python3 utils/check.py --fix     # renumbers every stale `line N` reference in CHANGES.txt
+python3 utils/check.py --fix     # renumbers every stale `line N` reference in docs/CHANGES.txt
 python3 utils/check.py           # must say 0 error(s)
 python3 utils/convars.py audit   # must say 0 error(s); fix any [def:] warning on lines you touched
 ```

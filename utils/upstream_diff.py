@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """What changed upstream (Sqooky/OptimizationLock, "Sqooky's .gi/gameinfo.gi") since the commit this config last synced to.
 
-    python utils/upstream_diff.py                       from the last synced commit (CHANGES.txt) to main
+    python utils/upstream_diff.py                       from the last synced commit (docs/CHANGES.txt) to main
     python utils/upstream_diff.py --from 2b994f6 --to main
 
 For every convar whose upstream state changed (added, removed, value changed, commented or uncommented) it prints
@@ -28,7 +28,7 @@ def last_synced() -> str:
     m = PIN_RE.search(gi.README.read_text(encoding="utf-8"))
     if m:
         return m.group(1)
-    sys.exit("error: no synced upstream commit found in CHANGES.txt or README.md; pass --from")
+    sys.exit("error: no synced upstream commit found in docs/CHANGES.txt or README.md; pass --from")
 
 
 def convar_state(text: str) -> dict[str, str]:
@@ -50,7 +50,7 @@ def show(v: str | None) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--from", dest="old", help="upstream commit to diff from (default: last sync in CHANGES.txt)")
+    ap.add_argument("--from", dest="old", help="upstream commit to diff from (default: last sync in docs/CHANGES.txt)")
     ap.add_argument("--to", dest="new", default="main", help="upstream ref to diff to (default main)")
     ap.add_argument("--refresh", action="store_true", help="re-download even if cached")
     args = ap.parse_args()

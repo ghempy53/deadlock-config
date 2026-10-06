@@ -11,7 +11,7 @@ The config is not a fork that merges upstream. Each upstream change is judged ag
 ## 1. Diff upstream
 
 ```
-python3 utils/upstream_diff.py                 # from the last synced commit (CHANGES.txt) to main
+python3 utils/upstream_diff.py                 # from the last synced commit (docs/CHANGES.txt) to main
 python3 utils/upstream_diff.py --from SHA --to SHA
 ```
 
@@ -39,7 +39,7 @@ Use the `convar-change` skill steps (edit, log, `utils/check.py --fix`, audit).
 
 ## 4. Record the sync
 
-Add to `CHANGES.txt` above `NOTES` (this updates the commit the next diff starts from):
+Add to `docs/CHANGES.txt` above `NOTES` (this updates the commit the next diff starts from):
 
 ```
 UPSTREAM SYNC CHECK (YYYY-MM-DD, OptimizationLock main @ <short sha>)
