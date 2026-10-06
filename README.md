@@ -56,11 +56,13 @@ CitadelSettingsEnumDropDown` in `citadel_base_styles.css`, a mod is overriding V
 old copy. Valve's City Never Sleeps `citadel_base_styles.css` defines `deadlockGreen` and has no
 `CitadelSettingsEnumDropDown` selectors; the pre-patch (July) copy is the reverse. `citadel/custom` and
 `citadel/addons` are mounted before `citadel`, so any VPK there that contains
-`panorama/styles/citadel_base_styles.vcss_c` wins. A **loose `game\citadel\panorama` folder** does the same: Valve
-ships no loose Panorama files (they all live in `pak01_dir.vpk`), so that folder is leftover from an old mod or tool,
-and Steam's Verify integrity does not remove extra files. This is not caused by `gameinfo.gi`.
+`panorama/styles/citadel_base_styles.vcss_c` wins. Loose files under `game\citadel\panorama` do the same.
+Valve's depot ships only two loose subfolders there, **`fonts`** (required, the game is missing text without them) and
+**`videos`**; everything else (`styles`, `layout`, `scripts`, `images`) is leftover from an old mod or tool, and Steam's
+Verify integrity does not remove extra files. This is not caused by `gameinfo.gi`.
 
-Fix: first move any loose `game\citadel\panorama` folder out (keep it as a backup until the HUD is confirmed fine).
+Fix: **never move the whole `panorama` folder**. Move out only subfolders other than `fonts` and `videos` (keep them
+as a backup until the HUD is confirmed fine), especially `panorama\styles\citadel_base_styles.vcss_c`.
 Then, if needed, move everything out of `citadel/addons` (and `citadel/custom`) temporarily, confirm the HUD is correct,
 then put the mods back in halves until the HUD breaks again. Update or drop the mod that ships the stylesheet (Source 2 Viewer
 can open a VPK to check). The same applies to hero effects: a Shiv skin that replaces `particles/abilities/shiv/*`
