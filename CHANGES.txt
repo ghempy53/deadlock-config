@@ -197,6 +197,36 @@ UPSTREAM SYNC CHECK (2026-10-05, OptimizationLock main @ e2e9925)
   All 161 upstream keys not active here are deliberate: guarded engine-section keys (reset to stock), personal
   reverts (commented or removed), or convars the patch deleted. See the sections above.
 
+RESET TO DEFAULT: LOW OR UNPROVEN PERF IMPACT (2026-10-05)
+  Rule: keep only lines with a medium/large frame-time effect (shadows/CSM, SSAO, fog, grass, clutter, bloom/DOF menu
+  mirrors) or an explicit personal choice (health bar width, damage numbers, Steam Input off, camera wobble,
+  textures/filtering, restored lighting, props_break). Everything else is commented out so the engine default applies.
+  particles (can hide or alter effects; Shiv's Killing Blow "killable" cue is a particle system):
+    r_particle_max_size_cull, cl_particle_sim_fallback_base_multiplier, cl_particle_sim_fallback_threshold_ms, cl_particle_fallback_multiplier
+    cl_particle_fallback_base, r_draw_particle_children_with_parents, r_limit_particle_job_duration, r_particle_fixedrandomseeds
+    r_particle_max_texture_layers, r_particle_min_timestep, r_particle_model_per_thread_count, r_particle_skip_postsim
+    r_physics_particle_op_spawn_scale, r_update_particles_on_render_only_frames, r_particle_model_new8, r_particle_newinput
+  visibility (visibility/culling hacks that can hide sprites, glows or objects):
+    r_citadel_clip_sphere_min_opacity, cl_retire_low_priority_lights, sc_instanced_mesh_opaque_fade, r_pixelvisibility_partial
+    r_strip_invisible_during_sceneobject_update
+  visual (hero/scene visuals with negligible cost on this hardware):
+    mat_max_lighting_complexity, r_citadel_sun_shadow_slope_scale_depth_bias, cl_ragdoll_limit, cl_show_splashes
+    r_character_decal_resolution, violence_ablood, violence_agibs, violence_hblood
+    violence_hgibs, r_world_wind_strength, citadel_bullet_shot_offset_fade_time, r_citadel_gpu_preview_denoise_passes
+    r_drawropes, r_hair_ao, r_render_hair, sparseshadowtree_leaf_precision_viewmodel
+  input (camera/input/sim tweaks with no proven benefit):
+    citadel_camera_use_vmdl_flatten_horizontal, engine_accurate_input_processing_delta_time, engine_max_ticks_to_simulate
+  engine (engine tweaks with no proven benefit (rtx_* unused)):
+    r_texture_budget_threshold, r_texture_budget_update_period, cl_fasttempentcollision, cloth_sim_on_tick
+    phys_cull_internal_mesh_contacts, sc_aggregate_bvh_threshold, sc_instanced_mesh_motion_vectors, sc_layer_batch_threshold
+    rtx_dynamic_blas, rtx_force_default_hitgroup, rtx_texture_resolution, cl_batch_entity_list_ops_during_latch
+    cl_simulate_dormant_entities
+  audio (Steam Audio quality and through-wall cues; small CPU cost):
+    snd_steamaudio_max_occlusion_samples, snd_steamaudio_num_diffuse_samples, audio_enable_vmix_mastering, snd_steamaudio_reverb_order_rendering
+    audio_enable_spawn_mask_mix_layer, snd_boxverb_simd, snd_enable_subgraph_corenull_passthrough
+  server (server-side (gamedll), no effect online):
+    citadel_hideout_ball_show_juggle_count, citadel_hideout_ball_show_juggle_fx
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
