@@ -1206,8 +1206,8 @@ GameInfo
         // For perf reasons, since we don't use source-based DSP:
         disable_source_soundscape_trace "1"
 
-        fps_max    "0"   // Uncapped (0 = no limit). Stock is "400". Archive var: the in-game Max FPS setting can override it.
-        fps_max_ui "0"   // Uncapped while game UI is shown (0 = no limit). Stock is "120".
+        fps_max    "0"   // Uncapped (0 = no limit). Stock is 400. Archive var: the in-game Max FPS setting can override it.
+        fps_max_ui "0"   // Uncapped while game UI is shown (0 = no limit). Stock is 120.
 
         in_button_double_press_window "0.3"
 

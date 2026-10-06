@@ -17,6 +17,8 @@ Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, whic
 | `gameinfo.gi` | The config. Drop-in replacement for the game's file. |
 | `CHANGES.txt` | Every difference from upstream 3.4, the post-patch cleanup, and the engine-section reset. Source of truth for re-applying. |
 | `WINDOWS11.md` | OS, driver and in-game settings that pair with this config. |
+| `utils/` | Python checks: validate the file, look up convars in Valve's dump, diff against Valve stock and upstream. See `utils/README.md`. |
+| `docs/CLAUDE.md`, `.claude/` | Claude Code project guidance, skills and hooks. |
 
 ## Layout of the ConVars block
 
