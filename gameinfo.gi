@@ -684,7 +684,7 @@ GameInfo
         r_grass_end_fade                      "0"      // When to cull grass when far                                      [def: "300"]
         sc_clutter_enable                     "false"  // Disables clutter props, improves visibility & FPS.               [def: "true"]
         // r_size_cull_threshold              "0.9"    // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
-        sc_instanced_mesh_size_cull_bias   "4"      // Culls tiny instanced meshes (small props) sooner by screen size. Upstream 10. [def: "1.5"] // Stage 3 cut 2026-10-06.
+        // sc_instanced_mesh_size_cull_bias   "4"      // Culls tiny instanced meshes (small props) sooner by screen size. Upstream 10. [def: "1.5"] // Stage 3 cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
         sc_instanced_mesh_lod_bias         "3"      // Switches instanced meshes to lower LODs sooner (higher = earlier). [def: "1.25"] // Stage 3 cut 2026-10-06.
         // sc_instanced_mesh_lod_bias_shadow  "0.001"  // Bias for LOD selection of instanced meshes in shadowmaps         [def: "1.75"]
         // sc_allow_dithered_lod              "false"  // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal [def: "true"]
@@ -696,7 +696,7 @@ GameInfo
         // props_break_max_pieces_perframe      "0"     // Makes boxes and troopers break into a single piece               [def: "16"]  // Say thank you to jasper that this can be set to 0 now <3  // Off since 2026-10-06: boxes and troopers break into debris again.
         cl_phys_enabled                      "true"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
         cl_disable_ragdolls                  "0"     // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate. [def: "0"]
-        cl_ragdoll_limit                  "8"     // Max ragdolls shown at once; older bodies vanish sooner in teamfights. Archive var. [def: "20"] // Stage 3 cut 2026-10-06.
+        // cl_ragdoll_limit                  "8"     // Max ragdolls shown at once; older bodies vanish sooner in teamfights. Archive var. [def: "20"] // Stage 3 cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
         cl_phys_assume_fixed_tick_interval   "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
         // phys_cull_internal_mesh_contacts  "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // cl_fasttempentcollision           "1000"  // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
@@ -719,7 +719,7 @@ GameInfo
         // r_particle_fixedrandomseeds               "true"     // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance. That being said it does make flames from paige 1 always appear on the left, so your call ig [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_max_texture_layers             "4"        // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_min_timestep                   "0.00241"  // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values could negatively impact performance. [def: "0"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
-        // r_particle_model_per_thread_count         "64"       // I believe it is how many particle models a thread is allowed to handle.  [def: "32"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
+        r_particle_model_per_thread_count         "64"       // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]  // Added 2026-10-06: no visible change.
         // r_particle_skip_postsim                   "true"     // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_physics_particle_op_spawn_scale         "0"        // Prevents physics-based particle spawns.                          [def: "1"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         r_update_particles_on_render_only_frames  "true"     // This does what it says on the tin, should save more performance the lower fps gets   [def: "false"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
@@ -738,9 +738,11 @@ GameInfo
         engine_max_ticks_to_simulate                     "2"      // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"] // restored 2026-10-06 (camera feel, from your 2026-10-04 config)
         cl_batch_entity_list_ops_during_latch            "true"   // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
         cl_simulate_dormant_entities                     "false"  // Based on the name I would imagine it does what it says.          [def: "true"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
+        r_late_particle_job_sync                         "1"      // Lets particle jobs finish later in the frame, overlapping other work. [def: "false"]  // Added 2026-10-06: no visible change.
+        update_voices_low_priority                       "true"   // Voice chat processing runs at low priority. [def: "false"]  // Added 2026-10-06: no visible change.
         // sc_aggregate_bvh_threshold                       "256"    // Not fully sure what these do. Don't change them.                 [def: "128"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // sc_layer_batch_threshold                         "256"    // Not fully sure what these do. Don't change them.                 [default: "128"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
-        // sc_instanced_mesh_motion_vectors                 "0"      // Set 1 if you use motion blur                                     [def: "1"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
+        sc_instanced_mesh_motion_vectors                 "0"      // Motion vectors for instanced meshes; unused without motion blur or temporal AA (you use FXAA)                                     [def: "1"]  // Added 2026-10-06: no visible change.
         // sc_aggregate_indirect_draw_compaction_threshold  "1"      // Need to test                                                   [def: "8"]
         // sc_aggregate_render_mesh_shader                  "true"   // Using mesh shaders if available instead of drawcalls. Should be cheaper [def: "true"]
         // sc_aggregate_render_mesh_shader                  "false"  // Using mesh shaders if available instead of drawcalls.          [def: "true"]
@@ -779,24 +781,24 @@ GameInfo
         // cc_captiontrace                           "0"      // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
 
         // ================================================================================================
-        // 4. VISUAL EFFECTS  (cut 2026-10-06 for fight-time FPS: impact effects, splashes, wind, ropes; the rest default)
+        // 4. VISUAL EFFECTS  (default except foliage wind; nothing that hides things on screen)
         // ================================================================================================
         // violence_ablood                              "0"      // Disables alien/other blood effects.                              [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // violence_agibs                               "0"      // Disables alien/other gibs.                                       [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // violence_hblood                              "0"      // Disables human blood effects.                                    [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // violence_hgibs                               "0"      // Disables human gibs.                                             [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
-        cl_show_splashes                             "0"      // Disables splash effects (water/impact splashes).                 [def: "1"]  // Stage 4 cut 2026-10-06.
+        // cl_show_splashes                             "0"      // Disables splash effects (water/impact splashes).                 [def: "1"]  // Stage 4 cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
         r_world_wind_strength                        "0"      // Disables wind effects, cosmetic only.                            [def: "40"]  // Stage 4 cut 2026-10-06.
-        r_drawropes                                  "false"  // [def: "true"]  // Stage 4 cut 2026-10-06.
+        // r_drawropes                                  "false"  // [def: "true"]  // Stage 4 cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
         // r_character_decal_resolution                 "256"    // Resolution of character decal textures. Engine min 256 (was "4", clamped). [def: "1024"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_render_hair                                "false"  // [def: "true"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_hair_ao                                    "0"      // Disables hair ambient occlusion/shading pass.                    [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_citadel_gpu_preview_denoise_passes         "0"      // [def: "3"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         citadel_bullet_shot_offset_fade_time         "0"  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
-        cl_impacteffects                             "0"      // Bullet impact sparks and dust on walls and floors. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
-        citadel_per_weapon_per_surface_impact_effects "false" // Per-weapon, per-surface impact variations. Server-synced. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
+        // cl_impacteffects                             "0"      // Bullet impact sparks and dust on walls and floors. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
+        // citadel_per_weapon_per_surface_impact_effects "false" // Per-weapon, per-surface impact variations. Server-synced. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
         // mat_max_lighting_complexity                  "0"      // Doesn't seem to do anything but throwing it in for posterity.    [def: "8"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
-        cl_retire_low_priority_lights                "1"      // Low-priority dynamic lights are replaced by high-priority ones (fewer minor lights in fights). [def: "false"] // Stage 3 cut 2026-10-06.
+        // cl_retire_low_priority_lights                "1"      // Low-priority dynamic lights are replaced by high-priority ones (fewer minor lights in fights). [def: "false"] // Stage 3 cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
         // r_pixelvisibility_partial                    "false"  // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
         // r_strip_invisible_during_sceneobject_update  "1"      // idk ngl    [def: "false"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
         // r_enable_rigid_animation                     "false"  // [def: "true"]
