@@ -584,7 +584,7 @@ GameInfo
         citadel_camera_use_vmdl_flatten_vertical       "true"   // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
         // citadel_camera_wobble_disable                  "true"   // Client-side; disables camera wobble when heavy melee'd or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]  // Off since 2026-10-06: back to default; melee felt off with it.
         citadel_camera_soft_collision_angle            "75"     //                                                                  [def: "75"]
-        citadel_camera_use_vmdl_flatten_horizontal  "false"  // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"] // restored 2026-10-06 (camera feel, from your 2026-10-04 config)
+        // citadel_camera_use_vmdl_flatten_horizontal  "false"  // Off since 2026-10-06: false moved the camera fully to each hero's gun-aim pose, so aiming down sights felt too zoomed in. Valve: for each camera pose set, use the average of X (forward) positions; reduces motion sickness. [def: "true"]
         // citadel_camera_listening_offset             "-1"     // To be completely honest I have no idea but I want to test this.  [def: "0"]
         // cam_idealdelta                              "0"
         // cam_ideallag                                "0"

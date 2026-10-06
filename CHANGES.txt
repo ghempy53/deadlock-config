@@ -284,7 +284,7 @@ DEBRIS, EFFECTS AND TROOPERS BACK TO DEFAULT (2026-10-06)
   Bloom and depth of field lines stay: they mirror the in-game menu, which owns them.
 
 CAMERA FEEL RESTORED (2026-10-06)
-  line 587   citadel_camera_use_vmdl_flatten_horizontal  (default true)  ->  "false"
+  line 587   citadel_camera_use_vmdl_flatten_horizontal  (default true)  ->  "false"   -> commented again 2026-10-06 (ADS too zoomed)
   line 616   engine_accurate_input_processing_delta_time (default false) ->  "true"
   line 745   engine_max_ticks_to_simulate                (default -1)    ->  "2"
   line 591   citadel_camera_height_approach_speed        (default 80)    ->  "800"
@@ -386,6 +386,15 @@ STAGE 5: STRONGER FALLBACKS AND LOD, CHEAPER CLOTH (2026-10-06)
   Not enabled: cpu_level / gpu_level. Valve's particle systems carry a minimum CPU and GPU level
   (CParticleSystemDefinition m_nMinCPULevel / m_nMinGPULevel), so lowering them skips effects, which hides things.
   Lines after 703 moved down by 7.
+
+AIM-DOWN-SIGHTS ZOOM FIX (2026-10-06)
+  line 587   citadel_camera_use_vmdl_flatten_horizontal  "false"  ->  (commented -> engine default true)
+  Why: aiming down sights felt far too zoomed in. Valve's description: for each camera pose set, use the average of
+  X positions (X is forward/back). Each hero model defines near, far and gun-aim camera poses. With false the camera
+  moves all the way to the gun-aim pose; with the default true the forward offsets are averaged, so aiming moves the
+  camera forward much less. The other camera-feel lines (input timing, max ticks, camera height speed) stay.
+  If aiming still feels too close: test citadel_camera_use_vmdl_gunaim_pose "false" (skips the gun-aim pose).
+  Line numbers unchanged.
 
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.

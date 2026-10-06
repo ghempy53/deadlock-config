@@ -51,8 +51,9 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 - **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). It can be saved per hero, so check
   Hero-Specific Settings if one hero feels different. The City Never Sleeps camera overrides (`citadel_camera_override_*`,
   FOV 50–150) only apply to the custom spectator camera, not to your own hero.
-- **Camera feel:** group 1e restores three pre-cleanup input/camera lines and sets the camera height approach speed back
-  to the pre-patch 800 (City Never Sleeps lowered it to 80).
+- **Camera feel:** group 1e restores two pre-cleanup input lines and sets the camera height approach speed back to the
+  pre-patch 800 (City Never Sleeps lowered it to 80). `citadel_camera_use_vmdl_flatten_horizontal` stays at its default:
+  false made aiming down sights far too zoomed in.
 - **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Video settings (Settings → Video → Performance, as of 2026-10-05):** Stretch upscaling at 100%, FXAA,
