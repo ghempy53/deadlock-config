@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python3 utils/check.py)",
+      "Bash(python3 utils/check.py:*)",
+      "Bash(python3 utils/convars.py:*)",
+      "Bash(python3 utils/stock_diff.py)",
+      "Bash(python3 utils/stock_diff.py:*)",
+      "Bash(python3 utils/upstream_diff.py)",
+      "Bash(python3 utils/upstream_diff.py:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/utils/check.py\" --hook post",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/utils/check.py\" --hook stop",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

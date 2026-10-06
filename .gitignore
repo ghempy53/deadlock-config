@@ -1,0 +1,3 @@
+# Download cache for utils/*.py (Valve dumps, stock and upstream gameinfo.gi)
+utils/.cache/
+__pycache__/

@@ -22,6 +22,8 @@ Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, whic
 | `docs/CONFIG-COMPARISON.md` | Comparison with twelve other public configs (Sqooky, OptiLock, Kaizuchaneru, Boot, compylock, ...). |
 | `docs/TUNING-CANDIDATES.md` | What is left to test, and what is deliberately not adopted. |
 | `docs/data/convar-matrix.csv` | Every convar any config sets, across all configs, with Valve defaults and flags. |
+| `utils/` | Python checks: validate the file, look up convars in Valve's dump, diff against Valve stock and upstream. See `utils/README.md`. |
+| `docs/CLAUDE.md`, `.claude/` | Claude Code project guidance, skills and hooks. |
 
 All documentation lives in `docs/` ([index](docs/README.md)). Key research findings as of 2026-10-06:
 

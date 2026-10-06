@@ -9,3 +9,4 @@
 | [CONFIG-COMPARISON.md](CONFIG-COMPARISON.md) | Line-by-line comparison with twelve other public configs (Sqooky main/test/max FPS, Eskay, Piggy, Kaizuchaneru x2, Boot, OptiLock x2, compylock, abyzz): value differences, dead lines, guarded-section edits. |
 | [TUNING-CANDIDATES.md](TUNING-CANDIDATES.md) | What is still worth testing on this repo's hardware, one in-game check for the `video.txt` path, and the list of things deliberately not adopted. |
 | [data/convar-matrix.csv](data/convar-matrix.csv) | 765 convars x 14 configs: Valve default, flags, blocked/removed status, and each config's value (`//` prefix = present but commented). |
+| [CLAUDE.md](CLAUDE.md) | Guidance for Claude Code sessions (loaded via `.claude/CLAUDE.md`): rules, settled decisions, workflow. Tooling in [`utils/`](../utils/README.md). |
