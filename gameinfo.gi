@@ -584,18 +584,18 @@ GameInfo
         citadel_camera_use_vmdl_flatten_vertical       "true"   // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
         citadel_camera_wobble_disable                  "true"   // Client-side; disables camera wobble when heavy melee'd or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]
         citadel_camera_soft_collision_angle            "75"     //                                                                  [def: "75"]
-        // citadel_camera_use_vmdl_flatten_horizontal  "false"  // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"] // reset to default 2026-10-05 (input; low/unproven perf impact)
+        citadel_camera_use_vmdl_flatten_horizontal  "false"  // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"] // restored 2026-10-06 (camera feel, from your 2026-10-04 config)
         // citadel_camera_listening_offset             "-1"     // To be completely honest I have no idea but I want to test this.  [def: "0"]
         // cam_idealdelta                              "0"
         // cam_ideallag                                "0"
-        // citadel_camera_height_ceiling_distance      "0"      // (convar gone post-CNS)
+        citadel_camera_height_approach_speed           "800"    // How fast the camera settles height changes (crouch, landing, stairs). CNS cut it to 80; pre-patch 800. [def: "80"]
         // citadel_camera_pitch_default                "0"
         // citadel_camera_see_distance_max             "7000"   // Reverted: default 20000. 7000 may hide entities at long range; FPS gain unproven. [def: "20000"]
         // citadel_shoot_forward_offset                "0"
         // citadel_tightcamera_alternative             "1"
         // r_citadel_clip_sphere_min_opacity           "0"      // Removes the blur from the pinhole camera                         [def: "40"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
 
-        // --- 1f. Field of view (all default; use the in-game Camera FOV slider, or the new camera-override FOV in Settings) ---
+        // --- 1f. Field of view (all default; use the in-game Camera FOV slider. The new camera overrides are for the spectator camera only) ---
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
         // r_aspectratio            "2.15"  // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
         // citadel_camera_hero_fov  "106"   // The field of view angle of the camera when following a hero.     [def: "90"] //
@@ -613,7 +613,7 @@ GameInfo
 
         // --- 1g. Input ---
         steam_inputhandler_enabled                      "false"  // Steam Input (controller support). false = off; fine on keyboard/mouse, breaks controllers. [def: "true"]
-        // engine_accurate_input_processing_delta_time  "true"   // When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) [def: false] // reset to default 2026-10-05 (input; low/unproven perf impact)
+        engine_accurate_input_processing_delta_time  "true"   // When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame) [def: false] // restored 2026-10-06 (camera feel, from your 2026-10-04 config)
         // cl_input_enable_raw_keyboard                 "1"      // Surprisingly this can cause issues with holding keys after upgrading with alt. [def: "0"]
 
         // --- 1h. Textures (Texture quality is High in the in-game menu, which writes r_texture_stream_mip_bias) ---
@@ -735,7 +735,7 @@ GameInfo
         // rtx_dynamic_blas                                 "false"  // Don't think that raytracing is used, but I'm making sure         [def: "true"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // rtx_force_default_hitgroup                       "true"   //                                                                  [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // rtx_texture_resolution                           "64"     //                                                                  [def: "true"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
-        // engine_max_ticks_to_simulate                     "2"      // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"] // reset to default 2026-10-05 (input; low/unproven perf impact)
+        engine_max_ticks_to_simulate                     "2"      // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"] // restored 2026-10-06 (camera feel, from your 2026-10-04 config)
         // cl_batch_entity_list_ops_during_latch            "true"   // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // cl_simulate_dormant_entities                     "false"  // Based on the name I would imagine it does what it says.          [def: "true"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // sc_aggregate_bvh_threshold                       "256"    // Not fully sure what these do. Don't change them.                 [def: "128"] // reset to default 2026-10-05 (engine; low/unproven perf impact)

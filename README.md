@@ -48,8 +48,11 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
   Valve's default spots, kept as small as the convars allow (`citadel_damage_text_dynamic_emphasis "false"`). Don't push
   them off-screen again: the game makes no total for a single hit, so the first hit would disappear. The total is moved
   up-left of the target, closes 3 s after your last hit, shows with no extra delay, and stays 2 s (group 1d).
-- **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). To go past 90, City Never Sleeps
-  added camera overrides in Settings (`citadel_camera_override_fov`, 50–150).
+- **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). It can be saved per hero, so check
+  Hero-Specific Settings if one hero feels different. The City Never Sleeps camera overrides (`citadel_camera_override_*`,
+  FOV 50–150) only apply to the custom spectator camera, not to your own hero.
+- **Camera feel:** group 1e restores three pre-cleanup input/camera lines and sets the camera height approach speed back
+  to the pre-patch 800 (City Never Sleeps lowered it to 80).
 - **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Video settings (Settings → Video → Performance, as of 2026-10-05):** Stretch upscaling at 100%, FXAA,
