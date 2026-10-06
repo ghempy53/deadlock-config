@@ -75,7 +75,7 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - Per-hit damage numbers stay visible (a single hit never makes a total). While the owner tests in-game settings, group 1d
   is at Valve defaults except final lifetime 4 and dynamic emphasis off; the old up-left layout is kept commented.
 - Particle fallbacks are at upstream values. Bone flex, morphing and foot lock are off (fight-time CPU).
-- `steam_inputhandler_enabled "false"`, anisotropic 16x, full-res textures.
+- `steam_inputhandler_enabled "false"`, anisotropic 8x (owner choice 2026-10-06, GPU-bound), full-res textures.
 - The same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
   `-vulkan` launch option. Every active line is renderer-neutral, or renderer-specific and unused by the other
   renderer (a Vulkan-only convar is ignored on DX11, and the reverse). Never add a line, note or README step that
