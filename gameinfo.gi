@@ -582,7 +582,7 @@ GameInfo
 
         // --- 1e. Camera ---
         citadel_camera_use_vmdl_flatten_vertical       "true"   // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
-        citadel_camera_wobble_disable                  "true"   // Client-side; disables camera wobble when heavy melee'd or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]
+        // citadel_camera_wobble_disable                  "true"   // Client-side; disables camera wobble when heavy melee'd or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]  // Off since 2026-10-06: back to default; melee felt off with it.
         citadel_camera_soft_collision_angle            "75"     //                                                                  [def: "75"]
         citadel_camera_use_vmdl_flatten_horizontal  "false"  // From my understanding of how these commands work, they slightly smooth camera inputs. This should make the camera more responsive?   [def: "true"] // restored 2026-10-06 (camera feel, from your 2026-10-04 config)
         // citadel_camera_listening_offset             "-1"     // To be completely honest I have no idea but I want to test this.  [def: "0"]
@@ -593,7 +593,7 @@ GameInfo
         // citadel_camera_see_distance_max             "7000"   // Reverted: default 20000. 7000 may hide entities at long range; FPS gain unproven. [def: "20000"]
         // citadel_shoot_forward_offset                "0"
         // citadel_tightcamera_alternative             "1"
-        // r_citadel_clip_sphere_min_opacity           "0"      // Removes the blur from the pinhole camera                         [def: "40"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
+        r_citadel_clip_sphere_min_opacity           "0"      // Removes the blur from the pinhole camera                         [def: "40"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
 
         // --- 1f. Field of view (all default; use the in-game Camera FOV slider. The new camera overrides are for the spectator camera only) ---
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
@@ -700,7 +700,7 @@ GameInfo
         cl_phys_assume_fixed_tick_interval   "true"  // Assume the client uses a fixed tickrate like the server (which may not always be true)                   [def: "true"]
         // phys_cull_internal_mesh_contacts  "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // cl_fasttempentcollision           "1000"  // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
-        // cloth_sim_on_tick                 "0"     // Update the cloth simulation every tick                           [def: "1"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
+        cloth_sim_on_tick                 "0"     // Update the cloth simulation every tick                           [def: "1"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
 
         // --- 2g. Particles (all default since 2026-10-06; fallbacks and throttles can hide ability cues such as Shiv Killing Blow) ---
         cl_particle_batch_mode                       "1"        // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
@@ -722,7 +722,7 @@ GameInfo
         // r_particle_model_per_thread_count         "64"       // I believe it is how many particle models a thread is allowed to handle.  [def: "32"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_skip_postsim                   "true"     // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_physics_particle_op_spawn_scale         "0"        // Prevents physics-based particle spawns.                          [def: "1"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
-        // r_update_particles_on_render_only_frames  "true"     // This does what it says on the tin, should save more performance the lower fps gets   [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
+        r_update_particles_on_render_only_frames  "true"     // This does what it says on the tin, should save more performance the lower fps gets   [def: "false"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
         // r_particle_mixed_resolution_viewstart     "16"       // I don't know if this does anything but I didn't notice anything terrible out the gate and lowering particle resolution can't hurt [def: "500"]
         // r_particle_timescale                      "1"        // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with. [def: "1"]
 
@@ -736,8 +736,8 @@ GameInfo
         // rtx_force_default_hitgroup                       "true"   //                                                                  [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // rtx_texture_resolution                           "64"     //                                                                  [def: "true"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         engine_max_ticks_to_simulate                     "2"      // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"] // restored 2026-10-06 (camera feel, from your 2026-10-04 config)
-        // cl_batch_entity_list_ops_during_latch            "true"   // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
-        // cl_simulate_dormant_entities                     "false"  // Based on the name I would imagine it does what it says.          [def: "true"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
+        cl_batch_entity_list_ops_during_latch            "true"   // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.        [def: "false"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
+        cl_simulate_dormant_entities                     "false"  // Based on the name I would imagine it does what it says.          [def: "true"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
         // sc_aggregate_bvh_threshold                       "256"    // Not fully sure what these do. Don't change them.                 [def: "128"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // sc_layer_batch_threshold                         "256"    // Not fully sure what these do. Don't change them.                 [default: "128"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // sc_instanced_mesh_motion_vectors                 "0"      // Set 1 if you use motion blur                                     [def: "1"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
@@ -792,7 +792,7 @@ GameInfo
         // r_render_hair                                "false"  // [def: "true"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_hair_ao                                    "0"      // Disables hair ambient occlusion/shading pass.                    [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_citadel_gpu_preview_denoise_passes         "0"      // [def: "3"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
-        // citadel_bullet_shot_offset_fade_time         "0"      // reset to default 2026-10-05 (visual; low/unproven perf impact)
+        citadel_bullet_shot_offset_fade_time         "0"  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
         // mat_max_lighting_complexity                  "0"      // Doesn't seem to do anything but throwing it in for posterity.    [def: "8"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // cl_retire_low_priority_lights                "1"      // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
         // r_pixelvisibility_partial                    "false"  // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
