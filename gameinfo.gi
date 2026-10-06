@@ -685,7 +685,7 @@ GameInfo
         sc_clutter_enable                     "false"  // Disables clutter props, improves visibility & FPS.               [def: "true"]
         // r_size_cull_threshold              "0.9"    // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
         // sc_instanced_mesh_size_cull_bias   "4"      // Culls tiny instanced meshes (small props) sooner by screen size. Upstream 10. [def: "1.5"] // Stage 3 cut 2026-10-06.  // Off since 2026-10-06: hides things on screen, not worth it.
-        sc_instanced_mesh_lod_bias         "3"      // Switches instanced meshes to lower LODs sooner (higher = earlier). [def: "1.25"] // Stage 3 cut 2026-10-06.
+        sc_instanced_mesh_lod_bias         "5"      // Switches instanced meshes to lower LODs sooner (higher = earlier). Meshes stay visible. [def: "1.25"]  // Stage 5 2026-10-06.
         // sc_instanced_mesh_lod_bias_shadow  "0.001"  // Bias for LOD selection of instanced meshes in shadowmaps         [def: "1.75"]
         // sc_allow_dithered_lod              "false"  // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal [def: "true"]
         // sc_allow_dithered_lod              "false"  // This should dither the lod to make it less obtrusive             [def: "true"]
@@ -701,19 +701,26 @@ GameInfo
         // phys_cull_internal_mesh_contacts  "true"  // Don't simulate the bones inside of a mesh.                       [def: "false"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         // cl_fasttempentcollision           "1000"  // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more work. [def: "5"] // reset to default 2026-10-05 (engine; low/unproven perf impact)
         cloth_sim_on_tick                 "0"     // Update the cloth simulation every tick                           [def: "1"]  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
+        presettle_cloth_iterations        "0"     // Cloth settling passes when cloth first spawns. [def: "30"]  // Stage 5 2026-10-06: cheaper cloth (capes, coats); may look slightly stiffer.
+        pred_cloth_pos_max                "0"     // Cloth position prediction cap. [def: "2"]  // Stage 5 2026-10-06: cheaper cloth (capes, coats); may look slightly stiffer.
+        pred_cloth_pos_multiplier         "0"     // [def: "0.5"]  // Stage 5 2026-10-06: cheaper cloth (capes, coats); may look slightly stiffer.
+        pred_cloth_pos_strength           "0"     // [def: "0.25"]  // Stage 5 2026-10-06: cheaper cloth (capes, coats); may look slightly stiffer.
+        pred_cloth_rot_high               "0"     // [def: "0.1"]  // Stage 5 2026-10-06: cheaper cloth (capes, coats); may look slightly stiffer.
+        pred_cloth_rot_low                "0"     // [def: "0.01"]  // Stage 5 2026-10-06: cheaper cloth (capes, coats); may look slightly stiffer.
+        pred_cloth_rot_multiplier         "0"     // [def: "0.3"]  // Stage 5 2026-10-06: cheaper cloth (capes, coats); may look slightly stiffer.
 
-        // --- 2g. Particles (load-based fallbacks on at moderate values since 2026-10-06 stage 4; comment those four out if cues such as Shiv Killing Blow go missing) ---
+        // --- 2g. Particles (load-based fallbacks at upstream values since 2026-10-06 stage 5: cheaper versions under load, nothing removed; comment the four out if cues such as Shiv Killing Blow go missing) ---
         cl_particle_batch_mode                       "1"        // Has a range of 1 or 2, 2 will make celeste's auto rebound look weird and 0 will make them not batch [def: "1"]
         r_particle_allowprerender                    "true"     // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
         r_particle_model_new                         "false"    // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "false"]
         // r_particle_model_new8                     "false"    // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "true"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_newinput                       "true"     // // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_max_size_cull                  "900"      // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value. // reset to default 2026-10-05 (particles; low/unproven perf impact)
-        cl_particle_sim_fallback_base_multiplier     "20"      // How hard to push systems to cheaper fallbacks once sim time passes the threshold. Upstream 100; 20 is moderate for a 9800X3D. [def: "5"]  // Stage 4 cut 2026-10-06.
-        cl_particle_sim_fallback_threshold_ms        "2"        // Particle sim time per frame (ms) before new systems fall back to cheaper versions. 2 ms is ~half a frame at 270 Hz; upstream 1. [def: "6"]  // Stage 4 cut 2026-10-06.
+        cl_particle_sim_fallback_base_multiplier     "100"      // How hard to push systems to cheaper fallbacks once sim time passes the threshold. Upstream value. [def: "5"]  // Stage 5 2026-10-06.
+        cl_particle_sim_fallback_threshold_ms        "1"        // Particle sim time per frame (ms) before new systems fall back to cheaper versions. Upstream value. [def: "6"]  // Stage 5 2026-10-06.
         // cl_particle_sim_fallback_threshold_ms     "0.3"      // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
-        cl_particle_fallback_multiplier              "5"       // Multiplier for falling back to cheaper effects under load. Upstream 10. [def: "0"]  // Stage 4 cut 2026-10-06.
-        cl_particle_fallback_base                    "2"        // Base for falling back to cheaper effects under load. Upstream 5. [def: "0"]  // Stage 4 cut 2026-10-06.
+        cl_particle_fallback_multiplier              "10"       // Multiplier for falling back to cheaper effects under load. Upstream value. [def: "0"]  // Stage 5 2026-10-06.
+        cl_particle_fallback_base                    "5"        // Base for falling back to cheaper effects under load. Upstream value. [def: "0"]  // Stage 5 2026-10-06.
         // r_draw_particle_children_with_parents     "1"        // I believe this handles the drawing of little visual flourish particles. [def: "-1"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_limit_particle_job_duration             "true"     // Seems to help with particle clutter, although I am not sure.             [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
         // r_particle_fixedrandomseeds               "true"     // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance. That being said it does make flames from paige 1 always appear on the left, so your call ig [def: "false"] // reset to default 2026-10-05 (particles; low/unproven perf impact)
@@ -749,7 +756,7 @@ GameInfo
         // r_force_zprepass                                 "0"      // 0: Force z prepass off. 1: Force on. -1: Don't force             [def: "-1"] // With my understanding of how zprepasses work this should reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly optimized. Please play with this. Your mileage may vary. // (convar gone post-CNS)
         // r_low_latency                                    "0"      // This acts as the convar which enables low latency, hardware dependent    [def: "1"]
         // citadel_video_preset                             "9"      // Range is 0-3 (9 was clamped; not new in CNS) and it is an archive setting owned by the in-game video menu. [def: "3"]
-        // cpu_level                                        "1"      // CPU level.                                                               [def: "2"]
+        // cpu_level                                        "1"      // Keep default: particle systems have a minimum CPU/GPU level, so lowering this skips effects (hides things).
         // gpu_mem_level                                    "1"      // GPU Memory level.                                                        [def: "2"]
         // enable_priority_boost                            "true"   //
         // battery_saver                                    "0"      // Disables battery saver mode (no automatic throttling).                   [def: "0"] // (convar gone post-CNS)
@@ -876,7 +883,7 @@ GameInfo
         // citadel_weapon_spread_debug                        true                                                                  // Doesn't seem to do anything.
         // cl_particle_max_count                              "1500"                                                                // Maximum allowed particles. Setting it too low will cause issues. With flooding from the console.  [def: "0"]
         // cl_skip_update_animations                          "true"                                                                // Setting this to  true causes models outside of the game world to a-pose. looks cute.
-        // gpu_level                                          "1"                                                                   // GPU level literally doesn't matter, gets set to 2 in the engine
+        // gpu_level                                          "1"      // Keep default: particle systems have a minimum CPU/GPU level, so lowering this skips effects (hides things).
         // instant_replay                                     "true"                                                                // enables/disables the replay system. If set to false players will be in the idle animation in replays [def: "true"]
         // panorama_disable_descendant_filtering              "true"                                                                // Causes issues with the hud
         // panorama_disable_draw_fancy_quad                   "true"                                                                // Causes issues with the hud
