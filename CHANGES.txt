@@ -108,7 +108,7 @@ POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 49 settings
   Hardware (Ryzen 7 9800X3D, 8 cores):
   line 768   snd_steamaudio_num_threads                   "6"  ->  "2" (code default; was briefly "4", whose "stock" label was wrong)
   FPS limits removed (stock-tail values, changed on request):
-  line 1013  fps_max                                      "400"  ->  "0" (no limit; in-game Max FPS setting can still override)   -> "400" again 2026-10-06
+  line 1013  fps_max                                      "400"  ->  "0" (no limit; in-game Max FPS setting can still override)
   line 1014  fps_max_ui                                   "120"  ->  "0" (no limit while UI is shown)
   Vulkan removed (DX11 user; all inert unless launched with -vulkan, changed on request) - SUPERSEDED for the six
   RenderSystem keys by the engine-section reset below (they are back, identical to Valve stock):
@@ -304,10 +304,9 @@ CAMERA WOBBLE DEFAULT, AIM/FRAME FEEL RESTORED (2026-10-06)
   line 739   cl_batch_entity_list_ops_during_latch      (default false) ->  "true"
   line 740   cl_simulate_dormant_entities               (default true)  ->  "false"
   line 795   citadel_bullet_shot_offset_fade_time       (default 0.5)   ->  "0"
-  line 1013  fps_max                                    "0"  ->  "400" (stock; the in-game Max FPS setting overrides it)
   Why: camera and melee still felt off after the camera-feel restore. Camera wobble is back to default. The six other
-  lines return to their 2026-10-04 values (reset on 2026-10-05 as low or unproven perf impact). FPS cap back to 400.
-  fps_max_ui stays 0 (UI only). Line numbers unchanged.
+  lines return to their 2026-10-04 values (reset on 2026-10-05 as low or unproven perf impact). The FPS cap stays
+  removed (fps_max and fps_max_ui 0). Line numbers unchanged.
 
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.

@@ -18,8 +18,8 @@ over the same in-game scenario. Sandbox works well for this.
 
 - Use a current Game Ready driver. Do a clean install if you're coming from an old driver.
 - **Sync:** G-SYNC and V-Sync off (deliberate choice), Reflex On in game.
-- **FPS cap:** 400 (`fps_max 400`; `fps_max_ui 0` leaves menus uncapped). The in-game Max FPS setting overrides the file,
-  so set it to 400 there too.
+- **FPS cap:** this config uncaps fps (`fps_max 0`, `fps_max_ui 0`); the in-game Max FPS setting (1,000) overrides it.
+  Add a cap there only if frametimes are uneven.
 - **Shader Cache Size:** 10 GB or Unlimited. Big updates such as City Never Sleeps invalidate shaders, so expect
   stutter for the first few matches after a patch while the cache rebuilds.
 - Leave Low Latency Mode in the Control Panel at its default. Reflex in game supersedes it.
