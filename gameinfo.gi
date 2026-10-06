@@ -585,7 +585,6 @@ GameInfo
         // citadel_camera_wobble_disable                  "true"   // Client-side; disables camera wobble when heavy melee'd or near walker/guardian damage. Kept alongside the in-game "Reduce camera shake" setting. [def: "false"]  // Off since 2026-10-06: back to default; melee felt off with it.
         citadel_camera_soft_collision_angle            "75"     //                                                                  [def: "75"]
         // citadel_camera_use_vmdl_flatten_horizontal  "false"  // Off since 2026-10-06: false moved the camera fully to each hero's gun-aim pose, so aiming down sights felt too zoomed in. Valve: for each camera pose set, use the average of X (forward) positions; reduces motion sickness. [def: "true"]
-        citadel_camera_use_vmdl_gunaim_pose            "false"  // Skip each hero's model-defined gun-aim camera pose: aiming no longer moves the camera to a closer, offset spot; the weapon zoom still applies. Added 2026-10-06 for ADS. [def: "true"]
         // citadel_camera_listening_offset             "-1"     // To be completely honest I have no idea but I want to test this.  [def: "0"]
         // cam_idealdelta                              "0"
         // cam_ideallag                                "0"
