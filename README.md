@@ -62,10 +62,10 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 
 ## In-game settings this config assumes
 
-- **Damage numbers:** on, with cumulative damage set to *Real-time* or *Final total only*. Per-hit numbers show at
-  Valve's default spots, kept as small as the convars allow (`citadel_damage_text_dynamic_emphasis "false"`). Don't push
-  them off-screen again: the game makes no total for a single hit, so the first hit would disappear. The total is moved
-  up-left of the target, closes 3 s after your last hit, shows with no extra delay, and stays 2 s (group 1d).
+- **Damage numbers:** every damage-number line in group 1d is commented out for now, so Valve's defaults apply while
+  the in-game damage number settings are being tested. Use any in-game mode. The previous layout (total up-left of the
+  target, 3 s batch window, no extra delay, 2 s on screen, no big-hit emphasis) comes back by uncommenting those lines.
+  Don't push per-hit numbers off-screen: the game makes no total for a single hit, so the first hit would disappear.
 - **Camera FOV:** use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). It can be saved per hero, so check
   Hero-Specific Settings if one hero feels different. The City Never Sleeps camera overrides (`citadel_camera_override_*`,
   FOV 50–150) only apply to the custom spectator camera, not to your own hero.

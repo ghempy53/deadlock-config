@@ -72,7 +72,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - Map lighting stays on: dynamic/stationary lights, shadow casting, sun, baked shadows, lightmaps.
 - `citadel_camera_use_vmdl_flatten_horizontal` stays default (false made aiming down sights far too zoomed in).
   The gun-aim pose override was tried and reverted.
-- Per-hit damage numbers stay visible (a single hit never makes a total). The cumulative total is offset up-left.
+- Per-hit damage numbers stay visible (a single hit never makes a total). All group 1d damage-number lines are
+  commented out (Valve defaults) while the owner tests in-game settings; the old up-left layout is kept commented.
 - Particle fallbacks are at upstream values. Bone flex, morphing and foot lock are off (fight-time CPU).
 - `steam_inputhandler_enabled "false"`, anisotropic 16x, full-res textures.
 - The same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the

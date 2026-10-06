@@ -474,6 +474,18 @@ RENDERER SWITCH NEEDS NO EDITS (2026-10-06)
   docs/WINDOWS11.md treat DX11 and Vulkan as equally supported, keeping the player-reported Vulkan caveats.
   Line numbers unchanged.
 
+DAMAGE NUMBERS TO DEFAULT FOR TESTING (2026-10-06)
+  line 583   citadel_damage_text_batching_window_cumulative "3"         ->  (commented -> engine default 1.5)
+  line 584   citadel_damage_text_cumulative_final_delay     "0"         ->  (commented -> engine default 0.75)
+  line 585   citadel_damage_text_cumulative_final_lifetime  "2"         ->  (commented -> engine default 3)
+  line 590   citadel_damage_text_cumulative_offset          "-50 -35 0" ->  (commented -> engine default 10 25 0)
+  line 592   citadel_damage_text_dynamic_emphasis           "false"     ->  (commented -> engine default true)
+  Why: the owner is trying new in-game damage number settings and wants none of this file in the way. Every active
+  damage-number line goes back to Valve default; the health bar lines in group 1c were already default. Visible
+  change: the cumulative total returns to its default spot right of the target, with default timing, and big hits
+  scale up 150% again. Per-hit numbers stay visible. Undo: uncomment these five lines. Untested in game.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
