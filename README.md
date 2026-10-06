@@ -9,8 +9,8 @@ and was verified against the **City Never Sleeps** major update (2026-09-29).
 shadow casting, glows, viewmodel and tracers. The CPU/GPU savings that don't hurt
 readability are kept.
 
-**Target setup:** Ryzen 7 9800X3D (SMT off), RTX 5070, 2560x1440 @ 270 Hz, Windows 11. DirectX 11 is the default and
-recommended renderer; the config also runs unchanged on Vulkan (see [DX11 and Vulkan](#dx11-and-vulkan)).
+**Target setup:** Ryzen 7 9800X3D (SMT off), RTX 5070, 2560x1440 @ 270 Hz, Windows 11, DirectX 11 or Vulkan.
+The same file works on both renderers with no edits (see [DX11 and Vulkan](#dx11-and-vulkan)).
 Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, which the SearchPaths already mount).
 
 | File | What it is |
@@ -116,23 +116,19 @@ Most flags in upstream's `launch_options.txt` are a raw dump of engine/dev optio
 
 ## DX11 and Vulkan
 
-The config works on both renderers without changes. Every active convar is renderer-neutral, and the `RenderSystem`
-section is Valve stock: its six `Vulkan*` keys are only read under Vulkan and must stay stock (matchmaking check).
-Group 2i in `gameinfo.gi` lists the renderer-specific convars. Valve's defaults are already the fast path for all of
-them, so none is active.
+The same `gameinfo.gi` works on DX11 and Vulkan. You never edit it to switch: the renderer is chosen only by the
+launch option. Every active convar is renderer-neutral, and the `RenderSystem` section is Valve stock: its six
+`Vulkan*` keys are only read under Vulkan and must stay stock (matchmaking check). Group 2i in `gameinfo.gi`
+documents the renderer-specific convars. Valve's defaults are already the fast path for all of them, so none is set.
 
-**DX11 stays the default.** Players report two Vulkan problems on Deadlock's forums: a 60 FPS cap with Reflex off, and
-severe hitching with Reflex on. DX11 has neither. Switch to Vulkan only to test, for example if DX11 crashes or stalls.
+To switch renderer, add `-vulkan` to the launch options, or remove it to go back to DX11 (the Windows default).
 
-To test Vulkan:
-1. Add `-vulkan` to the launch options. Remove it to go back to DX11.
-2. Expect shader-compile stutter for the first matches. Since City Never Sleeps, Valve's stock file no longer lists the
-   Steam Vulkan shader-cache keys, and they cannot be added back (guarded section). Keep the NVIDIA shader cache at
-   10 GB or Unlimited.
-3. Check that Reflex is still On in the video settings, and that the FPS counter is not stuck at 60.
-4. Compare 1% lows on the same Sandbox route as on DX11. Keep Vulkan only if it is clearly better.
-5. Optional, Vulkan only: in a match, type `r_vulkan_accurate_renderarea 0` in the console and compare frame times. It
-   works live. If it helps and nothing on screen flickers or goes black, uncomment that line in group 2i.
+Things to know about Vulkan in Deadlock (none of them involve the config):
+- Players report two Vulkan problems on Deadlock's forums: a 60 FPS cap with Reflex off, and severe hitching with
+  Reflex on. DX11 has neither, so compare 1% lows on the same Sandbox route before settling on Vulkan.
+- Expect shader-compile stutter for the first matches. Since City Never Sleeps, Valve's stock file no longer lists the
+  Steam Vulkan shader-cache keys. Keep the NVIDIA shader cache at 10 GB or Unlimited.
+- Check that Reflex is still On in the video settings and that the FPS counter is not stuck at 60.
 
 For the NVIDIA driver setting that only affects Vulkan, see [`docs/WINDOWS11.md`](docs/WINDOWS11.md).
 

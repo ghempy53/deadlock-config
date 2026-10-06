@@ -1,11 +1,11 @@
 # deadlock-config: guidance for Claude
 
-A personal Deadlock `gameinfo.gi` (Windows 11, DX11 by default, Vulkan supported), based on Sqooky's OptimizationLock 3.4. This file is loaded into
+A personal Deadlock `gameinfo.gi` (Windows 11, DX11 or Vulkan with no edits), based on Sqooky's OptimizationLock 3.4. This file is loaded into
 every Claude Code session through `.claude/CLAUDE.md`. The README covers the user-facing side; this file has the rules.
 
 ## Owner, hardware, goal
 
-- Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB, 2560x1440 @ 270 Hz, DX11 (Vulkan via `-vulkan` for testing),
+- Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB, 2560x1440 @ 270 Hz, DX11 or Vulkan (`-vulkan`),
   Reflex On, uncapped FPS.
 - **Goal: balanced clarity + FPS.** Readability comes first. Performance cuts are kept only when they don't hide
   anything on screen. The FPS problem being worked on is lows in big fights, which are CPU-bound.
@@ -75,8 +75,11 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - Per-hit damage numbers stay visible (a single hit never makes a total). The cumulative total is offset up-left.
 - Particle fallbacks are at upstream values. Bone flex, morphing and foot lock are off (fight-time CPU).
 - `steam_inputhandler_enabled "false"`, anisotropic 16x, full-res textures.
-- The config stays renderer-neutral: every active line must work on both DX11 and Vulkan. Renderer-specific convars
-  live in group 2i and stay at Valve's default unless a console A/B test on that renderer shows a gain.
+- The same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
+  `-vulkan` launch option. Every active line is renderer-neutral, or renderer-specific and unused by the other
+  renderer (a Vulkan-only convar is ignored on DX11, and the reverse). Never add a line, note or README step that
+  asks the owner to comment, uncomment or change anything when switching renderer. Renderer-specific convars live
+  in group 2i and stay at Valve's default unless a console A/B test on that renderer shows a gain.
 
 ## Workflow for every change
 

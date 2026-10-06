@@ -892,14 +892,14 @@ GameInfo
         // -2 removes it from boot.vcfg
 
         // --- 2i. Renderer: DX11 and Vulkan ---
-        // Every active line in this file is renderer-neutral, so the config runs unchanged on DX11 (the Windows default)
-        // and with the -vulkan launch option. The Vulkan keys in RenderSystem are Valve stock (a guarded section) and are
+        // No edits are needed to switch renderer: every active line works on DX11 (the Windows default) and with the
+        // -vulkan launch option. The Vulkan keys in RenderSystem are Valve stock (a guarded section) and are
         // only read under Vulkan. The renderer-specific convars stay at default because Valve defaults are already the
         // fast path: vulkan_unpause_workers_after_each_texture_deallocation false, r_dx11_software_cmd_lists and
         // r_vulkan_sw_cmd_lists true (group 8: 0 causes a lot of issues), r_vma_defrag_* Vulkan memory defrag on.
-        // Vulkan only. False uses the whole render target as each render pass area; Valve says true results in more
-        // render passes. Release flag, so it can be A/B tested live from the console. Untested risk: wrong clears where
-        // several viewports share one target. Uncomment only if the console test shows a gain and no artifacts.
+        // Reference only, never needs editing. Vulkan only: false uses the whole render target as each render pass
+        // area (Valve: true results in more render passes). Untested; possible wrong clears where viewports share a
+        // target. DX11 does not use it, so if it is ever made active, both renderers keep working without edits.
         // r_vulkan_accurate_renderarea                     "false"    // [def: true]
 
         // ================================================================================================

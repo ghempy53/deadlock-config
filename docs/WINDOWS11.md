@@ -1,7 +1,7 @@
 # Windows 11 tuning for Deadlock
 
 This is general OS and driver guidance for the target setup: **Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB,
-32 GB DDR5-6000 EXPO, 2560x1440 @ 270 Hz, DX11 (Vulkan supported for testing)**.
+32 GB DDR5-6000 EXPO, 2560x1440 @ 270 Hz, DX11 or Vulkan (same config, no edits to switch)**.
 It does not depend on any Deadlock patch. The game-side settings are in `gameinfo.gi` and the README.
 Change one thing at a time, and compare frametimes before and after (for example with CapFrameX or PresentMon)
 over the same in-game scenario. Sandbox works well for this.
