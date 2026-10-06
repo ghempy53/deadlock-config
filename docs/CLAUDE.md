@@ -100,6 +100,10 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 4. Update `README.md` if an assumed in-game setting or user-visible behavior changed.
 5. Keep each PR to one theme. Branch names look like `claude/<short-topic>`. Commit subjects are plain English
    describing the effect (for example "Camera wobble to default; restore aim/frame feel lines").
+6. **Open a pull request into `main` after every change**, without being asked. The owner tracks version history
+   through pull requests, so each change must land as its own PR. If the branch's previous PR is already merged,
+   restart the branch from the latest `main` first. To see past versions or earlier reasoning, read the merged pull
+   requests (title, body, diff) rather than guessing from `git log`.
 
 ## External sources
 
