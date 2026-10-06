@@ -768,15 +768,16 @@ GameInfo
         // cl_fasttempentcollision                          "1000"     // [def: 5]
         // Update the cloth simulation every tick. Restored from the 2026-10-04 config.
         cloth_sim_on_tick                                "0"        // [def: true]
-        // Cloth settling passes when cloth first spawns. cheaper cloth (capes, coats); may look slightly stiffer.
-        presettle_cloth_iterations                       "0"        // [def: 30]
+        // Cloth settling passes when cloth first spawns. Cheaper cloth (capes, coats); may look slightly stiffer.
+        // Off with the six pred_cloth lines below while bisecting a crash (crash-bisect step 2 in docs/CHANGES.txt).
+        // presettle_cloth_iterations                       "0"        // [def: 30]
         // Cloth position prediction cap. cheaper cloth (capes, coats); may look slightly stiffer.
-        pred_cloth_pos_max                               "0"        // [def: 2]
-        pred_cloth_pos_multiplier                        "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.5]
-        pred_cloth_pos_strength                          "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.25]
-        pred_cloth_rot_high                              "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.1]
-        pred_cloth_rot_low                               "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.01]
-        pred_cloth_rot_multiplier                        "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.3]
+        // pred_cloth_pos_max                               "0"        // [def: 2]
+        // pred_cloth_pos_multiplier                        "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.5]
+        // pred_cloth_pos_strength                          "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.25]
+        // pred_cloth_rot_high                              "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.1]
+        // pred_cloth_rot_low                               "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.01]
+        // pred_cloth_rot_multiplier                        "0"        // Cheaper cloth (capes, coats); may look slightly stiffer. [def: 0.3]
 
         // --- 2g. Particles (load-based fallbacks at upstream values since 2026-10-06 stage 5: cheaper versions under load,
         //   nothing removed; comment the four out if cues such as Shiv Killing Blow go missing) ---
@@ -812,8 +813,9 @@ GameInfo
         // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values
         // could negatively impact performance.
         // r_particle_min_timestep                          "0.00241"  // [def: 0]
-        // I believe it is how many particle models a thread is allowed to handle. No visible change.
-        r_particle_model_per_thread_count                "64"       // [def: 32]
+        // I believe it is how many particle models a thread is allowed to handle. No visible change. Off while
+        // bisecting a crash (crash-bisect step 1 in docs/CHANGES.txt).
+        // r_particle_model_per_thread_count                "64"       // [def: 32]
         // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a
         // testvar.
         // r_particle_skip_postsim                          "true"     // [def: false]
@@ -852,8 +854,9 @@ GameInfo
         cl_batch_entity_list_ops_during_latch            "true"     // [def: false]
         // Based on the name I would imagine it does what it says. Restored from the 2026-10-04 config.
         cl_simulate_dormant_entities                     "false"    // [def: true]
-        // Lets particle jobs finish later in the frame, overlapping other work. No visible change.
-        r_late_particle_job_sync                         "1"        // [def: false]
+        // Lets particle jobs finish later in the frame, overlapping other work. No visible change. Off while bisecting a
+        // crash (crash-bisect step 1 in docs/CHANGES.txt).
+        // r_late_particle_job_sync                         "1"        // [def: false]
         update_voices_low_priority                       "true"     // Voice chat processing runs at low priority. No visible change. [def: false]
         // sc_aggregate_bvh_threshold                       "256"      // Not fully sure what these do. Don't change them. [def: 128]
         // sc_layer_batch_threshold                         "256"      // Not fully sure what these do. Don't change them. [def: 128]
@@ -887,6 +890,17 @@ GameInfo
 
         // -1 Default
         // -2 removes it from boot.vcfg
+
+        // --- 2i. Renderer: DX11 and Vulkan ---
+        // No edits are needed to switch renderer: every active line works on DX11 (the Windows default) and with the
+        // -vulkan launch option. The Vulkan keys in RenderSystem are Valve stock (a guarded section) and are
+        // only read under Vulkan. The renderer-specific convars stay at default because Valve defaults are already the
+        // fast path: vulkan_unpause_workers_after_each_texture_deallocation false, r_dx11_software_cmd_lists and
+        // r_vulkan_sw_cmd_lists true (group 8: 0 causes a lot of issues), r_vma_defrag_* Vulkan memory defrag on.
+        // Reference only, never needs editing. Vulkan only: false uses the whole render target as each render pass
+        // area (Valve: true results in more render passes). Untested; possible wrong clears where viewports share a
+        // target. DX11 does not use it, so if it is ever made active, both renderers keep working without edits.
+        // r_vulkan_accurate_renderarea                     "false"    // [def: true]
 
         // ================================================================================================
         // 3. AUDIO  (defaults; snd_steamaudio_num_threads is the code default of 2)

@@ -9,7 +9,8 @@ and was verified against the **City Never Sleeps** major update (2026-09-29).
 shadow casting, glows, viewmodel and tracers. The CPU/GPU savings that don't hurt
 readability are kept.
 
-**Target setup:** Ryzen 7 9800X3D (SMT off), RTX 5070, 2560x1440 @ 270 Hz, DirectX 11, Windows 11.
+**Target setup:** Ryzen 7 9800X3D (SMT off), RTX 5070, 2560x1440 @ 270 Hz, Windows 11, DirectX 11 or Vulkan.
+The same file works on both renderers with no edits (see [DX11 and Vulkan](#dx11-and-vulkan)).
 Works with and without the 19 hero-skin mods (loaded from `citadel/addons`, which the SearchPaths already mount).
 
 | File | What it is |
@@ -74,7 +75,7 @@ To undo, restore the backup, or use Steam → Deadlock → Properties → Instal
 - **Reduce camera shake:** On (Settings). It replaces the old `citadel_melee_shake_*` lines, which were server-side.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Video settings (Settings → Video → Performance, as of 2026-10-05):** Stretch upscaling at 100%, FXAA,
-  SSAO Off, Shadow Low, Fog Low, Texture High, bloom/area lights/depth of field Off, VSync Off, max FPS 1,000, DX11.
+  SSAO Off, Shadow Low, Fog Low, Texture High, bloom/area lights/depth of field Off, VSync Off, max FPS 1,000.
   The menu owns these, so the config's matching lines (`r_texture_stream_mip_bias "0"`, `r_citadel_shadow_quality "0"`,
   `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
   Texture filtering is not in the menu; the config sets anisotropic 16x (`r_texturefilteringquality "5"`).
@@ -112,8 +113,24 @@ Commenting that line out makes `citadel/cfg/video.txt` usable, but it also force
 
 Keep them minimal. `-dx11` is unnecessary because it is the Windows default. `-novid` (skip the intro video) is harmless.
 Most flags in upstream's `launch_options.txt` are a raw dump of engine/dev options and are not recommendations.
-The `RenderSystem` section is Valve stock (including its six `Vulkan*` keys, which are inert on DX11). The Vulkan-only
-convar `r_vma_defrag_algorithm` was removed. Don't launch with `-vulkan` without testing.
+
+## DX11 and Vulkan
+
+The same `gameinfo.gi` works on DX11 and Vulkan. You never edit it to switch: the renderer is chosen only by the
+launch option. Every active convar is renderer-neutral, and the `RenderSystem` section is Valve stock: its six
+`Vulkan*` keys are only read under Vulkan and must stay stock (matchmaking check). Group 2i in `gameinfo.gi`
+documents the renderer-specific convars. Valve's defaults are already the fast path for all of them, so none is set.
+
+To switch renderer, add `-vulkan` to the launch options, or remove it to go back to DX11 (the Windows default).
+
+Things to know about Vulkan in Deadlock (none of them involve the config):
+- Players report two Vulkan problems on Deadlock's forums: a 60 FPS cap with Reflex off, and severe hitching with
+  Reflex on. DX11 has neither, so compare 1% lows on the same Sandbox route before settling on Vulkan.
+- Expect shader-compile stutter for the first matches. Since City Never Sleeps, Valve's stock file no longer lists the
+  Steam Vulkan shader-cache keys. Keep the NVIDIA shader cache at 10 GB or Unlimited.
+- Check that Reflex is still On in the video settings and that the FPS counter is not stuck at 60.
+
+For the NVIDIA driver setting that only affects Vulkan, see [`docs/WINDOWS11.md`](docs/WINDOWS11.md).
 
 ## After every Deadlock update
 
