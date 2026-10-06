@@ -779,7 +779,7 @@ GameInfo
         // cc_captiontrace                           "0"      // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: "1"]
 
         // ================================================================================================
-        // 4. VISUAL EFFECTS  (all default since 2026-10-05: negligible cost on this hardware; uncomment a line to cut it)
+        // 4. VISUAL EFFECTS  (default except bullet impact effects, cut 2026-10-06 for fight-time CPU; uncomment a line to cut more)
         // ================================================================================================
         // violence_ablood                              "0"      // Disables alien/other blood effects.                              [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // violence_agibs                               "0"      // Disables alien/other gibs.                                       [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
@@ -793,6 +793,8 @@ GameInfo
         // r_hair_ao                                    "0"      // Disables hair ambient occlusion/shading pass.                    [def: "1"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // r_citadel_gpu_preview_denoise_passes         "0"      // [def: "3"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         citadel_bullet_shot_offset_fade_time         "0"  // restored 2026-10-06 (camera/aim feel, from your 2026-10-04 config)
+        cl_impacteffects                             "0"      // Bullet impact sparks and dust on walls and floors. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
+        citadel_per_weapon_per_surface_impact_effects "false" // Per-weapon, per-surface impact variations. Server-synced. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
         // mat_max_lighting_complexity                  "0"      // Doesn't seem to do anything but throwing it in for posterity.    [def: "8"] // reset to default 2026-10-05 (visual; low/unproven perf impact)
         // cl_retire_low_priority_lights                "1"      // Replaces/drops low-priority dynamic lights when higher-priority lights are present (helps cap dlight clutter/cost). [def: "0"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
         // r_pixelvisibility_partial                    "false"  // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"] // reset to default 2026-10-05 (visibility; low/unproven perf impact)
@@ -800,10 +802,10 @@ GameInfo
         // r_enable_rigid_animation                     "false"  // [def: "true"]
 
         // ================================================================================================
-        // 5. ANIMATION / IK  (all default; upstream disables these, kept at default here for melee and animation fidelity)
+        // 5. ANIMATION / IK  (default except bone flex, morphing and foot lock, cut 2026-10-06 for fight-time CPU; IK stays default for melee)
         // ================================================================================================
-        // enable_boneflex                          "0"      // Disables bone flexes (procedural facial/mesh flex drivers).      [def: "1"]
-        // enable_boneflex                          "false"
+        enable_boneflex                          "false"  // Bone flex drivers (faces, cloth bulges). Archive var: a saved user value could override it. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
+        r_morphing_enabled                       "false"  // Morph targets (facial animation). Cheat flag; applies from this file. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
         // ik_fabrik_align_chain                    "1"      // Disables FABRIK chain alignment in IK (cheaper).                 [def: "1"]
         // ik_final_fixup_enable                    "0"      // Disables final IK fixup pass (cheaper animations, potentially less accurate). [def: "1"]
         // ik_final_fixup_enable                    "false"
@@ -815,7 +817,7 @@ GameInfo
         // ik_fabrik_forwards_enabled               "false"
         // ik_planetilt_enable                      "false"
         // animgraph_footlock_calculate_tilt        "false"
-        // animgraph_footlock_enabled               "false"
+        animgraph_footlock_enabled               "false"  // Foot locking; feet may slide slightly. Server-synced, so the server value may apply online. [def: "true"] // Stage 2 fight-CPU cut 2026-10-06.
         // animgraph_footlock_ground_roll           "false"
         // animgraph_footlock_hip_offset_enable     "false"
         // animgraph_footlock_trace_ground_enabled  "false"
