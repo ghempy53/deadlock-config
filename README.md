@@ -5,7 +5,7 @@ A personal `gameinfo.gi` for Deadlock on Windows 11. It is based on
 (checked against `main @ e2e9925`, 2026-10-05: no new convars upstream)
 and was verified against the **City Never Sleeps** major update (2026-09-29).
 
-**Goal: performance first.** Cosmetics are cut, including dynamic and stationary lights, light shadows, hair,
+**Goal: performance first.** Cosmetics are cut, including stationary lights, light shadows, hair,
 splashes and UI blur. Gameplay information stays: health bars, ability effects, troopers, props, ziplines, impact
 effects and ragdolls. Sun, baked lighting, glows, viewmodel and tracers stay on.
 
