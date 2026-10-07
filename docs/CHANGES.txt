@@ -611,6 +611,19 @@ CAMERA, SPECTATOR AND VIEWMODEL BACK TO DEFAULT (2026-10-07)
   sparseshadowtree_disable_for_viewmodel); the spectator overrides were already commented. Untested in game.
   Line numbers unchanged.
 
+IK BACK TO DEFAULT: CAMERA STILL FELT WRONG (2026-10-07)
+  line 975   ik_final_fixup_enable                         "false"  ->  (commented -> engine default true)
+  line 976   ik_constraints_enabled                        "false"  ->  (commented -> engine default true)
+  line 980   ik_fabrik_backwards_enabled                   "false"  ->  (commented -> engine default true)
+  line 981   ik_fabrik_forwards_enabled                    "false"  ->  (commented -> engine default true)
+  line 982   ik_planetilt_enable                           "false"  ->  (commented -> engine default true)
+  Why: with every camera, spectator and viewmodel line already at default, the camera still felt off. The IK lines
+  arrived in the same install (performance round 2) and change the hero pose the third-person camera and gun aim
+  sit on, so they are the next suspect. Boneflex, morphing and foot lock stay off: they predate the complaint.
+  Untested in game: if the camera is still off, the next suspects are the frame-pacing lines r_limit_particle_job_duration
+  and cl_batch_entity_list_ops_during_latch.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.

@@ -969,17 +969,17 @@ GameInfo
         // Morph targets (facial animation). Cheat flag; applies from this file. Stage 2 fight-CPU cut 2026-10-06.
         r_morphing_enabled                               "false"    // [def: true]
         // ik_fabrik_align_chain                            "1"        // Disables FABRIK chain alignment in IK (cheaper) [def: true]
-        // IK lines below: cosmetic hand/foot placement, fight-time CPU per hero. Replicated: online, the server value
-        // may win. Hitboxes are server-side and unaffected.
+        // IK lines below are off (engine defaults): disabling them changed the hero pose the camera and aim follow, and
+        // the camera felt wrong.
         // Disables final IK fixup pass (cheaper animations, potentially less accurate)
-        ik_final_fixup_enable                            "false"    // [def: true]
-        ik_constraints_enabled                           "false"    // [def: true]
+        // ik_final_fixup_enable                            "false"    // [def: true]
+        // ik_constraints_enabled                           "false"    // [def: true]
         // ik_debug_dogleg3bone_enabled                     "false"    // [def: true]
         // ik_debug_fabrik_backwards_enabled                "false"    // [def: true]
         // ik_debug_fabrik_forwards_enabled                 "false"    // [def: true]
-        ik_fabrik_backwards_enabled                      "false"    // [def: true]
-        ik_fabrik_forwards_enabled                       "false"    // [def: true]
-        ik_planetilt_enable                              "false"    // [def: true]
+        // ik_fabrik_backwards_enabled                      "false"    // [def: true]
+        // ik_fabrik_forwards_enabled                       "false"    // [def: true]
+        // ik_planetilt_enable                              "false"    // [def: true]
         // animgraph_footlock_calculate_tilt                "false"    // [def: true]
         // Foot locking; feet may slide slightly. Server-synced, so the server value may apply online. Stage 2 fight-CPU
         // cut 2026-10-06.
