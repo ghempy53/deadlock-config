@@ -916,8 +916,8 @@ GameInfo
         // snd_mixahead                                     "0.05"     // Adds some latency that shouldn't be percivable to save cpu. [def: 0.001]
         // snd_steamaudio_max_occlusion_samples             "32"       // Max number of samples for audio reverb. [def: 64]
         // The number of directions considered for ray bounce by the game's audio.
-        // snd_steamaudio_num_diffuse_samples               "512"      // [def: 2048]
-        // snd_steamaudio_reverb_order_rendering            "0"        // The amount of directional detail in the rendered audio by Steam Audio. [def: 1]
+        snd_steamaudio_num_diffuse_samples               "512"      // Reverb only; occlusion untouched. [def: 2048]
+        snd_steamaudio_reverb_order_rendering            "0"        // Mono reverb tail. [def: 1]
         // Whether the engine uses vmix to master the audio, might be a dev command.
         // audio_enable_vmix_mastering                      "false"    // [def: true]
         // audio_enable_spawn_mask_mix_layer                "false"    // Disabling these should help with performance, Yay! [def: true]
@@ -929,10 +929,10 @@ GameInfo
         // ================================================================================================
         // 4. VISUAL EFFECTS  (default except foliage wind; nothing that hides things on screen)
         // ================================================================================================
-        // violence_ablood                                  "0"        // Disables alien/other blood effects. [def: true]
-        // violence_agibs                                   "0"        // Disables alien/other gibs. [def: true]
-        // violence_hblood                                  "0"        // Disables human blood effects. [def: true]
-        // violence_hgibs                                   "0"        // Disables human gibs. [def: true]
+        violence_ablood                                  "0"        // Disables alien/other blood effects. Archive. [def: true]
+        violence_agibs                                   "0"        // Disables alien/other gibs. Archive. [def: true]
+        violence_hblood                                  "0"        // Disables human blood effects. Archive. [def: true]
+        violence_hgibs                                   "0"        // Disables human gibs. Archive. [def: true]
         // Disables water and impact splash effects. Cosmetic.
         cl_show_splashes                                 "0"        // [def: true]
         r_world_wind_strength                            "0"        // Disables wind effects, cosmetic only. [def: 40]
@@ -969,16 +969,17 @@ GameInfo
         // Morph targets (facial animation). Cheat flag; applies from this file. Stage 2 fight-CPU cut 2026-10-06.
         r_morphing_enabled                               "false"    // [def: true]
         // ik_fabrik_align_chain                            "1"        // Disables FABRIK chain alignment in IK (cheaper) [def: true]
+        // IK lines below: cosmetic hand/foot placement, fight-time CPU per hero. Replicated: online, the server value
+        // may win. Hitboxes are server-side and unaffected.
         // Disables final IK fixup pass (cheaper animations, potentially less accurate)
-        // ik_final_fixup_enable                            "0"        // [def: true]
-        // ik_final_fixup_enable                            "false"    // [def: true]
-        // ik_constraints_enabled                           "false"    // [def: true]
+        ik_final_fixup_enable                            "false"    // [def: true]
+        ik_constraints_enabled                           "false"    // [def: true]
         // ik_debug_dogleg3bone_enabled                     "false"    // [def: true]
         // ik_debug_fabrik_backwards_enabled                "false"    // [def: true]
         // ik_debug_fabrik_forwards_enabled                 "false"    // [def: true]
-        // ik_fabrik_backwards_enabled                      "false"    // [def: true]
-        // ik_fabrik_forwards_enabled                       "false"    // [def: true]
-        // ik_planetilt_enable                              "false"    // [def: true]
+        ik_fabrik_backwards_enabled                      "false"    // [def: true]
+        ik_fabrik_forwards_enabled                       "false"    // [def: true]
+        ik_planetilt_enable                              "false"    // [def: true]
         // animgraph_footlock_calculate_tilt                "false"    // [def: true]
         // Foot locking; feet may slide slightly. Server-synced, so the server value may apply online. Stage 2 fight-CPU
         // cut 2026-10-06.
@@ -996,7 +997,7 @@ GameInfo
         // queue players. For me this dramatically improved the solo queue performance but I am not sure if that is
         // placebo.
         // mm_prefer_solo_only                              "true"     // [def: false]
-        // citadel_portrait_world_renderer_off              "false"    // Disables character models in shop and endgame screen. [def: false]
+        citadel_portrait_world_renderer_off              "true"     // No 3D hero models in shop and endgame. [def: false]
         // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it
         // can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. Gone after
         // City Never Sleeps.
