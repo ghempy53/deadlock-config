@@ -664,6 +664,14 @@ DYNAMIC LIGHTS BACK ON FOR LIT HERO POSTERS (2026-10-07)
   of the performance-first FPS gain in fights. Stationary lights and light shadow casting stay off. Untested in game.
   Line numbers unchanged.
 
+DYNAMIC LIGHTS OFF AGAIN; POSTERS STAY, UNLIT (2026-10-07)
+  line 546   lb_enable_dynamic_lights                      "true"  ->  "false"
+  Why: owner's choice: keep the hero posters on the loading and endgame screens but drop their lighting to get the
+  fight FPS back. Celeste ability spam on Abrams still swings 200 to 400 FPS; her kit is light-heavy, so ability
+  lights are a direct cost there. The poster renderer stays at default, so posters still show, unlit. Also recorded
+  in docs/CLAUDE.md: never recommend DLSS/upscalers or any FPS cap. Untested in game.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
