@@ -7,8 +7,9 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
 
 - Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB, 2560x1440 @ 270 Hz, DX11 or Vulkan (`-vulkan`),
   Reflex On, uncapped FPS.
-- **Goal: balanced clarity + FPS.** Readability comes first. Performance cuts are kept only when they don't hide
-  anything on screen. The FPS problem being worked on is lows in big fights, which are CPU-bound.
+- **Goal: performance first (owner, 2026-10-07).** Looks don't matter; gameplay information does. Cut anything
+  cosmetic, but never hide what the owner reads to play: health bars, ability effects and cues, troopers, props and
+  boxes, ziplines/ropes, impact effects, ragdolls (Doorman ult). The FPS problem being worked on is lows in big fights, which are CPU-bound.
 - The owner is a professional engineer. Be direct, skip basics, and give a recommendation rather than a survey.
 
 ## Files
@@ -66,10 +67,11 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 
 ## Settled decisions (don't reopen without new evidence)
 
-- Nothing is hidden for performance: no culling props/troopers/health bars, no removing impact effects, splashes,
-  ropes, ragdolls, lights. `r_size_cull_threshold` stays default (it culls trooper health bars). `cpu_level` and
+- No gameplay information is hidden for performance: no culling props/troopers/health bars, no removing impact
+  effects, ropes, ragdolls. Purely cosmetic cuts (lighting, hair, splashes, decals, UI blur) are allowed. `r_size_cull_threshold` stays default (it culls trooper health bars). `cpu_level` and
   `gpu_level` stay default (particle systems have minimum levels, so lowering them skips effects).
-- Map lighting stays on: dynamic/stationary lights, shadow casting, sun, baked shadows, lightmaps.
+- Map lighting (2026-10-07): dynamic and stationary lights and light shadow casting are off for performance; sun,
+  baked shadows and lightmaps stay on (turning those off makes the map unreadably bright or dark).
 - `citadel_camera_use_vmdl_flatten_horizontal` stays default (false made aiming down sights far too zoomed in).
   The gun-aim pose override was tried and reverted.
 - Per-hit damage numbers stay visible (a single hit never makes a total). While the owner tests in-game settings, group 1d

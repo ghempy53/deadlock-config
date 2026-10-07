@@ -540,14 +540,14 @@ GameInfo
         // ================================================================================================
         // 1. PERSONAL / READABILITY  (deliberate choices; most pin an engine default so an upstream change cannot flip it)
         // ================================================================================================
-        // --- 1a. Lighting: restored to default ---
-        // SET THIS TO TRUE TO MAKE HERO PORTRAITS HAVE COLOR IN THE SHOP AND ENDGAME *Disables dynamic lights eg.
-        // walker, shop, tp, character abilities etc. (hero silhouettes go dark in menus as a side effect)
-        lb_enable_dynamic_lights                         "true"     // [def: true]
+        // --- 1a. Lighting: performance first (dynamic/stationary lights, light shadows off; baked lighting stays) ---
+        // Dynamic lights off: walker, shop, teleporter and ability lights. Ability particles still draw. Side effect:
+        // hero portraits go dark in the shop and endgame screens. Set true to bring them back.
+        lb_enable_dynamic_lights                         "false"    // [def: true]
         // Baked shadows on (false disables them; game looks bright if off while stationary lights = 1)
         lb_enable_baked_shadows                          "true"     // [def: true]
-        lb_enable_stationary_lights                      "true"     // Stationary lights on (false = flatter map, more performant) [def: true]
-        lb_enable_shadow_casting                         "true"     // Shadow casting on (0/false disables it) [def: true]
+        lb_enable_stationary_lights                      "false"    // Flatter map, cheaper. [def: true]
+        lb_enable_shadow_casting                         "false"    // No light shadow maps. [def: true]
         r_rendersun                                      "1"        // Sun lighting on (0 disables it) [def: true]
         r_lightmap_size                                  "65536"    // Maximum lightmap resolution. [def: 65536]
         // Sets directional irradiance lightmap data size (lower = less detail) (-1 = uses value of r_lightmap_size )
@@ -811,7 +811,7 @@ GameInfo
         r_limit_particle_job_duration                    "true"     // [def: false]
         // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance.
         // That being said it does make flames from paige 1 always appear on the left, so your call ig.
-        // r_particle_fixedrandomseeds                      "true"     // [def: false]
+        r_particle_fixedrandomseeds                      "true"     // [def: false]
         // Caps texture layers per particle (cheaper GPU shading). Anything below 4 makes Infernus afterburn, Paige fire
         // and Drifter's passive look blocky; 4 is the lowest safe value. Watch those effects.
         r_particle_max_texture_layers                    "4"        // [def: -1]
@@ -824,13 +824,13 @@ GameInfo
         // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a
         // testvar.
         // r_particle_skip_postsim                          "true"     // [def: false]
-        // r_physics_particle_op_spawn_scale                "0"        // Prevents physics-based particle spawns. [def: 1]
+        r_physics_particle_op_spawn_scale                "0"        // Prevents physics-based particle spawns. [def: 1]
         // This does what it says on the tin, should save more performance the lower fps gets. Restored from the
         // 2026-10-04 config.
         r_update_particles_on_render_only_frames         "true"     // [def: false]
         // Particles farther than this distance render at reduced resolution (cheaper fill on the GPU). Nothing is
-        // removed; distant smoke and fire get a little softer. Upstream used 16 (almost everything low-res).
-        r_particle_mixed_resolution_viewstart            "250"      // Halved from stock 500. [def: 500]
+        // removed; effects past a short distance look softer. Upstream value.
+        r_particle_mixed_resolution_viewstart            "16"       // [def: 500]
         // Speeds up particle simulation, thus making them end sooner, however this causes visual desyncs, most notably
         // with big effects that last a while such as infernus ult. Please tweak this to what you are comfortable with.
         // r_particle_timescale                             "1"        // [def: 1]
@@ -933,14 +933,14 @@ GameInfo
         // violence_agibs                                   "0"        // Disables alien/other gibs. [def: true]
         // violence_hblood                                  "0"        // Disables human blood effects. [def: true]
         // violence_hgibs                                   "0"        // Disables human gibs. [def: true]
-        // Disables splash effects (water/impact splashes). Off: hides things on screen, not worth it.
-        // cl_show_splashes                                 "0"        // [def: true]
+        // Disables water and impact splash effects. Cosmetic.
+        cl_show_splashes                                 "0"        // [def: true]
         r_world_wind_strength                            "0"        // Disables wind effects, cosmetic only. [def: 40]
         // r_drawropes                                      "false"    // Off: hides things on screen, not worth it. [def: true]
         // Resolution of character decal textures. Engine min 256 (was '4', clamped)
-        // r_character_decal_resolution                     "256"      // [def: 1024]
-        // r_render_hair                                    "false"    // [def: true]
-        // r_hair_ao                                        "0"        // Disables hair ambient occlusion/shading pass. [def: true]
+        r_character_decal_resolution                     "256"      // [def: 1024]
+        r_render_hair                                    "false"    // No hair rendering or sim. [def: true]
+        r_hair_ao                                        "0"        // Disables hair AO pass. [def: true]
         // r_citadel_gpu_preview_denoise_passes             "0"        // [def: 3]
         citadel_bullet_shot_offset_fade_time             "0"        // Restored from the 2026-10-04 config. [def: 0.5]
         // Bullet impact sparks and dust on walls and floors. Stage 2 fight-CPU cut 2026-10-06. Off: hides things on
@@ -1002,7 +1002,7 @@ GameInfo
         // City Never Sleeps.
         // r_citadel_enable_pano_world_blur                 "true"     // [def: gone]
         // panorama_allow_transitions                       "false"    // Turns off UI anim (shop,etc) [def: true]
-        // panorama_disable_blur                            "true"     // Disables UI blur effects in the UI. [def: false]
+        panorama_disable_blur                            "true"     // Disables UI blur effects in the UI. [def: false]
         // panorama_disable_box_shadow                      "true"     // Disables UI box shadows in the UI (less GPU/UI cost) [def: false]
         // According to John Valve this is an optimization feature that stops rendering of panels underneath the top
         // level.
