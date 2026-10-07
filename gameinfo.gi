@@ -729,6 +729,9 @@ GameInfo
         r_depth_of_field                                 "0"        // Disables depth of field. [def: true]
         r_effects_bloom                                  "0"        // Disables effects bloom. [def: true]
         r_post_bloom                                     "0"        // Disables post-process bloom. [def: false]
+        // Scene renders without HDR (Valve: -1 default, 0 NoHdr, 1 Hdr, 2 Hdr 1010102, 3 Hdr 111110). Lighter render
+        // targets and bandwidth; colours and brightness may shift, highlights clip. Comment out to restore the default.
+        sc_hdr_enabled_override                          "0"        // No HDR. [def: -1]
 
         // --- 2e. Grass, clutter, LOD and culling ---
         r_grass_quality                                  "0"        // Quality of the grass. [def: 2]
