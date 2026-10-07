@@ -72,7 +72,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
   `gpu_level` stay default (particle systems have minimum levels, so lowering them skips effects).
 - Map lighting (2026-10-07): dynamic and stationary lights and light shadow casting are off for performance; sun,
   baked shadows and lightmaps stay on (turning those off makes the map unreadably bright or dark).
-- `citadel_camera_use_vmdl_flatten_horizontal` stays default (false made aiming down sights far too zoomed in).
+- Camera, spectator and viewmodel convars stay at Valve defaults (owner, 2026-10-07: the camera felt wrong).
+  `citadel_camera_use_vmdl_flatten_horizontal` stays default (false made aiming down sights far too zoomed in).
   The gun-aim pose override was tried and reverted.
 - Per-hit damage numbers stay visible (a single hit never makes a total). While the owner tests in-game settings, group 1d
   is at Valve defaults except final lifetime 4 and dynamic emphasis off; the old up-left layout is kept commented.
