@@ -655,7 +655,7 @@ GameInfo
         r_texturefilteringquality                        "4"        // Aniso 8x. [def: 1]
         // Reduce texture memory pool size when this percentage of the budget is full.
         // r_texture_budget_threshold                       "0.7"      // [def: 0.9]
-        r_texture_budget_update_period                   "0.5"      // Rebalance budget every 0.5 s. [def: 0.1]
+        // r_texture_budget_update_period                   "0.5"      // Off: turn stutter suspect. [def: 0.1]
         // This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher
         // values mean better quality, lower means worse.
         // citadel_in_world_item_panel_dpi                  "0"        // [def: 2]
@@ -795,7 +795,7 @@ GameInfo
         // Particle systems larger than this in every dimension skip culling to save CPU. They will be drawn anyway. So
         // particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this
         // value.
-        r_particle_max_size_cull                         "900"      // Upstream value. [def: 1200]
+        // r_particle_max_size_cull                         "900"      // Off: more culling CPU; FPS dropped. [def: 1200]
         // How hard to push systems to cheaper fallbacks once sim time passes the threshold. Upstream value.
         cl_particle_sim_fallback_base_multiplier         "100"      // [def: 5]
         // Particle sim time per frame (ms) before new systems fall back to cheaper versions. Upstream value.
@@ -808,7 +808,7 @@ GameInfo
         // I believe this handles the drawing of little visual flourish particles.
         // r_draw_particle_children_with_parents            "1"        // [def: -1]
         // Caps per-frame particle job time in big fights. No Valve description; may delay an effect by a frame.
-        r_limit_particle_job_duration                    "true"     // [def: false]
+        // r_limit_particle_job_duration                    "true"     // Off: turn stutter suspect. [def: false]
         // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance.
         // That being said it does make flames from paige 1 always appear on the left, so your call ig.
         r_particle_fixedrandomseeds                      "true"     // [def: false]
@@ -863,9 +863,10 @@ GameInfo
         // crash (crash-bisect step 1 in docs/CHANGES.txt).
         // r_late_particle_job_sync                         "1"        // [def: false]
         update_voices_low_priority                       "true"     // Voice chat processing runs at low priority. No visible change. [def: false]
-        // Render-thread batching thresholds (upstream values). No Valve description; no visible change expected.
-        sc_aggregate_bvh_threshold                       "256"      // [def: 128]
-        sc_layer_batch_threshold                         "256"      // [def: 128]
+        // Render-thread batching thresholds. Upstream shipped 256 but its own note said not to change them; 256 was
+        // followed by stutter when turning the camera, so both are back at default.
+        // sc_aggregate_bvh_threshold                       "256"      // Off: upstream said do not change. [def: 128]
+        // sc_layer_batch_threshold                         "256"      // Off: upstream said do not change. [def: 128]
         // Motion vectors for instanced meshes; unused without motion blur or temporal AA (you use FXAA) No visible
         // change.
         sc_instanced_mesh_motion_vectors                 "0"        // [def: true]

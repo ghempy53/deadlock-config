@@ -52,6 +52,9 @@ is not menu-owned. The remaining upside is in the untested, unrated convars belo
 default), `lb_shadow_map_cull_empty_mixed`, `engine_low_latency_sleep_after_client_tick` (B2; reverted the same day, keyboard input
 lag), and
 `r_particle_max_texture_layers 4`. Still untested in game. See `docs/CHANGES.txt`.
+Reverted the same day after camera-turn stutter and lower FPS: `r_particle_max_size_cull`,
+`r_limit_particle_job_duration`, both batching thresholds and `r_texture_budget_update_period`. Don't re-propose them
+without a measured A/B.
 
 Ordered by expected value for a CPU-bound 9800X3D in team fights.
 
