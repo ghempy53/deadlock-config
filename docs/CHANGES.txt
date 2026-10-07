@@ -688,6 +688,12 @@ BUILD 6757/6759 HOTFIX CHECK (2026-10-07; Valve data: GameTracking-Deadlock bde8
   Stock gameinfo.gi unchanged since build 6753: guarded sections, PGIVersion and the stock ConVars tail still match.
   Lines 1026-1029 moved up by 2, lines 1032-1062 by 4, lines after 1063 by 5.
 
+BUILD 6762 CHECK (2026-10-07; Valve data: GameTracking-Deadlock 4e8c1bd, build 6762)
+  Second update today (22:26 UTC): Baba Bubbling Brew fixes and text only. DumpSource2/convars.txt, commands.txt and
+  game/citadel/gameinfo.gi are unchanged since bde8015 (build 6759), so no convar was added, removed or re-defaulted
+  and the guarded sections and stock tail still match. Nothing to change in gameinfo.gi.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
