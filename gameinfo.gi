@@ -841,8 +841,8 @@ GameInfo
         // may vary.
         thread_pool_option                               "-1"       // [def: -1]
         // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client
-        // simulation.
-        engine_low_latency_sleep_after_client_tick       "true"     // Release flag: A/B live in console. [def: false]
+        // simulation. True made keyboard input feel laggy (sampled input waits out the sleep); keep false.
+        engine_low_latency_sleep_after_client_tick       "false"    // [def: false]
         cl_modifier_parallel_gather_status_effect_updates "false"    // Not sure. [def: false]
         // Maxium number of Doorman doors to allow rendering. This will cause visual bugs when set to 1, either set it to
         // 2 or 0 to disable them.

@@ -538,6 +538,15 @@ FIGHT FRAME DROPS: ALL REMAINING TEST CANDIDATES (2026-10-07)
   Undo: comment out the line, or set engine_low_latency_sleep_after_client_tick back to false.
   Lines after 684 moved down by 2, after 809 by 3, after 813 by 4, after 862 by 5.
 
+LOW-LATENCY SLEEP BACK TO DEFAULT: KEYBOARD INPUT LAG (2026-10-07)
+  line 845   engine_low_latency_sleep_after_client_tick    "true"  ->  "false"
+  Why: after the fight-frame-drop change the owner reported keyboard input feeling laggy. With Reflex on, true moves
+  the low-latency sleep on tick frames to after client simulation, so input already sampled for that tick waits out
+  the sleep before the frame is presented; movement keys are tick-based, which matches the symptom. The other seven
+  lines from that change stay. If the lag persists after a restart, the next suspect is r_limit_particle_job_duration
+  (line 811), then the batching thresholds (lines 867 and 868).
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
