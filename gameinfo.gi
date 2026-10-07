@@ -540,10 +540,10 @@ GameInfo
         // ================================================================================================
         // 1. PERSONAL / READABILITY  (deliberate choices; most pin an engine default so an upstream change cannot flip it)
         // ================================================================================================
-        // --- 1a. Lighting: performance first (dynamic/stationary lights, light shadows off; baked lighting stays) ---
-        // Dynamic lights off: walker, shop, teleporter and ability lights. Ability particles still draw. Side effect:
-        // hero portraits go dark in the shop and endgame screens. Set true to bring them back.
-        lb_enable_dynamic_lights                         "false"    // [def: true]
+        // --- 1a. Lighting: stationary lights and light shadows off; dynamic and baked lighting stay ---
+        // Dynamic lights on (owner choice): lights hero posters on loading, shop and endgame screens, plus walker,
+        // teleporter and ability lights in matches. False is cheaper in fights but leaves the posters dark.
+        lb_enable_dynamic_lights                         "true"     // [def: true]
         // Baked shadows on (false disables them; game looks bright if off while stationary lights = 1)
         lb_enable_baked_shadows                          "true"     // [def: true]
         lb_enable_stationary_lights                      "false"    // Flatter map, cheaper. [def: true]
@@ -998,7 +998,7 @@ GameInfo
         // queue players. For me this dramatically improved the solo queue performance but I am not sure if that is
         // placebo.
         // mm_prefer_solo_only                              "true"     // [def: false]
-        citadel_portrait_world_renderer_off              "true"     // No 3D hero models in shop and endgame. [def: false]
+        // citadel_portrait_world_renderer_off              "true"     // Off: hero posters on loading and endgame. [def: false]
         // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it
         // can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. Gone after
         // City Never Sleeps.

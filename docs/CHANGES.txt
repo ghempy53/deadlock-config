@@ -649,6 +649,21 @@ CAMERA GROUP FULLY TO ENGINE DEFAULTS (2026-10-07)
   shadow performance lines (both already equal Valve's default). No behaviour change today.
   Line numbers unchanged.
 
+HERO POSTERS BACK ON LOADING AND ENDGAME SCREENS (2026-10-07)
+  line 1001  citadel_portrait_world_renderer_off           "true"  ->  (commented -> engine default false)
+  Why: the owner wants the hero posters back when loading into a match and at the end of the game. This line stopped
+  the 3D hero renders on those screens (and in the shop); it costs nothing in a match. Owner's choice: dynamic lights
+  stay off for in-match FPS, so the posters may render dark or silhouetted; lb_enable_dynamic_lights true lights them.
+  Untested in game.
+  Line numbers unchanged.
+
+DYNAMIC LIGHTS BACK ON FOR LIT HERO POSTERS (2026-10-07)
+  line 546   lb_enable_dynamic_lights                      "false"  ->  "true"
+  Why: owner's choice after the posters came back dark: the hero posters on the loading, shop and endgame screens
+  need dynamic lights. In matches this also brings back walker, teleporter and ability lights, so it gives back part
+  of the performance-first FPS gain in fights. Stationary lights and light shadow casting stay off. Untested in game.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
