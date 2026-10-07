@@ -595,6 +595,22 @@ PERFORMANCE FIRST, ROUND 2: IK, AUDIO REVERB, BLOOD, SHOP MODELS (2026-10-07)
   Untested in game: heroes may show feet sliding or hands off weapons; reverb sounds drier. Restart to test.
   Net: lines after 974 moved down by 1 (two note lines added, one duplicate removed).
 
+CAMERA, SPECTATOR AND VIEWMODEL BACK TO DEFAULT (2026-10-07)
+  line 612   citadel_camera_height_approach_speed          "800"   ->  (commented -> engine default 80)
+  line 619   r_citadel_clip_sphere_min_opacity             "0"     ->  (commented -> engine default 0.4)
+  line 645   engine_accurate_input_processing_delta_time   "true"  ->  (commented -> engine default false)
+  line 706   csm_viewmodel_max_shadow_dist                 "1"     ->  (commented -> engine default 21)
+  line 707   csm_viewmodel_max_visible_dist                "1"     ->  (commented -> engine default 1000)
+  line 708   csm_viewmodel_nearz                           "512"   ->  (commented -> engine default 0.5)
+  line 856   engine_max_ticks_to_simulate                  "2"     ->  (commented -> engine default -1)
+  Why: the camera feels wrong; the owner asked for every camera, spectator and viewmodel setting at default. The
+  height approach speed (800 vs CNS 80) changes how the camera settles on crouch, landing and stairs, and the two
+  engine lines were added as camera feel (input time per tick, max ticks per frame; a cap of 2 slows simulation
+  when a frame runs long). The pinhole fade and viewmodel shadow lines go too. Lines still active in these groups
+  already equal Valve's default (flatten_vertical, soft_collision_angle, r_drawviewmodel, csm_viewmodel_shadows,
+  sparseshadowtree_disable_for_viewmodel); the spectator overrides were already commented. Untested in game.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.

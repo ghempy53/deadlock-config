@@ -609,14 +609,14 @@ GameInfo
         // cam_idealdelta                                   "0"        // [def: 4]
         // cam_ideallag                                     "0"        // [def: 4]
         // How fast the camera settles height changes (crouch, landing, stairs). CNS cut it to 80; pre-patch 800.
-        citadel_camera_height_approach_speed             "800"      // [def: 80]
+        // citadel_camera_height_approach_speed             "800"      // Off: CNS default 80 applies. [def: 80]
         // citadel_camera_pitch_default                     "0"        // [def: 20]
         // Reverted: default 20000. 7000 may hide entities at long range; FPS gain unproven.
         // citadel_camera_see_distance_max                  "7000"     // [def: 20000]
         // citadel_shoot_forward_offset                     "0"        // [def: 35]
         // citadel_tightcamera_alternative                  "1"        // [def: 1.3]
         // Removes the blur from the pinhole camera. Restored from the 2026-10-04 config.
-        r_citadel_clip_sphere_min_opacity                "0"        // [def: 0.4]
+        // r_citadel_clip_sphere_min_opacity                "0"        // Off: default pinhole fade. [def: 0.4]
 
         // --- 1f. Field of view (all default; use the in-game Camera FOV slider. The new camera overrides are for the spectator
         //   camera only) ---
@@ -642,7 +642,7 @@ GameInfo
         // When true, elapsed time given to the input processing will be the time elapsed since the last input
         // processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per
         // frame). Restored from the 2026-10-04 config.
-        engine_accurate_input_processing_delta_time      "true"     // [def: false]
+        // engine_accurate_input_processing_delta_time      "true"     // Off: default. [def: false]
         // Surprisingly this can cause issues with holding keys after upgrading with alt.
         // cl_input_enable_raw_keyboard                     "1"        // [def: false]
 
@@ -703,9 +703,9 @@ GameInfo
         csm_res_override_2                               "1"        // All of these commands should reduce shadow quality. [def: 0]
         csm_res_override_3                               "1"        // All of these commands should reduce shadow quality. [def: 0]
         csm_viewmodel_shadows                            "false"    // All of these commands should reduce shadow quality. [def: false]
-        csm_viewmodel_max_shadow_dist                    "1"        // [def: 21]
-        csm_viewmodel_max_visible_dist                   "1"        // [def: 1000]
-        csm_viewmodel_nearz                              "512"      // [def: 0.5]
+        // csm_viewmodel_max_shadow_dist                    "1"        // [def: 21]
+        // csm_viewmodel_max_visible_dist                   "1"        // [def: 1000]
+        // csm_viewmodel_nearz                              "512"      // [def: 0.5]
         // Disable SST generation and runtime for viewmodel (use original CSM rendering)
         sparseshadowtree_disable_for_viewmodel           "1"        // [def: true]
         // sparseshadowtree_leaf_precision_viewmodel        "0"        // [def: 0.0005]
@@ -853,7 +853,7 @@ GameInfo
         // rtx_texture_resolution                           "64"       // [def: 512]
         // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real
         // time. Restored from the 2026-10-04 config.
-        engine_max_ticks_to_simulate                     "2"        // [def: -1]
+        // engine_max_ticks_to_simulate                     "2"        // Off: default. [def: -1]
         // Batch entity list adds / removes while latching interpolated variables to avoid mutex contention. Restored
         // from the 2026-10-04 config.
         cl_batch_entity_list_ops_during_latch            "true"     // [def: false]
