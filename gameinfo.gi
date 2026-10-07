@@ -559,7 +559,7 @@ GameInfo
         citadel_boss_glow_disabled                       "0"        // Disables boss and walker glow/highlight effect. [def: false]
         citadel_unit_status_allies_see_thru_walls        "true"     // Do you want to see allied player outlines through walls. [def: true]
         // citadel_damage_offscreen_indicator_disabled      "true"     // The little trooper portraits that show up behind walls. [def: true]
-        r_drawviewmodel                                  "true"     // [def: true]
+        // r_drawviewmodel                                  "true"     // Off: engine default applies. [def: true]
         r_drawtracers_firstperson                        "true"     // [def: true]
 
         // --- 1c. Health bars ---
@@ -593,15 +593,15 @@ GameInfo
         // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay)
         // citadel_damage_report_enable                     "1"        // [def: true]
 
-        // --- 1e. Camera ---
+        // --- 1e. Camera (all at engine defaults; nothing here is a performance setting) ---
         // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND
         // ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be
         // undesirable for some.
-        citadel_camera_use_vmdl_flatten_vertical         "true"     // [def: true]
+        // citadel_camera_use_vmdl_flatten_vertical         "true"     // Off: engine default applies. [def: true]
         // Client-side; disables camera wobble when heavy melee'd or near walker/guardian damage. Kept alongside the in-
         // game 'Reduce camera shake' setting. Off: back to default; melee felt off with it.
         // citadel_camera_wobble_disable                    "true"     // [def: false]
-        citadel_camera_soft_collision_angle              "75"       // [def: 75]
+        // citadel_camera_soft_collision_angle              "75"       // Off: engine default applies. [def: 75]
         // Off: false moved the camera fully to each hero's gun-aim pose, so aiming down sights felt too zoomed in.
         // Valve: for each camera pose set, use the average of X (forward) positions; reduces motion sickness.
         // citadel_camera_use_vmdl_flatten_horizontal       "false"    // [def: true]

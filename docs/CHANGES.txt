@@ -639,6 +639,16 @@ CAMERA-TURN STUTTER: REVERT FIVE UNTESTED ENGINE LINES (2026-10-07)
   changes until the new shader variants are cached.
   Lines after 866 moved down by 1.
 
+CAMERA GROUP FULLY TO ENGINE DEFAULTS (2026-10-07)
+  line 562   r_drawviewmodel                               "true"  ->  (commented -> engine default true)
+  line 600   citadel_camera_use_vmdl_flatten_vertical      "true"  ->  (commented -> engine default true)
+  line 604   citadel_camera_soft_collision_angle           "75"    ->  (commented -> engine default 75)
+  Why: the owner wants every camera setting at default unless it is a performance setting. These three only pinned
+  the default value; commented out, a future Valve default change applies instead of being masked. No camera or
+  viewmodel line remains active. csm_viewmodel_shadows and sparseshadowtree_disable_for_viewmodel stay: they are
+  shadow performance lines (both already equal Valve's default). No behaviour change today.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
