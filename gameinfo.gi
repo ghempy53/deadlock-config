@@ -655,7 +655,7 @@ GameInfo
         r_texturefilteringquality                        "4"        // Aniso 8x. [def: 1]
         // Reduce texture memory pool size when this percentage of the budget is full.
         // r_texture_budget_threshold                       "0.7"      // [def: 0.9]
-        // r_texture_budget_update_period                   "0.5"      // Time (in seconds) between updating texture memory budget. [def: 0.1]
+        r_texture_budget_update_period                   "0.5"      // Rebalance budget every 0.5 s. [def: 0.1]
         // This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher
         // values mean better quality, lower means worse.
         // citadel_in_world_item_panel_dpi                  "0"        // [def: 2]
@@ -682,6 +682,8 @@ GameInfo
         // lb_csm_override_staticgeo_cascades_value         "true"     // [def: -1]
         lb_sun_csm_size_cull_threshold_texels            "60"       // Culls tiny CSM contributions below a texel threshold (performance) [def: 10]
         lb_barnlight_shadowmap_scale                     "0"        // Scale for computed barnlight shadowmap size (lower = cheaper) [def: 1]
+        // Skip mixed shadow maps with no dynamic objects in view: pure skip of empty work. Cheat flag: startup only.
+        lb_shadow_map_cull_empty_mixed                   "true"     // [def: false]
         // Base resolution for dynamic shadows (lower = cheaper). Engine min 128 (was '16', clamped)
         lb_dynamic_shadow_resolution_base                "128"      // [def: 1024]
         lb_ssss_samples                                  "3"        // Subsurface sample count. Engine min 3 (was '0', clamped) [def: 11]
@@ -793,7 +795,7 @@ GameInfo
         // Particle systems larger than this in every dimension skip culling to save CPU. They will be drawn anyway. So
         // particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this
         // value.
-        // r_particle_max_size_cull                         "900"      // [def: 1200]
+        r_particle_max_size_cull                         "900"      // Upstream value. [def: 1200]
         // How hard to push systems to cheaper fallbacks once sim time passes the threshold. Upstream value.
         cl_particle_sim_fallback_base_multiplier         "100"      // [def: 5]
         // Particle sim time per frame (ms) before new systems fall back to cheaper versions. Upstream value.
@@ -805,12 +807,14 @@ GameInfo
         cl_particle_fallback_base                        "5"        // Base for falling back to cheaper effects under load. Upstream value. [def: 0]
         // I believe this handles the drawing of little visual flourish particles.
         // r_draw_particle_children_with_parents            "1"        // [def: -1]
-        // r_limit_particle_job_duration                    "true"     // Seems to help with particle clutter, although I am not sure. [def: false]
+        // Caps per-frame particle job time in big fights. No Valve description; may delay an effect by a frame.
+        r_limit_particle_job_duration                    "true"     // [def: false]
         // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance.
         // That being said it does make flames from paige 1 always appear on the left, so your call ig.
         // r_particle_fixedrandomseeds                      "true"     // [def: false]
-        // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky.
-        // r_particle_max_texture_layers                    "4"        // [def: -1]
+        // Caps texture layers per particle (cheaper GPU shading). Anything below 4 makes Infernus afterburn, Paige fire
+        // and Drifter's passive look blocky; 4 is the lowest safe value. Watch those effects.
+        r_particle_max_texture_layers                    "4"        // [def: -1]
         // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values
         // could negatively impact performance.
         // r_particle_min_timestep                          "0.00241"  // [def: 0]
@@ -838,7 +842,7 @@ GameInfo
         thread_pool_option                               "-1"       // [def: -1]
         // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client
         // simulation.
-        engine_low_latency_sleep_after_client_tick       "false"    // [def: false]
+        engine_low_latency_sleep_after_client_tick       "true"     // Release flag: A/B live in console. [def: false]
         cl_modifier_parallel_gather_status_effect_updates "false"    // Not sure. [def: false]
         // Maxium number of Doorman doors to allow rendering. This will cause visual bugs when set to 1, either set it to
         // 2 or 0 to disable them.
@@ -859,8 +863,9 @@ GameInfo
         // crash (crash-bisect step 1 in docs/CHANGES.txt).
         // r_late_particle_job_sync                         "1"        // [def: false]
         update_voices_low_priority                       "true"     // Voice chat processing runs at low priority. No visible change. [def: false]
-        // sc_aggregate_bvh_threshold                       "256"      // Not fully sure what these do. Don't change them. [def: 128]
-        // sc_layer_batch_threshold                         "256"      // Not fully sure what these do. Don't change them. [def: 128]
+        // Render-thread batching thresholds (upstream values). No Valve description; no visible change expected.
+        sc_aggregate_bvh_threshold                       "256"      // [def: 128]
+        sc_layer_batch_threshold                         "256"      // [def: 128]
         // Motion vectors for instanced meshes; unused without motion blur or temporal AA (you use FXAA) No visible
         // change.
         sc_instanced_mesh_motion_vectors                 "0"        // [def: true]

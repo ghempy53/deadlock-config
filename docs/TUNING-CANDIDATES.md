@@ -47,6 +47,11 @@ is not menu-owned. The remaining upside is in the untested, unrated convars belo
 
 ## B. Worth a measured test (nothing hidden, exists, not blocked)
 
+**Applied 2026-10-07** (owner's request, all at once): `r_particle_max_size_cull 900`, `r_limit_particle_job_duration`,
+`sc_aggregate_bvh_threshold`/`sc_layer_batch_threshold 256`, `r_texture_budget_update_period 0.5` (threshold left at
+default), `lb_shadow_map_cull_empty_mixed`, `engine_low_latency_sleep_after_client_tick` (B2), and
+`r_particle_max_texture_layers 4`. Still untested in game. See `docs/CHANGES.txt`.
+
 Ordered by expected value for a CPU-bound 9800X3D in team fights.
 
 | ConVar | Default | Proposed | Why | Risk |
