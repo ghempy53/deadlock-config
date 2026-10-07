@@ -540,10 +540,10 @@ GameInfo
         // ================================================================================================
         // 1. PERSONAL / READABILITY  (deliberate choices; most pin an engine default so an upstream change cannot flip it)
         // ================================================================================================
-        // --- 1a. Lighting: stationary lights and light shadows off; dynamic and baked lighting stay ---
-        // Dynamic lights on (owner choice): lights hero posters on loading, shop and endgame screens, plus walker,
-        // teleporter and ability lights in matches. False is cheaper in fights but leaves the posters dark.
-        lb_enable_dynamic_lights                         "true"     // [def: true]
+        // --- 1a. Lighting: performance first (dynamic/stationary lights, light shadows off; baked lighting stays) ---
+        // Dynamic lights off: walker, teleporter and ability lights. Ability particles still draw. Hero posters on the
+        // loading, shop and endgame screens still show but render unlit (owner choice).
+        lb_enable_dynamic_lights                         "false"    // [def: true]
         // Baked shadows on (false disables them; game looks bright if off while stationary lights = 1)
         lb_enable_baked_shadows                          "true"     // [def: true]
         lb_enable_stationary_lights                      "false"    // Flatter map, cheaper. [def: true]
