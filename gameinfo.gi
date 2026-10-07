@@ -750,9 +750,10 @@ GameInfo
         // mat_viewportscale                                "0.01"     // [def: 1]
 
         // --- 2f. Props, physics, ragdolls ---
-        // Makes boxes and troopers break into a single piece Say thank you to jasper that this can be set to 0 now <3
-        // Off: boxes and troopers break into debris again.
-        // props_break_max_pieces_perframe                  "0"        // [def: 16]
+        // Debris pieces spawned per frame when boxes and troopers break. 0 makes them vanish with no debris, so keep
+        // it above 0. 4 is a quarter of stock: lighter break spikes, debris still visible. Replicated: online, the
+        // server value may win.
+        props_break_max_pieces_perframe                  "4"        // [def: 16]
         // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over.
         cl_phys_enabled                                  "true"     // [def: true]
         // Keep set to 0 - enabling this (disabling ragdolls) can cause issue with doorman's ultimate.
