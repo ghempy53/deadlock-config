@@ -542,7 +542,7 @@ GameInfo
         // ================================================================================================
         // --- 1a. Lighting: performance first (dynamic/stationary lights, light shadows off; baked lighting stays) ---
         // Dynamic lights off: walker, shop, teleporter and ability lights. Ability particles still draw. Side effect:
-        // hero portraits go dark in the shop and endgame screens. Set true to bring them back.
+        // hero posters (loading, shop, endgame) render dark. Set true to light them again.
         lb_enable_dynamic_lights                         "false"    // [def: true]
         // Baked shadows on (false disables them; game looks bright if off while stationary lights = 1)
         lb_enable_baked_shadows                          "true"     // [def: true]
@@ -998,7 +998,7 @@ GameInfo
         // queue players. For me this dramatically improved the solo queue performance but I am not sure if that is
         // placebo.
         // mm_prefer_solo_only                              "true"     // [def: false]
-        citadel_portrait_world_renderer_off              "true"     // No 3D hero models in shop and endgame. [def: false]
+        // citadel_portrait_world_renderer_off              "true"     // Off: hero posters on loading and endgame. [def: false]
         // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it
         // can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. Gone after
         // City Never Sleeps.
