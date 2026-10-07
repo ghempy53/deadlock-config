@@ -1021,14 +1021,10 @@ GameInfo
         // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not.
         // citadel_hud_objective_health_debug_show_midboss  "false"    // [def: false]
         // citadel_hud_objective_health_enabled             "2"        // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks. [def: 2]
-        // This command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy.
-        // citadel_distance_mouse_move_for_minimap_drawing  "1"        // [def: 15]
         // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly
         // visible while holding Ping. Gone after City Never Sleeps.
         // citadel_show_chat_wheel_angle_threshold          "30"       // [def: gone]
         // citadel_show_chat_wheel_time                     "15"       // [def: 0.23]
-        // citadel_auto_ping_window                         "0"        // [def: 0.35]
-        // citadel_ping_wheel_activation_radius             "1"        // [def: 0.6]
         // citadel_hideout_ball_show_juggle_count           "1"        // Shows a fun juggle count minigame for hideout ball. [def: 0]
         // citadel_hideout_ball_show_juggle_fx              "1"        // Shows juggle visual FX for hideout ball minigame. [def: 0]
 
@@ -1060,7 +1056,6 @@ GameInfo
         // citadel_camera_dist                              "0"        // [def: 150]
         // citadel_crosshair_hit_marker_duration            "0.00001"  // Removes the hitmarker when shooting people. [def: 0.1]
         // citadel_first_person                             "true"     // Puts you in first person, messes up character rendering. [def: false]
-        // citadel_outer_radius_scaler                      "0"        // For some reason setting this to zero disables ping wheel input. [def: 0.2545]
         // citadel_roster_select_force_enable_priority_token "true"     // Causes a crash but does what you think it would. [def: false]
         // Rich presence debug messages. Spams console with 'x is doing y in the hideout'.
         // citadel_rp_show_dev_messages                     "true"     // [def: false]

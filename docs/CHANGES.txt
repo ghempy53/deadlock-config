@@ -27,7 +27,7 @@ Header credits/donation text removed; all setting comments kept.
   line 588   citadel_damage_text_new_melee_offset_y       (absent)  ->  added "-10000"   -> commented 2026-10-06 (default 30)
   line 589   citadel_damage_text_new_pure_offset_y        (absent)  ->  added "-10000"   -> commented 2026-10-06 (default 0)
   line 590   citadel_damage_text_cumulative_offset        (absent)  ->  added "-50 -15 0"   -> "-50 -35 0" 2026-10-06 (nudged up)
-  line 1025   citadel_distance_mouse_move_for_minimap_drawing "1"  ->  (commented -> engine default)   UI reset
+  line --    citadel_distance_mouse_move_for_minimap_drawing "1"  ->  (commented; line removed 2026-10-07, convar gone)
   line 1022   citadel_hud_objective_health_debug_show_midboss "false"  ->  (commented -> engine default)   UI reset
   line 1023   citadel_hud_objective_health_enabled         "2"  ->  (commented -> engine default)   UI reset
   line 1014  v8_maximum_heap_size_mb                      "1024"  ->  (commented -> engine default)   HUD reset
@@ -108,8 +108,8 @@ POST-CITY NEVER SLEEPS CLEANUP (2026-10-05) - 49 settings
   Hardware (Ryzen 7 9800X3D, 8 cores):
   line 915   snd_steamaudio_num_threads                   "6"  ->  "2" (code default; was briefly "4", whose "stock" label was wrong)
   FPS limits removed (stock-tail values, changed on request):
-  line 1231  fps_max                                      "400"  ->  "0" (no limit; in-game Max FPS setting can still override)
-  line 1232  fps_max_ui                                   "120"  ->  "0" (no limit while UI is shown)
+  line 1226  fps_max                                      "400"  ->  "0" (no limit; in-game Max FPS setting can still override)
+  line 1227  fps_max_ui                                   "120"  ->  "0" (no limit while UI is shown)
   Vulkan removed (DX11 user; all inert unless launched with -vulkan, changed on request) - SUPERSEDED for the six
   RenderSystem keys by the engine-section reset below (they are back, identical to Valve stock):
   line --    RenderSystem Vulkan* keys (11)               VulkanAdditionalShaderCache, VulkanDefrag, VulkanMutableSwapchain,
@@ -671,6 +671,22 @@ DYNAMIC LIGHTS OFF AGAIN; POSTERS STAY, UNLIT (2026-10-07)
   lights are a direct cost there. The poster renderer stays at default, so posters still show, unlit. Also recorded
   in docs/CLAUDE.md: never recommend DLSS/upscalers or any FPS cap. Untested in game.
   Line numbers unchanged.
+
+BUILD 6757/6759 HOTFIX CHECK (2026-10-07; Valve data: GameTracking-Deadlock bde8015, build 6759)
+  Builds since the last check (8c7cf4e, build 6753): 7148202 (build 6757, 2026-10-06 21:03 UTC) changed the convar
+  dump; bde8015 (build 6759, 2026-10-07 00:03 UTC, Baba ability fixes) changed neither the dump nor gameinfo.gi.
+  Convars: 23 removed (mostly the old ping and chat wheel), 4 added, 1 default changed. All four removed convars
+  this file referenced were commented lines, so nothing active changed:
+  line --    citadel_distance_mouse_move_for_minimap_drawing "1"  ->  (commented line and its note removed; convar gone)
+  line --    citadel_auto_ping_window                     "0"  ->  (commented line removed; convar gone)
+  line --    citadel_ping_wheel_activation_radius         "1"  ->  (commented line removed; convar gone)
+  line --    citadel_outer_radius_scaler                  "0"  ->  (reference line removed; convar gone)
+  Added: citadel_check_walk_on_skyclip (cheat, replicated), citadel_neutral_ai_pathfinder_max_path_detour (server
+  only), citadel_hud_build_category_max_width and citadel_ping_debug_spew (dev UI/debug). None is a client
+  performance setting; none added. citadel_ping_consecutive_window default 0.25 -> 0.35 (not set here).
+  No default, flag or range change for any convar this file sets. gameinfo_cannot_override list unchanged (77).
+  Stock gameinfo.gi unchanged since build 6753: guarded sections, PGIVersion and the stock ConVars tail still match.
+  Lines 1026-1029 moved up by 2, lines 1032-1062 by 4, lines after 1063 by 5.
 
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
