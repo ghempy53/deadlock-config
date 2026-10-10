@@ -51,8 +51,9 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
    then FOV/input/textures), 2 Performance cuts, 3 Audio, 4 Visual effects, 5 Animation/IK, 6 UI/HUD/menus,
    7 Network (**never change**), 8 Reference (broken/dev-only, never enable). Put new lines in the right group.
 6. A convar is set **once**. Before adding a line, search for an existing (possibly commented) one and edit that.
-7. To return a setting to default, **comment it out**; don't delete it. Delete only lines for convars that no longer
-   exist, and log them as `line --`.
+7. To return a setting to default, **comment it out**; don't delete it. Delete only lines (active or commented) for
+   convars that no longer exist or that Valve ignores from gameinfo.gi (`gameinfo_cannot_override`), and log them as
+   `line --`. The file holds only convars it can still control.
 
 ## Deciding whether a convar change is valid
 

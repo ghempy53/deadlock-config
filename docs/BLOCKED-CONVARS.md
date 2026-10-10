@@ -26,8 +26,8 @@ field, distance-field occlusion, drop shadows, GPU culling, MBOIT, near-Z, post-
 ## Effect on this repository's config
 
 **Build 6769 (2026-10-09) hit four active lines**: `lb_enable_dynamic_lights`, `lb_enable_stationary_lights`,
-`lb_enable_baked_shadows` and `lb_shadow_map_cull_empty_mixed`. They are commented out since then (marked Blocked since
-build 6769). Dynamic and stationary lights are back on and cannot be turned off from `gameinfo.gi`;
+`lb_enable_baked_shadows` and `lb_shadow_map_cull_empty_mixed`. They were commented out on 2026-10-10 and then
+deleted the same day, with every other blocked or removed convar line (the file keeps only convars it can control). Dynamic and stationary lights are back on and cannot be turned off from `gameinfo.gi`;
 `lb_enable_shadow_casting` is not flagged and still works.
 
 Before build 6769, `gameinfo.gi` in this repo had **no active and no commented line** that hit the list. The lines other configs lose to
