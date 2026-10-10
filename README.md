@@ -4,9 +4,9 @@ A personal `gameinfo.gi` for Deadlock on Windows 11. It is based on
 [OptimizationLock 3.4](https://github.com/Sqooky/OptimizationLock) (Sqooky's .gi, `main @ 2b994f6`, 2026-10-03)
 (checked against `main @ e2e9925`, 2026-10-05: no new convars upstream)
 and was verified against the **City Never Sleeps** major update (2026-09-29),
-re-checked against build 6762 (2026-10-07).
+re-checked against build 6774 (2026-10-10).
 
-**Goal: performance first.** Cosmetics are cut, including dynamic and stationary lights, light shadows, hair,
+**Goal: performance first.** Cosmetics are cut, including light shadows, hair,
 splashes and UI blur. Gameplay information stays: health bars, ability effects, troopers, props, ziplines, impact
 effects and ragdolls. Sun, baked lighting, glows, viewmodel and tracers stay on.
 
@@ -153,5 +153,5 @@ Major updates overwrite `gameinfo.gi`, and sometimes minor ones do too.
    the list (they were, in the string only, for one day on 2026-03-26). After an update, diff those seven sections
    against the new stock file and keep them identical; put all tuning in `ConVars`. Then queue a match.
 6. Check that no active or commented line is on Valve's ignore list (`gameinfo_cannot_override` in the same dump;
-   77 convars as of build 6753). The one-liner is in `docs/BLOCKED-CONVARS.md`.
+   124 convars as of build 6769). The one-liner is in `docs/BLOCKED-CONVARS.md`.
 7. Log any change in `docs/CHANGES.txt`.

@@ -540,13 +540,12 @@ GameInfo
         // ================================================================================================
         // 1. PERSONAL / READABILITY  (deliberate choices; most pin an engine default so an upstream change cannot flip it)
         // ================================================================================================
-        // --- 1a. Lighting: performance first (dynamic/stationary lights, light shadows off; baked lighting stays) ---
-        // Dynamic lights off: walker, teleporter and ability lights. Ability particles still draw. Hero posters on the
-        // loading, shop and endgame screens still show but render unlit (owner choice).
-        lb_enable_dynamic_lights                         "false"    // [def: true]
-        // Baked shadows on (false disables them; game looks bright if off while stationary lights = 1)
-        lb_enable_baked_shadows                          "true"     // [def: true]
-        lb_enable_stationary_lights                      "false"    // Flatter map, cheaper. [def: true]
+        // --- 1a. Lighting: light shadow casting off; sun and baked lighting stay ---
+        // Valve blocked the lb_enable_* light toggles from gameinfo.gi in build 6769 (gameinfo_cannot_override), so
+        // dynamic and stationary lights can no longer be turned off here. The three lines below are kept for reference.
+        // lb_enable_dynamic_lights                         "false"    // Blocked since build 6769. [def: true]
+        // lb_enable_baked_shadows                          "true"     // Blocked since build 6769. [def: true]
+        // lb_enable_stationary_lights                      "false"    // Blocked since build 6769. [def: true]
         lb_enable_shadow_casting                         "false"    // No light shadow maps. [def: true]
         r_rendersun                                      "1"        // Sun lighting on (0 disables it) [def: true]
         r_lightmap_size                                  "65536"    // Maximum lightmap resolution. [def: 65536]
@@ -682,8 +681,7 @@ GameInfo
         // lb_csm_override_staticgeo_cascades_value         "true"     // [def: -1]
         lb_sun_csm_size_cull_threshold_texels            "60"       // Culls tiny CSM contributions below a texel threshold (performance) [def: 10]
         lb_barnlight_shadowmap_scale                     "0"        // Scale for computed barnlight shadowmap size (lower = cheaper) [def: 1]
-        // Skip mixed shadow maps with no dynamic objects in view: pure skip of empty work. Cheat flag: startup only.
-        lb_shadow_map_cull_empty_mixed                   "true"     // [def: false]
+        // lb_shadow_map_cull_empty_mixed                   "true"     // Blocked since build 6769. [def: false]
         // Base resolution for dynamic shadows (lower = cheaper). Engine min 128 (was '16', clamped)
         lb_dynamic_shadow_resolution_base                "128"      // [def: 1024]
         lb_ssss_samples                                  "3"        // Subsurface sample count. Engine min 3 (was '0', clamped) [def: 11]
