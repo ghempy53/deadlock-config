@@ -534,23 +534,24 @@ GameInfo
         // Based on Sqooky's OptimizationLock 3.4, reorganised 2026-10-06 so each group is easy to toggle.
         // An active line is applied when the game starts. A line starting with // is OFF and the engine default applies.
         // To toggle: add or remove the leading //. To change a value: edit only the text inside the quotes.
-        // Each setting shows Valve's default as [def: X], from Valve's convar list (build 6753). [def: gone] = no longer exists.
+        // Each setting shows Valve's default as [def: X], from Valve's convar list (build 6774).
         // All tuning lives in this ConVars block; the engine sections above are Valve stock on purpose (see README).
 
         // ================================================================================================
         // 1. PERSONAL / READABILITY  (deliberate choices; most pin an engine default so an upstream change cannot flip it)
         // ================================================================================================
         // --- 1a. Lighting: light shadow casting off; sun and baked lighting stay ---
-        // Valve blocked the lb_enable_* light toggles from gameinfo.gi in build 6769 (gameinfo_cannot_override), so
-        // dynamic and stationary lights can no longer be turned off here. The three lines below are kept for reference.
-        // lb_enable_dynamic_lights                         "false"    // Blocked since build 6769. [def: true]
-        // lb_enable_baked_shadows                          "true"     // Blocked since build 6769. [def: true]
-        // lb_enable_stationary_lights                      "false"    // Blocked since build 6769. [def: true]
+        // Valve ignores the lb_enable_* light toggles from gameinfo.gi since build 6769, so dynamic and stationary lights
+        // stay on. Light shadow casting is still controllable and stays off.
         lb_enable_shadow_casting                         "false"    // No light shadow maps. [def: true]
         r_rendersun                                      "1"        // Sun lighting on (0 disables it) [def: true]
-        r_lightmap_size                                  "65536"    // Maximum lightmap resolution. [def: 65536]
+        // Lower-resolution baked lighting (VRAM, bandwidth): softer, flatter map lighting. Upstream 3.5 uses 1, which
+        // effectively removes lightmap detail; 2048 keeps baked lighting readable.
+        r_lightmap_size                                  "2048"     // Maximum lightmap resolution. [def: 65536]
         // Sets directional irradiance lightmap data size (lower = less detail) (-1 = uses value of r_lightmap_size )
         r_lightmap_size_directional_irradiance           "-1"       // [def: -1]
+        // Area lights off; mirrors the in-game menu (area lights Off).
+        r_arealights                                     "false"    // [def: true]
         mat_colorcorrection                              "1"        // Disables/ Enables color correction (game looks less vibrant when off) [def: true]
 
         // --- 1b. Glows, outlines, viewmodel, tracers ---
@@ -573,7 +574,6 @@ GameInfo
         // How long to show someone's numerical health value when you shoot them. Inf means infinite, but will cause the
         // healthbar to jiggle/shake forever.
         // citadel_unit_status_recent_damage_time           "inf"      // [def: 0.25]
-        // citadel_unit_status_stamina_low_pips             "7"        // Gone: added in CNS, removed again in the 09-30 hotfix. [def: gone]
 
         // --- 1d. Damage numbers (testing in-game settings: Valve defaults except a 4 s final total and no big-hit emphasis;
         //   the other lines here are the previous layout and timing, kept commented) ---
@@ -681,7 +681,6 @@ GameInfo
         // lb_csm_override_staticgeo_cascades_value         "true"     // [def: -1]
         lb_sun_csm_size_cull_threshold_texels            "60"       // Culls tiny CSM contributions below a texel threshold (performance) [def: 10]
         lb_barnlight_shadowmap_scale                     "0"        // Scale for computed barnlight shadowmap size (lower = cheaper) [def: 1]
-        // lb_shadow_map_cull_empty_mixed                   "true"     // Blocked since build 6769. [def: false]
         // Base resolution for dynamic shadows (lower = cheaper). Engine min 128 (was '16', clamped)
         lb_dynamic_shadow_resolution_base                "128"      // [def: 1024]
         lb_ssss_samples                                  "3"        // Subsurface sample count. Engine min 3 (was '0', clamped) [def: 11]
@@ -706,6 +705,7 @@ GameInfo
         // csm_viewmodel_nearz                              "512"      // [def: 0.5]
         // Disable SST generation and runtime for viewmodel (use original CSM rendering)
         sparseshadowtree_disable_for_viewmodel           "1"        // [def: true]
+        sparseshadowtree_enable_rendering                "false"    // No static geo into sun cascades. [def: true]
         // sparseshadowtree_leaf_precision_viewmodel        "0"        // [def: 0.0005]
         // r_citadel_sun_shadow_slope_scale_depth_bias      "0"        // \\. [def: 3.54]
 
@@ -718,6 +718,7 @@ GameInfo
 
         // --- 2c. Fog ---
         fog_enable                                       "false"    // [def: true]
+        r_citadel_fog_quality                            "0"        // Mirrors the in-game menu (Fog Low). [def: 1]
         volume_fog_enable_jitter                         "false"    // Don't think I can. [def: true]
         volume_fog_intermediate_textures_hdr             "false"    // See below. [def: true]
         // Based on the name I would assume that this changes the color depth of the fog. Since the majority of users don't have
@@ -745,10 +746,9 @@ GameInfo
         // Switches instanced meshes to lower LODs sooner (higher = earlier). Meshes stay visible.
         sc_instanced_mesh_lod_bias                       "5"        // [def: 1.25]
         // sc_instanced_mesh_lod_bias_shadow                "0.001"    // Bias for LOD selection of instanced meshes in shadowmaps. [def: 1.75]
-        // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal.
-        // sc_allow_dithered_lod                            "false"    // [def: true]
-        // sc_allow_dithered_lod                            "false"    // This should dither the lod to make it less obtrusive. [def: true]
-        // sc_instanced_mesh_opaque_fade                    "false"    // Fade meshes? NAH. [def: true]
+        // LOD changes and instanced-mesh fades pop instead of blending. Nothing is hidden.
+        sc_allow_dithered_lod                            "false"    // [def: true]
+        sc_instanced_mesh_opaque_fade                    "false"    // [def: true]
         // LOD switches pop instead of dithering across the transition. Nothing is hidden. Upstream 3.5 value.
         sc_dithered_lod_transition_amt                   "0"        // [def: 0.075]
         // Scale down the main viewport I belive this gets overwritten by video.txt.
@@ -843,6 +843,9 @@ GameInfo
         // clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage
         // may vary.
         thread_pool_option                               "-1"       // [def: -1]
+        // Debug-only paths off (precache validation, RenderDoc shader debug info). Probably no measurable effect.
+        r_skip_precache_validation_check                 "true"     // [def: false]
+        r_renderdoc_auto_shader_pdbs                     "false"    // [def: true]
         // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client
         // simulation. True made keyboard input feel laggy (sampled input waits out the sleep); keep false.
         engine_low_latency_sleep_after_client_tick       "false"    // [def: false]
@@ -877,19 +880,12 @@ GameInfo
         // Using mesh shaders if available instead of drawcalls. Should be cheaper.
         // sc_aggregate_render_mesh_shader                  "true"     // [def: true]
         // sc_aggregate_render_mesh_shader                  "false"    // Using mesh shaders if available instead of drawcalls. [def: true]
-        // 0: Force z prepass off. 1: Force on. -1: Don't force With my understanding of how zprepasses work this should
-        // reduce cpu usage if set to zero, but that's under the assumption that valve's implementation isn't properly
-        // optimized. Please play with this. Your mileage may vary. Gone after City Never Sleeps.
-        // r_force_zprepass                                 "0"        // [def: gone]
         // r_low_latency                                    "0"        // This acts as the convar which enables low latency, hardware dependent. [def: 1]
         // Range is 0-3 (9 was clamped; not new in CNS) and it is an archive setting owned by the in-game video menu.
         // citadel_video_preset                             "9"        // [def: 3]
         // Keep default: particle systems have a minimum CPU/GPU level, so lowering this skips effects (hides things)
         // cpu_level                                        "1"        // [def: 2]
         // gpu_mem_level                                    "1"        // GPU Memory level. [def: 2]
-        // enable_priority_boost                            "true"     // [def: gone]
-        // Disables battery saver mode (no automatic throttling). Gone after City Never Sleeps.
-        // battery_saver                                    "0"        // [def: gone]
         // 1 gives 'GlobalThreadPoolMode' 'efficiency'
         // 2 removes it from boot.vcfg
         // 3 gives 'GlobalThreadPoolMode' 'undifferentiated'
@@ -925,11 +921,11 @@ GameInfo
         // Shorter reverb tail and fewer reverb updates (upstream 3.5). Direct sound and occlusion are untouched.
         snd_steamaudio_ir_duration                       "1.0"      // Reverb tail length in s. [def: 2]
         snd_steamaudio_reverb_update_rate                "10"       // Max reverb updates per s. [def: 30]
-        // Whether the engine uses vmix to master the audio, might be a dev command.
-        // audio_enable_vmix_mastering                      "false"    // [def: true]
-        // audio_enable_spawn_mask_mix_layer                "false"    // Disabling these should help with performance, Yay! [def: true]
+        // Audio mastering DSP and two mix layers off: small audio-thread saving; the mix sounds slightly different.
+        audio_enable_vmix_mastering                      "false"    // [def: true]
+        audio_enable_spawn_mask_mix_layer                "false"    // [def: true]
         // snd_boxverb_simd                                 "false"    // Disabling these should help with performance, Yay! [def: true]
-        // snd_enable_subgraph_corenull_passthrough         "false"    // Disabling these should help with performance, Yay! [def: true]
+        snd_enable_subgraph_corenull_passthrough         "false"    // [def: true]
         // closecaption                                     "false"    // I assume this does what it says on the tin. [def: false]
         // cc_captiontrace                                  "0"        // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: 1]
 
@@ -956,11 +952,12 @@ GameInfo
         // Resolution of character decal textures. Engine min 256 (was '4', clamped)
         r_character_decal_resolution                     "256"      // [def: 1024]
         r_character_decal_monitor_render_res             "64"       // Upstream 3.5. [def: 512]
+        r_monitor_3dskybox                               "false"    // Monitors skip the 3D skybox. [def: true]
         // Cull ambient occlusion proxies sooner (factor of their size). Cosmetic. Upstream 3.5.
         r_aoproxy_cull_dist                              "0.01"     // [def: 12]
         r_render_hair                                    "false"    // No hair rendering or sim. [def: true]
         r_hair_ao                                        "0"        // Disables hair AO pass. [def: true]
-        // r_citadel_gpu_preview_denoise_passes             "0"        // [def: 3]
+        r_citadel_gpu_preview_denoise_passes             "0"        // [def: 3]
         citadel_bullet_shot_offset_fade_time             "0"        // Restored from the 2026-10-04 config. [def: 0.5]
         // Bullet impact sparks and dust on walls and floors. Stage 2 fight-CPU cut 2026-10-06. Off: hides things on
         // screen, not worth it.
@@ -968,10 +965,10 @@ GameInfo
         // Per-weapon, per-surface impact variations. Server-synced. Stage 2 fight-CPU cut 2026-10-06. Off: hides things
         // on screen, not worth it.
         // citadel_per_weapon_per_surface_impact_effects    "false"    // [def: true]
-        // mat_max_lighting_complexity                      "0"        // Doesn't seem to do anything but throwing it in for posterity. [def: 8]
-        // Low-priority dynamic lights are replaced by high-priority ones (fewer minor lights in fights). Off: hides
-        // things on screen, not worth it.
-        // cl_retire_low_priority_lights                    "1"        // [def: false]
+        mat_max_lighting_complexity                      "0"        // Upstream: no visible effect. [def: 8]
+        // Low-priority dynamic lights are replaced by high-priority ones (fewer minor lights in fights). Dynamic lights
+        // can't be turned off from this file since build 6769, so this caps their cost instead. Cosmetic.
+        cl_retire_low_priority_lights                    "1"        // [def: false]
         // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves
         // you from drawing a ray (I THINK)
         // r_pixelvisibility_partial                        "false"    // [def: true]
@@ -1017,11 +1014,7 @@ GameInfo
         // placebo.
         // mm_prefer_solo_only                              "true"     // [def: false]
         // citadel_portrait_world_renderer_off              "true"     // Off: hero posters on loading and endgame. [def: false]
-        // This command disables the blur in the shop and improves the performance of the shop DRAMATICALLY however it
-        // can cause visual issues with the pause menu on nvidia systems running vulkan. Please experiment. Gone after
-        // City Never Sleeps.
-        // r_citadel_enable_pano_world_blur                 "true"     // [def: gone]
-        // panorama_allow_transitions                       "false"    // Turns off UI anim (shop,etc) [def: true]
+        panorama_allow_transitions                       "false"    // Turns off UI anim (shop, etc). [def: true]
         panorama_disable_blur                            "true"     // Disables UI blur effects in the UI. [def: false]
         // panorama_disable_box_shadow                      "true"     // Disables UI box shadows in the UI (less GPU/UI cost) [def: false]
         // According to John Valve this is an optimization feature that stops rendering of panels underneath the top
@@ -1029,19 +1022,14 @@ GameInfo
         // panorama_panel_occlusion                         "true"     // [def: true]
         // r_dashboard_render_quality                       "1"        // Sets dashboard/UI render quality (lower = cheaper UI rendering) [def: true]
         // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
-        // v8_maximum_heap_size_mb                          "1024"     // [def: 512]
+        v8_maximum_heap_size_mb                          "1024"     // [def: 512]
         // This should keep panorama caches loaded for longer so the game can use them more frequently.
-        // panorama_comp_layer_lru_lifetime                 "4"        // [def: 1]
+        panorama_comp_layer_lru_lifetime                 "4"        // [def: 1]
         // This should increase the panorama cache size by 4x, needs more testing.
         // panorama_render_target_cache_max_size            "134217728" // [def: 31457280]
-        // panorama_max_fps                                 "30"       // Menu FPS. Gone after City Never Sleeps. [def: gone]
-        // panorama_max_overlay_fps                         "30"       // Fps In the settings/esc menu. Gone after City Never Sleeps. [def: gone]
         // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not.
         // citadel_hud_objective_health_debug_show_midboss  "false"    // [def: false]
         // citadel_hud_objective_health_enabled             "2"        // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks. [def: 2]
-        // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly
-        // visible while holding Ping. Gone after City Never Sleeps.
-        // citadel_show_chat_wheel_angle_threshold          "30"       // [def: gone]
         // citadel_show_chat_wheel_time                     "15"       // [def: 0.23]
         // citadel_hideout_ball_show_juggle_count           "1"        // Shows a fun juggle count minigame for hideout ball. [def: 0]
         // citadel_hideout_ball_show_juggle_fx              "1"        // Shows juggle visual FX for hideout ball minigame. [def: 0]
@@ -1054,8 +1042,6 @@ GameInfo
         // cl_async_usercmd_send                            "true"     // [def: true]
         // Client snapshot update rate requested from the server (higher = more frequent updates)
         // cl_updaterate                                    "128"      // [def: 20]
-        // Client-side interpolation time (smoothing delay) for rendering other players/entities.
-        // cl_interp                                        "0.01"     // [def: gone]
         // Multiplier that affects interpolation time (often cl_interp_ratio / cl_updaterate)
         // cl_interp_ratio                                  "1"        // [def: 2]
         // Smooth client's view after prediction error over this many seconds (Lower = snappier but more abrupt, higher =
@@ -1068,8 +1054,6 @@ GameInfo
         // ================================================================================================
         // 8. REFERENCE: broken, dev-only or removed convars  (documentation only; do not enable)
         // ================================================================================================
-        // Both of these commands disable creep animations which means that neutrals and guardians won't move.
-        // ai_disable                                       "1"        // [def: gone]
         // cam_idealdist                                    "0"        // [def: 150]
         // citadel_camera_dist                              "0"        // [def: 150]
         // citadel_crosshair_hit_marker_duration            "0.00001"  // Removes the hitmarker when shooting people. [def: 0.1]
@@ -1099,24 +1083,16 @@ GameInfo
         // panorama_worldpanel_update_culling               "true"     // [def: false]
         // Don't know what this does? shouldn't be needed deadlock doesn't have many physics objects.
         // phys_batch_ray_test                              "16"       // [def: 0]
-        // Causes odd visual bugs with dragons and neutrals when set to true Gone after City Never Sleeps.
-        // r_citadel_npr_force_solid_outline                "false"    // [def: gone]
         // r_draw3dskybox                                   "0"        // Enables drawing the 3D skybox layer (distant geometry) [def: true]
-        // r_draw_overlays                                  "0"        // Causes problems with the hud Gone after City Never Sleeps. [def: gone]
         // r_dx11_software_cmd_lists                        "0"        // Causes a lot of issues. [def: true]
         // Setting this to false causes vram to overflow to normal ram for some reason? Game freaks out.
         // r_frame_sync_enable                              "false"    // [def: true]
-        // r_opaque                                           'false          // makes the map invisible // (convar gone post-CNS)
-        // r_opaque                                         "false"    // Causes the map to not be rendered. Gone after City Never Sleeps. [def: gone]
         // r_wait_on_present                                "true"     // Seems to cause frame rate to artificially lower. [def: false]
         // sc_aggregate_gpu_culling_show_culled             "true"     // Debug I think, doesn't seem to do anything. [def: false]
         // sc_aggregate_show_outside_vis                    "true"     // This makes the entire map stop rendering. [def: false]
         // sc_throw_away_all_layers                         "true"     // Disables rendering, ie the screen is black. [def: false]
         // subtick_buttons_enabled                          "true"     // Makes it so people on windows systems cannot move. [def: false]
         // music_hideout_debug_enabled                      "true"     // Doesn't do anything. [def: false]
-        // This command is commented out, represented by the at the beginning of the line. Editing it will not do
-        // anything. To mess with it remove the.
-        // this_is_an_example_comment                       "true"     // [def: gone]
 
         // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.4 ------------------------------- \\
 
@@ -1133,10 +1109,6 @@ GameInfo
         // particle_cluster_use_collision_hulls             "false"    // [def: true]
         // Bypasses lookup of soundscapes for indvidual audio sources when enabled.
         // disable_source_soundscape_trace                  "true"     // [def: false]
-        // Allows animgraph operator evaluation to run in parallel (performance). Gone after City Never Sleeps.
-        // animgraph_enable_parallel_op_evaluation          "1"        // [def: gone]
-        // Allows animgraph pre-update work to run in parallel (performance). Gone after City Never Sleeps.
-        // animgraph_enable_parallel_preupdate              "1"        // [def: gone]
         // phys_threaded_cloth_bone_update                  "1"        // I am inclined to believe this makes the cloth update threaded. [def: false]
         // phys_threaded_kinematic_bone_update              "1"        // I am inclined to believe this makes the cloth kinematics threaded. [def: false]
         // phys_threaded_transform_update                   "1"        // Same as above. [def: false]
