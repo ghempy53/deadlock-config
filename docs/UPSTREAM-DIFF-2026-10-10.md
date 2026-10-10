@@ -8,7 +8,7 @@ by being commented out, are not listed. Engine sections are not compared: this r
 244 differences.
 
 **Group A applied 2026-10-10** (see `docs/CHANGES.txt`), with `r_lightmap_size` at 2048 instead of upstream 1 and
-`r_lightmap_size_directional_irradiance` left at -1. **Group B applied 2026-10-10**, all at once at the owner's request. The tables below show the state before that change.
+`r_lightmap_size_directional_irradiance` left at -1. The tables below show the state before that change.
 
 | Group | Count |
 | --- | --- |
