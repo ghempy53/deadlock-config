@@ -2,7 +2,7 @@
 
 A personal `gameinfo.gi` for Deadlock on Windows 11. It is based on
 [OptimizationLock 3.4](https://github.com/Sqooky/OptimizationLock) (Sqooky's .gi, `main @ 2b994f6`, 2026-10-03)
-(checked against `main @ e2e9925`, 2026-10-05: no new convars upstream)
+(checked against `main @ cf87a3d`, 2026-10-10: OptimizationLock 3.5 pre-release; cosmetic batch adopted)
 and was verified against the **City Never Sleeps** major update (2026-09-29),
 re-checked against build 6774 (2026-10-10).
 
