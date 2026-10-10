@@ -545,9 +545,13 @@ GameInfo
         // stay on. Light shadow casting is still controllable and stays off.
         lb_enable_shadow_casting                         "false"    // No light shadow maps. [def: true]
         r_rendersun                                      "1"        // Sun lighting on (0 disables it) [def: true]
-        r_lightmap_size                                  "65536"    // Maximum lightmap resolution. [def: 65536]
+        // Lower-resolution baked lighting (VRAM, bandwidth): softer, flatter map lighting. Upstream 3.5 uses 1, which
+        // effectively removes lightmap detail; 2048 keeps baked lighting readable.
+        r_lightmap_size                                  "2048"     // Maximum lightmap resolution. [def: 65536]
         // Sets directional irradiance lightmap data size (lower = less detail) (-1 = uses value of r_lightmap_size )
         r_lightmap_size_directional_irradiance           "-1"       // [def: -1]
+        // Area lights off; mirrors the in-game menu (area lights Off).
+        r_arealights                                     "false"    // [def: true]
         mat_colorcorrection                              "1"        // Disables/ Enables color correction (game looks less vibrant when off) [def: true]
 
         // --- 1b. Glows, outlines, viewmodel, tracers ---
@@ -701,6 +705,7 @@ GameInfo
         // csm_viewmodel_nearz                              "512"      // [def: 0.5]
         // Disable SST generation and runtime for viewmodel (use original CSM rendering)
         sparseshadowtree_disable_for_viewmodel           "1"        // [def: true]
+        sparseshadowtree_enable_rendering                "false"    // No static geo into sun cascades. [def: true]
         // sparseshadowtree_leaf_precision_viewmodel        "0"        // [def: 0.0005]
         // r_citadel_sun_shadow_slope_scale_depth_bias      "0"        // \\. [def: 3.54]
 
@@ -713,6 +718,7 @@ GameInfo
 
         // --- 2c. Fog ---
         fog_enable                                       "false"    // [def: true]
+        r_citadel_fog_quality                            "0"        // Mirrors the in-game menu (Fog Low). [def: 1]
         volume_fog_enable_jitter                         "false"    // Don't think I can. [def: true]
         volume_fog_intermediate_textures_hdr             "false"    // See below. [def: true]
         // Based on the name I would assume that this changes the color depth of the fog. Since the majority of users don't have
@@ -740,10 +746,9 @@ GameInfo
         // Switches instanced meshes to lower LODs sooner (higher = earlier). Meshes stay visible.
         sc_instanced_mesh_lod_bias                       "5"        // [def: 1.25]
         // sc_instanced_mesh_lod_bias_shadow                "0.001"    // Bias for LOD selection of instanced meshes in shadowmaps. [def: 1.75]
-        // Pretty sure this just turns dithering off for when switching between lods. Isn't a big deal.
-        // sc_allow_dithered_lod                            "false"    // [def: true]
-        // sc_allow_dithered_lod                            "false"    // This should dither the lod to make it less obtrusive. [def: true]
-        // sc_instanced_mesh_opaque_fade                    "false"    // Fade meshes? NAH. [def: true]
+        // LOD changes and instanced-mesh fades pop instead of blending. Nothing is hidden.
+        sc_allow_dithered_lod                            "false"    // [def: true]
+        sc_instanced_mesh_opaque_fade                    "false"    // [def: true]
         // LOD switches pop instead of dithering across the transition. Nothing is hidden. Upstream 3.5 value.
         sc_dithered_lod_transition_amt                   "0"        // [def: 0.075]
         // Scale down the main viewport I belive this gets overwritten by video.txt.
@@ -838,6 +843,9 @@ GameInfo
         // clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage
         // may vary.
         thread_pool_option                               "-1"       // [def: -1]
+        // Debug-only paths off (precache validation, RenderDoc shader debug info). Probably no measurable effect.
+        r_skip_precache_validation_check                 "true"     // [def: false]
+        r_renderdoc_auto_shader_pdbs                     "false"    // [def: true]
         // When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client
         // simulation. True made keyboard input feel laggy (sampled input waits out the sleep); keep false.
         engine_low_latency_sleep_after_client_tick       "false"    // [def: false]
@@ -913,11 +921,11 @@ GameInfo
         // Shorter reverb tail and fewer reverb updates (upstream 3.5). Direct sound and occlusion are untouched.
         snd_steamaudio_ir_duration                       "1.0"      // Reverb tail length in s. [def: 2]
         snd_steamaudio_reverb_update_rate                "10"       // Max reverb updates per s. [def: 30]
-        // Whether the engine uses vmix to master the audio, might be a dev command.
-        // audio_enable_vmix_mastering                      "false"    // [def: true]
-        // audio_enable_spawn_mask_mix_layer                "false"    // Disabling these should help with performance, Yay! [def: true]
+        // Audio mastering DSP and two mix layers off: small audio-thread saving; the mix sounds slightly different.
+        audio_enable_vmix_mastering                      "false"    // [def: true]
+        audio_enable_spawn_mask_mix_layer                "false"    // [def: true]
         // snd_boxverb_simd                                 "false"    // Disabling these should help with performance, Yay! [def: true]
-        // snd_enable_subgraph_corenull_passthrough         "false"    // Disabling these should help with performance, Yay! [def: true]
+        snd_enable_subgraph_corenull_passthrough         "false"    // [def: true]
         // closecaption                                     "false"    // I assume this does what it says on the tin. [def: false]
         // cc_captiontrace                                  "0"        // Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud) [def: 1]
 
@@ -944,11 +952,12 @@ GameInfo
         // Resolution of character decal textures. Engine min 256 (was '4', clamped)
         r_character_decal_resolution                     "256"      // [def: 1024]
         r_character_decal_monitor_render_res             "64"       // Upstream 3.5. [def: 512]
+        r_monitor_3dskybox                               "false"    // Monitors skip the 3D skybox. [def: true]
         // Cull ambient occlusion proxies sooner (factor of their size). Cosmetic. Upstream 3.5.
         r_aoproxy_cull_dist                              "0.01"     // [def: 12]
         r_render_hair                                    "false"    // No hair rendering or sim. [def: true]
         r_hair_ao                                        "0"        // Disables hair AO pass. [def: true]
-        // r_citadel_gpu_preview_denoise_passes             "0"        // [def: 3]
+        r_citadel_gpu_preview_denoise_passes             "0"        // [def: 3]
         citadel_bullet_shot_offset_fade_time             "0"        // Restored from the 2026-10-04 config. [def: 0.5]
         // Bullet impact sparks and dust on walls and floors. Stage 2 fight-CPU cut 2026-10-06. Off: hides things on
         // screen, not worth it.
@@ -956,10 +965,10 @@ GameInfo
         // Per-weapon, per-surface impact variations. Server-synced. Stage 2 fight-CPU cut 2026-10-06. Off: hides things
         // on screen, not worth it.
         // citadel_per_weapon_per_surface_impact_effects    "false"    // [def: true]
-        // mat_max_lighting_complexity                      "0"        // Doesn't seem to do anything but throwing it in for posterity. [def: 8]
-        // Low-priority dynamic lights are replaced by high-priority ones (fewer minor lights in fights). Off: hides
-        // things on screen, not worth it.
-        // cl_retire_low_priority_lights                    "1"        // [def: false]
+        mat_max_lighting_complexity                      "0"        // Upstream: no visible effect. [def: 8]
+        // Low-priority dynamic lights are replaced by high-priority ones (fewer minor lights in fights). Dynamic lights
+        // can't be turned off from this file since build 6769, so this caps their cost instead. Cosmetic.
+        cl_retire_low_priority_lights                    "1"        // [def: false]
         // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves
         // you from drawing a ray (I THINK)
         // r_pixelvisibility_partial                        "false"    // [def: true]
@@ -1005,7 +1014,7 @@ GameInfo
         // placebo.
         // mm_prefer_solo_only                              "true"     // [def: false]
         // citadel_portrait_world_renderer_off              "true"     // Off: hero posters on loading and endgame. [def: false]
-        // panorama_allow_transitions                       "false"    // Turns off UI anim (shop,etc) [def: true]
+        panorama_allow_transitions                       "false"    // Turns off UI anim (shop, etc). [def: true]
         panorama_disable_blur                            "true"     // Disables UI blur effects in the UI. [def: false]
         // panorama_disable_box_shadow                      "true"     // Disables UI box shadows in the UI (less GPU/UI cost) [def: false]
         // According to John Valve this is an optimization feature that stops rendering of panels underneath the top
@@ -1013,9 +1022,9 @@ GameInfo
         // panorama_panel_occlusion                         "true"     // [def: true]
         // r_dashboard_render_quality                       "1"        // Sets dashboard/UI render quality (lower = cheaper UI rendering) [def: true]
         // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
-        // v8_maximum_heap_size_mb                          "1024"     // [def: 512]
+        v8_maximum_heap_size_mb                          "1024"     // [def: 512]
         // This should keep panorama caches loaded for longer so the game can use them more frequently.
-        // panorama_comp_layer_lru_lifetime                 "4"        // [def: 1]
+        panorama_comp_layer_lru_lifetime                 "4"        // [def: 1]
         // This should increase the panorama cache size by 4x, needs more testing.
         // panorama_render_target_cache_max_size            "134217728" // [def: 31457280]
         // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not.
