@@ -544,6 +544,10 @@ GameInfo
         // Valve ignores the lb_enable_* light toggles from gameinfo.gi since build 6769, so dynamic and stationary lights
         // stay on. Light shadow casting is still controllable and stays off.
         lb_enable_shadow_casting                         "false"    // No light shadow maps. [def: true]
+        // Group B test (upstream 3.5): light binner slices and cubemap normalization. Undocumented; 0 slices may
+        // break lighting. Comment both out if lights flicker or go missing.
+        lb_bin_slices                                    "0"        // [def: 8192]
+        lb_cubemap_normalization_roughness_begin         "0.01"     // [def: 0.1]
         r_rendersun                                      "1"        // Sun lighting on (0 disables it) [def: true]
         // Lower-resolution baked lighting (VRAM, bandwidth): softer, flatter map lighting. Upstream 3.5 uses 1, which
         // effectively removes lightmap detail; 2048 keeps baked lighting readable.
@@ -768,10 +772,14 @@ GameInfo
         // cl_ragdoll_limit                                 "8"        // [def: 20]
         // Assume the client uses a fixed tickrate like the server (which may not always be true)
         cl_phys_assume_fixed_tick_interval               "true"     // [def: true]
+        // Group B test (upstream 3.5): client physics hierarchy update off, networked bodies start asleep. Watch
+        // ragdolls (Doorman ult) and physics props.
+        cl_phys_animated_hierarchy                       "false"    // [def: true]
+        cl_phys_networked_start_sleep                    "true"     // [def: false]
         // phys_cull_internal_mesh_contacts                 "true"     // Don't simulate the bones inside of a mesh. [def: false]
         // Limits/controls fast collision processing for temporary entities (impacts/tracers/etc.); higher usually = more
         // work.
-        // cl_fasttempentcollision                          "1000"     // [def: 5]
+        cl_fasttempentcollision                          "1000"     // [def: 5]
         // Update the cloth simulation every tick. Restored from the 2026-10-04 config.
         cloth_sim_on_tick                                "0"        // [def: true]
         // Cloth settling passes when cloth first spawns. Cheaper cloth (capes, coats); may look slightly stiffer.
@@ -793,8 +801,8 @@ GameInfo
         // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:.
         r_particle_model_new                             "false"    // [def: false]
         // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:.
-        // r_particle_model_new8                            "false"    // [def: true]
-        // r_particle_newinput                              "true"     // [def: false]
+        r_particle_model_new8                            "false"    // [def: true]
+        r_particle_newinput                              "true"     // [def: false]
         // Particle systems larger than this in every dimension skip culling to save CPU. They will be drawn anyway. So
         // particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this
         // value.
@@ -809,7 +817,7 @@ GameInfo
         cl_particle_fallback_multiplier                  "10"       // [def: 0]
         cl_particle_fallback_base                        "5"        // Base for falling back to cheaper effects under load. Upstream value. [def: 0]
         // I believe this handles the drawing of little visual flourish particles.
-        // r_draw_particle_children_with_parents            "1"        // [def: -1]
+        r_draw_particle_children_with_parents            "1"        // [def: -1]
         // Caps per-frame particle job time in big fights. No Valve description; may delay an effect by a frame.
         // r_limit_particle_job_duration                    "true"     // Off: turn stutter suspect. [def: false]
         // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance.
@@ -820,13 +828,13 @@ GameInfo
         r_particle_max_texture_layers                    "4"        // [def: -1]
         // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values
         // could negatively impact performance.
-        // r_particle_min_timestep                          "0.00241"  // [def: 0]
-        // I believe it is how many particle models a thread is allowed to handle. No visible change. Off while
-        // bisecting a crash (crash-bisect step 1 in docs/CHANGES.txt).
-        // r_particle_model_per_thread_count                "64"       // [def: 32]
+        r_particle_min_timestep                          "0.00241"  // [def: 0]
+        // I believe it is how many particle models a thread is allowed to handle. No visible change. Was off during the
+        // 2026-10-06 crash bisect; back on as a group B test.
+        r_particle_model_per_thread_count                "64"       // [def: 32]
         // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a
         // testvar.
-        // r_particle_skip_postsim                          "true"     // [def: false]
+        r_particle_skip_postsim                          "true"     // Group B test: may alter effects. [def: false]
         r_physics_particle_op_spawn_scale                "0"        // Prevents physics-based particle spawns. [def: 1]
         // This does what it says on the tin, should save more performance the lower fps gets. Restored from the
         // 2026-10-04 config.
@@ -842,7 +850,7 @@ GameInfo
         // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a
         // clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage
         // may vary.
-        thread_pool_option                               "-1"       // [def: -1]
+        thread_pool_option                               "2"        // Group B test (upstream 3.5). [def: -1]
         // Debug-only paths off (precache validation, RenderDoc shader debug info). Probably no measurable effect.
         r_skip_precache_validation_check                 "true"     // [def: false]
         r_renderdoc_auto_shader_pdbs                     "false"    // [def: true]
@@ -865,9 +873,9 @@ GameInfo
         cl_batch_entity_list_ops_during_latch            "true"     // [def: false]
         // Based on the name I would imagine it does what it says. Restored from the 2026-10-04 config.
         cl_simulate_dormant_entities                     "false"    // [def: true]
-        // Lets particle jobs finish later in the frame, overlapping other work. No visible change. Off while bisecting a
-        // crash (crash-bisect step 1 in docs/CHANGES.txt).
-        // r_late_particle_job_sync                         "1"        // [def: false]
+        // Lets particle jobs finish later in the frame, overlapping other work. No visible change. Was off during the
+        // 2026-10-06 crash bisect; back on as a group B test.
+        r_late_particle_job_sync                         "1"        // [def: false]
         update_voices_low_priority                       "true"     // Voice chat processing runs at low priority. No visible change. [def: false]
         // Render-thread batching thresholds. Upstream shipped 256 but its own note said not to change them; 256 was
         // followed by stutter when turning the camera, so both are back at default.
@@ -907,11 +915,13 @@ GameInfo
         // area (Valve: true results in more render passes). Untested; possible wrong clears where viewports share a
         // target. DX11 does not use it, so if it is ever made active, both renderers keep working without edits.
         // r_vulkan_accurate_renderarea                     "false"    // [def: true]
+        // Vulkan only (DX11 ignores it): fast VMA defrag algorithm. Owner group B test, no Vulkan A/B yet.
+        r_vma_defrag_algorithm                           "0"        // 0=Fast 1=Balanced. [def: 1]
 
         // ================================================================================================
         // 3. AUDIO  (defaults; snd_steamaudio_num_threads is the code default of 2)
         // ================================================================================================
-        snd_steamaudio_num_threads                       "2"        // Steam Audio thread count. Code default (cheat flag). Upstream used 6. [def: 2]
+        snd_steamaudio_num_threads                       "4"        // Upstream 3.5; group B test. [def: 2]
         snd_soundmixer_version                           "2"        // [def: 2]
         // snd_mixahead                                     "0.05"     // Adds some latency that shouldn't be percivable to save cpu. [def: 0.001]
         // snd_steamaudio_max_occlusion_samples             "32"       // Max number of samples for audio reverb. [def: 64]
@@ -972,7 +982,7 @@ GameInfo
         // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves
         // you from drawing a ray (I THINK)
         // r_pixelvisibility_partial                        "false"    // [def: true]
-        // r_strip_invisible_during_sceneobject_update      "1"        // Idk ngl. [def: false]
+        r_strip_invisible_during_sceneobject_update      "1"        // Group B test. [def: false]
         // r_enable_rigid_animation                         "false"    // [def: false]
 
         // ================================================================================================
