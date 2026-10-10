@@ -17,6 +17,7 @@ tested here. Most of the flagged convars are also `cheat`, so the console path n
 | build 6698 (silent depot update), `711b91e` | 2026-09-24 | 49 |
 | build 6711, City Never Sleeps, `58b3529` | 2026-09-29 | 77 |
 | build 6753, `8c7cf4e` | 2026-10-05 | 77 (unchanged) |
+| build 6769, `8f572f6` | 2026-10-09 | 124 (+47: light binner toggles, texture LOD scale, scene-system debug and culling) |
 
 The first batch (2026-09-24) is the competitive-integrity set: enemy outlines and glow, cloak rendering, fog, shadows,
 particle detail, fullbright and `sv_cheats`. City Never Sleeps added the Citadel-specific rendering toggles (depth of
@@ -24,7 +25,12 @@ field, distance-field occlusion, drop shadows, GPU culling, MBOIT, near-Z, post-
 
 ## Effect on this repository's config
 
-`gameinfo.gi` in this repo has **no active and no commented line** that hits the list. The lines other configs lose to
+**Build 6769 (2026-10-09) hit four active lines**: `lb_enable_dynamic_lights`, `lb_enable_stationary_lights`,
+`lb_enable_baked_shadows` and `lb_shadow_map_cull_empty_mixed`. They are commented out since then (marked Blocked since
+build 6769). Dynamic and stationary lights are back on and cannot be turned off from `gameinfo.gi`;
+`lb_enable_shadow_casting` is not flagged and still works.
+
+Before build 6769, `gameinfo.gi` in this repo had **no active and no commented line** that hit the list. The lines other configs lose to
 this flag are mostly ones this config never used (`r_shadows`, `r_enable_volume_fog`, `r_particle_max_detail_level`,
 `csm_max_shadow_dist_override`, enemy outline convars). The only upstream OptimizationLock line affected,
 `r_citadel_gpu_culling "true"`, was already removed here (it equals the default anyway).
@@ -36,6 +42,58 @@ The cuts this config relies on are **not** flagged: `r_citadel_shadow_quality`, 
 `r_shadows`, `csm_max_shadow_dist_override` and the three `r_enable_*_fog` switches, not for the cascade and quality
 convars.
 
+
+## Added in build 6769 (47 convars, 2026-10-09)
+
+| ConVar | Default | Other flags |
+| --- | --- | --- |
+| `lb_allow_shadow_rotation` | true | developmentonly cheat menubar_item |
+| `lb_csm_fov_override` | -1 | developmentonly cheat |
+| `lb_cull_offscreen_bounce_light_shadows` | true | developmentonly cheat |
+| `lb_cull_onscreen_bounce_light_shadows` | false | developmentonly cheat |
+| `lb_debug_light_bounds` | false | developmentonly cheat menubar_item |
+| `lb_debug_shadow_atlas` | false | developmentonly cheat menubar_item |
+| `lb_debug_shadowtile_atlas` | false | developmentonly cheat menubar_item |
+| `lb_debug_silhouette` | (empty) | ESilhouetteType_t developmentonly cheat menubar_item |
+| `lb_debug_silhouette_sum` | 1 | min: 1 max: 3 developmentonly cheat |
+| `lb_debug_tiles` | (empty) | ESilhouetteType_t developmentonly cheat menubar_item |
+| `lb_debug_visualize_fog_shadowed_lights` | 0 | developmentonly cheat menubar_item |
+| `lb_debug_visualize_lights` | 0 | developmentonly cheat menubar_item |
+| `lb_debug_visualize_shadowed_light_details` | false | developmentonly cheat |
+| `lb_debug_visualize_shadowed_lights` | 0 | developmentonly cheat menubar_item |
+| `lb_enable_baked_shadows` | true | developmentonly cheat menubar_item |
+| `lb_enable_dynamic_lights` | true | developmentonly cheat |
+| `lb_enable_envmaps` | true | developmentonly cheat menubar_item |
+| `lb_enable_fog_mixed_shadows` | true | developmentonly cheat menubar_item |
+| `lb_enable_lights` | true | developmentonly cheat menubar_item |
+| `lb_enable_stationary_lights` | true | developmentonly cheat |
+| `lb_enable_sunlight` | true | developmentonly cheat menubar_item |
+| `lb_max_visible_barn_lights_override` | -1 | developmentonly cheat |
+| `lb_max_visible_envmaps_override` | -1 | developmentonly cheat |
+| `lb_mixed_shadows` | true | developmentonly cheat menubar_item |
+| `lb_override_barn_light_fade_sizes` | [0.05, 0.025] | developmentonly cheat |
+| `lb_override_barn_light_fade_sizes_enable` | false | developmentonly cheat |
+| `lb_override_barn_light_shadow_fade_sizes` | [0.1, 0.05] | developmentonly cheat |
+| `lb_shadow_map_cull_empty_mixed` | false | cheat |
+| `lb_shadow_map_culling` | true | cheat |
+| `lb_use_ellipsoid_bounds` | true | developmentonly cheat |
+| `lb_use_illumination_silhouette` | true | developmentonly cheat menubar_item |
+| `lb_use_illumination_volume` | true | developmentonly cheat |
+| `r_fallback_texture_lod_scale` | 2 | cheat |
+| `r_texture_lod_scale` | 1 | cheat |
+| `sc_disable_culling_boxes` | false | cheat |
+| `sc_disable_procedural_layer_rendering` | false | cheat |
+| `sc_dump_lists` | (empty) | cheat |
+| `sc_extended_stats` | false | cheat |
+| `sc_fade_distance_scale_override` | -1 | cheat |
+| `sc_fog_cull` | true | cheat |
+| `sc_force_lod_level` | -1 | cheat |
+| `sc_force_translation_in_projection` | false | cheat |
+| `sc_only_render_opaque` | false | cheat |
+| `sc_only_render_shadowcasters` | false | cheat |
+| `sc_show_cs_skinning_stats` | false | developmentonly cheat menubar_item |
+| `sc_show_view_profiler` | false | developmentonly cheat menubar_item |
+| `sc_show_vt_stats` | false | developmentonly cheat |
 
 ## The full list (77 convars, build 6753)
 
@@ -170,7 +228,7 @@ These four were in the first batch and are gone from the City Never Sleeps dump 
 
 ```
 curl -sSL -o convars.txt https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/master/DumpSource2/convars.txt
-grep -c gameinfo_cannot_override convars.txt                       # currently 77
+grep -c gameinfo_cannot_override convars.txt                       # currently 124 (build 6769)
 grep gameinfo_cannot_override convars.txt | awk '{print $1}' | sort > blocked.txt
 grep -oE '^\s*(//\s*)?[a-zA-Z_][a-zA-Z0-9_]*\s+"' gameinfo.gi | sed -E 's#^\s*(//\s*)?##; s/\s.*//' | sort -u > mine.txt
 comm -12 mine.txt blocked.txt                                       # must print nothing

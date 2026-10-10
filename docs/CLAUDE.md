@@ -72,8 +72,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - No gameplay information is hidden for performance: no culling props/troopers/health bars, no removing impact
   effects, ropes, ragdolls. Purely cosmetic cuts (lighting, hair, splashes, decals, UI blur) are allowed. `r_size_cull_threshold` stays default (it culls trooper health bars). `cpu_level` and
   `gpu_level` stay default (particle systems have minimum levels, so lowering them skips effects).
-- Map lighting (2026-10-07): dynamic and stationary lights and light shadow casting are off for performance. Hero
-  posters stay on (citadel_portrait_world_renderer_off at default) but render unlit; the owner accepts that. Sun, baked shadows and lightmaps stay on (turning those off makes the map unreadably bright or dark).
+- Map lighting: light shadow casting is off. Dynamic and stationary lights were off too until Valve blocked the
+  `lb_enable_*` toggles from gameinfo.gi in build 6769 (2026-10-09); they are back on and can't be turned off here. Sun, baked shadows and lightmaps stay on (turning those off makes the map unreadably bright or dark).
 - Camera, spectator and viewmodel convars stay at Valve defaults (owner, 2026-10-07: the camera felt wrong).
   `citadel_camera_use_vmdl_flatten_horizontal` stays default (false made aiming down sights far too zoomed in).
   The gun-aim pose override was tried and reverted.

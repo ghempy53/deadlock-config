@@ -540,13 +540,12 @@ GameInfo
         // ================================================================================================
         // 1. PERSONAL / READABILITY  (deliberate choices; most pin an engine default so an upstream change cannot flip it)
         // ================================================================================================
-        // --- 1a. Lighting: performance first (dynamic/stationary lights, light shadows off; baked lighting stays) ---
-        // Dynamic lights off: walker, teleporter and ability lights. Ability particles still draw. Hero posters on the
-        // loading, shop and endgame screens still show but render unlit (owner choice).
-        lb_enable_dynamic_lights                         "false"    // [def: true]
-        // Baked shadows on (false disables them; game looks bright if off while stationary lights = 1)
-        lb_enable_baked_shadows                          "true"     // [def: true]
-        lb_enable_stationary_lights                      "false"    // Flatter map, cheaper. [def: true]
+        // --- 1a. Lighting: light shadow casting off; sun and baked lighting stay ---
+        // Valve blocked the lb_enable_* light toggles from gameinfo.gi in build 6769 (gameinfo_cannot_override), so
+        // dynamic and stationary lights can no longer be turned off here. The three lines below are kept for reference.
+        // lb_enable_dynamic_lights                         "false"    // Blocked since build 6769. [def: true]
+        // lb_enable_baked_shadows                          "true"     // Blocked since build 6769. [def: true]
+        // lb_enable_stationary_lights                      "false"    // Blocked since build 6769. [def: true]
         lb_enable_shadow_casting                         "false"    // No light shadow maps. [def: true]
         r_rendersun                                      "1"        // Sun lighting on (0 disables it) [def: true]
         r_lightmap_size                                  "65536"    // Maximum lightmap resolution. [def: 65536]
@@ -682,8 +681,7 @@ GameInfo
         // lb_csm_override_staticgeo_cascades_value         "true"     // [def: -1]
         lb_sun_csm_size_cull_threshold_texels            "60"       // Culls tiny CSM contributions below a texel threshold (performance) [def: 10]
         lb_barnlight_shadowmap_scale                     "0"        // Scale for computed barnlight shadowmap size (lower = cheaper) [def: 1]
-        // Skip mixed shadow maps with no dynamic objects in view: pure skip of empty work. Cheat flag: startup only.
-        lb_shadow_map_cull_empty_mixed                   "true"     // [def: false]
+        // lb_shadow_map_cull_empty_mixed                   "true"     // Blocked since build 6769. [def: false]
         // Base resolution for dynamic shadows (lower = cheaper). Engine min 128 (was '16', clamped)
         lb_dynamic_shadow_resolution_base                "128"      // [def: 1024]
         lb_ssss_samples                                  "3"        // Subsurface sample count. Engine min 3 (was '0', clamped) [def: 11]
@@ -751,6 +749,8 @@ GameInfo
         // sc_allow_dithered_lod                            "false"    // [def: true]
         // sc_allow_dithered_lod                            "false"    // This should dither the lod to make it less obtrusive. [def: true]
         // sc_instanced_mesh_opaque_fade                    "false"    // Fade meshes? NAH. [def: true]
+        // LOD switches pop instead of dithering across the transition. Nothing is hidden. Upstream 3.5 value.
+        sc_dithered_lod_transition_amt                   "0"        // [def: 0.075]
         // Scale down the main viewport I belive this gets overwritten by video.txt.
         // mat_viewportscale                                "0.01"     // [def: 1]
 
@@ -922,6 +922,9 @@ GameInfo
         // The number of directions considered for ray bounce by the game's audio.
         snd_steamaudio_num_diffuse_samples               "512"      // Reverb only; occlusion untouched. [def: 2048]
         snd_steamaudio_reverb_order_rendering            "0"        // Mono reverb tail. [def: 1]
+        // Shorter reverb tail and fewer reverb updates (upstream 3.5). Direct sound and occlusion are untouched.
+        snd_steamaudio_ir_duration                       "1.0"      // Reverb tail length in s. [def: 2]
+        snd_steamaudio_reverb_update_rate                "10"       // Max reverb updates per s. [def: 30]
         // Whether the engine uses vmix to master the audio, might be a dev command.
         // audio_enable_vmix_mastering                      "false"    // [def: true]
         // audio_enable_spawn_mask_mix_layer                "false"    // Disabling these should help with performance, Yay! [def: true]
@@ -940,9 +943,21 @@ GameInfo
         // Disables water and impact splash effects. Cosmetic.
         cl_show_splashes                                 "0"        // [def: true]
         r_world_wind_strength                            "0"        // Disables wind effects, cosmetic only. [def: 40]
+        // Wind simulation fully off (upstream 3.5); wind strength is already 0. Cosmetic.
+        r_world_wind_frequency_grass                     "0"        // [def: 0.03]
+        r_world_wind_frequency_trees                     "0"        // [def: 0.003]
+        wind_system_default_resolution_xy                "0"        // [def: 256]
+        wind_system_temporal_smoothing                   "false"    // [def: true]
         // r_drawropes                                      "false"    // Off: hides things on screen, not worth it. [def: true]
+        // Ropes and ziplines stay visible: drawn opaque, and no CPU spent on wind gusts. The rope_smooth_* lines from
+        // upstream 3.5 are not used: alpha 0 could make thin ziplines vanish at range.
+        r_ropetranslucent                                "false"    // [def: true]
+        rope_wind_dist                                   "0"        // No wind on ropes. [def: 1000]
         // Resolution of character decal textures. Engine min 256 (was '4', clamped)
         r_character_decal_resolution                     "256"      // [def: 1024]
+        r_character_decal_monitor_render_res             "64"       // Upstream 3.5. [def: 512]
+        // Cull ambient occlusion proxies sooner (factor of their size). Cosmetic. Upstream 3.5.
+        r_aoproxy_cull_dist                              "0.01"     // [def: 12]
         r_render_hair                                    "false"    // No hair rendering or sim. [def: true]
         r_hair_ao                                        "0"        // Disables hair AO pass. [def: true]
         // r_citadel_gpu_preview_denoise_passes             "0"        // [def: 3]
