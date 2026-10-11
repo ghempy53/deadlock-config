@@ -862,6 +862,13 @@ REVERT TEST GROUP B (2026-10-10)
   its state after PR #48; lines that did not exist before #49 are removed again. The #49 entry above stays as history.
   Line numbers back to the post-#48 layout.
 
+UPSTREAM SYNC CHECK (2026-10-11, OptimizationLock main @ 7d560c5)
+  OptimizationLock 3.5.1 (a0b9ba2, 7d560c5, plus community PR #83): r_lightmap_size 1 -> 2048 (3.5's 1 turned the map
+  black at High textures; this config already uses 2048), and comment-only edits (mip bias, sc_fade_distance_scale_override
+  note, version strings). No new convars, no engine-section changes. Adopted: nothing new. The full comparison is now
+  docs/UPSTREAM-DIFF.md (replaces UPSTREAM-DIFF-2026-10-10.md): 226 differences; the only still-adoptable one is
+  r_lightmap_size_directional_irradiance 0 (ours -1, follows 2048).
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.

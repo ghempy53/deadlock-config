@@ -1,20 +1,18 @@
-# Differences from OptimizationLock (Sqooky's .gi, main @ cf87a3d)
+# Differences from OptimizationLock (Sqooky's .gi, main @ 7d560c5, 3.5.1)
 
-Generated 2026-10-10. Compares the effective value of every convar in upstream `Sqooky's .gi/gameinfo.gi` (3.5 pre-release)
+Generated 2026-10-11. Compares the effective value of every convar in upstream `Sqooky's .gi/gameinfo.gi` (3.5.1)
 with this repo's `gameinfo.gi`, using Valve's dump for build 6774 (GameTracking `2d87734`). A convar that is unset or
-commented out counts as its engine default. 23 convars that upstream sets to the default value, and 51 that differ only
+commented out counts as its engine default. 23 convars that upstream sets to the default value, and 65 that differ only
 by being commented out, are not listed. Engine sections are not compared: this repo keeps them Valve stock.
 
-244 differences.
+Group A of the 2026-10-10 version was applied (PR #48); group B was applied and reverted (PRs #49, #50).
 
-**Group A applied 2026-10-10** (see `docs/CHANGES.txt`), with `r_lightmap_size` at 2048 instead of upstream 1 and
-`r_lightmap_size_directional_irradiance` left at -1. The tables below show the state before that change.
+226 differences.
 
 | Group | Count |
 | --- | --- |
-| A. Adoptable now (cosmetic or UI, nothing hidden, low risk) | 19 |
-| B. Test one at a time (undocumented or unclear effect) | 16 |
-| C. Already tried here and reverted | 8 |
+| A. Still adoptable (cosmetic, nothing hidden, low risk) | 1 |
+| C. Already tried here and reverted | 24 |
 | D. No effect here (feature already off, or value clamps to ours) | 28 |
 | E. Hides gameplay information, breaks effects or costs latency | 35 |
 | F. Against owner choices or repo rules | 31 |
@@ -24,63 +22,40 @@ by being commented out, are not listed. Engine sections are not compared: this r
 | J. Server-only (bot matches only; nothing online) | 21 |
 | K. Replicated (the server value wins online) | 31 |
 
-## A. Adoptable now (cosmetic or UI, nothing hidden, low risk)
+## A. Still adoptable (cosmetic, nothing hidden, low risk)
 
 | ConVar | Upstream | Ours | Default | Note |
 | --- | --- | --- | --- | --- |
-| `audio_enable_spawn_mask_mix_layer` | `false` | (unset) | `true` | Audio mastering/mix layers off: small audio-thread saving, mix sounds different. |
-| `audio_enable_vmix_mastering` | `false` | (unset) | `true` | Audio mastering/mix layers off: small audio-thread saving, mix sounds different. |
-| `cl_retire_low_priority_lights` | `1` | (unset) | `false` | Valve now ignores lb_enable_dynamic_lights from gameinfo.gi, so dynamic lights are on again; this caps how many low-priority ones run. |
-| `mat_max_lighting_complexity` | `0` | (unset) | `8` | Upstream says no visible effect. |
-| `panorama_allow_transitions` | `false` | (unset) | `true` | UI animations off (shop, menus). |
-| `panorama_comp_layer_lru_lifetime` | `4` | (unset) | `1` | Longer-lived UI cache and bigger HUD script heap: fewer HUD-driven hitches. |
-| `r_arealights` | `false` | (unset) | `true` | Mirrors of in-game menu settings already Off/Low; pins them. |
-| `r_citadel_fog_quality` | `0` | (unset) | `1` | Mirrors of in-game menu settings already Off/Low; pins them. |
-| `r_citadel_gpu_preview_denoise_passes` | `0` | (unset) | `3` | Denoise passes for a GPU preview path; likely tools-only. |
-| `r_lightmap_size` | `1` | `65536` | `65536` | Lower-resolution baked lighting (upstream 1 / 0: minimal). Flatter, blurrier map lighting; VRAM and bandwidth. |
-| `r_lightmap_size_directional_irradiance` | `0` | `-1` | `-1` | Lower-resolution baked lighting (upstream 1 / 0: minimal). Flatter, blurrier map lighting; VRAM and bandwidth. |
-| `r_monitor_3dskybox` | `0` | (unset) | `true` | In-world monitors stop rendering the 3D skybox. |
-| `r_renderdoc_auto_shader_pdbs` | `false` | (unset) | `true` | Debug-only paths; probably no-op. |
-| `r_skip_precache_validation_check` | `true` | (unset) | `false` | Debug-only paths; probably no-op. |
-| `sc_allow_dithered_lod` | `false` | (unset) | `true` | LOD and instanced-mesh fades pop instead of blending. Pairs with sc_dithered_lod_transition_amt 0 (already set). |
-| `sc_instanced_mesh_opaque_fade` | `false` | (unset) | `true` | LOD and instanced-mesh fades pop instead of blending. Pairs with sc_dithered_lod_transition_amt 0 (already set). |
-| `snd_enable_subgraph_corenull_passthrough` | `false` | (unset) | `true` | Audio mastering/mix layers off: small audio-thread saving, mix sounds different. |
-| `sparseshadowtree_enable_rendering` | `0` | (unset) | `true` | Static geometry into sun cascades; cascades are 0 here, so likely a no-op. |
-| `v8_maximum_heap_size_mb` | `1024` | (unset) | `512` | Longer-lived UI cache and bigger HUD script heap: fewer HUD-driven hitches. |
-
-## B. Test one at a time (undocumented or unclear effect)
-
-| ConVar | Upstream | Ours | Default | Note |
-| --- | --- | --- | --- | --- |
-| `cl_fasttempentcollision` | `1000` | (unset) | `5` | Client physics internals; risk to ragdolls (Doorman ult) and impacts. |
-| `cl_phys_animated_hierarchy` | `false` | (unset) | `true` | Client physics internals; risk to ragdolls (Doorman ult) and impacts. |
-| `cl_phys_networked_start_sleep` | `true` | (unset) | `false` | Client physics internals; risk to ragdolls (Doorman ult) and impacts. |
-| `lb_bin_slices` | `0` | (unset) | `8192` | Light binner internals; 0 slices may break lighting. |
-| `lb_cubemap_normalization_roughness_begin` | `0.01` | (unset) | `0.1` | Light binner internals; 0 slices may break lighting. |
-| `r_draw_particle_children_with_parents` | `1` | (unset) | `-1` | Particle internals without Valve descriptions (min_timestep only acts above ~415 FPS). |
-| `r_late_particle_job_sync` | `1` | (unset) | `false` | Was on before the 2026-10-06 crash bisect; never re-tested. |
-| `r_particle_min_timestep` | `0.00241` | (unset) | `0` | Particle internals without Valve descriptions (min_timestep only acts above ~415 FPS). |
-| `r_particle_model_new8` | `false` | (unset) | `true` | Particle internals without Valve descriptions (min_timestep only acts above ~415 FPS). |
-| `r_particle_model_per_thread_count` | `64` | (unset) | `32` | Particle internals without Valve descriptions (min_timestep only acts above ~415 FPS). |
-| `r_particle_newinput` | `true` | (unset) | `false` | Particle internals without Valve descriptions (min_timestep only acts above ~415 FPS). |
-| `r_particle_skip_postsim` | `true` | (unset) | `false` | Test convar; ConVar route to upstream engine PostSimulate 0. May break effects. |
-| `r_strip_invisible_during_sceneobject_update` | `1` | (unset) | `false` | No description; on the old unproven list. |
-| `r_vma_defrag_algorithm` | `0` | (unset) | `1` | Vulkan only; renderer rule: default unless a Vulkan A/B shows a gain. |
-| `snd_steamaudio_num_threads` | `4` | `2` | `2` | Upstream 4, ours 2: more audio threads compete for 8 cores. |
-| `thread_pool_option` | `2` | `-1` | `-1` | Hidden; upstream itself is unsure what it does. |
+| `r_lightmap_size_directional_irradiance` | `0` | `-1` | `-1` | Ours 2048 / -1 (follows 2048); upstream 3.5.1 also uses 2048 but sets directional irradiance to 0: flatter lighting. |
 
 ## C. Already tried here and reverted
 
 | ConVar | Upstream | Ours | Default | Note |
 | --- | --- | --- | --- | --- |
+| `cl_fasttempentcollision` | `1000` | (unset) | `5` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `cl_phys_animated_hierarchy` | `false` | (unset) | `true` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `cl_phys_networked_start_sleep` | `true` | (unset) | `false` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
 | `engine_accurate_input_processing_delta_time` | `true` | (unset) | `false` | Camera-feel lines, reset to default when the camera felt wrong. |
 | `engine_max_ticks_to_simulate` | `2` | (unset) | `-1` | Camera-feel lines, reset to default when the camera felt wrong. |
+| `lb_bin_slices` | `0` | (unset) | `8192` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `lb_cubemap_normalization_roughness_begin` | `0.01` | (unset) | `0.1` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `r_draw_particle_children_with_parents` | `1` | (unset) | `-1` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `r_late_particle_job_sync` | `1` | (unset) | `false` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
 | `r_limit_particle_job_duration` | `true` | (unset) | `false` | Applied 2026-10-07, reverted the same day (turn stutter, lower FPS). |
 | `r_particle_max_size_cull` | `900` | (unset) | `1200` | Applied 2026-10-07, reverted the same day (turn stutter, lower FPS). |
+| `r_particle_min_timestep` | `0.00241` | (unset) | `0` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `r_particle_model_new8` | `false` | (unset) | `true` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `r_particle_model_per_thread_count` | `64` | (unset) | `32` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `r_particle_newinput` | `true` | (unset) | `false` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `r_particle_skip_postsim` | `true` | (unset) | `false` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `r_strip_invisible_during_sceneobject_update` | `1` | (unset) | `false` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
 | `r_texture_budget_threshold` | `0.7` | (unset) | `0.9` | Applied 2026-10-07, reverted the same day (turn stutter, lower FPS). |
 | `r_texture_budget_update_period` | `0.5` | (unset) | `0.1` | Applied 2026-10-07, reverted the same day (turn stutter, lower FPS). |
+| `r_vma_defrag_algorithm` | `0` | (unset) | `1` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
 | `sc_aggregate_bvh_threshold` | `256` | (unset) | `128` | Applied 2026-10-07, reverted the same day (turn stutter, lower FPS). |
 | `sc_layer_batch_threshold` | `256` | (unset) | `128` | Applied 2026-10-07, reverted the same day (turn stutter, lower FPS). |
+| `snd_steamaudio_num_threads` | `4` | `2` | `2` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
+| `thread_pool_option` | `2` | `-1` | `-1` | Group B: applied all at once 2026-10-10 (PR #49), reverted at the owner's request (PR #50). |
 
 ## D. No effect here (feature already off, or value clamps to ours)
 
