@@ -869,6 +869,17 @@ UPSTREAM SYNC CHECK (2026-10-11, OptimizationLock main @ 7d560c5)
   docs/UPSTREAM-DIFF.md (replaces UPSTREAM-DIFF-2026-10-10.md): 226 differences; the only still-adoptable one is
   r_lightmap_size_directional_irradiance 0 (ours -1, follows 2048).
 
+UPSTREAM DIFF AUDIT (2026-10-11)
+  An independent re-parse (subagent, own parser, Valve dump 2d87734, upstream 7d560c5) confirmed docs/UPSTREAM-DIFF.md's
+  data: 226 differences, every value cell, and the removed/blocked/server-only/replicated groups. It found errors in
+  the reasons, now fixed: panorama_transition_time_factor 2 is faster, not slower (moved to no-effect, transitions are
+  off here); vis_sunlight_enable picks the sun shadow visibility set and does not turn the sun off (moved to no-effect);
+  sc_instanced_mesh_gpu_density_culling false draws more, hides nothing (moved to no-effect); r_pixelvisibility_partial
+  note corrected; r_texture_budget_threshold and four IK rows had the wrong history; a CSM parse-error note was copied
+  to unrelated rows; r_farz/r_mapextents/LOD-scale notes were mixed up; props_break_max_pieces_perframe moved to
+  replicated; csm_max_num_cascades_override moved to repo choice. Duplicate-key (last value wins) assumption stated.
+  No config change; the adoptable list is unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
