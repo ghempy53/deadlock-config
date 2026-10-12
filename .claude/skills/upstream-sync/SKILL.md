@@ -46,4 +46,4 @@ UPSTREAM SYNC CHECK (YYYY-MM-DD, OptimizationLock main @ <short sha>)
   <what changed upstream in one or two lines>. Adopted: ... Skipped: ... (reasons).
 ```
 
-Also update the "checked against `main @ ...`" line in the `README.md` header.
+Also update the "checked against `main @ ...`" line in the experimental section of `docs/CONFIGS.md`.

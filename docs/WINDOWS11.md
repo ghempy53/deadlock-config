@@ -2,7 +2,7 @@
 
 This is general OS and driver guidance for the target setup: **Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB,
 32 GB DDR5-6000 EXPO, 2560x1440 @ 270 Hz, DX11 or Vulkan (same config, no edits to switch)**.
-It does not depend on any Deadlock patch. The game-side settings are in `gameinfo.gi` and the README.
+It does not depend on any Deadlock patch. The game-side settings are in the configs and [IN-GAME-SETTINGS.md](IN-GAME-SETTINGS.md).
 Change one thing at a time, and compare frametimes before and after (for example with CapFrameX or PresentMon)
 over the same in-game scenario. Sandbox works well for this.
 
@@ -15,7 +15,7 @@ over the same in-game scenario. Sandbox works well for this.
   stability, and an out-of-date BIOS is a common fix on the Deadlock forums for crashes with no error.
 - **If Deadlock crashes with exception 0xc0000005 (Event Viewer):** forum reports most often trace it to memory
   instability that Source 2 exposes and stress tests miss. Test at 5800 MT/s (one step below EXPO 6000) or with EXPO
-  off for a few sessions. Details in [FORUM-RESEARCH-2026-10-06.md](FORUM-RESEARCH-2026-10-06.md).
+  off for a few sessions. Details in [research/FORUM-RESEARCH-2026-10-06.md](research/FORUM-RESEARCH-2026-10-06.md).
 - **Power plan:** *Balanced* is fine with a current chipset driver. *High performance* mostly adds idle power.
 
 ## NVIDIA

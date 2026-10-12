@@ -5,7 +5,7 @@ Generated 2026-10-06. Baseline: this repo's `gameinfo.gi` (183 active convar lin
 ## How to read this
 
 - **Active** counts every uncommented `name "value"` line in the `ConVars` block, including Valve's own stock tail (86 entries), so subtract roughly 86 for the number of real tweaks.
-- **Dead (blocked)** are active lines Valve now ignores when set from `gameinfo.gi` (`gameinfo_cannot_override`, see [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md)). They cost nothing but do nothing.
+- **Dead (blocked)** are active lines Valve now ignores when set from `gameinfo.gi` (`gameinfo_cannot_override`, see [BLOCKED-CONVARS.md](../BLOCKED-CONVARS.md)). They cost nothing but do nothing.
 - **Not in dump** are active lines whose convar no longer exists in build 6753 (removed or renamed, mostly by City Never Sleeps). Also inert. Four of these appear in Valve's own stock tail (`cl_async_usercmd_send_disabled_recvmargin_min`, `panorama_classes_perf_warning_threshold_ms`, `snd_event_browser_default_stack`, `snd_event_browser_focus_events`) and are counted for every config, this one included.
 - **Guarded sections edited** lists which of the seven sections named by Valve's matchmaking guard string differ from stock. This repo keeps all seven identical to stock on purpose.
 - "ours" is this repo. "theirs" is the compared config. Values are compared case-insensitively after stripping quotes.

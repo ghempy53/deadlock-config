@@ -1,6 +1,6 @@
 ---
 name: patch-verify
-description: Verify gameinfo.gi after a Deadlock game update. Covers removed, renamed or re-defaulted convars, stock-section drift, the stock ConVars tail and [def:] tags. Use when the owner mentions a new patch, hotfix or major update, sees gameinfo or console errors after an update, or asks to re-verify against Valve's data.
+description: Verify experimental-config/gameinfo.gi after a Deadlock game update. Covers removed, renamed or re-defaulted convars, stock-section drift, the stock ConVars tail and [def:] tags. Use when the owner mentions a new patch, hotfix or major update, sees gameinfo or console errors after an update, or asks to re-verify against Valve's data.
 ---
 
 # Post-update verification
@@ -33,7 +33,7 @@ python3 utils/check.py
 ```
 
 The expected `stock_diff` result is 0 errors, with only the FileSystem SearchPaths warning. For anything else:
-- **Guarded section or PGIVersion differs:** copy Valve's new section into `gameinfo.gi` exactly. Those sections must
+- **Guarded section or PGIVersion differs:** copy Valve's new section into `experimental-config/gameinfo.gi` exactly. Those sections must
   match stock.
 - **Stock ConVars entry missing or different:** update our stock tail to Valve's value (`fps_max`/`fps_max_ui` stay 0).
 - **Tail entry no longer in stock:** remove it.
@@ -42,7 +42,7 @@ The expected `stock_diff` result is 0 errors, with only the FileSystem SearchPat
 
 Add a section to `docs/CHANGES.txt` above `NOTES`, as in the earlier audits:
 `<UPDATE NAME> CHECK (YYYY-MM-DD; Valve data: GameTracking-Deadlock <sha>, build <n>)`. List each change with
-`line N`/`line --` rows and a short why. Update the README header's "verified against" line and any in-game settings
+`line N`/`line --` rows and a short why. Update the "verified against" line in the experimental section of `docs/CONFIGS.md` and any in-game settings
 the patch moved. Run `python3 utils/check.py --fix` last.
 
 If nothing changed, still record a one-line check so the next diff starts from the new commit.

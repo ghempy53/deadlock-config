@@ -1,6 +1,6 @@
 ---
 name: convar-change
-description: Add, change, toggle or revert one or more convars in gameinfo.gi, including the docs/CHANGES.txt entry and line renumbering. Use for any request that changes a setting value, comments one in or out, or asks for more FPS or a visual or feel fix through convars.
+description: Add, change, toggle or revert one or more convars in experimental-config/gameinfo.gi, including the docs/CHANGES.txt entry and line renumbering. Use for any request that changes a setting value, comments one in or out, or asks for more FPS or a visual or feel fix through convars.
 ---
 
 # Changing convars in gameinfo.gi
@@ -23,9 +23,9 @@ Note any `replicated` (server value may win online) or `archive` (a saved user/m
 For a value, stay inside the min/max range. Prefer moderate values over extremes. The owner tests in game and
 reports back, so suggest one stage at a time when the change is about performance.
 
-## 2. Edit gameinfo.gi
+## 2. Edit experimental-config/gameinfo.gi
 
-- Search first: `grep -n 'NAME' gameinfo.gi`. If a line exists (active or commented), edit it. Never add a second one.
+- Search first: `grep -n 'NAME' experimental-config/gameinfo.gi`. If a line exists (active or commented), edit it. Never add a second one.
 - New lines go in the right group (1a–1e, 2, 3, ...). Use the column layout of the neighbouring lines: value quote at
   column 58, note `//` at column 69, and `[def: X]` with Valve's default from the lookup.
 - No `"` in any comment text.
@@ -47,6 +47,7 @@ python3 utils/convars.py audit   # must say 0 error(s); fix any [def:] warning o
 
 ## 5. Docs and commit
 
-- Update `README.md` if an assumed in-game setting, or something the owner will notice, changed.
+- Update `docs/IN-GAME-SETTINGS.md` if an assumed in-game setting changed, and `docs/CONFIGS.md` if something else the
+  owner will notice changed.
 - One theme per commit. The subject says the effect in plain words. Summarise for the owner: what changed, what to
   look for in game, and how to undo it (which lines to comment out).

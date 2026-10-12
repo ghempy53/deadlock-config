@@ -230,7 +230,7 @@ These four were in the first batch and are gone from the City Never Sleeps dump 
 curl -sSL -o convars.txt https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/master/DumpSource2/convars.txt
 grep -c gameinfo_cannot_override convars.txt                       # currently 124 (build 6769)
 grep gameinfo_cannot_override convars.txt | awk '{print $1}' | sort > blocked.txt
-grep -oE '^\s*(//\s*)?[a-zA-Z_][a-zA-Z0-9_]*\s+"' gameinfo.gi | sed -E 's#^\s*(//\s*)?##; s/\s.*//' | sort -u > mine.txt
+grep -oE '^\s*(//\s*)?[a-zA-Z_][a-zA-Z0-9_]*\s+"' experimental-config/gameinfo.gi | sed -E 's#^\s*(//\s*)?##; s/\s.*//' | sort -u > mine.txt
 comm -12 mine.txt blocked.txt                                       # must print nothing
 ```
 
