@@ -115,7 +115,7 @@ def locate(name: str, lines: list[str], all_settings: list[gi.Setting]) -> list[
 def head_line_map(lines: list[str]) -> dict[int, int]:
     """Map 1-based line numbers of gameinfo.gi at git HEAD to the working copy (unchanged lines only)."""
     old = subprocess.run(
-        ["git", "-C", str(gi.REPO), "show", "HEAD:gameinfo.gi"], capture_output=True, text=True, encoding="utf-8",
+        ["git", "-C", str(gi.REPO), "show", "HEAD:experimental-config/gameinfo.gi"], capture_output=True, text=True, encoding="utf-8",
     )
     if old.returncode != 0:
         return {}
@@ -189,7 +189,7 @@ def hook(mode: str) -> int:
 
     if mode == "post":
         path = str((payload.get("tool_input") or {}).get("file_path", ""))
-        if not path.replace("\\", "/").endswith(("gameinfo.gi", "docs/CHANGES.txt")):
+        if not path.replace("\\", "/").endswith(("experimental-config/gameinfo.gi", "docs/CHANGES.txt")):
             return 0
         # Mid-edit, docs/CHANGES.txt line numbers are expected to lag; only structural breakage blocks here.
         errors, _, _ = run(fix=False, include_changes=False, include_warnings=False)
@@ -197,7 +197,7 @@ def hook(mode: str) -> int:
         if payload.get("stop_hook_active"):
             return 0  # already blocked once this turn; do not loop
         dirty = subprocess.run(
-            ["git", "-C", str(gi.REPO), "status", "--porcelain", "--", "gameinfo.gi", "docs/CHANGES.txt"],
+            ["git", "-C", str(gi.REPO), "status", "--porcelain", "--", "experimental-config/gameinfo.gi", "docs/CHANGES.txt"],
             capture_output=True, text=True,
         ).stdout.strip()
         if not dirty:
