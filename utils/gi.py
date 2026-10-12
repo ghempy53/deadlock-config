@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-GI = REPO / "gameinfo.gi"
+GI = REPO / "experimental-config" / "gameinfo.gi"
 CHANGES = REPO / "docs" / "CHANGES.txt"
 README = REPO / "README.md"
 CACHE = Path(__file__).resolve().parent / ".cache"
