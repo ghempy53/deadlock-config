@@ -4,7 +4,7 @@
 
 | File | What it is |
 | --- | --- |
-| [CONFIGS.md](CONFIGS.md) | Stable vs experimental: sources, edits, caveats, and the layout of the experimental config. |
+| [CONFIGS.md](CONFIGS.md) | Stable vs experimental: sources, edits, caveats, frozen stable versions (v1.0), how to A/B test experimental against v1.0, and the layout of the experimental config. |
 | [UPDATE-COMMAND.md](UPDATE-COMMAND.md) | Set up and use the `DeadlockConfig-Update` PowerShell command. |
 | [INSTALL.md](INSTALL.md) | Manual install and undo, launch options, DX11 vs Vulkan, where video settings are saved. |
 | [IN-GAME-SETTINGS.md](IN-GAME-SETTINGS.md) | Video, camera, damage-number and HUD settings the experimental config assumes. |

@@ -23,6 +23,7 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 | --- | --- |
 | `experimental-config/gameinfo.gi` | The tuned config. KeyValues. All tuning lives in the `ConVars` tweak block. Every rule below applies to it. |
 | `stable-config/gameinfo.gi` | Eskay's config, verbatim except the edits listed in `docs/CONFIGS.md`. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
+| `stable-config/v<N>/gameinfo.gi` | Frozen stable versions. **Never edit one.** A new version is a new folder plus a row in `docs/CONFIGS.md`. v1.0 (2026-10-13) is the owner's performance baseline: compare experimental changes against it (`python3 utils/compare.py`). |
 | `scripts/DeadlockConfig-Update.ps1` | The owner's PowerShell install command. Tutorial in `docs/UPDATE-COMMAND.md`. Keep it Windows PowerShell 5.1 compatible and ASCII only. |
 | `docs/CHANGES.txt` | Source of truth for every difference from upstream 3.4, in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
 | `README.md` | Short landing page. Keep it short; details go in `docs/` and are linked from `docs/README.md` (the docs index). |

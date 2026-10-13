@@ -4,6 +4,7 @@
 #   DeadlockConfig-Update            stable-config (default)
 #   DeadlockConfig-Update -stable    stable-config
 #   DeadlockConfig-Update -ex        experimental-config
+#   DeadlockConfig-Update -Version 1.0   a frozen stable version (stable-config/v1.0)
 #   DeadlockConfig-Update -Branch <name>   install from a branch other than main (to test a PR)
 #
 # Works in Windows PowerShell 5.1 and PowerShell 7.
@@ -13,10 +14,13 @@ function DeadlockConfig-Update {
     param(
         [Alias('ex')][switch]$Experimental,
         [switch]$Stable,
+        [string]$Version,
         [string]$Branch = 'main'
     )
-    if ($Experimental -and $Stable) { throw 'Pass -ex or -stable, not both.' }
-    $folder = if ($Experimental) { 'experimental-config' } else { 'stable-config' }
+    if ($Experimental -and ($Stable -or $Version)) { throw 'Pass -ex or -stable/-Version, not both.' }
+    $folder = if ($Experimental) { 'experimental-config' }
+              elseif ($Version) { 'stable-config/v' + $Version.TrimStart('v', 'V') }
+              else { 'stable-config' }
     $url = "https://raw.githubusercontent.com/ghempy53/deadlock-config/$Branch/$folder/gameinfo.gi"
 
     # Find Deadlock (Steam app 1422450) in any Steam library.
