@@ -51,7 +51,7 @@ function DeadlockConfig-Update {
         Copy-Item $tmp $target -Force            # byte for byte: no BOM or line-ending changes
         Write-Host "Installed $folder ($Branch) -> $target" -ForegroundColor Green
         Write-Host "Previous file saved as $target.bak"
-        if (Get-Process deadlock -ErrorAction SilentlyContinue) {
+        if (Get-Process deadlock, project8 -ErrorAction SilentlyContinue) {
             Write-Warning 'Deadlock is running. Restart it to load the new config.'
         }
     } finally {

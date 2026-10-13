@@ -30,7 +30,8 @@ they have separate profiles.
        -OutFile (Join-Path $dir 'DeadlockConfig-Update.ps1') -UseBasicParsing
    Unblock-File (Join-Path $dir 'DeadlockConfig-Update.ps1')
    if (-not (Test-Path $PROFILE) -or -not (Select-String -Path $PROFILE -SimpleMatch 'DeadlockConfig-Update.ps1' -Quiet)) {
-       Add-Content $PROFILE '. "$PSScriptRoot\DeadlockConfig-Update.ps1"'
+       # Leading newline, in case the profile does not end with one.
+       Add-Content $PROFILE ("`r`n" + '. "$PSScriptRoot\DeadlockConfig-Update.ps1"')
    }
    . $PROFILE
    ```
