@@ -877,6 +877,12 @@ STABLE V1.0 FROZEN AS THE TEST BASELINE (2026-10-13)
   DeadlockConfig-Update -Version 1.0 installs it. This config is unchanged.
   Line numbers unchanged.
 
+DEADLOCKCONFIG-UPDATE: COMMIT-PINNED DOWNLOADS AND -SELFUPDATE (2026-10-13)
+  The install command resolves the branch to its current commit through the GitHub API and downloads from that commit,
+  because raw.githubusercontent.com served the pre-merge script for minutes after PR #54 merged. -SelfUpdate replaces
+  the command's own script. Configs unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
