@@ -8,6 +8,7 @@ installed file is already current. The source is [`scripts/DeadlockConfig-Update
 DeadlockConfig-Update            # stable config (default)
 DeadlockConfig-Update -stable    # same thing, explicit
 DeadlockConfig-Update -ex        # experimental config
+DeadlockConfig-Update -Version 1.0   # stable v1.0, frozen (for A/B tests against -ex)
 ```
 
 Type `DeadlockC` and press Tab to complete the name.
@@ -29,7 +30,8 @@ they have separate profiles.
        -OutFile (Join-Path $dir 'DeadlockConfig-Update.ps1') -UseBasicParsing
    Unblock-File (Join-Path $dir 'DeadlockConfig-Update.ps1')
    if (-not (Test-Path $PROFILE) -or -not (Select-String -Path $PROFILE -SimpleMatch 'DeadlockConfig-Update.ps1' -Quiet)) {
-       Add-Content $PROFILE '. "$PSScriptRoot\DeadlockConfig-Update.ps1"'
+       # Leading newline, in case the profile does not end with one.
+       Add-Content $PROFILE ("`r`n" + '. "$PSScriptRoot\DeadlockConfig-Update.ps1"')
    }
    . $PROFILE
    ```
@@ -55,6 +57,7 @@ Run step 2 again. It overwrites the script and does not add a second line to you
 | --- | --- |
 | *(none)* or `-stable` | Installs `stable-config/gameinfo.gi`. |
 | `-ex` | Installs `experimental-config/gameinfo.gi`. |
+| `-Version 1.0` | Installs a frozen stable version, `stable-config/v1.0/gameinfo.gi`. See [CONFIGS.md](CONFIGS.md#stable-versions). |
 | `-Branch <name>` | Installs from another branch, for example to try a pull request before merging it. |
 
 ## Undo

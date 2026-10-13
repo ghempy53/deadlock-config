@@ -870,6 +870,13 @@ STABLE/EXPERIMENTAL SPLIT AND DOCS REORGANIZATION (2026-10-12)
   installs either config (docs/UPDATE-COMMAND.md).
   Line numbers unchanged.
 
+STABLE V1.0 FROZEN AS THE TEST BASELINE (2026-10-13)
+  stable-config/v1.0/gameinfo.gi is a byte-identical copy of stable-config/gameinfo.gi (Eskay's config at f6fdab7,
+  r_aspectratio commented out). The owner rated it excellent in game; it is the baseline experimental changes are
+  compared against. utils/compare.py diffs the effective settings of two files (default: v1.0 vs this config), and
+  DeadlockConfig-Update -Version 1.0 installs it. This config is unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.

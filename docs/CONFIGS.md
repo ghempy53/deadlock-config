@@ -1,4 +1,4 @@
-# The two configs
+# The configs
 
 Both are full replacements for Deadlock's `game\citadel\gameinfo.gi`. Install one or the other with
 [`DeadlockConfig-Update`](UPDATE-COMMAND.md) or [by hand](INSTALL.md).
@@ -10,14 +10,52 @@ at commit `f6fdab7`, 2026-10-12), a moderately modified fork of Sqooky's config.
 `r_aspectratio "2.2"` (line 776) is commented out, so the game's default aspect ratio applies. Eskay's value is kept on
 the line.
 
-Two things break this repo's own rules for the experimental config:
+These points break this repo's own rules or differ from it for the experimental config:
 - **Engine sections are edited.** RenderSystem, WorldRenderer, SceneSystem and Particles differ from Valve's stock file
   (larger streaming and buffer pools, Vulkan shader-cache keys). Matchmaking's file check names these sections. If
   matchmaking refuses with `Citadel_StartMatchmaking_UnverifiedPGI`, use the experimental config instead.
+- **Fewer mod search paths.** It mounts `citadel/addons` but not `citadel/custom`, so mods must go in `addons`.
 - **Odd double-quote counts** on three comment lines (768, 848, 1151). The game ignores them, but Deadlock Mod Manager's
   parser fails on them. Install with `DeadlockConfig-Update` or by copying the file.
 
 The repo's checks (`utils/`) and [CHANGES.txt](CHANGES.txt) don't cover this file.
+
+### Stable versions
+
+Each version is a frozen copy in `stable-config/v<version>/gameinfo.gi`. It is never edited, so it stays a fixed
+reference. `stable-config/gameinfo.gi` is the current stable config and may change; a release that feels right gets
+frozen as the next version.
+
+| Version | File | Notes |
+| --- | --- | --- |
+| **v1.0** (2026-10-13) | [`stable-config/v1.0/gameinfo.gi`](../stable-config/v1.0/gameinfo.gi) | Eskay's config at `f6fdab7` with `r_aspectratio` commented out. Byte-identical to `stable-config/gameinfo.gi` as of this date (SHA-256 `dfad6b32…97b4a8`). The owner's baseline: performance felt excellent. |
+
+Install a version with `DeadlockConfig-Update -Version 1.0`.
+
+A game update can change how a frozen version behaves (renamed or blocked convars, a new matchmaking check) without
+the file changing.
+
+### Testing the experimental config against v1.0
+
+1. Same session, same Sandbox route or bot-match scenario, same capture tool (CapFrameX or PresentMon), 1% lows.
+2. `DeadlockConfig-Update -Version 1.0`, restart Deadlock, run the route.
+3. `DeadlockConfig-Update -ex`, restart Deadlock, run the route.
+4. Go back to `DeadlockConfig-Update` (current stable) when done.
+
+To see what actually differs between the two (active ConVars values and engine sections, comments ignored):
+
+```
+python3 utils/compare.py                     # stable v1.0 vs experimental
+python3 utils/compare.py --defaults          # with Valve's default for each convar
+python3 utils/compare.py A.gi B.gi           # any two files
+```
+
+As of v1.0, a large part of the gap is in the engine sections, which the experimental config keeps stock for the
+matchmaking check. Against Valve's values, v1.0 turns off volumetric, cubemap and gradient fog, grass shadows and the
+fog shadow atlas, sets CSM cascade resolution and shadow texture size to 0, halves sun cascades (4 to 2) and enlarges
+the streaming and buffer pools. It also sets about 50 `SceneSystem`/`Particles` keys Valve's file doesn't set at
+all (sunlight, point-light and contact shadows, hair shading, per-vertex lighting and more). The experimental config can
+reach only part of this through ConVars.
 
 ## Experimental: `experimental-config/gameinfo.gi` (`-ex`)
 

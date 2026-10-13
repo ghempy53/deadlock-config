@@ -5,7 +5,7 @@ a Ryzen 7 9800X3D and RTX 5070 at 1440p, uncapped FPS.
 
 | Config | What it is |
 | --- | --- |
-| [`stable-config/`](stable-config/gameinfo.gi) (default) | Eskay's OptimizationLock config, with the game's default aspect ratio. |
+| [`stable-config/`](stable-config/gameinfo.gi) (default) | Eskay's OptimizationLock config, with the game's default aspect ratio. Frozen versions: [`v1.0`](stable-config/v1.0/gameinfo.gi). |
 | [`experimental-config/`](experimental-config/gameinfo.gi) | This repo's own tuned config: cosmetics cut, gameplay information kept, engine sections stock. |
 
 Differences and caveats: [docs/CONFIGS.md](docs/CONFIGS.md).
@@ -17,6 +17,7 @@ Set up the [`DeadlockConfig-Update`](docs/UPDATE-COMMAND.md) PowerShell command 
 ```powershell
 DeadlockConfig-Update        # stable
 DeadlockConfig-Update -ex    # experimental
+DeadlockConfig-Update -Version 1.0   # stable v1.0, the baseline to test experimental against
 ```
 
 Run it again after every Deadlock update, since updates can overwrite the file. To install by hand, see

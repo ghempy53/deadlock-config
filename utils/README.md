@@ -10,6 +10,7 @@ Refs that move, like `master` and `main`, are re-downloaded on every run.
 | `check.py` | yes | Validates `gameinfo.gi` and `docs/CHANGES.txt`. `--fix` renumbers stale `line N` references. |
 | `convars.py` | no | `lookup` a convar in Valve's dump, `audit` every setting, `diff` two GameTracking commits. |
 | `stock_diff.py` | no | Compares every section and the stock ConVars tail with Valve's stock `gameinfo.gi`. |
+| `compare.py` | yes | Effective-settings diff of two `gameinfo.gi` files. Default: stable v1.0 vs experimental. |
 | `upstream_diff.py` | no | Lists what changed in OptimizationLock since the last synced commit. |
 | `gi.py` | | Shared parser for KeyValues, the ConVars block and the convar dump. |
 
