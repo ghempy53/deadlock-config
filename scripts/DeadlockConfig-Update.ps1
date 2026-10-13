@@ -56,7 +56,8 @@ function DeadlockConfig-Update {
               elseif ($Version) { 'stable-config/v' + $Version.TrimStart('v', 'V') }
               else { 'stable-config' }
 
-    # Find Deadlock (Steam app 1422450) in any Steam library.
+    # Find Deadlock (Steam app 1422450) in any Steam library. Look for the game folder, not gameinfo.gi, so an install
+    # still works after the file was deleted.
     $steam = (Get-ItemProperty 'HKCU:\Software\Valve\Steam' -ErrorAction Stop).SteamPath
     $vdf = Join-Path $steam 'steamapps\libraryfolders.vdf'
     $libs = @($steam)
@@ -64,10 +65,11 @@ function DeadlockConfig-Update {
         $libs += Select-String -Path $vdf -Pattern '"path"\s+"(.+?)"' |
             ForEach-Object { $_.Matches[0].Groups[1].Value -replace '\\\\', '\' }
     }
-    $target = $libs |
-        ForEach-Object { Join-Path $_ 'steamapps\common\Deadlock\game\citadel\gameinfo.gi' } |
-        Where-Object { Test-Path $_ } | Select-Object -First 1
-    if (-not $target) { throw 'Deadlock gameinfo.gi not found in any Steam library.' }
+    $citadel = $libs |
+        ForEach-Object { Join-Path $_ 'steamapps\common\Deadlock\game\citadel' } |
+        Where-Object { Test-Path $_ -PathType Container } | Select-Object -First 1
+    if (-not $citadel) { throw 'Deadlock (game\citadel folder) not found in any Steam library.' }
+    $target = Join-Path $citadel 'gameinfo.gi'
 
     $tmp = [IO.Path]::GetTempFileName()
     try {
@@ -75,14 +77,12 @@ function DeadlockConfig-Update {
         if (-not (Select-String -Path $tmp -Pattern 'GameInfo' -SimpleMatch -Quiet)) {
             throw "Download is not a gameinfo.gi: $raw/$folder/gameinfo.gi"
         }
-        if ((Get-FileHash $tmp).Hash -eq (Get-FileHash $target).Hash) {
+        if ((Test-Path $target) -and (Get-FileHash $tmp).Hash -eq (Get-FileHash $target).Hash) {
             Write-Host "Already up to date: $folder ($label)" -ForegroundColor Green
             return
         }
-        Copy-Item $target "$target.bak" -Force   # the previous file, replaced on each update
-        Copy-Item $tmp $target -Force            # byte for byte: no BOM or line-ending changes
+        Copy-Item $tmp $target -Force   # byte for byte: no BOM or line-ending changes
         Write-Host "Installed $folder ($label) -> $target" -ForegroundColor Green
-        Write-Host "Previous file saved as $target.bak"
         if (Get-Process deadlock, project8 -ErrorAction SilentlyContinue) {
             Write-Warning 'Deadlock is running. Restart it to load the new config.'
         }

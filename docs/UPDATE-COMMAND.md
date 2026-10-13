@@ -1,8 +1,8 @@
 # The `DeadlockConfig-Update` command
 
 A PowerShell command that downloads a config from this repo's `main` branch and installs it into Deadlock.
-It finds the game in any Steam library, keeps the previous file as `gameinfo.gi.bak`, and does nothing if the
-installed file is already current. Downloads come from the branch's current commit, so a config is installable as soon
+It finds the game in any Steam library, overwrites `gameinfo.gi` (or creates it if it was deleted; no backup is kept),
+and does nothing if the installed file is already current. Downloads come from the branch's current commit, so a config is installable as soon
 as its pull request is merged. The source is [`scripts/DeadlockConfig-Update.ps1`](../scripts/DeadlockConfig-Update.ps1).
 
 ```powershell
@@ -67,15 +67,14 @@ the latest one from `main`. Running step 2 again does the same thing.
 
 ## Undo
 
-- Previous file: in `<Steam library>\steamapps\common\Deadlock\game\citadel\`, delete `gameinfo.gi` and rename
-  `gameinfo.gi.bak` to `gameinfo.gi`.
+- Another config from this repo: run the command with the option for it.
 - Valve's stock file: Steam → Deadlock → Properties → Installed Files → *Verify integrity of game files*.
 
 ## Errors
 
 | Message | Cause |
 | --- | --- |
-| `Deadlock gameinfo.gi not found in any Steam library.` | Steam or Deadlock is not installed for this Windows user. |
+| `Deadlock (game\citadel folder) not found in any Steam library.` | Steam or Deadlock is not installed for this Windows user. |
 | A 404 error | The branch or config folder does not exist (check the `-Branch` name). |
 | `Could not resolve <branch> to a commit` (warning) | The GitHub API was unreachable or rate limited (60 calls an hour). The install still runs from the branch URL, which can be up to 5 minutes old. |
 | `A parameter cannot be found that matches parameter name ...` | Your copy of the script is older than the option. Run `DeadlockConfig-Update -SelfUpdate` (or step 2) and open a new terminal. |
