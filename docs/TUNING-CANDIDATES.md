@@ -1,7 +1,7 @@
 # Tuning candidates and non-candidates (2026-10-06)
 
-What the research in [RESEARCH-2026-10-06.md](RESEARCH-2026-10-06.md) and the comparison in
-[CONFIG-COMPARISON.md](CONFIG-COMPARISON.md) leave on the table for this repo's goal (balanced clarity and FPS, nothing
+What the research in [research/RESEARCH-2026-10-06.md](research/RESEARCH-2026-10-06.md) and the comparison in
+[research/CONFIG-COMPARISON.md](research/CONFIG-COMPARISON.md) leave on the table for this repo's goal (balanced clarity and FPS, nothing
 hidden on screen) and hardware (9800X3D, RTX 5070, 1440p 270 Hz, DX11). Nothing here is applied; every line is a test
 proposal. Defaults and flags are from Valve's dump, build 6753.
 
@@ -80,7 +80,7 @@ foot lock.
 
 | ConVar | This config | Test | Why |
 | --- | --- | --- | --- |
-| `engine_low_latency_sleep_after_client_tick` | false (pinned default) | `engine_low_latency_sleep_after_client_tick 1` in the console during a fight, Reflex On | Release flag, so it changes live. Valve: with Reflex on, moves the low-latency sleep on tick frames to after client simulation. Forum users recommend true for FPS. Adopt only if fight 1% lows improve; see [FORUM-RESEARCH-2026-10-06.md](FORUM-RESEARCH-2026-10-06.md). |
+| `engine_low_latency_sleep_after_client_tick` | false (pinned default) | `engine_low_latency_sleep_after_client_tick 1` in the console during a fight, Reflex On | Release flag, so it changes live. Valve: with Reflex on, moves the low-latency sleep on tick frames to after client simulation. Forum users recommend true for FPS. Adopt only if fight 1% lows improve; see [FORUM-RESEARCH-2026-10-06.md](research/FORUM-RESEARCH-2026-10-06.md). |
 
 ## C. One in-game check: the `video.txt` path for blocked convars
 
@@ -126,9 +126,9 @@ Set by most other configs; each one hides something, breaks something, or is dea
 
 ## E. Process improvements
 
-- Add the blocked-list check from [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md) to the after-patch routine in the README.
+- Add the blocked-list check from [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md) to the after-patch routine in AFTER-GAME-UPDATE.md.
 - Consider Sqooky's `auto updater` with an `overrides.gi` generated from `CHANGES.txt` as the re-apply mechanism, followed
   by a script that copies the seven guarded sections from Valve's stock file. That turns "re-apply 85 changes by hand"
   into two commands.
-- Regenerate `data/convar-matrix.csv` after each upstream release; the generator lives in the session notes, not the repo,
-  so a small script under `docs/data/` would make it repeatable (not done here to keep this a documentation-only change).
+- Regenerate `research/data/convar-matrix.csv` after each upstream release; the generator lives in the session notes, not the repo,
+  so a small script under `docs/research/data/` would make it repeatable (not done here to keep this a documentation-only change).

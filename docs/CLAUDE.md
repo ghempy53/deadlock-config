@@ -1,7 +1,10 @@
 # deadlock-config: guidance for Claude
 
-A personal Deadlock `gameinfo.gi` (Windows 11, DX11 or Vulkan with no edits), based on Sqooky's OptimizationLock 3.4. This file is loaded into
-every Claude Code session through `.claude/CLAUDE.md`. The README covers the user-facing side; this file has the rules.
+Personal Deadlock `gameinfo.gi` configs (Windows 11, DX11 or Vulkan with no edits). `stable-config/` is Eskay's
+OptimizationLock config; `experimental-config/` is this repo's own config, based on Sqooky's OptimizationLock 3.4.
+This file is loaded into every Claude Code session through `.claude/CLAUDE.md`. The README and the user docs in
+`docs/` cover the user-facing side; this file has the rules. Unless a request names the stable config, "the config"
+and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 
 ## Owner, hardware, goal
 
@@ -18,13 +21,16 @@ every Claude Code session through `.claude/CLAUDE.md`. The README covers the use
 
 | File | Role |
 | --- | --- |
-| `gameinfo.gi` | The config. KeyValues. All tuning lives in the `ConVars` tweak block. |
+| `experimental-config/gameinfo.gi` | The tuned config. KeyValues. All tuning lives in the `ConVars` tweak block. Every rule below applies to it. |
+| `stable-config/gameinfo.gi` | Eskay's config, verbatim except the edits listed in `docs/CONFIGS.md`. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
+| `scripts/DeadlockConfig-Update.ps1` | The owner's PowerShell install command. Tutorial in `docs/UPDATE-COMMAND.md`. Keep it Windows PowerShell 5.1 compatible and ASCII only. |
 | `docs/CHANGES.txt` | Source of truth for every difference from upstream 3.4, in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
-| `README.md` | Install, assumed in-game settings, troubleshooting, the after-update checklist. |
+| `README.md` | Short landing page. Keep it short; details go in `docs/` and are linked from `docs/README.md` (the docs index). |
+| `docs/CONFIGS.md`, `docs/INSTALL.md`, `docs/IN-GAME-SETTINGS.md`, `docs/TROUBLESHOOTING.md`, `docs/AFTER-GAME-UPDATE.md` | User docs: the two configs and the upstream pin, install, assumed in-game settings, troubleshooting, the after-update checklist. |
 | `docs/WINDOWS11.md` | OS, driver and BIOS guidance. Independent of game patches. |
 | `docs/BLOCKED-CONVARS.md` | Convars Deadlock ignores from `gameinfo.gi` (`gameinfo_cannot_override`). Never add one. |
 | `docs/TUNING-CANDIDATES.md` | What is still worth testing, and what was deliberately not adopted. Check it before proposing a change. |
-| `docs/RESEARCH-2026-10-06.md`, `docs/CONFIG-COMPARISON.md`, `docs/data/` | Research notes, comparison with other public configs, convar matrix. |
+| `docs/research/` | Research notes, forum research, comparison with other public configs, upstream diff, convar matrix (`data/`). |
 | `utils/` | Python 3 (stdlib only) checks and lookups. See `utils/README.md`. |
 
 ## Hard rules for `gameinfo.gi`
@@ -84,7 +90,7 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - `steam_inputhandler_enabled "false"`, anisotropic 8x (owner choice 2026-10-06, GPU-bound), full-res textures.
 - The same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
   `-vulkan` launch option. Every active line is renderer-neutral, or renderer-specific and unused by the other
-  renderer (a Vulkan-only convar is ignored on DX11, and the reverse). Never add a line, note or README step that
+  renderer (a Vulkan-only convar is ignored on DX11, and the reverse). Never add a line, note or docs step that
   asks the owner to comment, uncomment or change anything when switching renderer. Renderer-specific convars live
   in group 2i and stay at Valve's default unless a console A/B test on that renderer shows a gain.
 
@@ -103,7 +109,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 3. Run `python3 utils/check.py --fix` to renumber stale `line N` references across all of `docs/CHANGES.txt`, then run
    `python3 utils/check.py`. It must report 0 errors. Hooks run the check (not `--fix`) after each Edit/Write and
    before a turn ends; see `.claude/settings.json`. Edits made through Bash only get the end-of-turn check.
-4. Update `README.md` if an assumed in-game setting or user-visible behavior changed.
+4. Update `docs/IN-GAME-SETTINGS.md` if an assumed in-game setting changed, and `docs/CONFIGS.md` for other
+   user-visible behavior.
 5. Keep each PR to one theme. Branch names look like `claude/<short-topic>`. Commit subjects are plain English
    describing the effect (for example "Camera wobble to default; restore aim/frame feel lines").
 6. **Open a pull request into `main` after every change**, without being asked. The owner tracks version history

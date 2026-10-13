@@ -14,7 +14,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 GI = REPO / "experimental-config" / "gameinfo.gi"
 CHANGES = REPO / "docs" / "CHANGES.txt"
-README = REPO / "README.md"
+CONFIGS_DOC = REPO / "docs" / "CONFIGS.md"
 CACHE = Path(__file__).resolve().parent / ".cache"
 
 # Sections the client's matchmaking guard (Citadel_StartMatchmaking_UnverifiedPGI) names. Keep them Valve stock.

@@ -6,7 +6,7 @@
 
 For every convar whose upstream state changed (added, removed, value changed, commented or uncommented) it prints
 the old and new upstream state and this config's current state, so each one can be adopted or skipped on purpose.
-Engine-section changes are listed too, but this config keeps those sections Valve stock (see README).
+Engine-section changes are listed too, but this config keeps those sections Valve stock (see docs/CONFIGS.md).
 """
 
 from __future__ import annotations
@@ -25,10 +25,10 @@ def last_synced() -> str:
     found = SYNC_RE.findall(gi.CHANGES.read_text(encoding="utf-8"))
     if found:
         return found[-1]
-    m = PIN_RE.search(gi.README.read_text(encoding="utf-8"))
+    m = PIN_RE.search(gi.CONFIGS_DOC.read_text(encoding="utf-8"))
     if m:
         return m.group(1)
-    sys.exit("error: no synced upstream commit found in docs/CHANGES.txt or README.md; pass --from")
+    sys.exit("error: no synced upstream commit found in docs/CHANGES.txt or docs/CONFIGS.md; pass --from")
 
 
 def convar_state(text: str) -> dict[str, str]:

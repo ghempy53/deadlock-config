@@ -1,14 +1,32 @@
-# Documentation index
+# Documentation
+
+## Using the configs
 
 | File | What it is |
 | --- | --- |
-| [CHANGES.txt](CHANGES.txt) | Every difference between `gameinfo.gi` and upstream OptimizationLock 3.4, plus the post-patch cleanups and engine-section reset. Source of truth for re-applying the config after an update. |
-| [WINDOWS11.md](WINDOWS11.md) | OS, driver and in-game settings that pair with the config. |
-| [RESEARCH-2026-10-06.md](RESEARCH-2026-10-06.md) | Research report: matchmaking guard timeline from Valve's files, the `gameinfo_cannot_override` mechanism, what changed in Valve's stock file and convars, launch options checked against the engine, `video.txt` as the second layer, tooling, known upstream breakages. |
-| [FORUM-RESEARCH-2026-10-06.md](FORUM-RESEARCH-2026-10-06.md) | First-hand player reports from the official Deadlock forums (via search results): CPU-bound fight lows on 9800X3D, the City Never Sleeps blue-lane FPS drop, RTX 50-series crashes in `materialsystem2.dll`, BIOS, SMT, memory (EXPO) and overclocking reports, DX11 vs Vulkan, leaks, and every recommended command or launch option checked against Valve's data. |
-| [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md) | The 124 convars (build 6769) Deadlock ignores when set from `gameinfo.gi`, grouped, with the date each batch arrived and a re-check procedure. |
-| [CONFIG-COMPARISON.md](CONFIG-COMPARISON.md) | Line-by-line comparison with twelve other public configs (Sqooky main/test/max FPS, Eskay, Piggy, Kaizuchaneru x2, Boot, OptiLock x2, compylock, abyzz): value differences, dead lines, guarded-section edits. |
-| [UPSTREAM-DIFF-2026-10-10.md](UPSTREAM-DIFF-2026-10-10.md) | Every effective convar difference from OptimizationLock 3.5 (`main @ cf87a3d`), 244 entries, each sorted into adoptable, test, tried, moot, hides information, owner rule, ours only, removed, blocked, server-only or replicated. |
-| [TUNING-CANDIDATES.md](TUNING-CANDIDATES.md) | What is still worth testing on this repo's hardware, one in-game check for the `video.txt` path, and the list of things deliberately not adopted. |
-| [data/convar-matrix.csv](data/convar-matrix.csv) | 765 convars x 14 configs: Valve default, flags, blocked/removed status, and each config's value (`//` prefix = present but commented). |
-| [CLAUDE.md](CLAUDE.md) | Guidance for Claude Code sessions (loaded via `.claude/CLAUDE.md`): rules, settled decisions, workflow. Tooling in [`utils/`](../utils/README.md). |
+| [CONFIGS.md](CONFIGS.md) | Stable vs experimental: sources, edits, caveats, and the layout of the experimental config. |
+| [UPDATE-COMMAND.md](UPDATE-COMMAND.md) | Set up and use the `DeadlockConfig-Update` PowerShell command. |
+| [INSTALL.md](INSTALL.md) | Manual install and undo, launch options, DX11 vs Vulkan, where video settings are saved. |
+| [IN-GAME-SETTINGS.md](IN-GAME-SETTINGS.md) | Video, camera, damage-number and HUD settings the experimental config assumes. |
+| [WINDOWS11.md](WINDOWS11.md) | OS, driver and BIOS guidance. Independent of game patches. |
+| [TROUBLESHOOTING.md](TROUBLESHOOTING.md) | Console noise, matchmaking refusal, Mod Manager errors, greyed-out HUD. |
+
+## Maintaining the experimental config
+
+| File | What it is |
+| --- | --- |
+| [CHANGES.txt](CHANGES.txt) | Every difference from upstream OptimizationLock 3.4, in dated sections. Source of truth for re-applying the config. |
+| [AFTER-GAME-UPDATE.md](AFTER-GAME-UPDATE.md) | The checklist after a Deadlock patch. |
+| [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md) | The 124 convars (build 6769) Deadlock ignores when set from `gameinfo.gi`, with a re-check procedure. |
+| [TUNING-CANDIDATES.md](TUNING-CANDIDATES.md) | What is still worth testing, and what was deliberately not adopted. |
+| [CLAUDE.md](CLAUDE.md) | Rules and workflow for Claude Code sessions (loaded via `.claude/CLAUDE.md`). Tooling is in [`utils/`](../utils/README.md). |
+
+## Research
+
+| File | What it is |
+| --- | --- |
+| [research/RESEARCH-2026-10-06.md](research/RESEARCH-2026-10-06.md) | Matchmaking guard timeline from Valve's files, the `gameinfo_cannot_override` mechanism, Valve file and convar changes, launch options, `video.txt`, tooling. |
+| [research/FORUM-RESEARCH-2026-10-06.md](research/FORUM-RESEARCH-2026-10-06.md) | Player reports from the official forums: fight lows on 9800X3D, RTX 50-series crashes, BIOS/SMT/EXPO, DX11 vs Vulkan, each recommended command checked against Valve's data. |
+| [research/CONFIG-COMPARISON.md](research/CONFIG-COMPARISON.md) | Line-by-line comparison with twelve other public configs. |
+| [research/UPSTREAM-DIFF-2026-10-10.md](research/UPSTREAM-DIFF-2026-10-10.md) | Every convar difference from OptimizationLock 3.5 (`main @ cf87a3d`), each sorted by verdict. |
+| [research/data/convar-matrix.csv](research/data/convar-matrix.csv) | 765 convars x 14 configs: Valve default, flags, blocked/removed status, each config's value. |

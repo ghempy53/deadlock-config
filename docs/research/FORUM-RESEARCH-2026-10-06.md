@@ -69,7 +69,7 @@ options were checked against Valve's convar dump (build 6753) and the engine's l
   before you disallow configs"). Players on low-end PCs called configs the only way to keep the game playable.
 - A thread titled "-200 fps after convar changes made to the game" reports a large FPS loss plus flickering shadows
   after some convars stopped working, from a user of an AI-generated config. That matches the
-  `gameinfo_cannot_override` list in [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md): configs that relied on `r_shadows`
+  `gameinfo_cannot_override` list in [BLOCKED-CONVARS.md](../BLOCKED-CONVARS.md): configs that relied on `r_shadows`
   and the fog switches lost them.
 - One particle-performance thread reports that lighting, shadow and particle config edits gave minimal gains even on
   old hardware, consistent with the CPU-bound picture.

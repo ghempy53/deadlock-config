@@ -862,6 +862,14 @@ REVERT TEST GROUP B (2026-10-10)
   its state after PR #48; lines that did not exist before #49 are removed again. The #49 entry above stays as history.
   Line numbers back to the post-#48 layout.
 
+STABLE/EXPERIMENTAL SPLIT AND DOCS REORGANIZATION (2026-10-12)
+  This config moved to experimental-config/gameinfo.gi (PR #52, contents unchanged). stable-config/gameinfo.gi is
+  Eskay's OptimizationLock config (main @ f6fdab7) with r_aspectratio commented out; it is not tracked in this file
+  (see docs/CONFIGS.md). The README is now a short landing page; install, in-game settings, troubleshooting and the
+  after-update checklist moved to docs/, and research notes to docs/research/. scripts/DeadlockConfig-Update.ps1
+  installs either config (docs/UPDATE-COMMAND.md).
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.

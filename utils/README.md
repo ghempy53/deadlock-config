@@ -1,6 +1,7 @@
 # utils
 
-Python 3.9+ scripts, standard library only. Run them from the repo root. On Windows use `py -3` in place of `python3`.
+Python 3.9+ scripts, standard library only. Run them from the repo root. `gameinfo.gi` here means
+`experimental-config/gameinfo.gi`; the stable config is not checked. On Windows use `py -3` in place of `python3`.
 Downloads (Valve's convar dump, stock and upstream `gameinfo.gi`) are cached in `utils/.cache/` (gitignored).
 Refs that move, like `master` and `main`, are re-downloaded on every run.
 
