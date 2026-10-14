@@ -4,13 +4,14 @@
 > [CHANGES.txt](CHANGES.txt)). Many lines below that were candidates, reverted, or listed as not candidates are now
 > active because 3.5.2 sets them (and, for the ones that break a rule, Eskay's config too), among them
 > `r_particle_max_size_cull`, `r_limit_particle_job_duration`, the batching thresholds, `r_texture_budget_*`,
-> `lb_dynamic_shadow_penumbra`, `r_late_particle_job_sync`, `r_strip_invisible_during_sceneobject_update`,
+> `lb_dynamic_shadow_penumbra`, `lb_dynamic_shadow_resolution_quantization 8`, `r_particle_min_timestep`,
+> `csm_max_num_cascades_override 2`, mip bias 3, bilinear filtering, IK and foot lock off, `r_late_particle_job_sync`, `r_strip_invisible_during_sceneobject_update`,
 > `r_size_cull_threshold`, `sc_screen_size_lod_scale_override`, `cl_ragdoll_limit 0`, `r_rendersun 0` and
 > `r_drawropes`. Read this page as history for those; the rest still applies.
 
 What the research in [research/RESEARCH-2026-10-06.md](research/RESEARCH-2026-10-06.md) and the comparison in
-[research/CONFIG-COMPARISON.md](research/CONFIG-COMPARISON.md) leave on the table for this repo's goal (balanced clarity and FPS, nothing
-hidden on screen) and hardware (9800X3D, RTX 5070, 1440p 270 Hz, DX11). Nothing here is applied; every line is a test
+[research/CONFIG-COMPARISON.md](research/CONFIG-COMPARISON.md) leave on the table for this repo's goal (performance first; see
+[CLAUDE.md](CLAUDE.md), including the fork rule) and hardware (9800X3D, RTX 5070, 1440p 270 Hz, DX11). Nothing here is applied; every line is a test
 proposal. Defaults and flags are from Valve's dump, build 6753.
 
 Test method, same as before: Sandbox or a bot match, same route, CapFrameX or PresentMon, compare 1% lows, one change
@@ -25,11 +26,11 @@ DeadTune rates 16 convars "high" impact and 29 "medium". Where this repo stands 
 | --- | --- | --- | --- | --- |
 | high | `r_citadel_shadow_quality` | 1 | 0 | done (also menu Shadow Low) |
 | high | `r_citadel_ssao_quality` / `r_ssao` | 3 / true | 0 / 0 | done |
-| high | `csm_max_num_cascades_override` | -1 | 0 | done |
+| high | `csm_max_num_cascades_override` | -1 | 2 | done (3.5.2) |
 | high | `csm_max_visible_dist` | 7500 | 0 | done |
 | high | `fps_max` | 400 (stock tail) | 0 | deliberate |
-| high | `lb_enable_dynamic_lights` | true | true | deliberate keep (clarity, portraits) |
-| high | `lb_enable_shadow_casting` | true | true | deliberate keep (clarity) |
+| high | `lb_enable_dynamic_lights` | true | not set | **blocked** since build 6769 |
+| high | `lb_enable_shadow_casting` | true | false | done (light shadow maps off) |
 | high | `r_shadows` | true | not set | **blocked** from gameinfo.gi; see video.txt test below |
 | high | `csm_max_shadow_dist_override` | -1 | not set | **blocked**; cascade overrides above cover it |
 | high | `r_particle_max_detail_level` | 3 | not set | **blocked**; hides effects anyway |
@@ -118,7 +119,7 @@ Set by most other configs; each one hides something, breaks something, or is dea
 - `cl_ragdoll_limit 0`: Doorman ult indicator (upstream FAQ). `cl_disable_ragdolls`, `cl_phys_enabled false`: same family.
 - `cpu_level`, `gpu_level`, `gpu_mem_level`, `mem_level`: particle systems carry a minimum CPU/GPU level and are skipped below it.
 - `lb_enable_sunlight`, `vis_sunlight_enable`, `lb_mixed_shadows`, `lb_precomputed_shadowmap_enable`, `r_rendersun 0`,
-  `lb_enable_*_lights false`, `lb_enable_shadow_casting 0`: the flat-map look this repo reverted on purpose.
+  `lb_enable_*_lights false`: the flat-map look this repo reverted on purpose (r_rendersun 0 is now active via the fork).
 - `sc_instanced_mesh_enable false` (Sqooky test_cfg): turns off instanced mesh drawing entirely.
 - `r_drawropes`, `cl_show_splashes`, `cl_impacteffects`, `violence_*`, `r_render_hair`, `r_hair_ao`,
   `r_character_decal_resolution`, `citadel_in_world_item_panel_dpi 0`: cosmetic removals; the last one makes soul-pickup text unreadable.

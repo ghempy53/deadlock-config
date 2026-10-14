@@ -72,8 +72,8 @@ same convar; otherwise the rule wins. `fps_max` stays 0 (uncapped), and the engi
 no viewmodel or first-person tracers, Eskay's camera values, blurrier textures (mip bias 3, bilinear), small objects
 culled sooner (`r_size_cull_threshold 0.9`), no ragdolls (`cl_ragdoll_limit 0`), no rope drawing, IK and foot lock off.
 Not taken from 3.5.2 because Eskay doesn't use them either: the smaller damage-direction indicator, ragdoll scale 0,
-rope transparency, shorter draw distance (`r_farz`), metal sparks off, and the 128 px texture cap. Health bars, damage
-numbers, ability effects, troopers and props stay. It works on DX11 and Vulkan with no edits, and with or without
+rope transparency, shorter draw distance (`r_farz`), metal sparks off, and the 128 px texture cap. Damage numbers,
+ability effects, troopers and props still draw, but small objects, including trooper health bars at range, cull sooner. It works on DX11 and Vulkan with no edits, and with or without
 hero-skin mods in `citadel/addons`. All seven engine sections are Valve stock, so matchmaking's file check passes.
 
 It assumes some [in-game settings](IN-GAME-SETTINGS.md).

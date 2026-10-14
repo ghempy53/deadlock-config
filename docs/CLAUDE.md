@@ -13,7 +13,7 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
   Reflex On, uncapped FPS.
 - **Goal: performance first (owner, 2026-10-07).** Looks don't matter; gameplay information does. Cut anything
   cosmetic, but never hide what the owner reads to play: health bars, ability effects and cues, troopers, props and
-  boxes, ziplines/ropes, impact effects, ragdolls (Doorman ult). The FPS problem being worked on is lows in big fights, which are CPU-bound.
+  boxes, ziplines/ropes, impact effects, ragdolls (Doorman ult). (The 2026-10-14 fork rule overrides this where Eskay's config agrees; see Settled decisions.) The FPS problem being worked on is lows in big fights, which are CPU-bound.
 - **Fork rule (owner, 2026-10-14):** the experimental ConVars follow Sqooky's OptimizationLock 3.5.2. A 3.5.2 value
   that breaks a rule or settled decision in this file is used only if Eskay's config (`stable-config/gameinfo.gi`)
   sets the same convar; otherwise the rule wins. fps_max stays 0 and the engine sections stay stock regardless.

@@ -1080,10 +1080,10 @@ BUILD 6779 CHECK (2026-10-14; Valve data: GameTracking-Deadlock 0c38f9d, build 6
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
-  - Menus, shop and UI are at engine defaults; the only UI customizations kept are health bar width and the damage-number setup.
-  - Damage numbers: set in-game cumulative mode to "show the total once damage stops" (citadel_damage_text_cumulative_mode 2). Per-hit numbers are pushed off-screen via the new_*_offset_y lines (lifetime_new 0 also removed the totals).
+  - UI and menus follow 3.5.2 (group 6: transitions and blur off, larger Panorama caches, console on). HUD customizations are the group 1d damage-number lines; health bars are at Valve's default width.
+  - Damage numbers: per-hit numbers stay visible (a single hit makes no total). Group 1d is at Valve defaults except final lifetime 4 and dynamic emphasis off; the old up-left layout is kept commented. See docs/IN-GAME-SETTINGS.md.
   - Health bar convars (citadel_unit_status_*) are dev-only: the console says Unknown command, but this file still applies them.
-    After City Never Sleeps only citadel_unit_status_width and _allies_see_thru_walls remain active here (both still exist).
-  - All FOV settings are at game defaults; use the in-game Camera FOV slider (max 90). Detailed notes are in the config under Field of View.
+    After City Never Sleeps only citadel_unit_status_allies_see_thru_walls is active here; citadel_unit_status_width is kept commented (default 200).
+  - FOV: default_fov and viewmodel_fov are 0 (3.5.2 and Eskay); the other FOV lines are at game defaults. Use the in-game Camera FOV slider (max 90). Detailed notes are in the config under Field of View.
   - Mod search paths ship in upstream itself (citadel/addons, citadel/custom), so no edit is needed there.
-  - On the next upstream update: re-apply this list to the new file rather than copying this file over it.
+  - On the next upstream update: apply the fork rule in docs/CLAUDE.md to the new release's ConVars rather than copying files over each other.

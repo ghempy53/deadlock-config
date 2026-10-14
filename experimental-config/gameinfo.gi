@@ -541,7 +541,7 @@ GameInfo
         // All tuning lives in this ConVars block; the engine sections above are Valve stock on purpose (see README).
 
         // ================================================================================================
-        // 1. PERSONAL / READABILITY  (deliberate choices; most pin an engine default so an upstream change cannot flip it)
+        // 1. PERSONAL / READABILITY  (deliberate choices; since the 3.5.2 fork most follow 3.5.2 and Eskay)
         // ================================================================================================
         // --- 1a. Lighting: light shadow casting and sun lighting off; baked lighting stays ---
         // Valve ignores the lb_enable_* light toggles from gameinfo.gi since build 6769, so dynamic and stationary lights
@@ -615,8 +615,8 @@ GameInfo
         // citadel_camera_height_approach_speed             "800"      // Off: CNS default 80 applies. [def: 80]
         citadel_camera_pitch_default                     "0"        // [def: 20]
         // 7000 may hide entities at long range; FPS gain unproven.
-        citadel_camera_see_distance_max                  "7000"     // [def: 20000]
-        citadel_shoot_forward_offset                     "0"        // [def: 35]
+        citadel_camera_see_distance_max                  "7000"     // Replicated. [def: 20000]
+        citadel_shoot_forward_offset                     "0"        // Replicated. [def: 35]
         citadel_tightcamera_alternative                  "1"        // [def: 1.3]
         // Removes the blur from the pinhole camera. Restored from the 2026-10-04 config.
         r_citadel_clip_sphere_min_opacity                "0"        // Removes the pinhole fade. [def: 0.4]
@@ -633,7 +633,7 @@ GameInfo
         // citadel_camera_hero_fov                          "106"      // The field of view angle of the camera when following a hero. [def: 90]
         default_fov                                      "0"        // [def: 70]
         viewmodel_fov                                    "0"        // [def: 54]
-        // ---- FOV notes: the FOV settings above are commented out, so the game defaults apply ----
+        // ---- FOV notes: default_fov and viewmodel_fov are 0; the other FOV lines are commented, so game defaults apply ----
         // The real FOV control is the in-game Camera FOV slider (Settings). Its default and maximum are both 90.
         //
         // r_aspectratio  - engine default 0 = your monitor shape (16:9).
@@ -1049,7 +1049,7 @@ GameInfo
         r_morphing_enabled                               "false"    // [def: true]
         ik_fabrik_align_chain                            "1"        // Pin. [def: true]
         // IK off (3.5.2 and Eskay). An earlier test here: disabling IK changed the hero pose the camera and aim follow, and
-        // the camera felt wrong.
+        // the camera felt wrong. Most IK and foot-lock convars here are replicated: online, the server value may win.
         // Disables final IK fixup pass (cheaper animations, potentially less accurate)
         ik_final_fixup_enable                            "0"        // [def: true]
         ik_constraints_enabled                           "false"    // [def: true]
