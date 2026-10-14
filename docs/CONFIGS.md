@@ -59,15 +59,22 @@ reach only part of this through ConVars.
 
 ## Experimental: `experimental-config/gameinfo.gi` (`-ex`)
 
-This repo's own tuned config. It is based on [OptimizationLock 3.4](https://github.com/Sqooky/OptimizationLock)
-(Sqooky's .gi, `main @ 2b994f6`, 2026-10-03), checked against `main @ cf87a3d` (2026-10-10, 3.5 pre-release; cosmetic
-batch adopted). Verified against the **City Never Sleeps** major update (2026-09-29) and re-checked against build 6774
-(2026-10-10). Every difference from upstream is logged in [CHANGES.txt](CHANGES.txt).
+This repo's own tuned config. Since 2026-10-14 its ConVars are a fork of
+[OptimizationLock 3.5.2](https://github.com/Sqooky/OptimizationLock) (Sqooky's .gi, `main @ 66db906`, 2026-10-13);
+before that it was based on 3.4 (`main @ 2b994f6`). Checked against Valve's build 6779 (2026-10-13). Every
+difference from upstream is logged in [CHANGES.txt](CHANGES.txt).
 
-**Goal: performance first.** Cosmetics are cut, including light shadows, hair, splashes and UI blur. Gameplay
-information stays: health bars, ability effects, troopers, props, ziplines, impact effects and ragdolls. Sun, baked
-lighting, glows, viewmodel and tracers stay on. It works on DX11 and Vulkan with no edits, and with or without hero-skin
-mods in `citadel/addons`. All seven engine sections are Valve stock, so matchmaking's file check passes.
+**How the fork was made.** Every convar 3.5.2 sets that still works is active here with 3.5.2's value. Where a 3.5.2
+value breaks one of this repo's rules (see [CLAUDE.md](CLAUDE.md)), it is used only if Eskay's config (stable) sets the
+same convar; otherwise the rule wins. `fps_max` stays 0 (uncapped), and the engine sections stay Valve stock.
+
+**What that means in game.** Performance first, with Eskay's trade-offs: sun lighting off, trooper and boss glow off,
+no viewmodel or first-person tracers, Eskay's camera values, blurrier textures (mip bias 3, bilinear), small objects
+culled sooner (`r_size_cull_threshold 0.9`), no ragdolls (`cl_ragdoll_limit 0`), no rope drawing, IK and foot lock off.
+Not taken from 3.5.2 because Eskay doesn't use them either: the smaller damage-direction indicator, ragdoll scale 0,
+rope transparency, shorter draw distance (`r_farz`), metal sparks off, and the 128 px texture cap. Damage numbers,
+ability effects, troopers and props still draw, but small objects, including trooper health bars at range, cull sooner. It works on DX11 and Vulkan with no edits, and with or without
+hero-skin mods in `citadel/addons`. All seven engine sections are Valve stock, so matchmaking's file check passes.
 
 It assumes some [in-game settings](IN-GAME-SETTINGS.md).
 
@@ -85,7 +92,7 @@ by adding or removing the `//`, and change values only inside the quotes. Never 
 
 ### Why some popular tweaks are missing
 
-- Since 2026-09-24 the game ignores a growing list of convars (124 as of build 6769) when they are set from
+- Since 2026-09-24 the game ignores a growing list of convars (124 as of builds 6769 to 6779) when they are set from
   `gameinfo.gi`, including enemy outlines, glow, cloak, `r_shadows`, the fog master switches and particle detail
   level. This config sets none of them; other public configs carry dead lines because of it. List: [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md).
 - Valve's matchmaking check names seven engine sections, not ConVars, so the engine sections stay stock and all tuning

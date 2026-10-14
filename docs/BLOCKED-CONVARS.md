@@ -18,6 +18,7 @@ tested here. Most of the flagged convars are also `cheat`, so the console path n
 | build 6711, City Never Sleeps, `58b3529` | 2026-09-29 | 77 |
 | build 6753, `8c7cf4e` | 2026-10-05 | 77 (unchanged) |
 | build 6769, `8f572f6` | 2026-10-09 | 124 (+47: light binner toggles, texture LOD scale, scene-system debug and culling) |
+| build 6779, `0c38f9d` | 2026-10-13 | 124 (unchanged) |
 
 The first batch (2026-09-24) is the competitive-integrity set: enemy outlines and glow, cloak rendering, fog, shadows,
 particle detail, fullbright and `sv_cheats`. City Never Sleeps added the Citadel-specific rendering toggles (depth of
@@ -228,7 +229,7 @@ These four were in the first batch and are gone from the City Never Sleeps dump 
 
 ```
 curl -sSL -o convars.txt https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/master/DumpSource2/convars.txt
-grep -c gameinfo_cannot_override convars.txt                       # currently 124 (build 6769)
+grep -c gameinfo_cannot_override convars.txt                       # currently 124 (builds 6769 to 6779)
 grep gameinfo_cannot_override convars.txt | awk '{print $1}' | sort > blocked.txt
 grep -oE '^\s*(//\s*)?[a-zA-Z_][a-zA-Z0-9_]*\s+"' experimental-config/gameinfo.gi | sed -E 's#^\s*(//\s*)?##; s/\s.*//' | sort -u > mine.txt
 comm -12 mine.txt blocked.txt                                       # must print nothing

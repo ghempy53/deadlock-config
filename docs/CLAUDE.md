@@ -1,7 +1,8 @@
 # deadlock-config: guidance for Claude
 
 Personal Deadlock `gameinfo.gi` configs (Windows 11, DX11 or Vulkan with no edits). `stable-config/` is Eskay's
-OptimizationLock config; `experimental-config/` is this repo's own config, based on Sqooky's OptimizationLock 3.4.
+OptimizationLock config; `experimental-config/` is this repo's own config, a ConVars fork of Sqooky's OptimizationLock
+3.5.2 (2026-10-14; based on 3.4 before that).
 This file is loaded into every Claude Code session through `.claude/CLAUDE.md`. The README and the user docs in
 `docs/` cover the user-facing side; this file has the rules. Unless a request names the stable config, "the config"
 and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
@@ -12,7 +13,11 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
   Reflex On, uncapped FPS.
 - **Goal: performance first (owner, 2026-10-07).** Looks don't matter; gameplay information does. Cut anything
   cosmetic, but never hide what the owner reads to play: health bars, ability effects and cues, troopers, props and
-  boxes, ziplines/ropes, impact effects, ragdolls (Doorman ult). The FPS problem being worked on is lows in big fights, which are CPU-bound.
+  boxes, ziplines/ropes, impact effects, ragdolls (Doorman ult). (The 2026-10-14 fork rule overrides this where Eskay's config agrees; see Settled decisions.) The FPS problem being worked on is lows in big fights, which are CPU-bound.
+- **Fork rule (owner, 2026-10-14):** the experimental ConVars follow Sqooky's OptimizationLock 3.5.2. A 3.5.2 value
+  that breaks a rule or settled decision in this file is used only if Eskay's config (`stable-config/gameinfo.gi`)
+  sets the same convar; otherwise the rule wins. fps_max stays 0 and the engine sections stay stock regardless.
+  Several settled decisions below were reversed this way; they say so.
 - **Never recommend** DLSS or any upscaler change (owner dislikes the look; it gave little FPS), or any FPS cap
   in game, driver or OS (owner runs uncapped, always). Don't mention them as options.
 - The owner is a professional engineer. Be direct, skip basics, and give a recommendation rather than a survey.
@@ -25,7 +30,7 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 | `stable-config/gameinfo.gi` | Eskay's config, verbatim except the edits listed in `docs/CONFIGS.md`. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
 | `stable-config/v<N>/gameinfo.gi` | Frozen stable versions. **Never edit one.** A new version is a new folder plus a row in `docs/CONFIGS.md`. v1.0 (2026-10-13) is the owner's performance baseline: compare experimental changes against it (`python3 utils/compare.py`). |
 | `scripts/DeadlockConfig-Update.ps1` | The owner's PowerShell install command. Tutorial in `docs/UPDATE-COMMAND.md`. Keep it Windows PowerShell 5.1 compatible and ASCII only. |
-| `docs/CHANGES.txt` | Source of truth for every difference from upstream 3.4, in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
+| `docs/CHANGES.txt` | Source of truth for every difference from upstream (3.4, then the 3.5.2 fork of 2026-10-14), in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
 | `README.md` | Short landing page. Keep it short; details go in `docs/` and are linked from `docs/README.md` (the docs index). |
 | `docs/CONFIGS.md`, `docs/INSTALL.md`, `docs/IN-GAME-SETTINGS.md`, `docs/TROUBLESHOOTING.md`, `docs/AFTER-GAME-UPDATE.md` | User docs: the two configs and the upstream pin, install, assumed in-game settings, troubleshooting, the after-update checklist. |
 | `docs/WINDOWS11.md` | OS, driver and BIOS guidance. Independent of game patches. |
@@ -78,22 +83,32 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 ## Settled decisions (don't reopen without new evidence)
 
 - No gameplay information is hidden for performance: no culling props/troopers/health bars, no removing impact
-  effects, ropes, ragdolls. Purely cosmetic cuts (lighting, hair, splashes, decals, UI blur) are allowed. `r_size_cull_threshold` stays default (it culls trooper health bars). `cpu_level` and
-  `gpu_level` stay default (particle systems have minimum levels, so lowering them skips effects).
+  effects, ropes, ragdolls. Purely cosmetic cuts (lighting, hair, splashes, decals, UI blur) are allowed. `cpu_level` and
+  `gpu_level` stay default (particle systems have minimum levels, so lowering them skips effects). **Reversed by the
+  fork rule (2026-10-14), because Eskay's config sets them:** `r_size_cull_threshold 0.9`, `cl_ragdoll_limit 0`,
+  `r_drawropes false`, trooper and boss glow off, no viewmodel, no first-person tracers,
+  `sc_screen_size_lod_scale_override 0.55`. The other 3.5.2 lines that hide things (damage indicator, ragdoll scale,
+  rope_smooth_*, metal sparks, r_farz) are not used.
 - Map lighting: light shadow casting is off. Dynamic and stationary lights were off too until Valve blocked the
-  `lb_enable_*` toggles from gameinfo.gi in build 6769 (2026-10-09); they are back on and can't be turned off here. Sun, baked shadows and lightmaps stay on (turning those off makes the map unreadably bright or dark).
-- Camera, spectator and viewmodel convars stay at Valve defaults (owner, 2026-10-07: the camera felt wrong).
-  `citadel_camera_use_vmdl_flatten_horizontal` stays default (false made aiming down sights far too zoomed in).
-  The gun-aim pose override was tried and reverted.
+  `lb_enable_*` toggles from gameinfo.gi in build 6769 (2026-10-09); they are back on and can't be turned off here.
+  Baked shadows and lightmaps stay on. **Sun lighting is off (`r_rendersun 0`) since the 2026-10-14 fork** (3.5.2 and
+  Eskay); `vis_sunlight_enable` and `lb_precomputed_shadowmap_enable` stay default.
+- Camera: **since the 2026-10-14 fork, camera and FOV lines follow 3.5.2 and Eskay** (wobble off,
+  `citadel_camera_use_vmdl_flatten_horizontal false`, camera height, pitch, lag, see distance 7000, `default_fov` and
+  `viewmodel_fov` 0). Earlier (2026-10-07) the owner had them at Valve defaults because the camera felt wrong, and
+  flatten_horizontal false made aiming down sights too zoomed in. `citadel_camera_use_vmdl_flatten_vertical` and
+  `r_aspectratio` stay default (Eskay doesn't set them).
 - Per-hit damage numbers stay visible (a single hit never makes a total). While the owner tests in-game settings, group 1d
   is at Valve defaults except final lifetime 4 and dynamic emphasis off; the old up-left layout is kept commented.
-- Particle fallbacks are at upstream values. Bone flex, morphing and foot lock are off (fight-time CPU).
-- `steam_inputhandler_enabled "false"`, anisotropic 8x (owner choice 2026-10-06, GPU-bound), full-res textures.
+- Particle fallbacks are at upstream values. Bone flex, morphing, IK and foot lock are off (fight-time CPU).
+- `steam_inputhandler_enabled "false"`. Since the 2026-10-14 fork: bilinear filtering and mip bias 3 (3.5.2 and Eskay;
+  this replaced anisotropic 8x and full-res textures). The 3.5.2 texture pool and max-resolution caps are not used.
 - The same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
   `-vulkan` launch option. Every active line is renderer-neutral, or renderer-specific and unused by the other
   renderer (a Vulkan-only convar is ignored on DX11, and the reverse). Never add a line, note or docs step that
   asks the owner to comment, uncomment or change anything when switching renderer. Renderer-specific convars live
-  in group 2i and stay at Valve's default unless a console A/B test on that renderer shows a gain.
+  in group 2i and stay at Valve's default unless a console A/B test on that renderer shows a gain. Exception:
+  `r_vma_defrag_algorithm 0` (Vulkan only) from the 2026-10-14 fork, because Eskay's config sets it.
 
 ## Workflow for every change
 

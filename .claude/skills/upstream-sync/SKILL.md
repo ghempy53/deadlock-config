@@ -5,8 +5,9 @@ description: Check Sqooky's OptimizationLock for changes since the last synced c
 
 # Upstream sync (Sqooky/OptimizationLock)
 
-The config is not a fork that merges upstream. Each upstream change is judged against the goal and rules in
-`docs/CLAUDE.md`, and the ones that pass are re-applied by hand.
+The experimental ConVars are a fork of OptimizationLock 3.5.2 (fork rule in `docs/CLAUDE.md`). Judge each upstream
+change by that rule: valid client-side values are taken; a value that breaks a rule or settled decision is taken only
+if Eskay's config sets the same convar. Engine sections and fps_max never change. Apply them by hand.
 
 ## 1. Diff upstream
 
@@ -25,8 +26,8 @@ there.
 ## 2. Triage each changed convar
 
 For each one, run `python3 utils/convars.py lookup NAME` and sort it into one of:
-- **Adopt**: client-side, valid, a real frame-time or feel benefit, hides nothing on screen, and no conflict with a
-  settled decision.
+- **Adopt**: valid, client-side, not blocked or gone, in range, and either within the rules or also set by Eskay's
+  config (fork rule).
 - **Skip**: give a reason (hides something, server-only, blocked, gone, contradicts a settled decision, or no proven
   benefit).
 - **Engine-section changes**: always skip. Those sections stay Valve stock (matchmaking PGI guard).
