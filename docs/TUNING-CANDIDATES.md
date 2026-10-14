@@ -1,5 +1,13 @@
 # Tuning candidates and non-candidates (2026-10-06)
 
+> **2026-10-14: the experimental config was forked from OptimizationLock 3.5.2** (see the FORK section in
+> [CHANGES.txt](CHANGES.txt)). Many lines below that were candidates, reverted, or listed as not candidates are now
+> active because 3.5.2 sets them (and, for the ones that break a rule, Eskay's config too), among them
+> `r_particle_max_size_cull`, `r_limit_particle_job_duration`, the batching thresholds, `r_texture_budget_*`,
+> `lb_dynamic_shadow_penumbra`, `r_late_particle_job_sync`, `r_strip_invisible_during_sceneobject_update`,
+> `r_size_cull_threshold`, `sc_screen_size_lod_scale_override`, `cl_ragdoll_limit 0`, `r_rendersun 0` and
+> `r_drawropes`. Read this page as history for those; the rest still applies.
+
 What the research in [research/RESEARCH-2026-10-06.md](research/RESEARCH-2026-10-06.md) and the comparison in
 [research/CONFIG-COMPARISON.md](research/CONFIG-COMPARISON.md) leave on the table for this repo's goal (balanced clarity and FPS, nothing
 hidden on screen) and hardware (9800X3D, RTX 5070, 1440p 270 Hz, DX11). Nothing here is applied; every line is a test

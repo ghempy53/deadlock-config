@@ -15,9 +15,9 @@
 
 | File | What it is |
 | --- | --- |
-| [CHANGES.txt](CHANGES.txt) | Every difference from upstream OptimizationLock 3.4, in dated sections. Source of truth for re-applying the config. |
+| [CHANGES.txt](CHANGES.txt) | Every difference from upstream OptimizationLock (3.4, then the 3.5.2 fork of 2026-10-14), in dated sections. Source of truth for re-applying the config. |
 | [AFTER-GAME-UPDATE.md](AFTER-GAME-UPDATE.md) | The checklist after a Deadlock patch. |
-| [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md) | The 124 convars (build 6769) Deadlock ignores when set from `gameinfo.gi`, with a re-check procedure. |
+| [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md) | The 124 convars (builds 6769 to 6779) Deadlock ignores when set from `gameinfo.gi`, with a re-check procedure. |
 | [TUNING-CANDIDATES.md](TUNING-CANDIDATES.md) | What is still worth testing, and what was deliberately not adopted. |
 | [CLAUDE.md](CLAUDE.md) | Rules and workflow for Claude Code sessions (loaded via `.claude/CLAUDE.md`). Tooling is in [`utils/`](../utils/README.md). |
 
