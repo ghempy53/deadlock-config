@@ -17,7 +17,8 @@ Applied to the new experimental config unless noted:
 - Default health bar width. Already in v1.2.
 - DX11 only, forced by a Steam launch option. Vulkan-only lines are inert.
 
-Still open from section 4: the camera lines, the stutter-revert lines, and the texture and readability items.
+Section 4 is settled: the owner accepts every item there as v1.2 has it. The 2026-10-06 and 10-07 results in sections
+1 and 3 were distorted by problems with the owner's PC, so they are history, not evidence (owner, 2026-10-15).
 
 ## 1. Tested in game and kept
 

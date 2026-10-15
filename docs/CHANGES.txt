@@ -26,5 +26,12 @@ OWNER'S CONFIRMED PREFERENCES (2026-10-15)
   DX11 only (Steam launch option). The header comment on line 2 now says 2.11. Earlier values, so tested in game.
   Lines after 654 moved down by 2.
 
+OPEN ITEMS SETTLED: V1.2 VALUES STAND (2026-10-15)
+  No config change. The owner accepts every item in section 4 of docs/TESTED-CHANGES.md as v1.2 has it: camera lines,
+  IK off, the four stutter-revert lines, textures (mip bias 3, bilinear, 128 px cap), glows, tracers, culling,
+  r_farz, ragdolls and the damage-direction indicator. The owner's 2026-10-06/07 test results were distorted by PC
+  problems and no longer count. docs/CLAUDE.md goal and settled decisions rewritten to match.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

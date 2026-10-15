@@ -71,17 +71,22 @@ reach only part of this through ConVars.
 
 ## Experimental: `experimental-config/gameinfo.gi` (`-ex`)
 
-Restarted on 2026-10-15 as a byte-identical copy of stable v1.2 (`stable-config/v1.2/gameinfo.gi`). Nothing has been
-changed yet. Changes will be picked from [TESTED-CHANGES.md](TESTED-CHANGES.md), which lists what you tested, kept and
-rejected in the previous experimental config. Each change is logged in [CHANGES.txt](CHANGES.txt).
+Restarted on 2026-10-15 from stable v1.2 (`stable-config/v1.2/gameinfo.gi`). v1.2's values stand, including the
+trade-offs that cut or hide things on screen. On top of v1.2, these preferences are confirmed:
+- uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
+- Steam Input off
+- a 4 s final damage total with no big-hit emphasis
 
-Until those changes are made, the file has the same properties as stable v1.2:
-- edited engine sections (a matchmaking risk),
-- `fps_max 400` and `fps_max_ui 120`,
-- six convars set twice,
-- the original Sqooky comment layout.
+What the owner tested and kept is in [TESTED-CHANGES.md](TESTED-CHANGES.md), and every change is logged in
+[CHANGES.txt](CHANGES.txt).
 
-The repo checks (`utils/check.py`, `convars.py audit`, `stock_diff.py`) report these as errors.
+Still the same as v1.2:
+- **Edited engine sections:** a risk with matchmaking's file check.
+- **Six convars set twice:** the last value wins.
+- **Sqooky's comment layout.**
+
+The repo checks (`utils/check.py`, `convars.py audit`, `stock_diff.py`) report these as errors. The config is DX11
+only, set by your Steam launch option.
 
 The previous experimental config (the OptimizationLock 3.5.2 ConVars fork with stock engine sections) and its full
 change log are archived in [archive/](archive/).

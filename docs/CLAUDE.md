@@ -12,16 +12,13 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 
 - Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB, 2560x1440 @ 270 Hz, **DX11 only** (forced by a Steam launch
   option, owner 2026-10-15), Reflex On, uncapped FPS.
-- **Confirmed preferences (owner, 2026-10-15):** uncapped FPS, Steam Input off, per-hit damage numbers visible with a
-  4 s final total and no big-hit emphasis, box debris 0, `r_aspectratio 2.11`, default health bar width. See
-  `docs/TESTED-CHANGES.md`.
-- **Goal: performance first (owner, 2026-10-07).** Looks don't matter; gameplay information does. Cut anything
-  cosmetic, but never hide what the owner reads to play: health bars, ability effects and cues, troopers, props and
-  boxes, ziplines/ropes, impact effects, ragdolls (Doorman ult). (The 2026-10-14 fork rule overrides this where Eskay's config agrees; see Settled decisions.) The FPS problem being worked on is lows in big fights, which are CPU-bound.
-- **Fork rule (owner, 2026-10-14):** the experimental ConVars follow Sqooky's OptimizationLock 3.5.2. A 3.5.2 value
-  that breaks a rule or settled decision in this file is used only if Eskay's config (frozen as
-  `stable-config/v1.0/gameinfo.gi`) sets the same convar; otherwise the rule wins. fps_max stays 0 and the engine sections stay stock regardless.
-  Several settled decisions below were reversed this way; they say so.
+- **Goal: performance first.** Stable v1.2 (Sqooky's 3.5.2 as the owner tested it) is the reference, and the owner
+  accepts all of its trade-offs, including the ones that hide or cut things on screen (owner, 2026-10-15). The FPS
+  problem being worked on is lows in big fights, which are CPU-bound.
+- **Earlier test results don't count (owner, 2026-10-15).** The in-game results from 2026-10-06 and 10-07 were
+  distorted by problems with the owner's PC: camera felt wrong, turn stutter, keyboard input lag, aim-down-sights
+  zoom. Don't cite them to reject or revert a change. The archived fork rule (2026-10-14) only applied to the previous
+  experimental config.
 - **Never recommend** DLSS or any upscaler change (owner dislikes the look; it gave little FPS), or any FPS cap
   in game, driver or OS (owner runs uncapped, always). Don't mention them as options.
 - The owner is a professional engineer. Be direct, skip basics, and give a recommendation rather than a survey.
@@ -88,34 +85,20 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 
 ## Settled decisions (don't reopen without new evidence)
 
-- No gameplay information is hidden for performance: no culling props/troopers/health bars, no removing impact
-  effects, ropes, ragdolls. Purely cosmetic cuts (lighting, hair, splashes, decals, UI blur) are allowed. `cpu_level` and
-  `gpu_level` stay default (particle systems have minimum levels, so lowering them skips effects). **Reversed by the
-  fork rule (2026-10-14), because Eskay's config sets them:** `r_size_cull_threshold 0.9`, `cl_ragdoll_limit 0`,
-  `r_drawropes false`, trooper and boss glow off, no viewmodel, no first-person tracers,
-  `sc_screen_size_lod_scale_override 0.55`. The other 3.5.2 lines that hide things (damage indicator, ragdoll scale,
-  rope_smooth_*, metal sparks, r_farz) are not used.
-- Map lighting: light shadow casting is off. Dynamic and stationary lights were off too until Valve blocked the
-  `lb_enable_*` toggles from gameinfo.gi in build 6769 (2026-10-09); they are back on and can't be turned off here.
-  Baked shadows and lightmaps stay on. **Sun lighting is off (`r_rendersun 0`) since the 2026-10-14 fork** (3.5.2 and
-  Eskay); `vis_sunlight_enable` and `lb_precomputed_shadowmap_enable` stay default.
-- Camera: **since the 2026-10-14 fork, camera and FOV lines follow 3.5.2 and Eskay** (wobble off,
-  `citadel_camera_use_vmdl_flatten_horizontal false`, camera height, pitch, lag, see distance 7000, `default_fov` and
-  `viewmodel_fov` 0). Earlier (2026-10-07) the owner had them at Valve defaults because the camera felt wrong, and
-  flatten_horizontal false made aiming down sights too zoomed in. `citadel_camera_use_vmdl_flatten_vertical` and
-  `r_aspectratio` stay default (Eskay doesn't set them).
-- Per-hit damage numbers stay visible (a single hit never makes a total). While the owner tests in-game settings, group 1d
-  is at Valve defaults except final lifetime 4 and dynamic emphasis off; the old up-left layout is kept commented.
-- Particle fallbacks are at upstream values. Bone flex, morphing, IK and foot lock are off (fight-time CPU).
-- `steam_inputhandler_enabled "false"`. Since the 2026-10-14 fork: bilinear filtering and mip bias 3 (3.5.2 and Eskay;
-  this replaced anisotropic 8x and full-res textures). The 3.5.2 texture pool and max-resolution caps are not used.
-- **Superseded 2026-10-15: the owner runs DX11 only.** Vulkan-only lines are inert and need no work; don't tune for
-  Vulkan. The old rule, kept for reference: the same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
-  `-vulkan` launch option. Every active line is renderer-neutral, or renderer-specific and unused by the other
-  renderer (a Vulkan-only convar is ignored on DX11, and the reverse). Never add a line, note or docs step that
-  asks the owner to comment, uncomment or change anything when switching renderer. Renderer-specific convars live
-  in group 2i and stay at Valve's default unless a console A/B test on that renderer shows a gain. Exception:
-  `r_vma_defrag_algorithm 0` (Vulkan only) from the 2026-10-14 fork, because Eskay's config sets it.
+- The experimental config starts from stable v1.2 (2026-10-15), and v1.2's values stand. The owner accepted these
+  explicitly: camera lines (flatten_horizontal and flatten_vertical false, wobble off), IK and foot lock off, batching
+  thresholds 256, `r_particle_max_size_cull 900`, `r_limit_particle_job_duration`, texture budget 0.5, mip bias 3,
+  bilinear filtering, 128 px texture cap, trooper and boss glow off, no first-person tracers, `r_size_cull_threshold
+  0.9`, `r_farz 7000`, ragdoll scale 0 and limit 0, the smaller damage-direction indicator, box debris 0.
+- Confirmed preferences: uncapped FPS (`fps_max 0`, `fps_max_ui 0`), Steam Input off, per-hit damage numbers visible
+  with a 4 s final total and no big-hit emphasis, `r_aspectratio 2.11`, default health bar width,
+  `citadel_unit_status_healthbar_highlight_speed 100`.
+- DX11 only (Steam launch option). Vulkan-only lines are inert; don't tune for Vulkan.
+- Valve has blocked the `lb_enable_*` light toggles from gameinfo.gi since build 6769, so dynamic and stationary
+  lights can't be turned off here.
+- The previous decisions (no hidden gameplay information, camera at defaults, full-res textures with 8x filtering, the
+  fork rule) belonged to the archived config. They are recorded in `docs/archive/` and `docs/TESTED-CHANGES.md` as
+  history.
 
 ## Workflow for every change
 
