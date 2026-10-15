@@ -1,8 +1,9 @@
 # deadlock-config: guidance for Claude
 
 Personal Deadlock `gameinfo.gi` configs (Windows 11, DX11 or Vulkan with no edits). `stable-config/` is Sqooky's
-OptimizationLock 3.5.2 as the owner tested it (v1.2; Eskay's config is frozen as v1.0); `experimental-config/` is this repo's own config, a ConVars fork of Sqooky's OptimizationLock
-3.5.2 (2026-10-14; based on 3.4 before that).
+OptimizationLock 3.5.2 as the owner tested it (v1.2; Eskay's config is frozen as v1.0); `experimental-config/` was restarted on 2026-10-15 as a copy of stable v1.2,
+and tested changes are re-applied one at a time from `docs/TESTED-CHANGES.md`. The previous experimental config (3.4,
+then the 3.5.2 ConVars fork) and its change log are in `docs/archive/`.
 This file is loaded into every Claude Code session through `.claude/CLAUDE.md`. The README and the user docs in
 `docs/` cover the user-facing side; this file has the rules. Unless a request names the stable config, "the config"
 and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
@@ -26,11 +27,13 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 
 | File | Role |
 | --- | --- |
-| `experimental-config/gameinfo.gi` | The tuned config. KeyValues. All tuning lives in the `ConVars` tweak block. Every rule below applies to it. |
+| `experimental-config/gameinfo.gi` | The tuned config. KeyValues. Since 2026-10-15 a copy of stable v1.2, so until the owner decides otherwise it still breaks hard rules 1 to 7 (edited engine sections, fps_max 400, duplicate convars, Sqooky's comment layout) and `utils/check.py` reports errors. The owner directs each change; don't fix those on your own. |
+| `docs/TESTED-CHANGES.md` | What the owner tested, kept and rejected before the restart. Read it before proposing a change. |
+| `docs/archive/` | The previous experimental config and its full change log. Never edit. |
 | `stable-config/gameinfo.gi` | The owner's tested file (Sqooky's 3.5.2 with the edits listed in `docs/CONFIGS.md`). When the owner uploads a tested file, take it verbatim. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
 | `stable-config/v<N>/gameinfo.gi` | Frozen stable versions. **Never edit one.** A new version is a new folder plus a row in `docs/CONFIGS.md`. v1.0 (2026-10-13) is the owner's performance baseline: compare experimental changes against it (`python3 utils/compare.py`). |
 | `scripts/DeadlockConfig-Update.ps1` | The owner's PowerShell install command. Tutorial in `docs/UPDATE-COMMAND.md`. Keep it Windows PowerShell 5.1 compatible and ASCII only. |
-| `docs/CHANGES.txt` | Source of truth for every difference from upstream (3.4, then the 3.5.2 fork of 2026-10-14), in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
+| `docs/CHANGES.txt` | Every change to the experimental config since the 2026-10-15 restart, in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
 | `README.md` | Short landing page. Keep it short; details go in `docs/` and are linked from `docs/README.md` (the docs index). |
 | `docs/CONFIGS.md`, `docs/INSTALL.md`, `docs/IN-GAME-SETTINGS.md`, `docs/TROUBLESHOOTING.md`, `docs/AFTER-GAME-UPDATE.md` | User docs: the two configs and the upstream pin, install, assumed in-game settings, troubleshooting, the after-update checklist. |
 | `docs/WINDOWS11.md` | OS, driver and BIOS guidance. Independent of game patches. |
