@@ -14,8 +14,9 @@ with Steam's *Verify integrity of game files*.
 
 ## Deadlock Mod Manager fails to read the file
 
-Its parser fails on any line with an odd number of double quotes. The stable config has three such comment lines.
-Install it with [`DeadlockConfig-Update`](UPDATE-COMMAND.md) or by copying the file instead.
+Its parser fails on any line with an odd number of double quotes. The current stable config (v1.1) and the
+experimental config have none; stable v1.0 has three such comment lines. Install v1.0 with
+[`DeadlockConfig-Update`](UPDATE-COMMAND.md) or by copying the file instead.
 
 ## Greyed-out or miscoloured HUD (mods or leftover files)
 

@@ -1077,6 +1077,13 @@ BUILD 6779 CHECK (2026-10-14; Valve data: GameTracking-Deadlock 0c38f9d, build 6
   guarded sections and the stock ConVars tail still match stock. convars.py audit: 0 errors.
   Line numbers in ConVars moved down by 2.
 
+STABLE V1.1: SQOOKY 3.5.2 AS TESTED BY THE OWNER (2026-10-15)
+  stable-config/gameinfo.gi is now the owner's in-game tested file: Sqooky's OptimizationLock 3.5.2 (main @ 66db906)
+  with r_aspectratio 2.12 and ForceVulkanForMapBuild 1, credits/donor/link comments removed and two odd-quote comments
+  fixed. Frozen as stable-config/v1.1/gameinfo.gi (byte-identical). Eskay's config stays frozen as v1.0 and is still
+  the reference for the experimental fork rule. Details in docs/CONFIGS.md. This config is unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
