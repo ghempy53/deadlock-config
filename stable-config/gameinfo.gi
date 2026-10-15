@@ -634,6 +634,7 @@ GameInfo
         // citadel_unit_status_delta_decay_delay   "0"   // The delay between doing damage and havin the yellow damage indicator appear [def: "0.5"]
         // citadel_unit_status_delta_decay_rate    "10"  // How quickly the yellow "you're dealing damage" indicator fades [def: "0.5"]
         // citadel_unit_status_recent_damage_time  "inf" // how long to show someone's numerical health value when you shoot them. Inf means infinite, but will cause the healthbar to jiggle/shake forever. [def: "0.25"]
+	citadel_unit_status_healthbar_highlight_speed "100" //Removes delay of health bars refilling slowly
 
 
 
@@ -646,7 +647,7 @@ GameInfo
 
         // --- 2. Field of View ---
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
-        r_aspectratio "2.12" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
+        r_aspectratio "2.11" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
         citadel_unit_status_stamina_low_pips            "7"     // below this threshold stamina is permanantly visble [def: "3"]

@@ -1084,6 +1084,13 @@ STABLE V1.1: SQOOKY 3.5.2 AS TESTED BY THE OWNER (2026-10-15)
   the reference for the experimental fork rule. Details in docs/CONFIGS.md. This config is unchanged.
   Line numbers unchanged.
 
+STABLE V1.2: OWNER'S TESTED FILE (2026-10-15)
+  stable-config/gameinfo.gi is the owner's uploaded, in-game tested file, verbatim. Against v1.1: r_aspectratio
+  2.12 -> 2.11, and citadel_unit_status_healthbar_highlight_speed (default 2) -> 100 (health bars refill without the
+  slow highlight; client-side, not blocked, build 6779 dump). Frozen as stable-config/v1.2/gameinfo.gi. This config is
+  unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Commented-out cheat-flagged lines were deleted (2026-10-04) for clarity. Line -- above means the line was removed; the game default applies, same as commenting it out.
   - Cheat-flagged settings that remain active DO apply: this file sets them at game startup. The cheat flag only blocks changing them from the console in a match.
