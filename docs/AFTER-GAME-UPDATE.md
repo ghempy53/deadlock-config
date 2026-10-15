@@ -23,4 +23,4 @@ the scripts in [`utils/`](../utils/README.md) automate most of it.
 7. Log every change in [CHANGES.txt](CHANGES.txt).
 
 For the stable config, compare it with the latest `Sqooky's .gi/gameinfo.gi` in OptimizationLock and re-apply the
-edits listed in [CONFIGS.md](CONFIGS.md) (aspect ratio 2.12, ForceVulkanForMapBuild, comment cleanup).
+edits listed in [CONFIGS.md](CONFIGS.md) (aspect ratio 2.11, ForceVulkanForMapBuild, health-bar highlight speed, comment cleanup).

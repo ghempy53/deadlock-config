@@ -1,7 +1,7 @@
 # deadlock-config: guidance for Claude
 
 Personal Deadlock `gameinfo.gi` configs (Windows 11, DX11 or Vulkan with no edits). `stable-config/` is Sqooky's
-OptimizationLock 3.5.2 as the owner tested it (v1.1; Eskay's config is frozen as v1.0); `experimental-config/` is this repo's own config, a ConVars fork of Sqooky's OptimizationLock
+OptimizationLock 3.5.2 as the owner tested it (v1.2; Eskay's config is frozen as v1.0); `experimental-config/` is this repo's own config, a ConVars fork of Sqooky's OptimizationLock
 3.5.2 (2026-10-14; based on 3.4 before that).
 This file is loaded into every Claude Code session through `.claude/CLAUDE.md`. The README and the user docs in
 `docs/` cover the user-facing side; this file has the rules. Unless a request names the stable config, "the config"
@@ -27,7 +27,7 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 | File | Role |
 | --- | --- |
 | `experimental-config/gameinfo.gi` | The tuned config. KeyValues. All tuning lives in the `ConVars` tweak block. Every rule below applies to it. |
-| `stable-config/gameinfo.gi` | Sqooky's 3.5.2 config as the owner tested it, verbatim except the edits listed in `docs/CONFIGS.md`. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
+| `stable-config/gameinfo.gi` | The owner's tested file (Sqooky's 3.5.2 with the edits listed in `docs/CONFIGS.md`). When the owner uploads a tested file, take it verbatim. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
 | `stable-config/v<N>/gameinfo.gi` | Frozen stable versions. **Never edit one.** A new version is a new folder plus a row in `docs/CONFIGS.md`. v1.0 (2026-10-13) is the owner's performance baseline: compare experimental changes against it (`python3 utils/compare.py`). |
 | `scripts/DeadlockConfig-Update.ps1` | The owner's PowerShell install command. Tutorial in `docs/UPDATE-COMMAND.md`. Keep it Windows PowerShell 5.1 compatible and ASCII only. |
 | `docs/CHANGES.txt` | Source of truth for every difference from upstream (3.4, then the 3.5.2 fork of 2026-10-14), in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
