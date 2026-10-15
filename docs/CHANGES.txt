@@ -13,5 +13,18 @@ NEW EXPERIMENTAL BASE: STABLE V1.2 (2026-10-15)
   owner picks which tested changes to re-apply.
   Line numbers unchanged.
 
+OWNER'S CONFIRMED PREFERENCES (2026-10-15)
+  line 1294  fps_max                                       "400"  ->  "0"
+  line 1295  fps_max_ui                                    "120"  ->  "0"
+  line 626   steam_inputhandler_enabled                    "true"  ->  "false"
+  line 656   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
+  line 657   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
+  Why: the owner confirmed these from docs/TESTED-CHANGES.md: uncapped FPS, Steam Input off, per-hit damage numbers
+  visible (default offsets) with the final total shown 4 s and no big-hit emphasis. steam_inputhandler_enabled was
+  already false in effect (the second line at 1178 won); the first line now agrees. Also confirmed and already in the
+  base: box debris 0 (props_break_max_pieces_perframe), r_aspectratio 2.11, default health bar width. The game runs
+  DX11 only (Steam launch option). The header comment on line 2 now says 2.11. Earlier values, so tested in game.
+  Lines after 654 moved down by 2.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

@@ -10,8 +10,11 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 
 ## Owner, hardware, goal
 
-- Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB, 2560x1440 @ 270 Hz, DX11 or Vulkan (`-vulkan`),
-  Reflex On, uncapped FPS.
+- Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB, 2560x1440 @ 270 Hz, **DX11 only** (forced by a Steam launch
+  option, owner 2026-10-15), Reflex On, uncapped FPS.
+- **Confirmed preferences (owner, 2026-10-15):** uncapped FPS, Steam Input off, per-hit damage numbers visible with a
+  4 s final total and no big-hit emphasis, box debris 0, `r_aspectratio 2.11`, default health bar width. See
+  `docs/TESTED-CHANGES.md`.
 - **Goal: performance first (owner, 2026-10-07).** Looks don't matter; gameplay information does. Cut anything
   cosmetic, but never hide what the owner reads to play: health bars, ability effects and cues, troopers, props and
   boxes, ziplines/ropes, impact effects, ragdolls (Doorman ult). (The 2026-10-14 fork rule overrides this where Eskay's config agrees; see Settled decisions.) The FPS problem being worked on is lows in big fights, which are CPU-bound.
@@ -106,7 +109,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - Particle fallbacks are at upstream values. Bone flex, morphing, IK and foot lock are off (fight-time CPU).
 - `steam_inputhandler_enabled "false"`. Since the 2026-10-14 fork: bilinear filtering and mip bias 3 (3.5.2 and Eskay;
   this replaced anisotropic 8x and full-res textures). The 3.5.2 texture pool and max-resolution caps are not used.
-- The same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
+- **Superseded 2026-10-15: the owner runs DX11 only.** Vulkan-only lines are inert and need no work; don't tune for
+  Vulkan. The old rule, kept for reference: the same file must work on DX11 and Vulkan with **no edits by the owner**: the renderer is picked only by the
   `-vulkan` launch option. Every active line is renderer-neutral, or renderer-specific and unused by the other
   renderer (a Vulkan-only convar is ignored on DX11, and the reverse). Never add a line, note or docs step that
   asks the owner to comment, uncomment or change anything when switching renderer. Renderer-specific convars live

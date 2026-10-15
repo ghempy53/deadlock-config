@@ -1,5 +1,5 @@
 // OptimizationLock Ver. 3.5.2 by Sqooky with help from others (https://github.com/Sqooky/OptimizationLock, GPL-3.0).
-// Stable config of ghempy53/deadlock-config: 3.5.2 with r_aspectratio 2.12 and ForceVulkanForMapBuild. Credits,
+// Stable config of ghempy53/deadlock-config: 3.5.2 with r_aspectratio 2.11 and ForceVulkanForMapBuild. Credits,
 // donor and link comments removed.
 
 
@@ -623,7 +623,7 @@ GameInfo
         r_particle_max_size_cull                      "900"   // [def: "1200"] // Particle systems larger than this in every dimension skip culling to save CPU.  They will be drawn anyway. // So particle culling is handled by the CPU in deadlock, if you have GPU overhead to spare, consider lowering this value.
         r_size_cull_threshold                         "0.9"   // This will control the distance trooper healthbars and boxes stop rendering *Culls small objects sooner based on screen size threshold (higher = more culling). [def: "0.8"]
         sc_screen_size_lod_scale_override             "0.55"  // Controls LOD scale. Lower values will make sinners and playermodels look worse "my sinner's lights are little triangles" [def: "-1"]
-        steam_inputhandler_enabled                    "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
+        steam_inputhandler_enabled                    "false"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
         // citadel_in_world_item_panel_dpi        "0"    // This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher values mean better quality, lower means worse. [def: "2"]
 
         // --- Render Distance ---
@@ -653,6 +653,8 @@ GameInfo
         citadel_unit_status_stamina_low_pips            "7"     // below this threshold stamina is permanantly visble [def: "3"]
         citadel_damage_report_enable                    "1"     // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
         citadel_damage_text_batching_window_ability     "1000"  // How long to wait until batching damage text.
+        citadel_damage_text_cumulative_final_lifetime   "4"     // In cumulative mode 2, how long the total lives once shown.    [def: "3"]
+        citadel_damage_text_dynamic_emphasis            "false" // No 150% scale-up and pop on big hits. Crits still scale 130%. [def: "true"]
         citadel_distance_mouse_move_for_minimap_drawing "1"     // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
         citadel_hideout_ball_show_juggle_count          "1"     // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx             "1"     // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
@@ -1289,8 +1291,8 @@ GameInfo
         disable_source_soundscape_trace "1"
 
 
-        fps_max    "400"
-        fps_max_ui "120"
+        fps_max    "0"
+        fps_max_ui "0"
 
         in_button_double_press_window "0.3"
 

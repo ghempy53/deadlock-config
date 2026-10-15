@@ -6,6 +6,19 @@ stable versions. It is the input for the new experimental config, which starts a
 
 The last column gives the value in stable v1.2, the new base. "Unset" means the engine default applies.
 
+## 0. Confirmed by the owner (2026-10-15)
+
+Applied to the new experimental config unless noted:
+- Uncapped FPS: `fps_max 0`, `fps_max_ui 0`.
+- Steam Input off.
+- Per-hit damage numbers visible (default offsets), final total shown 4 s, no big-hit emphasis.
+- Box debris 0 (`props_break_max_pieces_perframe 0`). Already in v1.2.
+- `r_aspectratio 2.11`. Already in v1.2.
+- Default health bar width. Already in v1.2.
+- DX11 only, forced by a Steam launch option. Vulkan-only lines are inert.
+
+Still open from section 4: the camera lines, the stutter-revert lines, and the texture and readability items.
+
 ## 1. Tested in game and kept
 
 | Change | Value | Evidence | In v1.2 |
