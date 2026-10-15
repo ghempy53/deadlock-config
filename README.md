@@ -5,7 +5,7 @@ a Ryzen 7 9800X3D and RTX 5070 at 1440p, uncapped FPS.
 
 | Config | What it is |
 | --- | --- |
-| [`stable-config/`](stable-config/gameinfo.gi) (default) | Eskay's OptimizationLock config, with the game's default aspect ratio. Frozen versions: [`v1.0`](stable-config/v1.0/gameinfo.gi). |
+| [`stable-config/`](stable-config/gameinfo.gi) (default) | Sqooky's OptimizationLock 3.5.2 with aspect ratio 2.12, tested in game. Frozen versions: [`v1.0`](stable-config/v1.0/gameinfo.gi) (Eskay's config), [`v1.1`](stable-config/v1.1/gameinfo.gi) (current). |
 | [`experimental-config/`](experimental-config/gameinfo.gi) | Fork of Sqooky's OptimizationLock 3.5.2 settings (Eskay's config decides conflicts with this repo's rules), uncapped, engine sections stock. |
 
 Differences and caveats: [docs/CONFIGS.md](docs/CONFIGS.md).

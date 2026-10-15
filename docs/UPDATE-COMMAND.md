@@ -9,7 +9,8 @@ as its pull request is merged. The source is [`scripts/DeadlockConfig-Update.ps1
 DeadlockConfig-Update            # stable config (default)
 DeadlockConfig-Update -stable    # same thing, explicit
 DeadlockConfig-Update -ex        # experimental config
-DeadlockConfig-Update -Version 1.0   # stable v1.0, frozen (for A/B tests against -ex)
+DeadlockConfig-Update -Version 1.0   # stable v1.0 (Eskay's config), frozen (for A/B tests against -ex)
+DeadlockConfig-Update -Version 1.1   # stable v1.1 (Sqooky 3.5.2, aspect 2.12), frozen
 ```
 
 Type `DeadlockC` and press Tab to complete the name.

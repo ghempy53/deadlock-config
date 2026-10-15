@@ -22,5 +22,5 @@ the scripts in [`utils/`](../utils/README.md) automate most of it.
    one-liner is in [BLOCKED-CONVARS.md](BLOCKED-CONVARS.md).
 7. Log every change in [CHANGES.txt](CHANGES.txt).
 
-For the stable config, compare it with the latest `Eskay's config/gameinfo.gi` in OptimizationLock and re-apply the
-aspect-ratio edit listed in [CONFIGS.md](CONFIGS.md).
+For the stable config, compare it with the latest `Sqooky's .gi/gameinfo.gi` in OptimizationLock and re-apply the
+edits listed in [CONFIGS.md](CONFIGS.md) (aspect ratio 2.12, ForceVulkanForMapBuild, comment cleanup).
