@@ -15,7 +15,7 @@ installable for rollback. Its only in-game differences from v1.2:
 - `phys_dynamic_scaling "false"` was dropped, so the default (true) applies. Replicated.
 
 Every setting matches Sqooky's 3.5.3 file except:
-- `r_aspectratio "2.11"` (Sqooky: 2.5). This squeezes a wider view onto the 16:9 screen; see the FOV notes in the
+- `r_aspectratio "2.11"` (Sqooky: 2.5). Owner's rule: every stable version keeps 2.11, whatever upstream sets. This squeezes a wider view onto the 16:9 screen; see the FOV notes in the
   experimental config.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
 - `citadel_unit_status_healthbar_highlight_speed "100"` (default 2): health bars refill without the slow highlight
