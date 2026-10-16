@@ -5,14 +5,22 @@ Both are full replacements for Deadlock's `game\citadel\gameinfo.gi`. Install on
 
 ## Stable: `stable-config/gameinfo.gi` (default)
 
-Sqooky's OptimizationLock 3.5.2 from [OptimizationLock](https://github.com/Sqooky/OptimizationLock)
-(`Sqooky's .gi/gameinfo.gi` at commit `66db906`, 2026-10-13), as the owner tested it in game (v1.2, 2026-10-15). The
-owner's file is taken verbatim. Changes from Sqooky's file:
+Sqooky's OptimizationLock 3.5.3 from [OptimizationLock](https://github.com/Sqooky/OptimizationLock)
+(`Sqooky's .gi/gameinfo.gi` at commit `65a7462`, 2026-10-16). It is the owner's tested v1.2 (3.5.2, 2026-10-15) with
+upstream's 3.5.3 changes pulled in on 2026-10-16; the 3.5.3 update itself is untested in game, and v1.2 stays
+installable for rollback. Its only in-game differences from v1.2:
+- `citadel_per_weapon_per_surface_impact_effects "false"`: per-weapon, per-surface bullet impacts are simplified.
+  Sqooky notes it also removes the radius indicator of Yamato's right click. Replicated, so online the server's
+  value probably wins.
+- `phys_dynamic_scaling "false"` was dropped, so the default (true) applies. Replicated.
+
+Every setting matches Sqooky's 3.5.3 file except:
 - `r_aspectratio "2.11"` (Sqooky: 2.5). This squeezes a wider view onto the 16:9 screen; see the FOV notes in the
   experimental config.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
 - `citadel_unit_status_healthbar_highlight_speed "100"` (default 2): health bars refill without the slow highlight
-  delay. Client-side, not blocked.
+  delay. Client-side, not blocked. The owner added it in v1.2; Sqooky adopted it in 3.5.3, so it now sits in the UI
+  block like upstream's.
 - Comments only: the credits, donor list, ko-fi, tutorial and GameBanana lines and the editing example are removed,
   two thank-you notes on setting lines are shortened, and two comments with an odd number of double quotes are fixed
   (they broke Deadlock Mod Manager's parser).

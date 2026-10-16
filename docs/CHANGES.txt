@@ -33,5 +33,14 @@ OPEN ITEMS SETTLED: V1.2 VALUES STAND (2026-10-15)
   problems and no longer count. docs/CLAUDE.md goal and settled decisions rewritten to match.
   Line numbers unchanged.
 
+UPSTREAM SYNC CHECK (2026-10-16, OptimizationLock main @ 65a7462)
+  OptimizationLock 3.5.3 (65a7462, 2026-10-16) pulled into stable-config/gameinfo.gi at the owner's request. It turns
+  on citadel_per_weapon_per_surface_impact_effects false and drops phys_dynamic_scaling false (both replicated). It
+  also adds ForceVulkanForMapBuild and citadel_unit_status_healthbar_highlight_speed 100 (both already in v1.2),
+  removes three gone health-bar convars and two commented ping lines, and changes comments. Stable keeps
+  r_aspectratio 2.11. Not frozen as a version until tested; v1.2 stays the last tested freeze. This config
+  (experimental) is unchanged; Kaizuchaneru's configs also changed upstream and are not used here.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
