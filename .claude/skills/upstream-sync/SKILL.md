@@ -9,6 +9,10 @@ The experimental ConVars are a fork of OptimizationLock 3.5.2 (fork rule in `doc
 change by that rule: valid client-side values are taken; a value that breaks a rule or settled decision is taken only
 if Eskay's config sets the same convar. Engine sections and fps_max never change. Apply them by hand.
 
+When the owner asks to pull upstream into the **stable** config, apply upstream's changes to
+`stable-config/gameinfo.gi` but keep the owner's edits listed in `docs/CONFIGS.md`. `r_aspectratio "2.11"` always
+stays, whatever upstream sets.
+
 ## 1. Diff upstream
 
 ```
