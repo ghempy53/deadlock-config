@@ -86,7 +86,8 @@ values stand, including the trade-offs that cut or hide things on screen. On top
 - a 4 s final damage total with no big-hit emphasis
 - textures at full resolution with 8x anisotropic filtering, and no texture pool or resolution cap (being tested; fixes
   jagged textures and healing particles)
-- no cap on particle texture layers (being tested; jagged jetpack fire on Deadman Danny)
+- the Particles engine section at Valve stock, without Sqooky's six extra keys such as mixed-resolution particles
+  (being tested; jagged jetpack fire on Deadman Danny)
 
 What the owner tested and kept is in [TESTED-CHANGES.md](TESTED-CHANGES.md), and every change is logged in
 [CHANGES.txt](CHANGES.txt).
