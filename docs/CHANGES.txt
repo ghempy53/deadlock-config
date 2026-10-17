@@ -254,5 +254,13 @@ DAMAGE NUMBER LINES REMOVED FROM BOTH CONFIGS (2026-10-17)
   listed in docs/CONFIGS.md.
   Lines after 654 moved up by 2.
 
+STABLE V1.3 FROZEN (2026-10-17)
+  stable-config/v1.3/gameinfo.gi is a byte-identical copy of stable-config/gameinfo.gi (SHA-256 b5fbeb3e...33ab3dc2),
+  locked at the owner's request: Sqooky's OptimizationLock 3.5.3 with r_aspectratio 2.11, fps_max and fps_max_ui 0,
+  r_particle_min_timestep at default, mip bias 2, texture pool 6400 MB, no texture resolution cap, Steam Input false
+  on both lines, damage numbers at Valve's defaults. It matches this config in every setting. Install with
+  DeadlockConfig-Update -Version 1.3. This config is unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

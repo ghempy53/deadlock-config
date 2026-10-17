@@ -58,9 +58,10 @@ frozen as the next version.
 | --- | --- | --- |
 | **v1.0** (2026-10-13) | [`stable-config/v1.0/gameinfo.gi`](../stable-config/v1.0/gameinfo.gi) | Eskay's config at `f6fdab7` with `r_aspectratio` commented out (SHA-256 `dfad6b32…97b4a8`). The owner's baseline: performance felt excellent. Mods only in `citadel/addons`. |
 | **v1.1** (2026-10-15) | [`stable-config/v1.1/gameinfo.gi`](../stable-config/v1.1/gameinfo.gi) | Sqooky's OptimizationLock 3.5.2 at `66db906` with `r_aspectratio 2.12` and `ForceVulkanForMapBuild`, credits and donor comments removed. Tested in game by the owner. SHA-256 `82655cf1…d62a5d64`. |
-| **v1.2** (2026-10-15) | [`stable-config/v1.2/gameinfo.gi`](../stable-config/v1.2/gameinfo.gi) | v1.1 with `r_aspectratio 2.11` and `citadel_unit_status_healthbar_highlight_speed 100`. The owner's tested file, verbatim. Byte-identical to `stable-config/gameinfo.gi` as of this date (SHA-256 `37991b5b…840b8e4b`). |
+| **v1.2** (2026-10-15) | [`stable-config/v1.2/gameinfo.gi`](../stable-config/v1.2/gameinfo.gi) | v1.1 with `r_aspectratio 2.11` and `citadel_unit_status_healthbar_highlight_speed 100`. The owner's tested file, verbatim. SHA-256 `37991b5b…840b8e4b`. |
+| **v1.3** (2026-10-17) | [`stable-config/v1.3/gameinfo.gi`](../stable-config/v1.3/gameinfo.gi) | Sqooky's OptimizationLock 3.5.3 with `r_aspectratio 2.11`, uncapped FPS, `r_particle_min_timestep` at default (jagged-fire fix), mip bias 2, a 6400 MB texture pool and no texture resolution cap; damage numbers at Valve's defaults. Locked at the owner's request. Byte-identical to `stable-config/gameinfo.gi` as of this date (SHA-256 `b5fbeb3e…33ab3dc2`). |
 
-Install a version with `DeadlockConfig-Update -Version 1.0` (or `1.1`, `1.2`).
+Install a version with `DeadlockConfig-Update -Version 1.0` (or `1.1`, `1.2`, `1.3`).
 
 A game update can change how a frozen version behaves (renamed or blocked convars, a new matchmaking check) without
 the file changing.
