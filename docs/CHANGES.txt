@@ -74,5 +74,14 @@ TEXTURES BACK TO FULL RESOLUTION, 8X ANISOTROPIC (2026-10-17)
   the fallback lines, and the Particles engine section's EnableMixedResolution).
   Line numbers unchanged.
 
+PARTICLE TEXTURE LAYERS BACK TO DEFAULT (2026-10-17)
+  line 826   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default -1, no cap)
+  Why: with full-res textures the owner still sees jagged fire on Deadman Danny's jetpack. This line caps the texture
+  layers each particle effect may blend; Sqooky's note says fire effects (Infernus afterburn, Paige, Drifter) turn
+  blocky below 4, so 4 is at the edge. GPU shading cost only, so little effect on CPU-bound fight lows. Untested in
+  game: check the jetpack fire and other fire effects. If still jagged, next are the particle fallback lines
+  (cheaper effect versions under load), then the mixed-resolution particle pass.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
