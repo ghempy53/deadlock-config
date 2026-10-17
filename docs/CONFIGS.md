@@ -18,7 +18,15 @@ installable for rollback. Its only in-game differences from v1.2:
   FPS above about 415, 0.00241 interpolates particles between simulation steps, which made fast-moving fire and heal
   particles jagged (found by bisect in the experimental config).
 
-Every setting matches Sqooky's 3.5.3 file except `r_particle_min_timestep` and:
+Owner's values taken from the experimental config (2026-10-17), the same in both configs:
+- uncapped FPS: `fps_max "0"`, `fps_max_ui "0"` (Sqooky: 400 / 120)
+- `citadel_damage_text_cumulative_final_lifetime "4"` and `citadel_damage_text_dynamic_emphasis "false"`: the damage
+  total stays 4 s, no big-hit scale-up
+- textures: `r_texture_stream_mip_bias "2"` (Sqooky: 3), `r_texture_pool_size "6400"` (Sqooky: 256), and
+  `r_texture_stream_max_resolution` commented out (Sqooky: 128 px cap)
+- `steam_inputhandler_enabled "false"` on both of its lines (Sqooky's first line said true; the second, false, won)
+
+Every other setting matches Sqooky's 3.5.3 file except `r_particle_min_timestep` and:
 - `r_aspectratio "2.11"` (Sqooky: 2.5). Owner's rule: every stable version keeps 2.11, whatever upstream sets. This squeezes a wider view onto the 16:9 screen; see the FOV notes in the
   experimental config.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
@@ -88,8 +96,8 @@ values stand, including the trade-offs that cut or hide things on screen. On top
 - uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
 - Steam Input off
 - a 4 s final damage total with no big-hit emphasis
-- textures being tested: `r_texture_pool_size 6400` (stable 256), no resolution cap (stable 128 px), and
-  `r_texture_stream_mip_bias 2` (stable 3, one step sharper). Bilinear filtering is as in stable.
+- the same texture values as stable since 2026-10-17: mip bias 2, a 6400 MB texture pool, no resolution cap,
+  bilinear filtering
 - `r_particle_min_timestep` at Valve's default (0): Sqooky's 0.00241 lerps particles above about 415 FPS, which made
   fast-moving fire (Deadman Danny's jetpack) and heal particles look jagged (found by bisect, 2026-10-17)
 

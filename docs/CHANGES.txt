@@ -237,5 +237,13 @@ TEXTURE POOL 6400 MB (2026-10-17)
   Untested in game: check texture sharpness, watch for hitches or VRAM warnings, and compare fight 1% lows.
   Line numbers unchanged.
 
+STABLE TAKES THE EXPERIMENTAL VALUES (2026-10-17)
+  No change to this config. At the owner's request stable-config/gameinfo.gi now has the same effective values as
+  this config: fps_max and fps_max_ui 0, citadel_damage_text_cumulative_final_lifetime 4, dynamic emphasis false,
+  r_texture_stream_mip_bias 2, r_texture_pool_size 6400, r_texture_stream_max_resolution commented out, and
+  steam_inputhandler_enabled false on both lines. utils/compare.py: no difference in any setting or section.
+  Stable edits are listed in docs/CONFIGS.md. Not frozen as a version.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
