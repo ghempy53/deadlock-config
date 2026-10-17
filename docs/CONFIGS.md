@@ -20,8 +20,6 @@ installable for rollback. Its only in-game differences from v1.2:
 
 Owner's values taken from the experimental config (2026-10-17), the same in both configs:
 - uncapped FPS: `fps_max "0"`, `fps_max_ui "0"` (Sqooky: 400 / 120)
-- `citadel_damage_text_cumulative_final_lifetime "4"` and `citadel_damage_text_dynamic_emphasis "false"`: the damage
-  total stays 4 s, no big-hit scale-up
 - textures: `r_texture_stream_mip_bias "2"` (Sqooky: 3), `r_texture_pool_size "6400"` (Sqooky: 256), and
   `r_texture_stream_max_resolution` commented out (Sqooky: 128 px cap)
 - `steam_inputhandler_enabled "false"` on both of its lines (Sqooky's first line said true; the second, false, won)
@@ -95,7 +93,6 @@ Restarted on 2026-10-17 from the current stable config (Sqooky's 3.5.3 with `r_a
 values stand, including the trade-offs that cut or hide things on screen. On top of stable:
 - uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
 - Steam Input off
-- a 4 s final damage total with no big-hit emphasis
 - the same texture values as stable since 2026-10-17: mip bias 2, a 6400 MB texture pool, no resolution cap,
   bilinear filtering
 - `r_particle_min_timestep` at Valve's default (0): Sqooky's 0.00241 lerps particles above about 415 FPS, which made

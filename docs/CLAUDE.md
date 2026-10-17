@@ -95,8 +95,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - `r_particle_min_timestep` stays at Valve's default in both configs (owner-tested bisect, 2026-10-17). Sqooky's 0.00241 lerps
   particles above about 415 FPS, which with uncapped FPS made fast-moving fire and heal particles jagged. HDR,
   texture layers, the Particles section keys and the other particle lines were ruled out. Don't re-add it from upstream.
-- Confirmed preferences: uncapped FPS (`fps_max 0`, `fps_max_ui 0`), Steam Input off, per-hit damage numbers visible
-  with a 4 s final total and no big-hit emphasis, `r_aspectratio 2.11`, default health bar width,
+- Confirmed preferences: uncapped FPS (`fps_max 0`, `fps_max_ui 0`), Steam Input off, damage numbers at Valve's
+  defaults (owner removed the 4 s total and no-emphasis lines on 2026-10-17), `r_aspectratio 2.11`, default health bar width,
   `citadel_unit_status_healthbar_highlight_speed 100`.
 - DX11 only (Steam launch option). Vulkan-only lines are inert; don't tune for Vulkan.
 - Valve has blocked the `lb_enable_*` light toggles from gameinfo.gi since build 6769, so dynamic and stationary

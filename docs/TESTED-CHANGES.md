@@ -11,7 +11,8 @@ The last column gives the value in stable v1.2, the new base. "Unset" means the 
 Applied to the new experimental config unless noted:
 - Uncapped FPS: `fps_max 0`, `fps_max_ui 0`.
 - Steam Input off.
-- Per-hit damage numbers visible (default offsets), final total shown 4 s, no big-hit emphasis.
+- Per-hit damage numbers visible (default offsets). The 4 s final total and no big-hit emphasis were removed by the
+  owner on 2026-10-17; damage numbers are at Valve's defaults.
 - Box debris 0 (`props_break_max_pieces_perframe 0`). Already in v1.2.
 - `r_aspectratio 2.11`. Already in v1.2.
 - Default health bar width. Already in v1.2.

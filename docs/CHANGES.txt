@@ -14,11 +14,11 @@ NEW EXPERIMENTAL BASE: STABLE V1.2 (2026-10-15)
   Line numbers unchanged.
 
 OWNER'S CONFIRMED PREFERENCES (2026-10-15)
-  line 1288  fps_max                                       "400"  ->  "0"
-  line 1289  fps_max_ui                                    "120"  ->  "0"
+  line 1286  fps_max                                       "400"  ->  "0"
+  line 1287  fps_max_ui                                    "120"  ->  "0"
   line 626   steam_inputhandler_enabled                    "true"  ->  "false"
-  line 655   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
-  line 656   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
+  line --    citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
+  line --    citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
   Why: the owner confirmed these from docs/TESTED-CHANGES.md: uncapped FPS, Steam Input off, per-hit damage numbers
   visible (default offsets) with the final total shown 4 s and no big-hit emphasis. steam_inputhandler_enabled was
   already false in effect (the second line at 1178 won); the first line now agrees. Also confirmed and already in the
@@ -50,10 +50,10 @@ DEADLOCKCONFIG-UPDATE ALWAYS REPLACES THE FILE (2026-10-17)
 
 NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-17)
   line 626   steam_inputhandler_enabled                    "true"  ->  "false"
-  line 655   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
-  line 656   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
-  line 1288  fps_max                                       "400"  ->  "0"
-  line 1289  fps_max_ui                                    "120"  ->  "0"
+  line --    citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
+  line --    citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
+  line 1286  fps_max                                       "400"  ->  "0"
+  line 1287  fps_max_ui                                    "120"  ->  "0"
   Why: owner's request: experimental-config/gameinfo.gi restarts as a copy of the current stable config (Sqooky's
   OptimizationLock 3.5.3 with r_aspectratio 2.11, PR #61). Stable does not carry the owner's confirmed preferences, so
   they are re-applied as before: uncapped FPS, Steam Input off on both lines, 4 s final damage total, no big-hit
@@ -61,10 +61,10 @@ NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-1
   Lines after 654 moved down by 2.
 
 TEXTURES BACK TO FULL RESOLUTION, 8X ANISOTROPIC (2026-10-17)
-  line 708   r_texture_stream_mip_bias                     "3"  ->  "0"
-  line 709   r_texturefilteringquality                     "0"  ->  "4"
-  line 1144  r_texture_pool_size                           "256"  ->  (commented -> engine default 1600)
-  line 1145  r_texture_stream_max_resolution               "128"  ->  (commented -> engine default, no cap)
+  line 706   r_texture_stream_mip_bias                     "3"  ->  "0"
+  line 707   r_texturefilteringquality                     "0"  ->  "4"
+  line 1142  r_texture_pool_size                           "256"  ->  (commented -> engine default 1600)
+  line 1143  r_texture_stream_max_resolution               "128"  ->  (commented -> engine default, no cap)
   Why: the owner sees jagged textures everywhere and jagged healing particles. Mip bias 3 streams textures at about
   1/8 resolution, the 128 px cap (clamped to the engine minimum 512) and the 256 MB pool keep them small, and bilinear
   filtering shimmers at angles. All four cost GPU memory and bandwidth only; fight lows are CPU-bound and the RTX
@@ -75,7 +75,7 @@ TEXTURES BACK TO FULL RESOLUTION, 8X ANISOTROPIC (2026-10-17)
   Line numbers unchanged.
 
 PARTICLE TEXTURE LAYERS BACK TO DEFAULT (2026-10-17)
-  line 826   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default -1, no cap)
+  line 824   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default -1, no cap)
   Why: with full-res textures the owner still sees jagged fire on Deadman Danny's jetpack. This line caps the texture
   layers each particle effect may blend; Sqooky's note says fire effects (Infernus afterburn, Paige, Drifter) turn
   blocky below 4, so 4 is at the edge. GPU shading cost only, so little effect on CPU-bound fight lows. Untested in
@@ -84,7 +84,7 @@ PARTICLE TEXTURE LAYERS BACK TO DEFAULT (2026-10-17)
   Line numbers unchanged.
 
 TEXTURE LAYERS RESTORED; PARTICLES ENGINE SECTION BACK TO VALVE STOCK (2026-10-17)
-  line 826   r_particle_max_texture_layers                 (commented)  ->  "4"  (restored)
+  line 824   r_particle_max_texture_layers                 (commented)  ->  "4"  (restored)
   line --    Particles/EnableMixedResolution               "1"  ->  removed (not in Valve's stock file)
   line --    Particles/MPropertyFlattenIntoParentRow       "1"  ->  removed (not in Valve's stock file)
   line --    Particles/ParticleTraceOffsetOnlyHit          "1"  ->  removed (not in Valve's stock file)
@@ -102,24 +102,24 @@ TEXTURE LAYERS RESTORED; PARTICLES ENGINE SECTION BACK TO VALVE STOCK (2026-10-1
 
 FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE VALUES (2026-10-17)
   line 623   r_particle_max_size_cull                      "900"  ->  (commented -> engine default)
-  line 815   cl_particle_fallback_base                     "5"  ->  (commented -> engine default)
-  line 816   cl_particle_fallback_multiplier               "10"  ->  (commented -> engine default)
-  line 817   cl_particle_sim_fallback_base_multiplier      "100"  ->  (commented -> engine default)
-  line 817   cl_particle_sim_fallback_threshold_ms         "1"  ->  (commented -> engine default)
-  line 819   r_citadel_disable_particle_lights             "true"  ->  (commented -> engine default)
-  line 821   r_draw_particle_children_with_parents         "1"  ->  (commented -> engine default)
-  line 822   r_limit_particle_job_duration                 "true"  ->  (commented -> engine default)
-  line 825   r_particle_fixedrandomseeds                   "true"  ->  (commented -> engine default)
-  line 826   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default)
-  line 827   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default)
-  line 828   r_particle_model_per_thread_count             "64"  ->  (commented -> engine default)
-  line 829   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
-  line 830   r_physics_particle_op_spawn_scale             "0"  ->  (commented -> engine default)
-  line 831   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
-  line 899   r_particle_model_new8                         "false"  ->  (commented -> engine default)
-  line 900   r_particle_newinput                           "true"  ->  (commented -> engine default)
-  line 1132  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
-  line 1163  sc_hdr_enabled_override                       "0"  ->  (commented -> engine default)
+  line 813   cl_particle_fallback_base                     "5"  ->  (commented -> engine default)
+  line 814   cl_particle_fallback_multiplier               "10"  ->  (commented -> engine default)
+  line 815   cl_particle_sim_fallback_base_multiplier      "100"  ->  (commented -> engine default)
+  line 815   cl_particle_sim_fallback_threshold_ms         "1"  ->  (commented -> engine default)
+  line 817   r_citadel_disable_particle_lights             "true"  ->  (commented -> engine default)
+  line 819   r_draw_particle_children_with_parents         "1"  ->  (commented -> engine default)
+  line 820   r_limit_particle_job_duration                 "true"  ->  (commented -> engine default)
+  line 823   r_particle_fixedrandomseeds                   "true"  ->  (commented -> engine default)
+  line 824   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default)
+  line 825   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default)
+  line 826   r_particle_model_per_thread_count             "64"  ->  (commented -> engine default)
+  line 827   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
+  line 828   r_physics_particle_op_spawn_scale             "0"  ->  (commented -> engine default)
+  line 829   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
+  line 897   r_particle_model_new8                         "false"  ->  (commented -> engine default)
+  line 898   r_particle_newinput                           "true"  ->  (commented -> engine default)
+  line 1130  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  line 1161  sc_hdr_enabled_override                       "0"  ->  (commented -> engine default)
   line --    SceneSystem/HDRFrameBuffer                    "0"  ->  removed (not in Valve's stock file)
   line --    SceneSystem/EnableAlphaTint                   "0"  ->  removed (not in Valve's stock file)
   line --    SceneSystem/ParticleBufferSize                "512"  ->  removed (not in Valve's stock file)
@@ -138,7 +138,7 @@ FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE 
   Lines after 492 moved up by 4.
 
 FIRE-EFFECT BISECT, STEP 2: HDR STAYS ON, EVERYTHING ELSE BACK (2026-10-17)
-  line 1163  sc_hdr_enabled_override                       (commented, HDR on; unchanged from step 1)
+  line 1161  sc_hdr_enabled_override                       (commented, HDR on; unchanged from step 1)
   Why: the owner tested step 1 and the jetpack fire is fixed, so the cause is in that set. This step keeps only the
   HDR pair at Valve's values (sc_hdr_enabled_override commented out, SceneSystem HDRFrameBuffer removed) and
   restores everything else from before step 1: the 18 particle lines (fallbacks, post-sim skip, job lines, texture
@@ -149,15 +149,15 @@ FIRE-EFFECT BISECT, STEP 2: HDR STAYS ON, EVERYTHING ELSE BACK (2026-10-17)
   Lines after 511 moved down by 3.
 
 FIRE-EFFECT BISECT, STEP 3: PARTICLE SIMULATION AND TIMING LINES TO VALVE VALUES (2026-10-17)
-  line 822   r_limit_particle_job_duration                 "true"  ->  (commented -> engine default)
-  line 825   r_particle_fixedrandomseeds                   "true"  ->  (commented -> engine default)
-  line 827   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default)
-  line 828   r_particle_model_per_thread_count             "64"  ->  (commented -> engine default)
-  line 829   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
-  line 831   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
-  line 899   r_particle_model_new8                         "false"  ->  (commented -> engine default)
-  line 900   r_particle_newinput                           "true"  ->  (commented -> engine default)
-  line 1132  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  line 820   r_limit_particle_job_duration                 "true"  ->  (commented -> engine default)
+  line 823   r_particle_fixedrandomseeds                   "true"  ->  (commented -> engine default)
+  line 825   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default)
+  line 826   r_particle_model_per_thread_count             "64"  ->  (commented -> engine default)
+  line 827   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
+  line 829   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
+  line 897   r_particle_model_new8                         "false"  ->  (commented -> engine default)
+  line 898   r_particle_newinput                           "true"  ->  (commented -> engine default)
+  line 1130  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
   Why: step 2 (HDR on, everything else restored) brought the jagged jetpack fire back, so the cause is among the 18
   particle lines and three SceneSystem keys restored there, not HDR. This step sets the 9 lines that change how and
   when particles simulate to Valve's values and keeps the other 12. Prime suspect: r_particle_min_timestep 0.00241.
@@ -171,15 +171,15 @@ FIRE-EFFECT BISECT, STEP 3: PARTICLE SIMULATION AND TIMING LINES TO VALVE VALUES
   Line numbers unchanged.
 
 FIRE-EFFECT BISECT, STEP 4: ONLY R_PARTICLE_MIN_TIMESTEP STAYS AT VALVE'S VALUE (2026-10-17)
-  line 822   r_limit_particle_job_duration                 (commented)  ->  "true"  (restored)
-  line 825   r_particle_fixedrandomseeds                   (commented)  ->  "true"  (restored)
-  line 828   r_particle_model_per_thread_count             (commented)  ->  "64"  (restored)
-  line 829   r_particle_skip_postsim                       (commented)  ->  "true"  (restored)
-  line 831   r_update_particles_on_render_only_frames      (commented)  ->  "true"  (restored)
-  line 899   r_particle_model_new8                         (commented)  ->  "false"  (restored)
-  line 900   r_particle_newinput                           (commented)  ->  "true"  (restored)
-  line 1132  r_late_particle_job_sync                      (commented)  ->  "1"  (restored)
-  line 827   r_particle_min_timestep                       (commented -> engine default 0; unchanged from step 3)
+  line 820   r_limit_particle_job_duration                 (commented)  ->  "true"  (restored)
+  line 823   r_particle_fixedrandomseeds                   (commented)  ->  "true"  (restored)
+  line 826   r_particle_model_per_thread_count             (commented)  ->  "64"  (restored)
+  line 827   r_particle_skip_postsim                       (commented)  ->  "true"  (restored)
+  line 829   r_update_particles_on_render_only_frames      (commented)  ->  "true"  (restored)
+  line 897   r_particle_model_new8                         (commented)  ->  "false"  (restored)
+  line 898   r_particle_newinput                           (commented)  ->  "true"  (restored)
+  line 1130  r_late_particle_job_sync                      (commented)  ->  "1"  (restored)
+  line 825   r_particle_min_timestep                       (commented -> engine default 0; unchanged from step 3)
   Why: the owner tested step 3 and the jetpack fire is fixed, so the cause is one of its 9 simulation and timing
   lines. This step restores 8 of them and keeps only r_particle_min_timestep at Valve's default (0, simulate every
   frame). Untested in game: clean fire confirms the 0.00241 minimum timestep (particles lerped between simulation
@@ -188,8 +188,8 @@ FIRE-EFFECT BISECT, STEP 4: ONLY R_PARTICLE_MIN_TIMESTEP STAYS AT VALVE'S VALUE 
   Line numbers unchanged.
 
 JAGGED FIRE FIXED: R_PARTICLE_MIN_TIMESTEP AT VALVE'S DEFAULT; HDR OFF AGAIN (2026-10-17)
-  line 827   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default 0; confirmed fix)
-  line 1163  sc_hdr_enabled_override                       (commented)  ->  "0"  (restored, as in stable)
+  line 825   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default 0; confirmed fix)
+  line 1161  sc_hdr_enabled_override                       (commented)  ->  "0"  (restored, as in stable)
   line --    SceneSystem/HDRFrameBuffer                    (removed)  ->  "0"  (restored, as in stable)
   Why: the owner tested step 4 (only r_particle_min_timestep at Valve's default) and the jetpack fire stays clean, so
   the bisect is done: Sqooky's 0.00241 minimum timestep was the cause. Valve: particle simulation more frequent than
@@ -201,8 +201,8 @@ JAGGED FIRE FIXED: R_PARTICLE_MIN_TIMESTEP AT VALVE'S DEFAULT; HDR OFF AGAIN (20
   Lines after 492 moved down by 1.
 
 TEXTURES BACK TO STABLE EXCEPT POOL AND CAP; PARTICLES SECTION BACK; STABLE DROPS MIN TIMESTEP (2026-10-17)
-  line 708   r_texture_stream_mip_bias                     "0"  ->  "3"  (as in stable)
-  line 709   r_texturefilteringquality                     "4"  ->  "0"  (as in stable)
+  line 706   r_texture_stream_mip_bias                     "0"  ->  "3"  (as in stable)
+  line 707   r_texturefilteringquality                     "4"  ->  "0"  (as in stable)
   line --    Particles/EnableMixedResolution               (removed)  ->  "1"  (restored, as in stable)
   line --    Particles/MPropertyFlattenIntoParentRow       (removed)  ->  "1"  (restored, as in stable)
   line --    Particles/ParticleTraceOffsetOnlyHit          (removed)  ->  "1"  (restored, as in stable)
@@ -219,8 +219,8 @@ TEXTURES BACK TO STABLE EXCEPT POOL AND CAP; PARTICLES SECTION BACK; STABLE DROP
   Lines after 591 moved down by 8.
 
 TEXTURE POOL 3200 MB, MIP BIAS 2 (2026-10-17)
-  line 708   r_texture_stream_mip_bias                     "3"  ->  "2"
-  line 1144  r_texture_pool_size                           (commented, default 1600)  ->  "3200"
+  line 706   r_texture_stream_mip_bias                     "3"  ->  "2"
+  line 1142  r_texture_pool_size                           (commented, default 1600)  ->  "3200"
   Why: owner's request while testing textures on experimental. Mip bias one step toward quality: 2 streams textures
   one mip level sharper than 3 (same as the in-game Texture quality Low; High is 0). Texture pool doubled from the
   engine default 1600 MB to 3200 MB, well within the RTX 5070's 12 GB, so fewer textures get dropped to lower mips
@@ -230,7 +230,7 @@ TEXTURE POOL 3200 MB, MIP BIAS 2 (2026-10-17)
   Line numbers unchanged.
 
 TEXTURE POOL 6400 MB (2026-10-17)
-  line 1144  r_texture_pool_size                           "3200"  ->  "6400"
+  line 1142  r_texture_pool_size                           "3200"  ->  "6400"
   Why: owner's request while testing textures on experimental. Doubles the texture pool again so fewer textures are
   dropped to lower mips under memory pressure. 6400 MB is about half of the RTX 5070's 12 GB; the rest still covers
   render targets, buffers and the driver at 1440p. GPU memory only; fight lows are CPU-bound. Stable unchanged.
@@ -244,6 +244,15 @@ STABLE TAKES THE EXPERIMENTAL VALUES (2026-10-17)
   steam_inputhandler_enabled false on both lines. utils/compare.py: no difference in any setting or section.
   Stable edits are listed in docs/CONFIGS.md. Not frozen as a version.
   Line numbers unchanged.
+
+DAMAGE NUMBER LINES REMOVED FROM BOTH CONFIGS (2026-10-17)
+  line --    citadel_damage_text_cumulative_final_lifetime "4"  ->  removed (engine default 3)
+  line --    citadel_damage_text_dynamic_emphasis          "false"  ->  removed (engine default true)
+  Why: owner's request: delete both lines from stable and experimental and keep everything else. Damage numbers are
+  now fully at Valve's defaults, so the in-game damage number settings decide the layout; the final total lasts
+  3 s and big hits scale up 150% again. Both configs still match in every setting (utils/compare.py). Stable edit
+  listed in docs/CONFIGS.md.
+  Lines after 654 moved up by 2.
 
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
