@@ -170,5 +170,22 @@ FIRE-EFFECT BISECT, STEP 3: PARTICLE SIMULATION AND TIMING LINES TO VALVE VALUES
   among the 12 kept.
   Line numbers unchanged.
 
+FIRE-EFFECT BISECT, STEP 4: ONLY R_PARTICLE_MIN_TIMESTEP STAYS AT VALVE'S VALUE (2026-10-17)
+  line 813   r_limit_particle_job_duration                 (commented)  ->  "true"  (restored)
+  line 816   r_particle_fixedrandomseeds                   (commented)  ->  "true"  (restored)
+  line 819   r_particle_model_per_thread_count             (commented)  ->  "64"  (restored)
+  line 820   r_particle_skip_postsim                       (commented)  ->  "true"  (restored)
+  line 822   r_update_particles_on_render_only_frames      (commented)  ->  "true"  (restored)
+  line 890   r_particle_model_new8                         (commented)  ->  "false"  (restored)
+  line 891   r_particle_newinput                           (commented)  ->  "true"  (restored)
+  line 1123  r_late_particle_job_sync                      (commented)  ->  "1"  (restored)
+  line 818   r_particle_min_timestep                       (commented -> engine default 0; unchanged from step 3)
+  Why: the owner tested step 3 and the jetpack fire is fixed, so the cause is one of its 9 simulation and timing
+  lines. This step restores 8 of them and keeps only r_particle_min_timestep at Valve's default (0, simulate every
+  frame). Untested in game: clean fire confirms the 0.00241 minimum timestep (particles lerped between simulation
+  steps above about 415 FPS) as the cause; jagged means it is one of the 8 restored lines, and step 5 halves them.
+  HDR stays on (Valve values) for now; turning it back off is a separate step once the cause is confirmed.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
