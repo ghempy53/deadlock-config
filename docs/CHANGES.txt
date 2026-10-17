@@ -218,5 +218,16 @@ TEXTURES BACK TO STABLE EXCEPT POOL AND CAP; PARTICLES SECTION BACK; STABLE DROP
   textures look acceptable on experimental with mip bias 3 and bilinear.
   Lines after 591 moved down by 8.
 
+TEXTURE POOL 3200 MB, MIP BIAS 2 (2026-10-17)
+  line 708   r_texture_stream_mip_bias                     "3"  ->  "2"
+  line 1144  r_texture_pool_size                           (commented, default 1600)  ->  "3200"
+  Why: owner's request while testing textures on experimental. Mip bias one step toward quality: 2 streams textures
+  one mip level sharper than 3 (same as the in-game Texture quality Low; High is 0). Texture pool doubled from the
+  engine default 1600 MB to 3200 MB, well within the RTX 5070's 12 GB, so fewer textures get dropped to lower mips
+  under memory pressure. GPU memory and bandwidth only; fight lows are CPU-bound. The 128 px cap stays off (engine
+  default). Stable is unchanged (owner tests on experimental first). The in-game Texture quality menu also writes
+  the mip bias and may override the file. Untested in game: check texture sharpness and compare fight 1% lows.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
