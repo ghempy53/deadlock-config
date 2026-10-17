@@ -14,11 +14,11 @@ NEW EXPERIMENTAL BASE: STABLE V1.2 (2026-10-15)
   Line numbers unchanged.
 
 OWNER'S CONFIRMED PREFERENCES (2026-10-15)
-  line 1280  fps_max                                       "400"  ->  "0"
-  line 1281  fps_max_ui                                    "120"  ->  "0"
-  line 618   steam_inputhandler_enabled                    "true"  ->  "false"
-  line 647   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
-  line 648   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
+  line 1276  fps_max                                       "400"  ->  "0"
+  line 1277  fps_max_ui                                    "120"  ->  "0"
+  line 614   steam_inputhandler_enabled                    "true"  ->  "false"
+  line 643   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
+  line 644   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
   Why: the owner confirmed these from docs/TESTED-CHANGES.md: uncapped FPS, Steam Input off, per-hit damage numbers
   visible (default offsets) with the final total shown 4 s and no big-hit emphasis. steam_inputhandler_enabled was
   already false in effect (the second line at 1178 won); the first line now agrees. Also confirmed and already in the
@@ -49,11 +49,11 @@ DEADLOCKCONFIG-UPDATE ALWAYS REPLACES THE FILE (2026-10-17)
   Line numbers unchanged.
 
 NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-17)
-  line 618   steam_inputhandler_enabled                    "true"  ->  "false"
-  line 647   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
-  line 648   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
-  line 1280  fps_max                                       "400"  ->  "0"
-  line 1281  fps_max_ui                                    "120"  ->  "0"
+  line 614   steam_inputhandler_enabled                    "true"  ->  "false"
+  line 643   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
+  line 644   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
+  line 1276  fps_max                                       "400"  ->  "0"
+  line 1277  fps_max_ui                                    "120"  ->  "0"
   Why: owner's request: experimental-config/gameinfo.gi restarts as a copy of the current stable config (Sqooky's
   OptimizationLock 3.5.3 with r_aspectratio 2.11, PR #61). Stable does not carry the owner's confirmed preferences, so
   they are re-applied as before: uncapped FPS, Steam Input off on both lines, 4 s final damage total, no big-hit
@@ -61,10 +61,10 @@ NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-1
   Lines after 654 moved down by 2.
 
 TEXTURES BACK TO FULL RESOLUTION, 8X ANISOTROPIC (2026-10-17)
-  line 700   r_texture_stream_mip_bias                     "3"  ->  "0"
-  line 701   r_texturefilteringquality                     "0"  ->  "4"
-  line 1136  r_texture_pool_size                           "256"  ->  (commented -> engine default 1600)
-  line 1137  r_texture_stream_max_resolution               "128"  ->  (commented -> engine default, no cap)
+  line 696   r_texture_stream_mip_bias                     "3"  ->  "0"
+  line 697   r_texturefilteringquality                     "0"  ->  "4"
+  line 1132  r_texture_pool_size                           "256"  ->  (commented -> engine default 1600)
+  line 1133  r_texture_stream_max_resolution               "128"  ->  (commented -> engine default, no cap)
   Why: the owner sees jagged textures everywhere and jagged healing particles. Mip bias 3 streams textures at about
   1/8 resolution, the 128 px cap (clamped to the engine minimum 512) and the 256 MB pool keep them small, and bilinear
   filtering shimmers at angles. All four cost GPU memory and bandwidth only; fight lows are CPU-bound and the RTX
@@ -75,7 +75,7 @@ TEXTURES BACK TO FULL RESOLUTION, 8X ANISOTROPIC (2026-10-17)
   Line numbers unchanged.
 
 PARTICLE TEXTURE LAYERS BACK TO DEFAULT (2026-10-17)
-  line 818   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default -1, no cap)
+  line 814   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default -1, no cap)
   Why: with full-res textures the owner still sees jagged fire on Deadman Danny's jetpack. This line caps the texture
   layers each particle effect may blend; Sqooky's note says fire effects (Infernus afterburn, Paige, Drifter) turn
   blocky below 4, so 4 is at the edge. GPU shading cost only, so little effect on CPU-bound fight lows. Untested in
@@ -84,7 +84,7 @@ PARTICLE TEXTURE LAYERS BACK TO DEFAULT (2026-10-17)
   Line numbers unchanged.
 
 TEXTURE LAYERS RESTORED; PARTICLES ENGINE SECTION BACK TO VALVE STOCK (2026-10-17)
-  line 818   r_particle_max_texture_layers                 (commented)  ->  "4"  (restored)
+  line 814   r_particle_max_texture_layers                 (commented)  ->  "4"  (restored)
   line --    Particles/EnableMixedResolution               "1"  ->  removed (not in Valve's stock file)
   line --    Particles/MPropertyFlattenIntoParentRow       "1"  ->  removed (not in Valve's stock file)
   line --    Particles/ParticleTraceOffsetOnlyHit          "1"  ->  removed (not in Valve's stock file)
@@ -99,6 +99,43 @@ TEXTURE LAYERS RESTORED; PARTICLES ENGINE SECTION BACK TO VALVE STOCK (2026-10-1
   fire, other fire and healing effects, and fight 1% lows. If the fire is still jagged, the remaining suspects are
   the particle fallback lines, which cost CPU in fights.
   Lines after 591 moved up by 8.
+
+FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE VALUES (2026-10-17)
+  line 611   r_particle_max_size_cull                      "900"  ->  (commented -> engine default)
+  line 803   cl_particle_fallback_base                     "5"  ->  (commented -> engine default)
+  line 804   cl_particle_fallback_multiplier               "10"  ->  (commented -> engine default)
+  line 805   cl_particle_sim_fallback_base_multiplier      "100"  ->  (commented -> engine default)
+  line 806   cl_particle_sim_fallback_threshold_ms         "1"  ->  (commented -> engine default)
+  line 807   r_citadel_disable_particle_lights             "true"  ->  (commented -> engine default)
+  line 809   r_draw_particle_children_with_parents         "1"  ->  (commented -> engine default)
+  line 810   r_limit_particle_job_duration                 "true"  ->  (commented -> engine default)
+  line 813   r_particle_fixedrandomseeds                   "true"  ->  (commented -> engine default)
+  line 814   r_particle_max_texture_layers                 "4"  ->  (commented -> engine default)
+  line 815   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default)
+  line 816   r_particle_model_per_thread_count             "64"  ->  (commented -> engine default)
+  line 817   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
+  line 818   r_physics_particle_op_spawn_scale             "0"  ->  (commented -> engine default)
+  line 819   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
+  line 887   r_particle_model_new8                         "false"  ->  (commented -> engine default)
+  line 888   r_particle_newinput                           "true"  ->  (commented -> engine default)
+  line 1120  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  line 1151  sc_hdr_enabled_override                       "0"  ->  (commented -> engine default)
+  line --    SceneSystem/HDRFrameBuffer                    "0"  ->  removed (not in Valve's stock file)
+  line --    SceneSystem/EnableAlphaTint                   "0"  ->  removed (not in Valve's stock file)
+  line --    SceneSystem/ParticleBufferSize                "512"  ->  removed (not in Valve's stock file)
+  line --    SceneSystem/PerVertexLighting                 "0"  ->  removed (not in Valve's stock file)
+  Why: Deadman Danny's jetpack fire still looks jagged after the texture fix, the texture-layer change (#64) and
+  the Particles engine section reset (#65). Instead of one guess per round, this is a bisect: every setting that
+  can change how a fire effect is drawn goes back to Valve's value at once. Strongest suspect is HDR off
+  (sc_hdr_enabled_override 0 plus SceneSystem HDRFrameBuffer 0): fire is bright additive blending, so in a non-HDR
+  buffer its core clips and its falloff bands into hard steps, which reads as jagged. Others: particle post-sim
+  skipped, the undocumented input/model paths, minimum timestep, fallbacks to cheaper effect versions, particle
+  lights, alpha tint and the particle buffer size. Not touched: cl_aggregate_particles,
+  r_particle_batch_collections and cl_max_particle_pvs_aabb_edge_length (Valve's own stock-tail values), and the
+  menu-owned bloom lines. Diagnostic build, not meant to stay: the fallbacks and job lines cost CPU in fights.
+  Untested in game. If the fire looks clean, step 2 restores half (HDR pair alone first); if it is still jagged, the
+  cause is outside these lines (in-game anti-aliasing, the hero's own effect, or a mod).
+  Lines after 492 moved up by 4.
 
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
