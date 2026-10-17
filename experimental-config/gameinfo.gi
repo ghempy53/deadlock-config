@@ -1141,7 +1141,7 @@ GameInfo
         r_texture_lod_scale                                    "8"     //
         r_texture_nonstreaming_load                            "1"     //
         r_texture_pool_reduce_rate                             "512"   //
-        r_texture_pool_size                                    "3200"  //
+        r_texture_pool_size                                    "6400"  //
         // r_texture_stream_max_resolution                        "128"   //
         r_texture_stream_resolution_bias                       "0.01"  //
         r_world_wind_frequency_grass                           "0"     //
