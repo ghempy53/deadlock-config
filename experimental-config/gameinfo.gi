@@ -1,5 +1,5 @@
-// OptimizationLock Ver. 3.5.2 by Sqooky with help from others (https://github.com/Sqooky/OptimizationLock, GPL-3.0).
-// Stable config of ghempy53/deadlock-config: 3.5.2 with r_aspectratio 2.11 and ForceVulkanForMapBuild. Credits,
+// OptimizationLock Ver. 3.5.3 by Sqooky with help from others (https://github.com/Sqooky/OptimizationLock, GPL-3.0).
+// Stable config of ghempy53/deadlock-config: 3.5.3 with r_aspectratio 2.11 and ForceVulkanForMapBuild. Credits,
 // donor and link comments removed.
 
 
@@ -605,7 +605,7 @@ GameInfo
 
     ConVars
     {
-        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.5.2 -------- \\
+        // -------- Performance Config! Sqooky's.gi / OptimizationLock -- ver. 3.5.3 -------- \\
         // The github is here https://github.com/Sqooky/OptimizationLock  \\
 
 
@@ -613,7 +613,7 @@ GameInfo
         // --- 0. IMPORTANT ---
         // mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
         citadel_camera_use_vmdl_flatten_vertical      "false" // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
-        //citadel_per_weapon_per_surface_impact_effects "false" // Reduces the visuals for bullet tracers. This will disable the radius of yamato right click. [def: "true"]
+        citadel_per_weapon_per_surface_impact_effects "false" // Reduces the visuals for bullet tracers. This will disable the radius of yamato right click. [def: "true"]
         citadel_portrait_world_renderer_off           "false" // Disables character models in shop and endgame screen                                            [def: "false"]
         citadel_trooper_glow_disabled                 "1"     // 1 = Disable friendly/enemy minion glow.                                                         [def: "0"]
         cl_phys_enabled                               "true"  // Disables all physics. This means ragdolls just maintain the last pose and boxes don't fall over [def: "true"]
@@ -634,7 +634,6 @@ GameInfo
         // citadel_unit_status_delta_decay_delay   "0"   // The delay between doing damage and havin the yellow damage indicator appear [def: "0.5"]
         // citadel_unit_status_delta_decay_rate    "10"  // How quickly the yellow "you're dealing damage" indicator fades [def: "0.5"]
         // citadel_unit_status_recent_damage_time  "inf" // how long to show someone's numerical health value when you shoot them. Inf means infinite, but will cause the healthbar to jiggle/shake forever. [def: "0.25"]
-	citadel_unit_status_healthbar_highlight_speed "100" //Removes delay of health bars refilling slowly
 
 
 
@@ -662,9 +661,6 @@ GameInfo
         citadel_hud_objective_health_enabled            "2"     // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
         citadel_unit_status_old_update_rate             "15"    // How frequently health bars can update. Lowering it should improve performance    [def: "30"]
         citadel_unit_status_single_bar_mode             "false" // This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable [def: "false"]
-        citadel_unit_status_use_new                     "true"  // This uses new Health Bar, to use old Health Bar change "true" to "false".                    [def: "false"]
-        citadel_unit_status_use_v2                      "0"     // Set to 1 to enable the new health bar that allows you to  see enemy stamina.                 [def: "0"]
-        citadel_unit_status_use_v2_for_nonplayers       "0"     // Set to 1 to enable the new health bar but for troopers, objs, and camps.                     [def: "0"]
         v8_maximum_heap_size_mb                         "1024"  // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
         panorama_comp_layer_lru_lifetime                "4"     // This should keep panorama caches loaded for longer so the game can use them more frequently. [def: "1"]
         // panorama_render_target_cache_max_size        "134217728" // This should increase the panorama cache size by 4x, needs more testing                       [def: "31457280"]
@@ -672,8 +668,6 @@ GameInfo
         // --- 3.1 Uncomment These Commands if You Want to Have The Chat Wheel Not Show Up When Pinging ---
         // citadel_show_chat_wheel_angle_threshold         "30"    // (degrees) Increase this to change how much you have to move your camera angle to make the Chat Wheel instantly visible while holding Ping. [def: "16"]
         // citadel_show_chat_wheel_time                    "15"    //
-        // citadel_auto_ping_window                        "0"     //
-        // citadel_ping_wheel_activation_radius            "1"     //
 
         // --- 4. Lighting & Shadows ---
         lb_enable_baked_shadows     "false" // *Disables baked shadows (game looks bright if this is on while stationary lights = 1). [def: "1"]
@@ -711,8 +705,8 @@ GameInfo
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
-        r_texture_stream_mip_bias      "3"   // Worth adjusting, practically how good your textures will look. If sinners lights are not closing properly lower the value  [def: "1"]
-        r_texturefilteringquality      "0"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
+        r_texture_stream_mip_bias      "0"   // Worth adjusting, practically how good your textures will look. If sinners lights are not closing properly lower the value  [def: "1"]
+        r_texturefilteringquality      "4"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // ================ IMPORTANT ================
         thread_pool_option "2" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]
@@ -729,12 +723,13 @@ GameInfo
 
 
         // ================= UI ================
-        closecaption               "false" // I assume this does what it says on the tin                       [def: "false"]
-        panorama_allow_transitions "false" // Turns off UI anim (shop,etc)                                     [def: "1"]
-        panorama_disable_blur      "true"  // Disables UI blur effects in the UI.                              [def: "false"]
-        //panorama_disable_box_shadow "true"  // Disables UI box shadows in the UI (less GPU/UI cost).            [def: "false"]
-        panorama_panel_occlusion   "true" // According to John Valve this is an optimization feature that stops rendering of panels underneath the top level. [def: "true"]
-        r_dashboard_render_quality "1"    // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
+        //panorama_disable_box_shadow "true"  // Disables UI box shadows in the UI (less GPU/UI cost).            [def: "false"] // This will make the hitmarker yellow instead of yellow with a red outline
+        citadel_unit_status_healthbar_highlight_speed "100"   // Removes the slow refill delay of health bars. [def: "2"]
+        closecaption                                  "false" // I assume this does what it says on the tin                       [def: "false"]
+        panorama_allow_transitions                    "false" // Turns off UI anim (shop,etc)                                     [def: "1"]
+        panorama_disable_blur                         "true"  // Disables UI blur effects in the UI.                              [def: "false"]
+        panorama_panel_occlusion                      "true"  // According to John Valve this is an optimization feature that stops rendering of panels underneath the top level. [def: "true"]
+        r_dashboard_render_quality                    "1"     // Sets dashboard/UI render quality (lower = cheaper UI rendering). [def: "1"]
 
         // ================ Shadows ================
         lb_barnlight_shadowmap_scale             "0"    // Scale for computed barnlight shadowmap size (lower = cheaper).   [def: "1"]
@@ -821,7 +816,7 @@ GameInfo
         cl_particle_fallback_multiplier          "10"      // Multiplier for falling back to cheaper effects under load.       [def: "0"]
         cl_particle_sim_fallback_base_multiplier "100"     // How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive. [def: "5"]
         cl_particle_sim_fallback_threshold_ms    "1"       // Amount of simulation time that can elapse before new systems start falling back to cheaper versions [def: "6"]
-        r_citadel_disable_particle_lights        "true"    // Particles stop casting dynamic light. [def: "false"]
+        r_citadel_disable_particle_lights        "true"    // Disables all lighting effects from particles. [def: "false"]
         r_citadel_screenspace_particles_full_res "true"    // Render screen space particles at full resolution. This could introduce readability issues but should be fine. [def: "true"]
         r_draw_particle_children_with_parents    "1"       // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
         r_limit_particle_job_duration            "true"    // Seems to help with particle clutter, although I am not sure.             [def: "false"]
@@ -1035,7 +1030,7 @@ GameInfo
         fog_enableskybox         "false" // I doubt the fog commands actually are modifiable but I am maintaining their inclusion for posterity
         volume_fog_enable_jitter "false" // Don't think I can
 
-        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.5.2 ------------------------------- \\
+        // --------------------------------- END OF CONFIG OptimizationLock -- ver. 3.5.3 ------------------------------- \\
 
 
         // ====================== SV commands we cannot change but I want to maintain documentation for ======================
@@ -1118,7 +1113,6 @@ GameInfo
         minimap_update_rate_hz                                 "10"    //
         nav_obstruction_async_update                           "true"  //
         panorama_transition_time_factor                        "2"     //
-        phys_dynamic_scaling                                   "false" //
         r_aoproxy_cull_dist                                    "0.01"  //
         r_arealights                                           "false" //
         r_character_decal_monitor_render_res                   "64"    //
@@ -1147,8 +1141,8 @@ GameInfo
         r_texture_lod_scale                                    "8"     //
         r_texture_nonstreaming_load                            "1"     //
         r_texture_pool_reduce_rate                             "512"   //
-        r_texture_pool_size                                    "256"   //
-        r_texture_stream_max_resolution                        "128"   //
+        // r_texture_pool_size                                    "256"   //
+        // r_texture_stream_max_resolution                        "128"   //
         r_texture_stream_resolution_bias                       "0.01"  //
         r_world_wind_frequency_grass                           "0"     //
         r_world_wind_frequency_trees                           "0"     //

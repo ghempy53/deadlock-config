@@ -79,16 +79,18 @@ reach only part of this through ConVars.
 
 ## Experimental: `experimental-config/gameinfo.gi` (`-ex`)
 
-Restarted on 2026-10-15 from stable v1.2 (`stable-config/v1.2/gameinfo.gi`). v1.2's values stand, including the
-trade-offs that cut or hide things on screen. On top of v1.2, these preferences are confirmed:
+Restarted on 2026-10-17 from the current stable config (Sqooky's 3.5.3 with `r_aspectratio 2.11`). Stable's
+values stand, including the trade-offs that cut or hide things on screen. On top of stable:
 - uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
 - Steam Input off
 - a 4 s final damage total with no big-hit emphasis
+- textures at full resolution with 8x anisotropic filtering, and no texture pool or resolution cap (being tested; fixes
+  jagged textures and healing particles)
 
 What the owner tested and kept is in [TESTED-CHANGES.md](TESTED-CHANGES.md), and every change is logged in
 [CHANGES.txt](CHANGES.txt).
 
-Still the same as v1.2:
+Still the same as stable:
 - **Edited engine sections:** a risk with matchmaking's file check.
 - **Six convars set twice:** the last value wins.
 - **Sqooky's comment layout.**

@@ -14,11 +14,11 @@ NEW EXPERIMENTAL BASE: STABLE V1.2 (2026-10-15)
   Line numbers unchanged.
 
 OWNER'S CONFIRMED PREFERENCES (2026-10-15)
-  line 1294  fps_max                                       "400"  ->  "0"
-  line 1295  fps_max_ui                                    "120"  ->  "0"
+  line 1288  fps_max                                       "400"  ->  "0"
+  line 1289  fps_max_ui                                    "120"  ->  "0"
   line 626   steam_inputhandler_enabled                    "true"  ->  "false"
-  line 656   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
-  line 657   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
+  line 655   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
+  line 656   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
   Why: the owner confirmed these from docs/TESTED-CHANGES.md: uncapped FPS, Steam Input off, per-hit damage numbers
   visible (default offsets) with the final total shown 4 s and no big-hit emphasis. steam_inputhandler_enabled was
   already false in effect (the second line at 1178 won); the first line now agrees. Also confirmed and already in the
@@ -46,6 +46,32 @@ DEADLOCKCONFIG-UPDATE ALWAYS REPLACES THE FILE (2026-10-17)
   Owner's request. The install command no longer skips the copy when the installed gameinfo.gi already matches the
   download; it always overwrites it and adds (unchanged) to the message in that case. Configs unchanged. Run
   DeadlockConfig-Update -SelfUpdate once to get the new script.
+  Line numbers unchanged.
+
+NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-17)
+  line 626   steam_inputhandler_enabled                    "true"  ->  "false"
+  line 655   citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
+  line 656   citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
+  line 1288  fps_max                                       "400"  ->  "0"
+  line 1289  fps_max_ui                                    "120"  ->  "0"
+  Why: owner's request: experimental-config/gameinfo.gi restarts as a copy of the current stable config (Sqooky's
+  OptimizationLock 3.5.3 with r_aspectratio 2.11, PR #61). Stable does not carry the owner's confirmed preferences, so
+  they are re-applied as before: uncapped FPS, Steam Input off on both lines, 4 s final damage total, no big-hit
+  emphasis. Same values as the 2026-10-15 entries above, so tested in game.
+  Lines after 654 moved down by 2.
+
+TEXTURES BACK TO FULL RESOLUTION, 8X ANISOTROPIC (2026-10-17)
+  line 708   r_texture_stream_mip_bias                     "3"  ->  "0"
+  line 709   r_texturefilteringquality                     "0"  ->  "4"
+  line 1144  r_texture_pool_size                           "256"  ->  (commented -> engine default 1600)
+  line 1145  r_texture_stream_max_resolution               "128"  ->  (commented -> engine default, no cap)
+  Why: the owner sees jagged textures everywhere and jagged healing particles. Mip bias 3 streams textures at about
+  1/8 resolution, the 128 px cap (clamped to the engine minimum 512) and the 256 MB pool keep them small, and bilinear
+  filtering shimmers at angles. All four cost GPU memory and bandwidth only; fight lows are CPU-bound and the RTX
+  5070 has 12 GB, so little or no FPS cost is expected. The in-game Texture quality menu also writes the mip bias:
+  set it to High (0). Untested in game: check the heal effect and wall/floor textures, and compare fight 1% lows with
+  stable. If the heal effect is still jagged, the next stage is the particle lines (r_particle_max_texture_layers 4,
+  the fallback lines, and the Particles engine section's EnableMixedResolution).
   Line numbers unchanged.
 
 NOTES

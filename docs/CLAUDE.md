@@ -1,8 +1,8 @@
 # deadlock-config: guidance for Claude
 
 Personal Deadlock `gameinfo.gi` configs (Windows 11, DX11 or Vulkan with no edits). `stable-config/` is Sqooky's
-OptimizationLock 3.5.3 with the owner's edits (built on tested v1.2; Eskay's config is frozen as v1.0); `experimental-config/` was restarted on 2026-10-15 as a copy of stable v1.2,
-and tested changes are re-applied one at a time from `docs/TESTED-CHANGES.md`. The previous experimental config (3.4,
+OptimizationLock 3.5.3 with the owner's edits (built on tested v1.2; Eskay's config is frozen as v1.0); `experimental-config/` was restarted on 2026-10-17 as a copy of stable (3.5.3) with
+the confirmed preferences re-applied, and changes are tested on it one stage at a time. The previous experimental config (3.4,
 then the 3.5.2 ConVars fork) and its change log are in `docs/archive/`.
 This file is loaded into every Claude Code session through `.claude/CLAUDE.md`. The README and the user docs in
 `docs/` cover the user-facing side; this file has the rules. Unless a request names the stable config, "the config"
@@ -27,7 +27,7 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 
 | File | Role |
 | --- | --- |
-| `experimental-config/gameinfo.gi` | The tuned config. KeyValues. Since 2026-10-15 a copy of stable v1.2, so until the owner decides otherwise it still breaks hard rules 1 to 7 (edited engine sections, fps_max 400, duplicate convars, Sqooky's comment layout) and `utils/check.py` reports errors. The owner directs each change; don't fix those on your own. |
+| `experimental-config/gameinfo.gi` | The tuned config. KeyValues. Since 2026-10-17 a copy of stable (3.5.3) plus the confirmed preferences and the changes in `docs/CHANGES.txt`, so until the owner decides otherwise it still breaks hard rules 1 to 7 (edited engine sections, fps_max 400, duplicate convars, Sqooky's comment layout) and `utils/check.py` reports errors. The owner directs each change; don't fix those on your own. |
 | `docs/TESTED-CHANGES.md` | What the owner tested, kept and rejected before the restart. Read it before proposing a change. |
 | `docs/archive/` | The previous experimental config and its full change log. Never edit. |
 | `stable-config/gameinfo.gi` | Sqooky's current release (3.5.3) with the owner's edits listed in `docs/CONFIGS.md`. Upstream updates are pulled in on request, keeping the owner's edits. **`r_aspectratio "2.11"` stays in every stable version and every upstream pull (owner, 2026-10-16), whatever upstream sets.** When the owner uploads a tested file, take it verbatim. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
@@ -87,9 +87,11 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 
 - The experimental config starts from stable v1.2 (2026-10-15), and v1.2's values stand. The owner accepted these
   explicitly: camera lines (flatten_horizontal and flatten_vertical false, wobble off), IK and foot lock off, batching
-  thresholds 256, `r_particle_max_size_cull 900`, `r_limit_particle_job_duration`, texture budget 0.5, mip bias 3,
-  bilinear filtering, 128 px texture cap, trooper and boss glow off, no first-person tracers, `r_size_cull_threshold
+  thresholds 256, `r_particle_max_size_cull 900`, `r_limit_particle_job_duration`, texture budget 0.5, trooper and boss glow off, no first-person tracers, `r_size_cull_threshold
   0.9`, `r_farz 7000`, ragdoll scale 0 and limit 0, the smaller damage-direction indicator, box debris 0.
+- Textures (2026-10-17, being tested in experimental): mip bias 0, anisotropic 8x, no texture pool or resolution cap,
+  because the owner saw jagged textures and healing particles with mip bias 3, bilinear filtering, the 128 px cap and
+  the 256 MB pool. Stable keeps Sqooky's values until the owner tests this.
 - Confirmed preferences: uncapped FPS (`fps_max 0`, `fps_max_ui 0`), Steam Input off, per-hit damage numbers visible
   with a 4 s final total and no big-hit emphasis, `r_aspectratio 2.11`, default health bar width,
   `citadel_unit_status_healthbar_highlight_speed 100`.
