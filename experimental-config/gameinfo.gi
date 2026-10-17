@@ -588,6 +588,14 @@ GameInfo
         Features                             "non_homogenous_forward_layer_only"
         Float16HDRBackBuffer                 "1"
         PET_SupportFadingOpaqueModels        "1"
+
+        //================= In Particles.dll =================
+        EnableMixedResolution         "1" // dll var, default unknown
+        MPropertyFlattenIntoParentRow "1"
+        ParticleTraceOffsetOnlyHit    "1"
+        ParticlesFoggedByDefault      "0"
+        PerVertexLighting             "0"
+        PostSimulate                  "0"
     }
 
     Physics
@@ -697,8 +705,8 @@ GameInfo
         // --- 8. Texture Quality ---
         r_texture_budget_threshold     "0.7" // Reduce texture memory pool size when this percentage of the budget is full. [def: "0.8"]
         r_texture_budget_update_period "0.5" // Time (in seconds) between updating texture memory budget.        [def: "0.1"]
-        r_texture_stream_mip_bias      "0"   // Worth adjusting, practically how good your textures will look. If sinners lights are not closing properly lower the value  [def: "1"]
-        r_texturefilteringquality      "4"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
+        r_texture_stream_mip_bias      "3"   // Worth adjusting, practically how good your textures will look. If sinners lights are not closing properly lower the value  [def: "1"]
+        r_texturefilteringquality      "0"   // Texture filtering, has very low fps impact. 0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 
         // ================ IMPORTANT ================
         thread_pool_option "2" // If I understand correctly, this should be how threads are handled relative to the game, but there isn't a clear indication of what changing it even does. For now I have it at -1 which is the default, but your mileage may vary. [def: "-1"]

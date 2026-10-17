@@ -89,10 +89,10 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
   explicitly: camera lines (flatten_horizontal and flatten_vertical false, wobble off), IK and foot lock off, batching
   thresholds 256, `r_particle_max_size_cull 900`, `r_limit_particle_job_duration`, texture budget 0.5, trooper and boss glow off, no first-person tracers, `r_size_cull_threshold
   0.9`, `r_farz 7000`, ragdoll scale 0 and limit 0, the smaller damage-direction indicator, box debris 0.
-- Textures (2026-10-17, being tested in experimental): mip bias 0, anisotropic 8x, no texture pool or resolution cap,
-  because the owner saw jagged textures and healing particles with mip bias 3, bilinear filtering, the 128 px cap and
-  the 256 MB pool. Stable keeps Sqooky's values until the owner tests this.
-- `r_particle_min_timestep` stays at Valve's default (owner-tested bisect, 2026-10-17). Sqooky's 0.00241 lerps
+- Textures (owner, 2026-10-17): mip bias 3 and bilinear filtering stay as in stable. Experimental tests the texture
+  pool and resolution caps at engine defaults; stable keeps Sqooky's 256 MB pool and 128 px cap. The jagged fire and
+  heal particles were r_particle_min_timestep, not textures.
+- `r_particle_min_timestep` stays at Valve's default in both configs (owner-tested bisect, 2026-10-17). Sqooky's 0.00241 lerps
   particles above about 415 FPS, which with uncapped FPS made fast-moving fire and heal particles jagged. HDR,
   texture layers, the Particles section keys and the other particle lines were ruled out. Don't re-add it from upstream.
 - Confirmed preferences: uncapped FPS (`fps_max 0`, `fps_max_ui 0`), Steam Input off, per-hit damage numbers visible
