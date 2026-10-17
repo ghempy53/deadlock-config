@@ -810,16 +810,16 @@ GameInfo
         r_citadel_disable_particle_lights        "true"    // Disables all lighting effects from particles. [def: "false"]
         r_citadel_screenspace_particles_full_res "true"    // Render screen space particles at full resolution. This could introduce readability issues but should be fine. [def: "true"]
         r_draw_particle_children_with_parents    "1"       // I believe this handles the drawing of little visual flourish particles. [def: "-1"]
-        r_limit_particle_job_duration            "true"    // Seems to help with particle clutter, although I am not sure.             [def: "false"]
+        // r_limit_particle_job_duration            "true"    // Seems to help with particle clutter, although I am not sure.             [def: "false"]
         r_particle_allowprerender                "true"    // I imagine it renders particles prematurely, which we do not care for.    [def: "true"]
         r_particle_batch_collections             "true"    // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
-        r_particle_fixedrandomseeds              "true"    // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance. That being said it does make flames from paige 1 always appear on the left, so your call ig [def: "false"]
+        // r_particle_fixedrandomseeds              "true"    // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance. That being said it does make flames from paige 1 always appear on the left, so your call ig [def: "false"]
         r_particle_max_texture_layers            "4"      // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
-        r_particle_min_timestep                  "0.00241" // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values could negatively impact performance. [def: "0"]
-        r_particle_model_per_thread_count        "64"      // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
-        r_particle_skip_postsim                  "true"    // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
+        // r_particle_min_timestep                  "0.00241" // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values could negatively impact performance. [def: "0"]
+        // r_particle_model_per_thread_count        "64"      // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
+        // r_particle_skip_postsim                  "true"    // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
         r_physics_particle_op_spawn_scale        "0"       // Prevents physics-based particle spawns.                          [def: "1"]
-        r_update_particles_on_render_only_frames "true"    // This does what it says on the tin, should save more performance the lower fps gets   [def: "false"]
+        // r_update_particles_on_render_only_frames "true"    // This does what it says on the tin, should save more performance the lower fps gets   [def: "false"]
         r_world_wind_strength                    "0"       // Disables wind effects, cosmetic only.                            [def: "40"]
 
         // ================ Lod & Culling ================
@@ -887,8 +887,8 @@ GameInfo
         r_hair_ao                                         "0"     // Disables hair ambient occlusion/shading pass.                    [def: "1"]
         r_max_portal_render_targets                       "2"     // Maxium number of Doorman doors to allow rendering.               [def: "0"] // This will cause visual bugs when set to 1, either set it to 2 or 0 to disable them.
         r_particle_model_new                              "false" // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "false"]
-        r_particle_model_new8                             "false" // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "true"]
-        r_particle_newinput                               "true"  //
+        // r_particle_model_new8                             "false" // Jasper stated that these variables aren't used by deadlock so I'm disabling them to be safe :steam_happy:    [def: "true"]
+        // r_particle_newinput                               "true"  //
         r_pixelvisibility_partial                         "false" // As far as I am aware this disables the pixel visibility system which should reduce visual fidelity but saves you from drawing a ray (I THINK) [def: "true"]
         r_render_hair                                     "false" // [def: "true"]
         r_renderdoc_auto_shader_pdbs                      "false" // Automatically generate shader debug info on capture.             [def: "true"]
@@ -1120,7 +1120,7 @@ GameInfo
         r_hair_shadowtile                                      "false" //
         r_haircull_percent                                     "100"   //
         r_impacts_alt_orientation                              "false" //
-        r_late_particle_job_sync                               "1"     //
+        // r_late_particle_job_sync                               "1"     //
         r_light_sensitivity_mode                               "true"  //
         r_monitor_3dskybox                                     "0"     //
         r_morphing_enabled                                     "false" //

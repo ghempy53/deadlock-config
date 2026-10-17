@@ -148,5 +148,27 @@ FIRE-EFFECT BISECT, STEP 2: HDR STAYS ON, EVERYTHING ELSE BACK (2026-10-17)
   splits them. Compare fight 1% lows with step 1 too (HDR on costs a little GPU bandwidth).
   Lines after 511 moved down by 3.
 
+FIRE-EFFECT BISECT, STEP 3: PARTICLE SIMULATION AND TIMING LINES TO VALVE VALUES (2026-10-17)
+  line 813   r_limit_particle_job_duration                 "true"  ->  (commented -> engine default)
+  line 816   r_particle_fixedrandomseeds                   "true"  ->  (commented -> engine default)
+  line 818   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default)
+  line 819   r_particle_model_per_thread_count             "64"  ->  (commented -> engine default)
+  line 820   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
+  line 822   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
+  line 890   r_particle_model_new8                         "false"  ->  (commented -> engine default)
+  line 891   r_particle_newinput                           "true"  ->  (commented -> engine default)
+  line 1123  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  Why: step 2 (HDR on, everything else restored) brought the jagged jetpack fire back, so the cause is among the 18
+  particle lines and three SceneSystem keys restored there, not HDR. This step sets the 9 lines that change how and
+  when particles simulate to Valve's values and keeps the other 12. Prime suspect: r_particle_min_timestep 0.00241.
+  Valve: particle simulation more frequent than this lerps. 0.00241 s is about 415 Hz, and the owner runs uncapped,
+  so above 415 FPS particles are interpolated between simulation steps; fast-moving emitters (jetpack fire, heal
+  particles leaving a moving hero) then place particles in visible steps. Kept from step 2: the four fallback lines,
+  size cull, physics spawn scale, children with parents, particle lights, texture layers 4, SceneSystem alpha tint,
+  particle buffer size and per-vertex lighting. HDR stays on (Valve values) so only one thing changes. Untested in
+  game: clean fire means the cause is one of these 9 (step 4 halves them, min timestep first); jagged means it is
+  among the 12 kept.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
