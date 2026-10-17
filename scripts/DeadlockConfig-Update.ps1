@@ -1,4 +1,4 @@
-# DeadlockConfig-Update: install this repo's gameinfo.gi into Deadlock.
+# DeadlockConfig-Update: install this repo's gameinfo.gi into Deadlock. Always overwrites the installed file.
 # Dot-source this file from your PowerShell profile. Setup: docs/UPDATE-COMMAND.md
 #
 #   DeadlockConfig-Update            stable-config (default)
@@ -77,12 +77,11 @@ function DeadlockConfig-Update {
         if (-not (Select-String -Path $tmp -Pattern 'GameInfo' -SimpleMatch -Quiet)) {
             throw "Download is not a gameinfo.gi: $raw/$folder/gameinfo.gi"
         }
-        if ((Test-Path $target) -and (Get-FileHash $tmp).Hash -eq (Get-FileHash $target).Hash) {
-            Write-Host "Already up to date: $folder ($label)" -ForegroundColor Green
-            return
-        }
+        # Always replace the installed file, even when it matches the download.
+        $same = (Test-Path $target) -and (Get-FileHash $tmp).Hash -eq (Get-FileHash $target).Hash
         Copy-Item $tmp $target -Force   # byte for byte: no BOM or line-ending changes
-        Write-Host "Installed $folder ($label) -> $target" -ForegroundColor Green
+        $note = if ($same) { ' (unchanged)' } else { '' }
+        Write-Host "Installed $folder ($label) -> $target$note" -ForegroundColor Green
         if (Get-Process deadlock, project8 -ErrorAction SilentlyContinue) {
             Write-Warning 'Deadlock is running. Restart it to load the new config.'
         }
