@@ -88,8 +88,8 @@ values stand, including the trade-offs that cut or hide things on screen. On top
   jagged textures and healing particles)
 - the Particles engine section at Valve stock, without Sqooky's six extra keys such as mixed-resolution particles
   (being tested; jagged jetpack fire on Deadman Danny)
-- diagnostic: HDR on and every particle tuning line at Valve's value (bisecting the jagged jetpack fire; this build
-  costs some CPU in fights and is not meant to stay)
+- HDR on (`sc_hdr_enabled_override` and SceneSystem `HDRFrameBuffer` at Valve's values; being tested as the fix for
+  the jagged jetpack fire, with the particle tuning lines back)
 
 What the owner tested and kept is in [TESTED-CHANGES.md](TESTED-CHANGES.md), and every change is logged in
 [CHANGES.txt](CHANGES.txt).
