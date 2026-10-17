@@ -42,5 +42,11 @@ UPSTREAM SYNC CHECK (2026-10-16, OptimizationLock main @ 65a7462)
   (experimental) is unchanged; Kaizuchaneru's configs also changed upstream and are not used here.
   Line numbers unchanged.
 
+DEADLOCKCONFIG-UPDATE ALWAYS REPLACES THE FILE (2026-10-17)
+  Owner's request. The install command no longer skips the copy when the installed gameinfo.gi already matches the
+  download; it always overwrites it and adds (unchanged) to the message in that case. Configs unchanged. Run
+  DeadlockConfig-Update -SelfUpdate once to get the new script.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

@@ -2,7 +2,7 @@
 
 A PowerShell command that downloads a config from this repo's `main` branch and installs it into Deadlock.
 It finds the game in any Steam library, overwrites `gameinfo.gi` (or creates it if it was deleted; no backup is kept),
-and does nothing if the installed file is already current. Downloads come from the branch's current commit, so a config is installable as soon
+and always replaces the installed file, even when it is already current. Downloads come from the branch's current commit, so a config is installable as soon
 as its pull request is merged. The source is [`scripts/DeadlockConfig-Update.ps1`](../scripts/DeadlockConfig-Update.ps1).
 
 ```powershell
@@ -43,7 +43,7 @@ they have separate profiles.
 
    This saves the script next to your profile and adds one line to the profile that loads it in every new terminal.
 3. **Test it.** Run `DeadlockConfig-Update`. It prints `Installed stable-config (main) -> ...\gameinfo.gi`,
-   or `Already up to date` if that file is already installed.
+   with `(unchanged)` at the end if the same file was already installed.
 
 If step 2 fails with *running scripts is disabled on this system*, allow local scripts for your user, then repeat
 step 2:
