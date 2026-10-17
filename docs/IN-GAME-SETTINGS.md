@@ -6,10 +6,10 @@ These are the settings the experimental config assumes (see [CONFIGS.md](CONFIGS
   Fog Low, Texture High, bloom, area lights and depth of field Off, VSync Off, max FPS 1,000.
   The menu owns these, so the experimental config's matching lines (`r_citadel_shadow_quality "0"`,
   `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
-  Exception since the 2026-10-14 fork: the config sets `r_texture_stream_mip_bias "3"` (3.5.2 and Eskay), which is
-  blurrier than any menu choice (High = 0, Low = 2). The menu writes the same convar and may override it; if textures
-  look sharp in game, the menu won. Texture filtering is not in the menu; the config sets bilinear
-  (`r_texturefilteringquality "0"`, was anisotropic 8x).
+  Textures: the experimental config sets `r_texture_stream_mip_bias "0"` (full resolution, same as menu Texture High)
+  and anisotropic 8x (`r_texturefilteringquality "4"`; filtering is not in the menu). The stable config keeps
+  Sqooky's mip bias 3 and bilinear filtering, which are blurrier than any menu choice (High = 0, Low = 2). The menu
+  writes the same mip-bias convar and may override the file, so keep Texture quality on High.
 - **Video preset:** set it in the menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Reduce camera shake:** On. It replaces the old `citadel_melee_shake_*` lines, which were server-side.
