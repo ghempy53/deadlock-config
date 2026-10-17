@@ -14,7 +14,11 @@ installable for rollback. Its only in-game differences from v1.2:
   value probably wins.
 - `phys_dynamic_scaling "false"` was dropped, so the default (true) applies. Replicated.
 
-Every setting matches Sqooky's 3.5.3 file except:
+- `r_particle_min_timestep` commented out (Sqooky: 0.00241), so the engine default 0 applies (2026-10-17). At uncapped
+  FPS above about 415, 0.00241 interpolates particles between simulation steps, which made fast-moving fire and heal
+  particles jagged (found by bisect in the experimental config).
+
+Every setting matches Sqooky's 3.5.3 file except `r_particle_min_timestep` and:
 - `r_aspectratio "2.11"` (Sqooky: 2.5). Owner's rule: every stable version keeps 2.11, whatever upstream sets. This squeezes a wider view onto the 16:9 screen; see the FOV notes in the
   experimental config.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
@@ -84,10 +88,8 @@ values stand, including the trade-offs that cut or hide things on screen. On top
 - uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
 - Steam Input off
 - a 4 s final damage total with no big-hit emphasis
-- textures at full resolution with 8x anisotropic filtering, and no texture pool or resolution cap (being tested; fixes
-  jagged textures and healing particles)
-- the Particles engine section at Valve stock, without Sqooky's six extra keys such as mixed-resolution particles
-  (being tested; jagged jetpack fire on Deadman Danny)
+- no texture pool cap or resolution cap (`r_texture_pool_size` and `r_texture_stream_max_resolution` at engine
+  defaults; being tested). Mip bias 3 and bilinear filtering are as in stable.
 - `r_particle_min_timestep` at Valve's default (0): Sqooky's 0.00241 lerps particles above about 415 FPS, which made
   fast-moving fire (Deadman Danny's jetpack) and heal particles look jagged (found by bisect, 2026-10-17)
 
