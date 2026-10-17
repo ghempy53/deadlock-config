@@ -490,6 +490,7 @@ GameInfo
         FrameBufferCopyFormat                       "R11G11B10F" // [def: "R11G11B10F"]
         GpuLightBinner                              "1"          // [def: "1"]
         GpuLightBinnerSunLightFastPath              "1"          // [def: "1"]
+        HDRFrameBuffer                              "0"          // [def: "1"]
         LayerBatchThresholdFullsort                 "200"        // [def: "20"]
         MinimumLateAllocatedVertexCacheBufferSizeMB "64"         // [def: "64"]
         NonTexturedGradientFog                      "0"          // [def: "1"]
@@ -815,7 +816,7 @@ GameInfo
         r_particle_batch_collections             "true"    // Batches collections of particles, typically batch rendering is faster so this is set to true. [def: "false"]
         r_particle_fixedrandomseeds              "true"    // I need to properly test this, but I'm pretty sure that setting this to true marginally increases performance. That being said it does make flames from paige 1 always appear on the left, so your call ig [def: "false"]
         r_particle_max_texture_layers            "4"      // Anything below 4 will make infernus afterburn, paige fire, and drifter's passive look very weird and blocky [def: "-1"]
-        // r_particle_min_timestep                  "0.00241" // Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values could negatively impact performance. [def: "0"]
+        // r_particle_min_timestep                  "0.00241" // Keep commented: 0.00241 lerps particles above ~415 FPS (jagged fire). Minimum amount of time for particles to update. Higher values will have particles stutter, while lower values could negatively impact performance. [def: "0"]
         r_particle_model_per_thread_count        "64"      // I believe it is how many particle models a thread is allowed to handle.  [def: "32"]
         r_particle_skip_postsim                  "true"    // Not entirely sure what it does, going off of the name I'd imagine it skips the post simulation, this is a testvar [def: "false"]
         r_physics_particle_op_spawn_scale        "0"       // Prevents physics-based particle spawns.                          [def: "1"]
@@ -1151,7 +1152,7 @@ GameInfo
         sc_clutter_density_none_size                           "1"     //
         sc_disable_spotlight_shadows                           "1"     //
         sc_dithered_lod_transition_amt                         "0"     //
-        // sc_hdr_enabled_override                                "0"     //
+        sc_hdr_enabled_override                                "0"     //
         sc_instanced_mesh_enable                               "false" //
         sc_instanced_mesh_gpu_density_culling                  "false" //
         sc_max_framebuffer_copies_per_layer                    "0"     //

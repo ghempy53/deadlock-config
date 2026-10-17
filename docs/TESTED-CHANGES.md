@@ -20,6 +20,12 @@ Applied to the new experimental config unless noted:
 Section 4 is settled: the owner accepts every item there as v1.2 has it. The 2026-10-06 and 10-07 results in sections
 1 and 3 were distorted by problems with the owner's PC, so they are history, not evidence (owner, 2026-10-15).
 
+## 0b. Found by bisect (2026-10-17)
+
+- `r_particle_min_timestep` must stay at Valve's default (0). Sqooky's 0.00241 made Deadman Danny's jetpack fire and
+  heal particles jagged at uncapped FPS. Ruled out along the way: HDR on/off, `r_particle_max_texture_layers` (no cap
+  looked worse), the six extra Particles section keys, and the other 8 simulation and timing lines.
+
 ## 1. Tested in game and kept
 
 | Change | Value | Evidence | In v1.2 |

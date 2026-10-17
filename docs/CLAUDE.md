@@ -92,6 +92,9 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
 - Textures (2026-10-17, being tested in experimental): mip bias 0, anisotropic 8x, no texture pool or resolution cap,
   because the owner saw jagged textures and healing particles with mip bias 3, bilinear filtering, the 128 px cap and
   the 256 MB pool. Stable keeps Sqooky's values until the owner tests this.
+- `r_particle_min_timestep` stays at Valve's default (owner-tested bisect, 2026-10-17). Sqooky's 0.00241 lerps
+  particles above about 415 FPS, which with uncapped FPS made fast-moving fire and heal particles jagged. HDR,
+  texture layers, the Particles section keys and the other particle lines were ruled out. Don't re-add it from upstream.
 - Confirmed preferences: uncapped FPS (`fps_max 0`, `fps_max_ui 0`), Steam Input off, per-hit damage numbers visible
   with a 4 s final total and no big-hit emphasis, `r_aspectratio 2.11`, default health bar width,
   `citadel_unit_status_healthbar_highlight_speed 100`.
