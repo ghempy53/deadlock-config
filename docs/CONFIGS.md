@@ -88,7 +88,7 @@ values stand, including the trade-offs that cut or hide things on screen. On top
 - uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
 - Steam Input off
 - a 4 s final damage total with no big-hit emphasis
-- textures being tested: `r_texture_pool_size 3200` (stable 256), no resolution cap (stable 128 px), and
+- textures being tested: `r_texture_pool_size 6400` (stable 256), no resolution cap (stable 128 px), and
   `r_texture_stream_mip_bias 2` (stable 3, one step sharper). Bilinear filtering is as in stable.
 - `r_particle_min_timestep` at Valve's default (0): Sqooky's 0.00241 lerps particles above about 415 FPS, which made
   fast-moving fire (Deadman Danny's jetpack) and heal particles look jagged (found by bisect, 2026-10-17)

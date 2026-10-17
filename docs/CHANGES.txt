@@ -229,5 +229,13 @@ TEXTURE POOL 3200 MB, MIP BIAS 2 (2026-10-17)
   the mip bias and may override the file. Untested in game: check texture sharpness and compare fight 1% lows.
   Line numbers unchanged.
 
+TEXTURE POOL 6400 MB (2026-10-17)
+  line 1144  r_texture_pool_size                           "3200"  ->  "6400"
+  Why: owner's request while testing textures on experimental. Doubles the texture pool again so fewer textures are
+  dropped to lower mips under memory pressure. 6400 MB is about half of the RTX 5070's 12 GB; the rest still covers
+  render targets, buffers and the driver at 1440p. GPU memory only; fight lows are CPU-bound. Stable unchanged.
+  Untested in game: check texture sharpness, watch for hitches or VRAM warnings, and compare fight 1% lows.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

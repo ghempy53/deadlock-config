@@ -7,7 +7,7 @@ These are the settings the experimental config assumes (see [CONFIGS.md](CONFIGS
   The menu owns these, so the experimental config's matching lines (`r_citadel_shadow_quality "0"`,
   `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
   Textures: stable sets Sqooky's `r_texture_stream_mip_bias "3"`, blurrier than any menu choice (High = 0, Low = 2);
-  experimental sets 2 (same as menu Low) with a 3200 MB texture pool and no resolution cap. Both use bilinear
+  experimental sets 2 (same as menu Low) with a 6400 MB texture pool and no resolution cap. Both use bilinear
   filtering (`r_texturefilteringquality "0"`; filtering is not in the menu). The menu writes the same mip-bias
   convar and may override the file, so set Texture quality to Low to match experimental.
 - **Video preset:** set it in the menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.

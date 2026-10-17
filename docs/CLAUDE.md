@@ -89,7 +89,7 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
   explicitly: camera lines (flatten_horizontal and flatten_vertical false, wobble off), IK and foot lock off, batching
   thresholds 256, `r_particle_max_size_cull 900`, `r_limit_particle_job_duration`, texture budget 0.5, trooper and boss glow off, no first-person tracers, `r_size_cull_threshold
   0.9`, `r_farz 7000`, ragdoll scale 0 and limit 0, the smaller damage-direction indicator, box debris 0.
-- Textures (owner, 2026-10-17): bilinear filtering stays as in stable. Experimental tests mip bias 2, a 3200 MB
+- Textures (owner, 2026-10-17): bilinear filtering stays as in stable. Experimental tests mip bias 2, a 6400 MB
   texture pool and no resolution cap; stable keeps Sqooky's mip bias 3, 256 MB pool and 128 px cap. The jagged fire and
   heal particles were r_particle_min_timestep, not textures.
 - `r_particle_min_timestep` stays at Valve's default in both configs (owner-tested bisect, 2026-10-17). Sqooky's 0.00241 lerps
