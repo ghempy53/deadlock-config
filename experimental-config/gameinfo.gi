@@ -652,8 +652,6 @@ GameInfo
         citadel_unit_status_stamina_low_pips            "7"     // below this threshold stamina is permanantly visble [def: "3"]
         citadel_damage_report_enable                    "1"     // Enables/Disables incoming/outgoing damage tab (tuning this off is very questionable but okay). [def: "1"]
         citadel_damage_text_batching_window_ability     "1000"  // How long to wait until batching damage text.
-        citadel_damage_text_cumulative_final_lifetime   "4"     // In cumulative mode 2, how long the total lives once shown.    [def: "3"]
-        citadel_damage_text_dynamic_emphasis            "false" // No 150% scale-up and pop on big hits. Crits still scale 130%. [def: "true"]
         citadel_distance_mouse_move_for_minimap_drawing "1"     // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
         citadel_hideout_ball_show_juggle_count          "1"     // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx             "1"     // Shows juggle visual FX for hideout ball minigame.                [def: "0"]

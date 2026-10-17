@@ -20,11 +20,9 @@ These are the settings the experimental config assumes (see [CONFIGS.md](CONFIGS
   flatten_horizontal false, camera height, pitch and lag 0, see distance 7000, `default_fov` and `viewmodel_fov` 0).
   `citadel_camera_use_vmdl_flatten_vertical` and `r_aspectratio` stay at Valve's default. The in-game Camera FOV slider
   still sets the hero FOV.
-- **Damage numbers:** while the in-game damage number settings are being tested, group 1d uses Valve's defaults with two
-  exceptions: the final total stays 4 s (default 3), and big hits don't scale up
-  (`citadel_damage_text_dynamic_emphasis "false"`). Use any in-game mode. The previous layout (total up-left of the
-  target, 3 s batch window, no extra delay) comes back by uncommenting those lines. Don't push per-hit numbers
-  off-screen: the game makes no total for a single hit, so the first hit would disappear.
+- **Damage numbers:** both configs leave every damage-number convar at Valve's default (since 2026-10-17), so the
+  in-game damage number settings decide the layout. Per-hit numbers stay visible: the game makes no total for a
+  single hit.
 - **Health bars:** the City Never Sleeps bars at Valve's default width (200). The old narrow-bar line
   (`citadel_unit_status_width "100"`) is kept commented out in group 1c.
 

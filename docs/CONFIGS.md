@@ -20,8 +20,6 @@ installable for rollback. Its only in-game differences from v1.2:
 
 Owner's values taken from the experimental config (2026-10-17), the same in both configs:
 - uncapped FPS: `fps_max "0"`, `fps_max_ui "0"` (Sqooky: 400 / 120)
-- `citadel_damage_text_cumulative_final_lifetime "4"` and `citadel_damage_text_dynamic_emphasis "false"`: the damage
-  total stays 4 s, no big-hit scale-up
 - textures: `r_texture_stream_mip_bias "2"` (Sqooky: 3), `r_texture_pool_size "6400"` (Sqooky: 256), and
   `r_texture_stream_max_resolution` commented out (Sqooky: 128 px cap)
 - `steam_inputhandler_enabled "false"` on both of its lines (Sqooky's first line said true; the second, false, won)
@@ -60,9 +58,10 @@ frozen as the next version.
 | --- | --- | --- |
 | **v1.0** (2026-10-13) | [`stable-config/v1.0/gameinfo.gi`](../stable-config/v1.0/gameinfo.gi) | Eskay's config at `f6fdab7` with `r_aspectratio` commented out (SHA-256 `dfad6b32…97b4a8`). The owner's baseline: performance felt excellent. Mods only in `citadel/addons`. |
 | **v1.1** (2026-10-15) | [`stable-config/v1.1/gameinfo.gi`](../stable-config/v1.1/gameinfo.gi) | Sqooky's OptimizationLock 3.5.2 at `66db906` with `r_aspectratio 2.12` and `ForceVulkanForMapBuild`, credits and donor comments removed. Tested in game by the owner. SHA-256 `82655cf1…d62a5d64`. |
-| **v1.2** (2026-10-15) | [`stable-config/v1.2/gameinfo.gi`](../stable-config/v1.2/gameinfo.gi) | v1.1 with `r_aspectratio 2.11` and `citadel_unit_status_healthbar_highlight_speed 100`. The owner's tested file, verbatim. Byte-identical to `stable-config/gameinfo.gi` as of this date (SHA-256 `37991b5b…840b8e4b`). |
+| **v1.2** (2026-10-15) | [`stable-config/v1.2/gameinfo.gi`](../stable-config/v1.2/gameinfo.gi) | v1.1 with `r_aspectratio 2.11` and `citadel_unit_status_healthbar_highlight_speed 100`. The owner's tested file, verbatim. SHA-256 `37991b5b…840b8e4b`. |
+| **v1.3** (2026-10-17) | [`stable-config/v1.3/gameinfo.gi`](../stable-config/v1.3/gameinfo.gi) | Sqooky's OptimizationLock 3.5.3 with `r_aspectratio 2.11`, uncapped FPS, `r_particle_min_timestep` at default (jagged-fire fix), mip bias 2, a 6400 MB texture pool and no texture resolution cap; damage numbers at Valve's defaults. Locked at the owner's request. Byte-identical to `stable-config/gameinfo.gi` as of this date (SHA-256 `b5fbeb3e…33ab3dc2`). |
 
-Install a version with `DeadlockConfig-Update -Version 1.0` (or `1.1`, `1.2`).
+Install a version with `DeadlockConfig-Update -Version 1.0` (or `1.1`, `1.2`, `1.3`).
 
 A game update can change how a frozen version behaves (renamed or blocked convars, a new matchmaking check) without
 the file changing.
@@ -95,7 +94,6 @@ Restarted on 2026-10-17 from the current stable config (Sqooky's 3.5.3 with `r_a
 values stand, including the trade-offs that cut or hide things on screen. On top of stable:
 - uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
 - Steam Input off
-- a 4 s final damage total with no big-hit emphasis
 - the same texture values as stable since 2026-10-17: mip bias 2, a 6400 MB texture pool, no resolution cap,
   bilinear filtering
 - `r_particle_min_timestep` at Valve's default (0): Sqooky's 0.00241 lerps particles above about 415 FPS, which made
