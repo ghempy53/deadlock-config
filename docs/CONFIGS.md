@@ -5,14 +5,19 @@ Both are full replacements for Deadlock's `game\citadel\gameinfo.gi`. Install on
 
 ## Stable: `stable-config/gameinfo.gi` (default)
 
-Sqooky's OptimizationLock 3.5.3 from [OptimizationLock](https://github.com/Sqooky/OptimizationLock)
-(`Sqooky's .gi/gameinfo.gi` at commit `65a7462`, 2026-10-16). It is the owner's tested v1.2 (3.5.2, 2026-10-15) with
-upstream's 3.5.3 changes pulled in on 2026-10-16; the 3.5.3 update itself is untested in game, and v1.2 stays
-installable for rollback. Its only in-game differences from v1.2:
-- `citadel_per_weapon_per_surface_impact_effects "false"`: per-weapon, per-surface bullet impacts are simplified.
-  Sqooky notes it also removes the radius indicator of Yamato's right click. Replicated, so online the server's
-  value probably wins.
-- `phys_dynamic_scaling "false"` was dropped, so the default (true) applies. Replicated.
+Sqooky's OptimizationLock 3.6 from [OptimizationLock](https://github.com/Sqooky/OptimizationLock)
+(`Sqooky's .gi/gameinfo.gi` at commit `aba20cd`, 2026-10-17), pulled in on 2026-10-18 at the owner's request with the
+owner's edits below kept. The 3.6 update is untested in game; v1.3 (3.5.3) stays installable for rollback. In-game
+differences from v1.3:
+- `citadel_camera_use_vmdl_flatten_vertical` back to `"true"` (Valve's default; v1.3 had false). Valve: zeroes the
+  camera's relative Z axis to reduce motion sickness. Sqooky's note: false made Rem, Venator and Rat King's cameras
+  dip when aiming down scope.
+- `citadel_unit_status_healthbar_highlight_speed "999"` (v1.3: 100): health bar changes show without interpolation.
+- `citadel_minimap_trooper_size "2"` (default 3): smaller trooper dots on the minimap.
+- `citadel_show_minimap_reveal_indicators "true"` (default false) and `citadel_show_old_neutral_camp_icons "false"`
+  (default true): minimap reveal indicators on, new neutral camp icons. No Valve description for the first.
+- No effect: `minimap_trooper_update_rate_hz "2"` (server-only), and two removed health-bar convars and the blocked
+  `lb_enable_baked_shadows` dropped.
 
 - `r_particle_min_timestep` commented out (Sqooky: 0.00241), so the engine default 0 applies (2026-10-17). At uncapped
   FPS above about 415, 0.00241 interpolates particles between simulation steps, which made fast-moving fire and heal
@@ -24,13 +29,10 @@ Owner's values taken from the experimental config (2026-10-17), the same in both
   `r_texture_stream_max_resolution` commented out (Sqooky: 128 px cap)
 - `steam_inputhandler_enabled "false"` on both of its lines (Sqooky's first line said true; the second, false, won)
 
-Every other setting matches Sqooky's 3.5.3 file except `r_particle_min_timestep` and:
+Every other setting matches Sqooky's 3.6 file except `r_particle_min_timestep` and:
 - `r_aspectratio "2.11"` (Sqooky: 2.5). Owner's rule: every stable version keeps 2.11, whatever upstream sets. This squeezes a wider view onto the 16:9 screen; see the FOV notes in the
   experimental config.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
-- `citadel_unit_status_healthbar_highlight_speed "100"` (default 2): health bars refill without the slow highlight
-  delay. Client-side, not blocked. The owner added it in v1.2; Sqooky adopted it in 3.5.3, so it now sits in the UI
-  block like upstream's.
 - Comments only: the credits, donor list, ko-fi, tutorial and GameBanana lines and the editing example are removed,
   two thank-you notes on setting lines are shortened, and two comments with an odd number of double quotes are fixed
   (they broke Deadlock Mod Manager's parser).
