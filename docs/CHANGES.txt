@@ -262,5 +262,17 @@ STABLE V1.3 FROZEN (2026-10-17)
   DeadlockConfig-Update -Version 1.3. This config is unchanged.
   Line numbers unchanged.
 
+UPSTREAM SYNC CHECK (2026-10-18, OptimizationLock main @ aba20cd)
+  OptimizationLock 3.6 (aba20cd, 2026-10-17) pulled into stable-config/gameinfo.gi at the owner's request ("take all
+  of 3.6"). Changes: citadel_camera_use_vmdl_flatten_vertical false -> true (Valve default),
+  citadel_unit_status_healthbar_highlight_speed 100 -> 999, citadel_minimap_trooper_size 2,
+  citadel_show_minimap_reveal_indicators true, citadel_show_old_neutral_camp_icons false, minimap_trooper_update_rate_hz
+  2 (server-only), and dropped citadel_unit_status_allies_see_thru_walls_max_distance and citadel_unit_status_dpi (gone)
+  and lb_enable_baked_shadows (blocked). No engine-section change. Stable keeps the owner's edits: r_aspectratio 2.11,
+  fps_max and fps_max_ui 0, r_particle_min_timestep at default, mip bias 2, texture pool 6400, no resolution cap,
+  Steam Input false on both lines; same comment cleanup and odd-quote fixes as before. Untested in game; v1.3 stays
+  the rollback. This config (experimental) is unchanged and now differs from stable by the 3.6 changes.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
