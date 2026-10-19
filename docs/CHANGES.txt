@@ -274,5 +274,12 @@ UPSTREAM SYNC CHECK (2026-10-18, OptimizationLock main @ aba20cd)
   the rollback. This config (experimental) is unchanged and now differs from stable by the 3.6 changes.
   Line numbers unchanged.
 
+UPSTREAM SYNC CHECK (2026-10-19, OptimizationLock main @ 690e4fb)
+  Since aba20cd (3.6): a vdf-fmt pre-commit hook and CI workflow for .gi formatting, and README credits. gameinfo.gi
+  is byte-identical, so no new convars. Stable still equals 3.6 apart from the owner's edits in docs/CONFIGS.md
+  (r_aspectratio 2.11, fps_max and fps_max_ui 0, r_particle_min_timestep at default, mip bias 2, texture pool 6400,
+  no resolution cap, Steam Input false). Adopted: nothing. Skipped: nothing. Neither config changed.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
