@@ -30,8 +30,8 @@ Owner's values taken from the experimental config (2026-10-17), the same in both
 - `steam_inputhandler_enabled "false"` on both of its lines (Sqooky's first line said true; the second, false, won)
 
 Every other setting matches Sqooky's 3.6 file except `r_particle_min_timestep` and:
-- `r_aspectratio "2.11"` (Sqooky: 2.5). Owner's rule: every stable version keeps 2.11, whatever upstream sets. This squeezes a wider view onto the 16:9 screen; see the FOV notes in the
-  experimental config.
+- `r_aspectratio` commented out (Sqooky: 2.5; 2.11 until 2026-10-20). The owner uses an in-game FOV mod, so the
+  engine default applies. Every upstream pull keeps it commented out, whatever upstream sets.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
 - Comments only: the credits, donor list, ko-fi, tutorial and GameBanana lines and the editing example are removed,
   two thank-you notes on setting lines are shortened, and two comments with an odd number of double quotes are fixed
@@ -92,7 +92,8 @@ reach only part of this through ConVars.
 
 ## Experimental: `experimental-config/gameinfo.gi` (`-ex`)
 
-Restarted on 2026-10-17 from the current stable config (Sqooky's 3.5.3 with `r_aspectratio 2.11`). Stable's
+Restarted on 2026-10-17 from the current stable config (Sqooky's 3.5.3 with `r_aspectratio 2.11`; commented out in both
+configs since 2026-10-20 for the FOV mod). Stable's
 values stand, including the trade-offs that cut or hide things on screen. On top of stable:
 - uncapped FPS (`fps_max 0`, `fps_max_ui 0`)
 - Steam Input off

@@ -281,5 +281,13 @@ UPSTREAM SYNC CHECK (2026-10-19, OptimizationLock main @ 690e4fb)
   no resolution cap, Steam Input false). Adopted: nothing. Skipped: nothing. Neither config changed.
   Line numbers unchanged.
 
+R_ASPECTRATIO COMMENTED OUT IN BOTH CONFIGS (2026-10-20)
+  line 649   r_aspectratio                              "2.11"   ->  (commented -> engine default 0)
+  Why: the owner now sets FOV with an in-game FOV mod, and the 2.11 squeeze would stack with it. Stable gets the same
+  edit (stable-config/gameinfo.gi line 645), and later upstream pulls keep it commented out. No performance effect.
+  Untested in game: check that the mod's FOV applies and the image isn't stretched or squeezed horizontally. To undo,
+  remove the leading // on that line in either file.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
