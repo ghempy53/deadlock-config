@@ -5,7 +5,7 @@ a Ryzen 7 9800X3D and RTX 5070 at 1440p, uncapped FPS.
 
 | Config | What it is |
 | --- | --- |
-| [`stable-config/`](stable-config/gameinfo.gi) (default) | Sqooky's OptimizationLock 3.6 with uncapped FPS and sharper textures (v1.3, the last freeze, is 3.5.3). Frozen versions: [`v1.0`](stable-config/v1.0/gameinfo.gi) (Eskay's config), [`v1.1`](stable-config/v1.1/gameinfo.gi), [`v1.2`](stable-config/v1.2/gameinfo.gi), [`v1.3`](stable-config/v1.3/gameinfo.gi) (current). |
+| [`stable-config/`](stable-config/gameinfo.gi) (default) | Sqooky's OptimizationLock 3.6 with uncapped FPS and sharper textures; frozen as v1.4. Frozen versions: [`v1.0`](stable-config/v1.0/gameinfo.gi) (Eskay's config), [`v1.1`](stable-config/v1.1/gameinfo.gi), [`v1.2`](stable-config/v1.2/gameinfo.gi), [`v1.3`](stable-config/v1.3/gameinfo.gi), [`v1.4`](stable-config/v1.4/gameinfo.gi) (current). |
 | [`experimental-config/`](experimental-config/gameinfo.gi) | Restarted 2026-10-15 from stable v1.2; tested changes get re-applied one at a time ([list](docs/TESTED-CHANGES.md)). |
 
 Differences and caveats: [docs/CONFIGS.md](docs/CONFIGS.md).
