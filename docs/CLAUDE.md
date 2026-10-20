@@ -1,7 +1,7 @@
 # deadlock-config: guidance for Claude
 
 Personal Deadlock `gameinfo.gi` configs (Windows 11, DX11 or Vulkan with no edits). `stable-config/` is Sqooky's
-OptimizationLock 3.6 with the owner's edits (v1.3, the last freeze, is 3.5.3; Eskay's config is frozen as v1.0); `experimental-config/` was restarted on 2026-10-17 as a copy of stable (3.5.3) with
+OptimizationLock 3.6 with the owner's edits (frozen as v1.4; Eskay's config is frozen as v1.0); `experimental-config/` was restarted on 2026-10-17 as a copy of stable (3.5.3) with
 the confirmed preferences re-applied, and changes are tested on it one stage at a time. The previous experimental config (3.4,
 then the 3.5.2 ConVars fork) and its change log are in `docs/archive/`.
 This file is loaded into every Claude Code session through `.claude/CLAUDE.md`. The README and the user docs in

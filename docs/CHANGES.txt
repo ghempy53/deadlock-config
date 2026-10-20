@@ -289,5 +289,12 @@ R_ASPECTRATIO COMMENTED OUT IN BOTH CONFIGS (2026-10-20)
   remove the leading // on that line in either file.
   Line numbers unchanged.
 
+STABLE V1.4 FROZEN (2026-10-20)
+  stable-config/v1.4/gameinfo.gi is a byte-identical copy of stable-config/gameinfo.gi (SHA-256 3fb7a0c6...7b790141),
+  locked at the owner's request: Sqooky's OptimizationLock 3.6 (aba20cd) with r_aspectratio commented out (FOV mod),
+  fps_max and fps_max_ui 0, r_particle_min_timestep at default, mip bias 2, texture pool 6400 MB, no texture
+  resolution cap, Steam Input false. Install with DeadlockConfig-Update -Version 1.4. This config is unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
