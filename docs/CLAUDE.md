@@ -1,7 +1,7 @@
 # deadlock-config: guidance for Claude
 
 Personal Deadlock `gameinfo.gi` configs (Windows 11, DX11 or Vulkan with no edits). `stable-config/` is Sqooky's
-OptimizationLock 3.6 with the owner's edits (frozen as v1.4; Eskay's config is frozen as v1.0); `experimental-config/` was restarted on 2026-10-17 as a copy of stable (3.5.3) with
+OptimizationLock 3.6.1 with the owner's edits (v1.4, the last freeze, is 3.6; Eskay's config is frozen as v1.0); `experimental-config/` was restarted on 2026-10-17 as a copy of stable (3.5.3) with
 the confirmed preferences re-applied, and changes are tested on it one stage at a time. The previous experimental config (3.4,
 then the 3.5.2 ConVars fork) and its change log are in `docs/archive/`.
 This file is loaded into every Claude Code session through `.claude/CLAUDE.md`. The README and the user docs in
@@ -30,7 +30,7 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 | `experimental-config/gameinfo.gi` | The tuned config. KeyValues. Since 2026-10-17 a copy of stable (3.5.3) plus the confirmed preferences and the changes in `docs/CHANGES.txt`, so until the owner decides otherwise it still breaks hard rules 1 to 7 (edited engine sections, fps_max 400, duplicate convars, Sqooky's comment layout) and `utils/check.py` reports errors. The owner directs each change; don't fix those on your own. |
 | `docs/TESTED-CHANGES.md` | What the owner tested, kept and rejected before the restart. Read it before proposing a change. |
 | `docs/archive/` | The previous experimental config and its full change log. Never edit. |
-| `stable-config/gameinfo.gi` | Sqooky's current release (3.6) with the owner's edits listed in `docs/CONFIGS.md`. Upstream updates are pulled in on request, keeping the owner's edits. **`r_aspectratio` stays commented out in every upstream pull (owner, 2026-10-20: an in-game FOV mod controls FOV now), whatever upstream sets.** When the owner uploads a tested file, take it verbatim. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
+| `stable-config/gameinfo.gi` | Sqooky's current release (3.6.1) with the owner's edits listed in `docs/CONFIGS.md`. Upstream updates are pulled in on request, keeping the owner's edits. **`r_aspectratio` stays commented out in every upstream pull (owner, 2026-10-20: an in-game FOV mod controls FOV now), whatever upstream sets.** When the owner uploads a tested file, take it verbatim. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
 | `stable-config/v<N>/gameinfo.gi` | Frozen stable versions. **Never edit one.** A new version is a new folder plus a row in `docs/CONFIGS.md`. v1.0 (2026-10-13) is the owner's performance baseline: compare experimental changes against it (`python3 utils/compare.py`). |
 | `scripts/DeadlockConfig-Update.ps1` | The owner's PowerShell install command. Tutorial in `docs/UPDATE-COMMAND.md`. Keep it Windows PowerShell 5.1 compatible and ASCII only. |
 | `docs/CHANGES.txt` | Every change to the experimental config since the 2026-10-15 restart, in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |

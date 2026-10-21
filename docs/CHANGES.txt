@@ -296,5 +296,18 @@ STABLE V1.4 FROZEN (2026-10-20)
   resolution cap, Steam Input false. Install with DeadlockConfig-Update -Version 1.4. This config is unchanged.
   Line numbers unchanged.
 
+UPSTREAM SYNC CHECK (2026-10-21, OptimizationLock main @ 347a669)
+  OptimizationLock 3.6.1 (23c8338, 2026-10-20; 347a669 only touches Kaizuchaneru's config) pulled into
+  stable-config/gameinfo.gi at the owner's request. No ConVars changed. 3.6.1 carries Valve's new stock engine
+  sections from the 2026-10-20 patch, checked against SteamTracking/GameTracking-Deadlock master: PGIVersion
+  39A735A4... -> 48C04ECA..., WorldRendererBuilder fog precomputed-shadow keys added, BakedLighting Version 4 -> 5
+  with the sh2_r/g/b lightmap channels replaced by sh2_lum, SceneSystem FogCachedShadowAtlasHeight/Width renamed to
+  *Tools plus FogCachedShadowTileSizeTools (Sqooky sets all three to 0). Stable keeps the owner's edits (r_aspectratio
+  commented out, fps_max and fps_max_ui 0, r_particle_min_timestep at default, mip bias 2, texture pool 6400, no
+  resolution cap, Steam Input false). Untested in game; v1.4 stays the rollback.
+  This config (experimental) is unchanged and still has the old PGIVersion and engine keys, so it no longer matches
+  Valve's stock file: needs a patch-verify pass.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
