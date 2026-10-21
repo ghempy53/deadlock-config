@@ -5,10 +5,18 @@ Both are full replacements for Deadlock's `game\citadel\gameinfo.gi`. Install on
 
 ## Stable: `stable-config/gameinfo.gi` (default)
 
-Sqooky's OptimizationLock 3.6 from [OptimizationLock](https://github.com/Sqooky/OptimizationLock)
-(`Sqooky's .gi/gameinfo.gi` at commit `aba20cd`, 2026-10-17), pulled in on 2026-10-18 at the owner's request with the
-owner's edits below kept, and frozen as v1.4 on 2026-10-20. v1.3 (3.5.3) stays installable for rollback. In-game
-differences from v1.3 (besides `r_aspectratio`, now commented out):
+Sqooky's OptimizationLock 3.6.1 from [OptimizationLock](https://github.com/Sqooky/OptimizationLock)
+(`Sqooky's .gi/gameinfo.gi` at commit `347a669`, 2026-10-21), with the owner's edits below kept. 3.6 (`aba20cd`) was
+pulled in on 2026-10-18 and frozen as v1.4 on 2026-10-20; 3.6.1 followed on 2026-10-21. v1.4 (3.6) and v1.3 (3.5.3)
+stay installable for rollback.
+
+3.6.1 changes no ConVars. It carries Valve's new stock engine sections from the 2026-10-20 game patch: a new
+`PGIVersion`, fog precomputed-shadow bake keys in `ResourceCompiler/WorldRendererBuilder`, `BakedLighting` version 5
+with one `directional_irradiance_sh2_lum` channel, and `SceneSystem/FogCachedShadow*` renamed to `*Tools` (Sqooky
+keeps them at 0). The new `PGIVersion` matches Valve's, so stable should pass matchmaking's file check on the new
+build; v1.4 and older carry the old one.
+
+In-game differences from v1.3 (besides `r_aspectratio`, now commented out):
 - `citadel_camera_use_vmdl_flatten_vertical` back to `"true"` (Valve's default; v1.3 had false). Valve: zeroes the
   camera's relative Z axis to reduce motion sickness. Sqooky's note: false made Rem, Venator and Rat King's cameras
   dip when aiming down scope.
@@ -29,7 +37,7 @@ Owner's values taken from the experimental config (2026-10-17), the same in both
   `r_texture_stream_max_resolution` commented out (Sqooky: 128 px cap)
 - `steam_inputhandler_enabled "false"` on both of its lines (Sqooky's first line said true; the second, false, won)
 
-Every other setting matches Sqooky's 3.6 file except `r_particle_min_timestep` and:
+Every other setting matches Sqooky's 3.6.1 file except `r_particle_min_timestep` and:
 - `r_aspectratio` commented out (Sqooky: 2.5; 2.11 until 2026-10-20). The owner uses an in-game FOV mod, so the
   engine default applies. Every upstream pull keeps it commented out, whatever upstream sets.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
