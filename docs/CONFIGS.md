@@ -6,7 +6,9 @@ Both are full replacements for Deadlock's `game\citadel\gameinfo.gi`. Install on
 ## Stable: `stable-config/gameinfo.gi` (default)
 
 Sqooky's OptimizationLock 3.6.1 from [OptimizationLock](https://github.com/Sqooky/OptimizationLock)
-(`Sqooky's .gi/gameinfo.gi` at commit `347a669`, 2026-10-21), with the owner's edits below kept. 3.6 (`aba20cd`) was
+(`Sqooky's .gi/gameinfo.gi` at commit `347a669`, 2026-10-21; still the latest on 2026-10-22), with the owner's
+edits below kept. Every convar it sets away from Valve's default is listed in
+[STABLE-NONDEFAULT-CONVARS.md](STABLE-NONDEFAULT-CONVARS.md). 3.6 (`aba20cd`) was
 pulled in on 2026-10-18 and frozen as v1.4 on 2026-10-20; 3.6.1 followed on 2026-10-21. v1.4 (3.6) and v1.3 (3.5.3)
 stay installable for rollback.
 
