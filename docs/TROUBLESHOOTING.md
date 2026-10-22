@@ -9,7 +9,7 @@ config.
 ## Matchmaking refuses with `Citadel_StartMatchmaking_UnverifiedPGI`
 
 The installed file changes an engine section that matchmaking checks. The stable config does (see
-[CONFIGS.md](CONFIGS.md)); the experimental config doesn't. Switch with `DeadlockConfig-Update -ex`, or restore stock
+[CONFIGS.md](CONFIGS.md)); the experimental config doesn't. Switch with `DeadlockConfig-Update -Ex`, or restore stock
 with Steam's *Verify integrity of game files*.
 
 ## Deadlock Mod Manager fails to read the file

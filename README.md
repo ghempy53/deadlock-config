@@ -16,8 +16,7 @@ Set up the [`DeadlockConfig-Update`](docs/UPDATE-COMMAND.md) PowerShell command 
 
 ```powershell
 DeadlockConfig-Update        # stable
-DeadlockConfig-Update -ex    # experimental
-DeadlockConfig-Update -Version 1.0   # stable v1.0, the baseline to test experimental against
+DeadlockConfig-Update -Ex    # experimental
 ```
 
 Run it again after every Deadlock update, since updates can overwrite the file. To install by hand, see
