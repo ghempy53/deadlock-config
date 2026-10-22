@@ -52,3 +52,9 @@ UPSTREAM SYNC CHECK (YYYY-MM-DD, OptimizationLock main @ <short sha>)
 ```
 
 Also update the "checked against `main @ ...`" line in the experimental section of `docs/CONFIGS.md`.
+
+## 5. Regenerate the non-default list
+
+Run `python3 utils/nondefaults.py` after step 4 (it reads the synced commit from `docs/CHANGES.txt`) and commit
+`docs/STABLE-NONDEFAULT-CONVARS.md` with the sync, even when no convar changed: the Valve dump it compares against
+moves with game patches.

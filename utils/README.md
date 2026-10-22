@@ -12,6 +12,7 @@ Refs that move, like `master` and `main`, are re-downloaded on every run.
 | `stock_diff.py` | no | Compares every section and the stock ConVars tail with Valve's stock `gameinfo.gi`. |
 | `compare.py` | yes | Effective-settings diff of two `gameinfo.gi` files. Default: stable v1.0 vs experimental. |
 | `upstream_diff.py` | no | Lists what changed in OptimizationLock since the last synced commit. |
+| `nondefaults.py` | no | Writes `docs/STABLE-NONDEFAULT-CONVARS.md`: the stable config's convars that differ from Valve's defaults. |
 | `gi.py` | | Shared parser for KeyValues, the ConVars block and the convar dump. |
 
 All scripts exit 1 on errors, so they can run in CI.
@@ -74,3 +75,15 @@ python3 utils/upstream_diff.py [--from <sha>] [--to main]
 
 `--from` defaults to the commit in the last `UPSTREAM SYNC CHECK (..., OptimizationLock main @ <sha>)` line of
 `docs/CHANGES.txt`.
+
+## nondefaults.py
+
+```
+python3 utils/nondefaults.py [--ref <GameTracking sha>] [--stdout]
+```
+
+Reads `stable-config/gameinfo.gi` (not the experimental config) and lists every active convar whose value differs
+from Valve's default in the convar dump, after normalising booleans and number formats. Commented-out lines are
+ignored. Lines that Valve's stock `gameinfo.gi` sets to the same value go in a separate section. The doc header
+records the GameTracking commit and build, and the upstream commit from `docs/CHANGES.txt`. Rerun it after every
+upstream sync or game patch.

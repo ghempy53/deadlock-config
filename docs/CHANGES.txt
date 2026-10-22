@@ -327,5 +327,12 @@ BUILD 6810 CHECK: VALVE'S 2026-10-20 ENGINE-SECTION PATCH (2026-10-21; Valve dat
   Untested in game: check that matchmaking starts and fog/shadows look as before.
   Lines 319-329 moved down by 8, lines 330-484 up by 2, lines after 487 up by 1 (older line refs renumbered).
 
+UPSTREAM SYNC CHECK (2026-10-22, OptimizationLock main @ 347a669)
+  main is still 347a669; gameinfo.gi is byte-identical, so no new convars. Adopted: nothing. Skipped: nothing.
+  Neither config changed. New docs/STABLE-NONDEFAULT-CONVARS.md (utils/nondefaults.py) lists the stable config's 306
+  active convars that differ from Valve's defaults (GameTracking-Deadlock a94d8b4, build 6813), plus 68 lines that
+  are Valve's own stock values.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
