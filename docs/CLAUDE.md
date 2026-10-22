@@ -30,7 +30,7 @@ and `gameinfo.gi` below mean `experimental-config/gameinfo.gi`.
 | `experimental-config/gameinfo.gi` | The tuned config. KeyValues. Since 2026-10-17 a copy of stable (3.5.3) plus the confirmed preferences and the changes in `docs/CHANGES.txt`, so until the owner decides otherwise it still breaks hard rules 1 to 7 (edited engine sections, fps_max 400, duplicate convars, Sqooky's comment layout) and `utils/check.py` reports errors. The owner directs each change; don't fix those on your own. |
 | `docs/TESTED-CHANGES.md` | What the owner tested, kept and rejected before the restart. Read it before proposing a change. |
 | `docs/archive/` | The previous experimental config and its full change log. Never edit. |
-| `stable-config/gameinfo.gi` | Sqooky's current release (3.6.1) with the owner's edits listed in `docs/CONFIGS.md`. Upstream updates are pulled in on request, keeping the owner's edits. **`r_aspectratio` stays `2.11` in every upstream pull (owner, 2026-10-22: back from the FOV mod, since `citadel_camera_hero_fov` can't go past 90), whatever upstream sets.** When the owner uploads a tested file, take it verbatim. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
+| `stable-config/gameinfo.gi` | Sqooky's current release (3.6.1) with the owner's edits listed in `docs/CONFIGS.md`. Upstream updates are pulled in on request, keeping the owner's edits. **`r_aspectratio` stays commented out in every upstream pull (owner, 2026-10-20: an in-game FOV mod controls FOV now), whatever upstream sets.** When the owner uploads a tested file, take it verbatim. The hard rules don't apply; `utils/` doesn't check it. Change it only when asked, and record each edit in `docs/CONFIGS.md`. |
 | `stable-config/v<N>/gameinfo.gi` | Frozen stable versions. **Never edit one.** A new version is a new folder plus a row in `docs/CONFIGS.md`. v1.0 (2026-10-13) is the owner's performance baseline: compare experimental changes against it (`python3 utils/compare.py`). |
 | `scripts/DeadlockConfig-Update.ps1` | The owner's PowerShell install command. Tutorial in `docs/UPDATE-COMMAND.md`. Keep it Windows PowerShell 5.1 compatible and ASCII only. |
 | `docs/CHANGES.txt` | Every change to the experimental config since the 2026-10-15 restart, in dated sections. Append, never rewrite history (`--fix` renumbering is the exception). |
@@ -96,8 +96,8 @@ Check `python3 utils/convars.py lookup <name>` before proposing or making a chan
   particles above about 415 FPS, which with uncapped FPS made fast-moving fire and heal particles jagged. HDR,
   texture layers, the Particles section keys and the other particle lines were ruled out. Don't re-add it from upstream.
 - Confirmed preferences: uncapped FPS (`fps_max 0`, `fps_max_ui 0`), Steam Input off, damage numbers at Valve's
-  defaults (owner removed the 4 s total and no-emphasis lines on 2026-10-17), `r_aspectratio` 2.11 in stable (owner,
-  2026-10-22) and commented out in experimental (FOV mod, 2026-10-20), default health bar width,
+  defaults (owner removed the 4 s total and no-emphasis lines on 2026-10-17), `r_aspectratio` commented out in both
+  configs (owner uses an in-game FOV mod, 2026-10-20), default health bar width,
   `citadel_unit_status_healthbar_highlight_speed` 100 (stable takes Sqooky's 999 since 3.6, owner 2026-10-18).
 - Stable follows Sqooky's 3.6 camera value `citadel_camera_use_vmdl_flatten_vertical true` (owner took all of 3.6,
   2026-10-18); experimental still has 3.5.3's false.

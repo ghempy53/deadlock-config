@@ -341,5 +341,11 @@ STABLE: R_ASPECTRATIO 2.11 AGAIN (2026-10-22)
   Experimental (this config) is unchanged and keeps it commented out.
   Line numbers unchanged.
 
+STABLE: R_ASPECTRATIO COMMENTED OUT AGAIN (2026-10-22)
+  stable-config/gameinfo.gi: r_aspectratio 2.11 -> commented (engine default 0). Reverts the entry above.
+  Why: the owner prefers the in-game FOV mod's slider over a fixed squeeze in the config. Upstream pulls keep it
+  commented out again, whatever upstream sets. Experimental (this config) is unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

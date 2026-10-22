@@ -14,7 +14,7 @@ Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/G
   `stock tail: X` means Valve's own `gameinfo.gi` also sets it, to X.
 - **Line** is the line in `stable-config/gameinfo.gi`; **Group** is the nearest section header above it.
 
-## Changed by this config (307)
+## Changed by this config (306)
 
 | Line | Convar | Stable | Valve default | Group | Flags |
 | ---: | --- | --- | --- | --- | --- |
@@ -28,7 +28,6 @@ Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/G
 | 629 | `r_farz` | `7000` | `-1` | Preferences / Render Distance | cheat |
 | 630 | `r_mapextents` | `7000` | `16384` | Preferences / Render Distance | cheat |
 | 638 | `citadel_boss_glow_disabled` | `1` | `false` | Preferences / 1. Outlines |  |
-| 644 | `r_aspectratio` | `2.11` | `0` | Preferences / 2. Field of View | developmentonly |
 | 649 | `citadel_damage_text_batching_window_ability` | `1000` | (not in dump) | Preferences / 3. HUD | not in dump |
 | 650 | `citadel_distance_mouse_move_for_minimap_drawing` | `1` | (not in dump) | Preferences / 3. HUD | not in dump |
 | 651 | `citadel_hideout_ball_show_juggle_count` | `1` | `0` | Preferences / 3. HUD | developmentonly, server-only |
