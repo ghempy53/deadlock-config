@@ -341,9 +341,15 @@ STABLE: R_ASPECTRATIO 2.11 AGAIN (2026-10-22)
   Experimental (this config) is unchanged and keeps it commented out.
   Line numbers unchanged.
 
+STABLE: R_ASPECTRATIO COMMENTED OUT AGAIN (2026-10-22)
+  stable-config/gameinfo.gi: r_aspectratio 2.11 -> commented (engine default 0). Reverts the entry above.
+  Why: the owner prefers the in-game FOV mod's slider over a fixed squeeze in the config. Upstream pulls keep it
+  commented out again, whatever upstream sets. Experimental (this config) is unchanged.
+  Line numbers unchanged.
+
 DOCUMENTATION AND TOOLING AUDIT (2026-10-22; Valve mirror e95b323b88d48c3fc4d80066ee603fb75060b248, build 6814)
   No audit-driven active or frozen config changes; archived records remain byte-identical.
-  Incorporated merged PR #83: stable keeps r_aspectratio 2.11; experimental stays disabled.
+  Incorporated merged PRs #83 and #84: both configs keep r_aspectratio disabled for the FOV mod.
   Current reference and guidance preserve that newer owner choice. Config bytes match the updated main branch.
   Added a complete sourced reference for both files, including disabled tweaks and engine sections, with pinned
   evidence and durable annotations. Current documentation supersedes unsupported historical claims about duplicate

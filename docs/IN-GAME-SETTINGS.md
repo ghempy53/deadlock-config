@@ -21,10 +21,10 @@ appear correct. Record the actual build and menu labels when verifying a menu-to
 
 ## Camera, HUD and input
 
-- Stable requests **`r_aspectratio 2.11`** again as of October 22 ([PR #83](https://github.com/ghempy53/deadlock-config/pull/83)).
-  The owner reported that `citadel_camera_hero_fov` would not exceed 90 in Sandbox and chose the aspect-ratio
-  adjustment. Disable the FOV mod while using stable, per that decision. Experimental retains the disabled
-  aspect-ratio line and earlier mod context. Neither the precise resulting FOV nor mod stacking was tested by this audit.
+- Both configs keep **`r_aspectratio` disabled**. The owner prefers the FOV mod's slider;
+  [PR #84](https://github.com/ghempy53/deadlock-config/pull/84) restores that choice for stable after the brief
+  PR #83 change. Turn the mod back on after updating from that intermediate stable version. The earlier
+  owner-reported hero-FOV cap of 90 in Sandbox and the mod's resulting FOV were not reproduced by this audit.
 - Stable requests vertical model-camera flattening **true**; experimental requests **false**. Both request
   horizontal flattening **false**. Valve's help describes motion-sickness/camera-axis handling, not lower input latency.
 - Both retain inherited wobble/height/pitch/lag changes. Older “all camera lines at defaults” guidance is superseded.

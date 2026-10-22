@@ -1871,11 +1871,11 @@ Registered area-light rendering switch also present in video presets. The help d
 <a id="setting-convars-r_aspectratio"></a>
 ## `ConVars/r_aspectratio`
 
-Registered camera/rendering aspect override. Stable requests 2.11; experimental retains a disabled example. The inline aspect-to-FOV conversion is not a verified engine formula.
+Registered camera/rendering aspect override. Both configs retain disabled examples for the owner's FOV mod. The inline aspect-to-FOV conversion is not a verified engine formula.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `2.11` (active, [L644](../../../stable-config/gameinfo.gi#L644)) |
+| Stable | `2.11` (disabled, [L644](../../../stable-config/gameinfo.gi#L644)) |
 | Experimental | `2.11` (disabled, [L648](../../../experimental-config/gameinfo.gi#L648)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2.5` (active, [L803](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L803)) |
@@ -1886,15 +1886,15 @@ Registered camera/rendering aspect override. Stable requests 2.11; experimental 
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** PR77 disabled the aspect override in both configs for the owner's FOV mod. PR83 supersedes that choice for stable on October 22: the owner restored 2.11 after reporting a 90-degree hero-FOV cap in Sandbox and chose to turn off the FOV mod for stable. Experimental remains disabled. This history does not establish a universal claim that aspect ratio is the only way to change FOV.
+**Why retained / provenance:** PR77 disabled the aspect override in both configs for the owner's FOV mod. PR83 briefly restored stable 2.11 on October 22 after the owner reported a 90-degree hero-FOV cap in Sandbox. PR84 supersedes PR83: the owner prefers the mod's slider, so both configs again leave the aspect override disabled and future stable upstream pulls preserve that choice. This history does not establish a universal claim that aspect ratio is the only way to change FOV.
 
-**Benefits and trade-offs:** The stable request intends to widen the view by changing its proportions; confirm the resulting image and avoid stacking the owner's stable setup with the FOV mod. The reported Sandbox cap is owner evidence, not an audit reproduction or proof of every camera path. No current per-setting frame-time, memory, or visual measurement is available.
+**Benefits and trade-offs:** The disabled lines make no assignment and do not reset saved settings or the FOV mod. Verify the resulting view with the owner's selected mod and slider. PR83's reported Sandbox cap is historical owner evidence, not an audit reproduction or proof of every camera path. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/77); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/83).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/77); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/83); [evidence 5](https://github.com/ghempy53/deadlock-config/pull/84).
 
 <a id="setting-convars-r_async_compute_fog"></a>
 ## `ConVars/r_async_compute_fog`

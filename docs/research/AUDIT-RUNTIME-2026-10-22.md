@@ -111,9 +111,10 @@ name-based inference or unknown. “No help” is retained explicitly where the 
   The PR calls absent HUD names removed; this audit narrows that to absent from the inspected dump.
 - [PR #77](https://github.com/ghempy53/deadlock-config/pull/77) commented out `r_aspectratio` in both variants for
   the owner's FOV mod. That was an owner preference, not an assertion that all camera values reverted to defaults.
-  [PR #83](https://github.com/ghempy53/deadlock-config/pull/83), merged while this review was being prepared for
-  publication, supersedes it for stable: stable requests 2.11 again and the owner chose to turn off its FOV mod;
-  experimental retains the disabled line. The recorded 90-degree hero-FOV cap in Sandbox is owner-reported
+  [PR #83](https://github.com/ghempy53/deadlock-config/pull/83) briefly restored stable 2.11, but
+  [PR #84](https://github.com/ghempy53/deadlock-config/pull/84), merged while this review was being prepared for
+  publication, supersedes that decision: the owner prefers the mod's slider, and both configs again leave the
+  override disabled. The recorded 90-degree hero-FOV cap in PR #83's Sandbox report remains historical owner
   evidence, not a test performed in this audit or proof that aspect ratio is the only available FOV control.
 - [PR #79](https://github.com/ghempy53/deadlock-config/pull/79) brings stable to 3.6.1 while preserving the owner
   preferences. Frozen versions and archived records remain unchanged by this review.
@@ -153,11 +154,10 @@ The fetched historical config SHA-256 values are `c7a496cd9c4b62de03ae03f4bbfda9
    cold launch, entering a local session, joining an online match and applying video settings. Include conflicting
    `snd_ui_positional` assignments, an archived preference and a replicated variable. A hidden/unqueryable setting
    remains unresolved; console visibility alone is not evidence of nonexistence or application.
-2. **Readability and camera behavior:** use the same hero and record each variant's intended FOV setup: stable
-   requests aspect ratio 2.11 with the FOV mod off; experimental keeps the override disabled for the owner's mod.
-   Inspect ADS vertical motion, ally/trooper/boss visibility, damage direction and numbers, objective bars,
-   Doorman indicators and minimap details. Record current build, renderer, mods and saved settings so a visual
-   result has a reproducible context; isolate the aspect-ratio/mod difference in any subsequent controlled test.
+2. **Readability and camera behavior:** use the same hero and FOV mod/slider setup for both variants, which leave
+   the aspect-ratio override disabled under the owner's latest decision. Inspect ADS vertical motion,
+   ally/trooper/boss visibility, damage direction and numbers, objective bars, Doorman indicators and minimap
+   details. Record current build, renderer, mods and saved settings so a visual result has a reproducible context.
 3. **Audio:** test footsteps, occluded targets, ability cues, positional UI sounds, loading transitions and voice
    stalls. Determine which Steam Audio paths are active before attributing cost to their tuning variables.
 4. **Frame-time claims:** only after identifying an applied setting, change one proposed behavior at a time and

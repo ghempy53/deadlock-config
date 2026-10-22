@@ -516,14 +516,15 @@
     "subsystem": "Camera / input",
     "purpose": "Field-of-view angle when following a hero; currently only a commented example.",
     "rationale": "Intentionally commented documentation/example; it contributes no active assignment. Original per-setting reason for retaining the example is not documented beyond upstream comments.",
-    "tradeoffs": "Commenting the gameinfo assignment does not reset saved per-user values or an FOV mod. Stable requests aspect ratio 2.11 under PR83's instruction to turn off the FOV mod; experimental retains the disabled aspect override for the owner's mod. PR83 records an owner-confirmed 90-degree cap in Sandbox, not an audit reproduction or a universal limit for every camera path. Actual interactions need testing.",
+    "tradeoffs": "Commenting the gameinfo assignment does not reset saved per-user values or an FOV mod. PR84 supersedes PR83's brief stable aspect-ratio request: both configs again leave that override disabled because the owner prefers the FOV mod's slider. PR83's owner-confirmed 90-degree cap in Sandbox remains historical evidence, not an audit reproduction or a universal limit for every camera path. Actual interactions need testing.",
     "applicability": "Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
       "https://github.com/ghempy53/deadlock-config/pull/77",
-      "https://github.com/ghempy53/deadlock-config/pull/83"
+      "https://github.com/ghempy53/deadlock-config/pull/83",
+      "https://github.com/ghempy53/deadlock-config/pull/84"
     ],
     "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
   },

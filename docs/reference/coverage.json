@@ -1,7 +1,7 @@
 {
   "configs_sha256": {
     "experimental": "90715087b2e9528eef4759061c3ea4eb08b7cff417df764453c383899af58d63",
-    "stable": "f1f3d57b903a5e66b9aae86618ba559fd5a68e4636a17d4e922a92ad0aabbae2"
+    "stable": "242a0385d4e08b7f3b07f554673c627950e9b292328d3c2d26702130ab9974d2"
   },
   "counts": {
     "audio": 58,
@@ -20,11 +20,11 @@
     "rendering": 229,
     "simulation": 151,
     "stable": {
-      "active_direct_convars": 432,
-      "active_occurrences": 780,
-      "active_scalar_occurrences": 779,
-      "disabled_direct_convars": 112,
-      "disabled_occurrences": 122,
+      "active_direct_convars": 431,
+      "active_occurrences": 779,
+      "active_scalar_occurrences": 778,
+      "disabled_direct_convars": 113,
+      "disabled_occurrences": 123,
       "empty_sections": 1,
       "sections": 55,
       "unique_paths": 869
@@ -2977,7 +2977,7 @@
       "variant": "stable"
     },
     {
-      "active": true,
+      "active": false,
       "kind": "scalar",
       "line": 644,
       "path": "ConVars/r_aspectratio",

@@ -5876,7 +5876,7 @@
     "type"
   ],
   "dump_total": 4867,
-  "manifest_sha256": "9b9d8e0e768db6fcae8e65a27ac7081b37126d9cf99f3a327eb1e2e43a6ff512",
+  "manifest_sha256": "facfe34dce81b1e814b6225b1b9d4b89478846e9a8e6051327573706cd083e92",
   "steam_inf": "ClientVersion=6814\nServerVersion=6814\nProductName=citadel\nappID=1422450\nServerAppID=1422460\nToolsAppID=211\nSourceRevision=11160503\nVersionDate=Oct 22 2026\nVersionTime=11:09:14\n",
   "stock": [
     {

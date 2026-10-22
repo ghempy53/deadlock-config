@@ -165,13 +165,20 @@
       "number": 83,
       "title": "Stable: r_aspectratio 2.11 again; upstream pulls keep it",
       "url": "https://github.com/ghempy53/deadlock-config/pull/83"
+    },
+    {
+      "merge_commit_sha": "023e00a64b0c722ea19f3edb760a713a05aa03ed",
+      "merged_at_utc": "2026-10-22T19:24:28Z",
+      "number": 84,
+      "title": "Stable: r_aspectratio commented out again (back to the FOV mod's slider)",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/84"
     }
   ],
   "preserved_files_sha256": {
     "docs/archive/CHANGES-2026-10-03-to-10-15.txt": "909bbe90d0782de54ad1f4f8781558c1a4a5db497f3bec64f539e3831d7a1bbd",
     "docs/archive/experimental-3.5.2-fork-gameinfo.gi": "c9f3db121047fdb50f2bb864ec37a577457aff3dbe0005874c540a92300e6243",
     "experimental-config/gameinfo.gi": "90715087b2e9528eef4759061c3ea4eb08b7cff417df764453c383899af58d63",
-    "stable-config/gameinfo.gi": "f1f3d57b903a5e66b9aae86618ba559fd5a68e4636a17d4e922a92ad0aabbae2",
+    "stable-config/gameinfo.gi": "242a0385d4e08b7f3b07f554673c627950e9b292328d3c2d26702130ab9974d2",
     "stable-config/v1.0/gameinfo.gi": "dfad6b3256a72acb1dff71c23d12236a022c719289bd4c486d79cbcba597b4a8",
     "stable-config/v1.1/gameinfo.gi": "82655cf16dc349c6f2a53d06743b55b17c125dae490bc4e1981ed8cdd62a5d64",
     "stable-config/v1.2/gameinfo.gi": "37991b5be7e70f5f88b375ca4a1361594d09601afb0ef6755a58925b840b8e4b",
@@ -180,7 +187,7 @@
   },
   "previous_valve_commit": "a94d8b455203f12b176de75a5598dd8e6e8a94d4",
   "refresh_note": "After merging PR83, repinned to its build6814 capture. Dump, stock gameinfo, video presets and inspected string tables hash-identical to build6813; steam.inf changed.",
-  "repository_commit": "8cf57e5abaa6844bdbb8818deb930758b3d277f5",
+  "repository_commit": "023e00a64b0c722ea19f3edb760a713a05aa03ed",
   "research_date": "2026-10-22",
   "source_revision": "11160503",
   "supplementary_evidence": {

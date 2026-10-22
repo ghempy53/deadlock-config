@@ -17,9 +17,9 @@ maintenance regardless of assistant. The owner's current request overrides workf
 - Preserve `fps_max 0`, `fps_max_ui 0`, Steam Input off, mip bias 2, texture pool 6400, bilinear filtering and disabled
   resolution-cap override. Temporary full-resolution/8x texture experiments were superseded October 17.
 - Keep `r_particle_min_timestep` disabled: the owner reported a successful fire-particle bisect October 17. The
-  audit has not reproduced it or measured CPU cost. Stable keeps `r_aspectratio 2.11` on every upstream pull (October 22, PR #83); experimental keeps it disabled
-  for its earlier FOV-mod context. Disable the FOV mod when using stable, per the owner's latest instruction.
-  The owner reported a 90-degree hero-FOV cap in Sandbox; this audit did not reproduce that test.
+  audit has not reproduced it or measured CPU cost. Both configs keep `r_aspectratio` disabled on every upstream pull
+  (October 22, PR #84 restores the FOV-mod preference after the brief PR #83 change). The owner prefers the mod's
+  slider. The earlier owner-reported 90-degree hero-FOV cap in Sandbox was not reproduced by this audit.
 - The two owner damage-number lifetime/emphasis tweaks were removed October 17. Other inherited damage/HUD lines
   remain; do not say all damage-number settings are default.
 - Stable keeps vertical camera flattening true / health-bar highlight 999; experimental false / 100.

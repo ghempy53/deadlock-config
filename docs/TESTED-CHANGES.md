@@ -16,7 +16,7 @@ Applied to the new experimental config unless noted:
 - Per-hit damage numbers visible (default offsets). The 4 s final total and no big-hit emphasis were removed by the
   owner on 2026-10-17; those two file overrides are absent; this does not reset other damage-number or saved settings.
 - Box debris 0 (`props_break_max_pieces_perframe 0`). Already in v1.2.
-- `r_aspectratio 2.11`. Already in v1.2. Commented out in both configs on 2026-10-20 for an FOV mod; stable re-enabled 2.11 on 2026-10-22 (PR #83), experimental remains disabled.
+- `r_aspectratio 2.11`. Already in v1.2. Commented out in both configs on 2026-10-20 for an FOV mod; stable briefly re-enabled 2.11 on 2026-10-22 (PR #83), then PR #84 restored the disabled line and FOV-mod preference. Both are disabled again.
 - Default health bar width. Already in v1.2.
 - DX11 only, forced by a Steam launch option. Vulkan-specific paths were not tested; the active renderer is DX11.
 

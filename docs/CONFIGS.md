@@ -33,7 +33,7 @@ assignments and upstream values, and records uncertainty rather than treating an
 | `r_texturefilteringquality` | 0, bilinear per console help | Retained upstream filtering; the temporary full-resolution/8x experiment was superseded |
 | `r_texture_stream_max_resolution` | disabled | No cap requested by this line; not proof another layer cannot impose one |
 | `r_particle_min_timestep` | disabled, declared default 0 | Owner-reported bisect in [PR #70](https://github.com/ghempy53/deadlock-config/pull/70), propagated in [PR #71](https://github.com/ghempy53/deadlock-config/pull/71); no measured cost recorded |
-| `r_aspectratio` | stable **2.11**, experimental **disabled** | [PR #83](https://github.com/ghempy53/deadlock-config/pull/83), October 22, supersedes PR #77 for stable; future stable upstream pulls keep 2.11 |
+| `r_aspectratio` | disabled in both | [PR #84](https://github.com/ghempy53/deadlock-config/pull/84), October 22, reverts PR #83; the owner prefers the FOV mod slider and upstream pulls preserve the disabled line |
 | Damage-number lifetime/emphasis overrides | absent | Owner removed them in [PR #74](https://github.com/ghempy53/deadlock-config/pull/74); saved/menu values still matter |
 
 The owner's active renderer is **DX11**, selected by a Steam launch option. Vulkan keys remain inherited;
@@ -43,7 +43,7 @@ was the owner's working diagnosis, not a measurement established by this audit.
 
 ## Actual variant differences
 
-These are all ten differing active ConVar paths in the current files. Their non-ConVar assignments match.
+These are all nine differing active ConVar paths in the current files. Their non-ConVar assignments match.
 “Absent” means no assignment in that file, not a verified runtime default.
 
 | ConVar | Stable | Experimental |
@@ -57,12 +57,11 @@ These are all ten differing active ConVar paths in the current files. Their non-
 | `citadel_unit_status_allies_see_thru_walls_max_distance` | absent | 40 |
 | `citadel_unit_status_dpi` | absent | 10 |
 | `lb_enable_baked_shadows` | disabled | false |
-| `r_aspectratio` | 2.11 | disabled |
 
-The owner re-enabled stable aspect ratio in PR #83 after reporting in Sandbox that the hero FOV control would
-not exceed 90. Preserve 2.11 and the owner's instruction to disable the FOV mod while using stable. Experimental
-retains the disabled aspect-ratio line and its earlier mod context. This is owner-reported evidence, not an audit
-test or proof that aspect ratio is universally the only possible FOV mechanism.
+The owner briefly re-enabled stable aspect ratio in PR #83 after reporting a hero-FOV cap of 90 in Sandbox,
+then reverted it in [PR #84](https://github.com/ghempy53/deadlock-config/pull/84) to use the FOV mod's slider again.
+Both configs now keep the aspect-ratio override disabled, including future upstream pulls. The earlier cap report
+is owner-reported evidence, not an audit test or proof that aspect ratio is universally the only FOV mechanism.
 
 The first six changes came with stable 3.6 ([PR #75](https://github.com/ghempy53/deadlock-config/pull/75)).
 The two health-bar names are absent from the pinned dump, which alone does not prove removal.
