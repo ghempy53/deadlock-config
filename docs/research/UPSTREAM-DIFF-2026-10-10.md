@@ -1,5 +1,8 @@
 # Differences from OptimizationLock (Sqooky's .gi, main @ cf87a3d)
 
+> **Historical evidence, reviewed 2026-10-22.** The body below is preserved as a dated research record, not current installation/tuning guidance. Later owner decisions supersede the ConVars-only/nothing-hidden fork rules and October 6–7 test conclusions. Statements equating dump absence with removal, guaranteeing cheat/development startup acceptance or duplicate precedence, and asserting unmeasured FPS/CPU/GPU benefits are not established by this audit. See [current audit](../research/AUDIT-2026-10-22.md), [setting reference](../SETTING-REFERENCE.md) and [owner decisions](../CONFIGS.md). Historical comparison values and the CSV are not regenerated as current evidence.
+
+
 Generated 2026-10-10. Compares the effective value of every convar in upstream `Sqooky's .gi/gameinfo.gi` (3.5 pre-release)
 with this repo's `gameinfo.gi`, using Valve's dump for build 6774 (GameTracking `2d87734`). A convar that is unset or
 commented out counts as its engine default. 23 convars that upstream sets to the default value, and 51 that differ only

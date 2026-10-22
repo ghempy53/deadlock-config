@@ -1,30 +1,26 @@
-# Deadlock Config for Performance
+# Deadlock configuration
 
-Performance-first `gameinfo.gi` files for Deadlock on Windows 11 (DX11 or Vulkan, no edits to switch). Built for
-a Ryzen 7 9800X3D and RTX 5070 at 1440p, uncapped FPS.
+Personal performance-first `gameinfo.gi` files for Deadlock. The owner uses Windows 11, DX11,
+a Ryzen 7 9800X3D and RTX 5070 at 1440p, with uncapped FPS.
 
-| Config | What it is |
+| Config | Current base |
 | --- | --- |
-| [`stable-config/`](stable-config/gameinfo.gi) (default) | Sqooky's OptimizationLock 3.6.1 with uncapped FPS and sharper textures (v1.4, the last freeze, is 3.6). Frozen versions: [`v1.0`](stable-config/v1.0/gameinfo.gi) (Eskay's config), [`v1.1`](stable-config/v1.1/gameinfo.gi), [`v1.2`](stable-config/v1.2/gameinfo.gi), [`v1.3`](stable-config/v1.3/gameinfo.gi), [`v1.4`](stable-config/v1.4/gameinfo.gi) (current). |
-| [`experimental-config/`](experimental-config/gameinfo.gi) | Restarted 2026-10-15 from stable v1.2; tested changes get re-applied one at a time ([list](docs/TESTED-CHANGES.md)). |
+| [Stable](stable-config/gameinfo.gi) (default) | OptimizationLock 3.6.1 plus owner preferences; last frozen version is v1.4 (3.6) |
+| [Experimental](experimental-config/gameinfo.gi) | Restarted October 17, 2026 from stable 3.5.3; later owner choices and the later engine patch retained |
 
-Differences and caveats: [docs/CONFIGS.md](docs/CONFIGS.md).
-
-## Install
-
-Set up the [`DeadlockConfig-Update`](docs/UPDATE-COMMAND.md) PowerShell command once, then run:
+Set up [DeadlockConfig-Update](docs/UPDATE-COMMAND.md), then run with Deadlock closed:
 
 ```powershell
-DeadlockConfig-Update        # stable
-DeadlockConfig-Update -Ex    # experimental
+DeadlockConfig-Update        # current stable
+DeadlockConfig-Update -Ex    # current experimental
 ```
 
-Run it again after every Deadlock update, since updates can overwrite the file. To install by hand, see
-[docs/INSTALL.md](docs/INSTALL.md).
+After a game patch, follow the [update checklist](docs/AFTER-GAME-UPDATE.md). Manual install and rollback:
+[INSTALL.md](docs/INSTALL.md).
 
-## More
+- [Complete setting reference](docs/SETTING-REFERENCE.md): both configs, disabled tweaks, evidence and unknowns
+- [Config differences and frozen versions](docs/CONFIGS.md)
+- [Audit findings and outstanding in-game checks](docs/research/AUDIT-2026-10-22.md)
+- [Documentation index](docs/README.md)
 
-- [In-game settings](docs/IN-GAME-SETTINGS.md) the experimental config assumes
-- [Windows 11, driver and BIOS settings](docs/WINDOWS11.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md): matchmaking errors, Mod Manager, broken HUD, Vulkan
-- [All documentation](docs/README.md), including the change log, research notes and the after-update checklist
+Written values are not verified runtime values. No FPS gain or current matchmaking compatibility is claimed.

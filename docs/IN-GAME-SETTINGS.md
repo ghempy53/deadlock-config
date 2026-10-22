@@ -1,30 +1,41 @@
-# In-game settings
+# In-game settings and saved values
 
-These are the settings the experimental config assumes (see [CONFIGS.md](CONFIGS.md)).
+Current owner intent: **DX11, uncapped FPS, Reflex On**, 1440p/270 Hz; retain existing scaling preferences.
+These are owner choices, not newly tested recommendations. [CONFIGS.md](CONFIGS.md) records the active files.
 
-- **Video (Settings → Video → Performance, as of 2026-10-05):** Stretch upscaling at 100%, FXAA, SSAO Off, Shadow Low,
-  Fog Low, Texture High, bloom, area lights and depth of field Off, VSync Off, max FPS 1,000.
-  The menu owns these, so the experimental config's matching lines (`r_citadel_shadow_quality "0"`,
-  `r_citadel_ssao_quality "0"`, bloom, depth of field) only mirror them. Change the menu and the line together.
-  Textures: both configs set `r_texture_stream_mip_bias "2"` (same as menu Low; High = 0) with a 6400 MB texture pool
-  and no resolution cap. Both use bilinear
-  filtering (`r_texturefilteringquality "0"`; filtering is not in the menu). The menu writes the same mip-bias
-  convar and may override the file, so set Texture quality to Low to match experimental.
-- **Video preset:** set it in the menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
-- **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
-- **Reduce camera shake:** On. It replaces the old `citadel_melee_shake_*` lines, which were server-side.
-- **Camera FOV:** the owner sets FOV with an in-game FOV mod (since 2026-10-20), so `r_aspectratio` is commented
-  out in both configs. Without the mod, use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). It can
-  be saved per hero, so check Hero-Specific Settings if one hero feels different. The City Never Sleeps camera
-  overrides (`citadel_camera_override_*`, FOV 50–150) only apply to the custom spectator camera, not to your own hero.
-- **Camera feel:** since the 2026-10-14 fork, the camera lines follow 3.5.2 and Eskay's config (wobble off,
-  flatten_horizontal false, camera height, pitch and lag 0, see distance 7000, `default_fov` and `viewmodel_fov` 0).
-  `citadel_camera_use_vmdl_flatten_vertical` and `r_aspectratio` stay at Valve's default. The in-game Camera FOV slider
-  still sets the hero FOV.
-- **Damage numbers:** both configs leave every damage-number convar at Valve's default (since 2026-10-17), so the
-  in-game damage number settings decide the layout. Per-hit numbers stay visible: the game makes no total for a
-  single hit.
-- **Health bars:** the City Never Sleeps bars at Valve's default width (200). The old narrow-bar line
-  (`citadel_unit_status_width "100"`) is kept commented out in group 1c.
+## Video and textures
 
-OS, driver and BIOS settings are in [WINDOWS11.md](WINDOWS11.md).
+Both configs request mip bias **2**, texture pool **6400 MB**, bilinear filtering **0**, and leave the maximum
+texture-resolution override disabled. The earlier “Texture High / full-resolution / 8x” trial was superseded
+on October 17. The pinned Valve preset files request mip biases **2, 1, 0, 0** for preset indices **0–3**;
+this supports matching the Low preset's bias, not an unconditional assertion about the current menu label or
+load order. See the [rendering audit and pinned preset sources](research/AUDIT-RENDERING-2026-10-22.md).
+
+The October 5 menu checklist (Stretch 100%, FXAA, SSAO off, shadows/fog low, effects off) is historical owner
+context. Keep current owner choices; do not set a menu FPS limit to 1,000 as a substitute for the uncapped rule.
+A `gameinfo.gi` request is not proof that the saved `video.txt` or a later menu action cannot replace it.
+
+Use the [installation guide](INSTALL.md) to locate saved video settings. Record values before startup, after
+startup, after changing the menu and after restart. Do not delete saved settings to make the documentation
+appear correct. Record the actual build and menu labels when verifying a menu-to-ConVar mapping.
+
+## Camera, HUD and input
+
+- Both configs keep **`r_aspectratio` disabled**. The owner prefers the FOV mod's slider;
+  [PR #84](https://github.com/ghempy53/deadlock-config/pull/84) restores that choice for stable after the brief
+  PR #83 change. Turn the mod back on after updating from that intermediate stable version. The earlier
+  owner-reported hero-FOV cap of 90 in Sandbox and the mod's resulting FOV were not reproduced by this audit.
+- Stable requests vertical model-camera flattening **true**; experimental requests **false**. Both request
+  horizontal flattening **false**. Valve's help describes motion-sickness/camera-axis handling, not lower input latency.
+- Both retain inherited wobble/height/pitch/lag changes. Older “all camera lines at defaults” guidance is superseded.
+- Damage-number lifetime/emphasis overrides were removed October 17. The menu and saved values can still differ
+  from registered defaults; absence from gameinfo does not reset them. The inherited active
+  `citadel_damage_text_batching_window_ability 1000` remains; its effect is unresolved because it is absent from the pinned dump.
+- The old narrow health-bar-width override is absent, not a commented entry in a current “group 1c.”
+  Stable highlight speed is **999**, experimental **100**; this is not proof of mathematically zero interpolation.
+- Steam Input is requested off on both occurrences. Camera-shake reduction was an owner menu preference;
+  current menu state was not inspected in this audit.
+
+[Every HUD/camera/input entry](reference/generated/interface.md) includes defaults, flags and test status.
+Do not use old October 6–7 camera/input symptoms as validated regressions: the owner retired those results
+because of PC problems ([test history](TESTED-CHANGES.md)).

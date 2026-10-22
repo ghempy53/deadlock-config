@@ -6,7 +6,8 @@
     python utils/stock_diff.py --stock FILE    against a local stock copy (e.g. a backup from your install)
 
 The comparison is semantic (KeyValues entries in order), so quoting, tabs and comments do not count.
-  error  a guarded section (matchmaking PGI check) differs from stock, or a top-level key such as PGIVersion differs
+  error  a historically guarded section differs from stock, or a top-level key such as PGIVersion differs
+         (a compatibility warning, not proof of a current matchmaking rejection)
   warn   another non-ConVars section differs (FileSystem is expected to: mod SearchPaths)
   warn   a stock ConVars entry is missing here or has a different value (fps_max / fps_max_ui are deliberate)
   warn   a stock-tail entry here is no longer in Valve's stock file
@@ -30,14 +31,24 @@ def fmt(entries: list[tuple[tuple[str, ...], str, int]]) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    gi.add_config_argument(ap)
     ap.add_argument("--ref", default="master", help="GameTracking-Deadlock commit or branch (default master)")
     ap.add_argument("--stock", help="local stock gameinfo.gi instead of downloading")
     ap.add_argument("--refresh", action="store_true", help="re-download even if cached")
     args = ap.parse_args()
 
-    ours_text = gi.GI.read_text(encoding="utf-8")
+    stock_text = gi.valve_gameinfo(args.ref, args.refresh, args.stock)
+    results = []
+    for path in gi.config_paths(args.config):
+        print(f"Config: {path.relative_to(gi.REPO)}")
+        results.append(compare(path, stock_text))
+    return max(results, default=0)
+
+
+def compare(path, stock_text: str) -> int:
+    ours_text = path.read_text(encoding="utf-8")
     ours = gi.gameinfo_root(ours_text)
-    stock = gi.gameinfo_root(gi.valve_gameinfo(args.ref, args.refresh, args.stock))
+    stock = gi.gameinfo_root(stock_text)
     errors = warns = 0
 
     # Top-level scalars (game, title, PGIVersion, ...)
@@ -75,9 +86,9 @@ def main() -> int:
             if not d.startswith(("---", "+++", "@@")):
                 print(f"         {d}")
 
-    # ConVars: every stock entry should be present with Valve's value
+    # Compare declared assignments, including nested constraints; no runtime precedence is inferred.
     lines = ours_text.splitlines()
-    tail_start = next((s.line for s in gi.settings(lines) if s.region == "tail"), 10**9)
+    tail_start = gi.stock_tail_line(o_sec["ConVars"], len(lines) + 1) if "ConVars" in o_sec else len(lines) + 1
     o_cv = gi.flatten(o_sec["ConVars"]) if "ConVars" in o_sec else []
     s_cv = gi.flatten(s_sec["ConVars"]) if "ConVars" in s_sec else []
     have: dict[tuple[str, ...], list[tuple[str, int]]] = {}
@@ -91,7 +102,7 @@ def main() -> int:
         if p not in have:
             print(f"warn   ConVars {key}: stock sets {v!r}, missing here")
             warns += 1
-        elif not any(gi.normalize(x) == gi.normalize(v) for x, _ in have[p]):
+        elif any(gi.normalize(x) != gi.normalize(v) for x, _ in have[p]):
             got = ", ".join(f"{x!r} (line {ln})" for x, ln in have[p])
             print(f"warn   ConVars {key}: stock {v!r}, ours {got}")
             warns += 1

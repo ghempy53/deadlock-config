@@ -347,5 +347,21 @@ STABLE: R_ASPECTRATIO COMMENTED OUT AGAIN (2026-10-22)
   commented out again, whatever upstream sets. Experimental (this config) is unchanged.
   Line numbers unchanged.
 
+DOCUMENTATION AND TOOLING AUDIT (2026-10-22; Valve mirror e95b323b88d48c3fc4d80066ee603fb75060b248, build 6814)
+  No audit-driven active or frozen config changes; archived records remain byte-identical.
+  Incorporated merged PRs #83 and #84: both configs keep r_aspectratio disabled for the FOV mod.
+  Current reference and guidance preserve that newer owner choice. Config bytes match the updated main branch.
+  Added a complete sourced reference for both files, including disabled tweaks and engine sections, with pinned
+  evidence and durable annotations. Current documentation supersedes unsupported historical claims about duplicate
+  precedence, cheat/development startup acceptance, missing-dump removal, menu order and unmeasured performance.
+  The October 15 restart was superseded by the October 17 3.5.3 restart. The experimental engine update was authored
+  October 21 and merged October 22 (PR #80); Valve's underlying engine-file patch was October 20.
+  Damage-number lifetime/emphasis overrides were removed, but an inherited batching entry remains. The October
+  6-7 results remain retired; the October 17 particle bisect is owner-reported, not reproduced by this audit.
+  Corrected utility coverage of both configs, nested metadata, the actual stock-tail boundary and duplicates.
+  Hardened installer copy/hash failure handling; Windows PowerShell execution is still untested.
+  Current findings, exact coverage and unresolved in-game checks: docs/research/AUDIT-2026-10-22.md.
+  Line numbers unchanged. No in-game tests or measured FPS gains claimed.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

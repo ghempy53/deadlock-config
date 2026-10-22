@@ -2,9 +2,11 @@
 
 Compiled 2026-10-15 from the change log of the previous experimental config
 ([archive/CHANGES-2026-10-03-to-10-15.txt](archive/CHANGES-2026-10-03-to-10-15.txt)), the merged pull requests and the
-stable versions. It is the input for the new experimental config, which starts as a copy of stable v1.2.
+stable versions. This is historical evidence from the October 15 v1.2 restart. The current experimental base was replaced again on October 17 with stable 3.5.3; see [CONFIGS.md](CONFIGS.md).
 
-The last column gives the value in stable v1.2, the new base. "Unset" means the engine default applies.
+The last column records frozen stable v1.2, not the current files. “Unset” means no file assignment; saved/menu/server values can still apply. Current corrections below supersede historical interpretations, without changing the underlying reports.
+
+**Current evidence limits (2026-10-22):** October 6–7 results below were invalidated by the owner, including the rows labelled “kept”; they are not measured performance evidence. The October 17 particle bisect is owner-reported, not reproduced here. No FPS, latency or memory measurements accompany these decisions. The two lifetime/emphasis overrides were removed, but inherited `citadel_damage_text_batching_window_ability 1000` remains active and absent from the current dump. No blanket “all damage numbers default” conclusion is supported.
 
 ## 0. Confirmed by the owner (2026-10-15)
 
@@ -12,11 +14,11 @@ Applied to the new experimental config unless noted:
 - Uncapped FPS: `fps_max 0`, `fps_max_ui 0`.
 - Steam Input off.
 - Per-hit damage numbers visible (default offsets). The 4 s final total and no big-hit emphasis were removed by the
-  owner on 2026-10-17; damage numbers are at Valve's defaults.
+  owner on 2026-10-17; those two file overrides are absent; this does not reset other damage-number or saved settings.
 - Box debris 0 (`props_break_max_pieces_perframe 0`). Already in v1.2.
-- `r_aspectratio 2.11`. Already in v1.2. Commented out in both configs on 2026-10-20 (owner uses an FOV mod).
+- `r_aspectratio 2.11`. Already in v1.2. Commented out in both configs on 2026-10-20 for an FOV mod; stable briefly re-enabled 2.11 on 2026-10-22 (PR #83), then PR #84 restored the disabled line and FOV-mod preference. Both are disabled again.
 - Default health bar width. Already in v1.2.
-- DX11 only, forced by a Steam launch option. Vulkan-only lines are inert.
+- DX11 only, forced by a Steam launch option. Vulkan-specific paths were not tested; the active renderer is DX11.
 
 Section 4 is settled: the owner accepts every item there as v1.2 has it. The 2026-10-06 and 10-07 results in sections
 1 and 3 were distorted by problems with the owner's PC, so they are history, not evidence (owner, 2026-10-15).
@@ -27,7 +29,7 @@ Section 4 is settled: the owner accepts every item there as v1.2 has it. The 202
   heal particles jagged at uncapped FPS. Ruled out along the way: HDR on/off, `r_particle_max_texture_layers` (no cap
   looked worse), the six extra Particles section keys, and the other 8 simulation and timing lines.
 
-## 1. Tested in game and kept
+## 1. Historical owner reports: adopted at the time
 
 | Change | Value | Evidence | In v1.2 |
 | --- | --- | --- | --- |
@@ -40,7 +42,7 @@ Section 4 is settled: the owner accepts every item there as v1.2 has it. The 202
 | Performance first, round 1 | Light shadow casting off, dynamic and stationary lights off, hair off, splashes off, character decals 256, physics particle spawns off, UI blur off, fixed particle seeds, distant particles at lower resolution | "The performance-first round helped" (2026-10-07). Valve blocked the light toggles on 2026-10-09. | shadow casting off, hair, splashes, spawns and blur off, fixed seeds; lights can't be set |
 | Health bar width at default (200) | `citadel_unit_status_width` unset | The 100 setting made the HUD feel small at 1440p. | unset |
 
-## 2. Your requests that stayed, with no in-game result recorded
+## 2. Historical requests, including later superseded choices
 
 | Change | Value | Notes | In v1.2 |
 | --- | --- | --- | --- |
@@ -57,7 +59,7 @@ Section 4 is settled: the owner accepts every item there as v1.2 has it. The 202
 | DX11 and Vulkan with no edits | renderer-neutral lines only | Standing requirement. | n/a |
 | Never DLSS or upscalers | none | Standing rule. | n/a |
 
-## 3. Tested in game and rejected
+## 3. Historical rejections (October 6–7 results later invalidated)
 
 | Change | What happened | In v1.2 |
 | --- | --- | --- |
@@ -74,8 +76,7 @@ Section 4 is settled: the owner accepts every item there as v1.2 has it. The 202
 
 ## 4. Where v1.2 already disagrees with earlier results
 
-You tested v1.2 and called it truth, so the items in bold above may be outdated. Decide which earlier results still
-hold before anything is re-applied:
+The October 15 owner decision settled these conflicts in favor of v1.2, with uncapped FPS and later texture/FOV exceptions recorded in [CONFIGS.md](CONFIGS.md). The comparison below is historical; it is not an instruction to reopen the retired results:
 - **FPS cap:** v1.2 sets `fps_max 400` and `fps_max_ui 120`, which conflicts with your uncapped rule.
 - **Camera:** v1.2 has flatten_horizontal false, wobble off and IK off, all of which felt wrong in October 6-7 testing.
 - **Turn-stutter lines:** v1.2 has all four lines from that revert active.

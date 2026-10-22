@@ -1,53 +1,55 @@
-# Windows 11 tuning for Deadlock
+# Windows 11, driver and BIOS guidance
 
-This is general OS and driver guidance for the target setup: **Ryzen 7 9800X3D (SMT off, 8 threads), RTX 5070 12 GB,
-32 GB DDR5-6000 EXPO, 2560x1440 @ 270 Hz, DX11 or Vulkan (same config, no edits to switch)**.
-It does not depend on any Deadlock patch. The game-side settings are in the configs and [IN-GAME-SETTINGS.md](IN-GAME-SETTINGS.md).
-Change one thing at a time, and compare frametimes before and after (for example with CapFrameX or PresentMon)
-over the same in-game scenario. Sandbox works well for this.
+Reviewed **2026-10-22**. The owner's recorded setup is a Ryzen 7 9800X3D with SMT off, RTX 5070 12 GB,
+32 GB DDR5-6000 EXPO, 2560×1440 at 270 Hz, **DX11, Reflex On and uncapped FPS**. These are owner preferences and
+reported configuration, not measurements collected by this audit. Keep them fixed when testing the game files.
 
-## CPU / platform (9800X3D)
+## Platform and stability
 
-- **Chipset driver:** install AMD's current chipset driver. The 9800X3D has a single CCD with all 8 cores on
-  the V-Cache die, so the dual-CCD core-parking / Game Bar "is this a game" dependency of the 7950X3D/9950X3D
-  **does not apply**. No Process Lasso or affinity tricks are needed.
-- **BIOS:** EXPO is on and SMT is off (Turbo Game Mode). Keep the BIOS current: AGESA updates affect 9800X3D memory
-  stability, and an out-of-date BIOS is a common fix on the Deadlock forums for crashes with no error.
-- **If Deadlock crashes with exception 0xc0000005 (Event Viewer):** forum reports most often trace it to memory
-  instability that Source 2 exposes and stress tests miss. Test at 5800 MT/s (one step below EXPO 6000) or with EXPO
-  off for a few sessions. Details in [research/FORUM-RESEARCH-2026-10-06.md](research/FORUM-RESEARCH-2026-10-06.md).
-- **Power plan:** *Balanced* is fine with a current chipset driver. *High performance* mostly adds idle power.
+- Record Windows, NVIDIA driver, AMD chipset driver and motherboard BIOS versions. Use the hardware vendors'
+  supported releases and motherboard instructions when an update addresses a relevant issue. This document does
+  not prescribe a BIOS flash or clean driver install for every game patch.
+- Preserve the owner's SMT and EXPO choices. Neither SMT-off nor a motherboard's bundled *Turbo Game Mode* is a
+  demonstrated Deadlock optimization in this repository. Do not add affinity/core-parking tweaks without a
+  reproducible problem and measurements.
+- An access violation (`0xc0000005`) does not identify a memory fault on its own. If stability is in question, record
+  crash details, reproduce without mods, and test documented BIOS defaults before drawing conclusions about RAM.
+  AMD lists DDR5-5600 for the 9800X3D's supported two-DIMM configurations; DDR5-6000 EXPO is not proof of stability
+  on every system. The earlier 5800 MT/s prescription and claim that crashes are usually EXPO-related were based on
+  anecdotes, not a diagnosis. [AMD processor specifications](https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html)
+- Keep the existing power plan during comparisons. No repository benchmark establishes a Deadlock benefit from
+  changing Balanced to High performance.
 
-## NVIDIA
+## NVIDIA settings
 
-- Use a current Game Ready driver. Do a clean install if you're coming from an old driver.
-- **Sync:** G-SYNC and V-Sync off (deliberate choice), Reflex On in game.
-- **FPS cap:** this config uncaps fps (`fps_max 0`, `fps_max_ui 0`); the in-game Max FPS setting (1,000) overrides it.
-  Add a cap there only if frametimes are uneven.
-- **Shader Cache Size:** 10 GB or Unlimited. Big updates such as City Never Sleeps invalidate shaders, so expect
-  stutter for the first few matches after a patch while the cache rebuilds.
-- Leave Low Latency Mode in the Control Panel at its default. Reflex in game supersedes it.
-- **Vulkan/OpenGL present method** (Manage 3D Settings, driver 526.61 or newer): only matters with `-vulkan`. Leave it
-  on *Auto*. *Prefer layered on DXGI swapchain* routes Vulkan through the DXGI flip model in borderless windows, which
-  usually helps latency and VRR. It has also caused stutter and freezes in CS2 under Vulkan, where *Prefer native* was
-  the fix. If Vulkan stutters in Deadlock, try *Prefer native* first, then *Prefer layered*, one at a time.
+- Keep the owner's G-SYNC/V-Sync choices, Reflex On and uncapped FPS. Do not recommend a cap or an upscaler change
+  as a substitute for the requested config investigation. Verify the running FPS limit separately from what is
+  written in `gameinfo.gi`; menu precedence is an unresolved runtime question.
+- Leave driver Low Latency Mode at its existing/default value when using Reflex. NVIDIA documents Reflex taking
+  precedence over Ultra Low Latency mode; this explains why forcing both is not a separate proven improvement.
+  [NVIDIA latency guidance](https://www.nvidia.com/en-gb/geforce/guides/system-latency-optimization-guide/)
+- Shader Cache Size limits disk space used for cached shader compilations. A larger limit can retain more compiled
+  shaders at a disk-space cost; **10 GB or Unlimited is not a measured requirement for Deadlock**. Preserve the
+  chosen size and note cache resets or driver changes when testing stutter.
+  [NVIDIA Control Panel reference](https://www.nvidia.com/content/Control-Panel-Help/vLatest/en-gb/mergedProjects/nv3dENG/Manage_3D_Settings_%28reference%29.htm)
+- Vulkan/OpenGL presentation overrides are outside the owner's DX11 baseline. CS2 reports are not Deadlock evidence;
+  this audit makes no recommendation to switch presentation method or renderer.
 
-## Windows 11
+## Windows features
 
-- **Game Mode:** On (the default).
-- **Hardware-accelerated GPU scheduling:** On (Settings → Display → Graphics → Advanced graphics settings).
-- **Optimizations for windowed games:** On (same page). Borderless DX11 then uses the flip model, so
-  latency is close to exclusive fullscreen. This setting only applies to DX10/DX11; for Vulkan, the NVIDIA present
-  method above plays the same role.
-- **Xbox Game Bar captures / background recording:** Off, unless you use them.
-- **Overlays:** disable the ones you don't use (Discord, GeForce/NVIDIA App overlay, third-party monitors).
-  Keep only one fps/frametime overlay.
-- **Background apps:** close browser tabs with video, RGB/peripheral suites you don't need, and launchers at startup.
+- Microsoft's *Optimizations for windowed games* applies to compatible DX10/DX11 games in windowed/borderless modes
+  and can move eligible presentation paths from the older blt model to flip model. Its effect on this Deadlock
+  setup was not measured; it is not evidence that borderless and exclusive fullscreen have identical latency.
+  [Microsoft feature documentation](https://support.microsoft.com/en-us/windows/hardware/display-graphics/optimizations-for-windowed-games-in-windows-11)
+- Game Mode, hardware-accelerated GPU scheduling, captures and overlays should be recorded with the test setup.
+  This repository has no controlled result establishing the best HAGS state. Disable an unwanted capture or overlay
+  when isolating its effect, then compare the same scene; do not claim an FPS gain from toggling a list of features.
+- Memory Integrity protects kernel code integrity using virtualization-based security. Keep it enabled if already
+  enabled; the old claim that disabling it gives a small or marginal gain on this CPU was unmeasured. No blanket
+  security reduction is part of this config's setup.
+  [Microsoft security documentation](https://learn.microsoft.com/en-us/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
+- Registry/debloat scripts, timer tools and MSI-mode utilities have no supported Deadlock benefit documented here.
 
-## Optional / trade-offs (not recommended by default)
-
-- **Disabling Core Isolation / Memory Integrity (VBS/HVCI):** it can give a small CPU-bound gain on some systems,
-  but it lowers kernel security. On a 9800X3D the gain is usually marginal. If you try it, measure, and turn it
-  back on if there's no clear win.
-- **"Debloat" / registry tweak scripts, timer-resolution tools, MSI-mode utilities:** unproven for this game and
-  hard to undo. Not used here.
+For an actual comparison, change one variable, use the same route and workload, warm up consistently, and record
+frametimes plus image/readability differences over repeated runs. Sandbox is useful for repeatability but cannot
+establish behavior or performance in an online team fight. See [AFTER-GAME-UPDATE.md](AFTER-GAME-UPDATE.md).

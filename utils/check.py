@@ -8,10 +8,10 @@
 Errors (exit 1):
   - gameinfo.gi does not parse as KeyValues (unbalanced braces, unterminated quote, key without value)
   - a line has an odd number of double quotes (Deadlock Mod Manager's parser breaks on these)
-  - a convar is set (active) more than once in ConVars, apart from Valve's own duplicates
   - a guarded engine section key appears in the ConVars tweak block (sanity: tuning belongs in ConVars only)
   - a `line N  <name>` entry in docs/CHANGES.txt does not point at a line of gameinfo.gi that mentions <name>
 Warnings:
+  - duplicate direct ConVars assignments (runtime precedence unverified; --strict-duplicates makes these errors)
   - a double quote inside comment text in ConVars (other than a commented-out setting's own value)
   - an active tweak line has no [def: X] tag
 """
@@ -70,7 +70,7 @@ def check_structure(text: str, lines: list[str], errors: list[str], warnings: li
                 warnings.append(f"gameinfo.gi:{i}: double quote inside a comment: {line.strip()}")
 
 
-def check_settings(lines: list[str], errors: list[str], warnings: list[str]) -> None:
+def check_settings(lines: list[str], errors: list[str], warnings: list[str], strict_duplicates: bool = False) -> None:
     try:
         all_settings = gi.settings(lines)
         root = gi.gameinfo_root("\n".join(lines))
@@ -85,7 +85,8 @@ def check_settings(lines: list[str], errors: list[str], warnings: list[str]) -> 
             seen[c.key].append(c.line)
     for name, where in seen.items():
         if len(where) > 1 and name not in VALVE_DUPLICATES:
-            errors.append(f"gameinfo.gi: {name} is set {len(where)} times (lines {', '.join(map(str, where))})")
+            (errors if strict_duplicates else warnings).append(
+                f"gameinfo.gi: {name} is set {len(where)} times (lines {', '.join(map(str, where))}); runtime precedence unverified")
 
     for s in all_settings:
         if s.region == "tweak" and s.active and s.def_tag is None:
@@ -169,14 +170,18 @@ def check_changes(lines: list[str], errors: list[str], fix: bool) -> int:
     return rewritten
 
 
-def run(fix: bool, include_changes: bool = True, include_warnings: bool = True) -> tuple[list[str], list[str], int]:
-    text = gi.GI.read_text(encoding="utf-8")
+def run(fix: bool, include_changes: bool = True, include_warnings: bool = True,
+        path=gi.GI, strict_duplicates: bool = False) -> tuple[list[str], list[str], int]:
+    text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
     errors: list[str] = []
     warnings: list[str] = []
     check_structure(text, lines, errors, warnings)
-    check_settings(lines, errors, warnings)
-    rewritten = check_changes(lines, errors, fix) if include_changes else 0
+    check_settings(lines, errors, warnings, strict_duplicates)
+    rewritten = check_changes(lines, errors, fix) if include_changes and path == gi.GI else 0
+    label = str(path.relative_to(gi.REPO))
+    errors = [e.replace("gameinfo.gi", label) for e in errors]
+    warnings = [w.replace("gameinfo.gi", label) for w in warnings]
     return errors, (warnings if include_warnings else []), rewritten
 
 
@@ -189,20 +194,21 @@ def hook(mode: str) -> int:
 
     if mode == "post":
         path = str((payload.get("tool_input") or {}).get("file_path", ""))
-        if not path.replace("\\", "/").endswith(("experimental-config/gameinfo.gi", "docs/CHANGES.txt")):
+        if not path.replace("\\", "/").endswith(("experimental-config/gameinfo.gi", "stable-config/gameinfo.gi", "docs/CHANGES.txt")):
             return 0
         # Mid-edit, docs/CHANGES.txt line numbers are expected to lag; only structural breakage blocks here.
-        errors, _, _ = run(fix=False, include_changes=False, include_warnings=False)
+        errors = [e for config in gi.config_paths("both")
+                  for e in run(False, include_changes=False, include_warnings=False, path=config)[0]]
     else:  # stop
         if payload.get("stop_hook_active"):
             return 0  # already blocked once this turn; do not loop
         dirty = subprocess.run(
-            ["git", "-C", str(gi.REPO), "status", "--porcelain", "--", "experimental-config/gameinfo.gi", "docs/CHANGES.txt"],
+            ["git", "-C", str(gi.REPO), "status", "--porcelain", "--", "experimental-config/gameinfo.gi", "stable-config/gameinfo.gi", "docs/CHANGES.txt"],
             capture_output=True, text=True,
         ).stdout.strip()
         if not dirty:
             return 0
-        errors, _, _ = run(fix=False)
+        errors = [e for config in gi.config_paths("both") for e in run(False, path=config)[0]]
     if not errors:
         return 0
     print("utils/check.py found problems (run `python utils/check.py`, `--fix` renumbers docs/CHANGES.txt):", file=sys.stderr)
@@ -213,6 +219,8 @@ def hook(mode: str) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    gi.add_config_argument(ap)
+    ap.add_argument("--strict-duplicates", action="store_true", help="treat duplicate ConVar assignments as errors")
     ap.add_argument("--fix", action="store_true", help="rewrite stale line numbers in docs/CHANGES.txt")
     ap.add_argument("--hook", choices=("post", "stop"), help="Claude Code hook mode")
     ap.add_argument("-q", "--quiet", action="store_true", help="hide warnings")
@@ -220,7 +228,14 @@ def main() -> int:
     if args.hook:
         return hook(args.hook)
 
-    errors, warnings, rewritten = run(args.fix)
+    if args.fix and args.config == "stable":
+        ap.error("--fix only renumbers experimental references; use --config experimental or both")
+    errors, warnings, rewritten = [], [], 0
+    for path in gi.config_paths(args.config):
+        err, warn, count = run(args.fix, path=path, strict_duplicates=args.strict_duplicates)
+        errors.extend(err)
+        warnings.extend(warn)
+        rewritten += count
     if rewritten:
         print(f"fixed {rewritten} line reference(s) in docs/CHANGES.txt")
     if not args.quiet:

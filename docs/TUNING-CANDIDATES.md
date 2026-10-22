@@ -1,5 +1,8 @@
 # Tuning candidates and non-candidates (2026-10-06)
 
+> **Historical evidence, reviewed 2026-10-22.** The body below is preserved as a dated research record, not current installation/tuning guidance. Later owner decisions supersede the ConVars-only/nothing-hidden fork rules and October 6–7 test conclusions. Statements equating dump absence with removal, guaranteeing cheat/development startup acceptance or duplicate precedence, and asserting unmeasured FPS/CPU/GPU benefits are not established by this audit. See [current audit](research/AUDIT-2026-10-22.md), [setting reference](SETTING-REFERENCE.md) and [owner decisions](CONFIGS.md). Historical comparison values and the CSV are not regenerated as current evidence.
+
+
 > **2026-10-14: the experimental config was forked from OptimizationLock 3.5.2** (see the FORK section in
 > [CHANGES.txt](CHANGES.txt)). Many lines below that were candidates, reverted, or listed as not candidates are now
 > active because 3.5.2 sets them (and, for the ones that break a rule, Eskay's config too), among them
@@ -8,6 +11,8 @@
 > `csm_max_num_cascades_override 2`, mip bias 3, bilinear filtering, IK and foot lock off, `r_late_particle_job_sync`, `r_strip_invisible_during_sceneobject_update`,
 > `r_size_cull_threshold`, `sc_screen_size_lod_scale_override`, `cl_ragdoll_limit 0`, `r_rendersun 0` and
 > `r_drawropes`. Read this page as history for those; the rest still applies.
+
+> The historical claim below that aspect ratio is the only FOV lever is not established by this audit. PR #83 records the owner's earlier Sandbox cap report; PR #84 supersedes its fixed-aspect preference and restores the FOV mod, with the aspect-ratio override disabled in both configs.
 
 What the research in [research/RESEARCH-2026-10-06.md](research/RESEARCH-2026-10-06.md) and the comparison in
 [research/CONFIG-COMPARISON.md](research/CONFIG-COMPARISON.md) leave on the table for this repo's goal (performance first; see

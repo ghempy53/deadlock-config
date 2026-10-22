@@ -13,14 +13,15 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 GI = REPO / "experimental-config" / "gameinfo.gi"
+ACTIVE_CONFIGS = {"stable": REPO / "stable-config" / "gameinfo.gi", "experimental": GI}
 CHANGES = REPO / "docs" / "CHANGES.txt"
 CONFIGS_DOC = REPO / "docs" / "CONFIGS.md"
 CACHE = Path(__file__).resolve().parent / ".cache"
 
-# Sections the client's matchmaking guard (Citadel_StartMatchmaking_UnverifiedPGI) names. Keep them Valve stock.
+# Sections named by the historical matchmaking warning; drift is diagnostic, not a current runtime test.
 GUARDED = ("Engine2", "MaterialSystem2", "NetworkSystem", "Particles", "RenderSystem", "SceneSystem", "WorldRenderer")
 
-# Marker that ends the personal tweak block inside ConVars. Everything after it is documentation, then Valve's stock tail.
+# Upstream banner: current files contain documentation AND more custom assignments before the actual stock tail.
 END_OF_CONFIG = "END OF CONFIG"
 SV_DOC_MARKER = "SV commands we cannot change"
 
@@ -134,7 +135,7 @@ def flatten(node: KV, prefix: tuple[str, ...] = ()) -> list[tuple[tuple[str, ...
 # Line-level view of the ConVars block (sees commented-out settings too)
 # --------------------------------------------------------------------------------------------------------------------
 
-SETTING_RE = re.compile(r'^(?P<indent>\s*)(?P<off>//\s*)?(?P<name>[A-Za-z_][\w.]*)\s+"(?P<value>[^"]*)"(?P<rest>.*)$')
+SETTING_RE = re.compile(r'^(?P<indent>\s*)(?P<off>//\s*)?(?P<name>[A-Za-z_][\w.]*)\s+(?:"(?P<value>[^"]*)"|(?P<bare>[-+]?\d+(?:\.\d+)?|true|false)(?=\s|$))(?P<rest>.*)$')
 DEF_RE = re.compile(r"\[def:\s*(?P<def>[^\]]*)\]")
 
 
@@ -154,35 +155,96 @@ class Setting:
 
 
 def convars_bounds(lines: list[str]) -> tuple[int, int]:
-    """0-based (start, end) indices of the ConVars { ... } block, braces inclusive."""
-    start = next(i for i, l in enumerate(lines) if l.strip() == "ConVars")
-    depth = 0
-    for i in range(start, len(lines)):
-        code = lines[i].split("//", 1)[0]
-        depth += code.count("{") - code.count("}")
-        if depth == 0 and "}" in code:
-            return start, i
+    """0-based key and closing-brace lines of GameInfo/ConVars (quoted keys accepted)."""
+    text = "\n".join(lines)
+    section = gameinfo_root(text).section("ConVars")
+    if section is None:
+        raise ValueError("no ConVars section")
+    tokens = iter(tokenize(text))
+    for token, line, quoted in tokens:
+        if line == section.line and token == "ConVars":
+            break
+    for token, line, quoted in tokens:
+        if token == "{" and not quoted:
+            break
+    depth = 1
+    for token, line, quoted in tokens:
+        if not quoted:
+            depth += (token == "{") - (token == "}")
+        if depth == 0:
+            return section.line - 1, line - 1
     raise ValueError("ConVars block is not closed")
 
 
+def stock_tail_line(section: KV, fallback: int) -> int:
+    """Inherited stock-tail marker used by this repository, including its nested rate metadata."""
+    return next((c.line for c in section.children if c.key == "rate" and c.value is None
+                 and {x.key for x in c.children} >= {"min", "default", "max"}), fallback)
+
+
 def settings(lines: list[str]) -> list[Setting]:
-    """Every active or commented-out `name "value"` line in the ConVars block."""
+    """Direct ConVars assignments, including disabled quoted, numeric and boolean lines, in file order.
+
+    Nested rate bounds and version/default blocks are metadata, not ConVar names.
+    Duplicate assignments remain separate; this parser makes no precedence claim.
+    The stock-tail boundary is the inherited rate range block, not END OF CONFIG:
+    current files contain another custom block between that comment and the tail.
+    """
+    text = "\n".join(lines)
+    section = gameinfo_root(text).section("ConVars")
+    if section is None:
+        raise ValueError("no ConVars section")
     start, end = convars_bounds(lines)
-    region = "tweak"
-    out = []
+    direct: dict[int, list[KV]] = {}
+    for child in section.children:
+        if child.value is not None:
+            direct.setdefault(child.line, []).append(child)
+    tail = stock_tail_line(section, len(lines) + 1)
+    # Depth at the start of each line; quoted braces and comments never change it.
+    changes: dict[int, int] = {}
+    token_depth, parent_depth = 0, 0
+    for token, line, quoted in tokenize(text):
+        if line == section.line and token == "ConVars":
+            parent_depth = token_depth
+        if not quoted and token in ("{", "}"):
+            token_depth += 1 if token == "{" else -1
+            changes[line] = changes.get(line, 0) + (1 if token == "{" else -1)
+    depths, depth = {}, 0
+    for line in range(1, len(lines) + 1):
+        depths[line] = depth
+        depth += changes.get(line, 0)
+    region, out = "tweak", []
     for i in range(start, end + 1):
-        raw = lines[i]
+        raw, line = lines[i], i + 1
         if END_OF_CONFIG in raw:
             region = "svdoc"
-        elif region == "svdoc" and raw.strip() and not raw.lstrip().startswith("//"):
+        if line >= tail:
             region = "tail"
+        elif line in direct and region == "svdoc":
+            region = "tweak"
         m = SETTING_RE.match(raw)
-        if not m:
+        nodes = direct.get(line, [])
+        disabled = m is not None and m.group("off") is not None and depths[line] == parent_depth + 1
+        if not nodes and not disabled:
             continue
-        rest = m.group("rest").strip()
+        rest = m.group("rest").strip() if m else ""
         note = rest[2:].strip() if rest.startswith("//") else ""
-        out.append(Setting(i + 1, m.group("name"), m.group("value"), m.group("off") is None, note, region))
+        for node in nodes:
+            out.append(Setting(line, node.key, node.value, True, note, region))
+        if disabled:
+            out.append(Setting(line, m.group("name"), m.group("value") if m.group("value") is not None else m.group("bare"),
+                               False, note, region))
     return out
+
+
+def config_paths(choice: str) -> list[Path]:
+    """Resolve the shared CLI selector without accepting ambiguous arbitrary filenames."""
+    return list(ACTIVE_CONFIGS.values()) if choice == "both" else [ACTIVE_CONFIGS[choice]]
+
+
+def add_config_argument(parser, default: str = "both") -> None:
+    parser.add_argument("--config", choices=("stable", "experimental", "both"), default=default,
+                        help=f"active config(s) to inspect (default {default})")
 
 
 # --------------------------------------------------------------------------------------------------------------------
@@ -233,27 +295,32 @@ def parse_dump(text: str) -> dict[str, ConVar]:
 
 def normalize(value: str) -> str:
     """Compare-friendly form: true/false/1/0 unified, numbers canonical, vectors as space-separated."""
-    v = value.strip().strip("'\"").lower()
-    v = v.replace("[", "").replace("]", "").replace(",", " ")
-    parts = v.split()
+    v = value.strip().strip("'\"")
+    parts = v.replace("[", "").replace("]", "").replace(",", " ").split()
     if not parts:
         return ""
     canon = []
     for p in parts:
-        if p in ("true", "false"):
-            canon.append("1" if p == "true" else "0")
+        if p.lower() in ("true", "false"):
+            canon.append("1" if p.lower() == "true" else "0")
             continue
         try:
             f = float(p)
             canon.append(repr(int(f)) if f.is_integer() else repr(f))
         except ValueError:
-            canon.append(p)
+            return v  # Unknown strings keep case, punctuation and internal whitespace.
     return " ".join(canon)
 
 
 # --------------------------------------------------------------------------------------------------------------------
 # Fetching with a small on-disk cache (utils/.cache, gitignored)
 # --------------------------------------------------------------------------------------------------------------------
+
+def cache_ref(ref: str) -> str:
+    """Refs can contain slashes; keep cache filenames inside the cache directory."""
+    from urllib.parse import quote
+    return quote(ref, safe="")
+
 
 def fetch(url: str, cache_name: str, refresh: bool = False) -> str:
     CACHE.mkdir(exist_ok=True)
@@ -273,18 +340,18 @@ def valve_convars(ref: str = "master", refresh: bool = False, path: str | None =
     if path:
         return parse_dump(Path(path).read_text(encoding="utf-8"))
     url = VALVE_RAW.format(ref=ref, path=VALVE_CONVARS)
-    return parse_dump(fetch(url, f"convars-{ref}.txt", refresh or ref == "master"))
+    return parse_dump(fetch(url, f"convars-{cache_ref(ref)}.txt", refresh or ref == "master"))
 
 
 def valve_gameinfo(ref: str = "master", refresh: bool = False, path: str | None = None) -> str:
     if path:
         return Path(path).read_text(encoding="utf-8")
     url = VALVE_RAW.format(ref=ref, path=VALVE_GI)
-    return fetch(url, f"stock-gameinfo-{ref}.gi", refresh or ref == "master")
+    return fetch(url, f"stock-gameinfo-{cache_ref(ref)}.gi", refresh or ref == "master")
 
 
 def upstream_gameinfo(ref: str, refresh: bool = False) -> str:
-    return fetch(UPSTREAM_RAW.format(ref=ref), f"upstream-gameinfo-{ref}.gi", refresh or ref == "main")
+    return fetch(UPSTREAM_RAW.format(ref=ref), f"upstream-gameinfo-{cache_ref(ref)}.gi", refresh or ref == "main")
 
 
 def read_lines(path: Path) -> list[str]:

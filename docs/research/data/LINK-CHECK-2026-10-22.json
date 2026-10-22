@@ -1,0 +1,1181 @@
+{
+  "research_date": "2026-10-22",
+  "scope": "Markdown HTTP(S) links in current root/docs/utils pages, generated reference pages and all docs/research Markdown, with fragments stripped. This does not validate remote anchor locations or historical prose claims.",
+  "current_distinct_urls": 52,
+  "current_http_200": 52,
+  "including_historical_distinct_urls": 95,
+  "including_historical_status_counts": {
+    "200": 62,
+    "429": 32,
+    "404": 1
+  },
+  "results": [
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/tree/a94d8b455203f12b176de75a5598dd8e6e8a94d4",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/tree/a94d8b455203f12b176de75a5598dd8e6e8a94d4",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/STABLE-NONDEFAULT-CONVARS.md",
+        "docs/research/AUDIT-TOOLING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/347a6694bd7779bafa66b339cd13435c90f1c2f3",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/tree/347a6694bd7779bafa66b339cd13435c90f1c2f3",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/research/AUDIT-TOOLING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/79",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/79",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/engine.md",
+        "docs/reference/generated/interface.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/60",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/60",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/simulation.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/63",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/63",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/80",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/80",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/engine.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/73",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/73",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/72",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/72",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/70",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/70",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/engine.md",
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/71",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/71",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/engine.md",
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/77",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/77",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/74",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/74",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/interface.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/75",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/75",
+      "documents": [
+        "docs/CONFIGS.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/simulation.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt",
+      "documents": [
+        "docs/BLOCKED-CONVARS.md",
+        "docs/reference/generated/audio.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/rendering.md",
+        "docs/reference/generated/simulation.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html",
+      "status": 200,
+      "final_url": "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html",
+      "documents": [
+        "docs/WINDOWS11.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://www.nvidia.com/en-gb/geforce/guides/system-latency-optimization-guide/",
+      "status": 200,
+      "final_url": "https://www.nvidia.com/en-gb/geforce/guides/system-latency-optimization-guide/",
+      "documents": [
+        "docs/WINDOWS11.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://www.nvidia.com/content/Control-Panel-Help/vLatest/en-gb/mergedProjects/nv3dENG/Manage_3D_Settings_%28reference%29.htm",
+      "status": 200,
+      "final_url": "https://www.nvidia.com/content/Control-Panel-Help/vLatest/en-gb/mergedProjects/nv3dENG/Manage_3D_Settings_%28reference%29.htm",
+      "documents": [
+        "docs/WINDOWS11.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/optimizations-for-windowed-games-in-windows-11",
+      "status": 200,
+      "final_url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/optimizations-for-windowed-games-in-windows-11",
+      "documents": [
+        "docs/WINDOWS11.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity",
+      "documents": [
+        "docs/WINDOWS11.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi",
+      "documents": [
+        "docs/reference/generated/audio.md",
+        "docs/reference/generated/engine.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/rendering.md",
+        "docs/reference/generated/simulation.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
+      "documents": [
+        "docs/reference/generated/audio.md",
+        "docs/reference/generated/engine.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/rendering.md",
+        "docs/reference/generated/simulation.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/particles_strings.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/particles_strings.txt",
+      "documents": [
+        "docs/reference/generated/engine.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/65",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/65",
+      "documents": [
+        "docs/reference/generated/engine.md",
+        "docs/reference/generated/rendering.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/materialsystem2_strings.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/materialsystem2_strings.txt",
+      "documents": [
+        "docs/reference/generated/engine.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/worldrenderer_strings.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/worldrenderer_strings.txt",
+      "documents": [
+        "docs/reference/generated/engine.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/scenesystem_strings.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/scenesystem_strings.txt",
+      "documents": [
+        "docs/reference/generated/engine.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/rendersystemdx11_strings.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/rendersystemdx11_strings.txt",
+      "documents": [
+        "docs/reference/generated/engine.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/rendersystemvulkan_strings.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/rendersystemvulkan_strings.txt",
+      "documents": [
+        "docs/reference/generated/engine.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt",
+      "documents": [
+        "docs/reference/generated/audio.md",
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/rendering.md",
+        "docs/reference/generated/simulation.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_0.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_0.txt",
+      "documents": [
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_3.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_3.txt",
+      "documents": [
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/blob/195eb8a/docs/TESTED-CHANGES.md",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/blob/195eb8a/docs/TESTED-CHANGES.md",
+      "documents": [
+        "docs/reference/generated/rendering.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/64",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/64",
+      "documents": [
+        "docs/reference/generated/rendering.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/69",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/69",
+      "documents": [
+        "docs/reference/generated/rendering.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_1.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_1.txt",
+      "documents": [
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_2.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_2.txt",
+      "documents": [
+        "docs/reference/generated/rendering.md",
+        "docs/research/AUDIT-RENDERING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/66",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/66",
+      "documents": [
+        "docs/reference/generated/rendering.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/67",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/67",
+      "documents": [
+        "docs/reference/generated/rendering.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/68",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/68",
+      "documents": [
+        "docs/reference/generated/rendering.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/59",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/59",
+      "documents": [
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/simulation.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/61",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/61",
+      "documents": [
+        "docs/reference/generated/interface.md",
+        "docs/reference/generated/simulation.md",
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/hyper-threading-or-smt-off-give-more-stable-fps-and-better-gpu-utilization.91848/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/game-freezes-on-first-launch-after-boot-and-crashes-after-5%E2%80%936-minutes-access-violation.125256/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/game-crash-to-desktop-due-to-access-violations.79900/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/repeat-crashing-randomly.81269/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/pak01-vpk-corruption-workaround.67321/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/wrongfully-banned-due-to-pak01-vpk-corruption-bug.74694/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/latest-update-instability.141222/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/cpu-temp-issue.20342/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/i9-14900k-instability-issues.8083/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/deadlock-crashing-so-much-if-is-impossible-to-continue-playing-it.128102/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/gpu-crash-almost-every-game.83103/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/i-think-i-have-solved-my-nvidia-related-crashing-issue.25826/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/game-hard-crashes-randomly.104324/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/video-memory-starts-to-get-clogged.156440/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/still-extreme-optimization-problems.146599/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/frametime-stutter-hitching-that-scales-with-teamfight-size-%E2%80%94-9800x3d-rtx-4070-high-avg-fps.150957/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/deadlock-single-core-100-bottleneck-144-to-90-fps-drops-process-lasso-doesnt-fix-it-engine-refuses-to-distribute-load.154113/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/gpu-utilization-in-game-vs-in-lobby.152511/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/performance-issues.98611/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/city-never-sleeps-bug-megathread.167185/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/poor-performance-likely-due-to-particle-effects.138829/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/game-consistently-crashing-any-help-with-gpu.141132/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/massive-performance-issues-vulkan-and-dx11.109063/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/dx11-causing-bsod.122895/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/possible-memory-leak-excessive-memory-commitment-causing-severe-fps-degradation.145030/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/massive-virtual-memory-leaking-fps-degration-dropping-after-august-12-2026-update.157313/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/disable-reflex-and-use-nvidia-control-panel-fps-limiter-and-low-latency-mode-for-best-performance-in-deadlock.54456/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/dead-air-how-to-make-a-config-useful-commands-simple-guide.15718/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/severe-frametime-spikes-when-pressing-keyboard-or-mouse-inputs.84837/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/framerate-drop-and-shadercache.75873/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/valve-please-optimize-the-game-before-you-disallow-configs.122053/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://forums.playdeadlock.com/threads/200-fps-after-convar-changes-made-to-the-game.127054/",
+      "status": 429,
+      "reason": "HTTP Error 429: Too Many Requests",
+      "documents": [
+        "docs/research/FORUM-RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "rate limited; not verified, not evidence of removal"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/engine2_strings.txt",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/engine2_strings.txt",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/blob/f6fdab7f66e7c314b011a861589fa12db27c8a3e/Eskay%27s%20config/gameinfo.gi",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/blob/f6fdab7f66e7c314b011a861589fa12db27c8a3e/Eskay%27s%20config/gameinfo.gi",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/52",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/52",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/54",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/54",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/dacooderr/OptiLock/blob/7f7a54a1b8237d9b66348067d09f93174c47d303/README.md",
+      "status": 200,
+      "final_url": "https://github.com/dacooderr/OptiLock/blob/7f7a54a1b8237d9b66348067d09f93174c47d303/README.md",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/dacooderr/OptiLock/blob/7f7a54a1b8237d9b66348067d09f93174c47d303/OptiLock%20FPS%20Config%20%28Recommended%29/gameinfo.gi",
+      "status": 200,
+      "final_url": "https://github.com/dacooderr/OptiLock/blob/7f7a54a1b8237d9b66348067d09f93174c47d303/OptiLock%20FPS%20Config%20%28Recommended%29/gameinfo.gi",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/7liv/compylock/blob/c281c16109adfa1cc23db65554d36c4d9b7890d1/README.md",
+      "status": 200,
+      "final_url": "https://github.com/7liv/compylock/blob/c281c16109adfa1cc23db65554d36c4d9b7890d1/README.md",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/7liv/compylock/blob/c281c16109adfa1cc23db65554d36c4d9b7890d1/gameinfo.gi",
+      "status": 200,
+      "final_url": "https://github.com/7liv/compylock/blob/c281c16109adfa1cc23db65554d36c4d9b7890d1/gameinfo.gi",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/ghempy53/deadlock-config/pull/26",
+      "status": 200,
+      "final_url": "https://github.com/ghempy53/deadlock-config/pull/26",
+      "documents": [
+        "docs/research/AUDIT-RUNTIME-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_error_handling?view=powershell-5.1",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_error_handling?view=powershell-5.1",
+      "documents": [
+        "docs/research/AUDIT-TOOLING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.language.parser.parsefile?view=powershellsdk-7.4.0",
+      "status": 200,
+      "final_url": "https://learn.microsoft.com/en-us/dotnet/api/system.management.automation.language.parser.parsefile?view=powershellsdk-7.4.0",
+      "documents": [
+        "docs/research/AUDIT-TOOLING-2026-10-22.md"
+      ],
+      "scope": "current",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/SteamTracking/GameTracking-Deadlock",
+      "status": 200,
+      "final_url": "https://github.com/SteamTracking/GameTracking-Deadlock",
+      "documents": [
+        "docs/research/RESEARCH-2026-10-06.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/main/test_cfg",
+      "status": 404,
+      "reason": "HTTP Error 404: Not Found",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD and GET",
+      "interpretation": "not found at this URL on the check date",
+      "recovered_historical_commit": "18e0144a707d8a48a60869f86eca6f91536b622a",
+      "replacement_urls": [
+        "https://github.com/Sqooky/OptimizationLock/tree/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg",
+        "https://github.com/Sqooky/OptimizationLock/blob/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg/gameinfo.gi"
+      ],
+      "resolution": "Original moving-main URL status retained. A dated recovery note links the exact recorded historical commit without rewriting the historical comparison body."
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/main/maximumfps%20or%20minimum%20spec%20config%20and%20resources%20here",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/tree/main/maximumfps%20or%20minimum%20spec%20config%20and%20resources%20here",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/main/Eskay%27s%20config",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/tree/main/Eskay%27s%20config",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/main/Piggy%27s%20config",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/tree/main/Piggy%27s%20config",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchanerus%20minimum%20spec",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/tree/main/kaizuchanerus%20minimum%20spec",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/main/boot%27s%20maxium%20fps%20config",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/tree/main/boot%27s%20maxium%20fps%20config",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/dacooderr/OptiLock",
+      "status": 200,
+      "final_url": "https://github.com/dacooderr/OptiLock",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/7liv/compylock",
+      "status": 200,
+      "final_url": "https://github.com/7liv/compylock",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/abyzzboyxdd/gameinfo.gi-ywususu",
+      "status": 200,
+      "final_url": "https://github.com/abyzzboyxdd/gameinfo.gi-ywususu",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "retained historical research",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/tree/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/tree/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "recovered historical source",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable; exact historical commit resolved through GitHub API"
+    },
+    {
+      "url": "https://github.com/Sqooky/OptimizationLock/blob/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg/gameinfo.gi",
+      "status": 200,
+      "final_url": "https://github.com/Sqooky/OptimizationLock/blob/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg/gameinfo.gi",
+      "documents": [
+        "docs/research/CONFIG-COMPARISON.md"
+      ],
+      "scope": "recovered historical source",
+      "method": "HEAD; redirected responses followed",
+      "interpretation": "reachable; exact historical commit resolved through GitHub API"
+    }
+  ],
+  "historical_recovery": {
+    "date": "2026-10-22",
+    "recorded_short_commit": "18e0144",
+    "resolved_full_commit": "18e0144a707d8a48a60869f86eca6f91536b622a",
+    "commit_timestamp_utc": "2026-10-06T09:17:32Z",
+    "original_url": "https://github.com/Sqooky/OptimizationLock/tree/main/test_cfg",
+    "original_head_and_get_status": 404,
+    "replacement_statuses": {
+      "https://github.com/Sqooky/OptimizationLock/tree/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg": 200,
+      "https://github.com/Sqooky/OptimizationLock/blob/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg/gameinfo.gi": 200
+    }
+  },
+  "including_historical_and_recovery_distinct_urls": 97,
+  "including_historical_and_recovery_status_counts": {
+    "200": 64,
+    "429": 32,
+    "404": 1
+  },
+  "local_markdown_verification": {
+    "files": 33,
+    "links_checked": 2832,
+    "issues": 0,
+    "includes": "All repository Markdown, including retained research and Claude skills; targets, Markdown anchors and config #L line bounds."
+  }
+}
