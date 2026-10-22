@@ -74,16 +74,17 @@ frozen as the next version.
 | **v1.3** (2026-10-17) | [`stable-config/v1.3/gameinfo.gi`](../stable-config/v1.3/gameinfo.gi) | Sqooky's OptimizationLock 3.5.3 with `r_aspectratio 2.11`, uncapped FPS, `r_particle_min_timestep` at default (jagged-fire fix), mip bias 2, a 6400 MB texture pool and no texture resolution cap; damage numbers at Valve's defaults. Locked at the owner's request. SHA-256 `b5fbeb3e…33ab3dc2`. |
 | **v1.4** (2026-10-20) | [`stable-config/v1.4/gameinfo.gi`](../stable-config/v1.4/gameinfo.gi) | Sqooky's OptimizationLock 3.6 at `aba20cd` (upstream unchanged through `690e4fb`) with `r_aspectratio` commented out (owner's FOV mod), uncapped FPS, `r_particle_min_timestep` at default, mip bias 2, a 6400 MB texture pool and no texture resolution cap. Locked at the owner's request. Byte-identical to `stable-config/gameinfo.gi` as of this date (SHA-256 `3fb7a0c6…7b790141`). |
 
-Install a version with `DeadlockConfig-Update -Version 1.0` (or `1.1`, `1.2`, `1.3`, `1.4`).
+`DeadlockConfig-Update` installs only the current stable and experimental configs. To use a frozen version, copy its
+file [by hand](INSTALL.md).
 
 A game update can change how a frozen version behaves (renamed or blocked convars, a new matchmaking check) without
 the file changing.
 
-### Testing the experimental config against v1.0
+### Testing the experimental config against stable
 
 1. Same session, same Sandbox route or bot-match scenario, same capture tool (CapFrameX or PresentMon), 1% lows.
-2. `DeadlockConfig-Update -Version 1.0`, restart Deadlock, run the route.
-3. `DeadlockConfig-Update -ex`, restart Deadlock, run the route.
+2. `DeadlockConfig-Update`, restart Deadlock, run the route.
+3. `DeadlockConfig-Update -Ex`, restart Deadlock, run the route.
 4. Go back to `DeadlockConfig-Update` (current stable) when done.
 
 To see what actually differs between the two (active ConVars values and engine sections, comments ignored):

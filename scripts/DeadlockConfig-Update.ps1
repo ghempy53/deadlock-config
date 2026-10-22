@@ -1,26 +1,20 @@
 # DeadlockConfig-Update: install this repo's gameinfo.gi into Deadlock. Always overwrites the installed file.
 # Dot-source this file from your PowerShell profile. Setup: docs/UPDATE-COMMAND.md
 #
-#   DeadlockConfig-Update            stable-config (default)
-#   DeadlockConfig-Update -stable    stable-config
-#   DeadlockConfig-Update -ex        experimental-config
-#   DeadlockConfig-Update -Version 1.0   a frozen stable version (stable-config/v1.0)
-#   DeadlockConfig-Update -Branch <name>   install from a branch other than main (to test a PR)
-#   DeadlockConfig-Update -SelfUpdate      replace this script with the latest one from the branch
+#   DeadlockConfig-Update              stable-config (default)
+#   DeadlockConfig-Update -Ex          experimental-config
+#   DeadlockConfig-Update -SelfUpdate  replace this script with the latest one from main
 #
 # Works in Windows PowerShell 5.1 and PowerShell 7.
 
 function DeadlockConfig-Update {
     [CmdletBinding()]
     param(
-        [Alias('ex')][switch]$Experimental,
-        [switch]$Stable,
-        [string]$Version,
-        [string]$Branch = 'main',
+        [switch]$Ex,
         [switch]$SelfUpdate
     )
-    if ($Experimental -and ($Stable -or $Version)) { throw 'Pass -ex or -stable/-Version, not both.' }
     $repo = 'ghempy53/deadlock-config'
+    $Branch = 'main'
     [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
     # raw.githubusercontent.com caches branch URLs for about 5 minutes after a push, so download from the branch's
@@ -52,9 +46,7 @@ function DeadlockConfig-Update {
         return
     }
 
-    $folder = if ($Experimental) { 'experimental-config' }
-              elseif ($Version) { 'stable-config/v' + $Version.TrimStart('v', 'V') }
-              else { 'stable-config' }
+    $folder = if ($Ex) { 'experimental-config' } else { 'stable-config' }
 
     # Find Deadlock (Steam app 1422450) in any Steam library. Look for the game folder, not gameinfo.gi, so an install
     # still works after the file was deleted.
