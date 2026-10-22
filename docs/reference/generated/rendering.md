@@ -1222,7 +1222,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Retained from OptimizationLock lineage. The pinned upstream file contains this key; its comments record intended rationale or experiments, not evidence that the setting improves this repository.
+**Why retained / provenance:** Variant difference: OptimizationLock 3.6 commented this line out and PR #75 carried that into stable, which keeps the disabled line; experimental retains the active 3.5.3 false request. Upstream comments record intended rationale or experiments, not evidence that the setting improves this repository.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
@@ -1230,7 +1230,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/75).
 
 <a id="setting-convars-lb_enable_dynamic_lights"></a>
 ## `ConVars/lb_enable_dynamic_lights`
@@ -4078,7 +4078,7 @@ Selects particle collection batching. Valve stock gameinfo already enables it; t
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6194,7 +6194,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 

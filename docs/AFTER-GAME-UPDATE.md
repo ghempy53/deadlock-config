@@ -35,7 +35,8 @@ can contain an obsolete `PGIVersion`.
 
 ## Checks and limits
 
-Replace `VALVE_SHA` with the full hash in `docs/reference/sources.json`:
+Replace `VALVE_SHA` and `UPSTREAM_SHA` with the full `valve_commit` and `upstream_commit` hashes in
+`docs/reference/sources.json`. `nondefaults.py` rewrites its report; pass `--stdout` to only inspect it.
 
 ```sh
 python3 utils/check.py --config both
@@ -43,7 +44,7 @@ python3 utils/check.py --config both --strict-duplicates
 python3 utils/convars.py --ref VALVE_SHA --config both audit
 python3 utils/stock_diff.py --ref VALVE_SHA --config both
 python3 utils/compare.py stable-config/gameinfo.gi experimental-config/gameinfo.gi
-python3 utils/nondefaults.py --ref VALVE_SHA
+python3 utils/nondefaults.py --ref VALVE_SHA --upstream-ref UPSTREAM_SHA
 python3 utils/reference.py --check
 python3 -m unittest discover -s utils/tests
 ```

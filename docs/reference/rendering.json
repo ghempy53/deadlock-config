@@ -520,13 +520,14 @@
   },
   "ConVars/lb_enable_baked_shadows": {
     "purpose": "The captured Valve help documents this control in lighting, shadows or post-processing. No additional Deadlock-specific implementation detail was established beyond the help reproduced in the reference.",
-    "rationale": "Retained from OptimizationLock lineage. The pinned upstream file contains this key; its comments record intended rationale or experiments, not evidence that the setting improves this repository.",
+    "rationale": "Variant difference: OptimizationLock 3.6 commented this line out and PR #75 carried that into stable, which keeps the disabled line; experimental retains the active 3.5.3 false request. Upstream comments record intended rationale or experiments, not evidence that the setting improves this repository.",
     "tradeoffs": "Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.",
     "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim.",
     "confidence": "High for captured registration/flags; moderate for purpose; runtime effect unverified.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/ghempy53/deadlock-config/pull/75"
     ],
     "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
   },
