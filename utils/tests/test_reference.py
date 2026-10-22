@@ -1,6 +1,8 @@
 """Coverage invariants for the full reference, including non-ConVar examples."""
 import hashlib
+import json
 from pathlib import Path
+import re
 import sys
 import tempfile
 import unittest
@@ -50,6 +52,19 @@ class ReferenceTests(unittest.TestCase):
         self.assertIn("Disabled in both current files", both)
         self.assertIn("Disabled in stable; not present in the other file", stable_only)
         self.assertNotIn("both current files", stable_only)
+
+    def test_generated_caveats_are_not_restated_by_annotations(self):
+        manifest = json.loads(reference.MANIFEST.read_text(encoding="utf-8"))
+        snapshot = json.loads(reference.SNAPSHOT.read_text(encoding="utf-8"))
+        pages, _ = reference.outputs(manifest, snapshot)
+        topics = [r"[Cc]heat/development", r"[Rr]eplicated", r"[Rr]estart", r"[Aa]rchive", r"gameinfo_cannot_override",
+                  r"[Cc]lient(-module)? registration", r"game/server module", r"[Aa]bsent"]
+        for page, text in pages.items():
+            for line in text.splitlines():
+                if line.startswith("**Applicability"):
+                    for topic in topics:
+                        with self.subTest(page=page.name, topic=topic):
+                            self.assertLessEqual(len(re.findall(topic, line)), 1, line)
 
     def test_refresh_rejects_changed_source_bytes(self):
         with tempfile.TemporaryDirectory() as directory:

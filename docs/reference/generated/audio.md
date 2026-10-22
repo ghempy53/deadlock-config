@@ -87,7 +87,7 @@ Enables the mix layer that mutes selected sounds at map-load boundaries.
 
 **Benefits and trade-offs:** Requested false may expose sounds otherwise muted while loading. Calling this a general in-match audio optimization overstates the declared purpose.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -115,7 +115,7 @@ Enables vmix mastering digital signal processing.
 
 **Benefits and trade-offs:** Requested false can change output processing if honored. A CPU saving, unchanged loudness, and preserved directional cues are unverified.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -143,7 +143,7 @@ Enables calculations classifying entities as indoors or outdoors.
 
 **Benefits and trade-offs:** Retains stock 0; this does not prove every audio enclosure effect is disabled. Replicated actual state and sound-path use are unverified.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -171,7 +171,7 @@ Name of the sound event invoked on disconnect to stop selected playing events.
 
 **Benefits and trade-offs:** Retains Valve’s Citadel-specific event. It is an event identifier, not a sound-quality or CPU-budget knob.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -199,7 +199,7 @@ Bypasses individual audio-source soundscape lookup when enabled.
 
 **Benefits and trade-offs:** Documented stock performance rationale, not an extra repository gain; server-module-only registration also matters for local-client claims.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -227,7 +227,7 @@ Audio DSP-related volume control inferred from the name; no detailed help or ran
 
 **Benefits and trade-offs:** Requested 0 may suppress processed audio contribution if that path is used; it does not prove DSP processing stops or that all environmental cues remain intact.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -255,7 +255,7 @@ When true, resets the input device after a sufficiently long gap in callbacks.
 
 **Benefits and trade-offs:** Retains stock false; do not promise an automatic microphone reset on a stall.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -283,7 +283,7 @@ Selects the SIMD implementation of shoebox reverb processing.
 
 **Benefits and trade-offs:** Requested false disables that SIMD path. The upstream claim that disabling it helps performance is unsubstantiated; measure rather than assuming a slower-looking value is faster.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -311,7 +311,7 @@ Registered audio graph setting with no descriptive help; meaning of the corenull
 
 **Benefits and trade-offs:** No basis in the pinned sources for the inherited claim that false improves performance.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -339,7 +339,7 @@ Stock comment identifies a sound-volume rate-change limiter; exact units and sca
 
 **Benefits and trade-offs:** Retains stock 100.0 versus declared 0.9. It is not evidence of faster audio or lower latency.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -363,7 +363,7 @@ Absent from the dump but set by Valve stock; the name suggests default event-bro
 
 **Benefits and trade-offs:** Stock provenance argues against assuming removal from one missing dump entry. No gameplay performance effect is established.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -387,7 +387,7 @@ Absent from the dump but set by Valve stock; the name suggests event-browser eve
 
 **Benefits and trade-offs:** Stock provenance argues against assuming removal from one missing dump entry. No gameplay performance effect is established.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -415,7 +415,7 @@ Registered without explanatory help. Upstream treats it as an audio mixing lead-
 
 **Benefits and trade-offs:** Requested 0.05 versus 0.001 must not be stated as a measured extra 50 ms of output latency or as imperceptible. Measure end-to-end audio timing/dropouts before drawing that conclusion.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -443,7 +443,7 @@ Name suggests a sound-occlusion bounce count; no detailed help is present.
 
 **Benefits and trade-offs:** Requested 0 may change obstruction/direction cues if honored. Replication and audio-path selection make a local CPU benefit unverified.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -471,7 +471,7 @@ Name suggests a sound-occlusion ray count; no detailed help is present.
 
 **Benefits and trade-offs:** Requested 0 is not a documented guarantee that all occlusion is disabled. Replicated value, baked occlusion and other processing paths must be checked.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -499,7 +499,7 @@ Name suggests reporting invalid non-number audio values; no detailed help is pre
 
 **Benefits and trade-offs:** Retains stock true for a diagnostic path. It does not itself improve audio quality or FPS.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -527,7 +527,7 @@ Name suggests maximum base-event nesting depth in the sound-operator system; the
 
 **Benefits and trade-offs:** Retains stock 10 rather than declared 4; no direct CPU or audio-fidelity claim is supported.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -555,7 +555,7 @@ Selects a named sound mix; the requested Default_Mix matches Valve stock and dec
 
 **Benefits and trade-offs:** No mix-specific cost or perceptual change is established by this pin.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -583,7 +583,7 @@ Name/stock placement suggest a maximum update rate for the sound mixer; no detai
 
 **Benefits and trade-offs:** Retains stock 0. Do not infer zero disables mixing or guarantees unrestricted updates without runtime evidence.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -611,7 +611,7 @@ Sound-mixer implementation/version selector inferred from the name; no mode desc
 
 **Benefits and trade-offs:** Requested 2 equals the declared default. It is not an established extra optimization.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -639,7 +639,7 @@ Index of the active head-related transfer function.
 
 **Benefits and trade-offs:** Retains stock 0. Index 0 is not proof of no HRTF or a particular channel layout; mappings are not documented.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -667,7 +667,7 @@ Selects an alternate listener-dimensions lookup using a k-d tree of probe positi
 
 **Benefits and trade-offs:** Retains stock true; lookup implementation is documented, but a frame-time improvement over stock is not.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -695,7 +695,7 @@ Valve console help: Enable baking outside field for probes baking custom dimensi
 
 **Benefits and trade-offs:** Retains Valve stock custom probe-baking policy. These names/help describe data generation, not a direct live audio quality or FPS switch.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -723,7 +723,7 @@ Valve console help: Enable baking size and inout data for probes when baking cus
 
 **Benefits and trade-offs:** Retains Valve stock custom probe-baking policy. These names/help describe data generation, not a direct live audio quality or FPS switch.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -751,7 +751,7 @@ Valve console help: Enable baking insize size field for probes when baking custo
 
 **Benefits and trade-offs:** Retains Valve stock custom probe-baking policy. These names/help describe data generation, not a direct live audio quality or FPS switch.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -779,7 +779,7 @@ Maximum height in meters above the initial probe layer where extra probes can be
 
 **Benefits and trade-offs:** Retains stock 100. Primarily probe-generation data; no runtime performance improvement follows from this pin.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -807,7 +807,7 @@ Maximum ray length for dimensions-size/enclosure calculations in game units; 0 d
 
 **Benefits and trade-offs:** Retains stock 2500. It bounds a calculation rather than muting or shortening every audible sound.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -835,7 +835,7 @@ Allows loading custom head-related transfer functions.
 
 **Benefits and trade-offs:** Retains stock 0; this disables custom loading, not necessarily all HRTF spatial audio.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -863,7 +863,7 @@ Global sound-stack gate for Steam Audio pathing.
 
 **Benefits and trade-offs:** Identical repeated values are not separate reductions. No inference that all positional audio is disabled is justified.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -891,7 +891,7 @@ Enables the Steam Audio reverb processor.
 
 **Benefits and trade-offs:** Retains Valve stock 0. Other reverb settings are conditional on their processors; this does not prove all reverb in Deadlock is absent.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -919,7 +919,7 @@ Path-length fallback in inches; Valve explicitly says 0 uses direct distance.
 
 **Benefits and trade-offs:** Retains stock 0.0. No independent gameplay-performance improvement is established.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -947,7 +947,7 @@ Time between sound emission and the final audible Steam Audio reflection.
 
 **Benefits and trade-offs:** Requested 1.0 versus 2 may shorten the reflection impulse response if used. The dump does not explicitly label the time unit; actual acoustic and CPU effects are unverified.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -975,7 +975,7 @@ Controls loading precomputed Steam Audio dimensions data.
 
 **Benefits and trade-offs:** Retains Valve stock loading policy. Whether this dataset is available/used and the resulting memory/work savings were not measured; loading data and enabling a processor are separate controls.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1003,7 +1003,7 @@ Controls loading precomputed Steam Audio materials data.
 
 **Benefits and trade-offs:** Retains Valve stock loading policy. Whether this dataset is available/used and the resulting memory/work savings were not measured; loading data and enabling a processor are separate controls.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1031,7 +1031,7 @@ Controls loading precomputed Steam Audio occlusion data.
 
 **Benefits and trade-offs:** Retains Valve stock loading policy. Whether this dataset is available/used and the resulting memory/work savings were not measured; loading data and enabling a processor are separate controls.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1059,7 +1059,7 @@ Controls loading precomputed Steam Audio pathing data.
 
 **Benefits and trade-offs:** Retains Valve stock loading policy. Whether this dataset is available/used and the resulting memory/work savings were not measured; loading data and enabling a processor are separate controls.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1087,7 +1087,7 @@ Controls loading precomputed Steam Audio reverb data.
 
 **Benefits and trade-offs:** Retains Valve stock loading policy. Whether this dataset is available/used and the resulting memory/work savings were not measured; loading data and enabling a processor are separate controls.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1115,7 +1115,7 @@ Maximum rays for Steam Audio volumetric occlusion, not a reverb sample count.
 
 **Benefits and trade-offs:** Requested 32 halves the declared ray ceiling of 64 if that processor runs. Potential occlusion detail/cost changes need listening and profiling; there is no measured benefit.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1143,7 +1143,7 @@ Maximum probe count when baking custom dimensions data.
 
 **Benefits and trade-offs:** Retains stock 100000. This is a bake-time/tooling limit, not evidence of a client runtime audio-thread cap or an in-match FPS gain.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1171,7 +1171,7 @@ Number of directions considered for Steam Audio ray bounces.
 
 **Benefits and trade-offs:** Requested 512 versus 2048 aims to reduce directional simulation work if used. Stock disables some Steam Audio paths; audibility and CPU impact are unverified.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1199,7 +1199,7 @@ Number of threads used for real-time Steam Audio reflection processing.
 
 **Benefits and trade-offs:** Requested 4 differs from declared 2; the inline default 4 is stale. More audio threads do not guarantee better frame times, especially if the reflection path is inactive.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1227,7 +1227,7 @@ Directional detail order for simulated Steam Audio pathing.
 
 **Benefits and trade-offs:** Retains stock 3 while stock globally disables Steam Audio pathing. Actual work and spatial quality depend on the active sound path.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1255,7 +1255,7 @@ Directional detail order for rendered Steam Audio pathing.
 
 **Benefits and trade-offs:** Retains stock 3 while stock globally disables Steam Audio pathing. This is not proof of runtime pathing quality or cost.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1283,7 +1283,7 @@ Output volume of the Steam Audio reverb processor, in dB.
 
 **Benefits and trade-offs:** Retains stock -6. This is conditional on an active reverb processor; reducing level is not proof that processing work stops.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1311,7 +1311,7 @@ Ambisonics order for convolution reverb: Valve documents order 0 as one channel 
 
 **Benefits and trade-offs:** Requested 0 can reduce directional reverb detail if this path runs; it does not make all game audio mono. Stock snd_steamaudio_enable_reverb 0 may make it irrelevant.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1339,7 +1339,7 @@ Maximum reverb update rate in Hz.
 
 **Benefits and trade-offs:** Requested 10 versus 30 may update active reverb less often, but stock disables the Steam Audio reverb processor. Do not claim an unconditional audio CPU saving.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1367,7 +1367,7 @@ Name and Valve stock comments identify spatial positioning of UI audio; exact im
 
 **Benefits and trade-offs:** Do not claim UI spatialization is currently disabled or that this line saves CPU. Query runtime state before and after menus and a full restart.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1395,7 +1395,7 @@ Controls UI-audio spatialization spread, according to the stock section comment;
 
 **Benefits and trade-offs:** Retains stock 2.4; perceived spread and interaction with snd_ui_positional require a listening test, not an assumed optimization.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1423,7 +1423,7 @@ Name suggests use of precomputed audio occlusion; the dump provides no detailed 
 
 **Benefits and trade-offs:** Requested 1 interacts with Valve stock snd_steamaudio_load_occlusion_data 0, but the sources do not prove they control the same path. Do not infer either setting overrides the other; listen and query runtime state.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1451,7 +1451,7 @@ Name suggests GUID-based filtering in the sound-operator system; exact purpose i
 
 **Benefits and trade-offs:** Retains stock true; no repository-specific gain or changed audible behavior is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1479,7 +1479,7 @@ Structured gameinfo default metadata for speaker_config; this is not a separate 
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -1507,7 +1507,7 @@ Structured gameinfo max metadata for speaker_config; this is not a separate ConV
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -1535,7 +1535,7 @@ Structured gameinfo min metadata for speaker_config; this is not a separate ConV
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -1563,7 +1563,7 @@ Name suggests lower-priority updates for audio voices; the dump does not define 
 
 **Benefits and trade-offs:** No evidence that true only affects cosmetic audio or improves frame times. Scheduling and audible delay/dropouts require profiling/listening.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1591,7 +1591,7 @@ Structured gameinfo default metadata for voice_always_sample_mic; this is not a 
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -1619,7 +1619,7 @@ Structured gameinfo version metadata for voice_always_sample_mic; this is not a 
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -1647,7 +1647,7 @@ Voice-processing placement switch inferred from the name; the dump provides no a
 
 **Benefits and trade-offs:** Retains stock 1; no microphone latency, reliability, or CPU improvement is established.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1675,7 +1675,7 @@ Time before microphone input is treated as stalled and needing reset; units are 
 
 **Benefits and trade-offs:** Retains stock 0.5 versus declared 2; automatic reset is separately disabled by reset_voice_on_input_stallout 0.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 

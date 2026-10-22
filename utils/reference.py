@@ -144,6 +144,8 @@ def occurrences(rows, relative=None):
 
 
 def applicability(cv, path, entries):
+    """Caveats derived from the snapshot and files. Annotations hold only setting-specific applicability, so a
+    flag change after a game patch updates these notes without stale annotation prose."""
     notes = []
     if cv:
         flags = set(cv["flags"])
@@ -155,10 +157,12 @@ def applicability(cv, path, entries):
             notes.append("Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking.")
         elif "clientdll" in flags:
             notes.append("Client registration is captured; it does not establish startup load order or effectiveness.")
+        else:
+            notes.append("No client/server module scope is established by these flags alone.")
         if "archive" in flags:
             notes.append("Archive flag: persistence is relevant; saved values and UI precedence need a runtime check.")
         if flags & {"cheat", "developmentonly"}:
-            notes.append("Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump.")
+            notes.append("Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions.")
     elif path.startswith("ConVars/"):
         notes.append("Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved.")
     else:
@@ -192,9 +196,11 @@ def outputs(manifest, snapshot):
     if extra or missing:
         raise ValueError(f"Metadata coverage: {len(missing)} missing {sorted(missing)[:20]}, {len(extra)} stale {sorted(extra)[:20]}")
     required = {"purpose", "rationale", "tradeoffs", "applicability", "confidence", "evidence", "test_status"}
+    # Applicability may be empty: flag, scope, duplicate, disabled and restart caveats are generated per path.
     for path, record in metadata.items():
         if (not required <= record.keys()
-                or any(not isinstance(record.get(k), str) or not record[k].strip() for k in required - {"evidence"})
+                or not isinstance(record.get("applicability"), str)
+                or any(not isinstance(record.get(k), str) or not record[k].strip() for k in required - {"evidence", "applicability"})
                 or not isinstance(record.get("evidence"), list) or not record["evidence"]
                 or any(not isinstance(url, str) or not url.startswith("https://") for url in record["evidence"])):
             raise ValueError(f"Incomplete sourced explanation: {path}")
@@ -235,7 +241,7 @@ def outputs(manifest, snapshot):
                 out += ["**Valve registration:** " + ("No matching record in the pinned dump; absence does not prove removal." if cv_name else "Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them."), ""]
             out += ["**Why retained / provenance:** " + meta["rationale"], "",
                     "**Benefits and trade-offs:** " + meta["tradeoffs"], "",
-                    "**Applicability and effectiveness:** " + meta["applicability"] + " " + applicability(cv, path, [maps['stable'][path], maps['experimental'][path]]), "",
+                    "**Applicability and effectiveness:** " + " ".join(filter(None, [meta["applicability"], applicability(cv, path, [maps['stable'][path], maps['experimental'][path]])])), "",
                     "**Evidence / test status:** " + meta["confidence"].rstrip(". ") + ". " + meta["test_status"], "",
                     "**Sources:** " + "; ".join(f"[evidence {i}]({url})" for i, url in enumerate(meta["evidence"], 1)) + "."]
         pages[DATA / "generated" / f"{category}.md"] = "\n".join(out) + "\n"

@@ -1535,7 +1535,7 @@ Lists game material render modes (Default, Forward, Deferred, Outline, Depth, Fr
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2231,7 +2231,7 @@ Stock particle bindless-shader option retained at 1. The captured file does not 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2255,7 +2255,7 @@ Candidate mixed-resolution particle option, absent from stock. The inspected par
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2279,7 +2279,7 @@ Stock particle shader-feature-branching option retained at 1. The name suggests 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2303,7 +2303,7 @@ Stock particle feature string non_homogenous_forward_layer_only. Accepted featur
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2327,7 +2327,7 @@ Stock particle 16-bit floating-point HDR backbuffer option. Internal HDR process
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2351,7 +2351,7 @@ Bare MPropertyFlattenIntoParentRow appears in the particle strings among propert
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2375,7 +2375,7 @@ Stock feature flag whose name suggests support for fading opaque particle models
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2399,7 +2399,7 @@ Candidate particle trace-offset policy with an exact Particles/ path in the capt
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2423,7 +2423,7 @@ Bare particle fog-default name appears in the strings, but a recognized gameinfo
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2447,7 +2447,7 @@ Bare PerVertexLighting appears in several rendering modules; that alone does not
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2471,7 +2471,7 @@ Bare PostSimulate appears in particle strings, but it may name an internal metho
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2543,7 +2543,7 @@ Appears to allow immediate texture loads with a partial mip chain; its exact pat
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2567,7 +2567,7 @@ Candidate graphics-pipeline-library option inherited from upstream; absent from 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2591,7 +2591,7 @@ By the key name, sizes the rendering index-buffer pool in MB. Current stock spec
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2615,7 +2615,7 @@ Startup rendering-system low-latency key also present in stock. Its relationship
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2639,7 +2639,7 @@ Appears to limit preloaded texture resolution. The exact path occurs in both DX1
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2663,7 +2663,7 @@ By the key name, sets a minimum texture-streaming pool size in MB; stock specifi
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2687,7 +2687,7 @@ By the key name, supplies the tools-mode minimum streaming pool in MB. Both this
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2711,7 +2711,7 @@ Candidate sampleable-depth swapchain option. The inspected Vulkan strings expose
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2735,7 +2735,7 @@ Selects a 32-bit depth-buffer option by name. Stock and config both use zero; ex
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2759,7 +2759,7 @@ Selects a 32-bit depth-buffer option without stencil by name. Stock and config b
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2783,7 +2783,7 @@ Enables the reverse-depth option present in stock. Exact precision and compatibi
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2807,7 +2807,7 @@ Names an additional Vulkan shader-cache file. Captured renderer strings contain 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2831,7 +2831,7 @@ Vulkan defragmentation option retained at stock 1. Its scheduling and interactio
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2855,7 +2855,7 @@ Vulkan mutable-swapchain startup option retained at stock 1; captured data does 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2879,7 +2879,7 @@ Startup Vulkan-test-probability key present in stock. Units and the mapping of 1
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2903,7 +2903,7 @@ Candidate Linux Vulkan-only selection key, absent from stock. Recognition and cu
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2927,7 +2927,7 @@ Names a required Vulkan descriptor-indexing capability. Disabling a requirement 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2951,7 +2951,7 @@ Names a required Vulkan subgroup/wave-operation capability. Stock retains it; th
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2975,7 +2975,7 @@ By name, limits Vulkan staging-buffer memory in MB. Stock requests 384 while the
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2999,7 +2999,7 @@ By name, controls use of a Steam application Vulkan shader cache; exact cache po
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -3023,7 +3023,7 @@ By name, controls use of downloaded Steam Vulkan shader-cache data; exact loadin
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -3047,7 +3047,7 @@ Candidate Steam Vulkan-cache switch. It is absent from stock and no matching pat
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. Vulkan-specific by name; the owner currently uses DX11, so this is not evidence of a DX11 benefit. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5495,7 +5495,7 @@ Commented candidate CMT atlas height with a captured exact path. What CMT means,
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5519,7 +5519,7 @@ Commented candidate CMT atlas width with a captured exact path. What CMT means, 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5543,7 +5543,7 @@ Names the cascaded-shadow-map resolution; stock requests 2048 and this config 0.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5567,7 +5567,7 @@ Candidate SceneSystem option named CharacterDecals. The precise behavior, valid 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5591,7 +5591,7 @@ Enables the stock compute-shader skinning option. It is a rendering mechanism ra
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5615,7 +5615,7 @@ Stock cubemap-fog startup option, changed from 1 to 0. Its relationship with blo
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5639,7 +5639,7 @@ Names default shadow-texture height; stock 6144 is changed to 0. Zero semantics,
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5663,7 +5663,7 @@ Names default shadow-texture width; stock 6144 is changed to 0. Zero semantics, 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5687,7 +5687,7 @@ Candidate disabling switch for a late-allocated transform buffer. Its exact path
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5711,7 +5711,7 @@ Candidate SceneSystem option named DisableShadowFullSort. The precise behavior, 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5735,7 +5735,7 @@ Candidate SceneSystem option named DynamicShadowResolution. The precise behavior
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5759,7 +5759,7 @@ Candidate SceneSystem option named EnableAlphaTint. The precise behavior, valid 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5783,7 +5783,7 @@ Candidate SceneSystem option named EnableSunlight. The precise behavior, valid v
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5807,7 +5807,7 @@ Candidate SceneSystem option named EnableViewModelSunlight. The precise behavior
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5831,7 +5831,7 @@ Names tools-mode cached-fog-shadow atlas height; stock 2048 becomes 0. This is a
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5855,7 +5855,7 @@ Names tools-mode cached-fog-shadow atlas width; stock 2048 becomes 0. This is a 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5879,7 +5879,7 @@ Names a maximum filtering radius for cached-fog-shadow tiles; a captured exact p
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5903,7 +5903,7 @@ Runtime cached-fog-shadow tile-size candidate whose exact path is captured in sc
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5927,7 +5927,7 @@ Names tools-mode cached-fog-shadow tile size; current stock is 128, unlike the i
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5951,7 +5951,7 @@ Selects the shipped R11G11B10F framebuffer-copy format. This is an internal buff
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5975,7 +5975,7 @@ Selects the stock GPU light-binner path. The capture does not describe an altern
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5999,7 +5999,7 @@ Candidate SceneSystem option named GpuLightBinnerBinEnvMaps. The precise behavio
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6023,7 +6023,7 @@ Candidate SceneSystem option named GpuLightBinnerBinLPVs. The precise behavior, 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6047,7 +6047,7 @@ Names the shipped sunlight fast-path option for the GPU light binner. Stock rete
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6071,7 +6071,7 @@ Candidate SceneSystem option named GpuLightBinnerSupportViewModelCascade. The pr
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6095,7 +6095,7 @@ Candidate internal HDR-framebuffer choice whose exact path appears in scenesyste
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6119,7 +6119,7 @@ Candidate SceneSystem option named HairShading. The precise behavior, valid valu
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6143,7 +6143,7 @@ Candidate startup full-sort batching threshold, absent from stock. The bare matc
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6167,7 +6167,7 @@ Candidate SceneSystem option named LightCookieAllocGranularity. The precise beha
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6191,7 +6191,7 @@ Candidate SceneSystem option named LightCookieMinAllocSize. The precise behavior
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6215,7 +6215,7 @@ Names a minimum late-allocated vertex-cache buffer size in MB; the exact key pat
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6239,7 +6239,7 @@ Stock gradient-fog startup option, changed from 1 to 0. Disabling its name alone
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6263,7 +6263,7 @@ Candidate SceneSystem option named ParticleBufferSize. The precise behavior, val
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6287,7 +6287,7 @@ Candidate SceneSystem option named PerVertexLighting. The precise behavior, vali
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6311,7 +6311,7 @@ Candidate SceneSystem option named PointLightShadowsEnabled. The precise behavio
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6335,7 +6335,7 @@ Candidate SceneSystem option named PunctualContactShadows. The precise behavior,
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6359,7 +6359,7 @@ Candidate SceneSystem option named SelfShadowStrength. The precise behavior, val
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6383,7 +6383,7 @@ Candidate SceneSystem option named ShadowAtlas. The precise behavior, valid valu
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6407,7 +6407,7 @@ Candidate SceneSystem option named ShadowDepth. The precise behavior, valid valu
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6431,7 +6431,7 @@ Candidate SceneSystem option named ShadowDepthBuffer. The precise behavior, vali
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6455,7 +6455,7 @@ Candidate SceneSystem option named ShadowDepthBufferNoCmp. The precise behavior,
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6479,7 +6479,7 @@ Candidate SceneSystem option named ShadowmapMaxFilterRadius. The precise behavio
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6503,7 +6503,7 @@ Candidate SceneSystem option named SparseShadowTrees. The precise behavior, vali
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6527,7 +6527,7 @@ Names the sunlight manager count, retained at stock 0. Zero's special meaning is
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6551,7 +6551,7 @@ Tools counterpart of the sunlight manager-count setting, retained at stock 0; sp
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6575,7 +6575,7 @@ Names a sunlight cascade-size limit, changed from stock 4 to 2. Units and interp
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6599,7 +6599,7 @@ Selects Depth as the sunlight shadow render mode, matching stock.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6623,7 +6623,7 @@ Candidate SceneSystem option named SupportsInstancedFade. The precise behavior, 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6647,7 +6647,7 @@ Stock scene tone-mapping option set to 0. That value does not establish that no 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6671,7 +6671,7 @@ Names transform-texture row capacity, retained at stock 1024; actual resource al
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6695,7 +6695,7 @@ Names tools-mode transform-texture row capacity, retained at stock 6144; no ordi
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6719,7 +6719,7 @@ Stock volumetric-fog startup option, changed from 1 to 0. The actual effect unde
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6743,7 +6743,7 @@ Maps the blank light-cookie name to Valve's texture resource path; this is a res
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6767,7 +6767,7 @@ Maps the flashlight light-cookie name to Valve's texture resource path; this is 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7679,7 +7679,7 @@ Candidate WorldRenderer option named AggregateInstanceStream. The precise behavi
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7703,7 +7703,7 @@ Candidate WorldRenderer option named AggregateRTProxyDesc. The precise behavior,
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7727,7 +7727,7 @@ Candidate WorldRenderer option named AggregateSceneObjectDesc. The precise behav
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7751,7 +7751,7 @@ Candidate WorldRenderer option named AggregateVertexColorStream. The precise beh
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7775,7 +7775,7 @@ Selects the Citadel bindless scene-object descriptor name. This is stock game-sp
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7799,7 +7799,7 @@ Candidate runtime environment-map cache size, absent from stock; units and curre
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7823,7 +7823,7 @@ Names the tools environment-map cache size. The config requests 2 against stock 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. The name explicitly targets tools; a gameplay performance effect is not established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7847,7 +7847,7 @@ Selects linear environment-map color space, as shipped. The captured file does n
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7871,7 +7871,7 @@ Sets the environment-map face-size key to stock 256. Pixels are a name/context i
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7895,7 +7895,7 @@ Selects the shipped BC6H environment-map format. Format selection alone does not
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7919,7 +7919,7 @@ Selects the shipped GGXCubeMapBlur environment-map mip processor. Its exact offl
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7943,7 +7943,7 @@ Selects the environment-map preview format. Stock uses BC6H; the commented RGBA1
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7967,7 +7967,7 @@ Sets the environment-map render-size key to shipped 1024. Neither changing this 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -7991,7 +7991,7 @@ Selects environment-map cube-array use at the shipped value 1. Alternative-resou
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -8015,7 +8015,7 @@ Enables environment maps at the shipped value 1; the file does not document depe
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -8039,7 +8039,7 @@ Controls grass shadow casting by name and an exact captured key path; stock uses
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -8063,7 +8063,7 @@ Candidate light-propagation-volume edge-blending control. Upstream's CS2 shader 
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 

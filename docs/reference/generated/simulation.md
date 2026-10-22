@@ -180,7 +180,7 @@ Caps AI jobs executed serially within a frame; Valve help declares -1 unlimited.
 
 **Benefits and trade-offs:** A lower cap may defer AI work; the effects on local-server responsiveness and load are unmeasured.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -204,7 +204,7 @@ Commented example absent from the pinned dump. ai_disabled exists, but that does
 
 **Benefits and trade-offs:** No active effect from this comment; do not enable based on similarity to another engine or spelling.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -232,7 +232,7 @@ Registered AI-disable switch with no detailed help. Upstream reports that its te
 
 **Benefits and trade-offs:** Commented only. A global AI disable could materially alter local gameplay; it is replicated and cheat flagged, not an established client optimization.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -260,7 +260,7 @@ The name suggests AI foot-sweep processing; Valve supplies no explanatory help i
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -288,7 +288,7 @@ Valve console help: Allow gathering of conditions to be done asynchronously.
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -316,7 +316,7 @@ The name suggests automatic AI level-of-detail selection; Valve supplies no expl
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -344,7 +344,7 @@ The name suggests an AI check-stand optimization; Valve supplies no explanatory 
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -372,7 +372,7 @@ Controls the interval between NPC think updates at normal AI detail. The dump gi
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -400,7 +400,7 @@ Controls the interval between NPC think updates at low AI detail. The dump gives
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -428,7 +428,7 @@ Controls the interval between NPC think updates at medium AI detail. The dump gi
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -456,7 +456,7 @@ Controls the interval between NPC think updates at very low AI detail. The dump 
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -484,7 +484,7 @@ The name suggests asynchronous AI ragdoll correction; Valve supplies no explanat
 
 **Benefits and trade-offs:** These are game/server-module variables. Altering thinking cadence or work scheduling could change local NPC behavior or distribute server work, but a client install cannot lower a remote server’s AI workload. No performance result is established.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -512,7 +512,7 @@ Name suggests always doing a full spatial partition update; no detailed help is 
 
 **Benefits and trade-offs:** Retained stock behavior; correctness, work distribution, and online replicated value are not established by this audit.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -540,7 +540,7 @@ Name suggests avoiding redundant animation-graph network-variable work. The pinn
 
 **Benefits and trade-offs:** Requested true matches the declared default; no incremental benefit over that default is demonstrated.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -564,7 +564,7 @@ Commented parallel-animation example absent from this dump. Current name, regist
 
 **Benefits and trade-offs:** No isolated performance or gameplay measurement is recorded for this entry. A default pin is not evidence of a benefit; behavior and cost require a controlled comparison if a change is proposed.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -588,7 +588,7 @@ Commented parallel-animation example absent from this dump. Current name, regist
 
 **Benefits and trade-offs:** No isolated performance or gameplay measurement is recorded for this entry. A default pin is not evidence of a benefit; behavior and cost require a controlled comparison if a change is proposed.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -616,7 +616,7 @@ Name suggests controlling foot-lock tilt calculation; Valve provides no specific
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -644,7 +644,7 @@ Valve console help: A master convar that effectively disables the entire footloc
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -672,7 +672,7 @@ Name suggests controlling foot-lock ground-roll adjustment; Valve provides no sp
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -700,7 +700,7 @@ Name suggests controlling foot-lock hip-offset adjustment; Valve provides no spe
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -728,7 +728,7 @@ Valve console help: Enable IK.
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -756,7 +756,7 @@ Valve console help: Convar for toggling foot lock ground tracking.
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -784,7 +784,7 @@ Name suggests controlling foot-lock hip shifting; Valve provides no specific hel
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -812,7 +812,7 @@ Name suggests controlling animation-graph slowdown on slopes; Valve provides no 
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -836,7 +836,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 
 **Benefits and trade-offs:** No evidence from this snapshot supports power, scheduling, or performance claims. Absence is not proof of removal.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -864,7 +864,7 @@ Controls how quickly third-person camera offsets move toward ideal angles.
 
 **Benefits and trade-offs:** Requested 0 may affect camera convergence; whether Deadlock’s hero camera uses this inherited path is unverified.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -892,7 +892,7 @@ Name suggests ideal third-person camera distance; no explanatory Valve help is p
 
 **Benefits and trade-offs:** Commented only; whether the current hero camera uses this setting is unknown.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -920,7 +920,7 @@ Controls lag while the third-person offset follows ideal angles.
 
 **Benefits and trade-offs:** Requested 0 targets lag in this specific camera path; it does not prove reduced input latency in Deadlock.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -948,7 +948,7 @@ Reports missing captions: 0 none, 1 console, 2 HUD.
 
 **Benefits and trade-offs:** Requested 0 suppresses this diagnostic output if honored. It does not turn off all captions and is not a measured CPU saving.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -976,7 +976,7 @@ Selects particle aggregation. The dump registers the switch without explaining i
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1004,7 +1004,7 @@ Asynchronous user-command send switch inferred from its name; the pinned dump su
 
 **Benefits and trade-offs:** Do not enable the commented example on the assumption it smooths network jitter; that conflicts with Valve’s own stock rationale.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1028,7 +1028,7 @@ Absent from the dump but present in Valve stock. The stock comment describes ext
 
 **Benefits and trade-offs:** Absence does not prove removal. Exact runtime units and applicability of 0.5 remain unverified despite the stock provenance.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1056,7 +1056,7 @@ Batches entity-list insertions/removals during interpolation latching; Valve ide
 
 **Benefits and trade-offs:** The intended contention reduction is documented; a frame-time gain, memory cost, or correctness change on this build is not measured.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1084,7 +1084,7 @@ Name suggests enabling a client bone-cache optimization; Valve provides no furth
 
 **Benefits and trade-offs:** Requested 1 matches the declared true default. No incremental benefit is demonstrated.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1112,7 +1112,7 @@ Adds ticks of clock-synchronization receive margin to smooth packet loss. Valve 
 
 **Benefits and trade-offs:** Retains stock 1. It is not a zero-latency setting; actual prediction offset requires runtime capture and cannot be calculated from another Source game’s tick rate.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1140,7 +1140,7 @@ Ragdoll-disable toggle with no descriptive Valve help; requested 0 retains its f
 
 **Benefits and trade-offs:** Do not infer that the other ragdoll reductions are safe just because this switch remains false.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1164,7 +1164,7 @@ Absent from the dump; the name suggests an eye occlusion feature, but current re
 
 **Benefits and trade-offs:** No basis to claim current model/shading or CPU changes.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1192,7 +1192,7 @@ Registered temporary-entity collision-related setting; the dump gives no help de
 
 **Benefits and trade-offs:** The requested 1000 versus default 5 cannot safely be described as a collision cap, budget, or faster path from the name alone.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1220,7 +1220,7 @@ Enables raw keyboard input.
 
 **Benefits and trade-offs:** No active assignment. Raw input is not evidence of lower latency or compatibility on this build; the reported issue was not reproduced.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1244,7 +1244,7 @@ Commented interpolation-time example absent from the pinned dump.
 
 **Benefits and trade-offs:** No current setting effect is established. Do not use a CS2/Source 1 formula to treat 0.01 as a verified Deadlock interpolation delay.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1272,7 +1272,7 @@ Runs interpolation concurrently for entities without children.
 
 **Benefits and trade-offs:** Parallel execution can redistribute work; the current file does not establish how much eligible interpolation work a match has.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1300,7 +1300,7 @@ Valve’s legacy-style help describes interpolation as this ratio divided by cl_
 
 **Benefits and trade-offs:** These competing descriptions do not establish the active implementation. Zero must not be advertised as zero interpolation/latency; runtime packet/interpolation capture is needed.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1328,7 +1328,7 @@ Appears to bound particle visibility volumes; the dump does not describe the alg
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1356,7 +1356,7 @@ Name suggests concurrently gathering modifier/status-effect updates; Valve suppl
 
 **Benefits and trade-offs:** Requested false matches the declared default. No incremental benefit is established, and replicated online state may differ.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1384,7 +1384,7 @@ Selects a particle batch mode. The current dump supplies no enum documentation; 
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1412,7 +1412,7 @@ Sets the base contribution to choosing cheaper particle effects under load.
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1440,7 +1440,7 @@ Scales the choice of cheaper particle fallback effects under load.
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1468,7 +1468,7 @@ Appears to cap particle count; exact scope and the meaning of zero are not descr
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1496,7 +1496,7 @@ Controls how aggressively newly created particle systems fall back after their s
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1524,7 +1524,7 @@ Sets the particle simulation time threshold before newly created systems begin u
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1552,7 +1552,7 @@ Name suggests animated physics hierarchy handling; the dump has no descriptive h
 
 **Benefits and trade-offs:** A name containing threaded or batch is not evidence of a speedup. Test stability and workload only if proposing to change its preserved value.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1580,7 +1580,7 @@ Chooses fixed client tick interval assumptions for physics substeps; false recal
 
 **Benefits and trade-offs:** Requested true matches the declared default. No extra gain from the pin is established.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1608,7 +1608,7 @@ Master enable for client physics simulation, per Valve help.
 
 **Benefits and trade-offs:** Do not confuse the false commented example with the active value or claim physics is currently disabled.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1636,7 +1636,7 @@ Name suggests starting networked physics bodies asleep; the dump has no descript
 
 **Benefits and trade-offs:** A name containing threaded or batch is not evidence of a speedup. Test stability and workload only if proposing to change its preserved value.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1664,7 +1664,7 @@ Allows dynamic physics bodies to sleep when eligible.
 
 **Benefits and trade-offs:** Requested true matches the declared default. Benefit depends on physics bodies and their activity; there is no measured incremental saving.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1692,7 +1692,7 @@ When true, polls network messages every frame rather than every tick.
 
 **Benefits and trade-offs:** Retains stock false despite declared default true. Actual input/network latency impact is not measured; changing to true would be a tuning change.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1720,7 +1720,7 @@ Name suggests the default ragdoll scale, but the dump does not define units, app
 
 **Benefits and trade-offs:** Requested 0 is an inherited visual reduction. It is not evidence that no ragdoll physics is simulated.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1748,7 +1748,7 @@ Caps the number of displayed ragdolls; Valve documents -1 as unlimited.
 
 **Benefits and trade-offs:** Zero requests a zero-ragdoll limit; timing/retirement details and gameplay readability still need testing. This differs from disabling the underlying physics system.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1776,7 +1776,7 @@ Delay in seconds before resending a connection attempt.
 
 **Benefits and trade-offs:** Commented 15 would wait longer between connect retries if applied. This does not establish protection from kicks/timeouts during an established connection as the inline note suggests.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1804,7 +1804,7 @@ Allows higher-priority dynamic lights to replace lower-priority ones.
 
 **Benefits and trade-offs:** Requested true can change which light contributions survive if the path is active; neither a guaranteed reduction in all lights nor a measured performance gain follows.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1832,7 +1832,7 @@ Name/upstream comments identify drawing splash effects; no detailed Valve help.
 
 **Benefits and trade-offs:** Requested 0 may reduce visible effects and readability if honored; CPU/GPU savings are unmeasured.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1860,7 +1860,7 @@ Name suggests simulating dormant client entities; exact dormancy conditions and 
 
 **Benefits and trade-offs:** Requested false could suppress updates if used. Visibility transitions and animation correctness require testing; CPU savings are unverified.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1888,7 +1888,7 @@ Skips game animations when enabled, according to Valve help.
 
 **Benefits and trade-offs:** Commented only. The upstream report of menu models freezing in an A-pose is unverified here; do not treat skipped animation as a free optimization.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1916,7 +1916,7 @@ Time in seconds for smoothing the client view after a prediction error.
 
 **Benefits and trade-offs:** Commented 0.01 would shorten correction smoothing if honored; it does not reduce packet transit or input processing time.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1944,7 +1944,7 @@ Multiplied by the tick interval and added to cl_tickpacket_recvmargin_desired to
 
 **Benefits and trade-offs:** Retains stock 1. The dump limits the field to 0–5; do not assume a fixed tick rate or exact end-to-end latency from this value.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1972,7 +1972,7 @@ Target user-command arrival margin in milliseconds before the server needs the c
 
 **Benefits and trade-offs:** Retains stock 5. This margin is not complete network latency; packet pacing, other margins and server conditions also matter.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2000,7 +2000,7 @@ Number of update packets per second requested from the server; a request is not 
 
 **Benefits and trade-offs:** Do not infer a 128 Hz simulation tick rate or actual snapshot delivery from this value alone.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2028,7 +2028,7 @@ For local listen-server connections, uses the network stack and 127.0.0.1 instea
 
 **Benefits and trade-offs:** Retains stock 1. It is a local connection/testing choice, not a faster internet-server transport.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2056,7 +2056,7 @@ Enables closed captions; requested false matches the declared default.
 
 **Benefits and trade-offs:** Captions may convey audio information. No performance improvement is established by disabling them.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2084,7 +2084,7 @@ Selects the stateless FilterTransform variant for cloth; the stock value 0 keeps
 
 **Benefits and trade-offs:** Implementation and performance difference are not described. The repository retains stock rather than establishing an improvement.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2112,7 +2112,7 @@ Name suggests choosing tick-based cloth updates; Valve’s dump does not describ
 
 **Benefits and trade-offs:** The inline note does not explain the requested 0. It cannot be presented as disabling cloth or as a measured CPU saving; visual cadence and frame-time effects need a controlled test.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2140,7 +2140,7 @@ Valve console help: CPU Level - Default: High
 
 **Benefits and trade-offs:** Commented example only. These level labels do not document a per-mode implementation or an automatic performance improvement. gpu_level’s inline claim that the engine always sets 2 conflicts with the dump’s default 3 and is unverified.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2168,7 +2168,7 @@ Maximum milliseconds of user commands the server allows a client to buffer.
 
 **Benefits and trade-offs:** Retains stock 120. The inline 64 Hz conversion is an arithmetic example, not evidence that current matches run at that tick rate; the field is replicated.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2196,7 +2196,7 @@ Global debug-draw-related switch, but Valve provides no further help; exact cons
 
 **Benefits and trade-offs:** Disabling a debug path may have no cost impact when no debug overlays are requested. Replication further prevents assuming the local value controls online rendering.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2220,7 +2220,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 
 **Benefits and trade-offs:** No evidence from this snapshot supports power, scheduling, or performance claims. Absence is not proof of removal.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2248,7 +2248,7 @@ The name and upstream label indicate bone-driven flex/deformation control; Valve
 
 **Benefits and trade-offs:** Requested 0 may change model deformation if honored. Which heroes/features use it and whether it saves work remain unverified.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2272,7 +2272,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 
 **Benefits and trade-offs:** No evidence from this snapshot supports power, scheduling, or performance claims. Absence is not proof of removal.
 
-**Applicability and effectiveness:** Registration and supported contexts are unresolved in the pinned snapshot; an absent dump entry does not prove removal. Restart the game before testing edits to gameinfo.gi. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2300,7 +2300,7 @@ Uses time since the preceding input-processing pass when processing input severa
 
 **Benefits and trade-offs:** Relevant when multiple simulation ticks occur per frame. This does not establish lower end-to-end input latency, and any feel change needs measurement.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2328,7 +2328,7 @@ When low-latency mode is active, selects whether its sleep occurs after client s
 
 **Benefits and trade-offs:** Conditional on the low-latency path. It is not a blanket toggle for Reflex or a measured latency improvement.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2356,7 +2356,7 @@ Limits simulation ticks processed per frame. Valve explicitly states that exceed
 
 **Benefits and trade-offs:** Requested 2 may bound a frame’s simulation work at the cost of catch-up capacity. Whether it reduces fight stalls or worsens recovery must be measured; it is not a generic faster-simulation setting.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2384,7 +2384,7 @@ Valve console help: Draw a line between a rendered joint and its parent.
 
 **Benefits and trade-offs:** Commented server-side debug drawing examples, not gameplay quality settings. There is no performance benefit to disabling an overlay that is not in use.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2412,7 +2412,7 @@ Valve console help: Draw the name of a rendered joint.
 
 **Benefits and trade-offs:** Commented server-side debug drawing examples, not gameplay quality settings. There is no performance benefit to disabling an overlay that is not in use.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2440,7 +2440,7 @@ Draws metal-spark effects.
 
 **Benefits and trade-offs:** Requested false removes that presentation if honored; any performance benefit depends on the effect being used and has not been measured.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2468,7 +2468,7 @@ Valve console help: GPU Level - Default: High
 
 **Benefits and trade-offs:** Commented example only. These level labels do not document a per-mode implementation or an automatic performance improvement. gpu_level’s inline claim that the engine always sets 2 conflicts with the dump’s default 3 and is unverified.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2496,7 +2496,7 @@ Valve console help: Memory Level - Default: High
 
 **Benefits and trade-offs:** Commented example only. These level labels do not document a per-mode implementation or an automatic performance improvement. gpu_level’s inline claim that the engine always sets 2 conflicts with the dump’s default 3 and is unverified.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2524,7 +2524,7 @@ Name suggests controlling IK constraints; Valve provides no specific help, so pr
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2552,7 +2552,7 @@ Name suggests controlling the named dogleg three-bone IK path; Valve provides no
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2580,7 +2580,7 @@ Name suggests controlling the debug-labelled backward FABRIK IK path; Valve prov
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2608,7 +2608,7 @@ Name suggests controlling the debug-labelled forward FABRIK IK path; Valve provi
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2636,7 +2636,7 @@ Valve console help: Enable IK.
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2664,7 +2664,7 @@ Name suggests controlling FABRIK chain alignment; Valve provides no specific hel
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2692,7 +2692,7 @@ Name suggests controlling the backward FABRIK IK pass; Valve provides no specifi
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2720,7 +2720,7 @@ Name suggests controlling the forward FABRIK IK pass; Valve provides no specific
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2748,7 +2748,7 @@ Name suggests controlling a final IK correction pass; Valve provides no specific
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2776,7 +2776,7 @@ Name suggests controlling plane-tilt adjustment; Valve provides no specific help
 
 **Benefits and trade-offs:** Possible pose, foot-contact, slope, or motion changes need visual comparison. The flags are replicated, so an online local override cannot be assumed. No isolated FPS benefit or absence of animation artifacts is established.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2804,7 +2804,7 @@ Enables instant-replay recording.
 
 **Benefits and trade-offs:** Commented true retains default intent. Upstream warns that disabling recording leaves idle animations in replays; neither that observation nor a cost reduction was tested.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2832,7 +2832,7 @@ Name suggests concurrent restoration of interpolated variables; the dump provide
 
 **Benefits and trade-offs:** Retained stock behavior; exact workload and restart/runtime behavior are undocumented in the inspected sources.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2860,7 +2860,7 @@ The name identifies a minimap update rate in hertz, but the dump supplies no fur
 
 **Benefits and trade-offs:** These are server-module-only registrations. A local client file cannot set the remote match’s update cadence; possible local-server savings and marker staleness are unmeasured.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2888,7 +2888,7 @@ The name identifies a minimap update rate in hertz, but the dump supplies no fur
 
 **Benefits and trade-offs:** These are server-module-only registrations. A local client file cannot set the remote match’s update cadence; possible local-server savings and marker staleness are unmeasured.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2916,7 +2916,7 @@ Name suggests drawing movement statistics; no descriptive help.
 
 **Benefits and trade-offs:** Commented server-side cheat/debug example; not a gameplay optimization.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2944,7 +2944,7 @@ Displays Hideout music-manager debug information.
 
 **Benefits and trade-offs:** Commented only; no performance effect is established.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2972,7 +2972,7 @@ Camera-related navigation-editor toggle; exact mode is not described.
 
 **Benefits and trade-offs:** This is a cheat-flagged server navigation-editing setting. No evidence makes it an ordinary player camera optimization.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3000,7 +3000,7 @@ Name suggests a navigation-generation connection distance; exact units/algorithm
 
 **Benefits and trade-offs:** Retains Valve stock 2.0. Server navigation-generation/tooling use is distinct from ordinary client match performance.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3028,7 +3028,7 @@ Name suggests asynchronous navigation-obstruction updates; no detailed help.
 
 **Benefits and trade-offs:** Server-module-only experiment; a local client file cannot reduce remote server navigation work.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3056,7 +3056,7 @@ Restricts GatherSendProxyResults traversal to struct and array fields instead of
 
 **Benefits and trade-offs:** Stock optimization intent is evident from help; network bandwidth or client frame-time savings are not measured.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3084,7 +3084,7 @@ Name suggests parallel physics invalidation; no detailed help is provided. The a
 
 **Benefits and trade-offs:** Retained stock behavior; correctness, work distribution, and online replicated value are not established by this audit.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3112,7 +3112,7 @@ Name suggests parallel surrounding-bounds updates; no detailed help is provided.
 
 **Benefits and trade-offs:** Retained stock behavior; correctness, work distribution, and online replicated value are not established by this audit.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3140,7 +3140,7 @@ Registered replicated particle-cluster drawing switch. Exact cluster scope and o
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Replicated: distinguish local-server experiments from authority held by an online server. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3168,7 +3168,7 @@ Registered replicated particle-cluster collision-hull switch. No evidence suppor
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Replicated: distinguish local-server experiments from authority held by an online server. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3196,7 +3196,7 @@ Name suggests aggregate world physics compounds; no detailed help is provided. T
 
 **Benefits and trade-offs:** Retained stock behavior; correctness, work distribution, and online replicated value are not established by this audit.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3224,7 +3224,7 @@ Name suggests batched physics ray testing; the dump has no descriptive help. Exa
 
 **Benefits and trade-offs:** A name containing threaded or batch is not evidence of a speedup. Test stability and workload only if proposing to change its preserved value.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3252,7 +3252,7 @@ Name suggests culling internal mesh collision contacts. The dump supplies no hel
 
 **Benefits and trade-offs:** Contact pruning could alter collision behavior if used. No proof of a safe CPU gain exists in the reviewed sources.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3280,7 +3280,7 @@ Physics dynamic-scaling switch with no explanatory help. A false example is inte
 
 **Benefits and trade-offs:** Commented only; the reported gameplay failure was not reproduced here. Replicated and cheat flags also limit conclusions about local online control.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in stable; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in stable; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3308,7 +3308,7 @@ Name suggests threaded cloth-bone updates; the dump has no descriptive help. Exa
 
 **Benefits and trade-offs:** A name containing threaded or batch is not evidence of a speedup. Test stability and workload only if proposing to change its preserved value.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3336,7 +3336,7 @@ Name suggests threaded kinematic-bone updates; the dump has no descriptive help.
 
 **Benefits and trade-offs:** A name containing threaded or batch is not evidence of a speedup. Test stability and workload only if proposing to change its preserved value.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3364,7 +3364,7 @@ Name suggests threaded transform updates; the dump has no descriptive help. Exac
 
 **Benefits and trade-offs:** A name containing threaded or batch is not evidence of a speedup. Test stability and workload only if proposing to change its preserved value.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3392,7 +3392,7 @@ Caps breakable prop pieces created per frame; Valve documents -1 as using the mo
 
 **Benefits and trade-offs:** Zero requests no generated breakable pieces; it does not mean one piece as the inline note says. Replication may prevent the local request from deciding online behavior.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3420,7 +3420,7 @@ Name suggests parallel ragdoll pose control; the dump has no descriptive help. E
 
 **Benefits and trade-offs:** A name containing threaded or batch is not evidence of a speedup. Test stability and workload only if proposing to change its preserved value.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3448,7 +3448,7 @@ Structured gameinfo default metadata for rate; this is not a separate ConVar nam
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -3476,7 +3476,7 @@ Structured gameinfo max metadata for rate; this is not a separate ConVar named m
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -3504,7 +3504,7 @@ Structured gameinfo min metadata for rate; this is not a separate ConVar named m
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -3532,7 +3532,7 @@ Valve console help: Collide rope with the world
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3560,7 +3560,7 @@ Valve console help: How much to enlarge ropes in screen space for antialiasing e
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3588,7 +3588,7 @@ Valve console help: Alpha for rope antialiasing effect
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3616,7 +3616,7 @@ Name suggests the screen-space width associated with maximum smoothing alpha, bu
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3644,7 +3644,7 @@ Valve console help: Alpha for rope antialiasing effect
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3672,7 +3672,7 @@ Valve console help: When using smoothing, this is the min screenspace width it l
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3700,7 +3700,7 @@ Valve console help: Rope subdivision amount
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3728,7 +3728,7 @@ Valve console help: Don't use CPU applying small wind gusts to ropes when they'r
 
 **Benefits and trade-offs:** Inherited zero aims to reduce rope collision, smoothing, subdivision, or wind work. Actual Deadlock consumers and interaction with r_drawropes false are unverified; do not assume traversal ziplines use this renderer or that zero is safe for every field.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3756,7 +3756,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 
 **Benefits and trade-offs:** The requested value should not be interpreted as disabling the camera, enabling automatic FOV, or improving latency. Relevance to Deadlock’s hero camera is unverified.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3784,7 +3784,7 @@ Allows dynamic ray-tracing acceleration structures for geometry using compute-sh
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3812,7 +3812,7 @@ Reuses dynamic ray-tracing acceleration structures when geometry has not changed
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3840,7 +3840,7 @@ Uses default ray-hit shaders instead of specialized shaders for ray-traced geome
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3868,7 +3868,7 @@ Sets the texture resolution requested by the ray tracer. The captured declared d
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Only relevant when the corresponding ray-tracing infrastructure runs. Presence in this dump does not establish enabled gameplay ray tracing on either renderer. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3896,7 +3896,7 @@ Valve describes an internal LOD-mask computation that forces every LOD group’s
 
 **Benefits and trade-offs:** The requested true cannot be described as simply fewer bones or faster animation. Check the inherited active and commented assignments, replication, actual bone work, and frame times.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3924,7 +3924,7 @@ Registered input-button timing switch with no explanatory help.
 
 **Benefits and trade-offs:** That compatibility report is unverified; the commented value contributes no active assignment.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3952,7 +3952,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 
 **Benefits and trade-offs:** Inherited 1 is a server-side experiment. A client file cannot control a remote server’s entity visibility or prove a local FPS gain.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3980,7 +3980,7 @@ Filters lag-compensation targets by player view angle when enabled.
 
 **Benefits and trade-offs:** Retains stock false. Server-side/cheat registration does not establish local online influence or a performance benefit.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4008,7 +4008,7 @@ Maximum lag-compensation window, in seconds.
 
 **Benefits and trade-offs:** Retains stock 0.500. This server-side limit is not the client’s ping, input latency, or interpolation delay.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4036,7 +4036,7 @@ If positive, caps lag compensation for other human pawns after sv_maxunlag, acco
 
 **Benefits and trade-offs:** Retains stock 0.200. A client file cannot reconfigure a remote server; this is not a local latency optimization.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4064,7 +4064,7 @@ Minimum bandwidth rate allowed by the server; 0 is unlimited according to the du
 
 **Benefits and trade-offs:** Retains stock 98304. A local file cannot change a remote server’s replicated minimum; actual bandwidth and negotiation remain unverified.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4092,7 +4092,7 @@ Threaded entity transmit/PVS checking: 1 for listen servers, 2 for dedicated ser
 
 **Benefits and trade-offs:** Retains stock 2. This does not mean two threads, and it is not a client rendering optimization.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4120,7 +4120,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 
 **Benefits and trade-offs:** Inherited 1 is a server-side experiment. A client file cannot control a remote server’s entity visibility or prove a local FPS gain.
 
-**Applicability and effectiveness:** The dump registers this in the game/server module only. A local client config cannot configure a remote authoritative server; a local/server context may use it. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4148,7 +4148,7 @@ Vertical view adjustment when eyes are near a water surface.
 
 **Benefits and trade-offs:** Requested 0 is a replicated camera/view fixup choice, not a proven reduction in water rendering or network work.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4176,7 +4176,7 @@ Selects an engine thread-pool option; Valve’s help does not define the numeric
 
 **Benefits and trade-offs:** Thread count, affinity, scheduler behavior, and benefit on the owner’s 8-thread CPU are unresolved. No reason to claim that 2 increases performance.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4204,7 +4204,7 @@ Controls whether broadcast/TV intermediate frames use delta storage. Valve expli
 
 **Benefits and trade-offs:** The requested false aims to avoid delta-encoding CPU work but can increase TV storage memory use if that path is active. Ordinary client relevance is unresolved.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4232,7 +4232,7 @@ Name suggests updating all keyframed objects during spatial partition updates; n
 
 **Benefits and trade-offs:** Retained stock behavior; correctness, work distribution, and online replicated value are not established by this audit.
 
-**Applicability and effectiveness:** Replicated flag: the server can supply this value. Do not assume a local requested value persists in an online match. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4260,7 +4260,7 @@ Valve console help: Draw alien blood
 
 **Benefits and trade-offs:** Requested 0 suppresses the corresponding blood/gib category if used. Deadlock hero/effect mapping to legacy human/alien categories is not documented; no FPS benefit is measured.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4288,7 +4288,7 @@ Valve console help: Show alien gib entities
 
 **Benefits and trade-offs:** Requested 0 suppresses the corresponding blood/gib category if used. Deadlock hero/effect mapping to legacy human/alien categories is not documented; no FPS benefit is measured.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4316,7 +4316,7 @@ Valve console help: Draw human blood
 
 **Benefits and trade-offs:** Requested 0 suppresses the corresponding blood/gib category if used. Deadlock hero/effect mapping to legacy human/alien categories is not documented; no FPS benefit is measured.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4344,7 +4344,7 @@ Valve console help: Show human gib entities
 
 **Benefits and trade-offs:** Requested 0 suppresses the corresponding blood/gib category if used. Deadlock hero/effect mapping to legacy human/alien categories is not documented; no FPS benefit is measured.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Archive flag indicates saved-setting involvement; ordering against saved config or menus has not been measured here. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
