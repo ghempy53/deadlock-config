@@ -69,6 +69,8 @@ CS2, Dota 2 and Source 1 behavior is not accepted as proof of Deadlock behavior.
 - [Source manifest](reference/sources.json): full commits, build, URLs and SHA-256 hashes.
 - [Pinned snapshot](reference/snapshot.json): relevant console metadata plus stock/upstream occurrences for offline regeneration.
 - Durable annotations: [core](reference/core.json), [rendering](reference/rendering.json), [runtime](reference/runtime.json).
+  They hold setting-specific explanations. Flag, registration-scope, duplicate, disabled-state and restart caveats
+  are generated from the snapshot, so they follow a refreshed dump; do not restate them in an annotation.
 - [Coverage inventory](reference/coverage.json): every occurrence/section, exact config hashes and counts.
 
 ```sh

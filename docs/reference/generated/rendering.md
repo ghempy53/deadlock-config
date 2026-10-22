@@ -258,7 +258,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -286,7 +286,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -314,7 +314,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -342,7 +342,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -370,7 +370,7 @@ Registered shadow caster/receiver distance control whose help calls it the defau
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -398,7 +398,7 @@ Overrides how many cascades sunlight shadows use; the help does not establish th
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -426,7 +426,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -454,7 +454,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -482,7 +482,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -510,7 +510,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -538,7 +538,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -562,7 +562,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -590,7 +590,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -618,7 +618,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -646,7 +646,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -674,7 +674,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -702,7 +702,7 @@ Enables fog. The cheat flag and interaction with separate gameinfo-blocked fog s
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -726,7 +726,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -750,7 +750,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -778,7 +778,7 @@ Scales computed barn-light shadowmap size. The behavior of zero is not explained
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -806,7 +806,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -834,7 +834,7 @@ Overrides the width and height of individual cascaded shadow maps; this is a siz
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -862,7 +862,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -890,7 +890,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -918,7 +918,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -946,7 +946,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -974,7 +974,7 @@ Enables the companion override choosing which cascades render static objects.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1002,7 +1002,7 @@ Supplies the static-geometry cascade override value when the companion switch is
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1030,7 +1030,7 @@ Adjusts shader depth bias for shadow receivers. Valve help notes interaction wit
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1058,7 +1058,7 @@ Adjusts depth bias for transmissive back-face geometry receiving shadows.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1086,7 +1086,7 @@ Registered control related to cubemap normalization. Stock gameinfo sets 1 with 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1114,7 +1114,7 @@ Registered cubemap-normalization roughness control with no explanatory help. A v
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1142,7 +1142,7 @@ Adjusts shadow penumbra according to light size.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1170,7 +1170,7 @@ Sets the base dynamic-shadow resolution for a light occupying the screen. Smalle
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1198,7 +1198,7 @@ Sets the quantization of computed dynamic-shadow sizes. The help does not establ
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1226,7 +1226,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1254,7 +1254,7 @@ Controls dynamic light rendering. The requested true value also matches the decl
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1282,7 +1282,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1310,7 +1310,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1338,7 +1338,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1362,7 +1362,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1390,7 +1390,7 @@ Allows stationary and dynamic lights to cast shadows. Its absence from the gamei
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1418,7 +1418,7 @@ Controls stationary or mixed lights. The captured gameinfo_cannot_override flag 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1446,7 +1446,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1474,7 +1474,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1502,7 +1502,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1530,7 +1530,7 @@ The captured Valve help documents this control in lighting, shadows or post-proc
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1558,7 +1558,7 @@ The captured Valve help documents this control in texture streaming, sampling or
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1586,7 +1586,7 @@ The captured Valve help documents this control in texture streaming, sampling or
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1614,7 +1614,7 @@ Controls the subsurface sample count. The dump does not document the rendering p
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1642,7 +1642,7 @@ Sets the shadow-map size threshold, in texels, below which an object is culled.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1666,7 +1666,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1694,7 +1694,7 @@ Registered color-correction switch. No documented performance benefit is attache
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1722,7 +1722,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1750,7 +1750,7 @@ Registered bloom-scale control with default -1 and no help. Special values and i
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1778,7 +1778,7 @@ The captured Valve help documents this control in rendering. No additional Deadl
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1806,7 +1806,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1834,7 +1834,7 @@ The captured Valve help documents this control in scene traversal, visibility or
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1862,7 +1862,7 @@ Registered area-light rendering switch also present in video presets. The help d
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1890,7 +1890,7 @@ Registered camera/rendering aspect override. Both configs retain disabled exampl
 
 **Benefits and trade-offs:** The disabled lines make no assignment and do not reset saved settings or the FOV mod. Verify the resulting view with the owner's selected mod and slider. PR83's reported Sandbox cap is historical owner evidence, not an audit reproduction or proof of every camera path. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1914,7 +1914,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1942,7 +1942,7 @@ Registered resolution control associated with the character decal monitor. The d
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1970,7 +1970,7 @@ Sets the character decal texture resolution. Very small requested resolutions ma
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -1998,7 +1998,7 @@ Registered client camera clipping-opacity control. The declared default is 0.4, 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2022,7 +2022,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2050,7 +2050,7 @@ Citadel depth-of-field enable switch. The captured dump blocks gameinfo override
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2078,7 +2078,7 @@ Disables particle lights except where a particle renderer operation explicitly o
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Client registration is captured; it does not establish startup load order or effectiveness. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2102,7 +2102,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2130,7 +2130,7 @@ Sets the Citadel fog quality selector used by the captured video presets. The cu
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2158,7 +2158,7 @@ Applies a negative mip bias while rendering with FSR. Its effect depends on the 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2186,7 +2186,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2214,7 +2214,7 @@ Selects Citadel GPU culling. The config requests the declared default true, and 
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2242,7 +2242,7 @@ Selects two-pass GPU culling. The captured flag blocks gameinfo overrides; upstr
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2270,7 +2270,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2294,7 +2294,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2322,7 +2322,7 @@ Controls NPR outlines; the captured gameinfo_cannot_override flag prevents the c
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2350,7 +2350,7 @@ Sets maximum NPR-outline rendering distance; the captured flag prevents gameinfo
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2374,7 +2374,7 @@ Candidate particle rendering or simulation scheduling control inherited in the c
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2402,7 +2402,7 @@ Sets selection-outline alpha; the captured flag prevents gameinfo overrides.
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2430,7 +2430,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2458,7 +2458,7 @@ Selects shadow quality used in video presets. The declared default is 1; a menu 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2486,7 +2486,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2510,7 +2510,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2538,7 +2538,7 @@ Registered AO quality selector also present in video presets. Exact quality-leve
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2562,7 +2562,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2586,7 +2586,7 @@ Candidate lighting, shadows or post-processing control inherited in the config, 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2614,7 +2614,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2642,7 +2642,7 @@ Registered dashboard quality selector also present in video presets. The dump de
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2670,7 +2670,7 @@ Registered decal count control replicated between game and client. It is intenti
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Replicated: distinguish local-server experiments from authority held by an online server. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2698,7 +2698,7 @@ Registered default decal fade-duration control, replicated between game and clie
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Replicated: distinguish local-server experiments from authority held by an online server. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2726,7 +2726,7 @@ Registered depth-of-field switch used in the captured video presets; it is separ
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2754,7 +2754,7 @@ Enables distance-field rendering. This switch does not document every dependent 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2782,7 +2782,7 @@ Registered visibility switch. Upstream warns about invisible boxes; the precise 
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2810,7 +2810,7 @@ Registered 3D-skybox switch. A verified gameplay-specific effect or cost was not
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2838,7 +2838,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2866,7 +2866,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2890,7 +2890,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2918,7 +2918,7 @@ Controls whether particle children draw with their parents: -1 uses gameinfo, 0 
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2946,7 +2946,7 @@ Enables decal rendering. Disabling decals can remove gameplay indicators; the re
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -2974,7 +2974,7 @@ Registered client rope-rendering switch with no help; it must not be assumed to 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3002,7 +3002,7 @@ Enables the 2D skybox. The current dump prevents gameinfo overrides.
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3030,7 +3030,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3058,7 +3058,7 @@ Toggles first-person weapon tracer visibility. It is archived, so persisted user
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Archived/per-user state may provide another value; load-order precedence was not tested. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3086,7 +3086,7 @@ Enables viewmodel rendering. This does not change the world model or establish t
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3114,7 +3114,7 @@ Enables software command lists for DX11 instead of deferred contexts. This expli
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** DX11-specific by Valve help. This audit did not compare command-list behavior or Vulkan applicability. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** DX11-specific by Valve help. This audit did not compare command-list behavior or Vulkan applicability. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3142,7 +3142,7 @@ Registered bloom-effect switch used by the captured video presets; its exact rel
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3170,7 +3170,7 @@ Enables cubemap fog; the captured flag blocks changing it through gameinfo.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3198,7 +3198,7 @@ Enables gradient fog; the captured flag blocks changing it through gameinfo.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3226,7 +3226,7 @@ Registered rigid-animation switch with no detailed help.
 
 **Benefits and trade-offs:** Requested false already matches the declared default. It does not establish an additional animation optimization.
 
-**Applicability and effectiveness:** Client-module registration; actual use by the current game path is not established by registration alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3254,7 +3254,7 @@ Enables volume fog; the captured flag blocks changing it through gameinfo.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3282,7 +3282,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3310,7 +3310,7 @@ Scales requested texture size for geometry lacking precomputed UV density; the c
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3338,7 +3338,7 @@ Overrides the far clipping plane; -1 uses env_fog_controller. Closer clipping ca
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3362,7 +3362,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3390,7 +3390,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3418,7 +3418,7 @@ Appears to set the end of grass fading. The dump has no units/help and declares 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3446,7 +3446,7 @@ Sets grass quality: 0 off, 1 low, 2 medium, 3 high, 4 ultra.
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3474,7 +3474,7 @@ Appears to set the start of grass fading. The dump has no units/help and declare
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3502,7 +3502,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3530,7 +3530,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3558,7 +3558,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3586,7 +3586,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3614,7 +3614,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3642,7 +3642,7 @@ Registered particle synchronization switch. The dump does not describe how it ch
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3670,7 +3670,7 @@ Registered replicated light-flicker switch. Its presence in a local file does no
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Replicated: distinguish local-server experiments from authority held by an online server. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3698,7 +3698,7 @@ Registered archived, per-user light-sensitivity setting. This should be treated 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Archived/per-user state may provide another value; load-order precedence was not tested. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3722,7 +3722,7 @@ Candidate texture streaming, sampling or lightmap resources control inherited in
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3750,7 +3750,7 @@ Sets the maximum lightmap resolution. It does not directly state the resolution 
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3778,7 +3778,7 @@ Sets a separate maximum for directional-irradiance lightmaps; -1 follows r_light
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3806,7 +3806,7 @@ Registered switch whose name suggests a particle-job time limit. The duration, s
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3834,7 +3834,7 @@ Selects NVIDIA Low Latency or AMD Anti-Lag 2: 0 off, 1 on, 2 NVIDIA-only on plus
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3862,7 +3862,7 @@ Sets the maximum map dimension used to determine the far clipping plane. Interac
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3890,7 +3890,7 @@ Registered portal render-target limit. The captured default is 2, not the inline
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3918,7 +3918,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3946,7 +3946,7 @@ Name suggests enabling morph deformation; there is no detailed Valve help in the
 
 **Benefits and trade-offs:** Requested false could suppress deformation if the path runs. Visual or performance effects are unverified and cheat flagged.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. Cheat/development flags are recorded, but they do not prove gameinfo startup application or a bypass of runtime restrictions. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3970,7 +3970,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -3998,7 +3998,7 @@ Registered muzzle-flash brightness control with replication; the server can matt
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Replicated: distinguish local-server experiments from authority held by an online server. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4022,7 +4022,7 @@ Candidate rendering control inherited in the config, but absent from the pinned 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4050,7 +4050,7 @@ Registered particle pre-render switch with no detailed help. The name does not e
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4078,7 +4078,7 @@ Selects particle collection batching. Valve stock gameinfo already enables it; t
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4102,7 +4102,7 @@ Candidate particle rendering or simulation scheduling control inherited in the c
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4130,7 +4130,7 @@ Uses repeatable random seeds for easier particle debugging. This is documented a
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4158,7 +4158,7 @@ Skips culling for particle systems larger than the threshold in all dimensions; 
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4186,7 +4186,7 @@ Appears to limit texture layers in particle rendering; the current dump has no e
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Owner-reported visual comparison in PR65; no current-build reproduction or quantified CPU/GPU cost.
 
@@ -4214,7 +4214,7 @@ Imposes a minimum particle simulation interval. Valve help says more frequent si
 
 **Benefits and trade-offs:** A positive minimum may reduce simulation frequency and interpolate intermediate frames. The owner reported jagged moving emitters; the magnitude and CPU cost of retaining zero were not measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for Valve interpolation help and recorded decision; owner-reported visual finding, not independently reproduced. Owner-reported visual bisect recorded in PR70. That PR still requested a follow-up after restoring HDR-off, and PR71 requested a stable check. No current-build reproduction or performance measurement exists in this audit.
 
@@ -4242,7 +4242,7 @@ Registered distance-like control for mixed-resolution particle rendering; units,
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4270,7 +4270,7 @@ Registered particle rendering or simulation scheduling control with no explanato
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4298,7 +4298,7 @@ Registered particle rendering or simulation scheduling control with no explanato
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4326,7 +4326,7 @@ Appears to control how many particle models are assigned per thread; no algorith
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4354,7 +4354,7 @@ Enables an input path in particle operators. Valve help does not describe its ti
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4382,7 +4382,7 @@ Appears to skip a particle post-simulation stage. Which operations are skipped, 
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4410,7 +4410,7 @@ Appears to scale particle simulation time. It is not a verified harmless quality
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4438,7 +4438,7 @@ Appears to scale spawns from particle physics operators. The scope and exact zer
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4466,7 +4466,7 @@ Registered partial-visibility switch. Its name does not establish that it disabl
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4494,7 +4494,7 @@ Registered post-process bloom switch used by the captured video presets. Its dec
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Captured video presets assign this same name in the setting.* namespace. Check values after startup and after changing video settings; this data does not prove unconditional last-writer precedence. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4522,7 +4522,7 @@ Sets a maximum visible distance; which prop categories respond and the distance 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4550,7 +4550,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4578,7 +4578,7 @@ Generates shader debug information automatically when making a RenderDoc capture
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4606,7 +4606,7 @@ Enables sun lighting rendering; visibility and lighting consequences must be che
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4634,7 +4634,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4662,7 +4662,7 @@ Enables rendering debug overlays.
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4690,7 +4690,7 @@ Sets a screen-size percentage below which objects are culled. Higher thresholds 
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4718,7 +4718,7 @@ Sets a shadow-map size percentage below which objects are culled from the shadow
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4746,7 +4746,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4774,7 +4774,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4802,7 +4802,7 @@ Name suggests normal smoothing for morph deformation; the dump gives no further 
 
 **Benefits and trade-offs:** Requested 0 may affect deformation shading only when the relevant path is active; no independent gain is established.
 
-**Applicability and effectiveness:** No client/server module scope is established by these flags alone. No renderer-specific applicability or hot-reload guarantee found; test gameinfo changes after a full restart. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -4830,7 +4830,7 @@ Enables screen-space ambient occlusion, a screen-based shading effect that adds 
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4858,7 +4858,7 @@ Registered blur switch for screen-space ambient occlusion. The help does not est
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4886,7 +4886,7 @@ Registered ambient-occlusion strength control. Zero suggests no contribution, bu
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4914,7 +4914,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4942,7 +4942,7 @@ Allows the texture streaming budget to respond to GPU memory use. A requested po
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4970,7 +4970,7 @@ Sets the fraction of the memory budget at which the texture pool is reduced; 0.7
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -4998,7 +4998,7 @@ Sets seconds between texture-memory-budget updates; a larger interval checks les
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5026,7 +5026,7 @@ Scales the requested texture size, but gameinfo_cannot_override blocks this conf
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5054,7 +5054,7 @@ Allows immediate mip loading when texture headers arrive, where possible, to com
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5082,7 +5082,7 @@ Sets the texture pool reduction rate in MB per second when over budget. This rat
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5110,7 +5110,7 @@ Requests the total texture pool size in MB. This is a texture budget, not total 
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. PR73 explicitly marked in-game testing outstanding. The audit confirms the requested 6400 value in both files, not actual residency, total VRAM use, or faster frame times.
 
@@ -5138,7 +5138,7 @@ Caps the top mip resolution requested for streamed textures. Its declared defaul
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5166,7 +5166,7 @@ Biases the mip level requested by texture streaming. Positive values favor coars
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5190,7 +5190,7 @@ Candidate texture streaming, sampling or lightmap resources control inherited in
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5218,7 +5218,7 @@ Chooses texture sampling: 0 bilinear, 1 trilinear, 2/3/4/5 anisotropic 2x/4x/8x/
 
 **Benefits and trade-offs:** Bilinear sampling can visibly reduce oblique-surface texture quality compared with anisotropic filtering; no hardware-specific FPS cost or benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5246,7 +5246,7 @@ Enables translucent geometry rendering; disabling it can hide effects, not just 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5274,7 +5274,7 @@ By its name, permits particle updates on frames that render without a game tick.
 
 **Benefits and trade-offs:** Changing particle quality or scheduling can affect ability readability and effect timing as well as CPU/GPU work. No general FPS or latency benefit was measured.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5302,7 +5302,7 @@ Selects Vulkan memory defragmentation: 0 Fast, 1 Balanced, 2 Full, 3 Extensive. 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Vulkan-specific by its documented allocator algorithm and source module. No expected rendering-path effect under the owner-selected DX11; no Vulkan test was run. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Vulkan-specific by its documented allocator algorithm and source module. No expected rendering-path effect under the owner-selected DX11; no Vulkan test was run. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5330,7 +5330,7 @@ Registered rendering control with no explanatory help in the pinned dump. Its ex
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5358,7 +5358,7 @@ Registered environment animation or vegetation control with no explanatory help 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5386,7 +5386,7 @@ Registered environment animation or vegetation control with no explanatory help 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5414,7 +5414,7 @@ Registered environment animation or vegetation control with no explanatory help 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5442,7 +5442,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5470,7 +5470,7 @@ The captured Valve help documents this control in scene traversal, visibility or
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5494,7 +5494,7 @@ Candidate scene traversal, visibility or geometry detail control inherited in th
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5522,7 +5522,7 @@ Sets the indirect-draw count threshold at which compaction is performed.
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5550,7 +5550,7 @@ Uses mesh shaders instead of draw calls when available. Availability depends on 
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5578,7 +5578,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5606,7 +5606,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5634,7 +5634,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5662,7 +5662,7 @@ Allows dithered transitions between detail levels; disabling it can change how t
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5690,7 +5690,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5718,7 +5718,7 @@ Sets the screen size where clutter reaches full density.
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5746,7 +5746,7 @@ Sets the screen size where clutter disappears. The configured 1 exceeds the conf
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5774,7 +5774,7 @@ Enables clutter drawing. Hiding clutter is the intended reduction in visible det
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5802,7 +5802,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5830,7 +5830,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. The pinned gameinfo_cannot_override flag explicitly prevents using this file as an override route; the requested value is not an effective-value claim. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5858,7 +5858,7 @@ Sets the portion of the transition between two LODs over which dithering is used
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5886,7 +5886,7 @@ Registered force-batching switch with no help. The name is not evidence that bat
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5914,7 +5914,7 @@ Selects internal HDR rendering: -1 default, 0 NoHdr, 1 Hdr, 2 Hdr 1010102, 3 Hdr
 
 **Benefits and trade-offs:** Internal non-HDR rendering can change precision and bright-effect appearance. Having an SDR monitor is not evidence that disabling internal HDR is beneficial.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5942,7 +5942,7 @@ The captured Valve help documents this control in scene traversal, visibility or
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5970,7 +5970,7 @@ Selects density culling when that culling feature is available. Disabling a cull
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -5998,7 +5998,7 @@ Biases LOD selection for instanced meshes. The help does not provide the mathema
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6026,7 +6026,7 @@ Biases instanced-mesh LOD selection in shadow maps.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6054,7 +6054,7 @@ Enables motion-vector support for instanced meshes. Motion vectors can serve sev
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6082,7 +6082,7 @@ Enables fading support for instanced meshes.
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6110,7 +6110,7 @@ Biases size-based culling for instanced meshes; the help does not provide its ex
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6138,7 +6138,7 @@ Biases size-based culling for instanced meshes in shadow maps.
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6166,7 +6166,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6194,7 +6194,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Multiple active occurrences are preserved; no engine winner is assumed. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6222,7 +6222,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6250,7 +6250,7 @@ Appears to override the screen-size LOD scale; the dump gives no formula or spec
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6278,7 +6278,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6306,7 +6306,7 @@ Registered scene traversal, visibility or geometry detail control with no explan
 
 **Benefits and trade-offs:** Culling and LOD changes can cause pop-in or hide small geometry. Fewer culling checks can also increase drawing; benefit depends on the scene and active path.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6334,7 +6334,7 @@ Disables sparse shadow tree runtime layers for debugging; Valve warns that eligi
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6362,7 +6362,7 @@ Disables sparse shadow tree generation/runtime for the viewmodel and uses the or
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6390,7 +6390,7 @@ Enables runtime sparse shadow trees for static geometry rendered into shadow cas
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6418,7 +6418,7 @@ Sets depth-compression precision in sparse shadow tree leaf nodes for the viewmo
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6446,7 +6446,7 @@ Chooses sunlight PVS versus sky PVS for sunlight views. Setting zero does not it
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6474,7 +6474,7 @@ Registered lighting, shadows or post-processing control with no explanatory help
 
 **Benefits and trade-offs:** Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6502,7 +6502,7 @@ Registered internal fog-texture HDR switch with no help. Internal buffer precisi
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6530,7 +6530,7 @@ Registered environment animation or vegetation control with no explanatory help 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
@@ -6558,7 +6558,7 @@ Registered environment animation or vegetation control with no explanatory help 
 
 **Benefits and trade-offs:** Potential cost and visual trade-offs depend on the active rendering path and scene. No current per-setting frame-time, memory, or visual measurement is available.
 
-**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence and per-setting restart requirements are unverified. Test gameinfo edits from a fully restarted game, then inspect the resulting value. Cheat/development-only flags constrain ordinary console use; absence of gameinfo_cannot_override alone does not prove acceptance or effect. Restricted cheat/development registration; acceptance from gameinfo is unverified, not guaranteed by the dump. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 

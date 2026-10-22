@@ -374,5 +374,14 @@ AUDIT REVIEW CORRECTIONS (2026-10-22; same pins: Valve mirror e95b323, build 681
   assistant-neutral branch prefix. AFTER-GAME-UPDATE passes the upstream pin to nondefaults.py.
   Line numbers unchanged.
 
+SETTING REFERENCE: ONE COPY OF EACH CAVEAT (2026-10-22)
+  No config changes. About 400 generated entries stated a flag caveat twice: once in the annotation and once as a
+  note utils/reference.py derives from the pinned dump. The generator now owns every flag, registration-scope,
+  duplicate, disabled-state and restart caveat; 636 annotations lost restated sentences and keep only
+  setting-specific applicability (27 absent-dump names had nothing else and are now empty). Applicability
+  paragraphs are about 29 percent shorter, and a flag change after a patch now updates them on regeneration.
+  A test fails if a generated paragraph repeats a caveat.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
