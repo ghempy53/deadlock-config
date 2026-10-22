@@ -767,7 +767,7 @@ Ordered content search paths: citadel/custom, citadel/addons, citadel, then core
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Filesystem mounts/settings lookup during initialization. DX11 versus Vulkan does not change the written search paths; actual mod load order and settings location must be checked in the installed game. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Filesystem mounts/settings lookup during initialization. DX11 versus Vulkan does not change the written search paths; actual mod load order and settings location must be checked in the installed game. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -815,7 +815,7 @@ Mounts localized UI content when a UI language is selected. The stock comments s
 
 **Benefits and trade-offs:** No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested.
 
-**Applicability and effectiveness:** Filesystem mounts/settings lookup during initialization. DX11 versus Vulkan does not change the written search paths; actual mod load order and settings location must be checked in the installed game. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Filesystem mounts/settings lookup during initialization. DX11 versus Vulkan does not change the written search paths; actual mod load order and settings location must be checked in the installed game. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
@@ -1511,7 +1511,7 @@ Lists developer visualization modes ToolsVis and ToolsWireframe. Repeated dev ke
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Developer/tool material modes, preserved as list declarations. No gameplay performance effect established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Developer/tool material modes, preserved as list declarations. No gameplay performance effect established. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -1535,7 +1535,7 @@ Lists game material render modes (Default, Forward, Deferred, Outline, Depth, Fr
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -6311,7 +6311,7 @@ Candidate SceneSystem option named PointLightShadowsEnabled. The precise behavio
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Startup engine-section configuration, not a ConVar. Types, ranges, restart behavior, and runtime acceptance are not documented in these captures. Fully restart for validation; do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 

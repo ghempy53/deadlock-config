@@ -164,9 +164,12 @@ def applicability(cv, path, entries):
     else:
         notes.append("This is an engine/configuration key, not a console variable; dump flags and defaults do not apply.")
     if any(sum(r["active"] for r in rs) > 1 for rs in entries):
-        notes.append("Multiple active occurrences are preserved; no engine winner is assumed. Repeated search/render paths are lists, not duplicate scalar ConVars.")
+        notes.append("Multiple active occurrences are preserved; no engine winner is assumed." if path.startswith("ConVars/")
+                     else "Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars.")
     if not any(r["active"] for rs in entries for r in rs):
-        notes.append("Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value.")
+        present = [name for name, rs in zip(CONFIGS, entries) if rs]
+        where = "both current files" if len(present) == len(entries) else f"{present[0]}; not present in the other file"
+        notes.append(f"Disabled in {where}: the written example makes no assignment. Other configuration layers may supply a value.")
     notes.append("Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.")
     return " ".join(notes)
 

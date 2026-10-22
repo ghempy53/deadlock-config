@@ -25,6 +25,9 @@ maintenance regardless of assistant. The owner's current request overrides workf
 - Stable keeps vertical camera flattening true / health-bar highlight 999; experimental false / 100.
 - October 6–7 camera/input/turn-stutter performance results were retired by the owner October 15 because of PC
   problems. Historical symptoms do not justify reverts. The owner accepted v1.2's visibility/performance trade-offs.
+- Experimental is the test bed: unless a request names stable, a config change targets
+  `experimental-config/gameinfo.gi`. Change stable only when asked; take an owner-uploaded tested file verbatim.
+- The owner is a professional engineer. Be direct, skip basics, and give a recommendation rather than a survey.
 
 ## Scope and historical rules
 
@@ -64,6 +67,14 @@ retain date, URLs and hashes. Read relevant merged PR bodies/diffs and the chang
 2. For authorized config changes, look up the setting against the pinned dump, inspect all occurrences and the
    current reference, then edit only the requested behavior. Append a dated `docs/CHANGES.txt` entry with evidence,
    written values and test status. Do not rewrite historical records. `check.py --fix` only maintains line references.
+   `check.py` validates each `line N  name` row against experimental, so keep the existing entry shape:
+   ```
+   SHORT TITLE IN CAPS (YYYY-MM-DD)
+     line 603   name                                          "old"  ->  "new"
+     Why: evidence and caveats. Untested in game: what the owner should check.
+     Lines after N moved down by K.   (or: Line numbers unchanged.)
+   ```
+   Removed lines use `line --`. Stable-only edits get a `STABLE:` entry without `line N` rows and a `CONFIGS.md` update.
 3. Run `python3 utils/check.py --config both`; optionally use `--strict-duplicates` to surface preserved duplicate
    policy findings. Run pinned `convars.py audit`, `stock_diff.py`, semantic comparisons and relevant tool tests.
    Report existing findings separately; zero syntax errors does not mean zero unresolved runtime issues.
@@ -72,9 +83,9 @@ retain date, URLs and hashes. Read relevant merged PR bodies/diffs and the chang
 5. Update current guidance and index as needed. Keep root README short. Preserve hash evidence for frozen/archive
    files and show no behavioral change for documentation-only edits.
 6. Keep installer Windows PowerShell 5.1 compatible and ASCII. Record lack of Windows execution when applicable.
-7. Use a focused branch/PR for review when publishing changes; preserve the owner's PR-based history. Default new
-   branch prefix is `codex/` in this environment. Do not treat this preference as a reason to interrupt completed
-   local review or overwrite another branch.
+7. Publish each change as its own focused PR into `main`; the owner tracks history through merged PRs. Use the
+   branch prefix of the assistant's environment (for example `claude/` or `codex/`). If a branch's earlier PR is
+   already merged, restart it from the latest `main`. Never overwrite another branch.
 
 [AFTER-GAME-UPDATE.md](AFTER-GAME-UPDATE.md) contains the reproducible refresh process.
 [utils/README.md](../utils/README.md) describes actual coverage and command syntax. Claude hooks run the syntax

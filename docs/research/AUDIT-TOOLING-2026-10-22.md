@@ -83,7 +83,7 @@ API (also available to Windows PowerShell 5.1). Vendor sources and their specifi
 | Stable report regeneration | 431 active assignments inspected; 308 custom nondefault rows, 63 stock-matching rows |
 
 Inventory coverage: stable has **431 active assignments** (424 unique active names) and **113 disabled assignments**;
-experimental has **430 active assignments** (423 unique active names) and **113 disabled assignments**. The 15 tooling tests
+experimental has **430 active assignments** (423 unique active names) and **112 disabled assignments**. The 15 tooling tests
 exercise both actual files, nested bounds/version keys, disabled nested metadata exclusion, quoted braces, inline
 syntax, malformed sections, true tail identification, duplicate preservation in all relevant views, flag/range
 parsing, bare disabled numeric/boolean candidates, stock duplicate conflict detection, nested tail metadata, and safe

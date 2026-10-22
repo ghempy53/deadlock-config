@@ -63,8 +63,9 @@ then reverted it in [PR #84](https://github.com/ghempy53/deadlock-config/pull/84
 Both configs now keep the aspect-ratio override disabled, including future upstream pulls. The earlier cap report
 is owner-reported evidence, not an audit test or proof that aspect ratio is universally the only FOV mechanism.
 
-The first six changes came with stable 3.6 ([PR #75](https://github.com/ghempy53/deadlock-config/pull/75)).
-The two health-bar names are absent from the pinned dump, which alone does not prove removal.
+All nine came with stable 3.6 ([PR #75](https://github.com/ghempy53/deadlock-config/pull/75)): stable took
+upstream's six new or changed values, dropped the two health-bar names and commented out the light switch, while
+experimental kept its 3.5.3 values. The two health-bar names are absent from the pinned dump, which alone does not prove removal.
 The light switch is flagged `gameinfo_cannot_override`. The minimap trooper rate is game/server-module registered;
 writing it in a player's file is not evidence of changing the online server.
 

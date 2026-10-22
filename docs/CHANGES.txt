@@ -363,5 +363,16 @@ DOCUMENTATION AND TOOLING AUDIT (2026-10-22; Valve mirror e95b323b88d48c3fc4d800
   Current findings, exact coverage and unresolved in-game checks: docs/research/AUDIT-2026-10-22.md.
   Line numbers unchanged. No in-game tests or measured FPS gains claimed.
 
+AUDIT REVIEW CORRECTIONS (2026-10-22; same pins: Valve mirror e95b323, build 6814; OptimizationLock 347a669)
+  No config changes; both active files, frozen versions and archives are byte-identical to PR #85. Re-ran every
+  check against the pinned sources: all audit counts reproduce. Both pins are still the current upstream heads.
+  utils/reference.py labelled three paths disabled in both files when one file has no line for them
+  (phys_dynamic_scaling in stable only; the two chat-wheel examples in experimental only); repeated ConVars no longer
+  get the search-path list note. lb_enable_baked_shadows now records its PR #75 variant difference. CONFIGS.md: all
+  nine variant differences came with 3.6, not six. Tooling audit: experimental has 112 disabled lines, not 113.
+  docs/CLAUDE.md regains the changelog entry format check.py depends on, the experimental default target, and an
+  assistant-neutral branch prefix. AFTER-GAME-UPDATE passes the upstream pin to nondefaults.py.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

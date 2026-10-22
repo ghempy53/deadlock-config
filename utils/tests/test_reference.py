@@ -43,6 +43,14 @@ class ReferenceTests(unittest.TestCase):
         self.assertEqual([r["path"] for r in rows if r["kind"] == "empty section"], ["Empty"])
         self.assertIn({"path": "ConVars/range", "line": 13}, sections)
 
+    def test_disabled_note_names_where_the_example_exists(self):
+        disabled = {"active": False}
+        both = reference.applicability(None, "ConVars/x", [[disabled], [disabled]])
+        stable_only = reference.applicability(None, "ConVars/x", [[disabled], []])
+        self.assertIn("Disabled in both current files", both)
+        self.assertIn("Disabled in stable; not present in the other file", stable_only)
+        self.assertNotIn("both current files", stable_only)
+
     def test_refresh_rejects_changed_source_bytes(self):
         with tempfile.TemporaryDirectory() as directory:
             file = Path(directory) / "source.txt"
