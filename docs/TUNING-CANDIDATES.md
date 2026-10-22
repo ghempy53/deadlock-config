@@ -1,5 +1,8 @@
 # Tuning candidates and non-candidates (2026-10-06)
 
+> **Historical evidence, reviewed 2026-10-22.** The body below is preserved as a dated research record, not current installation/tuning guidance. Later owner decisions supersede the ConVars-only/nothing-hidden fork rules and October 6–7 test conclusions. Statements equating dump absence with removal, guaranteeing cheat/development startup acceptance or duplicate precedence, and asserting unmeasured FPS/CPU/GPU benefits are not established by this audit. See [current audit](research/AUDIT-2026-10-22.md), [setting reference](SETTING-REFERENCE.md) and [owner decisions](CONFIGS.md). Historical comparison values and the CSV are not regenerated as current evidence.
+
+
 > **2026-10-14: the experimental config was forked from OptimizationLock 3.5.2** (see the FORK section in
 > [CHANGES.txt](CHANGES.txt)). Many lines below that were candidates, reverted, or listed as not candidates are now
 > active because 3.5.2 sets them (and, for the ones that break a rule, Eskay's config too), among them

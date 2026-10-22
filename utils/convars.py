@@ -9,8 +9,8 @@ Common options: --ref REF (GameTracking commit or branch, default master), --dum
 --refresh (ignore the cache in utils/.cache).
 
 Audit findings:
-  error    active line for a convar that no longer exists, has gameinfo_cannot_override, or is out of [min, max]
-  warn     active line for a server-only convar (gamedll without clientdll or replicated: no effect online)
+  error    active line with gameinfo_cannot_override or outside the dump's declared [min, max]
+  warn     name absent from this dump (not proof of removal), or gamedll-only registration
   warn     [def: X] tag that disagrees with Valve's default (or says gone for a convar that exists)
   info     active line whose value equals Valve's default (a pin; fine if deliberate)
 """
@@ -36,7 +36,7 @@ def scope(cv: gi.ConVar) -> str:
         return "blocked"
     if "gamedll" in cv.flags and "clientdll" not in cv.flags and "replicated" not in cv.flags:
         return "server"
-    return "client"
+    return "client" if "clientdll" in cv.flags else "engine/unspecified"
 
 
 def in_range(value: str, cv: gi.ConVar) -> bool:
@@ -51,8 +51,8 @@ def in_range(value: str, cv: gi.ConVar) -> bool:
     return True
 
 
-def cmd_lookup(dump: dict[str, gi.ConVar], names: list[str]) -> int:
-    lines = gi.read_lines(gi.GI)
+def cmd_lookup(dump: dict[str, gi.ConVar], names: list[str], path=gi.GI) -> int:
+    lines = gi.read_lines(path)
     ours = {}
     for s in gi.settings(lines):
         ours.setdefault(s.name, []).append(s)
@@ -61,11 +61,11 @@ def cmd_lookup(dump: dict[str, gi.ConVar], names: list[str]) -> int:
         hits = sorted(n for n in dump if fnmatch.fnmatchcase(n, pat)) if any(c in pat for c in "*?[") else (
             [pat] if pat in dump else [])
         if not hits:
-            print(f"{pat}: not in Valve's dump (removed, renamed or a typo)")
+            print(f"{pat}: absent from this captured dump; removal, rename, build/platform availability or typo not resolved")
             rc = 1
         for n in hits:
             print(describe(dump[n]))
-            print(f"    scope: {scope(dump[n])}")
+            print(f"    registration scope: {scope(dump[n])}")
             for s in ours.get(n, []):
                 state = "active" if s.active else "commented"
                 print(f"    gameinfo.gi:{s.line} ({s.region}, {state}) = {s.value!r}")
@@ -73,21 +73,16 @@ def cmd_lookup(dump: dict[str, gi.ConVar], names: list[str]) -> int:
     return rc
 
 
-def cmd_audit(dump: dict[str, gi.ConVar], show_pins: bool) -> int:
-    lines = gi.read_lines(gi.GI)
+def cmd_audit(dump: dict[str, gi.ConVar], show_pins: bool, path=gi.GI) -> int:
+    lines = gi.read_lines(path)
     errors = warns = 0
     for s in gi.settings(lines):
-        if s.region == "tail":
-            continue  # Valve's own stock lines
         cv = dump.get(s.name)
         tag = s.def_tag
         where = f"gameinfo.gi:{s.line} {s.name}"
         if cv is None:
-            if s.active and s.region == "tweak":
-                print(f"error  {where}: convar no longer exists (comment it out and tag [def: gone])")
-                errors += 1
-            elif tag is not None and tag != "gone":
-                print(f"warn   {where}: convar no longer exists but tag says [def: {tag}]")
+            if s.active or tag is not None:
+                print(f"warn   {where}: absent from this dump; status unknown, not proof of removal")
                 warns += 1
             continue
         if tag == "gone":
@@ -96,17 +91,17 @@ def cmd_audit(dump: dict[str, gi.ConVar], show_pins: bool) -> int:
         elif tag is not None and gi.normalize(tag) != gi.normalize(cv.default):
             print(f"warn   {where}: tag [def: {tag}] but Valve's default is {cv.default!r}")
             warns += 1
-        if not (s.active and s.region == "tweak"):
+        if not s.active:
             continue
         sc = scope(cv)
         if sc == "blocked":
-            print(f"error  {where}: gameinfo_cannot_override, this line is ignored")
+            print(f"error  {where}: gameinfo_cannot_override: flagged as not overridable by gameinfo")
             errors += 1
         elif sc == "server":
-            print(f"warn   {where}: server-only (gamedll), no effect in online matches")
+            print(f"warn   {where}: gamedll-only registration: do not infer a client performance benefit; online authority needs verification")
             warns += 1
         if not in_range(s.value, cv):
-            print(f"error  {where}: {s.value!r} outside [{cv.min}, {cv.max}] (clamped by the engine)")
+            print(f"error  {where}: {s.value!r} outside [{cv.min}, {cv.max}] (runtime handling not tested)")
             errors += 1
         if show_pins and gi.normalize(s.value) == gi.normalize(cv.default):
             print(f"info   {where}: equals Valve's default {cv.default!r} (pin)")
@@ -114,13 +109,15 @@ def cmd_audit(dump: dict[str, gi.ConVar], show_pins: bool) -> int:
     return 1 if errors else 0
 
 
-def cmd_diff(old: dict[str, gi.ConVar], new: dict[str, gi.ConVar]) -> int:
-    lines = gi.read_lines(gi.GI)
-    ours = {s.name: s for s in gi.settings(lines) if s.region == "tweak"}
+def cmd_diff(old: dict[str, gi.ConVar], new: dict[str, gi.ConVar], path=gi.GI) -> int:
+    lines = gi.read_lines(path)
+    ours = {}
+    for s in gi.settings(lines):
+        ours.setdefault(s.name, []).append(s)
 
     def mark(name: str) -> str:
-        s = ours.get(name)
-        return f"   <- gameinfo.gi:{s.line} ({'active' if s.active else 'commented'})" if s else ""
+        matches = ours.get(name, [])
+        return "".join(f"   <- gameinfo.gi:{s.line} ({'active' if s.active else 'commented'})" for s in matches)
 
     removed = sorted(set(old) - set(new))
     added = sorted(set(new) - set(old))
@@ -135,9 +132,11 @@ def cmd_diff(old: dict[str, gi.ConVar], new: dict[str, gi.ConVar]) -> int:
         if a.flags != b.flags:
             plus, minus = sorted(b.flags - a.flags), sorted(a.flags - b.flags)
             diffs.append("flags " + " ".join([f"+{f}" for f in plus] + [f"-{f}" for f in minus]))
+        if a.description != b.description:
+            diffs.append(f"help {a.description!r} -> {b.description!r}")
         if diffs:
             changed.append((n, diffs))
-    print(f"Removed ({len(removed)}):")
+    print(f"Absent from new dump ({len(removed)}; removal not established):")
     for n in removed:
         print(f"  {n}{mark(n)}")
     print(f"Added ({len(added)}):")
@@ -151,6 +150,7 @@ def cmd_diff(old: dict[str, gi.ConVar], new: dict[str, gi.ConVar]) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    gi.add_config_argument(ap)
     ap.add_argument("--ref", default="master", help="GameTracking-Deadlock commit or branch (default master)")
     ap.add_argument("--dump", help="local convars.txt instead of downloading")
     ap.add_argument("--refresh", action="store_true", help="re-download even if cached")
@@ -164,12 +164,21 @@ def main() -> int:
     p.add_argument("new", nargs="?", default="master")
     args = ap.parse_args()
 
+    paths = gi.config_paths(args.config)
+    results = []
     if args.cmd == "diff":
-        return cmd_diff(gi.valve_convars(args.old, args.refresh), gi.valve_convars(args.new, args.refresh))
-    dump = gi.valve_convars(args.ref, args.refresh, args.dump)
-    if args.cmd == "lookup":
-        return cmd_lookup(dump, args.names)
-    return cmd_audit(dump, args.pins)
+        old, new = gi.valve_convars(args.old, args.refresh), gi.valve_convars(args.new, args.refresh)
+        for path in paths:
+            print(f"Config: {path.relative_to(gi.REPO)}")
+            results.append(cmd_diff(old, new, path))
+    else:
+        dump = gi.valve_convars(args.ref, args.refresh, args.dump)
+        for path in paths:
+            print(f"Config: {path.relative_to(gi.REPO)}")
+            results.append(cmd_lookup(dump, args.names, path) if args.cmd == "lookup"
+                           else cmd_audit(dump, args.pins, path))
+    return max(results, default=0)
+
 
 
 if __name__ == "__main__":

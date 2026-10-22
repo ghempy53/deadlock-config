@@ -334,5 +334,19 @@ UPSTREAM SYNC CHECK (2026-10-22, OptimizationLock main @ 347a669)
   are Valve's own stock values.
   Line numbers unchanged.
 
+DOCUMENTATION AND TOOLING AUDIT (2026-10-22; Valve mirror a94d8b455203f12b176de75a5598dd8e6e8a94d4, build 6813)
+  No active or frozen config changes; archived records remain byte-identical.
+  Added a complete sourced reference for both files, including disabled tweaks and engine sections, with pinned
+  evidence and durable annotations. Current documentation supersedes unsupported historical claims about duplicate
+  precedence, cheat/development startup acceptance, missing-dump removal, menu order and unmeasured performance.
+  The October 15 restart was superseded by the October 17 3.5.3 restart. The experimental engine update was authored
+  October 21 and merged October 22 (PR #80); Valve's underlying engine-file patch was October 20.
+  Damage-number lifetime/emphasis overrides were removed, but an inherited batching entry remains. The October
+  6-7 results remain retired; the October 17 particle bisect is owner-reported, not reproduced by this audit.
+  Corrected utility coverage of both configs, nested metadata, the actual stock-tail boundary and duplicates.
+  Hardened installer copy/hash failure handling; Windows PowerShell execution is still untested.
+  Current findings, exact coverage and unresolved in-game checks: docs/research/AUDIT-2026-10-22.md.
+  Line numbers unchanged. No in-game tests or measured FPS gains claimed.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

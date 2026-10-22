@@ -1,5 +1,8 @@
 # Deadlock forum research, 2026-10-06
 
+> **Historical evidence, reviewed 2026-10-22.** The body below is preserved as a dated research record, not current installation/tuning guidance. Later owner decisions supersede the ConVars-only/nothing-hidden fork rules and October 6–7 test conclusions. Statements equating dump absence with removal, guaranteeing cheat/development startup acceptance or duplicate precedence, and asserting unmeasured FPS/CPU/GPU benefits are not established by this audit. See [current audit](../research/AUDIT-2026-10-22.md), [setting reference](../SETTING-REFERENCE.md) and [owner decisions](../CONFIGS.md). Historical comparison values and the CSV are not regenerated as current evidence.
+
+
 First-hand player reports from the official forums (https://forums.playdeadlock.com/) on performance, commands and
 stability, checked against this repo's config and Valve's data. Companion to
 [RESEARCH-2026-10-06.md](RESEARCH-2026-10-06.md).

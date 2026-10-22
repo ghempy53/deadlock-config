@@ -1,5 +1,10 @@
 # Comparison with other public Deadlock gameinfo.gi configs
 
+> **Historical evidence, reviewed 2026-10-22.** The body below is preserved as a dated research record, not current installation/tuning guidance. Later owner decisions supersede the ConVars-only/nothing-hidden fork rules and October 6–7 test conclusions. Statements equating dump absence with removal, guaranteeing cheat/development startup acceptance or duplicate precedence, and asserting unmeasured FPS/CPU/GPU benefits are not established by this audit. See [current audit](../research/AUDIT-2026-10-22.md), [setting reference](../SETTING-REFERENCE.md) and [owner decisions](../CONFIGS.md). Historical comparison values and the CSV are not regenerated as current evidence.
+
+> **Recovered historical source (2026-10-22):** the original `main/test_cfg` URL retained below now returns HTTP 404. The report's recorded `18e0144` revision resolves to `18e0144a707d8a48a60869f86eca6f91536b622a` (2026-10-06 09:17:32 UTC), where the [archived test_cfg directory](https://github.com/Sqooky/OptimizationLock/tree/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg) and [gameinfo.gi](https://github.com/Sqooky/OptimizationLock/blob/18e0144a707d8a48a60869f86eca6f91536b622a/test_cfg/gameinfo.gi) remain available; both links returned HTTP 200. Use these pinned links to inspect the historical evidence. This recovery does not revalidate the old tuning claims.
+
+
 Generated 2026-10-06. Baseline: this repo's `gameinfo.gi` (183 active convar lines including Valve's stock tail; 106 tweak lines). Reference data: Valve's convar dump build 6753 (2026-10-05) and Valve's stock `gameinfo.gi` from City Never Sleeps (build 6711). The full per-convar value matrix is in [`data/convar-matrix.csv`](data/convar-matrix.csv).
 
 ## How to read this

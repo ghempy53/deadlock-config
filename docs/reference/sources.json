@@ -1,0 +1,214 @@
+{
+  "build": 6813,
+  "files": {
+    "convars.txt": {
+      "sha256": "d0cccd7a34f882cf346e8a6b151315d28c6704fa681a19e91164a851dbac5094",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt"
+    },
+    "steam.inf": {
+      "sha256": "7d06dddd608a94de18817282843b90738258b9ec1c9246e6ef0500ed9e162705",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/steam.inf"
+    },
+    "stock-gameinfo.gi": {
+      "sha256": "a79f1382c1b7f290f556e5f43e22c9ac54f27cdba55c3e6d688f8f23b0da7476",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi"
+    },
+    "upstream-README.md": {
+      "sha256": "ba93c2872401f73fbb91f0980d9426b92a0f649aa8b9f71cb00bdd97daf548ad",
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/347a6694bd7779bafa66b339cd13435c90f1c2f3/README.md"
+    },
+    "upstream-gameinfo.gi": {
+      "sha256": "77e97389e6b31488e04e8e16a4f66984dbbfff5f780eaf2b27c684d86fc0fa86",
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+    }
+  },
+  "historical_provenance": {
+    "Eskay": "https://github.com/Sqooky/OptimizationLock/tree/f6fdab7f66e7c314b011a861589fa12db27c8a3e",
+    "OptiLock": "https://github.com/dacooderr/OptiLock/tree/7f7a54a1b8237d9b66348067d09f93174c47d303",
+    "compylock": "https://github.com/7liv/compylock/tree/c281c16109adfa1cc23db65554d36c4d9b7890d1"
+  },
+  "merged_pr_provenance": [
+    {
+      "merge_commit_sha": "195eb8a472fd29cc1cd53aec2ca2270fc8a0c88b",
+      "merged_at_utc": "2026-10-22T18:34:57Z",
+      "number": 82,
+      "title": "DeadlockConfig-Update: only current stable (default) or -Ex, plus -SelfUpdate",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/82"
+    },
+    {
+      "merge_commit_sha": "348f9cdd6631ed74a8a4eae034203ca6e4592c57",
+      "merged_at_utc": "2026-10-22T18:26:19Z",
+      "number": 81,
+      "title": "Upstream check (no change) and list of stable convars changed from Valve defaults",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/81"
+    },
+    {
+      "merge_commit_sha": "6039c8f19a596e90a9b584f057c913f244a444e0",
+      "merged_at_utc": "2026-10-22T17:24:57Z",
+      "number": 80,
+      "title": "Experimental: apply Valve's build 6810 engine-section patch (new PGIVersion)",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/80"
+    },
+    {
+      "merge_commit_sha": "c9e84e3952344a0b3fa98502f1d6ac012086c530",
+      "merged_at_utc": "2026-10-21T20:18:00Z",
+      "number": 79,
+      "title": "Stable: pull in OptimizationLock 3.6.1 (Valve's new stock engine sections)",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/79"
+    },
+    {
+      "merge_commit_sha": "10bf6911c6818b045d84590bdd550084f6186b15",
+      "merged_at_utc": "2026-10-20T19:05:42Z",
+      "number": 78,
+      "title": "Freeze stable as v1.4",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/78"
+    },
+    {
+      "merge_commit_sha": "c735fdde736bf76d2872f8c3a6d77b220b8e7988",
+      "merged_at_utc": "2026-10-20T18:59:27Z",
+      "number": 77,
+      "title": "Comment out r_aspectratio in stable and experimental for the FOV mod",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/77"
+    },
+    {
+      "merge_commit_sha": "9b6eb0108d0952037278e4b8fc806c2782d083a5",
+      "merged_at_utc": "2026-10-18T17:58:05Z",
+      "number": 75,
+      "title": "Stable: pull in OptimizationLock 3.6",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/75"
+    },
+    {
+      "merge_commit_sha": "4ee44235cf6569a7e3c5135384ac5395044679d5",
+      "merged_at_utc": "2026-10-17T10:22:36Z",
+      "number": 74,
+      "title": "Remove the damage-number lines; freeze stable as v1.3",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/74"
+    },
+    {
+      "merge_commit_sha": "82a0daaa950c54f226f7cf9c1792186c902c39b5",
+      "merged_at_utc": "2026-10-17T10:18:53Z",
+      "number": 73,
+      "title": "Texture pool 6400 MB; stable takes the experimental values",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/73"
+    },
+    {
+      "merge_commit_sha": "8fd7e5f81e3adcb7211352a728b36ac4c246c546",
+      "merged_at_utc": "2026-10-17T10:13:32Z",
+      "number": 72,
+      "title": "Experimental: texture pool 3200 MB, mip bias 2",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/72"
+    },
+    {
+      "merge_commit_sha": "877cee66ab4b629a56ecf8a1a91a7b4428fdcfd9",
+      "merged_at_utc": "2026-10-17T10:09:25Z",
+      "number": 71,
+      "title": "Stable drops r_particle_min_timestep; experimental textures back except pool and cap",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/71"
+    },
+    {
+      "merge_commit_sha": "f7d10ca6a3839208ad9c8a423f51fec1abfbfd3f",
+      "merged_at_utc": "2026-10-17T10:05:37Z",
+      "number": 70,
+      "title": "Experimental: jagged fire fixed by r_particle_min_timestep at default; HDR off again",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/70"
+    },
+    {
+      "merge_commit_sha": "d14125732a429dd046379e49e8b0d778c8856feb",
+      "merged_at_utc": "2026-10-17T09:05:25Z",
+      "number": 63,
+      "title": "Experimental: restart from stable 3.5.3; full-res textures with 8x filtering",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/63"
+    },
+    {
+      "merge_commit_sha": "af2a055653abd745f33897b52adf888d184a214c",
+      "merged_at_utc": "2026-10-16T22:26:20Z",
+      "number": 61,
+      "title": "Stable: pull in OptimizationLock 3.5.3 (aspect ratio stays 2.11)",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/61"
+    },
+    {
+      "merge_commit_sha": "2ba60acf3fd31076214a5774aa3646eadc3d93ae",
+      "merged_at_utc": "2026-10-15T23:42:04Z",
+      "number": 60,
+      "title": "Restart experimental from stable v1.2; apply confirmed preferences",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/60"
+    },
+    {
+      "merge_commit_sha": "12815941677ac4a52a818487bc1cb1bc055c2cdd",
+      "merged_at_utc": "2026-10-15T23:14:12Z",
+      "number": 59,
+      "title": "Stable v1.2: owner's tested file (aspect 2.11, instant health-bar refill)",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/59"
+    },
+    {
+      "merge_commit_sha": "7272c3344bc816dc088c86af344c77e743c2503e",
+      "merged_at_utc": "2026-10-15T22:19:47Z",
+      "number": 58,
+      "title": "Stable v1.1: Sqooky 3.5.2 as tested in game",
+      "url": "https://github.com/ghempy53/deadlock-config/pull/58"
+    }
+  ],
+  "preserved_files_sha256": {
+    "docs/archive/CHANGES-2026-10-03-to-10-15.txt": "909bbe90d0782de54ad1f4f8781558c1a4a5db497f3bec64f539e3831d7a1bbd",
+    "docs/archive/experimental-3.5.2-fork-gameinfo.gi": "c9f3db121047fdb50f2bb864ec37a577457aff3dbe0005874c540a92300e6243",
+    "experimental-config/gameinfo.gi": "90715087b2e9528eef4759061c3ea4eb08b7cff417df764453c383899af58d63",
+    "stable-config/gameinfo.gi": "242a0385d4e08b7f3b07f554673c627950e9b292328d3c2d26702130ab9974d2",
+    "stable-config/v1.0/gameinfo.gi": "dfad6b3256a72acb1dff71c23d12236a022c719289bd4c486d79cbcba597b4a8",
+    "stable-config/v1.1/gameinfo.gi": "82655cf16dc349c6f2a53d06743b55b17c125dae490bc4e1981ed8cdd62a5d64",
+    "stable-config/v1.2/gameinfo.gi": "37991b5be7e70f5f88b375ca4a1361594d09601afb0ef6755a58925b840b8e4b",
+    "stable-config/v1.3/gameinfo.gi": "b5fbeb3ec6cf9ff5cf7980520bb99faf4600b5367fa80252ac4df20833ab3dc2",
+    "stable-config/v1.4/gameinfo.gi": "3fb7a0c6ee8d2cd3daee851780fda0afd8e80076f99538e31e4787317b790141"
+  },
+  "repository_commit": "195eb8a472fd29cc1cd53aec2ca2270fc8a0c88b",
+  "research_date": "2026-10-22",
+  "source_revision": "11159107",
+  "supplementary_evidence": {
+    "engine2_strings.txt": {
+      "sha256": "c18dd96f03829dbedf28b35234174195fab896cc894c4055cc3da266ef2945fa",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/engine2_strings.txt"
+    },
+    "materialsystem2_strings.txt": {
+      "sha256": "3fd8d8d9fa18b81f8510a16f9a62c2c938ae2c59c825e496c558c69a3ad0f33c",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/materialsystem2_strings.txt"
+    },
+    "particles_strings.txt": {
+      "sha256": "2c1d37ab9385f55cf727193d1b43560d73d594cf7f87dc292771afc36bd23a46",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/particles_strings.txt"
+    },
+    "rendersystemdx11_strings.txt": {
+      "sha256": "1515cd397bad8ee1ebf55b95a228e6aaae314d96e357c9335fd3242d58fe99e8",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/rendersystemdx11_strings.txt"
+    },
+    "rendersystemvulkan_strings.txt": {
+      "sha256": "36d579ad6888ff827af5621b951360691d50a39bb7ceacb219c0dc59670729cd",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/rendersystemvulkan_strings.txt"
+    },
+    "scenesystem_strings.txt": {
+      "sha256": "afe80b25857711657425140f05503dc834caf1aaaede6247a98a4ef72721e01a",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/scenesystem_strings.txt"
+    },
+    "video_defaults_0.txt": {
+      "sha256": "94db7235757e9223e846908095bfe379ab883d51a98584c04e00bf6e639954c1",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_0.txt"
+    },
+    "video_defaults_1.txt": {
+      "sha256": "c47aab6a3bc4dad82c9b735f4f9873889a056ae22657eafc4a6460afa5a1bd84",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_1.txt"
+    },
+    "video_defaults_2.txt": {
+      "sha256": "68b1ca93023f3def74a03f9466c6a5ea26eb73614c9851cd7e534df43ff8d6a8",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_2.txt"
+    },
+    "video_defaults_3.txt": {
+      "sha256": "4858e218e9529e81d591de9a28204e0f0fb74e5346f8b4382935ec890f53a9ba",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/pak01_dir/cfg/video_defaults_3.txt"
+    },
+    "worldrenderer_strings.txt": {
+      "sha256": "ddd73bd48c118bfaf5b857bbe328b5bbd0fc0a4a58168f8b6e46d7b2c9182fbe",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/worldrenderer_strings.txt"
+    }
+  },
+  "upstream_commit": "347a6694bd7779bafa66b339cd13435c90f1c2f3",
+  "valve_commit": "a94d8b455203f12b176de75a5598dd8e6e8a94d4",
+  "valve_provenance": "SteamTracking is a third-party mirror of captured Valve files and console help, not Valve publication or source code."
+}

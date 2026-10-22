@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Compare the effective settings of two gameinfo.gi files.
+"""Compare the declared settings of two gameinfo.gi files.
 
-    python3 utils/compare.py                                   stable v1.0 vs experimental (the usual A/B)
+    python3 utils/compare.py                                   stable v1.0 vs experimental (historical default)
     python3 utils/compare.py A.gi B.gi                         any two files
     python3 utils/compare.py --defaults                        also show Valve's default for each convar (downloads the dump)
 
-Compares what the game applies, not the text: active ConVars values (comments and order ignored) and every scalar in
-the other sections. If a file sets a convar twice, the last value is used and the duplicate is reported.
+Compares active ConVars assignment sequences and every scalar in the other sections. Duplicate values remain in
+file order; effective runtime precedence is not inferred. Nested ConVars constraints are listed with other scalars.
 """
 
 from __future__ import annotations
@@ -21,21 +21,29 @@ DEFAULT_A = gi.REPO / "stable-config" / "v1.0" / "gameinfo.gi"
 DEFAULT_B = gi.GI
 
 
-def load(path: Path) -> tuple[dict[str, str], dict[str, str], list[str]]:
+def load(path: Path) -> tuple[dict[str, list[str]], dict[str, str], list[str]]:
     """(convars, other section scalars by path, duplicate convar names)."""
     root = gi.gameinfo_root(path.read_text(encoding="utf-8"))
-    convars: dict[str, str] = {}
+    convars: dict[str, list[str]] = {}
     dups: list[str] = []
     other: dict[str, str] = {}
     for c in root.children:
         if c.value is not None:
             other[c.key] = c.value
         elif c.key == "ConVars":
-            for p, v, _ in gi.flatten(c):
-                name = "/".join(p)
-                if name in convars:
-                    dups.append(name)
-                convars[name] = v
+            for entry in c.children:
+                if entry.value is not None:
+                    if entry.key in convars:
+                        dups.append(entry.key)
+                    convars.setdefault(entry.key, []).append(entry.value)
+                else:
+                    for p, v, _ in gi.flatten(entry, ("ConVars", entry.key)):
+                        key = "/".join(p)
+                        suffix = 2
+                        while key in other:
+                            key = "/".join(p) + f"#{suffix}"
+                            suffix += 1
+                        other[key] = v
         else:
             seen: dict[str, int] = {}
             for p, v, _ in gi.flatten(c, (c.key,)):
@@ -51,9 +59,11 @@ def main() -> int:
     ap.add_argument("a", nargs="?", type=Path, default=DEFAULT_A)
     ap.add_argument("b", nargs="?", type=Path, default=DEFAULT_B)
     ap.add_argument("--defaults", action="store_true", help="annotate convars with Valve's default (network)")
+    ap.add_argument("--ref", default="master", help="GameTracking ref for --defaults")
+    ap.add_argument("--dump", help="local dump for --defaults")
     args = ap.parse_args()
 
-    dump = gi.valve_convars() if args.defaults else {}
+    dump = gi.valve_convars(args.ref, path=args.dump) if args.defaults else {}
 
     def dflt(name: str) -> str:
         cv = dump.get(name)
@@ -66,11 +76,11 @@ def main() -> int:
     print(f"B: {rel(args.b)}  ({len(b_cv)} active convars)")
     for label, dups in (("A", a_dups), ("B", b_dups)):
         if dups:
-            print(f"{label} sets these more than once (last value used): {', '.join(sorted(set(dups)))}")
+            print(f"{label} sets these more than once (all values shown in file order; runtime precedence unverified): {', '.join(sorted(set(dups)))}")
 
     only_a = sorted(set(a_cv) - set(b_cv))
     only_b = sorted(set(b_cv) - set(a_cv))
-    diff = sorted(n for n in set(a_cv) & set(b_cv) if gi.normalize(a_cv[n]) != gi.normalize(b_cv[n]))
+    diff = sorted(n for n in set(a_cv) & set(b_cv) if [gi.normalize(x) for x in a_cv[n]] != [gi.normalize(x) for x in b_cv[n]])
     w = max(map(len, only_a + only_b + diff), default=0) + 2
 
     print(f"\nConVars only in A ({len(only_a)}):")

@@ -5,25 +5,28 @@
 #   DeadlockConfig-Update -Ex          experimental-config
 #   DeadlockConfig-Update -SelfUpdate  replace this script with the latest one from main
 #
-# Works in Windows PowerShell 5.1 and PowerShell 7.
+# Targets Windows PowerShell 5.1 and PowerShell 7.
 
 function DeadlockConfig-Update {
-    [CmdletBinding()]
+    [CmdletBinding(DefaultParameterSetName = 'Install')]
     param(
+        [Parameter(ParameterSetName = 'Install')]
         [switch]$Ex,
+        [Parameter(Mandatory = $true, ParameterSetName = 'SelfUpdate')]
         [switch]$SelfUpdate
     )
     $repo = 'ghempy53/deadlock-config'
     $Branch = 'main'
     [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-    # raw.githubusercontent.com caches branch URLs for about 5 minutes after a push, so download from the branch's
-    # current commit instead. If the GitHub API is unreachable (or rate limited), fall back to the branch URL.
+    # Pin the branch tip once so the download has an identifiable revision. If the API is unreachable,
+    # fall back to the branch URL, whose cache age is unknown.
     try {
         $ref = (Invoke-RestMethod "https://api.github.com/repos/$repo/commits/$Branch" -UseBasicParsing -ErrorAction Stop).sha
+        if ($ref -notmatch '^[0-9a-f]{40}$') { throw 'GitHub returned an invalid commit SHA.' }
         $label = "$Branch @ $($ref.Substring(0, 7))"
     } catch {
-        Write-Warning "Could not resolve $Branch to a commit; the download may be up to 5 minutes old."
+        Write-Warning "Could not resolve $Branch to a commit; using the branch URL, whose cache age is unknown."
         $ref = $Branch
         $label = $Branch
     }
@@ -35,10 +38,20 @@ function DeadlockConfig-Update {
         $tmp = [IO.Path]::GetTempFileName()
         try {
             Invoke-WebRequest -Uri "$raw/scripts/DeadlockConfig-Update.ps1" -OutFile $tmp -UseBasicParsing -ErrorAction Stop
-            if (-not (Select-String -Path $tmp -Pattern 'function DeadlockConfig-Update' -SimpleMatch -Quiet)) {
-                throw 'Download is not the DeadlockConfig-Update script.'
+            $tokens = $null
+            $parseErrors = $null
+            $ast = [System.Management.Automation.Language.Parser]::ParseFile($tmp, [ref]$tokens, [ref]$parseErrors)
+            $function = $ast.Find({ param($node)
+                $node -is [System.Management.Automation.Language.FunctionDefinitionAst] -and
+                $node.Name -eq 'DeadlockConfig-Update'
+            }, $true)
+            if ($parseErrors.Count -gt 0 -or -not $function) {
+                throw 'Download is not a valid DeadlockConfig-Update PowerShell script.'
             }
-            Copy-Item $tmp $self -Force
+            Copy-Item $tmp $self -Force -ErrorAction Stop
+            if ((Get-FileHash $tmp -ErrorAction Stop).Hash -ne (Get-FileHash $self -ErrorAction Stop).Hash) {
+                throw 'Script copy verification failed.'
+            }
             Write-Host "Updated $self ($label). Open a new terminal to use it." -ForegroundColor Green
         } finally {
             Remove-Item $tmp -ErrorAction SilentlyContinue
@@ -66,15 +79,20 @@ function DeadlockConfig-Update {
     $tmp = [IO.Path]::GetTempFileName()
     try {
         Invoke-WebRequest -Uri "$raw/$folder/gameinfo.gi" -OutFile $tmp -UseBasicParsing -ErrorAction Stop
-        if (-not (Select-String -Path $tmp -Pattern 'GameInfo' -SimpleMatch -Quiet)) {
+        $download = [IO.File]::ReadAllText($tmp)
+        if ($download -notmatch '(?s)^\s*(?://[^\r\n]*[\r\n]+\s*)*(?:"GameInfo"|GameInfo)\s*\{' -or
+            $download -notmatch '(?m)^\s*ConVars\s*$' -or $download -notmatch '\}\s*$') {
             throw "Download is not a gameinfo.gi: $raw/$folder/gameinfo.gi"
         }
         # Always replace the installed file, even when it matches the download.
-        $same = (Test-Path $target) -and (Get-FileHash $tmp).Hash -eq (Get-FileHash $target).Hash
-        Copy-Item $tmp $target -Force   # byte for byte: no BOM or line-ending changes
+        $same = (Test-Path $target) -and (Get-FileHash $tmp -ErrorAction Stop).Hash -eq (Get-FileHash $target -ErrorAction Stop).Hash
+        Copy-Item $tmp $target -Force -ErrorAction Stop   # byte for byte: no BOM or line-ending changes
+        if ((Get-FileHash $tmp -ErrorAction Stop).Hash -ne (Get-FileHash $target -ErrorAction Stop).Hash) {
+            throw 'Installed config copy verification failed.'
+        }
         $note = if ($same) { ' (unchanged)' } else { '' }
         Write-Host "Installed $folder ($label) -> $target$note" -ForegroundColor Green
-        if (Get-Process deadlock, project8 -ErrorAction SilentlyContinue) {
+        if (Get-Process deadlock, project8, citadel -ErrorAction SilentlyContinue) {
             Write-Warning 'Deadlock is running. Restart it to load the new config.'
         }
     } finally {

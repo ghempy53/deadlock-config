@@ -1,48 +1,32 @@
 ---
 name: patch-verify
-description: Verify experimental-config/gameinfo.gi after a Deadlock game update. Covers removed, renamed or re-defaulted convars, stock-section drift, the stock ConVars tail and [def:] tags. Use when the owner mentions a new patch, hotfix or major update, sees gameinfo or console errors after an update, or asks to re-verify against Valve's data.
+description: Compare both active configs with a pinned Deadlock capture after a patch, preserve owner decisions, and refresh evidence without silently retuning.
 ---
 
 # Post-update verification
 
-Valve data comes from SteamTracking/GameTracking-Deadlock, which commits each build. Find the last checked commit in
-`docs/CHANGES.txt`: search for `GameTracking`, which appears as `latest <sha>` or `GameTracking-Deadlock <sha>`.
-
-## 1. What changed in Valve's convars
-
-```
-python3 utils/convars.py --refresh diff <last-checked-sha>        # added / removed / default, range, flag changes
-```
-
-Lines marked `<- gameinfo.gi:N` touch this config, so look at each one.
-- **Removed and active here:** comment it out, tag it `[def: gone]`, log it under `line --` (or keep it commented),
-  then look for a replacement with `utils/convars.py lookup 'prefix*'`.
-- **Default changed:** update the `[def:]` tag. If our line pinned the old default on purpose, ask the owner whether
-  to keep the pin.
-- **Flags changed** (newly `gameinfo_cannot_override`, now `gamedll`-only, or `cheat`): the line may now be ignored or
-  server-only. Report it.
-- **Added convars** in areas this config tunes (camera, damage text, health bars, particles, shadows): list a few
-  worth a look. Don't add them unasked.
-
-## 2. Full audit
+Follow `docs/AFTER-GAME-UPDATE.md` and `utils/README.md`. SteamTracking/GameTracking-Deadlock is a third-party mirror
+of captured Valve files, not a Valve-authored tuning guide. Resolve one full commit and record its `steam.inf` build;
+use that same snapshot throughout the audit. Keep the previous pinned snapshot for comparison.
 
 ```
-python3 utils/convars.py audit       # gone / blocked / server-only / out-of-range / wrong [def:] tags
-python3 utils/stock_diff.py          # guarded sections, PGIVersion, stock ConVars tail vs Valve's stock gameinfo.gi
-python3 utils/check.py
+python3 utils/convars.py --config both diff OLD_FULL_SHA NEW_FULL_SHA
+python3 utils/convars.py --config both --ref NEW_FULL_SHA audit
+python3 utils/stock_diff.py --config both --ref NEW_FULL_SHA
+python3 utils/check.py --config both
 ```
 
-The expected `stock_diff` result is 0 errors, with only the FileSystem SearchPaths warning. For anything else:
-- **Guarded section or PGIVersion differs:** copy Valve's new section into `experimental-config/gameinfo.gi` exactly. Those sections must
-  match stock.
-- **Stock ConVars entry missing or different:** update our stock tail to Valve's value (`fps_max`/`fps_max_ui` stay 0).
-- **Tail entry no longer in stock:** remove it.
+- A name missing from the new dump is **absent from that capture**, not proven removed. Check other captured files,
+  history and the running game before proposing a replacement. Do not automatically comment it out or tag it gone.
+- Record changed defaults, ranges and flags separately from stock `gameinfo.gi` overrides and upstream assignments.
+  Preserve intentionally pinned values pending an authorized change.
+- Guarded-section/top-level drift is a compatibility finding, not authorization to overwrite those sections. Both
+  current configs inherit engine edits. Neither is a guaranteed matchmaking fallback; current stock is the control.
+- The custom block after `END OF CONFIG` is not all stock tail. Use the parsed `rate` range-block boundary and compare
+  actual entries. Do not delete entries merely because they are absent from current stock.
+- `archive`, `replicated`, `cheat` and `developmentonly` flags require contextual runtime tests; no global claim of
+  startup effectiveness or menu precedence is justified by those flags alone.
 
-## 3. Record it
-
-Add a section to `docs/CHANGES.txt` above `NOTES`, as in the earlier audits:
-`<UPDATE NAME> CHECK (YYYY-MM-DD; Valve data: GameTracking-Deadlock <sha>, build <n>)`. List each change with
-`line N`/`line --` rows and a short why. Update the "verified against" line in the experimental section of `docs/CONFIGS.md` and any in-game settings
-the patch moved. Run `python3 utils/check.py --fix` last.
-
-If nothing changed, still record a one-line check so the next diff starts from the new commit.
+Refresh pinned sources and durable metadata, regenerate the complete reference and stable nondefault report, then
+check completeness and links. Record diagnostic findings and runtime tests still needed. Do not edit frozen configs
+or historical research to make them look current. Add a current-status note where old conclusions are superseded.

@@ -1,60 +1,25 @@
 ---
 name: upstream-sync
-description: Check Sqooky's OptimizationLock for changes since the last synced commit and propose which to adopt. Use when asked to sync, update or compare with upstream / OptimizationLock / Sqooky, or when a new OptimizationLock release is mentioned.
+description: Compare OptimizationLock revisions and propose or implement only authorized changes while preserving current owner preferences.
 ---
 
-# Upstream sync (Sqooky/OptimizationLock)
+# Upstream comparison and sync
 
-The experimental ConVars are a fork of OptimizationLock 3.5.2 (fork rule in `docs/CLAUDE.md`). Judge each upstream
-change by that rule: valid client-side values are taken; a value that breaks a rule or settled decision is taken only
-if Eskay's config sets the same convar. Engine sections and fps_max never change. Apply them by hand.
+Read current `docs/CONFIGS.md` and `docs/CLAUDE.md`. The previous experimental 3.5.2 fork rule and its Eskay exception
+are archived history. Current owner decisions govern both files; an upstream assignment is provenance, not proof
+that it is valid, effective or faster.
 
-When the owner asks to pull upstream into the **stable** config, apply upstream's changes to
-`stable-config/gameinfo.gi` but keep the owner's edits listed in `docs/CONFIGS.md`. `r_aspectratio` always
-stays commented out (the owner uses an FOV mod), whatever upstream sets.
-
-## 1. Diff upstream
-
-```
-python3 utils/upstream_diff.py                 # from the last synced commit (docs/CHANGES.txt) to main
-python3 utils/upstream_diff.py --from SHA --to SHA
-```
-
-If it reports byte-identical, or only comment, formatting or translation changes, skip to step 4 and record a
-"no new convars" check.
-
-To see the full commit SHA and what else changed (README, launch options, addons):
-`git clone --depth 20 https://github.com/Sqooky/OptimizationLock.git` into the scratchpad and `git log`/`git diff`
-there.
-
-## 2. Triage each changed convar
-
-For each one, run `python3 utils/convars.py lookup NAME` and sort it into one of:
-- **Adopt**: valid, client-side, not blocked or gone, in range, and either within the rules or also set by Eskay's
-  config (fork rule).
-- **Skip**: give a reason (hides something, server-only, blocked, gone, contradicts a settled decision, or no proven
-  benefit).
-- **Engine-section changes**: always skip. Those sections stay Valve stock (matchmaking PGI guard).
-
-Present the triage table to the owner before editing, unless they asked to just apply it.
-
-## 3. Apply the adopted ones
-
-Use the `convar-change` skill steps (edit, log, `utils/check.py --fix`, audit).
-
-## 4. Record the sync
-
-Add to `docs/CHANGES.txt` above `NOTES` (this updates the commit the next diff starts from):
-
-```
-UPSTREAM SYNC CHECK (YYYY-MM-DD, OptimizationLock main @ <short sha>)
-  <what changed upstream in one or two lines>. Adopted: ... Skipped: ... (reasons).
-```
-
-Also update the "checked against `main @ ...`" line in the experimental section of `docs/CONFIGS.md`.
-
-## 5. Regenerate the non-default list
-
-Run `python3 utils/nondefaults.py` after step 4 (it reads the synced commit from `docs/CHANGES.txt`) and commit
-`docs/STABLE-NONDEFAULT-CONVARS.md` with the sync, even when no convar changed: the Valve dump it compares against
-moves with game patches.
+1. Resolve the desired OptimizationLock commit and compare explicitly:
+   `python3 utils/upstream_diff.py --config both --from OLD_SHA --to NEW_SHA`.
+   The no-argument baseline comes from the historical sync log and may not represent either current file exactly.
+   Inspect comments and other changed files separately when relevant.
+2. Use one pinned GameTracking snapshot to check changed names, defaults, ranges, flags and stock overrides. Absence
+   from one dump does not prove removal; duplicate declarations do not establish which value wins.
+3. Give each change an adopt/skip/defer recommendation with evidence and trade-offs. Preserve uncapped FPS,
+   `r_aspectratio` disabled for the FOV mod, the owner's tested particle choice and current texture preferences.
+   Engine-section changes require explicit scope and compatibility testing; do not normalize existing sections.
+4. When authorized, apply only the requested variant's changes and use `convar-change` for documentation and checks.
+   Preserve all frozen and archived files. Record the actual adopted commit and any deviations in `docs/CONFIGS.md`
+   and the experimental changelog where applicable; do not describe a checked-only revision as fully synced.
+5. Update durable setting metadata and regenerate references with pinned source inputs. Report in-game testing as
+   pending unless it was actually performed. Existing diagnostics are not authorization to change unrelated values.
