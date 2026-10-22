@@ -2,7 +2,7 @@
 
 Generated 2026-10-22 by `python3 utils/nondefaults.py` from [`stable-config/gameinfo.gi`](../stable-config/gameinfo.gi)
 (upstream comparison: OptimizationLock `347a6694bd7779bafa66b339cd13435c90f1c2f3`; adoption history and owner edits are in [CONFIGS.md](CONFIGS.md)).
-Valve data: [GameTracking-Deadlock `a94d8b4`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/a94d8b455203f12b176de75a5598dd8e6e8a94d4), build 6813 (`DumpSource2/convars.txt` and
+Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248), build 6814 (`DumpSource2/convars.txt` and
 `game/citadel/gameinfo.gi`). Regenerate after every upstream sync or game patch; don't edit by hand.
 
 - Only active lines count; commented-out lines are ignored. Values are compared after normalising booleans
@@ -17,7 +17,7 @@ Valve data: [GameTracking-Deadlock `a94d8b4`](https://github.com/SteamTracking/G
   This generated report is an assignment inventory, not a list of effective changes.
 - **Line** is the line in `stable-config/gameinfo.gi`; **Group** is the nearest section header above it.
 
-## Nondefault custom assignments (308)
+## Nondefault custom assignments (309)
 
 | Line | Convar | Stable | Valve default | Group | Flags |
 | ---: | --- | --- | --- | --- | --- |
@@ -32,6 +32,7 @@ Valve data: [GameTracking-Deadlock `a94d8b4`](https://github.com/SteamTracking/G
 | 629 | `r_farz` | `7000` | `-1` | Preferences / Render Distance | cheat |
 | 630 | `r_mapextents` | `7000` | `16384` | Preferences / Render Distance | cheat |
 | 638 | `citadel_boss_glow_disabled` | `1` | `false` | Preferences / 1. Outlines |  |
+| 644 | `r_aspectratio` | `2.11` | `0` | Preferences / 2. Field of View | developmentonly |
 | 649 | `citadel_damage_text_batching_window_ability` | `1000` | (not in dump) | Preferences / 3. HUD | absent from captured dump; status unresolved |
 | 650 | `citadel_distance_mouse_move_for_minimap_drawing` | `1` | (not in dump) | Preferences / 3. HUD | absent from captured dump; status unresolved |
 | 651 | `citadel_hideout_ball_show_juggle_count` | `1` | `0` | Preferences / 3. HUD | developmentonly, gamedll-only registration |

@@ -1,14 +1,14 @@
 # Documentation
 
 Start with the [complete setting reference](SETTING-REFERENCE.md) for explanations and evidence, or
-[CONFIGS.md](CONFIGS.md) to choose a file. Current guidance was reconciled on **2026-10-22** against build **6813**.
+[CONFIGS.md](CONFIGS.md) to choose a file. Current guidance was reconciled on **2026-10-22** against build **6814**.
 
 ## Current use
 
 | Document | Purpose |
 | --- | --- |
 | [Complete reference](SETTING-REFERENCE.md) | All 873 unique setting paths across both configs, including disabled tweaks, engine metadata and mod paths |
-| [Config provenance and differences](CONFIGS.md) | Owner choices, nine variant differences, frozen versions and testing limits |
+| [Config provenance and differences](CONFIGS.md) | Owner choices, ten variant differences, frozen versions and testing limits |
 | [Install and rollback](INSTALL.md) | Manual install, backups, Steam restoration, renderer and saved-settings context |
 | [Update command](UPDATE-COMMAND.md) | PowerShell setup, stable/experimental install and self-update |
 | [In-game settings](IN-GAME-SETTINGS.md) | Texture, camera, HUD and saved-value reconciliation |

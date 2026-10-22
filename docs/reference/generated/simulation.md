@@ -2,7 +2,7 @@
 
 [Reference index and evidence rules](../../SETTING-REFERENCE.md). Generated; edit the JSON annotations, not this file.
 
-Research date 2026-10-22; Valve-data mirror build 6813. 151 unique setting paths.
+Research date 2026-10-22; Valve-data mirror build 6814. 151 unique setting paths.
 
 ## Contents
 
@@ -170,7 +170,7 @@ Caps AI jobs executed serially within a frame; Valve help declares -1 unlimited.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1220](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1220)) |
 
-**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Limit on number of jobs that will be run(serially) in a frame. - 1 = no limit
 
@@ -184,7 +184,7 @@ Caps AI jobs executed serially within a frame; Valve help declares -1 unlimited.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_disable"></a>
 ## `ConVars/ai_disable`
@@ -208,7 +208,7 @@ Commented example absent from the pinned dump. ai_disabled exists, but that does
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_disabled"></a>
 ## `ConVars/ai_disabled`
@@ -222,7 +222,7 @@ Registered AI-disable switch with no detailed help. Upstream reports that its te
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1127](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1127)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `cheat clientdll gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `cheat clientdll gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -236,7 +236,7 @@ Registered AI-disable switch with no detailed help. Upstream reports that its te
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_foot_sweep_enable"></a>
 ## `ConVars/ai_foot_sweep_enable`
@@ -250,7 +250,7 @@ The name suggests AI foot-sweep processing; Valve supplies no explanatory help i
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1221](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1221)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -264,7 +264,7 @@ The name suggests AI foot-sweep processing; Valve supplies no explanatory help i
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_gather_conditions_async"></a>
 ## `ConVars/ai_gather_conditions_async`
@@ -278,7 +278,7 @@ Valve console help: Allow gathering of conditions to be done asynchronously.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1222](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1222)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Allow gathering of conditions to be done asynchronously.
 
@@ -292,7 +292,7 @@ Valve console help: Allow gathering of conditions to be done asynchronously.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_lod_auto_enabled"></a>
 ## `ConVars/ai_lod_auto_enabled`
@@ -306,7 +306,7 @@ The name suggests automatic AI level-of-detail selection; Valve supplies no expl
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1223](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1223)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -320,7 +320,7 @@ The name suggests automatic AI level-of-detail selection; Valve supplies no expl
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_strong_optimizations_no_checkstand"></a>
 ## `ConVars/ai_strong_optimizations_no_checkstand`
@@ -334,7 +334,7 @@ The name suggests an AI check-stand optimization; Valve supplies no explanatory 
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1224](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1224)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -348,7 +348,7 @@ The name suggests an AI check-stand optimization; Valve supplies no explanatory 
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_think_interval"></a>
 ## `ConVars/ai_think_interval`
@@ -362,7 +362,7 @@ Controls the interval between NPC think updates at normal AI detail. The dump gi
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.3` (active, [L1225](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1225)) |
 
-**Valve registration:** default `0.1`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.1`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Time interval between NPC thinks
 
@@ -376,7 +376,7 @@ Controls the interval between NPC think updates at normal AI detail. The dump gi
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_think_interval_lod_low"></a>
 ## `ConVars/ai_think_interval_lod_low`
@@ -390,7 +390,7 @@ Controls the interval between NPC think updates at low AI detail. The dump gives
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1226](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1226)) |
 
-**Valve registration:** default `0.5`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.5`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Time interval between NPC thinks when set to AI LOD low.
 
@@ -404,7 +404,7 @@ Controls the interval between NPC think updates at low AI detail. The dump gives
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_think_interval_lod_med"></a>
 ## `ConVars/ai_think_interval_lod_med`
@@ -418,7 +418,7 @@ Controls the interval between NPC think updates at medium AI detail. The dump gi
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.4` (active, [L1227](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1227)) |
 
-**Valve registration:** default `0.25`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.25`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Time interval between NPC thinks when set to AI LOD medium.
 
@@ -432,7 +432,7 @@ Controls the interval between NPC think updates at medium AI detail. The dump gi
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_think_interval_lod_very_low"></a>
 ## `ConVars/ai_think_interval_lod_very_low`
@@ -446,7 +446,7 @@ Controls the interval between NPC think updates at very low AI detail. The dump 
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L1228](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1228)) |
 
-**Valve registration:** default `1`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1`; bounds `0.01 … not declared`; flags `defensive developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Time interval between NPC thinks when set to AI LOD very low.
 
@@ -460,7 +460,7 @@ Controls the interval between NPC think updates at very low AI detail. The dump 
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ai_use_async_ragdoll_fixup"></a>
 ## `ConVars/ai_use_async_ragdoll_fixup`
@@ -474,7 +474,7 @@ The name suggests asynchronous AI ragdoll correction; Valve supplies no explanat
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1229](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1229)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -488,7 +488,7 @@ The name suggests asynchronous AI ragdoll correction; Valve supplies no explanat
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-always_perform_full_spatial_partition_update"></a>
 ## `ConVars/always_perform_full_spatial_partition_update`
@@ -499,10 +499,10 @@ Name suggests always doing a full spatial partition update; no detailed help is 
 | --- | --- |
 | Stable | `1` (active, [L1345](../../../stable-config/gameinfo.gi#L1345)) |
 | Experimental | `1` (active, [L1330](../../../experimental-config/gameinfo.gi#L1330)) |
-| Stock gameinfo override | `1` (active, [L660](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L660)) |
+| Stock gameinfo override | `1` (active, [L660](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L660)) |
 | OptimizationLock pinned upstream | `1` (active, [L1504](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1504)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -516,7 +516,7 @@ Name suggests always doing a full spatial partition update; no detailed help is 
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-animgraph_enable_dirty_netvar_optimization"></a>
 ## `ConVars/animgraph_enable_dirty_netvar_optimization`
@@ -530,7 +530,7 @@ Name suggests avoiding redundant animation-graph network-variable work. The pinn
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1329](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1329)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -544,7 +544,7 @@ Name suggests avoiding redundant animation-graph network-variable work. The pinn
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-animgraph_enable_parallel_op_evaluation"></a>
 ## `ConVars/animgraph_enable_parallel_op_evaluation`
@@ -568,7 +568,7 @@ Commented parallel-animation example absent from this dump. Current name, regist
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-animgraph_enable_parallel_preupdate"></a>
 ## `ConVars/animgraph_enable_parallel_preupdate`
@@ -592,7 +592,7 @@ Commented parallel-animation example absent from this dump. Current name, regist
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-animgraph_footlock_calculate_tilt"></a>
 ## `ConVars/animgraph_footlock_calculate_tilt`
@@ -606,7 +606,7 @@ Name suggests controlling foot-lock tilt calculation; Valve provides no specific
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1113](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1113)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -620,7 +620,7 @@ Name suggests controlling foot-lock tilt calculation; Valve provides no specific
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-animgraph_footlock_enabled"></a>
 ## `ConVars/animgraph_footlock_enabled`
@@ -634,7 +634,7 @@ Valve console help: A master convar that effectively disables the entire footloc
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1114](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1114)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** A master convar that effectively disables the entire footlock node.
 
@@ -648,7 +648,7 @@ Valve console help: A master convar that effectively disables the entire footloc
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-animgraph_footlock_ground_roll"></a>
 ## `ConVars/animgraph_footlock_ground_roll`
@@ -662,7 +662,7 @@ Name suggests controlling foot-lock ground-roll adjustment; Valve provides no sp
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1115](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1115)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -676,7 +676,7 @@ Name suggests controlling foot-lock ground-roll adjustment; Valve provides no sp
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-animgraph_footlock_hip_offset_enable"></a>
 ## `ConVars/animgraph_footlock_hip_offset_enable`
@@ -690,7 +690,7 @@ Name suggests controlling foot-lock hip-offset adjustment; Valve provides no spe
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1116](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1116)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -704,7 +704,7 @@ Name suggests controlling foot-lock hip-offset adjustment; Valve provides no spe
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-animgraph_footlock_ik_enable"></a>
 ## `ConVars/animgraph_footlock_ik_enable`
@@ -718,7 +718,7 @@ Valve console help: Enable IK.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1117](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1117)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable IK.
 
@@ -732,7 +732,7 @@ Valve console help: Enable IK.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-animgraph_footlock_trace_ground_enabled"></a>
 ## `ConVars/animgraph_footlock_trace_ground_enabled`
@@ -746,7 +746,7 @@ Valve console help: Convar for toggling foot lock ground tracking.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1118](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1118)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Convar for toggling foot lock ground tracking.
 
@@ -760,7 +760,7 @@ Valve console help: Convar for toggling foot lock ground tracking.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-animgraph_footlock_use_hip_shift"></a>
 ## `ConVars/animgraph_footlock_use_hip_shift`
@@ -774,7 +774,7 @@ Name suggests controlling foot-lock hip shifting; Valve provides no specific hel
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1119](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1119)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -788,7 +788,7 @@ Name suggests controlling foot-lock hip shifting; Valve provides no specific hel
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-animgraph_slowdownonslopes_enabled"></a>
 ## `ConVars/animgraph_slowdownonslopes_enabled`
@@ -802,7 +802,7 @@ Name suggests controlling animation-graph slowdown on slopes; Valve provides no 
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1120](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1120)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -816,7 +816,7 @@ Name suggests controlling animation-graph slowdown on slopes; Valve provides no 
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-battery_saver"></a>
 ## `ConVars/battery_saver`
@@ -840,7 +840,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cam_idealdelta"></a>
 ## `ConVars/cam_idealdelta`
@@ -854,7 +854,7 @@ Controls how quickly third-person camera offsets move toward ideal angles.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L844](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L844)) |
 
-**Valve registration:** default `4`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `4`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Controls the speed when matching offset to ideal angles in thirdperson view
 
@@ -868,7 +868,7 @@ Controls how quickly third-person camera offsets move toward ideal angles.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cam_idealdist"></a>
 ## `ConVars/cam_idealdist`
@@ -882,7 +882,7 @@ Name suggests ideal third-person camera distance; no explanatory Valve help is p
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (disabled, [L1128](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1128)) |
 
-**Valve registration:** default `150`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `150`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -896,7 +896,7 @@ Name suggests ideal third-person camera distance; no explanatory Valve help is p
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cam_ideallag"></a>
 ## `ConVars/cam_ideallag`
@@ -910,7 +910,7 @@ Controls lag while the third-person offset follows ideal angles.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L845](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L845)) |
 
-**Valve registration:** default `4`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `4`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Amount of lag used when matching offset to ideal angles in thirdperson view
 
@@ -924,7 +924,7 @@ Controls lag while the third-person offset follows ideal angles.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cc_captiontrace"></a>
 ## `ConVars/cc_captiontrace`
@@ -938,7 +938,7 @@ Reports missing captions: 0 none, 1 console, 2 HUD.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1024](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1024)) |
 
-**Valve registration:** default `1`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Show missing closecaptions (0 = no, 1 = devconsole, 2 = show in hud)
 
@@ -952,7 +952,7 @@ Reports missing captions: 0 none, 1 console, 2 HUD.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_aggregate_particles"></a>
 ## `ConVars/cl_aggregate_particles`
@@ -963,10 +963,10 @@ Selects particle aggregation. The dump registers the switch without explaining i
 | --- | --- |
 | Stable | `true` (active, [L806](../../../stable-config/gameinfo.gi#L806)); `true` (active, [L1333](../../../stable-config/gameinfo.gi#L1333)) |
 | Experimental | `true` (active, [L810](../../../experimental-config/gameinfo.gi#L810)); `true` (active, [L1318](../../../experimental-config/gameinfo.gi#L1318)) |
-| Stock gameinfo override | `true` (active, [L648](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L648)) |
+| Stock gameinfo override | `true` (active, [L648](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L648)) |
 | OptimizationLock pinned upstream | `true` (active, [L965](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L965)); `true` (active, [L1492](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1492)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -980,7 +980,7 @@ Selects particle aggregation. The dump registers the switch without explaining i
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_async_usercmd_send"></a>
 ## `ConVars/cl_async_usercmd_send`
@@ -991,10 +991,10 @@ Asynchronous user-command send switch inferred from its name; the pinned dump su
 | --- | --- |
 | Stable | `true` (disabled, [L789](../../../stable-config/gameinfo.gi#L789)); `false` (active, [L1227](../../../stable-config/gameinfo.gi#L1227)) |
 | Experimental | `true` (disabled, [L793](../../../experimental-config/gameinfo.gi#L793)); `false` (active, [L1212](../../../experimental-config/gameinfo.gi#L1212)) |
-| Stock gameinfo override | `false` (active, [L542](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L542)) |
+| Stock gameinfo override | `false` (active, [L542](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L542)) |
 | OptimizationLock pinned upstream | `true` (disabled, [L948](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L948)); `false` (active, [L1386](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1386)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1008,7 +1008,7 @@ Asynchronous user-command send switch inferred from its name; the pinned dump su
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_async_usercmd_send_disabled_recvmargin_min"></a>
 ## `ConVars/cl_async_usercmd_send_disabled_recvmargin_min`
@@ -1019,7 +1019,7 @@ Absent from the dump but present in Valve stock. The stock comment describes ext
 | --- | --- |
 | Stable | `0.5` (active, [L1224](../../../stable-config/gameinfo.gi#L1224)) |
 | Experimental | `0.5` (active, [L1209](../../../experimental-config/gameinfo.gi#L1209)) |
-| Stock gameinfo override | `0.5` (active, [L539](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L539)) |
+| Stock gameinfo override | `0.5` (active, [L539](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L539)) |
 | OptimizationLock pinned upstream | `0.5` (active, [L1383](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1383)) |
 
 **Valve registration:** No matching record in the pinned dump; absence does not prove removal.
@@ -1032,7 +1032,7 @@ Absent from the dump but present in Valve stock. The stock comment describes ext
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_batch_entity_list_ops_during_latch"></a>
 ## `ConVars/cl_batch_entity_list_ops_during_latch`
@@ -1046,7 +1046,7 @@ Batches entity-list insertions/removals during interpolation latching; Valve ide
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1028](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1028)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Batch entity list adds / removes while latching interpolated variables to avoid mutex contention.
 
@@ -1060,7 +1060,7 @@ Batches entity-list insertions/removals during interpolation latching; Valve ide
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_bone_cache_optimization"></a>
 ## `ConVars/cl_bone_cache_optimization`
@@ -1074,7 +1074,7 @@ Name suggests enabling a client bone-cache optimization; Valve provides no furth
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1245](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1245)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1088,7 +1088,7 @@ Name suggests enabling a client bone-cache optimization; Valve provides no furth
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_clock_buffer_ticks"></a>
 ## `ConVars/cl_clock_buffer_ticks`
@@ -1099,10 +1099,10 @@ Adds ticks of clock-synchronization receive margin to smooth packet loss. Valve 
 | --- | --- |
 | Stable | `1` (active, [L1225](../../../stable-config/gameinfo.gi#L1225)) |
 | Experimental | `1` (active, [L1210](../../../experimental-config/gameinfo.gi#L1210)) |
-| Stock gameinfo override | `1` (active, [L540](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L540)) |
+| Stock gameinfo override | `1` (active, [L540](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L540)) |
 | OptimizationLock pinned upstream | `1` (active, [L1384](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1384)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Clock sync will try to maintain an additional margin of N ticks.  This is intended to smooth over packet loss, and is a replacement for cl_interp_ratio / cl_interp.  This value is simply added to cl_clock_recvmargin_desired
 
@@ -1116,7 +1116,7 @@ Adds ticks of clock-synchronization receive margin to smooth packet loss. Valve 
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_disable_ragdolls"></a>
 ## `ConVars/cl_disable_ragdolls`
@@ -1130,7 +1130,7 @@ Ragdoll-disable toggle with no descriptive Valve help; requested 0 retains its f
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L920](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L920)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `cheat clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `cheat clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1144,7 +1144,7 @@ Ragdoll-disable toggle with no descriptive Valve help; requested 0 retains its f
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_enable_eye_occlusion"></a>
 ## `ConVars/cl_enable_eye_occlusion`
@@ -1168,7 +1168,7 @@ Absent from the dump; the name suggests an eye occlusion feature, but current re
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_fasttempentcollision"></a>
 ## `ConVars/cl_fasttempentcollision`
@@ -1182,7 +1182,7 @@ Registered temporary-entity collision-related setting; the dump gives no help de
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1000` (active, [L924](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L924)) |
 
-**Valve registration:** default `5`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `5`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1196,7 +1196,7 @@ Registered temporary-entity collision-related setting; the dump gives no help de
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_input_enable_raw_keyboard"></a>
 ## `ConVars/cl_input_enable_raw_keyboard`
@@ -1210,7 +1210,7 @@ Enables raw keyboard input.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1138](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1138)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable raw keyboard input
 
@@ -1224,7 +1224,7 @@ Enables raw keyboard input.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_interp"></a>
 ## `ConVars/cl_interp`
@@ -1248,7 +1248,7 @@ Commented interpolation-time example absent from the pinned dump.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_interp_parallel"></a>
 ## `ConVars/cl_interp_parallel`
@@ -1259,10 +1259,10 @@ Runs interpolation concurrently for entities without children.
 | --- | --- |
 | Stable | `true` (active, [L871](../../../stable-config/gameinfo.gi#L871)); `1` (active, [L1346](../../../stable-config/gameinfo.gi#L1346)) |
 | Experimental | `true` (active, [L875](../../../experimental-config/gameinfo.gi#L875)); `1` (active, [L1331](../../../experimental-config/gameinfo.gi#L1331)) |
-| Stock gameinfo override | `1` (active, [L661](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L661)) |
+| Stock gameinfo override | `1` (active, [L661](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L661)) |
 | OptimizationLock pinned upstream | `true` (active, [L1030](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1030)); `1` (active, [L1505](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1505)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Run interpolation in parallel for entities with no children.
 
@@ -1276,7 +1276,7 @@ Runs interpolation concurrently for entities without children.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_interp_ratio"></a>
 ## `ConVars/cl_interp_ratio`
@@ -1287,10 +1287,10 @@ Valve’s legacy-style help describes interpolation as this ratio divided by cl_
 | --- | --- |
 | Stable | `1` (disabled, [L792](../../../stable-config/gameinfo.gi#L792)); `0` (active, [L1226](../../../stable-config/gameinfo.gi#L1226)) |
 | Experimental | `1` (disabled, [L796](../../../experimental-config/gameinfo.gi#L796)); `0` (active, [L1211](../../../experimental-config/gameinfo.gi#L1211)) |
-| Stock gameinfo override | `0` (active, [L541](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L541)) |
+| Stock gameinfo override | `0` (active, [L541](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L541)) |
 | OptimizationLock pinned upstream | `1` (disabled, [L951](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L951)); `0` (active, [L1385](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1385)) |
 
-**Valve registration:** default `2`; bounds `not declared … not declared`; flags `clientdll userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `2`; bounds `not declared … not declared`; flags `clientdll userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Sets the client simulation interpolation amount, in terms of server updates (final amount is cl_interp_ratio / cl_updaterate).
 
@@ -1304,7 +1304,7 @@ Valve’s legacy-style help describes interpolation as this ratio divided by cl_
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_max_particle_pvs_aabb_edge_length"></a>
 ## `ConVars/cl_max_particle_pvs_aabb_edge_length`
@@ -1315,10 +1315,10 @@ Appears to bound particle visibility volumes; the dump does not describe the alg
 | --- | --- |
 | Stable | `100` (active, [L1330](../../../stable-config/gameinfo.gi#L1330)) |
 | Experimental | `100` (active, [L1315](../../../experimental-config/gameinfo.gi#L1315)) |
-| Stock gameinfo override | `100` (active, [L645](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L645)) |
+| Stock gameinfo override | `100` (active, [L645](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L645)) |
 | OptimizationLock pinned upstream | `100` (active, [L1489](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1489)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1332,7 +1332,7 @@ Appears to bound particle visibility volumes; the dump does not describe the alg
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_modifier_parallel_gather_status_effect_updates"></a>
 ## `ConVars/cl_modifier_parallel_gather_status_effect_updates`
@@ -1346,7 +1346,7 @@ Name suggests concurrently gathering modifier/status-effect updates; Valve suppl
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1031](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1031)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1360,7 +1360,7 @@ Name suggests concurrently gathering modifier/status-effect updates; Valve suppl
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_particle_batch_mode"></a>
 ## `ConVars/cl_particle_batch_mode`
@@ -1374,7 +1374,7 @@ Selects a particle batch mode. The current dump supplies no enum documentation; 
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L966](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L966)) |
 
-**Valve registration:** default `1`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1388,7 +1388,7 @@ Selects a particle batch mode. The current dump supplies no enum documentation; 
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_particle_fallback_base"></a>
 ## `ConVars/cl_particle_fallback_base`
@@ -1402,7 +1402,7 @@ Sets the base contribution to choosing cheaper particle effects under load.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `5` (active, [L967](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L967)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Base for falling back to cheaper effects under load.
 
@@ -1416,7 +1416,7 @@ Sets the base contribution to choosing cheaper particle effects under load.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_particle_fallback_multiplier"></a>
 ## `ConVars/cl_particle_fallback_multiplier`
@@ -1430,7 +1430,7 @@ Scales the choice of cheaper particle fallback effects under load.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (active, [L968](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L968)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Multiplier for falling back to cheaper effects under load.
 
@@ -1444,7 +1444,7 @@ Scales the choice of cheaper particle fallback effects under load.
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_particle_max_count"></a>
 ## `ConVars/cl_particle_max_count`
@@ -1458,7 +1458,7 @@ Appears to cap particle count; exact scope and the meaning of zero are not descr
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1500` (disabled, [L1139](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1139)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1472,7 +1472,7 @@ Appears to cap particle count; exact scope and the meaning of zero are not descr
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_particle_sim_fallback_base_multiplier"></a>
 ## `ConVars/cl_particle_sim_fallback_base_multiplier`
@@ -1486,7 +1486,7 @@ Controls how aggressively newly created particle systems fall back after their s
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `100` (active, [L969](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L969)) |
 
-**Valve registration:** default `5`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `5`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** How aggressive the switch to fallbacks will be depending on how far over the cl_particle_sim_fallback_threshold_ms the sim time is.  Higher numbers are more aggressive.
 
@@ -1500,7 +1500,7 @@ Controls how aggressively newly created particle systems fall back after their s
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_particle_sim_fallback_threshold_ms"></a>
 ## `ConVars/cl_particle_sim_fallback_threshold_ms`
@@ -1514,7 +1514,7 @@ Sets the particle simulation time threshold before newly created systems begin u
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L970](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L970)); `0.3` (disabled, [L1140](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1140)) |
 
-**Valve registration:** default `6`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `6`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Amount of simulation time that can elapse before new systems start falling back to cheaper versions
 
@@ -1528,7 +1528,7 @@ Sets the particle simulation time threshold before newly created systems begin u
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_phys_animated_hierarchy"></a>
 ## `ConVars/cl_phys_animated_hierarchy`
@@ -1542,7 +1542,7 @@ Name suggests animated physics hierarchy handling; the dump has no descriptive h
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1246](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1246)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1556,7 +1556,7 @@ Name suggests animated physics hierarchy handling; the dump has no descriptive h
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_phys_assume_fixed_tick_interval"></a>
 ## `ConVars/cl_phys_assume_fixed_tick_interval`
@@ -1570,7 +1570,7 @@ Chooses fixed client tick interval assumptions for physics substeps; false recal
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1032](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1032)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** If true, we assume the client uses a fixed tickrate like the server (which may not always be true). If false, we recalculate the number of physics substeps in each client tick based on the actual elapsed time in the tick.
 
@@ -1584,7 +1584,7 @@ Chooses fixed client tick interval assumptions for physics substeps; false recal
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_phys_enabled"></a>
 ## `ConVars/cl_phys_enabled`
@@ -1598,7 +1598,7 @@ Master enable for client physics simulation, per Valve help.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L778](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L778)); `false` (disabled, [L1141](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1141)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable all physics simulation
 
@@ -1612,7 +1612,7 @@ Master enable for client physics simulation, per Valve help.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_phys_networked_start_sleep"></a>
 ## `ConVars/cl_phys_networked_start_sleep`
@@ -1626,7 +1626,7 @@ Name suggests starting networked physics bodies asleep; the dump has no descript
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1247](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1247)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1640,7 +1640,7 @@ Name suggests starting networked physics bodies asleep; the dump has no descript
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_phys_sleep_enable"></a>
 ## `ConVars/cl_phys_sleep_enable`
@@ -1654,7 +1654,7 @@ Allows dynamic physics bodies to sleep when eligible.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1248](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1248)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable sleeping for dynamic physics bodies.
 
@@ -1668,7 +1668,7 @@ Allows dynamic physics bodies to sleep when eligible.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_poll_network_early"></a>
 ## `ConVars/cl_poll_network_early`
@@ -1679,10 +1679,10 @@ When true, polls network messages every frame rather than every tick.
 | --- | --- |
 | Stable | `0` (active, [L1218](../../../stable-config/gameinfo.gi#L1218)) |
 | Experimental | `0` (active, [L1203](../../../experimental-config/gameinfo.gi#L1203)) |
-| Stock gameinfo override | `0` (active, [L533](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L533)) |
+| Stock gameinfo override | `0` (active, [L533](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L533)) |
 | OptimizationLock pinned upstream | `0` (active, [L1377](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1377)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable polling for network messages every frame, instead of every tick
 
@@ -1696,7 +1696,7 @@ When true, polls network messages every frame rather than every tick.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_ragdoll_default_scale"></a>
 ## `ConVars/cl_ragdoll_default_scale`
@@ -1710,7 +1710,7 @@ Name suggests the default ragdoll scale, but the dump does not define units, app
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1249](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1249)) |
 
-**Valve registration:** default `1`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1724,7 +1724,7 @@ Name suggests the default ragdoll scale, but the dump does not define units, app
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_ragdoll_limit"></a>
 ## `ConVars/cl_ragdoll_limit`
@@ -1738,7 +1738,7 @@ Caps the number of displayed ragdolls; Valve documents -1 as unlimited.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L921](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L921)) |
 
-**Valve registration:** default `20`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `20`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Maximum number of ragdolls to show (-1 disables limit)
 
@@ -1752,7 +1752,7 @@ Caps the number of displayed ragdolls; Valve documents -1 as unlimited.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_resend"></a>
 ## `ConVars/cl_resend`
@@ -1766,7 +1766,7 @@ Delay in seconds before resending a connection attempt.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `15` (disabled, [L953](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L953)) |
 
-**Valve registration:** default `0.5`; bounds `0.1 … 2`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.5`; bounds `0.1 … 2`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Delay in seconds before the client will resend the 'connect' attempt
 
@@ -1780,7 +1780,7 @@ Delay in seconds before resending a connection attempt.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_retire_low_priority_lights"></a>
 ## `ConVars/cl_retire_low_priority_lights`
@@ -1794,7 +1794,7 @@ Allows higher-priority dynamic lights to replace lower-priority ones.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L904](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L904)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Low priority dlights are replaced by high priority ones
 
@@ -1808,7 +1808,7 @@ Allows higher-priority dynamic lights to replace lower-priority ones.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_show_splashes"></a>
 ## `ConVars/cl_show_splashes`
@@ -1822,7 +1822,7 @@ Name/upstream comments identify drawing splash effects; no detailed Valve help.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L932](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L932)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1836,7 +1836,7 @@ Name/upstream comments identify drawing splash effects; no detailed Valve help.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_simulate_dormant_entities"></a>
 ## `ConVars/cl_simulate_dormant_entities`
@@ -1850,7 +1850,7 @@ Name suggests simulating dormant client entities; exact dormancy conditions and 
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1067](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1067)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -1864,7 +1864,7 @@ Name suggests simulating dormant client entities; exact dormancy conditions and 
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_skip_update_animations"></a>
 ## `ConVars/cl_skip_update_animations`
@@ -1878,7 +1878,7 @@ Skips game animations when enabled, according to Valve help.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1142](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1142)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable to skip game animations
 
@@ -1892,7 +1892,7 @@ Skips game animations when enabled, according to Valve help.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_smoothtime"></a>
 ## `ConVars/cl_smoothtime`
@@ -1906,7 +1906,7 @@ Time in seconds for smoothing the client view after a prediction error.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.01` (disabled, [L952](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L952)) |
 
-**Valve registration:** default `0.2`; bounds `0.01 … 2`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.2`; bounds `0.01 … 2`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Smooth client's view after prediction error over this many seconds
 
@@ -1920,7 +1920,7 @@ Time in seconds for smoothing the client view after a prediction error.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cl_tickpacket_desired_queuelength"></a>
 ## `ConVars/cl_tickpacket_desired_queuelength`
@@ -1931,10 +1931,10 @@ Multiplied by the tick interval and added to cl_tickpacket_recvmargin_desired to
 | --- | --- |
 | Stable | `1` (active, [L1223](../../../stable-config/gameinfo.gi#L1223)) |
 | Experimental | `1` (active, [L1208](../../../experimental-config/gameinfo.gi#L1208)) |
-| Stock gameinfo override | `1` (active, [L538](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L538)) |
+| Stock gameinfo override | `1` (active, [L538](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L538)) |
 | OptimizationLock pinned upstream | `1` (active, [L1382](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1382)) |
 
-**Valve registration:** default `0`; bounds `0 … 5`; flags `userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `0 … 5`; flags `userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** This value, multiplied by the tick interval, is added to cl_tickpacket_recvmargin_desired to obtain the effective desired recv margin.
 
@@ -1948,7 +1948,7 @@ Multiplied by the tick interval and added to cl_tickpacket_recvmargin_desired to
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_tickpacket_recvmargin_desired"></a>
 ## `ConVars/cl_tickpacket_recvmargin_desired`
@@ -1959,10 +1959,10 @@ Target user-command arrival margin in milliseconds before the server needs the c
 | --- | --- |
 | Stable | `5` (active, [L1222](../../../stable-config/gameinfo.gi#L1222)) |
 | Experimental | `5` (active, [L1207](../../../experimental-config/gameinfo.gi#L1207)) |
-| Stock gameinfo override | `5` (active, [L537](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L537)) |
+| Stock gameinfo override | `5` (active, [L537](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L537)) |
 | OptimizationLock pinned upstream | `5` (active, [L1381](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1381)) |
 
-**Valve registration:** default `5`; bounds `not declared … not declared`; flags `developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `5`; bounds `not declared … not declared`; flags `developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Recvmargin-based usercommand pacing will try to maintain N ms margin between user command arriving at the server and the server needing that user command.  See also cl_tickpacket_desired_queuelength.
 
@@ -1976,7 +1976,7 @@ Target user-command arrival margin in milliseconds before the server needs the c
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_updaterate"></a>
 ## `ConVars/cl_updaterate`
@@ -1987,10 +1987,10 @@ Number of update packets per second requested from the server; a request is not 
 | --- | --- |
 | Stable | `128` (disabled, [L790](../../../stable-config/gameinfo.gi#L790)); `128` (active, [L1350](../../../stable-config/gameinfo.gi#L1350)) |
 | Experimental | `128` (disabled, [L794](../../../experimental-config/gameinfo.gi#L794)); `128` (active, [L1335](../../../experimental-config/gameinfo.gi#L1335)) |
-| Stock gameinfo override | `128` (active, [L665](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L665)) |
+| Stock gameinfo override | `128` (active, [L665](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L665)) |
 | OptimizationLock pinned upstream | `128` (disabled, [L949](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L949)); `128` (active, [L1509](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1509)) |
 
-**Valve registration:** default `20`; bounds `not declared … not declared`; flags `archive clientdll userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `20`; bounds `not declared … not declared`; flags `archive clientdll userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Number of packets per second of updates you are requesting from the server
 
@@ -2004,7 +2004,7 @@ Number of update packets per second requested from the server; a request is not 
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cl_usesocketsforloopback"></a>
 ## `ConVars/cl_usesocketsforloopback`
@@ -2015,10 +2015,10 @@ For local listen-server connections, uses the network stack and 127.0.0.1 instea
 | --- | --- |
 | Stable | `1` (active, [L1217](../../../stable-config/gameinfo.gi#L1217)) |
 | Experimental | `1` (active, [L1202](../../../experimental-config/gameinfo.gi#L1202)) |
-| Stock gameinfo override | `1` (active, [L532](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L532)) |
+| Stock gameinfo override | `1` (active, [L532](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L532)) |
 | OptimizationLock pinned upstream | `1` (active, [L1376](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1376)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** When connecting to local listen server (for example, using the 'map' command), default to loopback=false, which connects to '127.0.0.1' instead of 'loopback'.  This uses the network stack so that fake lag/loss can be simulated.
 
@@ -2032,7 +2032,7 @@ For local listen-server connections, uses the network stack and 127.0.0.1 instea
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-closecaption"></a>
 ## `ConVars/closecaption`
@@ -2046,7 +2046,7 @@ Enables closed captions; requested false matches the declared default.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L880](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L880)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `archive clientdll per_user userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `archive clientdll per_user userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable close captioning.
 
@@ -2060,7 +2060,7 @@ Enables closed captions; requested false matches the declared default.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cloth_filter_transform_stateless"></a>
 ## `ConVars/cloth_filter_transform_stateless`
@@ -2071,10 +2071,10 @@ Selects the stateless FilterTransform variant for cloth; the stock value 0 keeps
 | --- | --- |
 | Stable | `0` (active, [L1323](../../../stable-config/gameinfo.gi#L1323)) |
 | Experimental | `0` (active, [L1308](../../../experimental-config/gameinfo.gi#L1308)) |
-| Stock gameinfo override | `0` (active, [L638](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L638)) |
+| Stock gameinfo override | `0` (active, [L638](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L638)) |
 | OptimizationLock pinned upstream | `0` (active, [L1482](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1482)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable the new, stateless version of FilterTransform
 
@@ -2088,7 +2088,7 @@ Selects the stateless FilterTransform variant for cloth; the stock value 0 keeps
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-cloth_sim_on_tick"></a>
 ## `ConVars/cloth_sim_on_tick`
@@ -2102,7 +2102,7 @@ Name suggests choosing tick-based cloth updates; Valve’s dump does not describ
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L925](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L925)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2116,7 +2116,7 @@ Name suggests choosing tick-based cloth updates; Valve’s dump does not describ
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cpu_level"></a>
 ## `ConVars/cpu_level`
@@ -2130,7 +2130,7 @@ Valve console help: CPU Level - Default: High
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L958](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L958)) |
 
-**Valve registration:** default `2`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `2`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** CPU Level - Default: High
 
@@ -2144,7 +2144,7 @@ Valve console help: CPU Level - Default: High
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-cq_buffer_bloat_msecs_max"></a>
 ## `ConVars/cq_buffer_bloat_msecs_max`
@@ -2155,10 +2155,10 @@ Maximum milliseconds of user commands the server allows a client to buffer.
 | --- | --- |
 | Stable | `120` (active, [L1219](../../../stable-config/gameinfo.gi#L1219)) |
 | Experimental | `120` (active, [L1204](../../../experimental-config/gameinfo.gi#L1204)) |
-| Stock gameinfo override | `120` (active, [L534](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L534)) |
+| Stock gameinfo override | `120` (active, [L534](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L534)) |
 | OptimizationLock pinned upstream | `120` (active, [L1378](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1378)) |
 
-**Valve registration:** default `150`; bounds `not declared … not declared`; flags `release replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `150`; bounds `not declared … not declared`; flags `release replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Server will not allow the client to buffer up more than N ms of commands.
 
@@ -2172,7 +2172,7 @@ Maximum milliseconds of user commands the server allows a client to buffer.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-debug_draw_enable"></a>
 ## `ConVars/debug_draw_enable`
@@ -2186,7 +2186,7 @@ Global debug-draw-related switch, but Valve provides no further help; exact cons
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1037](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1037)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2200,7 +2200,7 @@ Global debug-draw-related switch, but Valve provides no further help; exact cons
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-dsd_slow_cpu"></a>
 ## `ConVars/dsd_slow_cpu`
@@ -2224,7 +2224,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-enable_boneflex"></a>
 ## `ConVars/enable_boneflex`
@@ -2238,7 +2238,7 @@ The name and upstream label indicate bone-driven flex/deformation control; Valve
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L926](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L926)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive clientdll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2252,7 +2252,7 @@ The name and upstream label indicate bone-driven flex/deformation control; Valve
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-enable_priority_boost"></a>
 ## `ConVars/enable_priority_boost`
@@ -2276,7 +2276,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-engine_accurate_input_processing_delta_time"></a>
 ## `ConVars/engine_accurate_input_processing_delta_time`
@@ -2290,7 +2290,7 @@ Uses time since the preceding input-processing pass when processing input severa
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L840](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L840)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** When true, elapsed time given to the input processing will be the time elapsed since the last input processing. This is only relevant when input is processed multiple times per frame ( i.e. multiple ticks per frame)
 
@@ -2304,7 +2304,7 @@ Uses time since the preceding input-processing pass when processing input severa
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-engine_low_latency_sleep_after_client_tick"></a>
 ## `ConVars/engine_low_latency_sleep_after_client_tick`
@@ -2318,7 +2318,7 @@ When low-latency mode is active, selects whether its sleep occurs after client s
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L829](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L829)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** When r_low_latency is enabled, this moves the low latency sleep on tick frames to happen after client simulation.
 
@@ -2332,7 +2332,7 @@ When low-latency mode is active, selects whether its sleep occurs after client s
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-engine_max_ticks_to_simulate"></a>
 ## `ConVars/engine_max_ticks_to_simulate`
@@ -2346,7 +2346,7 @@ Limits simulation ticks processed per frame. Valve explicitly states that exceed
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L1039](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1039)) |
 
-**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time.
 
@@ -2360,7 +2360,7 @@ Limits simulation ticks processed per frame. Valve explicitly states that exceed
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ent_joint_lines"></a>
 ## `ConVars/ent_joint_lines`
@@ -2374,7 +2374,7 @@ Valve console help: Draw a line between a rendered joint and its parent.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1197](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1197)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Draw a line between a rendered joint and its parent.
 
@@ -2388,7 +2388,7 @@ Valve console help: Draw a line between a rendered joint and its parent.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ent_joint_names"></a>
 ## `ConVars/ent_joint_names`
@@ -2402,7 +2402,7 @@ Valve console help: Draw the name of a rendered joint.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1198](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1198)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Draw the name of a rendered joint.
 
@@ -2416,7 +2416,7 @@ Valve console help: Draw the name of a rendered joint.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-fx_drawmetalspark"></a>
 ## `ConVars/fx_drawmetalspark`
@@ -2430,7 +2430,7 @@ Draws metal-spark effects.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1334](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1334)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Draw metal spark effects.
 
@@ -2444,7 +2444,7 @@ Draws metal-spark effects.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-gpu_level"></a>
 ## `ConVars/gpu_level`
@@ -2458,7 +2458,7 @@ Valve console help: GPU Level - Default: High
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1143](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1143)) |
 
-**Valve registration:** default `3`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `3`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** GPU Level - Default: High
 
@@ -2472,7 +2472,7 @@ Valve console help: GPU Level - Default: High
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-gpu_mem_level"></a>
 ## `ConVars/gpu_mem_level`
@@ -2486,7 +2486,7 @@ Valve console help: Memory Level - Default: High
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L960](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L960)) |
 
-**Valve registration:** default `2`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `2`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Memory Level - Default: High
 
@@ -2500,7 +2500,7 @@ Valve console help: Memory Level - Default: High
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-ik_constraints_enabled"></a>
 ## `ConVars/ik_constraints_enabled`
@@ -2514,7 +2514,7 @@ Name suggests controlling IK constraints; Valve provides no specific help, so pr
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1102](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1102)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2528,7 +2528,7 @@ Name suggests controlling IK constraints; Valve provides no specific help, so pr
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_debug_dogleg3bone_enabled"></a>
 ## `ConVars/ik_debug_dogleg3bone_enabled`
@@ -2542,7 +2542,7 @@ Name suggests controlling the named dogleg three-bone IK path; Valve provides no
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1103](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1103)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2556,7 +2556,7 @@ Name suggests controlling the named dogleg three-bone IK path; Valve provides no
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_debug_fabrik_backwards_enabled"></a>
 ## `ConVars/ik_debug_fabrik_backwards_enabled`
@@ -2570,7 +2570,7 @@ Name suggests controlling the debug-labelled backward FABRIK IK path; Valve prov
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1104](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1104)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2584,7 +2584,7 @@ Name suggests controlling the debug-labelled backward FABRIK IK path; Valve prov
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_debug_fabrik_forwards_enabled"></a>
 ## `ConVars/ik_debug_fabrik_forwards_enabled`
@@ -2598,7 +2598,7 @@ Name suggests controlling the debug-labelled forward FABRIK IK path; Valve provi
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1105](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1105)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2612,7 +2612,7 @@ Name suggests controlling the debug-labelled forward FABRIK IK path; Valve provi
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_enable"></a>
 ## `ConVars/ik_enable`
@@ -2626,7 +2626,7 @@ Valve console help: Enable IK.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1106](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1106)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable IK.
 
@@ -2640,7 +2640,7 @@ Valve console help: Enable IK.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_fabrik_align_chain"></a>
 ## `ConVars/ik_fabrik_align_chain`
@@ -2654,7 +2654,7 @@ Name suggests controlling FABRIK chain alignment; Valve provides no specific hel
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L927](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L927)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2668,7 +2668,7 @@ Name suggests controlling FABRIK chain alignment; Valve provides no specific hel
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_fabrik_backwards_enabled"></a>
 ## `ConVars/ik_fabrik_backwards_enabled`
@@ -2682,7 +2682,7 @@ Name suggests controlling the backward FABRIK IK pass; Valve provides no specifi
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1107](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1107)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2696,7 +2696,7 @@ Name suggests controlling the backward FABRIK IK pass; Valve provides no specifi
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_fabrik_forwards_enabled"></a>
 ## `ConVars/ik_fabrik_forwards_enabled`
@@ -2710,7 +2710,7 @@ Name suggests controlling the forward FABRIK IK pass; Valve provides no specific
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1108](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1108)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2724,7 +2724,7 @@ Name suggests controlling the forward FABRIK IK pass; Valve provides no specific
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_final_fixup_enable"></a>
 ## `ConVars/ik_final_fixup_enable`
@@ -2738,7 +2738,7 @@ Name suggests controlling a final IK correction pass; Valve provides no specific
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L928](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L928)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2752,7 +2752,7 @@ Name suggests controlling a final IK correction pass; Valve provides no specific
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ik_planetilt_enable"></a>
 ## `ConVars/ik_planetilt_enable`
@@ -2766,7 +2766,7 @@ Name suggests controlling plane-tilt adjustment; Valve provides no specific help
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1109](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1109)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2780,7 +2780,7 @@ Name suggests controlling plane-tilt adjustment; Valve provides no specific help
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/59); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-instant_replay"></a>
 ## `ConVars/instant_replay`
@@ -2794,7 +2794,7 @@ Enables instant-replay recording.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1144](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1144)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Enable instant replay recording.
 
@@ -2808,7 +2808,7 @@ Enables instant-replay recording.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-iv_parallel_restore"></a>
 ## `ConVars/iv_parallel_restore`
@@ -2819,10 +2819,10 @@ Name suggests concurrent restoration of interpolated variables; the dump provide
 | --- | --- |
 | Stable | `1` (active, [L1294](../../../stable-config/gameinfo.gi#L1294)) |
 | Experimental | `1` (active, [L1279](../../../experimental-config/gameinfo.gi#L1279)) |
-| Stock gameinfo override | `1` (active, [L609](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L609)) |
+| Stock gameinfo override | `1` (active, [L609](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L609)) |
 | OptimizationLock pinned upstream | `1` (active, [L1453](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1453)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2836,7 +2836,7 @@ Name suggests concurrent restoration of interpolated variables; the dump provide
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-minimap_trooper_update_rate_hz"></a>
 ## `ConVars/minimap_trooper_update_rate_hz`
@@ -2850,7 +2850,7 @@ The name identifies a minimap update rate in hertz, but the dump supplies no fur
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L820](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L820)) |
 
-**Valve registration:** default `5`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `5`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2864,7 +2864,7 @@ The name identifies a minimap update rate in hertz, but the dump supplies no fur
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/75).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/75).
 
 <a id="setting-convars-minimap_update_rate_hz"></a>
 ## `ConVars/minimap_update_rate_hz`
@@ -2878,7 +2878,7 @@ The name identifies a minimap update rate in hertz, but the dump supplies no fur
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (active, [L1336](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1336)) |
 
-**Valve registration:** default `30`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `30`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2892,7 +2892,7 @@ The name identifies a minimap update rate in hertz, but the dump supplies no fur
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-movement_stats_debug_draw"></a>
 ## `ConVars/movement_stats_debug_draw`
@@ -2906,7 +2906,7 @@ Name suggests drawing movement statistics; no descriptive help.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1146](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1146)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2920,7 +2920,7 @@ Name suggests drawing movement statistics; no descriptive help.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-music_hideout_debug_enabled"></a>
 ## `ConVars/music_hideout_debug_enabled`
@@ -2934,7 +2934,7 @@ Displays Hideout music-manager debug information.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1182](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1182)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Displays music manager debug info for hideout.
 
@@ -2948,7 +2948,7 @@ Displays Hideout music-manager debug information.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-nav_edit_use_camera"></a>
 ## `ConVars/nav_edit_use_camera`
@@ -2962,7 +2962,7 @@ Camera-related navigation-editor toggle; exact mode is not described.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L854](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L854)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -2976,7 +2976,7 @@ Camera-related navigation-editor toggle; exact mode is not described.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-nav_gen_connect_dist_a"></a>
 ## `ConVars/nav_gen_connect_dist_a`
@@ -2987,10 +2987,10 @@ Name suggests a navigation-generation connection distance; exact units/algorithm
 | --- | --- |
 | Stable | `2.0` (active, [L1230](../../../stable-config/gameinfo.gi#L1230)) |
 | Experimental | `2.0` (active, [L1215](../../../experimental-config/gameinfo.gi#L1215)) |
-| Stock gameinfo override | `2.0` (active, [L545](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L545)) |
+| Stock gameinfo override | `2.0` (active, [L545](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L545)) |
 | OptimizationLock pinned upstream | `2.0` (active, [L1389](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1389)) |
 
-**Valve registration:** default `1`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3004,7 +3004,7 @@ Name suggests a navigation-generation connection distance; exact units/algorithm
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-nav_obstruction_async_update"></a>
 ## `ConVars/nav_obstruction_async_update`
@@ -3018,7 +3018,7 @@ Name suggests asynchronous navigation-obstruction updates; no detailed help.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1337](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1337)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3032,7 +3032,7 @@ Name suggests asynchronous navigation-obstruction updates; no detailed help.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-net_gather_child_fields_only"></a>
 ## `ConVars/net_gather_child_fields_only`
@@ -3043,10 +3043,10 @@ Restricts GatherSendProxyResults traversal to struct and array fields instead of
 | --- | --- |
 | Stable | `1` (active, [L1352](../../../stable-config/gameinfo.gi#L1352)) |
 | Experimental | `1` (active, [L1337](../../../experimental-config/gameinfo.gi#L1337)) |
-| Stock gameinfo override | `1` (active, [L667](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L667)) |
+| Stock gameinfo override | `1` (active, [L667](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L667)) |
 | OptimizationLock pinned upstream | `1` (active, [L1511](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1511)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** GatherSendProxyResults only walks struct and array fields, skipping scalar fields.
 
@@ -3060,7 +3060,7 @@ Restricts GatherSendProxyResults traversal to struct and array fields instead of
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-parallel_perform_invalidate_physics"></a>
 ## `ConVars/parallel_perform_invalidate_physics`
@@ -3071,10 +3071,10 @@ Name suggests parallel physics invalidation; no detailed help is provided. The a
 | --- | --- |
 | Stable | `false` (disabled, [L1047](../../../stable-config/gameinfo.gi#L1047)); `1` (active, [L1347](../../../stable-config/gameinfo.gi#L1347)) |
 | Experimental | `false` (disabled, [L1049](../../../experimental-config/gameinfo.gi#L1049)); `1` (active, [L1332](../../../experimental-config/gameinfo.gi#L1332)) |
-| Stock gameinfo override | `1` (active, [L662](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L662)) |
+| Stock gameinfo override | `1` (active, [L662](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L662)) |
 | OptimizationLock pinned upstream | `false` (disabled, [L1206](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1206)); `1` (active, [L1506](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1506)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3088,7 +3088,7 @@ Name suggests parallel physics invalidation; no detailed help is provided. The a
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-parallel_update_surrounding_bounds_in_spatial_partition_update"></a>
 ## `ConVars/parallel_update_surrounding_bounds_in_spatial_partition_update`
@@ -3099,10 +3099,10 @@ Name suggests parallel surrounding-bounds updates; no detailed help is provided.
 | --- | --- |
 | Stable | `1` (active, [L1344](../../../stable-config/gameinfo.gi#L1344)) |
 | Experimental | `1` (active, [L1329](../../../experimental-config/gameinfo.gi#L1329)) |
-| Stock gameinfo override | `1` (active, [L659](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L659)) |
+| Stock gameinfo override | `1` (active, [L659](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L659)) |
 | OptimizationLock pinned upstream | `1` (active, [L1503](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1503)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3116,7 +3116,7 @@ Name suggests parallel surrounding-bounds updates; no detailed help is provided.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-particle_cluster_nodraw"></a>
 ## `ConVars/particle_cluster_nodraw`
@@ -3130,7 +3130,7 @@ Registered replicated particle-cluster drawing switch. Exact cluster scope and o
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1205](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1205)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3144,7 +3144,7 @@ Registered replicated particle-cluster drawing switch. Exact cluster scope and o
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-particle_cluster_use_collision_hulls"></a>
 ## `ConVars/particle_cluster_use_collision_hulls`
@@ -3158,7 +3158,7 @@ Registered replicated particle-cluster collision-hull switch. No evidence suppor
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1196](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1196)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3172,7 +3172,7 @@ Registered replicated particle-cluster collision-hull switch. No evidence suppor
 
 **Evidence / test status:** High for captured registration/flags; low for detailed purpose and runtime effect. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-phys_agg_world_compounds"></a>
 ## `ConVars/phys_agg_world_compounds`
@@ -3183,10 +3183,10 @@ Name suggests aggregate world physics compounds; no detailed help is provided. T
 | --- | --- |
 | Stable | `0` (active, [L1348](../../../stable-config/gameinfo.gi#L1348)) |
 | Experimental | `0` (active, [L1333](../../../experimental-config/gameinfo.gi#L1333)) |
-| Stock gameinfo override | `0` (active, [L663](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L663)) |
+| Stock gameinfo override | `0` (active, [L663](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L663)) |
 | OptimizationLock pinned upstream | `0` (active, [L1507](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1507)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3200,7 +3200,7 @@ Name suggests aggregate world physics compounds; no detailed help is provided. T
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-phys_batch_ray_test"></a>
 ## `ConVars/phys_batch_ray_test`
@@ -3214,7 +3214,7 @@ Name suggests batched physics ray testing; the dump has no descriptive help. Exa
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `16` (disabled, [L1153](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1153)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3228,7 +3228,7 @@ Name suggests batched physics ray testing; the dump has no descriptive help. Exa
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-phys_cull_internal_mesh_contacts"></a>
 ## `ConVars/phys_cull_internal_mesh_contacts`
@@ -3242,7 +3242,7 @@ Name suggests culling internal mesh collision contacts. The dump supplies no hel
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L991](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L991)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3256,7 +3256,7 @@ Name suggests culling internal mesh collision contacts. The dump supplies no hel
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-phys_dynamic_scaling"></a>
 ## `ConVars/phys_dynamic_scaling`
@@ -3270,7 +3270,7 @@ Physics dynamic-scaling switch with no explanatory help. A false example is inte
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1125](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1125)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat clientdll gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat clientdll gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3284,7 +3284,7 @@ Physics dynamic-scaling switch with no explanatory help. A false example is inte
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/61).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/61).
 
 <a id="setting-convars-phys_threaded_cloth_bone_update"></a>
 ## `ConVars/phys_threaded_cloth_bone_update`
@@ -3298,7 +3298,7 @@ Name suggests threaded cloth-bone updates; the dump has no descriptive help. Exa
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1202](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1202)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3312,7 +3312,7 @@ Name suggests threaded cloth-bone updates; the dump has no descriptive help. Exa
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-phys_threaded_kinematic_bone_update"></a>
 ## `ConVars/phys_threaded_kinematic_bone_update`
@@ -3326,7 +3326,7 @@ Name suggests threaded kinematic-bone updates; the dump has no descriptive help.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1203](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1203)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3340,7 +3340,7 @@ Name suggests threaded kinematic-bone updates; the dump has no descriptive help.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-phys_threaded_transform_update"></a>
 ## `ConVars/phys_threaded_transform_update`
@@ -3354,7 +3354,7 @@ Name suggests threaded transform updates; the dump has no descriptive help. Exac
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1204](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1204)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3368,7 +3368,7 @@ Name suggests threaded transform updates; the dump has no descriptive help. Exac
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-props_break_max_pieces_perframe"></a>
 ## `ConVars/props_break_max_pieces_perframe`
@@ -3382,7 +3382,7 @@ Caps breakable prop pieces created per frame; Valve documents -1 as using the mo
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L929](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L929)) |
 
-**Valve registration:** default `16`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `16`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Maximum prop breakable piece count per frame (-1 = model default)
 
@@ -3396,7 +3396,7 @@ Caps breakable prop pieces created per frame; Valve documents -1 as using the mo
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/60).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/60).
 
 <a id="setting-convars-ragdoll_parallel_pose_control"></a>
 ## `ConVars/ragdoll_parallel_pose_control`
@@ -3410,7 +3410,7 @@ Name suggests parallel ragdoll pose control; the dump has no descriptive help. E
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1192](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1192)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3424,7 +3424,7 @@ Name suggests parallel ragdoll pose control; the dump has no descriptive help. E
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rate-default"></a>
 ## `ConVars/rate/default`
@@ -3435,10 +3435,10 @@ Structured gameinfo default metadata for rate; this is not a separate ConVar nam
 | --- | --- |
 | Stable | `786432` (active, [L1208](../../../stable-config/gameinfo.gi#L1208)) |
 | Experimental | `786432` (active, [L1193](../../../experimental-config/gameinfo.gi#L1193)) |
-| Stock gameinfo override | `786432` (active, [L523](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L523)) |
+| Stock gameinfo override | `786432` (active, [L523](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L523)) |
 | OptimizationLock pinned upstream | `786432` (active, [L1367](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1367)) |
 
-**Parent ConVar `rate` registration:** default `80000`; bounds `not declared … not declared`; flags `archive userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Parent ConVar `rate` registration:** default `80000`; bounds `not declared … not declared`; flags `archive userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Min bytes/sec the host can receive data
 
@@ -3452,7 +3452,7 @@ Structured gameinfo default metadata for rate; this is not a separate ConVar nam
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L523); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1367).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L523); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1367).
 
 <a id="setting-convars-rate-max"></a>
 ## `ConVars/rate/max`
@@ -3463,10 +3463,10 @@ Structured gameinfo max metadata for rate; this is not a separate ConVar named m
 | --- | --- |
 | Stable | `1000000` (active, [L1209](../../../stable-config/gameinfo.gi#L1209)) |
 | Experimental | `1000000` (active, [L1194](../../../experimental-config/gameinfo.gi#L1194)) |
-| Stock gameinfo override | `1000000` (active, [L524](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L524)) |
+| Stock gameinfo override | `1000000` (active, [L524](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L524)) |
 | OptimizationLock pinned upstream | `1000000` (active, [L1368](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1368)) |
 
-**Parent ConVar `rate` registration:** default `80000`; bounds `not declared … not declared`; flags `archive userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Parent ConVar `rate` registration:** default `80000`; bounds `not declared … not declared`; flags `archive userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Min bytes/sec the host can receive data
 
@@ -3480,7 +3480,7 @@ Structured gameinfo max metadata for rate; this is not a separate ConVar named m
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L524); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1368).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L524); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1368).
 
 <a id="setting-convars-rate-min"></a>
 ## `ConVars/rate/min`
@@ -3491,10 +3491,10 @@ Structured gameinfo min metadata for rate; this is not a separate ConVar named m
 | --- | --- |
 | Stable | `98304` (active, [L1207](../../../stable-config/gameinfo.gi#L1207)) |
 | Experimental | `98304` (active, [L1192](../../../experimental-config/gameinfo.gi#L1192)) |
-| Stock gameinfo override | `98304` (active, [L522](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L522)) |
+| Stock gameinfo override | `98304` (active, [L522](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L522)) |
 | OptimizationLock pinned upstream | `98304` (active, [L1366](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1366)) |
 
-**Parent ConVar `rate` registration:** default `80000`; bounds `not declared … not declared`; flags `archive userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Parent ConVar `rate` registration:** default `80000`; bounds `not declared … not declared`; flags `archive userinfo`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Min bytes/sec the host can receive data
 
@@ -3508,7 +3508,7 @@ Structured gameinfo min metadata for rate; this is not a separate ConVar named m
 
 **Evidence / test status:** Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled. Static source comparison only; no in-game or tool-build test performed in this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L522); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1366).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L522); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1366).
 
 <a id="setting-convars-rope_collide"></a>
 ## `ConVars/rope_collide`
@@ -3522,7 +3522,7 @@ Valve console help: Collide rope with the world
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1307](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1307)) |
 
-**Valve registration:** default `1`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Collide rope with the world
 
@@ -3536,7 +3536,7 @@ Valve console help: Collide rope with the world
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rope_smooth_enlarge"></a>
 ## `ConVars/rope_smooth_enlarge`
@@ -3550,7 +3550,7 @@ Valve console help: How much to enlarge ropes in screen space for antialiasing e
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1308](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1308)) |
 
-**Valve registration:** default `1.4`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1.4`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** How much to enlarge ropes in screen space for antialiasing effect
 
@@ -3564,7 +3564,7 @@ Valve console help: How much to enlarge ropes in screen space for antialiasing e
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rope_smooth_maxalpha"></a>
 ## `ConVars/rope_smooth_maxalpha`
@@ -3578,7 +3578,7 @@ Valve console help: Alpha for rope antialiasing effect
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1309](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1309)) |
 
-**Valve registration:** default `0.5`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.5`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Alpha for rope antialiasing effect
 
@@ -3592,7 +3592,7 @@ Valve console help: Alpha for rope antialiasing effect
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rope_smooth_maxalphawidth"></a>
 ## `ConVars/rope_smooth_maxalphawidth`
@@ -3606,7 +3606,7 @@ Name suggests the screen-space width associated with maximum smoothing alpha, bu
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1310](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1310)) |
 
-**Valve registration:** default `1.75`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1.75`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3620,7 +3620,7 @@ Name suggests the screen-space width associated with maximum smoothing alpha, bu
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rope_smooth_minalpha"></a>
 ## `ConVars/rope_smooth_minalpha`
@@ -3634,7 +3634,7 @@ Valve console help: Alpha for rope antialiasing effect
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1311](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1311)) |
 
-**Valve registration:** default `0.2`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.2`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Alpha for rope antialiasing effect
 
@@ -3648,7 +3648,7 @@ Valve console help: Alpha for rope antialiasing effect
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rope_smooth_minwidth"></a>
 ## `ConVars/rope_smooth_minwidth`
@@ -3662,7 +3662,7 @@ Valve console help: When using smoothing, this is the min screenspace width it l
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1312](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1312)) |
 
-**Valve registration:** default `0.3`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0.3`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** When using smoothing, this is the min screenspace width it lets a rope shrink to
 
@@ -3676,7 +3676,7 @@ Valve console help: When using smoothing, this is the min screenspace width it l
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rope_subdiv"></a>
 ## `ConVars/rope_subdiv`
@@ -3690,7 +3690,7 @@ Valve console help: Rope subdivision amount
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1313](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1313)) |
 
-**Valve registration:** default `2`; bounds `0 … 8`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `2`; bounds `0 … 8`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Rope subdivision amount
 
@@ -3704,7 +3704,7 @@ Valve console help: Rope subdivision amount
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rope_wind_dist"></a>
 ## `ConVars/rope_wind_dist`
@@ -3718,7 +3718,7 @@ Valve console help: Don't use CPU applying small wind gusts to ropes when they'r
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1314](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1314)) |
 
-**Valve registration:** default `1000`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1000`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Don't use CPU applying small wind gusts to ropes when they're past this distance.
 
@@ -3732,7 +3732,7 @@ Valve console help: Don't use CPU applying small wind gusts to ropes when they'r
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rpg_camera_yaw"></a>
 ## `ConVars/rpg_camera_yaw`
@@ -3746,7 +3746,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L855](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L855)) |
 
-**Valve registration:** default `90`; bounds `not declared … not declared`; flags `cheat clientdll developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `90`; bounds `not declared … not declared`; flags `cheat clientdll developmentonly replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3760,7 +3760,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rtx_dynamic_blas"></a>
 ## `ConVars/rtx_dynamic_blas`
@@ -3774,7 +3774,7 @@ Allows dynamic ray-tracing acceleration structures for geometry using compute-sh
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1008](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1008)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Allow dynamic BLAS creation for geometry going through the compute shader skinning path.
 
@@ -3788,7 +3788,7 @@ Allows dynamic ray-tracing acceleration structures for geometry using compute-sh
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rtx_dynamic_blas_caching"></a>
 ## `ConVars/rtx_dynamic_blas_caching`
@@ -3802,7 +3802,7 @@ Reuses dynamic ray-tracing acceleration structures when geometry has not changed
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1009](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1009)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Cache dynamic BLAS if geometry has not changed
 
@@ -3816,7 +3816,7 @@ Reuses dynamic ray-tracing acceleration structures when geometry has not changed
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rtx_force_default_hitgroup"></a>
 ## `ConVars/rtx_force_default_hitgroup`
@@ -3830,7 +3830,7 @@ Uses default ray-hit shaders instead of specialized shaders for ray-traced geome
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1010](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1010)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Forces all ray traced geometry to use default hit shaders instead of specialized ones.
 
@@ -3844,7 +3844,7 @@ Uses default ray-hit shaders instead of specialized shaders for ray-traced geome
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-rtx_texture_resolution"></a>
 ## `ConVars/rtx_texture_resolution`
@@ -3858,7 +3858,7 @@ Sets the texture resolution requested by the ray tracer. The captured declared d
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `64` (active, [L1011](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1011)) |
 
-**Valve registration:** default `512`; bounds `64 … 2048`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `512`; bounds `64 … 2048`; flags `defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Sets the texture resolution the raytracer will mark to stream in
 
@@ -3872,7 +3872,7 @@ Sets the texture resolution requested by the ray tracer. The captured declared d
 
 **Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-skeleton_instance_lod_optimization"></a>
 ## `ConVars/skeleton_instance_lod_optimization`
@@ -3886,7 +3886,7 @@ Valve describes an internal LOD-mask computation that forces every LOD group’s
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1191](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1191)); `true` (active, [L1339](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1339)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Compute LOD mask internally like since 2016, i.e. force all LOD groups' bones to compute
 
@@ -3900,7 +3900,7 @@ Valve describes an internal LOD-mask computation that forces every LOD group’s
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-subtick_buttons_enabled"></a>
 ## `ConVars/subtick_buttons_enabled`
@@ -3914,7 +3914,7 @@ Registered input-button timing switch with no explanatory help.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1181](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1181)) |
 
-**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `false`; bounds `not declared … not declared`; flags `clientdll defensive developmentonly`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3928,7 +3928,7 @@ Registered input-button timing switch with no explanatory help.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-sv_hide_ent_in_pvs"></a>
 ## `ConVars/sv_hide_ent_in_pvs`
@@ -3942,7 +3942,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1345](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1345)) |
 
-**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -3956,7 +3956,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-sv_lagcomp_filterbyviewangle"></a>
 ## `ConVars/sv_lagcomp_filterbyviewangle`
@@ -3967,10 +3967,10 @@ Filters lag-compensation targets by player view angle when enabled.
 | --- | --- |
 | Stable | `false` (active, [L1216](../../../stable-config/gameinfo.gi#L1216)) |
 | Experimental | `false` (active, [L1201](../../../experimental-config/gameinfo.gi#L1201)) |
-| Stock gameinfo override | `false` (active, [L531](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L531)) |
+| Stock gameinfo override | `false` (active, [L531](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L531)) |
 | OptimizationLock pinned upstream | `false` (active, [L1375](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1375)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `cheat gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** If true, player pawn will filter lag compensation targets by their view angle.
 
@@ -3984,7 +3984,7 @@ Filters lag-compensation targets by player view angle when enabled.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-sv_maxunlag"></a>
 ## `ConVars/sv_maxunlag`
@@ -3995,10 +3995,10 @@ Maximum lag-compensation window, in seconds.
 | --- | --- |
 | Stable | `0.500` (active, [L1214](../../../stable-config/gameinfo.gi#L1214)) |
 | Experimental | `0.500` (active, [L1199](../../../experimental-config/gameinfo.gi#L1199)) |
-| Stock gameinfo override | `0.500` (active, [L529](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L529)) |
+| Stock gameinfo override | `0.500` (active, [L529](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L529)) |
 | OptimizationLock pinned upstream | `0.500` (active, [L1373](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1373)) |
 
-**Valve registration:** default `1`; bounds `0 … 1`; flags `gamedll release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `1`; bounds `0 … 1`; flags `gamedll release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Maximum lag compensation in seconds
 
@@ -4012,7 +4012,7 @@ Maximum lag-compensation window, in seconds.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-sv_maxunlag_player"></a>
 ## `ConVars/sv_maxunlag_player`
@@ -4023,10 +4023,10 @@ If positive, caps lag compensation for other human pawns after sv_maxunlag, acco
 | --- | --- |
 | Stable | `0.200` (active, [L1215](../../../stable-config/gameinfo.gi#L1215)) |
 | Experimental | `0.200` (active, [L1200](../../../experimental-config/gameinfo.gi#L1200)) |
-| Stock gameinfo override | `0.200` (active, [L530](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L530)) |
+| Stock gameinfo override | `0.200` (active, [L530](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L530)) |
 | OptimizationLock pinned upstream | `0.200` (active, [L1374](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1374)) |
 
-**Valve registration:** default `-1`; bounds `not declared … 1`; flags `gamedll release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `-1`; bounds `not declared … 1`; flags `gamedll release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** If >0, maximumum lag compensation used for other human pawns. Applied after sv_maxunlag!
 
@@ -4040,7 +4040,7 @@ If positive, caps lag compensation for other human pawns after sv_maxunlag, acco
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-sv_minrate"></a>
 ## `ConVars/sv_minrate`
@@ -4051,10 +4051,10 @@ Minimum bandwidth rate allowed by the server; 0 is unlimited according to the du
 | --- | --- |
 | Stable | `98304` (active, [L1213](../../../stable-config/gameinfo.gi#L1213)) |
 | Experimental | `98304` (active, [L1198](../../../experimental-config/gameinfo.gi#L1198)) |
-| Stock gameinfo override | `98304` (active, [L528](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L528)) |
+| Stock gameinfo override | `98304` (active, [L528](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L528)) |
 | OptimizationLock pinned upstream | `98304` (active, [L1372](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1372)) |
 
-**Valve registration:** default `5000`; bounds `0 … 1000000`; flags `release replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `5000`; bounds `0 … 1000000`; flags `release replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Min bandwidth rate allowed on server, 0 == unlimited
 
@@ -4068,7 +4068,7 @@ Minimum bandwidth rate allowed by the server; 0 is unlimited according to the du
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-sv_parallel_checktransmit"></a>
 ## `ConVars/sv_parallel_checktransmit`
@@ -4079,10 +4079,10 @@ Threaded entity transmit/PVS checking: 1 for listen servers, 2 for dedicated ser
 | --- | --- |
 | Stable | `2` (active, [L1351](../../../stable-config/gameinfo.gi#L1351)) |
 | Experimental | `2` (active, [L1336](../../../experimental-config/gameinfo.gi#L1336)) |
-| Stock gameinfo override | `2` (active, [L666](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L666)) |
+| Stock gameinfo override | `2` (active, [L666](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L666)) |
 | OptimizationLock pinned upstream | `2` (active, [L1510](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1510)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `gamedll release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `gamedll release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Set to 1 to use threaded checkentities for transmit/pvs on listen servers, 2 for dedicated servers.
 
@@ -4096,7 +4096,7 @@ Threaded entity transmit/PVS checking: 1 for listen servers, 2 for dedicated ser
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-sv_remove_ent_from_pvs"></a>
 ## `ConVars/sv_remove_ent_from_pvs`
@@ -4110,7 +4110,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1346](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1346)) |
 
-**Valve registration:** default `0`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `0`; bounds `not declared … not declared`; flags `developmentonly gamedll`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -4124,7 +4124,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-sv_waterdist"></a>
 ## `ConVars/sv_waterdist`
@@ -4138,7 +4138,7 @@ Vertical view adjustment when eyes are near a water surface.
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1347](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1347)) |
 
-**Valve registration:** default `12`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `12`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Vertical view fixup when eyes are near water plane.
 
@@ -4152,7 +4152,7 @@ Vertical view adjustment when eyes are near a water surface.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-thread_pool_option"></a>
 ## `ConVars/thread_pool_option`
@@ -4166,7 +4166,7 @@ Selects an engine thread-pool option; Valve’s help does not define the numeric
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L864](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L864)) |
 
-**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `hidden release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `-1`; bounds `not declared … not declared`; flags `hidden release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Thread pool option
 
@@ -4180,7 +4180,7 @@ Selects an engine thread-pool option; Valve’s help does not define the numeric
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-tv_enable_delta_frames"></a>
 ## `ConVars/tv_enable_delta_frames`
@@ -4194,7 +4194,7 @@ Controls whether broadcast/TV intermediate frames use delta storage. Valve expli
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1348](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1348)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `release`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Indicates whether or not the tv should use delta frames for storage of intermediate frames. This takes more CPU but significantly less memory.
 
@@ -4208,7 +4208,7 @@ Controls whether broadcast/TV intermediate frames use delta storage. Valve expli
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-update_all_keyframed_in_spatial_partition_update"></a>
 ## `ConVars/update_all_keyframed_in_spatial_partition_update`
@@ -4219,10 +4219,10 @@ Name suggests updating all keyframed objects during spatial partition updates; n
 | --- | --- |
 | Stable | `0` (active, [L1343](../../../stable-config/gameinfo.gi#L1343)) |
 | Experimental | `0` (active, [L1328](../../../experimental-config/gameinfo.gi#L1328)) |
-| Stock gameinfo override | `0` (active, [L658](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi#L658)) |
+| Stock gameinfo override | `0` (active, [L658](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L658)) |
 | OptimizationLock pinned upstream | `0` (active, [L1502](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1502)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `clientdll developmentonly gamedll replicated`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** No help description is supplied in the pinned dump; semantics beyond the annotation remain unknown.
 
@@ -4236,7 +4236,7 @@ Name suggests updating all keyframed objects during spatial partition updates; n
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi).
 
 <a id="setting-convars-violence_ablood"></a>
 ## `ConVars/violence_ablood`
@@ -4250,7 +4250,7 @@ Valve console help: Draw alien blood
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L939](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L939)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Draw alien blood
 
@@ -4264,7 +4264,7 @@ Valve console help: Draw alien blood
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-violence_agibs"></a>
 ## `ConVars/violence_agibs`
@@ -4278,7 +4278,7 @@ Valve console help: Show alien gib entities
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L940](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L940)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Show alien gib entities
 
@@ -4292,7 +4292,7 @@ Valve console help: Show alien gib entities
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-violence_hblood"></a>
 ## `ConVars/violence_hblood`
@@ -4306,7 +4306,7 @@ Valve console help: Draw human blood
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L941](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L941)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Draw human blood
 
@@ -4320,7 +4320,7 @@ Valve console help: Draw human blood
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-convars-violence_hgibs"></a>
 ## `ConVars/violence_hgibs`
@@ -4334,7 +4334,7 @@ Valve console help: Show human gib entities
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L942](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L942)) |
 
-**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt).
+**Valve registration:** default `true`; bounds `not declared … not declared`; flags `archive`. [Captured console metadata](https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt).
 
 **Console help:** Show human gib entities
 
@@ -4348,4 +4348,4 @@ Valve console help: Show human gib entities
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).

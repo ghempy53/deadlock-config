@@ -8,11 +8,11 @@ the generated [complete reference](../SETTING-REFERENCE.md) records values, occu
 ## Evidence and coverage
 
 All current Valve-file comparisons use **GameTracking commit
-`a94d8b455203f12b176de75a5598dd8e6e8a94d4`, client build 6813**. SteamTracking/GameTracking-Deadlock is a
+`e95b323b88d48c3fc4d80066ee603fb75060b248`, client build 6814**. SteamTracking/GameTracking-Deadlock is a
 third-party mirror of captured Valve data, not an official Valve documentation service. Its
-[console dump](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt)
+[console dump](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt)
 supplies declared defaults, flags, ranges and help; its
-[stock gameinfo](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/citadel/gameinfo.gi)
+[stock gameinfo](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi)
 supplies a separate layer of game-specific settings. Neither records the owner's final runtime values.
 
 Upstream provenance uses **OptimizationLock commit `347a6694bd7779bafa66b339cd13435c90f1c2f3`**, the
@@ -47,7 +47,7 @@ value is essential. For example, `fps_max` is declared as 120, Valve stock reque
 of one default. A commented line makes no assignment; it does not reset saved settings, mods or other layers.
 
 The pinned
-[engine string table](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/game/bin/win64/engine2_strings.txt)
+[engine string table](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/engine2_strings.txt)
 contains diagnostics for parsing archived ConVars and rejecting cheat-protected changes, plus the names
 `cfg/boot.vcfg` and `GlobalThreadPoolMode`. These confirm that such paths exist in the captured build. Strings do
 **not** establish the order of gameinfo, saved settings, menu writes, console commands or server replication, nor
@@ -109,15 +109,19 @@ name-based inference or unknown. “No help” is retained explicitly where the 
 - [PR #75](https://github.com/ghempy53/deadlock-config/pull/75) adopts 3.6 in stable: vertical camera flattening
   true, highlight speed 999 and the minimap preferences. Experimental deliberately retains the earlier values.
   The PR calls absent HUD names removed; this audit narrows that to absent from the inspected dump.
-- [PR #77](https://github.com/ghempy53/deadlock-config/pull/77) comments out `r_aspectratio` in both variants for
-  the owner's FOV mod. That is an owner preference, not an assertion that all camera values revert to defaults.
+- [PR #77](https://github.com/ghempy53/deadlock-config/pull/77) commented out `r_aspectratio` in both variants for
+  the owner's FOV mod. That was an owner preference, not an assertion that all camera values reverted to defaults.
+  [PR #83](https://github.com/ghempy53/deadlock-config/pull/83), merged while this review was being prepared for
+  publication, supersedes it for stable: stable requests 2.11 again and the owner chose to turn off its FOV mod;
+  experimental retains the disabled line. The recorded 90-degree hero-FOV cap in Sandbox is owner-reported
+  evidence, not a test performed in this audit or proof that aspect ratio is the only available FOV control.
 - [PR #79](https://github.com/ghempy53/deadlock-config/pull/79) brings stable to 3.6.1 while preserving the owner
   preferences. Frozen versions and archived records remain unchanged by this review.
 
 ### Historical upstream cross-check
 
 The October 22 audit also fetched historical upstream files to check the older comparison's provenance. These
-are **historical sources**, not alternate current Valve snapshots; build 6813 remains the single current baseline.
+are **historical sources**, not alternate current Valve snapshots; build 6814 remains the single current baseline.
 
 | Source | Pinned historical evidence | Finding |
 | --- | --- | --- |
@@ -149,9 +153,11 @@ The fetched historical config SHA-256 values are `c7a496cd9c4b62de03ae03f4bbfda9
    cold launch, entering a local session, joining an online match and applying video settings. Include conflicting
    `snd_ui_positional` assignments, an archived preference and a replicated variable. A hidden/unqueryable setting
    remains unresolved; console visibility alone is not evidence of nonexistence or application.
-2. **Readability and camera behavior:** compare both variants with the same FOV mod and hero. Inspect ADS vertical
-   motion, ally/trooper/boss visibility, damage direction and numbers, objective bars, Doorman indicators and minimap
-   details. Record current build, renderer and saved settings so a visual result has a reproducible context.
+2. **Readability and camera behavior:** use the same hero and record each variant's intended FOV setup: stable
+   requests aspect ratio 2.11 with the FOV mod off; experimental keeps the override disabled for the owner's mod.
+   Inspect ADS vertical motion, ally/trooper/boss visibility, damage direction and numbers, objective bars,
+   Doorman indicators and minimap details. Record current build, renderer, mods and saved settings so a visual
+   result has a reproducible context; isolate the aspect-ratio/mod difference in any subsequent controlled test.
 3. **Audio:** test footsteps, occluded targets, ability cues, positional UI sounds, loading transitions and voice
    stalls. Determine which Steam Audio paths are active before attributing cost to their tuning variables.
 4. **Frame-time claims:** only after identifying an applied setting, change one proposed behavior at a time and

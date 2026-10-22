@@ -1,8 +1,8 @@
 # ConVars flagged gameinfo_cannot_override
 
-Reviewed 2026-10-22: **124 registered names** carry this flag in the pinned Valve-data capture, build **6813**.
+Reviewed 2026-10-22: **124 registered names** carry this flag in the pinned Valve-data capture, build **6814**.
 
-[GameTracking dump, full commit a94d8b455203f12b176de75a5598dd8e6e8a94d4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/a94d8b455203f12b176de75a5598dd8e6e8a94d4/DumpSource2/convars.txt) is a **third-party mirror** of Valve console metadata.
+[GameTracking dump, full commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt) is a **third-party mirror** of Valve console metadata.
 The flag declares that gameinfo is not an allowed override route. It does not mean the feature is unavailable or
 that a menu/server cannot set it. Enforcement was not exercised here. No bypass is proposed.
 

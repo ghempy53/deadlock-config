@@ -86,8 +86,8 @@ assertion that either active config exactly matches that revision. Use explicit 
 ## Stable nondefault report
 
 ```sh
-python3 utils/nondefaults.py --ref a94d8b455203f12b176de75a5598dd8e6e8a94d4 \
-  --dump /path/to/convars.txt --stock /path/to/stock-gameinfo.gi --build 6813 \
+python3 utils/nondefaults.py --ref e95b323b88d48c3fc4d80066ee603fb75060b248 \
+  --dump /path/to/convars.txt --stock /path/to/stock-gameinfo.gi --build 6814 \
   --date 2026-10-22 --upstream-ref 347a6694bd7779bafa66b339cd13435c90f1c2f3
 ```
 

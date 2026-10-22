@@ -6,9 +6,9 @@ Deadlock Mod Manager, or PowerShell. It does not establish FPS gains or effectiv
 ## Sources and scope
 
 All Deadlock comparisons use the same third-party mirror capture of Valve data:
-[GameTracking-Deadlock `a94d8b455203f12b176de75a5598dd8e6e8a94d4`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/a94d8b455203f12b176de75a5598dd8e6e8a94d4),
-`DumpSource2/convars.txt`, `game/citadel/gameinfo.gi`, and `game/citadel/steam.inf`; client/server build **6813**,
-SourceRevision **11159107**, captured version timestamp **Oct 21 2026 21:03:17** (timezone unspecified in that file).
+[GameTracking-Deadlock `e95b323b88d48c3fc4d80066ee603fb75060b248`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248),
+`DumpSource2/convars.txt`, `game/citadel/gameinfo.gi`, and `game/citadel/steam.inf`; client/server build **6814**,
+SourceRevision **11160503**, captured version timestamp **Oct 22 2026 11:09:14** (timezone unspecified in that file).
 The upstream comparison pin is
 [OptimizationLock `347a6694bd7779bafa66b339cd13435c90f1c2f3`](https://github.com/Sqooky/OptimizationLock/tree/347a6694bd7779bafa66b339cd13435c90f1c2f3).
 Upstream values establish provenance, not correctness or improvement.
@@ -17,6 +17,10 @@ Reviewed in full: `utils/gi.py`, `check.py`, `convars.py`, `compare.py`, `stock_
 `nondefaults.py`, `utils/README.md`; `scripts/DeadlockConfig-Update.ps1`; install/update/troubleshooting/Windows docs;
 `.claude/CLAUDE.md`, `.claude/settings.json` and all three `.claude/skills/*/SKILL.md` workflows. Repository-wide
 reference generation and current `docs/CLAUDE.md` reconciliation are covered by the main audit.
+
+The audit was subsequently synchronized with main PR #83: stable aspect ratio 2.11 is preserved, and the current
+evidence pin is build 6814. The relevant dump/stock/preset/string bytes are identical to the initial build 6813
+capture. Initial baseline results below were collected before that merge; final counts include the new stable assignment.
 
 ## Baseline before editing
 
@@ -39,7 +43,7 @@ stock comparison mislabeled custom assignments as obsolete stock-tail entries. S
 - Checks, lookup/audit, stock comparison and upstream comparison accept both variants and default to both. Changelog
   line repair remains experimental-only. Hooks check both active files.
 - Duplicate assignments are ordinary diagnostics, with `--strict-duplicates` retaining the former policy. No active
-  assignment was changed. Compare/upstream/nondefault output no longer claims a runtime winner.
+  assignment was changed by this audit; the merged PR #83 stable assignment is retained. Compare/upstream/nondefault output no longer claims a runtime winner.
 - Dump absence is an unresolved warning; captured flags describe registration and override constraints, not a general
   guarantee about cheat/dev startup application, saved settings, menu precedence or online client benefits.
 - Stock comparison reports every conflicting duplicate, even if another occurrence matches stock. Nested constraints
@@ -69,16 +73,16 @@ API (also available to Windows PowerShell 5.1). Vendor sources and their specifi
 | --- | --- |
 | Python compilation | All seven reviewed utilities and regression tests compile |
 | `python3 -m unittest discover -s utils/tests -p test_gi.py` | 15 tooling tests pass; no network/game access |
-| `check.py --config both -q` | Exit 0: 0 errors, 881 warnings across both unchanged active files |
-| `check.py --config both -q --strict-duplicates` | Exit 1: 12 duplicate errors, 869 warnings |
+| `check.py --config both -q` | Exit 0: 0 errors, 882 warnings across both files preserved from updated main |
+| `check.py --config both -q --strict-duplicates` | Exit 1: 12 duplicate errors, 870 warnings |
 | Pinned `convars.py --config stable audit` | Exit 1: 19 errors, 93 warnings |
 | Pinned `convars.py --config experimental audit` | Exit 1: 20 errors, 94 warnings |
 | Pinned `stock_diff.py` | Exit 1 for each variant: 4 errors, 4 warnings per file |
 | Stable / experimental compare and offline upstream compare | Successful; all duplicate declarations retained |
 | `lookup fps_max` for both | Finds each file's tail assignment and captured default/flags |
-| Stable report regeneration | 431 active assignments inspected; 308 custom nondefault rows, 63 stock-matching rows |
+| Stable report regeneration | 432 active assignments inspected; 309 custom nondefault rows, 63 stock-matching rows |
 
-Inventory coverage: stable has **431 active assignments** (424 unique active names) and **113 disabled assignments**;
+Inventory coverage: stable has **432 active assignments** (425 unique active names) and **112 disabled assignments**;
 experimental has **430 active assignments** (423 unique active names) and **112 disabled assignments**. The 15 tooling tests
 exercise both actual files, nested bounds/version keys, disabled nested metadata exclusion, quoted braces, inline
 syntax, malformed sections, true tail identification, duplicate preservation in all relevant views, flag/range
