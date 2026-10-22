@@ -334,5 +334,12 @@ UPSTREAM SYNC CHECK (2026-10-22, OptimizationLock main @ 347a669)
   are Valve's own stock values.
   Line numbers unchanged.
 
+STABLE: R_ASPECTRATIO 2.11 AGAIN (2026-10-22)
+  stable-config/gameinfo.gi: r_aspectratio commented -> 2.11 (Sqooky's line, uncommented; upstream sets 2.5).
+  Why: citadel_camera_hero_fov is clamped to 75-90 in client.dll (owner confirmed in Sandbox), so the aspect-ratio
+  squeeze is the only FOV lever. Upstream pulls now keep 2.11. Turn off the in-game FOV mod so the two don't stack.
+  Experimental (this config) is unchanged and keeps it commented out.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

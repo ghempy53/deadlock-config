@@ -18,7 +18,7 @@ with one `directional_irradiance_sh2_lum` channel, and `SceneSystem/FogCachedSha
 keeps them at 0). The new `PGIVersion` matches Valve's, so stable should pass matchmaking's file check on the new
 build; v1.4 and older carry the old one.
 
-In-game differences from v1.3 (besides `r_aspectratio`, now commented out):
+In-game differences from v1.3 (besides `r_aspectratio`, commented out 2026-10-20 to 10-22 and 2.11 again since):
 - `citadel_camera_use_vmdl_flatten_vertical` back to `"true"` (Valve's default; v1.3 had false). Valve: zeroes the
   camera's relative Z axis to reduce motion sickness. Sqooky's note: false made Rem, Venator and Rat King's cameras
   dip when aiming down scope.
@@ -40,8 +40,9 @@ Owner's values taken from the experimental config (2026-10-17), the same in both
 - `steam_inputhandler_enabled "false"` on both of its lines (Sqooky's first line said true; the second, false, won)
 
 Every other setting matches Sqooky's 3.6.1 file except `r_particle_min_timestep` and:
-- `r_aspectratio` commented out (Sqooky: 2.5; 2.11 until 2026-10-20). The owner uses an in-game FOV mod, so the
-  engine default applies. Every upstream pull keeps it commented out, whatever upstream sets.
+- `r_aspectratio "2.11"` (Sqooky: 2.5). Re-enabled 2026-10-22 after two days commented out for an in-game FOV mod:
+  `citadel_camera_hero_fov` is clamped to 90, so this is the only way past it (it squeezes the image horizontally;
+  turn the FOV mod off so the two don't stack). Every upstream pull keeps 2.11, whatever upstream sets.
 - `ForceVulkanForMapBuild "1"` in ResourceCompiler, as in Valve's build 6779 stock file (map builds only).
 - Comments only: the credits, donor list, ko-fi, tutorial and GameBanana lines and the editing example are removed,
   two thank-you notes on setting lines are shortened, and two comments with an odd number of double quotes are fixed

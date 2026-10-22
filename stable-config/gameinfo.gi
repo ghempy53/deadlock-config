@@ -1,5 +1,5 @@
 // OptimizationLock Ver. 3.6.1 by Sqooky with help from others (https://github.com/Sqooky/OptimizationLock, GPL-3.0).
-// Stable config of ghempy53/deadlock-config: 3.6.1 with ForceVulkanForMapBuild and r_aspectratio off. Credits,
+// Stable config of ghempy53/deadlock-config: 3.6.1 with ForceVulkanForMapBuild and r_aspectratio 2.11. Credits,
 // donor and link comments removed.
 
 
@@ -641,7 +641,7 @@ GameInfo
 
         // --- 2. Field of View ---
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
-        // r_aspectratio "2.11" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
+        r_aspectratio "2.11" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
         // panorama_render_target_cache_max_size        "134217728" // This should increase the panorama cache size by 4x, needs more testing                       [def: "31457280"]

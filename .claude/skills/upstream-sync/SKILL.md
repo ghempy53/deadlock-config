@@ -11,7 +11,7 @@ if Eskay's config sets the same convar. Engine sections and fps_max never change
 
 When the owner asks to pull upstream into the **stable** config, apply upstream's changes to
 `stable-config/gameinfo.gi` but keep the owner's edits listed in `docs/CONFIGS.md`. `r_aspectratio` always
-stays commented out (the owner uses an FOV mod), whatever upstream sets.
+stays `2.11` (owner, 2026-10-22), whatever upstream sets.
 
 ## 1. Diff upstream
 
