@@ -13,9 +13,8 @@ These are the settings the experimental config assumes (see [CONFIGS.md](CONFIGS
 - **Video preset:** set it in the menu. `citadel_video_preset` only accepts 0–3, and the menu owns it.
 - **NVIDIA Reflex:** On (`r_low_latency 1` is already the stock default).
 - **Reduce camera shake:** On. It replaces the old `citadel_melee_shake_*` lines, which were server-side.
-- **Camera FOV:** stable sets `r_aspectratio 2.11` (again since 2026-10-22), which widens the view past the slider's
-  limit by squeezing the image; don't run an FOV mod on top of it. Experimental still has it commented out (FOV mod,
-  2026-10-20). Without either, use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). It can
+- **Camera FOV:** the owner sets FOV with an in-game FOV mod (since 2026-10-20), so `r_aspectratio` is commented
+  out in both configs. Without the mod, use the in-game slider (`citadel_camera_hero_fov`, clamped to 75–90). It can
   be saved per hero, so check Hero-Specific Settings if one hero feels different. The City Never Sleeps camera
   overrides (`citadel_camera_override_*`, FOV 50–150) only apply to the custom spectator camera, not to your own hero.
 - **Camera feel:** since the 2026-10-14 fork, the camera lines follow 3.5.2 and Eskay's config (wobble off,
