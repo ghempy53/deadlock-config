@@ -383,5 +383,15 @@ SETTING REFERENCE: ONE COPY OF EACH CAVEAT (2026-10-22)
   A test fails if a generated paragraph repeats a caveat.
   Line numbers unchanged.
 
+UPSTREAM SYNC CHECK (2026-10-23, OptimizationLock main @ 347a669)
+  main is still 347a669 (3.6.1) and is the only branch; gameinfo.gi is byte-identical, so nothing to sync. Adopted:
+  nothing. Skipped: nothing. Stable still differs from 3.6.1 only by the owner edits in docs/CONFIGS.md (r_aspectratio,
+  r_particle_min_timestep and the 128 px texture cap commented out; fps_max and fps_max_ui 0; mip bias 2; texture
+  pool 6400; Steam Input false on both lines), with no engine-section differences. Valve shipped build 6819
+  (GameTracking-Deadlock 17462b250a0ca80e7f80102f2c83cc3eecff5f12, source revision 11162696). Its convar dump and stock
+  gameinfo.gi are byte-identical to the pinned build 6814 capture (e95b323), so no default, flag, PGIVersion or
+  stock-section change, and the reference keeps its 6814 pin. Neither config changed.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
