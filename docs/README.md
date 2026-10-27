@@ -7,7 +7,7 @@ Start with the [complete setting reference](SETTING-REFERENCE.md) for explanatio
 
 | Document | Purpose |
 | --- | --- |
-| [Complete reference](SETTING-REFERENCE.md) | All 873 unique setting paths across both configs, including disabled tweaks, engine metadata and mod paths |
+| [Complete reference](SETTING-REFERENCE.md) | All 889 unique setting paths across both configs, including disabled tweaks, engine metadata and mod paths |
 | [Config provenance and differences](CONFIGS.md) | Owner choices, nine variant differences, frozen versions and testing limits |
 | [Install and rollback](INSTALL.md) | Manual install, backups, Steam restoration, renderer and saved-settings context |
 | [Update command](UPDATE-COMMAND.md) | PowerShell setup, stable/experimental install and self-update |

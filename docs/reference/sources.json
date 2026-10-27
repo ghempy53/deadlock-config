@@ -14,12 +14,12 @@
       "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi"
     },
     "upstream-README.md": {
-      "sha256": "ba93c2872401f73fbb91f0980d9426b92a0f649aa8b9f71cb00bdd97daf548ad",
-      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/347a6694bd7779bafa66b339cd13435c90f1c2f3/README.md"
+      "sha256": "d98a81b5ccf6353db22e124aeebeefd6711791dbd5166cdf40a2efbb85c3dc6a",
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/cbb70417d7585d65097e96984e05bac52e2fae06/README.md"
     },
     "upstream-gameinfo.gi": {
-      "sha256": "77e97389e6b31488e04e8e16a4f66984dbbfff5f780eaf2b27c684d86fc0fa86",
-      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "sha256": "c14c40e08ce60c9b73cfe18b15cc632edbe68f8512ceaefd4bcd7ede61e52a0f",
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
     }
   },
   "historical_provenance": {
@@ -186,9 +186,9 @@
     "stable-config/v1.4/gameinfo.gi": "3fb7a0c6ee8d2cd3daee851780fda0afd8e80076f99538e31e4787317b790141"
   },
   "previous_valve_commit": "a94d8b455203f12b176de75a5598dd8e6e8a94d4",
-  "refresh_note": "After merging PR83, repinned to its build6814 capture. Dump, stock gameinfo, video presets and inspected string tables hash-identical to build6813; steam.inf changed.",
-  "repository_commit": "023e00a64b0c722ea19f3edb760a713a05aa03ed",
-  "research_date": "2026-10-22",
+  "refresh_note": "2026-10-27: upstream repinned to OptimizationLock 3.7.1 hotfix (cbb7041) for the stable sync. Valve data keeps the build 6814 capture: build 6821 (GameTracking d251cf9d9a796061c90f58724230b7e17b97121b, source revision 11170534) has a hash-identical dump, stock gameinfo and inspected string tables; steam.inf changed.",
+  "repository_commit": "7231a9e781584298b49560f01801cbfd4b52924f",
+  "research_date": "2026-10-27",
   "source_revision": "11160503",
   "supplementary_evidence": {
     "engine2_strings.txt": {
@@ -236,7 +236,7 @@
       "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/worldrenderer_strings.txt"
     }
   },
-  "upstream_commit": "347a6694bd7779bafa66b339cd13435c90f1c2f3",
+  "upstream_commit": "cbb70417d7585d65097e96984e05bac52e2fae06",
   "valve_commit": "e95b323b88d48c3fc4d80066ee603fb75060b248",
   "valve_provenance": "SteamTracking is a third-party mirror of captured Valve files and console help, not Valve publication or source code."
 }

@@ -2,7 +2,7 @@
 
 [Reference index and evidence rules](../../SETTING-REFERENCE.md). Generated; edit the JSON annotations, not this file.
 
-Research date 2026-10-22; Valve-data mirror build 6814. 334 unique setting paths.
+Research date 2026-10-27; Valve-data mirror build 6814. 343 unique setting paths.
 
 ## Contents
 
@@ -85,11 +85,18 @@ Research date 2026-10-22; Valve-data mirror build 6814. 334 unique setting paths
 - [`NetworkSystem/SkipRedundantChangeCallbacks`](#setting-networksystem-skipredundantchangecallbacks)
 - [`PGIVersion`](#setting-pgiversion)
 - [`Particles/BindlessParticleShader`](#setting-particles-bindlessparticleshader)
+- [`Particles/Budget_ActualTraces`](#setting-particles-budget_actualtraces)
+- [`Particles/Budget_InterectionTests`](#setting-particles-budget_interectiontests)
+- [`Particles/Budget_RenderUS`](#setting-particles-budget_renderus)
+- [`Particles/Budget_SimulationUS`](#setting-particles-budget_simulationus)
 - [`Particles/EnableMixedResolution`](#setting-particles-enablemixedresolution)
 - [`Particles/EnableParticleShaderFeatureBranching`](#setting-particles-enableparticleshaderfeaturebranching)
 - [`Particles/Features`](#setting-particles-features)
 - [`Particles/Float16HDRBackBuffer`](#setting-particles-float16hdrbackbuffer)
+- [`Particles/GPUParticles`](#setting-particles-gpuparticles)
+- [`Particles/GameSupportsLegacyShaders`](#setting-particles-gamesupportslegacyshaders)
 - [`Particles/MPropertyFlattenIntoParentRow`](#setting-particles-mpropertyflattenintoparentrow)
+- [`Particles/MixedResolution/Slices`](#setting-particles-mixedresolution-slices)
 - [`Particles/PET_SupportFadingOpaqueModels`](#setting-particles-pet_supportfadingopaquemodels)
 - [`Particles/ParticleTraceOffsetOnlyHit`](#setting-particles-particletraceoffsetonlyhit)
 - [`Particles/ParticlesFoggedByDefault`](#setting-particles-particlesfoggedbydefault)
@@ -98,6 +105,7 @@ Research date 2026-10-22; Valve-data mirror build 6814. 334 unique setting paths
 - [`Physics/EnableWorldCompounds`](#setting-physics-enableworldcompounds)
 - [`RenderPipelineAliases`](#setting-renderpipelinealiases)
 - [`RenderSystem/AllowPartialMipChainImmediateTexLoads`](#setting-rendersystem-allowpartialmipchainimmediatetexloads)
+- [`RenderSystem/ExecuteQueuedCommandBuffers`](#setting-rendersystem-executequeuedcommandbuffers)
 - [`RenderSystem/GraphicsPipelineLibrary`](#setting-rendersystem-graphicspipelinelibrary)
 - [`RenderSystem/IndexBufferPoolSizeMB`](#setting-rendersystem-indexbufferpoolsizemb)
 - [`RenderSystem/LowLatency`](#setting-rendersystem-lowlatency)
@@ -114,6 +122,7 @@ Research date 2026-10-22; Valve-data mirror build 6814. 334 unique setting paths
 - [`RenderSystem/VulkanOnlyTestProbability`](#setting-rendersystem-vulkanonlytestprobability)
 - [`RenderSystem/VulkanOnly_Linux`](#setting-rendersystem-vulkanonly_linux)
 - [`RenderSystem/VulkanRequireDescriptorIndexing`](#setting-rendersystem-vulkanrequiredescriptorindexing)
+- [`RenderSystem/VulkanRequireSM6`](#setting-rendersystem-vulkanrequiresm6)
 - [`RenderSystem/VulkanRequireSubgroupWaveOpSupport`](#setting-rendersystem-vulkanrequiresubgroupwaveopsupport)
 - [`RenderSystem/VulkanStagingPMBSizeLimitMB`](#setting-rendersystem-vulkanstagingpmbsizelimitmb)
 - [`RenderSystem/VulkanSteamAppShaderCache`](#setting-rendersystem-vulkansteamappshadercache)
@@ -348,10 +357,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `60` (active, [L571](../../../stable-config/gameinfo.gi#L571)) |
+| Stable | `60` (active, [L554](../../../stable-config/gameinfo.gi#L554)) |
 | Experimental | `60` (active, [L571](../../../experimental-config/gameinfo.gi#L571)) |
 | Stock gameinfo override | `60` (active, [L494](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L494)) |
-| OptimizationLock pinned upstream | `60` (active, [L722](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L722)) |
+| OptimizationLock pinned upstream | `60` (active, [L719](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L719)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -372,10 +381,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L569](../../../stable-config/gameinfo.gi#L569)) |
+| Stable | `1` (active, [L552](../../../stable-config/gameinfo.gi#L552)) |
 | Experimental | `1` (active, [L569](../../../experimental-config/gameinfo.gi#L569)) |
 | Stock gameinfo override | `1` (active, [L492](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L492)) |
-| OptimizationLock pinned upstream | `1` (active, [L720](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L720)) |
+| OptimizationLock pinned upstream | `1` (active, [L717](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L717)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -396,10 +405,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L568](../../../stable-config/gameinfo.gi#L568)) |
+| Stable | `1` (active, [L551](../../../stable-config/gameinfo.gi#L551)) |
 | Experimental | `1` (active, [L568](../../../experimental-config/gameinfo.gi#L568)) |
 | Stock gameinfo override | `1` (active, [L491](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L491)) |
-| OptimizationLock pinned upstream | `1` (active, [L719](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L719)) |
+| OptimizationLock pinned upstream | `1` (active, [L716](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L716)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -420,10 +429,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `60` (active, [L570](../../../stable-config/gameinfo.gi#L570)) |
+| Stable | `60` (active, [L553](../../../stable-config/gameinfo.gi#L553)) |
 | Experimental | `60` (active, [L570](../../../experimental-config/gameinfo.gi#L570)) |
 | Stock gameinfo override | `60` (active, [L493](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L493)) |
-| OptimizationLock pinned upstream | `60` (active, [L721](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L721)) |
+| OptimizationLock pinned upstream | `60` (active, [L718](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L718)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -447,7 +456,7 @@ Selects whether the DirectX resource compiler uses WARP according to the key nam
 | Stable | `0` (active, [L195](../../../stable-config/gameinfo.gi#L195)) |
 | Experimental | `0` (active, [L195](../../../experimental-config/gameinfo.gi#L195)) |
 | Stock gameinfo override | `0` (active, [L167](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L167)) |
-| OptimizationLock pinned upstream | `0` (active, [L346](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L346)) |
+| OptimizationLock pinned upstream | `0` (active, [L360](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L360)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -471,7 +480,7 @@ Engine initialization metadata. The name indicates the requested capability/poli
 | Stable | `1` (active, [L177](../../../stable-config/gameinfo.gi#L177)) |
 | Experimental | `1` (active, [L177](../../../experimental-config/gameinfo.gi#L177)) |
 | Stock gameinfo override | `1` (active, [L149](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L149)) |
-| OptimizationLock pinned upstream | `1` (active, [L328](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L328)) |
+| OptimizationLock pinned upstream | `1` (active, [L342](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L342)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -495,7 +504,7 @@ Engine initialization metadata. The name indicates the requested capability/poli
 | Stable | `1` (active, [L186](../../../stable-config/gameinfo.gi#L186)) |
 | Experimental | `1` (active, [L186](../../../experimental-config/gameinfo.gi#L186)) |
 | Stock gameinfo override | `1` (active, [L158](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L158)) |
-| OptimizationLock pinned upstream | `1` (active, [L337](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L337)) |
+| OptimizationLock pinned upstream | `1` (active, [L351](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L351)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -519,7 +528,7 @@ Engine initialization metadata. The name indicates the requested capability/poli
 | Stable | `1` (active, [L187](../../../stable-config/gameinfo.gi#L187)) |
 | Experimental | `1` (active, [L187](../../../experimental-config/gameinfo.gi#L187)) |
 | Stock gameinfo override | `1` (active, [L159](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L159)) |
-| OptimizationLock pinned upstream | `1` (active, [L338](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L338)) |
+| OptimizationLock pinned upstream | `1` (active, [L352](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L352)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -543,7 +552,7 @@ Engine initialization metadata. The name indicates the requested capability/poli
 | Stable | `1` (active, [L176](../../../stable-config/gameinfo.gi#L176)) |
 | Experimental | `1` (active, [L176](../../../experimental-config/gameinfo.gi#L176)) |
 | Stock gameinfo override | `1` (active, [L148](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L148)) |
-| OptimizationLock pinned upstream | `1` (active, [L327](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L327)) |
+| OptimizationLock pinned upstream | `1` (active, [L341](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L341)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -567,7 +576,7 @@ Local-server/client access policy key. The exact policy is not documented in the
 | Stable | `1` (active, [L188](../../../stable-config/gameinfo.gi#L188)) |
 | Experimental | `1` (active, [L188](../../../experimental-config/gameinfo.gi#L188)) |
 | Stock gameinfo override | `1` (active, [L160](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L160)) |
-| OptimizationLock pinned upstream | `1` (active, [L339](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L339)) |
+| OptimizationLock pinned upstream | `1` (active, [L353](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L353)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -591,7 +600,7 @@ Map-coordinate limit metadata, retained as 32768. Axis/sign interpretation and e
 | Stable | `32768` (active, [L190](../../../stable-config/gameinfo.gi#L190)) |
 | Experimental | `32768` (active, [L190](../../../experimental-config/gameinfo.gi#L190)) |
 | Stock gameinfo override | `32768` (active, [L162](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L162)) |
-| OptimizationLock pinned upstream | `32768` (active, [L341](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L341)) |
+| OptimizationLock pinned upstream | `32768` (active, [L355](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L355)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -615,7 +624,7 @@ Stock comment says this disables the setpause action normally issued when CTRL i
 | Stable | `0` (active, [L185](../../../stable-config/gameinfo.gi#L185)) |
 | Experimental | `0` (active, [L185](../../../experimental-config/gameinfo.gi#L185)) |
 | Stock gameinfo override | `0` (active, [L157](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L157)) |
-| OptimizationLock pinned upstream | `0` (active, [L336](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L336)) |
+| OptimizationLock pinned upstream | `0` (active, [L350](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L350)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -639,7 +648,7 @@ Engine initialization metadata. The name indicates the requested capability/poli
 | Stable | `1` (active, [L184](../../../stable-config/gameinfo.gi#L184)) |
 | Experimental | `1` (active, [L184](../../../experimental-config/gameinfo.gi#L184)) |
 | Stock gameinfo override | `1` (active, [L156](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L156)) |
-| OptimizationLock pinned upstream | `1` (active, [L335](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L335)) |
+| OptimizationLock pinned upstream | `1` (active, [L349](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L349)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -663,7 +672,7 @@ Declares a distance-field capability in the rendering pipeline. It is not a proo
 | Stable | `1` (active, [L182](../../../stable-config/gameinfo.gi#L182)) |
 | Experimental | `1` (active, [L182](../../../experimental-config/gameinfo.gi#L182)) |
 | Stock gameinfo override | `1` (active, [L154](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L154)) |
-| OptimizationLock pinned upstream | `1` (active, [L333](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L333)) |
+| OptimizationLock pinned upstream | `1` (active, [L347](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L347)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -687,7 +696,7 @@ Declares MSAA support capability as disabled for the rendering pipeline. It is n
 | Stable | `0` (active, [L181](../../../stable-config/gameinfo.gi#L181)) |
 | Experimental | `0` (active, [L181](../../../experimental-config/gameinfo.gi#L181)) |
 | Stock gameinfo override | `0` (active, [L153](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L153)) |
-| OptimizationLock pinned upstream | `0` (active, [L332](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L332)) |
+| OptimizationLock pinned upstream | `0` (active, [L346](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L346)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -711,7 +720,7 @@ Engine initialization metadata. The name indicates the requested capability/poli
 | Stable | `citadel` (active, [L178](../../../stable-config/gameinfo.gi#L178)) |
 | Experimental | `citadel` (active, [L178](../../../experimental-config/gameinfo.gi#L178)) |
 | Stock gameinfo override | `citadel` (active, [L150](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L150)) |
-| OptimizationLock pinned upstream | `citadel` (active, [L329](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L329)) |
+| OptimizationLock pinned upstream | `citadel` (active, [L343](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L343)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -735,7 +744,7 @@ Identifies the legacy user-settings path namespace as MOD.
 | Stable | `MOD` (active, [L87](../../../stable-config/gameinfo.gi#L87)) |
 | Experimental | `MOD` (active, [L87](../../../experimental-config/gameinfo.gi#L87)) |
 | Stock gameinfo override | `MOD` (active, [L78](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L78)) |
-| OptimizationLock pinned upstream | `MOD` (active, [L238](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L238)) |
+| OptimizationLock pinned upstream | `MOD` (active, [L252](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L252)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -759,7 +768,7 @@ Ordered content search paths: citadel/custom, citadel/addons, citadel, then core
 | Stable | `citadel/custom` (active, [L81](../../../stable-config/gameinfo.gi#L81)); `citadel/addons` (active, [L82](../../../stable-config/gameinfo.gi#L82)); `citadel` (active, [L83](../../../stable-config/gameinfo.gi#L83)); `core` (active, [L84](../../../stable-config/gameinfo.gi#L84)) |
 | Experimental | `citadel/custom` (active, [L81](../../../experimental-config/gameinfo.gi#L81)); `citadel/addons` (active, [L82](../../../experimental-config/gameinfo.gi#L82)); `citadel` (active, [L83](../../../experimental-config/gameinfo.gi#L83)); `core` (active, [L84](../../../experimental-config/gameinfo.gi#L84)) |
 | Stock gameinfo override | `citadel` (active, [L73](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L73)); `core` (active, [L74](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L74)) |
-| OptimizationLock pinned upstream | `citadel/custom` (active, [L232](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L232)); `citadel/addons` (active, [L233](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L233)); `citadel` (active, [L234](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L234)); `core` (active, [L235](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L235)) |
+| OptimizationLock pinned upstream | `citadel/custom` (active, [L246](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L246)); `citadel/addons` (active, [L247](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L247)); `citadel` (active, [L248](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L248)); `core` (active, [L249](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L249)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -783,7 +792,7 @@ Mounts citadel_lv only in low-violence mode, according to the stock file comment
 | Stable | `citadel_lv` (active, [L77](../../../stable-config/gameinfo.gi#L77)) |
 | Experimental | `citadel_lv` (active, [L77](../../../experimental-config/gameinfo.gi#L77)) |
 | Stock gameinfo override | `citadel_lv` (active, [L71](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L71)) |
-| OptimizationLock pinned upstream | `citadel_lv` (active, [L228](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L228)) |
+| OptimizationLock pinned upstream | `citadel_lv` (active, [L242](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L242)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -807,7 +816,7 @@ Mounts localized UI content when a UI language is selected. The stock comments s
 | Stable | `citadel_*LANGUAGE*` (active, [L73](../../../stable-config/gameinfo.gi#L73)); `citadel_*LANGUAGE*` (active, [L76](../../../stable-config/gameinfo.gi#L76)) |
 | Experimental | `citadel_*LANGUAGE*` (active, [L73](../../../experimental-config/gameinfo.gi#L73)); `citadel_*LANGUAGE*` (active, [L76](../../../experimental-config/gameinfo.gi#L76)) |
 | Stock gameinfo override | `citadel_*LANGUAGE*` (active, [L68](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L68)) |
-| OptimizationLock pinned upstream | `citadel_*LANGUAGE*` (active, [L224](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L224)); `citadel_*LANGUAGE*` (active, [L227](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L227)) |
+| OptimizationLock pinned upstream | `citadel_*LANGUAGE*` (active, [L238](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L238)); `citadel_*LANGUAGE*` (active, [L241](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L241)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -831,7 +840,7 @@ Sets the MOD search-path namespace to citadel.
 | Stable | `citadel` (active, [L79](../../../stable-config/gameinfo.gi#L79)) |
 | Experimental | `citadel` (active, [L79](../../../experimental-config/gameinfo.gi#L79)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `citadel` (active, [L230](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L230)) |
+| OptimizationLock pinned upstream | `citadel` (active, [L244](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L244)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -855,7 +864,7 @@ Sets the write-path namespace to citadel.
 | Stable | `citadel` (active, [L80](../../../stable-config/gameinfo.gi#L80)) |
 | Experimental | `citadel` (active, [L80](../../../experimental-config/gameinfo.gi#L80)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `citadel` (active, [L231](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L231)) |
+| OptimizationLock pinned upstream | `citadel` (active, [L245](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L245)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -879,7 +888,7 @@ Selects USRLOCAL as the user-settings path namespace. Stock and both configs ret
 | Stable | `USRLOCAL` (active, [L88](../../../stable-config/gameinfo.gi#L88)) |
 | Experimental | `USRLOCAL` (active, [L88](../../../experimental-config/gameinfo.gi#L88)) |
 | Stock gameinfo override | `USRLOCAL` (active, [L77](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L77)) |
-| OptimizationLock pinned upstream | `USRLOCAL` (active, [L239](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L239)) |
+| OptimizationLock pinned upstream | `USRLOCAL` (active, [L253](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L253)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -903,7 +912,7 @@ Names the citadel.fgd game-definition file used by content tools.
 | Stable | `citadel.fgd` (active, [L22](../../../stable-config/gameinfo.gi#L22)) |
 | Experimental | `citadel.fgd` (active, [L22](../../../experimental-config/gameinfo.gi#L22)) |
 | Stock gameinfo override | `citadel.fgd` (active, [L17](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L17)) |
-| OptimizationLock pinned upstream | `citadel.fgd` (active, [L173](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L173)) |
+| OptimizationLock pinned upstream | `citadel.fgd` (active, [L187](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L187)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -927,7 +936,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `1` (active, [L230](../../../stable-config/gameinfo.gi#L230)) |
 | Experimental | `1` (active, [L230](../../../experimental-config/gameinfo.gi#L230)) |
 | Stock gameinfo override | `1` (active, [L202](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L202)) |
-| OptimizationLock pinned upstream | `1` (active, [L381](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L381)) |
+| OptimizationLock pinned upstream | `1` (active, [L395](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L395)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -951,7 +960,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `2048` (active, [L231](../../../stable-config/gameinfo.gi#L231)) |
 | Experimental | `2048` (active, [L231](../../../experimental-config/gameinfo.gi#L231)) |
 | Stock gameinfo override | `2048` (active, [L203](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L203)) |
-| OptimizationLock pinned upstream | `2048` (active, [L382](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L382)) |
+| OptimizationLock pinned upstream | `2048` (active, [L396](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L396)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -975,7 +984,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `16384` (active, [L232](../../../stable-config/gameinfo.gi#L232)) |
 | Experimental | `16384` (active, [L232](../../../experimental-config/gameinfo.gi#L232)) |
 | Stock gameinfo override | `16384` (active, [L204](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L204)) |
-| OptimizationLock pinned upstream | `16384` (active, [L383](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L383)) |
+| OptimizationLock pinned upstream | `16384` (active, [L397](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L397)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -999,7 +1008,7 @@ Sets info_player_start as the default point entity used by the map editor; it do
 | Stable | `info_player_start` (active, [L225](../../../stable-config/gameinfo.gi#L225)) |
 | Experimental | `info_player_start` (active, [L225](../../../experimental-config/gameinfo.gi#L225)) |
 | Stock gameinfo override | `info_player_start` (active, [L197](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L197)) |
-| OptimizationLock pinned upstream | `info_player_start` (active, [L376](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L376)) |
+| OptimizationLock pinned upstream | `info_player_start` (active, [L390](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L390)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1023,7 +1032,7 @@ Sets trigger_multiple as the default solid entity used by the map editor; it doe
 | Stable | `trigger_multiple` (active, [L224](../../../stable-config/gameinfo.gi#L224)) |
 | Experimental | `trigger_multiple` (active, [L224](../../../experimental-config/gameinfo.gi#L224)) |
 | Stock gameinfo override | `trigger_multiple` (active, [L196](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L196)) |
-| OptimizationLock pinned upstream | `trigger_multiple` (active, [L375](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L375)) |
+| OptimizationLock pinned upstream | `trigger_multiple` (active, [L389](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L389)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1047,7 +1056,7 @@ Selects Citadel as Hammer's game feature set. The file does not enumerate the en
 | Stable | `Citadel` (active, [L223](../../../stable-config/gameinfo.gi#L223)) |
 | Experimental | `Citadel` (active, [L223](../../../experimental-config/gameinfo.gi#L223)) |
 | Stock gameinfo override | `Citadel` (active, [L195](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L195)) |
-| OptimizationLock pinned upstream | `Citadel` (active, [L374](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L374)) |
+| OptimizationLock pinned upstream | `Citadel` (active, [L388](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L388)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1071,7 +1080,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `1` (active, [L240](../../../stable-config/gameinfo.gi#L240)) |
 | Experimental | `1` (active, [L240](../../../experimental-config/gameinfo.gi#L240)) |
 | Stock gameinfo override | `1` (active, [L212](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L212)) |
-| OptimizationLock pinned upstream | `1` (active, [L391](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L391)) |
+| OptimizationLock pinned upstream | `1` (active, [L405](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L405)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1095,7 +1104,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `0` (active, [L235](../../../stable-config/gameinfo.gi#L235)) |
 | Experimental | `0` (active, [L235](../../../experimental-config/gameinfo.gi#L235)) |
 | Stock gameinfo override | `0` (active, [L207](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L207)) |
-| OptimizationLock pinned upstream | `0` (active, [L386](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L386)) |
+| OptimizationLock pinned upstream | `0` (active, [L400](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L400)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1119,7 +1128,7 @@ Names func_nav_markup for editor navigation markup. The exact editor workflow is
 | Stable | `func_nav_markup` (active, [L226](../../../stable-config/gameinfo.gi#L226)) |
 | Experimental | `func_nav_markup` (active, [L226](../../../experimental-config/gameinfo.gi#L226)) |
 | Stock gameinfo override | `func_nav_markup` (active, [L198](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L198)) |
-| OptimizationLock pinned upstream | `func_nav_markup` (active, [L377](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L377)) |
+| OptimizationLock pinned upstream | `func_nav_markup` (active, [L391](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L391)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1143,7 +1152,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `8` (active, [L227](../../../stable-config/gameinfo.gi#L227)) |
 | Experimental | `8` (active, [L227](../../../experimental-config/gameinfo.gi#L227)) |
 | Stock gameinfo override | `8` (active, [L199](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L199)) |
-| OptimizationLock pinned upstream | `8` (active, [L378](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L378)) |
+| OptimizationLock pinned upstream | `8` (active, [L392](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L392)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1167,7 +1176,7 @@ Selects ToolsVis for editor rendering, matching the developer material visualiza
 | Stable | `ToolsVis` (active, [L229](../../../stable-config/gameinfo.gi#L229)) |
 | Experimental | `ToolsVis` (active, [L229](../../../experimental-config/gameinfo.gi#L229)) |
 | Stock gameinfo override | `ToolsVis` (active, [L201](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L201)) |
-| OptimizationLock pinned upstream | `ToolsVis` (active, [L380](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L380)) |
+| OptimizationLock pinned upstream | `ToolsVis` (active, [L394](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L394)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1191,7 +1200,7 @@ Sets the editor shadow-atlas height key to stock 16384. The name suggests textur
 | Stable | `16384` (active, [L242](../../../stable-config/gameinfo.gi#L242)) |
 | Experimental | `16384` (active, [L242](../../../experimental-config/gameinfo.gi#L242)) |
 | Stock gameinfo override | `16384` (active, [L214](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L214)) |
-| OptimizationLock pinned upstream | `16384` (active, [L393](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L393)) |
+| OptimizationLock pinned upstream | `16384` (active, [L407](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L407)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1215,7 +1224,7 @@ Sets the editor shadow-atlas width key to stock 16384. The name suggests texture
 | Stable | `16384` (active, [L241](../../../stable-config/gameinfo.gi#L241)) |
 | Experimental | `16384` (active, [L241](../../../experimental-config/gameinfo.gi#L241)) |
 | Stock gameinfo override | `16384` (active, [L213](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L213)) |
-| OptimizationLock pinned upstream | `16384` (active, [L392](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L392)) |
+| OptimizationLock pinned upstream | `16384` (active, [L406](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L406)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1239,7 +1248,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `1` (active, [L239](../../../stable-config/gameinfo.gi#L239)) |
 | Experimental | `1` (active, [L239](../../../experimental-config/gameinfo.gi#L239)) |
 | Stock gameinfo override | `1` (active, [L211](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L211)) |
-| OptimizationLock pinned upstream | `1` (active, [L390](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L390)) |
+| OptimizationLock pinned upstream | `1` (active, [L404](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L404)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1263,7 +1272,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `0` (active, [L238](../../../stable-config/gameinfo.gi#L238)) |
 | Experimental | `0` (active, [L238](../../../experimental-config/gameinfo.gi#L238)) |
 | Stock gameinfo override | `0` (active, [L210](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L210)) |
-| OptimizationLock pinned upstream | `0` (active, [L389](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L389)) |
+| OptimizationLock pinned upstream | `0` (active, [L403](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L403)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1287,7 +1296,7 @@ Provides the editor tile-grid blend default color as the three-component value 0
 | Stable | `0 255 0` (active, [L234](../../../stable-config/gameinfo.gi#L234)) |
 | Experimental | `0 255 0` (active, [L234](../../../experimental-config/gameinfo.gi#L234)) |
 | Stock gameinfo override | `0 255 0` (active, [L206](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L206)) |
-| OptimizationLock pinned upstream | `0 255 0` (active, [L385](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L385)) |
+| OptimizationLock pinned upstream | `0 255 0` (active, [L399](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L399)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1311,7 +1320,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `1` (active, [L233](../../../stable-config/gameinfo.gi#L233)) |
 | Experimental | `1` (active, [L233](../../../experimental-config/gameinfo.gi#L233)) |
 | Stock gameinfo override | `1` (active, [L205](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L205)) |
-| OptimizationLock pinned upstream | `1` (active, [L384](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L384)) |
+| OptimizationLock pinned upstream | `1` (active, [L398](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L398)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1335,7 +1344,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `1` (active, [L228](../../../stable-config/gameinfo.gi#L228)) |
 | Experimental | `1` (active, [L228](../../../experimental-config/gameinfo.gi#L228)) |
 | Stock gameinfo override | `1` (active, [L200](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L200)) |
-| OptimizationLock pinned upstream | `1` (active, [L379](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L379)) |
+| OptimizationLock pinned upstream | `1` (active, [L393](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L393)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1359,7 +1368,7 @@ Selects the editor's time-sliced shadow-map rendering option by name. Update cad
 | Stable | `1` (active, [L243](../../../stable-config/gameinfo.gi#L243)) |
 | Experimental | `1` (active, [L243](../../../experimental-config/gameinfo.gi#L243)) |
 | Stock gameinfo override | `1` (active, [L215](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L215)) |
-| OptimizationLock pinned upstream | `1` (active, [L394](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L394)) |
+| OptimizationLock pinned upstream | `1` (active, [L408](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L408)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1383,7 +1392,7 @@ Map-editor configuration. The key names an editor capability, default, or previe
 | Stable | `0` (active, [L237](../../../stable-config/gameinfo.gi#L237)) |
 | Experimental | `0` (active, [L237](../../../experimental-config/gameinfo.gi#L237)) |
 | Stock gameinfo override | `0` (active, [L209](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L209)) |
-| OptimizationLock pinned upstream | `0` (active, [L388](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L388)) |
+| OptimizationLock pinned upstream | `0` (active, [L402](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L402)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1407,7 +1416,7 @@ Declares use of baked lighting for the editor's game feature set. Editing this d
 | Stable | `1` (active, [L236](../../../stable-config/gameinfo.gi#L236)) |
 | Experimental | `1` (active, [L236](../../../experimental-config/gameinfo.gi#L236)) |
 | Stock gameinfo override | `1` (active, [L208](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L208)) |
-| OptimizationLock pinned upstream | `1` (active, [L387](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L387)) |
+| OptimizationLock pinned upstream | `1` (active, [L401](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L401)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1431,7 +1440,7 @@ Names citadel.fgd as Hammer's entity/game-data definition file. Valve's comment 
 | Stable | `citadel.fgd` (active, [L222](../../../stable-config/gameinfo.gi#L222)) |
 | Experimental | `citadel.fgd` (active, [L222](../../../experimental-config/gameinfo.gi#L222)) |
 | Stock gameinfo override | `citadel.fgd` (active, [L194](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L194)) |
-| OptimizationLock pinned upstream | `citadel.fgd` (active, [L373](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L373)) |
+| OptimizationLock pinned upstream | `citadel.fgd` (active, [L387](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L387)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1455,7 +1464,7 @@ Requests assertions for duplicate localization tokens; exact shipping-build hand
 | Stable | `1` (active, [L28](../../../stable-config/gameinfo.gi#L28)) |
 | Experimental | `1` (active, [L28](../../../experimental-config/gameinfo.gi#L28)) |
 | Stock gameinfo override | `1` (active, [L23](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L23)) |
-| OptimizationLock pinned upstream | `1` (active, [L179](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L179)) |
+| OptimizationLock pinned upstream | `1` (active, [L193](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L193)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1479,7 +1488,7 @@ Sets the material editor's default shader name to environment_texture_set. This 
 | Stable | `environment_texture_set` (active, [L116](../../../stable-config/gameinfo.gi#L116)) |
 | Experimental | `environment_texture_set` (active, [L116](../../../experimental-config/gameinfo.gi#L116)) |
 | Stock gameinfo override | `environment_texture_set` (active, [L102](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L102)) |
-| OptimizationLock pinned upstream | `environment_texture_set` (active, [L267](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L267)) |
+| OptimizationLock pinned upstream | `environment_texture_set` (active, [L281](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L281)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1503,7 +1512,7 @@ Lists developer visualization modes ToolsVis and ToolsWireframe. Repeated dev ke
 | Stable | `ToolsVis` (active, [L107](../../../stable-config/gameinfo.gi#L107)); `ToolsWireframe` (active, [L108](../../../stable-config/gameinfo.gi#L108)) |
 | Experimental | `ToolsVis` (active, [L107](../../../experimental-config/gameinfo.gi#L107)); `ToolsWireframe` (active, [L108](../../../experimental-config/gameinfo.gi#L108)) |
 | Stock gameinfo override | `ToolsVis` (active, [L93](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L93)); `ToolsWireframe` (active, [L94](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L94)) |
-| OptimizationLock pinned upstream | `ToolsVis` (active, [L258](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L258)); `ToolsWireframe` (active, [L259](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L259)) |
+| OptimizationLock pinned upstream | `ToolsVis` (active, [L272](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L272)); `ToolsWireframe` (active, [L273](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L273)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1527,7 +1536,7 @@ Lists game material render modes (Default, Forward, Deferred, Outline, Depth, Fr
 | Stable | `Default` (active, [L99](../../../stable-config/gameinfo.gi#L99)); `Forward` (active, [L100](../../../stable-config/gameinfo.gi#L100)); `Deferred` (active, [L101](../../../stable-config/gameinfo.gi#L101)); `Outline` (active, [L102](../../../stable-config/gameinfo.gi#L102)); `Depth` (active, [L103](../../../stable-config/gameinfo.gi#L103)); `FrontDepth` (active, [L104](../../../stable-config/gameinfo.gi#L104)); `ShadowSilhouette` (active, [L105](../../../stable-config/gameinfo.gi#L105)) |
 | Experimental | `Default` (active, [L99](../../../experimental-config/gameinfo.gi#L99)); `Forward` (active, [L100](../../../experimental-config/gameinfo.gi#L100)); `Deferred` (active, [L101](../../../experimental-config/gameinfo.gi#L101)); `Outline` (active, [L102](../../../experimental-config/gameinfo.gi#L102)); `Depth` (active, [L103](../../../experimental-config/gameinfo.gi#L103)); `FrontDepth` (active, [L104](../../../experimental-config/gameinfo.gi#L104)); `ShadowSilhouette` (active, [L105](../../../experimental-config/gameinfo.gi#L105)) |
 | Stock gameinfo override | `Default` (active, [L85](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L85)); `Forward` (active, [L86](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L86)); `Deferred` (active, [L87](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L87)); `Outline` (active, [L88](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L88)); `Depth` (active, [L89](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L89)); `FrontDepth` (active, [L90](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L90)); `ShadowSilhouette` (active, [L91](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L91)) |
-| OptimizationLock pinned upstream | `Default` (active, [L250](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L250)); `Forward` (active, [L251](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L251)); `Deferred` (active, [L252](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L252)); `Outline` (active, [L253](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L253)); `Depth` (active, [L254](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L254)); `FrontDepth` (active, [L255](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L255)); `ShadowSilhouette` (active, [L256](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L256)) |
+| OptimizationLock pinned upstream | `Default` (active, [L264](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L264)); `Forward` (active, [L265](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L265)); `Deferred` (active, [L266](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L266)); `Outline` (active, [L267](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L267)); `Depth` (active, [L268](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L268)); `FrontDepth` (active, [L269](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L269)); `ShadowSilhouette` (active, [L270](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L270)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1551,7 +1560,7 @@ Declares ToolsUtil for tool scene objects, as described in Valve's stock comment
 | Stable | `ToolsUtil` (active, [L110](../../../stable-config/gameinfo.gi#L110)) |
 | Experimental | `ToolsUtil` (active, [L110](../../../experimental-config/gameinfo.gi#L110)) |
 | Stock gameinfo override | `ToolsUtil` (active, [L96](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L96)) |
-| OptimizationLock pinned upstream | `ToolsUtil` (active, [L261](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L261)) |
+| OptimizationLock pinned upstream | `ToolsUtil` (active, [L275](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L275)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1572,10 +1581,10 @@ Estimated CPU-memory metadata in MB by name. The value 1 differs from stock; it 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1357](../../../stable-config/gameinfo.gi#L1357)) |
+| Stable | `1` (active, [L1358](../../../stable-config/gameinfo.gi#L1358)) |
 | Experimental | `1` (active, [L1342](../../../experimental-config/gameinfo.gi#L1342)) |
 | Stock gameinfo override | `1` (active, [L672](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L672)) |
-| OptimizationLock pinned upstream | `1` (active, [L1516](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1516)) |
+| OptimizationLock pinned upstream | `1` (active, [L1531](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1531)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1596,10 +1605,10 @@ Estimated minimum GPU-memory metadata in MB by name. Setting 1 is not evidence o
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1358](../../../stable-config/gameinfo.gi#L1358)) |
+| Stable | `1` (active, [L1359](../../../stable-config/gameinfo.gi#L1359)) |
 | Experimental | `1` (active, [L1343](../../../experimental-config/gameinfo.gi#L1343)) |
 | Stock gameinfo override | `1` (active, [L673](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L673)) |
-| OptimizationLock pinned upstream | `1` (active, [L1517](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1517)) |
+| OptimizationLock pinned upstream | `1` (active, [L1532](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1532)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1620,10 +1629,10 @@ Controls whether an insufficient-page-file message box is shown, as named. Retai
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1360](../../../stable-config/gameinfo.gi#L1360)) |
+| Stable | `1` (active, [L1361](../../../stable-config/gameinfo.gi#L1361)) |
 | Experimental | `1` (active, [L1345](../../../experimental-config/gameinfo.gi#L1345)) |
 | Stock gameinfo override | `1` (active, [L675](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L675)) |
-| OptimizationLock pinned upstream | `1` (active, [L1519](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1519)) |
+| OptimizationLock pinned upstream | `1` (active, [L1534](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1534)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1644,10 +1653,10 @@ Controls the low-virtual-memory message box, as named. It does not change availa
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1361](../../../stable-config/gameinfo.gi#L1361)) |
+| Stable | `1` (active, [L1362](../../../stable-config/gameinfo.gi#L1362)) |
 | Experimental | `1` (active, [L1346](../../../experimental-config/gameinfo.gi#L1346)) |
 | Stock gameinfo override | `1` (active, [L676](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L676)) |
-| OptimizationLock pinned upstream | `1` (active, [L1520](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1520)) |
+| OptimizationLock pinned upstream | `1` (active, [L1535](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1535)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1668,10 +1677,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L578](../../../stable-config/gameinfo.gi#L578)) |
+| Stable | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L561](../../../stable-config/gameinfo.gi#L561)) |
 | Experimental | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L578](../../../experimental-config/gameinfo.gi#L578)) |
 | Stock gameinfo override | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L501](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L501)) |
-| OptimizationLock pinned upstream | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L729](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L729)) |
+| OptimizationLock pinned upstream | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L726](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L726)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1692,10 +1701,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `models_gamedata.fgd` (active, [L577](../../../stable-config/gameinfo.gi#L577)) |
+| Stable | `models_gamedata.fgd` (active, [L560](../../../stable-config/gameinfo.gi#L560)) |
 | Experimental | `models_gamedata.fgd` (active, [L577](../../../experimental-config/gameinfo.gi#L577)) |
 | Stock gameinfo override | `models_gamedata.fgd` (active, [L500](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L500)) |
-| OptimizationLock pinned upstream | `models_gamedata.fgd` (active, [L728](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L728)) |
+| OptimizationLock pinned upstream | `models_gamedata.fgd` (active, [L725](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L725)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1719,7 +1728,7 @@ NGX application identifier retained from stock. This is not Deadlock's Steam app
 | Stable | `103371621` (active, [L170](../../../stable-config/gameinfo.gi#L170)) |
 | Experimental | `103371621` (active, [L170](../../../experimental-config/gameinfo.gi#L170)) |
 | Stock gameinfo override | `103371621` (active, [L142](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L142)) |
-| OptimizationLock pinned upstream | `103371621` (active, [L321](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L321)) |
+| OptimizationLock pinned upstream | `103371621` (active, [L335](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L335)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1743,7 +1752,7 @@ NGX capability declaration retained from stock. It does not select a user scalin
 | Stable | `1` (active, [L171](../../../stable-config/gameinfo.gi#L171)) |
 | Experimental | `1` (active, [L171](../../../experimental-config/gameinfo.gi#L171)) |
 | Stock gameinfo override | `1` (active, [L143](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L143)) |
-| OptimizationLock pinned upstream | `1` (active, [L322](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L322)) |
+| OptimizationLock pinned upstream | `1` (active, [L336](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L336)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1764,10 +1773,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `2.0` (active, [L550](../../../stable-config/gameinfo.gi#L550)) |
+| Stable | `2.0` (active, [L533](../../../stable-config/gameinfo.gi#L533)) |
 | Experimental | `2.0` (active, [L550](../../../experimental-config/gameinfo.gi#L550)) |
 | Stock gameinfo override | `2.0` (active, [L473](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L473)) |
-| OptimizationLock pinned upstream | `2.0` (active, [L701](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L701)) |
+| OptimizationLock pinned upstream | `2.0` (active, [L698](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L698)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1788,10 +1797,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1.5` (active, [L549](../../../stable-config/gameinfo.gi#L549)) |
+| Stable | `1.5` (active, [L532](../../../stable-config/gameinfo.gi#L532)) |
 | Experimental | `1.5` (active, [L549](../../../experimental-config/gameinfo.gi#L549)) |
 | Stock gameinfo override | `1.5` (active, [L472](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L472)) |
-| OptimizationLock pinned upstream | `1.5` (active, [L700](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L700)) |
+| OptimizationLock pinned upstream | `1.5` (active, [L697](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L697)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1812,10 +1821,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `120.0` (active, [L561](../../../stable-config/gameinfo.gi#L561)) |
+| Stable | `120.0` (active, [L544](../../../stable-config/gameinfo.gi#L544)) |
 | Experimental | `120.0` (active, [L561](../../../experimental-config/gameinfo.gi#L561)) |
 | Stock gameinfo override | `120.0` (active, [L484](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L484)) |
-| OptimizationLock pinned upstream | `120.0` (active, [L712](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L712)) |
+| OptimizationLock pinned upstream | `120.0` (active, [L709](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L709)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1836,10 +1845,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `2.0` (active, [L562](../../../stable-config/gameinfo.gi#L562)) |
+| Stable | `2.0` (active, [L545](../../../stable-config/gameinfo.gi#L545)) |
 | Experimental | `2.0` (active, [L562](../../../experimental-config/gameinfo.gi#L562)) |
 | Stock gameinfo override | `2.0` (active, [L485](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L485)) |
-| OptimizationLock pinned upstream | `2.0` (active, [L713](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L713)) |
+| OptimizationLock pinned upstream | `2.0` (active, [L710](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L710)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1860,10 +1869,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `51.0` (active, [L559](../../../stable-config/gameinfo.gi#L559)) |
+| Stable | `51.0` (active, [L542](../../../stable-config/gameinfo.gi#L542)) |
 | Experimental | `51.0` (active, [L559](../../../experimental-config/gameinfo.gi#L559)) |
 | Stock gameinfo override | `51.0` (active, [L482](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L482)) |
-| OptimizationLock pinned upstream | `51.0` (active, [L710](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L710)) |
+| OptimizationLock pinned upstream | `51.0` (active, [L707](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L707)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1884,10 +1893,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1200` (active, [L558](../../../stable-config/gameinfo.gi#L558)) |
+| Stable | `1200` (active, [L541](../../../stable-config/gameinfo.gi#L541)) |
 | Experimental | `1200` (active, [L558](../../../experimental-config/gameinfo.gi#L558)) |
 | Stock gameinfo override | `1200` (active, [L481](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L481)) |
-| OptimizationLock pinned upstream | `1200` (active, [L709](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L709)) |
+| OptimizationLock pinned upstream | `1200` (active, [L706](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L706)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1908,10 +1917,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `default` (active, [L554](../../../stable-config/gameinfo.gi#L554)) |
+| Stable | `default` (active, [L537](../../../stable-config/gameinfo.gi#L537)) |
 | Experimental | `default` (active, [L554](../../../experimental-config/gameinfo.gi#L554)) |
 | Stock gameinfo override | `default` (active, [L477](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L477)) |
-| OptimizationLock pinned upstream | `default` (active, [L705](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L705)) |
+| OptimizationLock pinned upstream | `default` (active, [L702](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L702)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1932,10 +1941,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `20` (active, [L557](../../../stable-config/gameinfo.gi#L557)) |
+| Stable | `20` (active, [L540](../../../stable-config/gameinfo.gi#L540)) |
 | Experimental | `20` (active, [L557](../../../experimental-config/gameinfo.gi#L557)) |
 | Stock gameinfo override | `20` (active, [L480](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L480)) |
-| OptimizationLock pinned upstream | `20` (active, [L708](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L708)) |
+| OptimizationLock pinned upstream | `20` (active, [L705](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L705)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1956,10 +1965,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `8` (active, [L556](../../../stable-config/gameinfo.gi#L556)) |
+| Stable | `8` (active, [L539](../../../stable-config/gameinfo.gi#L539)) |
 | Experimental | `8` (active, [L556](../../../experimental-config/gameinfo.gi#L556)) |
 | Stock gameinfo override | `8` (active, [L479](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L479)) |
-| OptimizationLock pinned upstream | `8` (active, [L707](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L707)) |
+| OptimizationLock pinned upstream | `8` (active, [L704](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L704)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -1980,10 +1989,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `81.0` (active, [L563](../../../stable-config/gameinfo.gi#L563)) |
+| Stable | `81.0` (active, [L546](../../../stable-config/gameinfo.gi#L546)) |
 | Experimental | `81.0` (active, [L563](../../../experimental-config/gameinfo.gi#L563)) |
 | Stock gameinfo override | `81.0` (active, [L486](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L486)) |
-| OptimizationLock pinned upstream | `81.0` (active, [L714](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L714)) |
+| OptimizationLock pinned upstream | `81.0` (active, [L711](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L711)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2004,10 +2013,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `128.0` (active, [L548](../../../stable-config/gameinfo.gi#L548)) |
+| Stable | `128.0` (active, [L531](../../../stable-config/gameinfo.gi#L531)) |
 | Experimental | `128.0` (active, [L548](../../../experimental-config/gameinfo.gi#L548)) |
 | Stock gameinfo override | `128.0` (active, [L471](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L471)) |
-| OptimizationLock pinned upstream | `128.0` (active, [L699](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L699)) |
+| OptimizationLock pinned upstream | `128.0` (active, [L696](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L696)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2028,10 +2037,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `4` (active, [L560](../../../stable-config/gameinfo.gi#L560)) |
+| Stable | `4` (active, [L543](../../../stable-config/gameinfo.gi#L543)) |
 | Experimental | `4` (active, [L560](../../../experimental-config/gameinfo.gi#L560)) |
 | Stock gameinfo override | `4` (active, [L483](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L483)) |
-| OptimizationLock pinned upstream | `4` (active, [L711](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L711)) |
+| OptimizationLock pinned upstream | `4` (active, [L708](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L708)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2055,7 +2064,7 @@ Artificial jitter mode in BetaUniverse; disabled low example and active off. The
 | Stable | `low` (disabled, [L127](../../../stable-config/gameinfo.gi#L127)); `off` (active, [L131](../../../stable-config/gameinfo.gi#L131)) |
 | Experimental | `low` (disabled, [L127](../../../experimental-config/gameinfo.gi#L127)); `off` (active, [L131](../../../experimental-config/gameinfo.gi#L131)) |
 | Stock gameinfo override | `low` (disabled, [L113](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L113)); `off` (active, [L117](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L117)) |
-| OptimizationLock pinned upstream | `low` (disabled, [L278](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L278)); `off` (active, [L282](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L282)) |
+| OptimizationLock pinned upstream | `low` (disabled, [L292](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L292)); `off` (active, [L296](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L296)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2079,7 +2088,7 @@ Artificial-lag configuration under BetaUniverse. Stock retains 40 here; that nes
 | Stable | `40` (active, [L123](../../../stable-config/gameinfo.gi#L123)) |
 | Experimental | `40` (active, [L123](../../../experimental-config/gameinfo.gi#L123)) |
 | Stock gameinfo override | `40` (active, [L109](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L109)) |
-| OptimizationLock pinned upstream | `40` (active, [L274](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L274)) |
+| OptimizationLock pinned upstream | `40` (active, [L288](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L288)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2103,7 +2112,7 @@ Artificial packet-loss configuration under BetaUniverse. Stock retains .1; units
 | Stable | `.1` (active, [L124](../../../stable-config/gameinfo.gi#L124)) |
 | Experimental | `.1` (active, [L124](../../../experimental-config/gameinfo.gi#L124)) |
 | Stock gameinfo override | `.1` (active, [L110](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L110)) |
-| OptimizationLock pinned upstream | `.1` (active, [L275](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L275)) |
+| OptimizationLock pinned upstream | `.1` (active, [L289](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L289)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2127,7 +2136,7 @@ Artificial reordering delay in BetaUniverse. Disabled 10 is historical; active 0
 | Stable | `10` (disabled, [L126](../../../stable-config/gameinfo.gi#L126)); `0` (active, [L130](../../../stable-config/gameinfo.gi#L130)) |
 | Experimental | `10` (disabled, [L126](../../../experimental-config/gameinfo.gi#L126)); `0` (active, [L130](../../../experimental-config/gameinfo.gi#L130)) |
 | Stock gameinfo override | `10` (disabled, [L112](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L112)); `0` (active, [L116](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L116)) |
-| OptimizationLock pinned upstream | `10` (disabled, [L277](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L277)); `0` (active, [L281](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L281)) |
+| OptimizationLock pinned upstream | `10` (disabled, [L291](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L291)); `0` (active, [L295](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L295)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2151,7 +2160,7 @@ Artificial packet-reordering setting in BetaUniverse. The disabled .05 example c
 | Stable | `0.05` (disabled, [L125](../../../stable-config/gameinfo.gi#L125)); `0` (active, [L129](../../../stable-config/gameinfo.gi#L129)) |
 | Experimental | `0.05` (disabled, [L125](../../../experimental-config/gameinfo.gi#L125)); `0` (active, [L129](../../../experimental-config/gameinfo.gi#L129)) |
 | Stock gameinfo override | `0.05` (disabled, [L111](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L111)); `0` (active, [L115](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L115)) |
-| OptimizationLock pinned upstream | `0.05` (disabled, [L276](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L276)); `0` (active, [L280](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L280)) |
+| OptimizationLock pinned upstream | `0.05` (disabled, [L290](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L290)); `0` (active, [L294](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L294)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2175,7 +2184,7 @@ Name suggests skipping redundant network change callbacks. Stock retains 1; deta
 | Stable | `1` (active, [L134](../../../stable-config/gameinfo.gi#L134)) |
 | Experimental | `1` (active, [L134](../../../experimental-config/gameinfo.gi#L134)) |
 | Stock gameinfo override | `1` (active, [L120](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L120)) |
-| OptimizationLock pinned upstream | `1` (active, [L285](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L285)) |
+| OptimizationLock pinned upstream | `1` (active, [L299](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L299)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2199,7 +2208,7 @@ Declares the project gameinfo version token. Both active files match the pinned 
 | Stable | `48C04ECAFC6448F8D3F41F0AA3A15D065501751CF45FBE32DF6CB951BC4F7F6E` (active, [L24](../../../stable-config/gameinfo.gi#L24)) |
 | Experimental | `48C04ECAFC6448F8D3F41F0AA3A15D065501751CF45FBE32DF6CB951BC4F7F6E` (active, [L24](../../../experimental-config/gameinfo.gi#L24)) |
 | Stock gameinfo override | `48C04ECAFC6448F8D3F41F0AA3A15D065501751CF45FBE32DF6CB951BC4F7F6E` (active, [L19](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L19)) |
-| OptimizationLock pinned upstream | `48C04ECAFC6448F8D3F41F0AA3A15D065501751CF45FBE32DF6CB951BC4F7F6E` (active, [L175](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L175)) |
+| OptimizationLock pinned upstream | `48C04ECAFC6448F8D3F41F0AA3A15D065501751CF45FBE32DF6CB951BC4F7F6E` (active, [L189](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L189)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2220,22 +2229,118 @@ Stock particle bindless-shader option retained at 1. The captured file does not 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L585](../../../stable-config/gameinfo.gi#L585)) |
+| Stable | `1` (active, [L568](../../../stable-config/gameinfo.gi#L568)); `1` (active, [L576](../../../stable-config/gameinfo.gi#L576)) |
 | Experimental | `1` (active, [L585](../../../experimental-config/gameinfo.gi#L585)) |
 | Stock gameinfo override | `1` (active, [L509](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L509)) |
-| OptimizationLock pinned upstream | `1` (active, [L736](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L736)) |
+| OptimizationLock pinned upstream | `1` (active, [L733](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L733)); `1` (active, [L741](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L741)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 adds a second identical assignment in its Particles.dll block; stable preserves both.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt); [evidence 4](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi).
+
+<a id="setting-particles-budget_actualtraces"></a>
+## `Particles/Budget_ActualTraces`
+
+Particle budget key requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name a trace budget.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `1` (active, [L577](../../../stable-config/gameinfo.gi#L577)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `1` (active, [L742](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L742)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.
+
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
+
+<a id="setting-particles-budget_interectiontests"></a>
+## `Particles/Budget_InterectionTests`
+
+Particle budget key requested 1 and absent from stock. The exact path, including Valve's spelling Interection, occurs in the particle DLL strings; by name an intersection-test budget.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `1` (active, [L580](../../../stable-config/gameinfo.gi#L580)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `1` (active, [L745](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L745)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.
+
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
+
+<a id="setting-particles-budget_renderus"></a>
+## `Particles/Budget_RenderUS`
+
+Particle budget key requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name a render-time budget in microseconds.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `1` (active, [L578](../../../stable-config/gameinfo.gi#L578)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `1` (active, [L743](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L743)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.
+
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
+
+<a id="setting-particles-budget_simulationus"></a>
+## `Particles/Budget_SimulationUS`
+
+Particle budget key requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name a simulation-time budget in microseconds.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `1` (active, [L579](../../../stable-config/gameinfo.gi#L579)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `1` (active, [L744](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L744)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.
+
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
 
 <a id="setting-particles-enablemixedresolution"></a>
 ## `Particles/EnableMixedResolution`
@@ -2244,10 +2349,10 @@ Candidate mixed-resolution particle option, absent from stock. The inspected par
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L592](../../../stable-config/gameinfo.gi#L592)) |
+| Stable | `1` (active, [L575](../../../stable-config/gameinfo.gi#L575)) |
 | Experimental | `1` (active, [L592](../../../experimental-config/gameinfo.gi#L592)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L743](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L743)) |
+| OptimizationLock pinned upstream | `1` (active, [L740](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L740)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2268,10 +2373,10 @@ Stock particle shader-feature-branching option retained at 1. The name suggests 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L586](../../../stable-config/gameinfo.gi#L586)) |
+| Stable | `1` (active, [L569](../../../stable-config/gameinfo.gi#L569)) |
 | Experimental | `1` (active, [L586](../../../experimental-config/gameinfo.gi#L586)) |
 | Stock gameinfo override | `1` (active, [L506](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L506)) |
-| OptimizationLock pinned upstream | `1` (active, [L737](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L737)) |
+| OptimizationLock pinned upstream | `1` (active, [L734](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L734)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2292,10 +2397,10 @@ Stock particle feature string non_homogenous_forward_layer_only. Accepted featur
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `non_homogenous_forward_layer_only` (active, [L587](../../../stable-config/gameinfo.gi#L587)) |
+| Stable | `non_homogenous_forward_layer_only` (active, [L570](../../../stable-config/gameinfo.gi#L570)) |
 | Experimental | `non_homogenous_forward_layer_only` (active, [L587](../../../experimental-config/gameinfo.gi#L587)) |
 | Stock gameinfo override | `non_homogenous_forward_layer_only` (active, [L510](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L510)) |
-| OptimizationLock pinned upstream | `non_homogenous_forward_layer_only` (active, [L738](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L738)) |
+| OptimizationLock pinned upstream | `non_homogenous_forward_layer_only` (active, [L735](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L735)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2316,10 +2421,10 @@ Stock particle 16-bit floating-point HDR backbuffer option. Internal HDR process
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L588](../../../stable-config/gameinfo.gi#L588)) |
+| Stable | `1` (active, [L571](../../../stable-config/gameinfo.gi#L571)) |
 | Experimental | `1` (active, [L588](../../../experimental-config/gameinfo.gi#L588)) |
 | Stock gameinfo override | `1` (active, [L507](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L507)) |
-| OptimizationLock pinned upstream | `1` (active, [L739](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L739)) |
+| OptimizationLock pinned upstream | `1` (active, [L736](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L736)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2333,6 +2438,54 @@ Stock particle 16-bit floating-point HDR backbuffer option. Internal HDR process
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
 
+<a id="setting-particles-gpuparticles"></a>
+## `Particles/GPUParticles`
+
+Particle option requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name it enables GPU particle simulation.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `1` (active, [L587](../../../stable-config/gameinfo.gi#L587)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `1` (active, [L752](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L752)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** Could move particle work to the GPU or change which effects render. Correct rendering of every hero effect and the CPU/GPU balance are unverified.
+
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
+
+<a id="setting-particles-gamesupportslegacyshaders"></a>
+## `Particles/GameSupportsLegacyShaders`
+
+Disabled particle option. The key name occurs in the particle DLL strings; absent from stock.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `1` (disabled, [L586](../../../stable-config/gameinfo.gi#L586)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `1` (disabled, [L751](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L751)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** OptimizationLock 3.7 enabled it and the 3.7.1 hotfix commented it out, reporting broken particles. Stable carries the disabled line.
+
+**Benefits and trade-offs:** None while disabled. Upstream reports that enabling it broke Paige, Drifter and Infernus particles; check those heroes before enabling it.
+
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in stable; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt); [evidence 5](https://github.com/Sqooky/OptimizationLock/commit/aa2844d4a93fe11688785ede0794cde55f8b6322).
+
 <a id="setting-particles-mpropertyflattenintoparentrow"></a>
 ## `Particles/MPropertyFlattenIntoParentRow`
 
@@ -2340,10 +2493,10 @@ Bare MPropertyFlattenIntoParentRow appears in the particle strings among propert
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L593](../../../stable-config/gameinfo.gi#L593)) |
+| Stable | `1` (active, [L581](../../../stable-config/gameinfo.gi#L581)) |
 | Experimental | `1` (active, [L593](../../../experimental-config/gameinfo.gi#L593)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L744](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L744)) |
+| OptimizationLock pinned upstream | `1` (active, [L746](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L746)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2357,6 +2510,30 @@ Bare MPropertyFlattenIntoParentRow appears in the particle strings among propert
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/65); [evidence 5](https://github.com/ghempy53/deadlock-config/pull/70); [evidence 6](https://github.com/ghempy53/deadlock-config/pull/71).
 
+<a id="setting-particles-mixedresolution-slices"></a>
+## `Particles/MixedResolution/Slices`
+
+Nested mixed-resolution particle slice count requested 16; absent from stock. The particle DLL string is Particles/MixedResoluion/Slices (Valve spelling, no t after the u), so the path this file writes does not match the captured reader string.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `16` (active, [L590](../../../stable-config/gameinfo.gi#L590)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `16` (active, [L755](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L755)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable keeps upstream's spelling because correcting it would activate an untested setting. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** Probably inert as written. If the engine does read it, the slice count could change mixed-resolution particle quality.
+
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for the string mismatch; low for runtime effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt).
+
 <a id="setting-particles-pet_supportfadingopaquemodels"></a>
 ## `Particles/PET_SupportFadingOpaqueModels`
 
@@ -2364,10 +2541,10 @@ Stock feature flag whose name suggests support for fading opaque particle models
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L589](../../../stable-config/gameinfo.gi#L589)) |
+| Stable | `1` (active, [L572](../../../stable-config/gameinfo.gi#L572)) |
 | Experimental | `1` (active, [L589](../../../experimental-config/gameinfo.gi#L589)) |
 | Stock gameinfo override | `1` (active, [L508](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L508)) |
-| OptimizationLock pinned upstream | `1` (active, [L740](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L740)) |
+| OptimizationLock pinned upstream | `1` (active, [L737](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L737)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2388,10 +2565,10 @@ Candidate particle trace-offset policy with an exact Particles/ path in the capt
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L594](../../../stable-config/gameinfo.gi#L594)) |
+| Stable | `1` (active, [L582](../../../stable-config/gameinfo.gi#L582)) |
 | Experimental | `1` (active, [L594](../../../experimental-config/gameinfo.gi#L594)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L745](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L745)) |
+| OptimizationLock pinned upstream | `1` (active, [L747](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L747)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2412,10 +2589,10 @@ Bare particle fog-default name appears in the strings, but a recognized gameinfo
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L595](../../../stable-config/gameinfo.gi#L595)) |
+| Stable | `0` (active, [L583](../../../stable-config/gameinfo.gi#L583)) |
 | Experimental | `0` (active, [L595](../../../experimental-config/gameinfo.gi#L595)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L746](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L746)) |
+| OptimizationLock pinned upstream | `0` (active, [L748](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L748)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2436,10 +2613,10 @@ Bare PerVertexLighting appears in several rendering modules; that alone does not
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L596](../../../stable-config/gameinfo.gi#L596)) |
+| Stable | `0` (active, [L584](../../../stable-config/gameinfo.gi#L584)) |
 | Experimental | `0` (active, [L596](../../../experimental-config/gameinfo.gi#L596)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L747](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L747)) |
+| OptimizationLock pinned upstream | `0` (active, [L749](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L749)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2460,10 +2637,10 @@ Bare PostSimulate appears in particle strings, but it may name an internal metho
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L597](../../../stable-config/gameinfo.gi#L597)) |
+| Stable | `0` (active, [L585](../../../stable-config/gameinfo.gi#L585)) |
 | Experimental | `0` (active, [L597](../../../experimental-config/gameinfo.gi#L597)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L748](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L748)) |
+| OptimizationLock pinned upstream | `0` (active, [L750](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L750)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2484,10 +2661,10 @@ Configuration metadata whose exact semantics are not documented in the captured 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L602](../../../stable-config/gameinfo.gi#L602)) |
+| Stable | `1` (active, [L596](../../../stable-config/gameinfo.gi#L596)) |
 | Experimental | `1` (active, [L602](../../../experimental-config/gameinfo.gi#L602)) |
 | Stock gameinfo override | `1` (active, [L515](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L515)) |
-| OptimizationLock pinned upstream | `1` (active, [L753](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L753)) |
+| OptimizationLock pinned upstream | `1` (active, [L761](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L761)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2511,7 +2688,7 @@ Empty render-pipeline alias section retained from stock. It declares no alias ma
 | Stable | `{}` (active, [L267](../../../stable-config/gameinfo.gi#L267)) |
 | Experimental | `{}` (active, [L267](../../../experimental-config/gameinfo.gi#L267)) |
 | Stock gameinfo override | `{}` (active, [L239](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L239)) |
-| OptimizationLock pinned upstream | `{}` (active, [L418](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L418)) |
+| OptimizationLock pinned upstream | `{}` (active, [L432](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L432)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2532,10 +2709,10 @@ Appears to allow immediate texture loads with a partial mip chain; its exact pat
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L163](../../../stable-config/gameinfo.gi#L163)) |
+| Stable | `1` (active, [L162](../../../stable-config/gameinfo.gi#L162)) |
 | Experimental | `1` (active, [L163](../../../experimental-config/gameinfo.gi#L163)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L314](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L314)) |
+| OptimizationLock pinned upstream | `1` (active, [L327](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L327)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2549,6 +2726,30 @@ Appears to allow immediate texture loads with a partial mip chain; its exact pat
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt).
 
+<a id="setting-rendersystem-executequeuedcommandbuffers"></a>
+## `RenderSystem/ExecuteQueuedCommandBuffers`
+
+Render-system key requested 0 and absent from stock. The name occurs only in the Vulkan render DLL strings.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `0` (active, [L163](../../../stable-config/gameinfo.gi#L163)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `0` (active, [L328](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L328)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** By the string evidence it affects Vulkan only; under Vulkan, disabling queued command-buffer execution could change submission behavior or stability.
+
+**Applicability and effectiveness:** Vulkan only by captured strings; the DX11 render DLL has no matching string. Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt); [evidence 5](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt).
+
 <a id="setting-rendersystem-graphicspipelinelibrary"></a>
 ## `RenderSystem/GraphicsPipelineLibrary`
 
@@ -2559,7 +2760,7 @@ Candidate graphics-pipeline-library option inherited from upstream; absent from 
 | Stable | `1` (active, [L139](../../../stable-config/gameinfo.gi#L139)) |
 | Experimental | `1` (active, [L139](../../../experimental-config/gameinfo.gi#L139)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L290](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L290)) |
+| OptimizationLock pinned upstream | `1` (active, [L304](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L304)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2583,7 +2784,7 @@ By the key name, sizes the rendering index-buffer pool in MB. Current stock spec
 | Stable | `128` (active, [L140](../../../stable-config/gameinfo.gi#L140)) |
 | Experimental | `128` (active, [L140](../../../experimental-config/gameinfo.gi#L140)) |
 | Stock gameinfo override | `32` (active, [L125](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L125)) |
-| OptimizationLock pinned upstream | `128` (active, [L291](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L291)) |
+| OptimizationLock pinned upstream | `128` (active, [L305](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L305)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2607,7 +2808,7 @@ Startup rendering-system low-latency key also present in stock. Its relationship
 | Stable | `1` (active, [L141](../../../stable-config/gameinfo.gi#L141)) |
 | Experimental | `1` (active, [L141](../../../experimental-config/gameinfo.gi#L141)) |
 | Stock gameinfo override | `1` (active, [L130](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L130)) |
-| OptimizationLock pinned upstream | `1` (active, [L292](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L292)) |
+| OptimizationLock pinned upstream | `1` (active, [L306](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L306)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2628,10 +2829,10 @@ Appears to limit preloaded texture resolution. The exact path occurs in both DX1
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L162](../../../stable-config/gameinfo.gi#L162)) |
+| Stable | `0` (active, [L161](../../../stable-config/gameinfo.gi#L161)) |
 | Experimental | `0` (active, [L162](../../../experimental-config/gameinfo.gi#L162)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L313](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L313)) |
+| OptimizationLock pinned upstream | `0` (active, [L326](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L326)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2648,18 +2849,18 @@ Appears to limit preloaded texture resolution. The exact path occurs in both DX1
 <a id="setting-rendersystem-minstreamingpoolsizemb"></a>
 ## `RenderSystem/MinStreamingPoolSizeMB`
 
-By the key name, sets a minimum texture-streaming pool size in MB; stock specifies 1024 and this config 2048. Interaction with r_texture_pool_size and dynamic budgeting requires runtime measurement.
+By the key name, sets a minimum texture-streaming pool size in MB; stock specifies 1024, stable 500 and experimental 2048. Interaction with r_texture_pool_size and dynamic budgeting requires runtime measurement.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `2048` (active, [L142](../../../stable-config/gameinfo.gi#L142)) |
+| Stable | `500` (active, [L142](../../../stable-config/gameinfo.gi#L142)) |
 | Experimental | `2048` (active, [L142](../../../experimental-config/gameinfo.gi#L142)) |
 | Stock gameinfo override | `1024` (active, [L136](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L136)) |
-| OptimizationLock pinned upstream | `2048` (active, [L293](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L293)) |
+| OptimizationLock pinned upstream | `500` (active, [L307](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L307)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 lowered it from 2048 to 500, citing CS2's value; stable follows and experimental keeps 2048.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -2667,7 +2868,7 @@ By the key name, sets a minimum texture-streaming pool size in MB; stock specifi
 
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt); [evidence 5](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-rendersystem-minstreamingpoolsizembtools"></a>
 ## `RenderSystem/MinStreamingPoolSizeMBTools`
@@ -2679,7 +2880,7 @@ By the key name, supplies the tools-mode minimum streaming pool in MB. Both this
 | Stable | `2048` (active, [L143](../../../stable-config/gameinfo.gi#L143)) |
 | Experimental | `2048` (active, [L143](../../../experimental-config/gameinfo.gi#L143)) |
 | Stock gameinfo override | `2048` (active, [L137](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L137)) |
-| OptimizationLock pinned upstream | `2048` (active, [L294](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L294)) |
+| OptimizationLock pinned upstream | `2048` (active, [L308](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L308)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2703,7 +2904,7 @@ Candidate sampleable-depth swapchain option. The inspected Vulkan strings expose
 | Stable | `1` (active, [L144](../../../stable-config/gameinfo.gi#L144)) |
 | Experimental | `1` (active, [L144](../../../experimental-config/gameinfo.gi#L144)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L295](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L295)) |
+| OptimizationLock pinned upstream | `1` (active, [L309](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L309)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2727,7 +2928,7 @@ Selects a 32-bit depth-buffer option by name. Stock and config both use zero; ex
 | Stable | `0` (active, [L145](../../../stable-config/gameinfo.gi#L145)) |
 | Experimental | `0` (active, [L145](../../../experimental-config/gameinfo.gi#L145)) |
 | Stock gameinfo override | `0` (active, [L127](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L127)) |
-| OptimizationLock pinned upstream | `0` (active, [L296](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L296)) |
+| OptimizationLock pinned upstream | `0` (active, [L310](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L310)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2751,7 +2952,7 @@ Selects a 32-bit depth-buffer option without stencil by name. Stock and config b
 | Stable | `0` (active, [L146](../../../stable-config/gameinfo.gi#L146)) |
 | Experimental | `0` (active, [L146](../../../experimental-config/gameinfo.gi#L146)) |
 | Stock gameinfo override | `0` (active, [L128](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L128)) |
-| OptimizationLock pinned upstream | `0` (active, [L297](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L297)) |
+| OptimizationLock pinned upstream | `0` (active, [L311](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L311)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2775,7 +2976,7 @@ Enables the reverse-depth option present in stock. Exact precision and compatibi
 | Stable | `1` (active, [L147](../../../stable-config/gameinfo.gi#L147)) |
 | Experimental | `1` (active, [L147](../../../experimental-config/gameinfo.gi#L147)) |
 | Stock gameinfo override | `1` (active, [L126](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L126)) |
-| OptimizationLock pinned upstream | `1` (active, [L298](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L298)) |
+| OptimizationLock pinned upstream | `1` (active, [L312](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L312)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2799,7 +3000,7 @@ Names an additional Vulkan shader-cache file. Captured renderer strings contain 
 | Stable | `vulkan_shader_cache.foz` (active, [L148](../../../stable-config/gameinfo.gi#L148)) |
 | Experimental | `vulkan_shader_cache.foz` (active, [L148](../../../experimental-config/gameinfo.gi#L148)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `vulkan_shader_cache.foz` (active, [L299](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L299)) |
+| OptimizationLock pinned upstream | `vulkan_shader_cache.foz` (active, [L313](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L313)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2823,7 +3024,7 @@ Vulkan defragmentation option retained at stock 1. Its scheduling and interactio
 | Stable | `1` (active, [L149](../../../stable-config/gameinfo.gi#L149)) |
 | Experimental | `1` (active, [L149](../../../experimental-config/gameinfo.gi#L149)) |
 | Stock gameinfo override | `1` (active, [L135](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L135)) |
-| OptimizationLock pinned upstream | `1` (active, [L300](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L300)) |
+| OptimizationLock pinned upstream | `1` (active, [L314](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L314)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2847,7 +3048,7 @@ Vulkan mutable-swapchain startup option retained at stock 1; captured data does 
 | Stable | `1` (active, [L150](../../../stable-config/gameinfo.gi#L150)) |
 | Experimental | `1` (active, [L150](../../../experimental-config/gameinfo.gi#L150)) |
 | Stock gameinfo override | `1` (active, [L129](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L129)) |
-| OptimizationLock pinned upstream | `1` (active, [L301](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L301)) |
+| OptimizationLock pinned upstream | `1` (active, [L315](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L315)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2871,7 +3072,7 @@ Startup Vulkan-test-probability key present in stock. Units and the mapping of 1
 | Stable | `0` (active, [L151](../../../stable-config/gameinfo.gi#L151)) |
 | Experimental | `0` (active, [L151](../../../experimental-config/gameinfo.gi#L151)) |
 | Stock gameinfo override | `0` (active, [L134](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L134)) |
-| OptimizationLock pinned upstream | `0` (active, [L302](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L302)) |
+| OptimizationLock pinned upstream | `0` (active, [L316](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L316)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2895,7 +3096,7 @@ Candidate Linux Vulkan-only selection key, absent from stock. Recognition and cu
 | Stable | `1` (active, [L152](../../../stable-config/gameinfo.gi#L152)) |
 | Experimental | `1` (active, [L152](../../../experimental-config/gameinfo.gi#L152)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L303](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L303)) |
+| OptimizationLock pinned upstream | `1` (active, [L317](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L317)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2919,7 +3120,7 @@ Names a required Vulkan descriptor-indexing capability. Disabling a requirement 
 | Stable | `1` (active, [L153](../../../stable-config/gameinfo.gi#L153)) |
 | Experimental | `1` (active, [L153](../../../experimental-config/gameinfo.gi#L153)) |
 | Stock gameinfo override | `1` (active, [L132](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L132)) |
-| OptimizationLock pinned upstream | `1` (active, [L304](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L304)) |
+| OptimizationLock pinned upstream | `1` (active, [L318](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L318)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2933,6 +3134,30 @@ Names a required Vulkan descriptor-indexing capability. Disabling a requirement 
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt).
 
+<a id="setting-rendersystem-vulkanrequiresm6"></a>
+## `RenderSystem/VulkanRequireSM6`
+
+Vulkan device requirement requested false and absent from stock. A Vulkan DLL error string says device creation fails when float16/int8/16-bit storage features are missing and VulkanRequireSM6 is set.
+
+| Source | Assignments in source order |
+| --- | --- |
+| Stable | `false` (active, [L164](../../../stable-config/gameinfo.gi#L164)) |
+| Experimental | Not assigned |
+| Stock gameinfo override | Not assigned |
+| OptimizationLock pinned upstream | `false` (active, [L329](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L329)) |
+
+**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
+
+**Why retained / provenance:** Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.
+
+**Benefits and trade-offs:** false relaxes a Vulkan device requirement, which may let GPUs without those features create a device. The stock behavior when the key is absent is not established.
+
+**Applicability and effectiveness:** Vulkan only; no DX11 effect is expected. Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+
+**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
+
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt).
+
 <a id="setting-rendersystem-vulkanrequiresubgroupwaveopsupport"></a>
 ## `RenderSystem/VulkanRequireSubgroupWaveOpSupport`
 
@@ -2943,7 +3168,7 @@ Names a required Vulkan subgroup/wave-operation capability. Stock retains it; th
 | Stable | `1` (active, [L154](../../../stable-config/gameinfo.gi#L154)) |
 | Experimental | `1` (active, [L154](../../../experimental-config/gameinfo.gi#L154)) |
 | Stock gameinfo override | `1` (active, [L131](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L131)) |
-| OptimizationLock pinned upstream | `1` (active, [L305](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L305)) |
+| OptimizationLock pinned upstream | `1` (active, [L319](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L319)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2967,7 +3192,7 @@ By name, limits Vulkan staging-buffer memory in MB. Stock requests 384 while the
 | Stable | `768` (active, [L155](../../../stable-config/gameinfo.gi#L155)) |
 | Experimental | `768` (active, [L155](../../../experimental-config/gameinfo.gi#L155)) |
 | Stock gameinfo override | `384` (active, [L133](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L133)) |
-| OptimizationLock pinned upstream | `768` (active, [L306](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L306)) |
+| OptimizationLock pinned upstream | `768` (active, [L320](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L320)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -2991,7 +3216,7 @@ By name, controls use of a Steam application Vulkan shader cache; exact cache po
 | Stable | `1` (active, [L156](../../../stable-config/gameinfo.gi#L156)) |
 | Experimental | `1` (active, [L156](../../../experimental-config/gameinfo.gi#L156)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L307](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L307)) |
+| OptimizationLock pinned upstream | `1` (active, [L321](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L321)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3015,7 +3240,7 @@ By name, controls use of downloaded Steam Vulkan shader-cache data; exact loadin
 | Stable | `1` (active, [L157](../../../stable-config/gameinfo.gi#L157)) |
 | Experimental | `1` (active, [L157](../../../experimental-config/gameinfo.gi#L157)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L308](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L308)) |
+| OptimizationLock pinned upstream | `1` (active, [L322](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L322)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3039,7 +3264,7 @@ Candidate Steam Vulkan-cache switch. It is absent from stock and no matching pat
 | Stable | `1` (active, [L158](../../../stable-config/gameinfo.gi#L158)) |
 | Experimental | `1` (active, [L158](../../../experimental-config/gameinfo.gi#L158)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L309](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L309)) |
+| OptimizationLock pinned upstream | `1` (active, [L323](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L323)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3063,7 +3288,7 @@ Sets the distance over which baked-lighting charts transition from high to low r
 | Stable | `512` (active, [L331](../../../stable-config/gameinfo.gi#L331)) |
 | Experimental | `512` (active, [L331](../../../experimental-config/gameinfo.gi#L331)) |
 | Stock gameinfo override | `512` (active, [L303](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L303)) |
-| OptimizationLock pinned upstream | `512` (active, [L482](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L482)) |
+| OptimizationLock pinned upstream | `512` (active, [L496](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L496)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3087,7 +3312,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L345](../../../stable-config/gameinfo.gi#L345)) |
 | Experimental | `1` (active, [L345](../../../experimental-config/gameinfo.gi#L345)) |
 | Stock gameinfo override | `1` (active, [L317](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L317)) |
-| OptimizationLock pinned upstream | `1` (active, [L496](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L496)) |
+| OptimizationLock pinned upstream | `1` (active, [L510](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L510)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3111,7 +3336,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L335](../../../stable-config/gameinfo.gi#L335)) |
 | Experimental | `1` (active, [L335](../../../experimental-config/gameinfo.gi#L335)) |
 | Stock gameinfo override | `1` (active, [L307](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L307)) |
-| OptimizationLock pinned upstream | `1` (active, [L486](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L486)) |
+| OptimizationLock pinned upstream | `1` (active, [L500](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L500)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3135,7 +3360,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L334](../../../stable-config/gameinfo.gi#L334)) |
 | Experimental | `1` (active, [L334](../../../experimental-config/gameinfo.gi#L334)) |
 | Stock gameinfo override | `1` (active, [L306](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L306)) |
-| OptimizationLock pinned upstream | `1` (active, [L485](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L485)) |
+| OptimizationLock pinned upstream | `1` (active, [L499](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L499)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3159,7 +3384,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L336](../../../stable-config/gameinfo.gi#L336)) |
 | Experimental | `1` (active, [L336](../../../experimental-config/gameinfo.gi#L336)) |
 | Stock gameinfo override | `1` (active, [L308](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L308)) |
-| OptimizationLock pinned upstream | `1` (active, [L487](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L487)) |
+| OptimizationLock pinned upstream | `1` (active, [L501](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L501)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3183,7 +3408,7 @@ Selects DXT1 compression for the baked directional-irradiance luminance channel.
 | Stable | `DXT1` (active, [L340](../../../stable-config/gameinfo.gi#L340)) |
 | Experimental | `DXT1` (active, [L340](../../../experimental-config/gameinfo.gi#L340)) |
 | Stock gameinfo override | `DXT1` (active, [L312](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L312)) |
-| OptimizationLock pinned upstream | `DXT1` (active, [L491](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L491)) |
+| OptimizationLock pinned upstream | `DXT1` (active, [L505](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L505)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3207,7 +3432,7 @@ Sets the lightmap gutter size; Valve's stock comment identifies bicubic filterin
 | Stable | `2` (active, [L343](../../../stable-config/gameinfo.gi#L343)) |
 | Experimental | `2` (active, [L343](../../../experimental-config/gameinfo.gi#L343)) |
 | Stock gameinfo override | `2` (active, [L315](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L315)) |
-| OptimizationLock pinned upstream | `2` (active, [L494](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L494)) |
+| OptimizationLock pinned upstream | `2` (active, [L508](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L508)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3231,7 +3456,7 @@ By name, selects use of static light probes in baked-lighting compilation. Stock
 | Stable | `0` (active, [L344](../../../stable-config/gameinfo.gi#L344)) |
 | Experimental | `0` (active, [L344](../../../experimental-config/gameinfo.gi#L344)) |
 | Stock gameinfo override | `0` (active, [L316](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L316)) |
-| OptimizationLock pinned upstream | `0` (active, [L495](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L495)) |
+| OptimizationLock pinned upstream | `0` (active, [L509](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L509)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3255,7 +3480,7 @@ Selects baked-lighting version 5. PR80 records the build-6810 update from versio
 | Stable | `5` (active, [L330](../../../stable-config/gameinfo.gi#L330)) |
 | Experimental | `5` (active, [L330](../../../experimental-config/gameinfo.gi#L330)) |
 | Stock gameinfo override | `5` (active, [L302](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L302)) |
-| OptimizationLock pinned upstream | `5` (active, [L481](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L481)) |
+| OptimizationLock pinned upstream | `5` (active, [L495](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L495)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3279,7 +3504,7 @@ Enables the lightmapping map-build step; Valve's stock comment explicitly identi
 | Stable | `1` (active, [L280](../../../stable-config/gameinfo.gi#L280)) |
 | Experimental | `1` (active, [L280](../../../experimental-config/gameinfo.gi#L280)) |
 | Stock gameinfo override | `1` (active, [L252](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L252)) |
-| OptimizationLock pinned upstream | `1` (active, [L431](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L431)) |
+| OptimizationLock pinned upstream | `1` (active, [L445](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L445)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3303,7 +3528,7 @@ Disables the environment-map build step. Valve's retained stock comment attribut
 | Stable | `0` (active, [L281](../../../stable-config/gameinfo.gi#L281)) |
 | Experimental | `0` (active, [L281](../../../experimental-config/gameinfo.gi#L281)) |
 | Stock gameinfo override | `0` (active, [L253](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L253)) |
-| OptimizationLock pinned upstream | `0` (active, [L432](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L432)) |
+| OptimizationLock pinned upstream | `0` (active, [L446](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L446)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3327,7 +3552,7 @@ Enables generation of navigation-mesh data during map compilation, as described 
 | Stable | `1` (active, [L282](../../../stable-config/gameinfo.gi#L282)) |
 | Experimental | `1` (active, [L282](../../../experimental-config/gameinfo.gi#L282)) |
 | Stock gameinfo override | `1` (active, [L254](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L254)) |
-| OptimizationLock pinned upstream | `1` (active, [L433](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L433)) |
+| OptimizationLock pinned upstream | `1` (active, [L447](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L447)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3351,7 +3576,7 @@ Enables baking Steam Audio custom data during map compilation, as described by t
 | Stable | `1` (active, [L285](../../../stable-config/gameinfo.gi#L285)) |
 | Experimental | `1` (active, [L285](../../../experimental-config/gameinfo.gi#L285)) |
 | Stock gameinfo override | `1` (active, [L257](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L257)) |
-| OptimizationLock pinned upstream | `1` (active, [L436](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L436)) |
+| OptimizationLock pinned upstream | `1` (active, [L450](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L450)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3375,7 +3600,7 @@ Disables the default Steam Audio pathing-baking step; this is a build pipeline s
 | Stable | `0` (active, [L284](../../../stable-config/gameinfo.gi#L284)) |
 | Experimental | `0` (active, [L284](../../../experimental-config/gameinfo.gi#L284)) |
 | Stock gameinfo override | `0` (active, [L256](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L256)) |
-| OptimizationLock pinned upstream | `0` (active, [L435](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L435)) |
+| OptimizationLock pinned upstream | `0` (active, [L449](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L449)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3399,7 +3624,7 @@ Disables the default Steam Audio reverb-baking step; this is a build pipeline se
 | Stable | `0` (active, [L283](../../../stable-config/gameinfo.gi#L283)) |
 | Experimental | `0` (active, [L283](../../../experimental-config/gameinfo.gi#L283)) |
 | Stock gameinfo override | `0` (active, [L255](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L255)) |
-| OptimizationLock pinned upstream | `0` (active, [L434](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L434)) |
+| OptimizationLock pinned upstream | `0` (active, [L448](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L448)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3423,7 +3648,7 @@ Selects Vulkan for resource-compiler map builds. It does not force the played ga
 | Stable | `1` (active, [L274](../../../stable-config/gameinfo.gi#L274)) |
 | Experimental | `1` (active, [L274](../../../experimental-config/gameinfo.gi#L274)) |
 | Stock gameinfo override | `1` (active, [L245](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L245)) |
-| OptimizationLock pinned upstream | `1` (active, [L424](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L424)) |
+| OptimizationLock pinned upstream | `1` (active, [L438](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L438)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3447,7 +3672,7 @@ Enables the post-build cache of locations used by PVE directors to spawn things,
 | Stable | `1` (active, [L291](../../../stable-config/gameinfo.gi#L291)) |
 | Experimental | `1` (active, [L291](../../../experimental-config/gameinfo.gi#L291)) |
 | Stock gameinfo override | `1` (active, [L263](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L263)) |
-| OptimizationLock pinned upstream | `1` (active, [L442](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L442)) |
+| OptimizationLock pinned upstream | `1` (active, [L456](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L456)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3471,7 +3696,7 @@ By name, selects index-buffer encoding during compilation. The file does not def
 | Stable | `1` (active, [L302](../../../stable-config/gameinfo.gi#L302)) |
 | Experimental | `1` (active, [L302](../../../experimental-config/gameinfo.gi#L302)) |
 | Stock gameinfo override | `1` (active, [L274](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L274)) |
-| OptimizationLock pinned upstream | `1` (active, [L453](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L453)) |
+| OptimizationLock pinned upstream | `1` (active, [L467](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L467)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3495,7 +3720,7 @@ By name, selects vertex-buffer encoding during compilation. The encoded format a
 | Stable | `1` (active, [L299](../../../stable-config/gameinfo.gi#L299)) |
 | Experimental | `1` (active, [L299](../../../experimental-config/gameinfo.gi#L299)) |
 | Stock gameinfo override | `1` (active, [L271](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L271)) |
-| OptimizationLock pinned upstream | `1` (active, [L450](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L450)) |
+| OptimizationLock pinned upstream | `1` (active, [L464](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L464)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3519,7 +3744,7 @@ Selects vertex-buffer encoding level 3. The file does not define the scale or th
 | Stable | `3` (active, [L301](../../../stable-config/gameinfo.gi#L301)) |
 | Experimental | `3` (active, [L301](../../../experimental-config/gameinfo.gi#L301)) |
 | Stock gameinfo override | `3` (active, [L273](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L273)) |
-| OptimizationLock pinned upstream | `3` (active, [L452](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L452)) |
+| OptimizationLock pinned upstream | `3` (active, [L466](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L466)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3543,7 +3768,7 @@ Selects vertex-buffer encoding version 1 for compilation. It is a format selecto
 | Stable | `1` (active, [L300](../../../stable-config/gameinfo.gi#L300)) |
 | Experimental | `1` (active, [L300](../../../experimental-config/gameinfo.gi#L300)) |
 | Stock gameinfo override | `1` (active, [L272](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L272)) |
-| OptimizationLock pinned upstream | `1` (active, [L451](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L451)) |
+| OptimizationLock pinned upstream | `1` (active, [L465](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L465)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3567,7 +3792,7 @@ By name, enables mesh compilation optimized for meshlets. The captured file does
 | Stable | `1` (active, [L296](../../../stable-config/gameinfo.gi#L296)) |
 | Experimental | `1` (active, [L296](../../../experimental-config/gameinfo.gi#L296)) |
 | Stock gameinfo override | `1` (active, [L268](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L268)) |
-| OptimizationLock pinned upstream | `1` (active, [L447](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L447)) |
+| OptimizationLock pinned upstream | `1` (active, [L461](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L461)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3591,7 +3816,7 @@ By name, selects a separate depth stream when compiling meshes. Data layout and 
 | Stable | `1` (active, [L303](../../../stable-config/gameinfo.gi#L303)) |
 | Experimental | `1` (active, [L303](../../../experimental-config/gameinfo.gi#L303)) |
 | Stock gameinfo override | `1` (active, [L275](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L275)) |
-| OptimizationLock pinned upstream | `1` (active, [L454](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L454)) |
+| OptimizationLock pinned upstream | `1` (active, [L468](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L468)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3615,7 +3840,7 @@ Requests 64 triangles per meshlet during mesh compilation. Valve's stock comment
 | Stable | `64` (active, [L297](../../../stable-config/gameinfo.gi#L297)) |
 | Experimental | `64` (active, [L297](../../../experimental-config/gameinfo.gi#L297)) |
 | Stock gameinfo override | `64` (active, [L269](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L269)) |
-| OptimizationLock pinned upstream | `64` (active, [L448](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L448)) |
+| OptimizationLock pinned upstream | `64` (active, [L462](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L462)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3639,7 +3864,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L298](../../../stable-config/gameinfo.gi#L298)) |
 | Experimental | `1` (active, [L298](../../../experimental-config/gameinfo.gi#L298)) |
 | Stock gameinfo override | `1` (active, [L270](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L270)) |
-| OptimizationLock pinned upstream | `1` (active, [L449](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L449)) |
+| OptimizationLock pinned upstream | `1` (active, [L463](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L463)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3663,7 +3888,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L411](../../../stable-config/gameinfo.gi#L411)) |
 | Experimental | `1` (active, [L411](../../../experimental-config/gameinfo.gi#L411)) |
 | Stock gameinfo override | `1` (active, [L383](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L383)) |
-| OptimizationLock pinned upstream | `1` (active, [L562](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L562)) |
+| OptimizationLock pinned upstream | `1` (active, [L576](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L576)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3687,7 +3912,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L415](../../../stable-config/gameinfo.gi#L415)) |
 | Experimental | `1` (active, [L415](../../../experimental-config/gameinfo.gi#L415)) |
 | Stock gameinfo override | `1` (active, [L387](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L387)) |
-| OptimizationLock pinned upstream | `1` (active, [L566](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L566)) |
+| OptimizationLock pinned upstream | `1` (active, [L580](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L580)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3711,7 +3936,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L388](../../../stable-config/gameinfo.gi#L388)) |
 | Experimental | `1` (active, [L388](../../../experimental-config/gameinfo.gi#L388)) |
 | Stock gameinfo override | `1` (active, [L360](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L360)) |
-| OptimizationLock pinned upstream | `1` (active, [L539](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L539)) |
+| OptimizationLock pinned upstream | `1` (active, [L553](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L553)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3735,7 +3960,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L389](../../../stable-config/gameinfo.gi#L389)) |
 | Experimental | `0` (active, [L389](../../../experimental-config/gameinfo.gi#L389)) |
 | Stock gameinfo override | `0` (active, [L361](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L361)) |
-| OptimizationLock pinned upstream | `0` (active, [L540](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L540)) |
+| OptimizationLock pinned upstream | `0` (active, [L554](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L554)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3759,7 +3984,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L387](../../../stable-config/gameinfo.gi#L387)) |
 | Experimental | `0` (active, [L387](../../../experimental-config/gameinfo.gi#L387)) |
 | Stock gameinfo override | `0` (active, [L359](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L359)) |
-| OptimizationLock pinned upstream | `0` (active, [L538](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L538)) |
+| OptimizationLock pinned upstream | `0` (active, [L552](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L552)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3783,7 +4008,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0.02` (active, [L394](../../../stable-config/gameinfo.gi#L394)) |
 | Experimental | `0.02` (active, [L394](../../../experimental-config/gameinfo.gi#L394)) |
 | Stock gameinfo override | `0.02` (active, [L366](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L366)) |
-| OptimizationLock pinned upstream | `0.02` (active, [L545](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L545)) |
+| OptimizationLock pinned upstream | `0.02` (active, [L559](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L559)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3807,7 +4032,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L383](../../../stable-config/gameinfo.gi#L383)) |
 | Experimental | `1` (active, [L383](../../../experimental-config/gameinfo.gi#L383)) |
 | Stock gameinfo override | `1` (active, [L355](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L355)) |
-| OptimizationLock pinned upstream | `1` (active, [L534](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L534)) |
+| OptimizationLock pinned upstream | `1` (active, [L548](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L548)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3831,7 +4056,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L382](../../../stable-config/gameinfo.gi#L382)) |
 | Experimental | `1` (active, [L382](../../../experimental-config/gameinfo.gi#L382)) |
 | Stock gameinfo override | `1` (active, [L354](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L354)) |
-| OptimizationLock pinned upstream | `1` (active, [L533](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L533)) |
+| OptimizationLock pinned upstream | `1` (active, [L547](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L547)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3855,7 +4080,7 @@ Audio-bake probe grid mode: stock comment maps 0 to automatic everywhere, 1 to a
 | Stable | `0` (active, [L381](../../../stable-config/gameinfo.gi#L381)) |
 | Experimental | `0` (active, [L381](../../../experimental-config/gameinfo.gi#L381)) |
 | Stock gameinfo override | `0` (active, [L353](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L353)) |
-| OptimizationLock pinned upstream | `0` (active, [L532](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L532)) |
+| OptimizationLock pinned upstream | `0` (active, [L546](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L546)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3879,7 +4104,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `6` (active, [L384](../../../stable-config/gameinfo.gi#L384)) |
 | Experimental | `6` (active, [L384](../../../experimental-config/gameinfo.gi#L384)) |
 | Stock gameinfo override | `6` (active, [L356](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L356)) |
-| OptimizationLock pinned upstream | `6` (active, [L535](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L535)) |
+| OptimizationLock pinned upstream | `6` (active, [L549](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L549)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3903,7 +4128,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1.5` (active, [L385](../../../stable-config/gameinfo.gi#L385)) |
 | Experimental | `1.5` (active, [L385](../../../experimental-config/gameinfo.gi#L385)) |
 | Stock gameinfo override | `1.5` (active, [L357](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L357)) |
-| OptimizationLock pinned upstream | `1.5` (active, [L536](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L536)) |
+| OptimizationLock pinned upstream | `1.5` (active, [L550](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L550)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3927,7 +4152,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L390](../../../stable-config/gameinfo.gi#L390)) |
 | Experimental | `1` (active, [L390](../../../experimental-config/gameinfo.gi#L390)) |
 | Stock gameinfo override | `1` (active, [L362](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L362)) |
-| OptimizationLock pinned upstream | `1` (active, [L541](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L541)) |
+| OptimizationLock pinned upstream | `1` (active, [L555](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L555)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3951,7 +4176,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L391](../../../stable-config/gameinfo.gi#L391)) |
 | Experimental | `0` (active, [L391](../../../experimental-config/gameinfo.gi#L391)) |
 | Stock gameinfo override | `0` (active, [L363](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L363)) |
-| OptimizationLock pinned upstream | `0` (active, [L542](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L542)) |
+| OptimizationLock pinned upstream | `0` (active, [L556](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L556)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3975,7 +4200,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `16` (active, [L393](../../../stable-config/gameinfo.gi#L393)) |
 | Experimental | `16` (active, [L393](../../../experimental-config/gameinfo.gi#L393)) |
 | Stock gameinfo override | `16` (active, [L365](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L365)) |
-| OptimizationLock pinned upstream | `16` (active, [L544](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L544)) |
+| OptimizationLock pinned upstream | `16` (active, [L558](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L558)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -3999,7 +4224,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `16384` (active, [L392](../../../stable-config/gameinfo.gi#L392)) |
 | Experimental | `16384` (active, [L392](../../../experimental-config/gameinfo.gi#L392)) |
 | Stock gameinfo override | `16384` (active, [L364](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L364)) |
-| OptimizationLock pinned upstream | `16384` (active, [L543](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L543)) |
+| OptimizationLock pinned upstream | `16384` (active, [L557](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L557)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4023,7 +4248,7 @@ Audio-bake mode: stock comment maps 0 to cleanup, 1 to manual, 2 to automatic. T
 | Stable | `0` (active, [L386](../../../stable-config/gameinfo.gi#L386)) |
 | Experimental | `0` (active, [L386](../../../experimental-config/gameinfo.gi#L386)) |
 | Stock gameinfo override | `0` (active, [L358](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L358)) |
-| OptimizationLock pinned upstream | `0` (active, [L537](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L537)) |
+| OptimizationLock pinned upstream | `0` (active, [L551](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L551)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4047,7 +4272,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L370](../../../stable-config/gameinfo.gi#L370)) |
 | Experimental | `0` (active, [L370](../../../experimental-config/gameinfo.gi#L370)) |
 | Stock gameinfo override | `0` (active, [L342](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L342)) |
-| OptimizationLock pinned upstream | `0` (active, [L521](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L521)) |
+| OptimizationLock pinned upstream | `0` (active, [L535](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L535)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4071,7 +4296,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L369](../../../stable-config/gameinfo.gi#L369)) |
 | Experimental | `1` (active, [L369](../../../experimental-config/gameinfo.gi#L369)) |
 | Stock gameinfo override | `1` (active, [L341](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L341)) |
-| OptimizationLock pinned upstream | `1` (active, [L520](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L520)) |
+| OptimizationLock pinned upstream | `1` (active, [L534](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L534)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4095,7 +4320,7 @@ Audio-bake probe grid mode: stock comment maps 0 to automatic everywhere, 1 to a
 | Stable | `0` (active, [L368](../../../stable-config/gameinfo.gi#L368)) |
 | Experimental | `0` (active, [L368](../../../experimental-config/gameinfo.gi#L368)) |
 | Stock gameinfo override | `0` (active, [L340](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L340)) |
-| OptimizationLock pinned upstream | `0` (active, [L519](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L519)) |
+| OptimizationLock pinned upstream | `0` (active, [L533](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L533)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4119,7 +4344,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `3.0` (active, [L371](../../../stable-config/gameinfo.gi#L371)) |
 | Experimental | `3.0` (active, [L371](../../../experimental-config/gameinfo.gi#L371)) |
 | Stock gameinfo override | `3.0` (active, [L343](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L343)) |
-| OptimizationLock pinned upstream | `3.0` (active, [L522](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L522)) |
+| OptimizationLock pinned upstream | `3.0` (active, [L536](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L536)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4143,7 +4368,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1.5` (active, [L372](../../../stable-config/gameinfo.gi#L372)) |
 | Experimental | `1.5` (active, [L372](../../../experimental-config/gameinfo.gi#L372)) |
 | Stock gameinfo override | `1.5` (active, [L344](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L344)) |
-| OptimizationLock pinned upstream | `1.5` (active, [L523](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L523)) |
+| OptimizationLock pinned upstream | `1.5` (active, [L537](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L537)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4167,7 +4392,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L374](../../../stable-config/gameinfo.gi#L374)) |
 | Experimental | `1` (active, [L374](../../../experimental-config/gameinfo.gi#L374)) |
 | Stock gameinfo override | `1` (active, [L346](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L346)) |
-| OptimizationLock pinned upstream | `1` (active, [L525](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L525)) |
+| OptimizationLock pinned upstream | `1` (active, [L539](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L539)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4191,7 +4416,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1000.0` (active, [L377](../../../stable-config/gameinfo.gi#L377)) |
 | Experimental | `1000.0` (active, [L377](../../../experimental-config/gameinfo.gi#L377)) |
 | Stock gameinfo override | `1000.0` (active, [L349](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L349)) |
-| OptimizationLock pinned upstream | `1000.0` (active, [L528](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L528)) |
+| OptimizationLock pinned upstream | `1000.0` (active, [L542](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L542)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4215,7 +4440,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L375](../../../stable-config/gameinfo.gi#L375)) |
 | Experimental | `0` (active, [L375](../../../experimental-config/gameinfo.gi#L375)) |
 | Stock gameinfo override | `0` (active, [L347](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L347)) |
-| OptimizationLock pinned upstream | `0` (active, [L526](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L526)) |
+| OptimizationLock pinned upstream | `0` (active, [L540](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L540)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4239,7 +4464,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0.1` (active, [L376](../../../stable-config/gameinfo.gi#L376)) |
 | Experimental | `0.1` (active, [L376](../../../experimental-config/gameinfo.gi#L376)) |
 | Stock gameinfo override | `0.1` (active, [L348](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L348)) |
-| OptimizationLock pinned upstream | `0.1` (active, [L527](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L527)) |
+| OptimizationLock pinned upstream | `0.1` (active, [L541](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L541)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4263,7 +4488,7 @@ Audio-bake mode: stock comment maps 0 to cleanup, 1 to manual, 2 to automatic. T
 | Stable | `0` (active, [L373](../../../stable-config/gameinfo.gi#L373)) |
 | Experimental | `0` (active, [L373](../../../experimental-config/gameinfo.gi#L373)) |
 | Stock gameinfo override | `0` (active, [L345](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L345)) |
-| OptimizationLock pinned upstream | `0` (active, [L524](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L524)) |
+| OptimizationLock pinned upstream | `0` (active, [L538](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L538)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4287,7 +4512,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L406](../../../stable-config/gameinfo.gi#L406)) |
 | Experimental | `1` (active, [L406](../../../experimental-config/gameinfo.gi#L406)) |
 | Stock gameinfo override | `1` (active, [L378](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L378)) |
-| OptimizationLock pinned upstream | `1` (active, [L557](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L557)) |
+| OptimizationLock pinned upstream | `1` (active, [L571](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L571)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4311,7 +4536,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L405](../../../stable-config/gameinfo.gi#L405)) |
 | Experimental | `1` (active, [L405](../../../experimental-config/gameinfo.gi#L405)) |
 | Stock gameinfo override | `1` (active, [L377](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L377)) |
-| OptimizationLock pinned upstream | `1` (active, [L556](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L556)) |
+| OptimizationLock pinned upstream | `1` (active, [L570](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L570)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4335,7 +4560,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1.5` (active, [L400](../../../stable-config/gameinfo.gi#L400)) |
 | Experimental | `1.5` (active, [L400](../../../experimental-config/gameinfo.gi#L400)) |
 | Stock gameinfo override | `1.5` (active, [L372](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L372)) |
-| OptimizationLock pinned upstream | `1.5` (active, [L551](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L551)) |
+| OptimizationLock pinned upstream | `1.5` (active, [L565](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L565)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4359,7 +4584,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `12` (active, [L401](../../../stable-config/gameinfo.gi#L401)) |
 | Experimental | `12` (active, [L401](../../../experimental-config/gameinfo.gi#L401)) |
 | Stock gameinfo override | `12` (active, [L373](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L373)) |
-| OptimizationLock pinned upstream | `12` (active, [L552](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L552)) |
+| OptimizationLock pinned upstream | `12` (active, [L566](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L566)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4383,7 +4608,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `3.0` (active, [L399](../../../stable-config/gameinfo.gi#L399)) |
 | Experimental | `3.0` (active, [L399](../../../experimental-config/gameinfo.gi#L399)) |
 | Stock gameinfo override | `3.0` (active, [L371](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L371)) |
-| OptimizationLock pinned upstream | `3.0` (active, [L550](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L550)) |
+| OptimizationLock pinned upstream | `3.0` (active, [L564](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L564)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4407,7 +4632,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L404](../../../stable-config/gameinfo.gi#L404)) |
 | Experimental | `1` (active, [L404](../../../experimental-config/gameinfo.gi#L404)) |
 | Stock gameinfo override | `1` (active, [L376](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L376)) |
-| OptimizationLock pinned upstream | `1` (active, [L555](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L555)) |
+| OptimizationLock pinned upstream | `1` (active, [L569](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L569)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4431,7 +4656,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L403](../../../stable-config/gameinfo.gi#L403)) |
 | Experimental | `0` (active, [L403](../../../experimental-config/gameinfo.gi#L403)) |
 | Stock gameinfo override | `0` (active, [L375](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L375)) |
-| OptimizationLock pinned upstream | `0` (active, [L554](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L554)) |
+| OptimizationLock pinned upstream | `0` (active, [L568](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L568)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4455,7 +4680,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L402](../../../stable-config/gameinfo.gi#L402)) |
 | Experimental | `0` (active, [L402](../../../experimental-config/gameinfo.gi#L402)) |
 | Stock gameinfo override | `0` (active, [L374](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L374)) |
-| OptimizationLock pinned upstream | `0` (active, [L553](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L553)) |
+| OptimizationLock pinned upstream | `0` (active, [L567](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L567)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4479,7 +4704,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L361](../../../stable-config/gameinfo.gi#L361)) |
 | Experimental | `1` (active, [L361](../../../experimental-config/gameinfo.gi#L361)) |
 | Stock gameinfo override | `1` (active, [L333](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L333)) |
-| OptimizationLock pinned upstream | `1` (active, [L512](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L512)) |
+| OptimizationLock pinned upstream | `1` (active, [L526](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L526)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4503,7 +4728,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `16.0` (active, [L363](../../../stable-config/gameinfo.gi#L363)) |
 | Experimental | `16.0` (active, [L363](../../../experimental-config/gameinfo.gi#L363)) |
 | Stock gameinfo override | `16.0` (active, [L335](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L335)) |
-| OptimizationLock pinned upstream | `16.0` (active, [L514](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L514)) |
+| OptimizationLock pinned upstream | `16.0` (active, [L528](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L528)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4527,7 +4752,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `10.0` (active, [L364](../../../stable-config/gameinfo.gi#L364)) |
 | Experimental | `10.0` (active, [L364](../../../experimental-config/gameinfo.gi#L364)) |
 | Stock gameinfo override | `10.0` (active, [L336](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L336)) |
-| OptimizationLock pinned upstream | `10.0` (active, [L515](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L515)) |
+| OptimizationLock pinned upstream | `10.0` (active, [L529](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L529)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4551,7 +4776,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L362](../../../stable-config/gameinfo.gi#L362)) |
 | Experimental | `0` (active, [L362](../../../experimental-config/gameinfo.gi#L362)) |
 | Stock gameinfo override | `0` (active, [L334](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L334)) |
-| OptimizationLock pinned upstream | `0` (active, [L513](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L513)) |
+| OptimizationLock pinned upstream | `0` (active, [L527](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L527)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4575,7 +4800,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `0` (active, [L354](../../../stable-config/gameinfo.gi#L354)) |
 | Experimental | `0` (active, [L354](../../../experimental-config/gameinfo.gi#L354)) |
 | Stock gameinfo override | `0` (active, [L326](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L326)) |
-| OptimizationLock pinned upstream | `0` (active, [L505](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L505)) |
+| OptimizationLock pinned upstream | `0` (active, [L519](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L519)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4599,7 +4824,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L353](../../../stable-config/gameinfo.gi#L353)) |
 | Experimental | `1` (active, [L353](../../../experimental-config/gameinfo.gi#L353)) |
 | Stock gameinfo override | `1` (active, [L325](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L325)) |
-| OptimizationLock pinned upstream | `1` (active, [L504](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L504)) |
+| OptimizationLock pinned upstream | `1` (active, [L518](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L518)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4623,7 +4848,7 @@ Audio-bake probe grid mode: stock comment maps 0 to automatic everywhere, 1 to a
 | Stable | `0` (active, [L352](../../../stable-config/gameinfo.gi#L352)) |
 | Experimental | `0` (active, [L352](../../../experimental-config/gameinfo.gi#L352)) |
 | Stock gameinfo override | `0` (active, [L324](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L324)) |
-| OptimizationLock pinned upstream | `0` (active, [L503](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L503)) |
+| OptimizationLock pinned upstream | `0` (active, [L517](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L517)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4647,7 +4872,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `3.0` (active, [L355](../../../stable-config/gameinfo.gi#L355)) |
 | Experimental | `3.0` (active, [L355](../../../experimental-config/gameinfo.gi#L355)) |
 | Stock gameinfo override | `3.0` (active, [L327](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L327)) |
-| OptimizationLock pinned upstream | `3.0` (active, [L506](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L506)) |
+| OptimizationLock pinned upstream | `3.0` (active, [L520](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L520)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4671,7 +4896,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1.5` (active, [L356](../../../stable-config/gameinfo.gi#L356)) |
 | Experimental | `1.5` (active, [L356](../../../experimental-config/gameinfo.gi#L356)) |
 | Stock gameinfo override | `1.5` (active, [L328](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L328)) |
-| OptimizationLock pinned upstream | `1.5` (active, [L507](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L507)) |
+| OptimizationLock pinned upstream | `1.5` (active, [L521](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L521)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4695,7 +4920,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1.0` (active, [L360](../../../stable-config/gameinfo.gi#L360)) |
 | Experimental | `1.0` (active, [L360](../../../experimental-config/gameinfo.gi#L360)) |
 | Stock gameinfo override | `1.0` (active, [L332](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L332)) |
-| OptimizationLock pinned upstream | `1.0` (active, [L511](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L511)) |
+| OptimizationLock pinned upstream | `1.0` (active, [L525](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L525)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4719,7 +4944,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `64` (active, [L359](../../../stable-config/gameinfo.gi#L359)) |
 | Experimental | `64` (active, [L359](../../../experimental-config/gameinfo.gi#L359)) |
 | Stock gameinfo override | `64` (active, [L331](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L331)) |
-| OptimizationLock pinned upstream | `64` (active, [L510](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L510)) |
+| OptimizationLock pinned upstream | `64` (active, [L524](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L524)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4743,7 +4968,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `32768` (active, [L358](../../../stable-config/gameinfo.gi#L358)) |
 | Experimental | `32768` (active, [L358](../../../experimental-config/gameinfo.gi#L358)) |
 | Stock gameinfo override | `32768` (active, [L330](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L330)) |
-| OptimizationLock pinned upstream | `32768` (active, [L509](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L509)) |
+| OptimizationLock pinned upstream | `32768` (active, [L523](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L523)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4767,7 +4992,7 @@ Audio-bake mode: stock comment maps 0 to cleanup, 1 to manual, 2 to automatic. T
 | Stable | `0` (active, [L357](../../../stable-config/gameinfo.gi#L357)) |
 | Experimental | `0` (active, [L357](../../../experimental-config/gameinfo.gi#L357)) |
 | Stock gameinfo override | `0` (active, [L329](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L329)) |
-| OptimizationLock pinned upstream | `0` (active, [L508](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L508)) |
+| OptimizationLock pinned upstream | `0` (active, [L522](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L522)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4791,7 +5016,7 @@ By name, allows textures with non-power-of-two dimensions during compilation. Th
 | Stable | `1` (active, [L438](../../../stable-config/gameinfo.gi#L438)) |
 | Experimental | `1` (active, [L438](../../../experimental-config/gameinfo.gi#L438)) |
 | Stock gameinfo override | `1` (active, [L409](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L409)) |
-| OptimizationLock pinned upstream | `1` (active, [L589](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L589)) |
+| OptimizationLock pinned upstream | `1` (active, [L603](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L603)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4815,7 +5040,7 @@ By name, allows mip generation for Panorama textures during compilation. This is
 | Stable | `1` (active, [L439](../../../stable-config/gameinfo.gi#L439)) |
 | Experimental | `1` (active, [L439](../../../experimental-config/gameinfo.gi#L439)) |
 | Stock gameinfo override | `1` (active, [L410](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L410)) |
-| OptimizationLock pinned upstream | `1` (active, [L590](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L590)) |
+| OptimizationLock pinned upstream | `1` (active, [L604](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L604)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4839,7 +5064,7 @@ Commented candidate minimum compression-ratio setting for texture compilation. I
 | Stable | `95` (disabled, [L434](../../../stable-config/gameinfo.gi#L434)) |
 | Experimental | `95` (disabled, [L434](../../../experimental-config/gameinfo.gi#L434)) |
 | Stock gameinfo override | `95` (disabled, [L408](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L408)) |
-| OptimizationLock pinned upstream | `95` (disabled, [L585](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L585)) |
+| OptimizationLock pinned upstream | `95` (disabled, [L599](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L599)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4863,7 +5088,7 @@ Commented candidate for compressing texture mips on disk during compilation. It 
 | Stable | `1` (disabled, [L435](../../../stable-config/gameinfo.gi#L435)) |
 | Experimental | `1` (disabled, [L435](../../../experimental-config/gameinfo.gi#L435)) |
 | Stock gameinfo override | `1` (disabled, [L407](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L407)) |
-| OptimizationLock pinned upstream | `1` (disabled, [L586](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L586)) |
+| OptimizationLock pinned upstream | `1` (disabled, [L600](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L600)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4887,7 +5112,7 @@ Commented candidate naming lz4 as a texture compiler compressor. It is inactive 
 | Stable | `lz4` (disabled, [L436](../../../stable-config/gameinfo.gi#L436)) |
 | Experimental | `lz4` (disabled, [L436](../../../experimental-config/gameinfo.gi#L436)) |
 | Stock gameinfo override | `lz4` (disabled, [L406](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L406)) |
-| OptimizationLock pinned upstream | `lz4` (disabled, [L587](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L587)) |
+| OptimizationLock pinned upstream | `lz4` (disabled, [L601](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L601)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4911,7 +5136,7 @@ Commented candidate default maximum texture resolution for public tools. It is i
 | Stable | `2048` (disabled, [L437](../../../stable-config/gameinfo.gi#L437)) |
 | Experimental | `2048` (disabled, [L437](../../../experimental-config/gameinfo.gi#L437)) |
 | Stock gameinfo override | `2048` (disabled, [L411](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L411)) |
-| OptimizationLock pinned upstream | `2048` (disabled, [L588](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L588)) |
+| OptimizationLock pinned upstream | `2048` (disabled, [L602](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L602)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4935,7 +5160,7 @@ Sets the output resource path for game VData localization produced by the compil
 | Stable | `resource/localization/citadel_vdata` (active, [L428](../../../stable-config/gameinfo.gi#L428)) |
 | Experimental | `resource/localization/citadel_vdata` (active, [L428](../../../experimental-config/gameinfo.gi#L428)) |
 | Stock gameinfo override | `resource/localization/citadel_vdata` (active, [L400](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L400)) |
-| OptimizationLock pinned upstream | `resource/localization/citadel_vdata` (active, [L579](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L579)) |
+| OptimizationLock pinned upstream | `resource/localization/citadel_vdata` (active, [L593](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L593)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4959,7 +5184,7 @@ Sets the Citadel_VData_ prefix used by generated VData localization tokens.
 | Stable | `Citadel_VData_` (active, [L429](../../../stable-config/gameinfo.gi#L429)) |
 | Experimental | `Citadel_VData_` (active, [L429](../../../experimental-config/gameinfo.gi#L429)) |
 | Stock gameinfo override | `Citadel_VData_` (active, [L401](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L401)) |
-| OptimizationLock pinned upstream | `Citadel_VData_` (active, [L580](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L580)) |
+| OptimizationLock pinned upstream | `Citadel_VData_` (active, [L594](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L594)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -4983,7 +5208,7 @@ Names the maximum visibility-cluster count for map compilation. It does not chan
 | Stable | `4096` (active, [L419](../../../stable-config/gameinfo.gi#L419)) |
 | Experimental | `4096` (active, [L419](../../../experimental-config/gameinfo.gi#L419)) |
 | Stock gameinfo override | `4096` (active, [L391](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L391)) |
-| OptimizationLock pinned upstream | `4096` (active, [L570](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L570)) |
+| OptimizationLock pinned upstream | `4096` (active, [L584](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L584)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5007,7 +5232,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `128.0` (active, [L420](../../../stable-config/gameinfo.gi#L420)) |
 | Experimental | `128.0` (active, [L420](../../../experimental-config/gameinfo.gi#L420)) |
 | Stock gameinfo override | `128.0` (active, [L392](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L392)) |
-| OptimizationLock pinned upstream | `128.0` (active, [L571](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L571)) |
+| OptimizationLock pinned upstream | `128.0` (active, [L585](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L585)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5031,7 +5256,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `2048.0` (active, [L421](../../../stable-config/gameinfo.gi#L421)) |
 | Experimental | `2048.0` (active, [L421](../../../experimental-config/gameinfo.gi#L421)) |
 | Stock gameinfo override | `2048.0` (active, [L393](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L393)) |
-| OptimizationLock pinned upstream | `2048.0` (active, [L572](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L572)) |
+| OptimizationLock pinned upstream | `2048.0` (active, [L586](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L586)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5055,7 +5280,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `8.0` (active, [L422](../../../stable-config/gameinfo.gi#L422)) |
 | Experimental | `8.0` (active, [L422](../../../experimental-config/gameinfo.gi#L422)) |
 | Stock gameinfo override | `8.0` (active, [L394](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L394)) |
-| OptimizationLock pinned upstream | `8.0` (active, [L573](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L573)) |
+| OptimizationLock pinned upstream | `8.0` (active, [L587](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L587)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5079,7 +5304,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `20.0` (active, [L423](../../../stable-config/gameinfo.gi#L423)) |
 | Experimental | `20.0` (active, [L423](../../../experimental-config/gameinfo.gi#L423)) |
 | Stock gameinfo override | `20.0` (active, [L395](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L395)) |
-| OptimizationLock pinned upstream | `20.0` (active, [L574](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L574)) |
+| OptimizationLock pinned upstream | `20.0` (active, [L588](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L588)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5103,7 +5328,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L315](../../../stable-config/gameinfo.gi#L315)) |
 | Experimental | `1` (active, [L315](../../../experimental-config/gameinfo.gi#L315)) |
 | Stock gameinfo override | `1` (active, [L287](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L287)) |
-| OptimizationLock pinned upstream | `1` (active, [L466](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L466)) |
+| OptimizationLock pinned upstream | `1` (active, [L480](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L480)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5127,7 +5352,7 @@ By name, selects precomputed depth-pyramid baking within the fog-shadow compilat
 | Stable | `0` (active, [L322](../../../stable-config/gameinfo.gi#L322)) |
 | Experimental | `0` (active, [L322](../../../experimental-config/gameinfo.gi#L322)) |
 | Stock gameinfo override | `0` (active, [L294](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L294)) |
-| OptimizationLock pinned upstream | `0` (active, [L473](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L473)) |
+| OptimizationLock pinned upstream | `0` (active, [L487](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L487)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5151,7 +5376,7 @@ Enables compilation of precomputed static shadows for fog, according to the stoc
 | Stable | `1` (active, [L320](../../../stable-config/gameinfo.gi#L320)) |
 | Experimental | `1` (active, [L320](../../../experimental-config/gameinfo.gi#L320)) |
 | Stock gameinfo override | `1` (active, [L292](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L292)) |
-| OptimizationLock pinned upstream | `1` (active, [L471](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L471)) |
+| OptimizationLock pinned upstream | `1` (active, [L485](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L485)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5175,7 +5400,7 @@ By name, selects whether directional lights receive precomputed shadow baking. S
 | Stable | `0` (active, [L321](../../../stable-config/gameinfo.gi#L321)) |
 | Experimental | `0` (active, [L321](../../../experimental-config/gameinfo.gi#L321)) |
 | Stock gameinfo override | `0` (active, [L293](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L293)) |
-| OptimizationLock pinned upstream | `0` (active, [L472](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L472)) |
+| OptimizationLock pinned upstream | `0` (active, [L486](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L486)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5199,7 +5424,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L316](../../../stable-config/gameinfo.gi#L316)) |
 | Experimental | `1` (active, [L316](../../../experimental-config/gameinfo.gi#L316)) |
 | Stock gameinfo override | `1` (active, [L288](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L288)) |
-| OptimizationLock pinned upstream | `1` (active, [L467](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L467)) |
+| OptimizationLock pinned upstream | `1` (active, [L481](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L481)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5223,7 +5448,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `128` (active, [L313](../../../stable-config/gameinfo.gi#L313)) |
 | Experimental | `128` (active, [L313](../../../experimental-config/gameinfo.gi#L313)) |
 | Stock gameinfo override | `128` (active, [L285](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L285)) |
-| OptimizationLock pinned upstream | `128` (active, [L464](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L464)) |
+| OptimizationLock pinned upstream | `128` (active, [L478](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L478)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5247,7 +5472,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `96` (active, [L312](../../../stable-config/gameinfo.gi#L312)) |
 | Experimental | `96` (active, [L312](../../../experimental-config/gameinfo.gi#L312)) |
 | Stock gameinfo override | `96` (active, [L284](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L284)) |
-| OptimizationLock pinned upstream | `96` (active, [L463](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L463)) |
+| OptimizationLock pinned upstream | `96` (active, [L477](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L477)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5271,7 +5496,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L317](../../../stable-config/gameinfo.gi#L317)) |
 | Experimental | `1` (active, [L317](../../../experimental-config/gameinfo.gi#L317)) |
 | Stock gameinfo override | `1` (active, [L289](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L289)) |
-| OptimizationLock pinned upstream | `1` (active, [L468](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L468)) |
+| OptimizationLock pinned upstream | `1` (active, [L482](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L482)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5295,7 +5520,7 @@ Names a minimum triangle count for clustered meshes during compilation. The resu
 | Stable | `8192` (active, [L309](../../../stable-config/gameinfo.gi#L309)) |
 | Experimental | `8192` (active, [L309](../../../experimental-config/gameinfo.gi#L309)) |
 | Stock gameinfo override | `8192` (active, [L281](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L281)) |
-| OptimizationLock pinned upstream | `8192` (active, [L460](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L460)) |
+| OptimizationLock pinned upstream | `8192` (active, [L474](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L474)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5319,7 +5544,7 @@ Names a minimum vertex count for clustered meshes during compilation. The result
 | Stable | `8192` (active, [L310](../../../stable-config/gameinfo.gi#L310)) |
 | Experimental | `8192` (active, [L310](../../../experimental-config/gameinfo.gi#L310)) |
 | Stock gameinfo override | `8192` (active, [L282](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L282)) |
-| OptimizationLock pinned upstream | `8192` (active, [L461](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L461)) |
+| OptimizationLock pinned upstream | `8192` (active, [L475](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L475)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5343,7 +5568,7 @@ Names a minimum volume for clustered meshes; the stock comment describes 8192 as
 | Stable | `8192` (active, [L311](../../../stable-config/gameinfo.gi#L311)) |
 | Experimental | `8192` (active, [L311](../../../experimental-config/gameinfo.gi#L311)) |
 | Stock gameinfo override | `8192` (active, [L283](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L283)) |
-| OptimizationLock pinned upstream | `8192` (active, [L462](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L462)) |
+| OptimizationLock pinned upstream | `8192` (active, [L476](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L476)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5367,7 +5592,7 @@ Enables the precomputed-shadow atlas. Valve's stock comment says this allows pre
 | Stable | `1` (active, [L323](../../../stable-config/gameinfo.gi#L323)) |
 | Experimental | `1` (active, [L323](../../../experimental-config/gameinfo.gi#L323)) |
 | Stock gameinfo override | `1` (active, [L295](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L295)) |
-| OptimizationLock pinned upstream | `1` (active, [L474](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L474)) |
+| OptimizationLock pinned upstream | `1` (active, [L488](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L488)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5391,7 +5616,7 @@ Sets the border key for the precomputed-shadow atlas to 1. Exact units and filte
 | Stable | `1` (active, [L324](../../../stable-config/gameinfo.gi#L324)) |
 | Experimental | `1` (active, [L324](../../../experimental-config/gameinfo.gi#L324)) |
 | Stock gameinfo override | `1` (active, [L296](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L296)) |
-| OptimizationLock pinned upstream | `1` (active, [L475](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L475)) |
+| OptimizationLock pinned upstream | `1` (active, [L489](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L489)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5415,7 +5640,7 @@ Default precomputed fog-shadow tile resolution for map building; stock says it s
 | Stable | `0` (active, [L325](../../../stable-config/gameinfo.gi#L325)) |
 | Experimental | `0` (active, [L325](../../../experimental-config/gameinfo.gi#L325)) |
 | Stock gameinfo override | `128` (active, [L297](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L297)) |
-| OptimizationLock pinned upstream | `0` (active, [L476](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L476)) |
+| OptimizationLock pinned upstream | `0` (active, [L490](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L490)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5439,7 +5664,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L314](../../../stable-config/gameinfo.gi#L314)) |
 | Experimental | `1` (active, [L314](../../../experimental-config/gameinfo.gi#L314)) |
 | Stock gameinfo override | `1` (active, [L286](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L286)) |
-| OptimizationLock pinned upstream | `1` (active, [L465](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L465)) |
+| OptimizationLock pinned upstream | `1` (active, [L479](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L479)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5463,7 +5688,7 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 | Stable | `1` (active, [L308](../../../stable-config/gameinfo.gi#L308)) |
 | Experimental | `1` (active, [L308](../../../experimental-config/gameinfo.gi#L308)) |
 | Stock gameinfo override | `1` (active, [L280](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L280)) |
-| OptimizationLock pinned upstream | `1` (active, [L459](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L459)) |
+| OptimizationLock pinned upstream | `1` (active, [L473](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L473)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5484,18 +5709,18 @@ Commented candidate CMT atlas height with a captured exact path. What CMT means,
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (disabled, [L506](../../../stable-config/gameinfo.gi#L506)) |
+| Stable | Not assigned |
 | Experimental | `0` (disabled, [L506](../../../experimental-config/gameinfo.gi#L506)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (disabled, [L657](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L657)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in experimental; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5508,18 +5733,18 @@ Commented candidate CMT atlas width with a captured exact path. What CMT means, 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (disabled, [L507](../../../stable-config/gameinfo.gi#L507)) |
+| Stable | Not assigned |
 | Experimental | `0` (disabled, [L507](../../../experimental-config/gameinfo.gi#L507)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (disabled, [L658](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L658)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in experimental; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -5535,7 +5760,7 @@ Names the cascaded-shadow-map resolution; stock requests 2048 and this config 0.
 | Stable | `0` (active, [L479](../../../stable-config/gameinfo.gi#L479)) |
 | Experimental | `0` (active, [L479](../../../experimental-config/gameinfo.gi#L479)) |
 | Stock gameinfo override | `2048` (active, [L443](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L443)) |
-| OptimizationLock pinned upstream | `0` (active, [L630](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L630)) |
+| OptimizationLock pinned upstream | `0` (active, [L644](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L644)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5556,14 +5781,14 @@ Candidate SceneSystem option named CharacterDecals. The precise behavior, valid 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L508](../../../stable-config/gameinfo.gi#L508)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L508](../../../experimental-config/gameinfo.gi#L508)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L659](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L659)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -5580,10 +5805,10 @@ Enables the stock compute-shader skinning option. It is a rendering mechanism ra
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L543](../../../stable-config/gameinfo.gi#L543)) |
+| Stable | `1` (active, [L526](../../../stable-config/gameinfo.gi#L526)) |
 | Experimental | `1` (active, [L543](../../../experimental-config/gameinfo.gi#L543)) |
 | Stock gameinfo override | `1` (active, [L466](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L466)) |
-| OptimizationLock pinned upstream | `1` (active, [L694](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L694)) |
+| OptimizationLock pinned upstream | `1` (active, [L691](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L691)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5607,7 +5832,7 @@ Stock cubemap-fog startup option, changed from 1 to 0. Its relationship with blo
 | Stable | `0` (active, [L480](../../../stable-config/gameinfo.gi#L480)) |
 | Experimental | `0` (active, [L480](../../../experimental-config/gameinfo.gi#L480)) |
 | Stock gameinfo override | `1` (active, [L455](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L455)) |
-| OptimizationLock pinned upstream | `0` (active, [L631](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L631)) |
+| OptimizationLock pinned upstream | `0` (active, [L645](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L645)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5631,7 +5856,7 @@ Names default shadow-texture height; stock 6144 is changed to 0. Zero semantics,
 | Stable | `0` (active, [L481](../../../stable-config/gameinfo.gi#L481)) |
 | Experimental | `0` (active, [L481](../../../experimental-config/gameinfo.gi#L481)) |
 | Stock gameinfo override | `6144` (active, [L447](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L447)) |
-| OptimizationLock pinned upstream | `0` (active, [L632](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L632)) |
+| OptimizationLock pinned upstream | `0` (active, [L646](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L646)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5655,7 +5880,7 @@ Names default shadow-texture width; stock 6144 is changed to 0. Zero semantics, 
 | Stable | `0` (active, [L482](../../../stable-config/gameinfo.gi#L482)) |
 | Experimental | `0` (active, [L482](../../../experimental-config/gameinfo.gi#L482)) |
 | Stock gameinfo override | `6144` (active, [L446](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L446)) |
-| OptimizationLock pinned upstream | `0` (active, [L633](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L633)) |
+| OptimizationLock pinned upstream | `0` (active, [L647](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L647)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5679,7 +5904,7 @@ Candidate disabling switch for a late-allocated transform buffer. Its exact path
 | Stable | `1` (active, [L483](../../../stable-config/gameinfo.gi#L483)) |
 | Experimental | `1` (active, [L483](../../../experimental-config/gameinfo.gi#L483)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L634](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L634)) |
+| OptimizationLock pinned upstream | `1` (active, [L648](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L648)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5700,14 +5925,14 @@ Candidate SceneSystem option named DisableShadowFullSort. The precise behavior, 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L510](../../../stable-config/gameinfo.gi#L510)) |
+| Stable | Not assigned |
 | Experimental | `1` (active, [L510](../../../experimental-config/gameinfo.gi#L510)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L661](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L661)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -5727,7 +5952,7 @@ Candidate SceneSystem option named DynamicShadowResolution. The precise behavior
 | Stable | `1` (active, [L484](../../../stable-config/gameinfo.gi#L484)) |
 | Experimental | `1` (active, [L484](../../../experimental-config/gameinfo.gi#L484)) |
 | Stock gameinfo override | `1` (active, [L448](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L448)) |
-| OptimizationLock pinned upstream | `1` (active, [L635](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L635)) |
+| OptimizationLock pinned upstream | `1` (active, [L649](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L649)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5748,14 +5973,14 @@ Candidate SceneSystem option named EnableAlphaTint. The precise behavior, valid 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L511](../../../stable-config/gameinfo.gi#L511)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L511](../../../experimental-config/gameinfo.gi#L511)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L662](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L662)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -5772,14 +5997,14 @@ Candidate SceneSystem option named EnableSunlight. The precise behavior, valid v
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L512](../../../stable-config/gameinfo.gi#L512)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L512](../../../experimental-config/gameinfo.gi#L512)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L663](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L663)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -5796,14 +6021,14 @@ Candidate SceneSystem option named EnableViewModelSunlight. The precise behavior
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L513](../../../stable-config/gameinfo.gi#L513)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L513](../../../experimental-config/gameinfo.gi#L513)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L664](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L664)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -5823,7 +6048,7 @@ Names tools-mode cached-fog-shadow atlas height; stock 2048 becomes 0. This is a
 | Stable | `0` (active, [L485](../../../stable-config/gameinfo.gi#L485)) |
 | Experimental | `0` (active, [L485](../../../experimental-config/gameinfo.gi#L485)) |
 | Stock gameinfo override | `2048` (active, [L440](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L440)) |
-| OptimizationLock pinned upstream | `0` (active, [L636](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L636)) |
+| OptimizationLock pinned upstream | `0` (active, [L650](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L650)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5847,7 +6072,7 @@ Names tools-mode cached-fog-shadow atlas width; stock 2048 becomes 0. This is a 
 | Stable | `0` (active, [L486](../../../stable-config/gameinfo.gi#L486)) |
 | Experimental | `0` (active, [L486](../../../experimental-config/gameinfo.gi#L486)) |
 | Stock gameinfo override | `2048` (active, [L439](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L439)) |
-| OptimizationLock pinned upstream | `0` (active, [L637](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L637)) |
+| OptimizationLock pinned upstream | `0` (active, [L651](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L651)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5868,10 +6093,10 @@ Names a maximum filtering radius for cached-fog-shadow tiles; a captured exact p
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L509](../../../stable-config/gameinfo.gi#L509)) |
+| Stable | `0` (active, [L506](../../../stable-config/gameinfo.gi#L506)) |
 | Experimental | `0` (active, [L509](../../../experimental-config/gameinfo.gi#L509)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L660](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L660)) |
+| OptimizationLock pinned upstream | `0` (active, [L671](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L671)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5895,7 +6120,7 @@ Runtime cached-fog-shadow tile-size candidate whose exact path is captured in sc
 | Stable | `0` (active, [L488](../../../stable-config/gameinfo.gi#L488)) |
 | Experimental | `0` (active, [L488](../../../experimental-config/gameinfo.gi#L488)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L639](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L639)) |
+| OptimizationLock pinned upstream | `0` (active, [L653](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L653)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5919,7 +6144,7 @@ Names tools-mode cached-fog-shadow tile size; current stock is 128, unlike the i
 | Stable | `0` (active, [L487](../../../stable-config/gameinfo.gi#L487)) |
 | Experimental | `0` (active, [L487](../../../experimental-config/gameinfo.gi#L487)) |
 | Stock gameinfo override | `128` (active, [L441](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L441)) |
-| OptimizationLock pinned upstream | `0` (active, [L638](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L638)) |
+| OptimizationLock pinned upstream | `0` (active, [L652](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L652)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5943,7 +6168,7 @@ Selects the shipped R11G11B10F framebuffer-copy format. This is an internal buff
 | Stable | `R11G11B10F` (active, [L489](../../../stable-config/gameinfo.gi#L489)) |
 | Experimental | `R11G11B10F` (active, [L489](../../../experimental-config/gameinfo.gi#L489)) |
 | Stock gameinfo override | `R11G11B10F` (active, [L457](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L457)) |
-| OptimizationLock pinned upstream | `R11G11B10F` (active, [L640](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L640)) |
+| OptimizationLock pinned upstream | `R11G11B10F` (active, [L654](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L654)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5967,7 +6192,7 @@ Selects the stock GPU light-binner path. The capture does not describe an altern
 | Stable | `1` (active, [L490](../../../stable-config/gameinfo.gi#L490)) |
 | Experimental | `1` (active, [L490](../../../experimental-config/gameinfo.gi#L490)) |
 | Stock gameinfo override | `1` (active, [L438](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L438)) |
-| OptimizationLock pinned upstream | `1` (active, [L641](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L641)) |
+| OptimizationLock pinned upstream | `1` (active, [L655](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L655)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -5988,14 +6213,14 @@ Candidate SceneSystem option named GpuLightBinnerBinEnvMaps. The precise behavio
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L516](../../../stable-config/gameinfo.gi#L516)) |
+| Stable | Not assigned |
 | Experimental | `1` (active, [L516](../../../experimental-config/gameinfo.gi#L516)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L667](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L667)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6012,14 +6237,14 @@ Candidate SceneSystem option named GpuLightBinnerBinLPVs. The precise behavior, 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L517](../../../stable-config/gameinfo.gi#L517)) |
+| Stable | `false` (active, [L507](../../../stable-config/gameinfo.gi#L507)) |
 | Experimental | `0` (active, [L517](../../../experimental-config/gameinfo.gi#L517)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L668](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L668)) |
+| OptimizationLock pinned upstream | `false` (active, [L672](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L672)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Stable writes false after the 3.7.1 sync and experimental keeps 0.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6027,7 +6252,7 @@ Candidate SceneSystem option named GpuLightBinnerBinLPVs. The precise behavior, 
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt); [evidence 4](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-scenesystem-gpulightbinnersunlightfastpath"></a>
 ## `SceneSystem/GpuLightBinnerSunLightFastPath`
@@ -6039,7 +6264,7 @@ Names the shipped sunlight fast-path option for the GPU light binner. Stock rete
 | Stable | `1` (active, [L491](../../../stable-config/gameinfo.gi#L491)) |
 | Experimental | `1` (active, [L491](../../../experimental-config/gameinfo.gi#L491)) |
 | Stock gameinfo override | `1` (active, [L442](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L442)) |
-| OptimizationLock pinned upstream | `1` (active, [L642](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L642)) |
+| OptimizationLock pinned upstream | `1` (active, [L656](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L656)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6060,14 +6285,14 @@ Candidate SceneSystem option named GpuLightBinnerSupportViewModelCascade. The pr
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L514](../../../stable-config/gameinfo.gi#L514)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L514](../../../experimental-config/gameinfo.gi#L514)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L665](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L665)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6087,7 +6312,7 @@ Candidate internal HDR-framebuffer choice whose exact path appears in scenesyste
 | Stable | `0` (active, [L492](../../../stable-config/gameinfo.gi#L492)) |
 | Experimental | `0` (active, [L492](../../../experimental-config/gameinfo.gi#L492)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L643](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L643)) |
+| OptimizationLock pinned upstream | `0` (active, [L657](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L657)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6108,10 +6333,10 @@ Candidate SceneSystem option named HairShading. The precise behavior, valid valu
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (active, [L515](../../../stable-config/gameinfo.gi#L515)) |
+| Stable | `false` (active, [L508](../../../stable-config/gameinfo.gi#L508)) |
 | Experimental | `false` (active, [L515](../../../experimental-config/gameinfo.gi#L515)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `false` (active, [L666](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L666)) |
+| OptimizationLock pinned upstream | `false` (active, [L673](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L673)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6135,7 +6360,7 @@ Candidate startup full-sort batching threshold, absent from stock. The bare matc
 | Stable | `200` (active, [L493](../../../stable-config/gameinfo.gi#L493)) |
 | Experimental | `200` (active, [L493](../../../experimental-config/gameinfo.gi#L493)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `200` (active, [L644](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L644)) |
+| OptimizationLock pinned upstream | `200` (active, [L658](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L658)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6156,10 +6381,10 @@ Candidate SceneSystem option named LightCookieAllocGranularity. The precise beha
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L518](../../../stable-config/gameinfo.gi#L518)) |
+| Stable | `1` (active, [L509](../../../stable-config/gameinfo.gi#L509)) |
 | Experimental | `1` (active, [L518](../../../experimental-config/gameinfo.gi#L518)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L669](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L669)) |
+| OptimizationLock pinned upstream | `1` (active, [L674](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L674)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6180,10 +6405,10 @@ Candidate SceneSystem option named LightCookieMinAllocSize. The precise behavior
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L519](../../../stable-config/gameinfo.gi#L519)) |
+| Stable | `0` (active, [L510](../../../stable-config/gameinfo.gi#L510)) |
 | Experimental | `0` (active, [L519](../../../experimental-config/gameinfo.gi#L519)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L670](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L670)) |
+| OptimizationLock pinned upstream | `0` (active, [L675](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L675)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6207,7 +6432,7 @@ Names a minimum late-allocated vertex-cache buffer size in MB; the exact key pat
 | Stable | `64` (active, [L494](../../../stable-config/gameinfo.gi#L494)) |
 | Experimental | `64` (active, [L494](../../../experimental-config/gameinfo.gi#L494)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `64` (active, [L645](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L645)) |
+| OptimizationLock pinned upstream | `64` (active, [L659](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L659)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6231,7 +6456,7 @@ Stock gradient-fog startup option, changed from 1 to 0. Disabling its name alone
 | Stable | `0` (active, [L495](../../../stable-config/gameinfo.gi#L495)) |
 | Experimental | `0` (active, [L495](../../../experimental-config/gameinfo.gi#L495)) |
 | Stock gameinfo override | `1` (active, [L454](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L454)) |
-| OptimizationLock pinned upstream | `0` (active, [L646](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L646)) |
+| OptimizationLock pinned upstream | `0` (active, [L660](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L660)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6252,14 +6477,14 @@ Candidate SceneSystem option named ParticleBufferSize. The precise behavior, val
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `512` (active, [L521](../../../stable-config/gameinfo.gi#L521)) |
+| Stable | `2048` (active, [L511](../../../stable-config/gameinfo.gi#L511)) |
 | Experimental | `512` (active, [L521](../../../experimental-config/gameinfo.gi#L521)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `512` (active, [L672](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L672)) |
+| OptimizationLock pinned upstream | `2048` (active, [L676](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L676)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Stable requests 2048 after the 3.7.1 sync (upstream's claimed 65536 default is unverified); experimental keeps 512.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6267,7 +6492,7 @@ Candidate SceneSystem option named ParticleBufferSize. The precise behavior, val
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt); [evidence 4](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-scenesystem-pervertexlighting"></a>
 ## `SceneSystem/PerVertexLighting`
@@ -6276,14 +6501,14 @@ Candidate SceneSystem option named PerVertexLighting. The precise behavior, vali
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L522](../../../stable-config/gameinfo.gi#L522)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L522](../../../experimental-config/gameinfo.gi#L522)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L673](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L673)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6300,14 +6525,14 @@ Candidate SceneSystem option named PointLightShadowsEnabled. The precise behavio
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L523](../../../stable-config/gameinfo.gi#L523)); `0` (active, [L524](../../../stable-config/gameinfo.gi#L524)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L523](../../../experimental-config/gameinfo.gi#L523)); `0` (active, [L524](../../../experimental-config/gameinfo.gi#L524)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L674](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L674)); `0` (active, [L675](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L675)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6324,10 +6549,10 @@ Candidate SceneSystem option named PunctualContactShadows. The precise behavior,
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L525](../../../stable-config/gameinfo.gi#L525)) |
+| Stable | `0` (active, [L512](../../../stable-config/gameinfo.gi#L512)) |
 | Experimental | `0` (active, [L525](../../../experimental-config/gameinfo.gi#L525)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L676](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L676)) |
+| OptimizationLock pinned upstream | `0` (active, [L677](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L677)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6348,14 +6573,14 @@ Candidate SceneSystem option named SelfShadowStrength. The precise behavior, val
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L526](../../../stable-config/gameinfo.gi#L526)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L526](../../../experimental-config/gameinfo.gi#L526)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L677](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L677)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6372,14 +6597,14 @@ Candidate SceneSystem option named ShadowAtlas. The precise behavior, valid valu
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L527](../../../stable-config/gameinfo.gi#L527)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L527](../../../experimental-config/gameinfo.gi#L527)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L678](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L678)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6396,14 +6621,14 @@ Candidate SceneSystem option named ShadowDepth. The precise behavior, valid valu
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L528](../../../stable-config/gameinfo.gi#L528)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L528](../../../experimental-config/gameinfo.gi#L528)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L679](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L679)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6420,14 +6645,14 @@ Candidate SceneSystem option named ShadowDepthBuffer. The precise behavior, vali
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L529](../../../stable-config/gameinfo.gi#L529)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L529](../../../experimental-config/gameinfo.gi#L529)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L680](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L680)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6444,14 +6669,14 @@ Candidate SceneSystem option named ShadowDepthBufferNoCmp. The precise behavior,
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L530](../../../stable-config/gameinfo.gi#L530)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L530](../../../experimental-config/gameinfo.gi#L530)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L681](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L681)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6468,22 +6693,22 @@ Candidate SceneSystem option named ShadowmapMaxFilterRadius. The precise behavio
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L531](../../../stable-config/gameinfo.gi#L531)) |
+| Stable | `0` (active, [L513](../../../stable-config/gameinfo.gi#L513)); `8` (active, [L514](../../../stable-config/gameinfo.gi#L514)) |
 | Experimental | `0` (active, [L531](../../../experimental-config/gameinfo.gi#L531)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L682](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L682)) |
+| OptimizationLock pinned upstream | `0` (active, [L678](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L678)); `8` (active, [L679](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L679)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 writes it twice, 0 then 8 (upstream's claimed default 32 is unverified); stable preserves both and experimental keeps a single 0.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt); [evidence 4](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-scenesystem-sparseshadowtrees"></a>
 ## `SceneSystem/SparseShadowTrees`
@@ -6492,10 +6717,10 @@ Candidate SceneSystem option named SparseShadowTrees. The precise behavior, vali
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L532](../../../stable-config/gameinfo.gi#L532)) |
+| Stable | `0` (active, [L515](../../../stable-config/gameinfo.gi#L515)) |
 | Experimental | `0` (active, [L532](../../../experimental-config/gameinfo.gi#L532)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L683](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L683)) |
+| OptimizationLock pinned upstream | `0` (active, [L680](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L680)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6519,7 +6744,7 @@ Names the sunlight manager count, retained at stock 0. Zero's special meaning is
 | Stable | `0` (active, [L496](../../../stable-config/gameinfo.gi#L496)) |
 | Experimental | `0` (active, [L496](../../../experimental-config/gameinfo.gi#L496)) |
 | Stock gameinfo override | `0` (active, [L444](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L444)) |
-| OptimizationLock pinned upstream | `0` (active, [L647](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L647)) |
+| OptimizationLock pinned upstream | `0` (active, [L661](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L661)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6543,7 +6768,7 @@ Tools counterpart of the sunlight manager-count setting, retained at stock 0; sp
 | Stable | `0` (active, [L497](../../../stable-config/gameinfo.gi#L497)) |
 | Experimental | `0` (active, [L497](../../../experimental-config/gameinfo.gi#L497)) |
 | Stock gameinfo override | `0` (active, [L445](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L445)) |
-| OptimizationLock pinned upstream | `0` (active, [L648](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L648)) |
+| OptimizationLock pinned upstream | `0` (active, [L662](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L662)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6567,7 +6792,7 @@ Names a sunlight cascade-size limit, changed from stock 4 to 2. Units and interp
 | Stable | `2` (active, [L498](../../../stable-config/gameinfo.gi#L498)) |
 | Experimental | `2` (active, [L498](../../../experimental-config/gameinfo.gi#L498)) |
 | Stock gameinfo override | `4` (active, [L452](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L452)) |
-| OptimizationLock pinned upstream | `2` (active, [L649](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L649)) |
+| OptimizationLock pinned upstream | `2` (active, [L663](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L663)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6591,7 +6816,7 @@ Selects Depth as the sunlight shadow render mode, matching stock.
 | Stable | `Depth` (active, [L499](../../../stable-config/gameinfo.gi#L499)) |
 | Experimental | `Depth` (active, [L499](../../../experimental-config/gameinfo.gi#L499)) |
 | Stock gameinfo override | `Depth` (active, [L453](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L453)) |
-| OptimizationLock pinned upstream | `Depth` (active, [L650](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L650)) |
+| OptimizationLock pinned upstream | `Depth` (active, [L664](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L664)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6612,14 +6837,14 @@ Candidate SceneSystem option named SupportsInstancedFade. The precise behavior, 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L520](../../../stable-config/gameinfo.gi#L520)) |
+| Stable | Not assigned |
 | Experimental | `0` (active, [L520](../../../experimental-config/gameinfo.gi#L520)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L671](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L671)) |
+| OptimizationLock pinned upstream | Not assigned |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6639,7 +6864,7 @@ Stock scene tone-mapping option set to 0. That value does not establish that no 
 | Stable | `0` (active, [L500](../../../stable-config/gameinfo.gi#L500)) |
 | Experimental | `0` (active, [L500](../../../experimental-config/gameinfo.gi#L500)) |
 | Stock gameinfo override | `0` (active, [L458](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L458)) |
-| OptimizationLock pinned upstream | `0` (active, [L651](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L651)) |
+| OptimizationLock pinned upstream | `0` (active, [L665](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L665)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6663,7 +6888,7 @@ Names transform-texture row capacity, retained at stock 1024; actual resource al
 | Stable | `1024` (active, [L501](../../../stable-config/gameinfo.gi#L501)) |
 | Experimental | `1024` (active, [L501](../../../experimental-config/gameinfo.gi#L501)) |
 | Stock gameinfo override | `1024` (active, [L450](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L450)) |
-| OptimizationLock pinned upstream | `1024` (active, [L652](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L652)) |
+| OptimizationLock pinned upstream | `1024` (active, [L666](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L666)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6687,7 +6912,7 @@ Names tools-mode transform-texture row capacity, retained at stock 6144; no ordi
 | Stable | `6144` (active, [L502](../../../stable-config/gameinfo.gi#L502)) |
 | Experimental | `6144` (active, [L502](../../../experimental-config/gameinfo.gi#L502)) |
 | Stock gameinfo override | `6144` (active, [L451](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L451)) |
-| OptimizationLock pinned upstream | `6144` (active, [L653](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L653)) |
+| OptimizationLock pinned upstream | `6144` (active, [L667](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L667)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6711,7 +6936,7 @@ Stock volumetric-fog startup option, changed from 1 to 0. The actual effect unde
 | Stable | `0` (active, [L503](../../../stable-config/gameinfo.gi#L503)) |
 | Experimental | `0` (active, [L503](../../../experimental-config/gameinfo.gi#L503)) |
 | Stock gameinfo override | `1` (active, [L456](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L456)) |
-| OptimizationLock pinned upstream | `0` (active, [L654](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L654)) |
+| OptimizationLock pinned upstream | `0` (active, [L668](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L668)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6732,10 +6957,10 @@ Maps the blank light-cookie name to Valve's texture resource path; this is a res
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `materials/effects/lightcookies/blank.vtex` (active, [L539](../../../stable-config/gameinfo.gi#L539)) |
+| Stable | `materials/effects/lightcookies/blank.vtex` (active, [L522](../../../stable-config/gameinfo.gi#L522)) |
 | Experimental | `materials/effects/lightcookies/blank.vtex` (active, [L539](../../../experimental-config/gameinfo.gi#L539)) |
 | Stock gameinfo override | `materials/effects/lightcookies/blank.vtex` (active, [L462](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L462)) |
-| OptimizationLock pinned upstream | `materials/effects/lightcookies/blank.vtex` (active, [L690](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L690)) |
+| OptimizationLock pinned upstream | `materials/effects/lightcookies/blank.vtex` (active, [L687](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L687)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6756,10 +6981,10 @@ Maps the flashlight light-cookie name to Valve's texture resource path; this is 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `materials/effects/lightcookies/flashlight.vtex` (active, [L540](../../../stable-config/gameinfo.gi#L540)) |
+| Stable | `materials/effects/lightcookies/flashlight.vtex` (active, [L523](../../../stable-config/gameinfo.gi#L523)) |
 | Experimental | `materials/effects/lightcookies/flashlight.vtex` (active, [L540](../../../experimental-config/gameinfo.gi#L540)) |
 | Stock gameinfo override | `materials/effects/lightcookies/flashlight.vtex` (active, [L463](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L463)) |
-| OptimizationLock pinned upstream | `materials/effects/lightcookies/flashlight.vtex` (active, [L691](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L691)) |
+| OptimizationLock pinned upstream | `materials/effects/lightcookies/flashlight.vtex` (active, [L688](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L688)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6783,7 +7008,7 @@ Enables the Steam Audio subsystem at the gameinfo level. Individual reverb/pathi
 | Stable | `1` (active, [L200](../../../stable-config/gameinfo.gi#L200)) |
 | Experimental | `1` (active, [L200](../../../experimental-config/gameinfo.gi#L200)) |
 | Stock gameinfo override | `1` (active, [L172](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L172)) |
-| OptimizationLock pinned upstream | `1` (active, [L351](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L351)) |
+| OptimizationLock pinned upstream | `1` (active, [L365](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L365)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6807,7 +7032,7 @@ Platform-time selection for the audio subsystem, inferred from the key. Exact ti
 | Stable | `1` (active, [L202](../../../stable-config/gameinfo.gi#L202)) |
 | Experimental | `1` (active, [L202](../../../experimental-config/gameinfo.gi#L202)) |
 | Stock gameinfo override | `1` (active, [L174](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L174)) |
-| OptimizationLock pinned upstream | `1` (active, [L353](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L353)) |
+| OptimizationLock pinned upstream | `1` (active, [L367](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L367)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6831,7 +7056,7 @@ Wave-data cache size in MB according to the key name; retained stock value 256. 
 | Stable | `256` (active, [L201](../../../stable-config/gameinfo.gi#L201)) |
 | Experimental | `256` (active, [L201](../../../experimental-config/gameinfo.gi#L201)) |
 | Stock gameinfo override | `256` (active, [L173](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L173)) |
-| OptimizationLock pinned upstream | `256` (active, [L352](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L352)) |
+| OptimizationLock pinned upstream | `256` (active, [L366](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L366)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6855,7 +7080,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `src1_3d` (active, [L248](../../../stable-config/gameinfo.gi#L248)) |
 | Experimental | `src1_3d` (active, [L248](../../../experimental-config/gameinfo.gi#L248)) |
 | Stock gameinfo override | `src1_3d` (active, [L220](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L220)) |
-| OptimizationLock pinned upstream | `src1_3d` (active, [L399](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L399)) |
+| OptimizationLock pinned upstream | `src1_3d` (active, [L413](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L413)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6879,7 +7104,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L252](../../../stable-config/gameinfo.gi#L252)) |
 | Experimental | `` (active, [L252](../../../experimental-config/gameinfo.gi#L252)) |
 | Stock gameinfo override | `` (active, [L224](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L224)) |
-| OptimizationLock pinned upstream | `` (active, [L403](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L403)) |
+| OptimizationLock pinned upstream | `` (active, [L417](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L417)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6903,7 +7128,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L255](../../../stable-config/gameinfo.gi#L255)) |
 | Experimental | `` (active, [L255](../../../experimental-config/gameinfo.gi#L255)) |
 | Stock gameinfo override | `` (active, [L227](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L227)) |
-| OptimizationLock pinned upstream | `` (active, [L406](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L406)) |
+| OptimizationLock pinned upstream | `` (active, [L420](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L420)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6927,7 +7152,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L256](../../../stable-config/gameinfo.gi#L256)) |
 | Experimental | `` (active, [L256](../../../experimental-config/gameinfo.gi#L256)) |
 | Stock gameinfo override | `` (active, [L228](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L228)) |
-| OptimizationLock pinned upstream | `` (active, [L407](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L407)) |
+| OptimizationLock pinned upstream | `` (active, [L421](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L421)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6951,7 +7176,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L257](../../../stable-config/gameinfo.gi#L257)) |
 | Experimental | `` (active, [L257](../../../experimental-config/gameinfo.gi#L257)) |
 | Stock gameinfo override | `` (active, [L229](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L229)) |
-| OptimizationLock pinned upstream | `` (active, [L408](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L408)) |
+| OptimizationLock pinned upstream | `` (active, [L422](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L422)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6975,7 +7200,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L259](../../../stable-config/gameinfo.gi#L259)) |
 | Experimental | `` (active, [L259](../../../experimental-config/gameinfo.gi#L259)) |
 | Stock gameinfo override | `` (active, [L231](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L231)) |
-| OptimizationLock pinned upstream | `` (active, [L410](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L410)) |
+| OptimizationLock pinned upstream | `` (active, [L424](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L424)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -6999,7 +7224,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L263](../../../stable-config/gameinfo.gi#L263)) |
 | Experimental | `` (active, [L263](../../../experimental-config/gameinfo.gi#L263)) |
 | Stock gameinfo override | `` (active, [L235](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L235)) |
-| OptimizationLock pinned upstream | `` (active, [L414](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L414)) |
+| OptimizationLock pinned upstream | `` (active, [L428](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L428)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7023,7 +7248,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L260](../../../stable-config/gameinfo.gi#L260)) |
 | Experimental | `` (active, [L260](../../../experimental-config/gameinfo.gi#L260)) |
 | Stock gameinfo override | `` (active, [L232](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L232)) |
-| OptimizationLock pinned upstream | `` (active, [L411](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L411)) |
+| OptimizationLock pinned upstream | `` (active, [L425](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L425)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7047,7 +7272,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L262](../../../stable-config/gameinfo.gi#L262)) |
 | Experimental | `` (active, [L262](../../../experimental-config/gameinfo.gi#L262)) |
 | Stock gameinfo override | `` (active, [L234](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L234)) |
-| OptimizationLock pinned upstream | `` (active, [L413](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L413)) |
+| OptimizationLock pinned upstream | `` (active, [L427](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L427)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7071,7 +7296,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L261](../../../stable-config/gameinfo.gi#L261)) |
 | Experimental | `` (active, [L261](../../../experimental-config/gameinfo.gi#L261)) |
 | Stock gameinfo override | `` (active, [L233](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L233)) |
-| OptimizationLock pinned upstream | `` (active, [L412](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L412)) |
+| OptimizationLock pinned upstream | `` (active, [L426](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L426)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7095,7 +7320,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L254](../../../stable-config/gameinfo.gi#L254)) |
 | Experimental | `` (active, [L254](../../../experimental-config/gameinfo.gi#L254)) |
 | Stock gameinfo override | `` (active, [L226](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L226)) |
-| OptimizationLock pinned upstream | `` (active, [L405](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L405)) |
+| OptimizationLock pinned upstream | `` (active, [L419](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L419)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7119,7 +7344,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L258](../../../stable-config/gameinfo.gi#L258)) |
 | Experimental | `` (active, [L258](../../../experimental-config/gameinfo.gi#L258)) |
 | Stock gameinfo override | `` (active, [L230](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L230)) |
-| OptimizationLock pinned upstream | `` (active, [L409](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L409)) |
+| OptimizationLock pinned upstream | `` (active, [L423](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L423)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7143,7 +7368,7 @@ Sound authoring configuration. Named Base.* entries declare available sound-even
 | Stable | `` (active, [L253](../../../stable-config/gameinfo.gi#L253)) |
 | Experimental | `` (active, [L253](../../../experimental-config/gameinfo.gi#L253)) |
 | Stock gameinfo override | `` (active, [L225](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L225)) |
-| OptimizationLock pinned upstream | `` (active, [L404](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L404)) |
+| OptimizationLock pinned upstream | `` (active, [L418](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L418)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7167,7 +7392,7 @@ Audio encoding-file hierarchy switch. Exact runtime versus content-build behavio
 | Stable | `1` (active, [L206](../../../stable-config/gameinfo.gi#L206)) |
 | Experimental | `1` (active, [L206](../../../experimental-config/gameinfo.gi#L206)) |
 | Stock gameinfo override | `1` (active, [L178](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L178)) |
-| OptimizationLock pinned upstream | `1` (active, [L357](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L357)) |
+| OptimizationLock pinned upstream | `1` (active, [L371](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L371)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7191,7 +7416,7 @@ Content-import conversion flag. It does not establish that Source 1 runtime twea
 | Stable | `1` (active, [L445](../../../stable-config/gameinfo.gi#L445)) |
 | Experimental | `1` (active, [L445](../../../experimental-config/gameinfo.gi#L445)) |
 | Stock gameinfo override | `1` (active, [L417](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L417)) |
-| OptimizationLock pinned upstream | `1` (active, [L596](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L596)) |
+| OptimizationLock pinned upstream | `1` (active, [L610](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L610)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7215,7 +7440,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L33](../../../stable-config/gameinfo.gi#L33)) |
 | Experimental | `3` (active, [L33](../../../experimental-config/gameinfo.gi#L33)) |
 | Stock gameinfo override | `3` (active, [L28](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L28)) |
-| OptimizationLock pinned upstream | `3` (active, [L184](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L184)) |
+| OptimizationLock pinned upstream | `3` (active, [L198](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L198)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7239,7 +7464,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L34](../../../stable-config/gameinfo.gi#L34)) |
 | Experimental | `3` (active, [L34](../../../experimental-config/gameinfo.gi#L34)) |
 | Stock gameinfo override | `3` (active, [L29](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L29)) |
-| OptimizationLock pinned upstream | `3` (active, [L185](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L185)) |
+| OptimizationLock pinned upstream | `3` (active, [L199](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L199)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7263,7 +7488,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L35](../../../stable-config/gameinfo.gi#L35)) |
 | Experimental | `3` (active, [L35](../../../experimental-config/gameinfo.gi#L35)) |
 | Stock gameinfo override | `3` (active, [L30](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L30)) |
-| OptimizationLock pinned upstream | `3` (active, [L186](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L186)) |
+| OptimizationLock pinned upstream | `3` (active, [L200](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L200)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7287,7 +7512,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L36](../../../stable-config/gameinfo.gi#L36)) |
 | Experimental | `3` (active, [L36](../../../experimental-config/gameinfo.gi#L36)) |
 | Stock gameinfo override | `3` (active, [L31](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L31)) |
-| OptimizationLock pinned upstream | `3` (active, [L187](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L187)) |
+| OptimizationLock pinned upstream | `3` (active, [L201](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L201)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7311,7 +7536,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L37](../../../stable-config/gameinfo.gi#L37)) |
 | Experimental | `3` (active, [L37](../../../experimental-config/gameinfo.gi#L37)) |
 | Stock gameinfo override | `3` (active, [L32](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L32)) |
-| OptimizationLock pinned upstream | `3` (active, [L188](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L188)) |
+| OptimizationLock pinned upstream | `3` (active, [L202](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L202)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7335,7 +7560,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L39](../../../stable-config/gameinfo.gi#L39)) |
 | Experimental | `3` (active, [L39](../../../experimental-config/gameinfo.gi#L39)) |
 | Stock gameinfo override | `3` (active, [L34](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L34)) |
-| OptimizationLock pinned upstream | `3` (active, [L190](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L190)) |
+| OptimizationLock pinned upstream | `3` (active, [L204](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L204)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7359,7 +7584,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L38](../../../stable-config/gameinfo.gi#L38)) |
 | Experimental | `3` (active, [L38](../../../experimental-config/gameinfo.gi#L38)) |
 | Stock gameinfo override | `3` (active, [L33](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L33)) |
-| OptimizationLock pinned upstream | `3` (active, [L189](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L189)) |
+| OptimizationLock pinned upstream | `3` (active, [L203](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L203)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7383,7 +7608,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L40](../../../stable-config/gameinfo.gi#L40)) |
 | Experimental | `3` (active, [L40](../../../experimental-config/gameinfo.gi#L40)) |
 | Stock gameinfo override | `3` (active, [L35](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L35)) |
-| OptimizationLock pinned upstream | `3` (active, [L191](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L191)) |
+| OptimizationLock pinned upstream | `3` (active, [L205](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L205)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7407,7 +7632,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L41](../../../stable-config/gameinfo.gi#L41)) |
 | Experimental | `3` (active, [L41](../../../experimental-config/gameinfo.gi#L41)) |
 | Stock gameinfo override | `3` (active, [L36](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L36)) |
-| OptimizationLock pinned upstream | `3` (active, [L192](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L192)) |
+| OptimizationLock pinned upstream | `3` (active, [L206](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L206)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7431,7 +7656,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L42](../../../stable-config/gameinfo.gi#L42)) |
 | Experimental | `3` (active, [L42](../../../experimental-config/gameinfo.gi#L42)) |
 | Stock gameinfo override | `3` (active, [L37](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L37)) |
-| OptimizationLock pinned upstream | `3` (active, [L193](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L193)) |
+| OptimizationLock pinned upstream | `3` (active, [L207](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L207)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7455,7 +7680,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L43](../../../stable-config/gameinfo.gi#L43)) |
 | Experimental | `3` (active, [L43](../../../experimental-config/gameinfo.gi#L43)) |
 | Stock gameinfo override | `3` (active, [L38](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L38)) |
-| OptimizationLock pinned upstream | `3` (active, [L194](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L194)) |
+| OptimizationLock pinned upstream | `3` (active, [L208](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L208)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7479,7 +7704,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L44](../../../stable-config/gameinfo.gi#L44)) |
 | Experimental | `3` (active, [L44](../../../experimental-config/gameinfo.gi#L44)) |
 | Stock gameinfo override | `3` (active, [L39](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L39)) |
-| OptimizationLock pinned upstream | `3` (active, [L195](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L195)) |
+| OptimizationLock pinned upstream | `3` (active, [L209](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L209)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7503,7 +7728,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L45](../../../stable-config/gameinfo.gi#L45)) |
 | Experimental | `3` (active, [L45](../../../experimental-config/gameinfo.gi#L45)) |
 | Stock gameinfo override | `3` (active, [L40](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L40)) |
-| OptimizationLock pinned upstream | `3` (active, [L196](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L196)) |
+| OptimizationLock pinned upstream | `3` (active, [L210](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L210)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7527,7 +7752,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L46](../../../stable-config/gameinfo.gi#L46)) |
 | Experimental | `3` (active, [L46](../../../experimental-config/gameinfo.gi#L46)) |
 | Stock gameinfo override | `3` (active, [L41](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L41)) |
-| OptimizationLock pinned upstream | `3` (active, [L197](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L197)) |
+| OptimizationLock pinned upstream | `3` (active, [L211](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L211)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7551,7 +7776,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L47](../../../stable-config/gameinfo.gi#L47)) |
 | Experimental | `3` (active, [L47](../../../experimental-config/gameinfo.gi#L47)) |
 | Stock gameinfo override | `3` (active, [L42](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L42)) |
-| OptimizationLock pinned upstream | `3` (active, [L198](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L198)) |
+| OptimizationLock pinned upstream | `3` (active, [L212](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L212)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7575,7 +7800,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L48](../../../stable-config/gameinfo.gi#L48)) |
 | Experimental | `3` (active, [L48](../../../experimental-config/gameinfo.gi#L48)) |
 | Stock gameinfo override | `3` (active, [L43](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L43)) |
-| OptimizationLock pinned upstream | `3` (active, [L199](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L199)) |
+| OptimizationLock pinned upstream | `3` (active, [L213](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L213)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7599,7 +7824,7 @@ Declares this language in the supported-language table. The stock value 3 is ret
 | Stable | `3` (active, [L49](../../../stable-config/gameinfo.gi#L49)) |
 | Experimental | `3` (active, [L49](../../../experimental-config/gameinfo.gi#L49)) |
 | Stock gameinfo override | `3` (active, [L44](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L44)) |
-| OptimizationLock pinned upstream | `3` (active, [L200](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L200)) |
+| OptimizationLock pinned upstream | `3` (active, [L214](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L214)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7623,7 +7848,7 @@ Names the engine used by the tools environment.
 | Stable | `Source 2` (active, [L211](../../../stable-config/gameinfo.gi#L211)) |
 | Experimental | `Source 2` (active, [L211](../../../experimental-config/gameinfo.gi#L211)) |
 | Stock gameinfo override | `Source 2` (active, [L183](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L183)) |
-| OptimizationLock pinned upstream | `Source 2` (active, [L362](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L362)) |
+| OptimizationLock pinned upstream | `Source 2` (active, [L376](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L376)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7647,7 +7872,7 @@ Location of SDK tools; the stock comment says it is relative to the mod path.
 | Stable | `../sdktools` (active, [L212](../../../stable-config/gameinfo.gi#L212)) |
 | Experimental | `../sdktools` (active, [L212](../../../experimental-config/gameinfo.gi#L212)) |
 | Stock gameinfo override | `../sdktools` (active, [L184](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L184)) |
-| OptimizationLock pinned upstream | `../sdktools` (active, [L363](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L363)) |
+| OptimizationLock pinned upstream | `../sdktools` (active, [L377](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L377)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7671,7 +7896,7 @@ Candidate WorldRenderer option named AggregateInstanceStream. The precise behavi
 | Stable | `1` (active, [L467](../../../stable-config/gameinfo.gi#L467)) |
 | Experimental | `1` (active, [L467](../../../experimental-config/gameinfo.gi#L467)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L618](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L618)) |
+| OptimizationLock pinned upstream | `1` (active, [L632](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L632)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7695,7 +7920,7 @@ Candidate WorldRenderer option named AggregateRTProxyDesc. The precise behavior,
 | Stable | `1` (active, [L468](../../../stable-config/gameinfo.gi#L468)) |
 | Experimental | `1` (active, [L468](../../../experimental-config/gameinfo.gi#L468)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L619](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L619)) |
+| OptimizationLock pinned upstream | `1` (active, [L633](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L633)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7719,7 +7944,7 @@ Candidate WorldRenderer option named AggregateSceneObjectDesc. The precise behav
 | Stable | `1` (active, [L469](../../../stable-config/gameinfo.gi#L469)) |
 | Experimental | `1` (active, [L469](../../../experimental-config/gameinfo.gi#L469)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L620](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L620)) |
+| OptimizationLock pinned upstream | `1` (active, [L634](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L634)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7743,7 +7968,7 @@ Candidate WorldRenderer option named AggregateVertexColorStream. The precise beh
 | Stable | `1` (active, [L470](../../../stable-config/gameinfo.gi#L470)) |
 | Experimental | `1` (active, [L470](../../../experimental-config/gameinfo.gi#L470)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1` (active, [L621](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L621)) |
+| OptimizationLock pinned upstream | `1` (active, [L635](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L635)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7767,7 +7992,7 @@ Selects the Citadel bindless scene-object descriptor name. This is stock game-sp
 | Stable | `CitadelBindlessDesc` (active, [L452](../../../stable-config/gameinfo.gi#L452)) |
 | Experimental | `CitadelBindlessDesc` (active, [L452](../../../experimental-config/gameinfo.gi#L452)) |
 | Stock gameinfo override | `CitadelBindlessDesc` (active, [L432](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L432)) |
-| OptimizationLock pinned upstream | `CitadelBindlessDesc` (active, [L603](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L603)) |
+| OptimizationLock pinned upstream | `CitadelBindlessDesc` (active, [L617](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L617)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7791,7 +8016,7 @@ Candidate runtime environment-map cache size, absent from stock; units and curre
 | Stable | `1024` (active, [L471](../../../stable-config/gameinfo.gi#L471)) |
 | Experimental | `1024` (active, [L471](../../../experimental-config/gameinfo.gi#L471)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `1024` (active, [L622](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L622)) |
+| OptimizationLock pinned upstream | `1024` (active, [L636](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L636)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7815,7 +8040,7 @@ Names the tools environment-map cache size. The config requests 2 against stock 
 | Stable | `2` (active, [L453](../../../stable-config/gameinfo.gi#L453)) |
 | Experimental | `2` (active, [L453](../../../experimental-config/gameinfo.gi#L453)) |
 | Stock gameinfo override | `300` (active, [L431](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L431)) |
-| OptimizationLock pinned upstream | `2` (active, [L604](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L604)) |
+| OptimizationLock pinned upstream | `2` (active, [L618](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L618)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7839,7 +8064,7 @@ Selects linear environment-map color space, as shipped. The captured file does n
 | Stable | `linear` (active, [L454](../../../stable-config/gameinfo.gi#L454)) |
 | Experimental | `linear` (active, [L454](../../../experimental-config/gameinfo.gi#L454)) |
 | Stock gameinfo override | `linear` (active, [L427](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L427)) |
-| OptimizationLock pinned upstream | `linear` (active, [L605](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L605)) |
+| OptimizationLock pinned upstream | `linear` (active, [L619](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L619)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7863,7 +8088,7 @@ Sets the environment-map face-size key to stock 256. Pixels are a name/context i
 | Stable | `256` (active, [L455](../../../stable-config/gameinfo.gi#L455)) |
 | Experimental | `256` (active, [L455](../../../experimental-config/gameinfo.gi#L455)) |
 | Stock gameinfo override | `256` (active, [L423](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L423)) |
-| OptimizationLock pinned upstream | `256` (active, [L606](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L606)) |
+| OptimizationLock pinned upstream | `256` (active, [L620](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L620)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7887,7 +8112,7 @@ Selects the shipped BC6H environment-map format. Format selection alone does not
 | Stable | `BC6H` (active, [L456](../../../stable-config/gameinfo.gi#L456)) |
 | Experimental | `BC6H` (active, [L456](../../../experimental-config/gameinfo.gi#L456)) |
 | Stock gameinfo override | `BC6H` (active, [L425](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L425)) |
-| OptimizationLock pinned upstream | `BC6H` (active, [L607](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L607)) |
+| OptimizationLock pinned upstream | `BC6H` (active, [L621](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L621)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7911,7 +8136,7 @@ Selects the shipped GGXCubeMapBlur environment-map mip processor. Its exact offl
 | Stable | `GGXCubeMapBlur` (active, [L457](../../../stable-config/gameinfo.gi#L457)) |
 | Experimental | `GGXCubeMapBlur` (active, [L457](../../../experimental-config/gameinfo.gi#L457)) |
 | Stock gameinfo override | `GGXCubeMapBlur` (active, [L428](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L428)) |
-| OptimizationLock pinned upstream | `GGXCubeMapBlur` (active, [L608](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L608)) |
+| OptimizationLock pinned upstream | `GGXCubeMapBlur` (active, [L622](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L622)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7935,7 +8160,7 @@ Selects the environment-map preview format. Stock uses BC6H; the commented RGBA1
 | Stable | `BC6H` (active, [L458](../../../stable-config/gameinfo.gi#L458)); `RGBA16161616F` (disabled, [L466](../../../stable-config/gameinfo.gi#L466)) |
 | Experimental | `BC6H` (active, [L458](../../../experimental-config/gameinfo.gi#L458)); `RGBA16161616F` (disabled, [L466](../../../experimental-config/gameinfo.gi#L466)) |
 | Stock gameinfo override | `BC6H` (active, [L426](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L426)) |
-| OptimizationLock pinned upstream | `BC6H` (active, [L609](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L609)); `RGBA16161616F` (disabled, [L617](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L617)) |
+| OptimizationLock pinned upstream | `BC6H` (active, [L623](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L623)); `RGBA16161616F` (disabled, [L631](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L631)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7959,7 +8184,7 @@ Sets the environment-map render-size key to shipped 1024. Neither changing this 
 | Stable | `1024` (active, [L459](../../../stable-config/gameinfo.gi#L459)) |
 | Experimental | `1024` (active, [L459](../../../experimental-config/gameinfo.gi#L459)) |
 | Stock gameinfo override | `1024` (active, [L424](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L424)) |
-| OptimizationLock pinned upstream | `1024` (active, [L610](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L610)) |
+| OptimizationLock pinned upstream | `1024` (active, [L624](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L624)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -7983,7 +8208,7 @@ Selects environment-map cube-array use at the shipped value 1. Alternative-resou
 | Stable | `1` (active, [L460](../../../stable-config/gameinfo.gi#L460)) |
 | Experimental | `1` (active, [L460](../../../experimental-config/gameinfo.gi#L460)) |
 | Stock gameinfo override | `1` (active, [L430](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L430)) |
-| OptimizationLock pinned upstream | `1` (active, [L611](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L611)) |
+| OptimizationLock pinned upstream | `1` (active, [L625](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L625)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8007,7 +8232,7 @@ Enables environment maps at the shipped value 1; the file does not document depe
 | Stable | `1` (active, [L461](../../../stable-config/gameinfo.gi#L461)) |
 | Experimental | `1` (active, [L461](../../../experimental-config/gameinfo.gi#L461)) |
 | Stock gameinfo override | `1` (active, [L422](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L422)) |
-| OptimizationLock pinned upstream | `1` (active, [L612](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L612)) |
+| OptimizationLock pinned upstream | `1` (active, [L626](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L626)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8031,7 +8256,7 @@ Controls grass shadow casting by name and an exact captured key path; stock uses
 | Stable | `0` (active, [L462](../../../stable-config/gameinfo.gi#L462)) |
 | Experimental | `0` (active, [L462](../../../experimental-config/gameinfo.gi#L462)) |
 | Stock gameinfo override | `1` (active, [L433](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L433)) |
-| OptimizationLock pinned upstream | `0` (active, [L613](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L613)) |
+| OptimizationLock pinned upstream | `0` (active, [L627](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L627)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8055,7 +8280,7 @@ Candidate light-propagation-volume edge-blending control. Upstream's CS2 shader 
 | Stable | `0` (active, [L472](../../../stable-config/gameinfo.gi#L472)) |
 | Experimental | `0` (active, [L472](../../../experimental-config/gameinfo.gi#L472)) |
 | Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | `0` (active, [L623](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L623)) |
+| OptimizationLock pinned upstream | `0` (active, [L637](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L637)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8079,7 +8304,7 @@ Identifies the game/content directory as citadel.
 | Stable | `citadel` (active, [L8](../../../stable-config/gameinfo.gi#L8)) |
 | Experimental | `citadel` (active, [L8](../../../experimental-config/gameinfo.gi#L8)) |
 | Stock gameinfo override | `citadel` (active, [L3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L3)) |
-| OptimizationLock pinned upstream | `citadel` (active, [L159](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L159)) |
+| OptimizationLock pinned upstream | `citadel` (active, [L173](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L173)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8103,7 +8328,7 @@ Marks this test map in the hidden-maps list. Exact shipping menu visibility is u
 | Stable | `1` (active, [L17](../../../stable-config/gameinfo.gi#L17)) |
 | Experimental | `1` (active, [L17](../../../experimental-config/gameinfo.gi#L17)) |
 | Stock gameinfo override | `1` (active, [L12](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L12)) |
-| OptimizationLock pinned upstream | `1` (active, [L168](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L168)) |
+| OptimizationLock pinned upstream | `1` (active, [L182](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L182)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8127,7 +8352,7 @@ Marks this test map in the hidden-maps list. Exact shipping menu visibility is u
 | Stable | `1` (active, [L16](../../../stable-config/gameinfo.gi#L16)) |
 | Experimental | `1` (active, [L16](../../../experimental-config/gameinfo.gi#L16)) |
 | Stock gameinfo override | `1` (active, [L11](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L11)) |
-| OptimizationLock pinned upstream | `1` (active, [L167](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L167)) |
+| OptimizationLock pinned upstream | `1` (active, [L181](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L181)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8151,7 +8376,7 @@ Crosshair-related top-level metadata. The current HUD consumer is undocumented; 
 | Stable | `0` (active, [L13](../../../stable-config/gameinfo.gi#L13)) |
 | Experimental | `0` (active, [L13](../../../experimental-config/gameinfo.gi#L13)) |
 | Stock gameinfo override | `0` (active, [L8](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L8)) |
-| OptimizationLock pinned upstream | `0` (active, [L164](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L164)) |
+| OptimizationLock pinned upstream | `0` (active, [L178](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L178)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8175,7 +8400,7 @@ Nodegraph-related top-level metadata. Current runtime applicability is undocumen
 | Stable | `0` (active, [L19](../../../stable-config/gameinfo.gi#L19)) |
 | Experimental | `0` (active, [L19](../../../experimental-config/gameinfo.gi#L19)) |
 | Stock gameinfo override | `0` (active, [L14](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L14)) |
-| OptimizationLock pinned upstream | `0` (active, [L170](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L170)) |
+| OptimizationLock pinned upstream | `0` (active, [L184](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L184)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8199,7 +8424,7 @@ Legacy-style high-model metadata. Recognition and effect in current Deadlock are
 | Stable | `1` (active, [L12](../../../stable-config/gameinfo.gi#L12)) |
 | Experimental | `1` (active, [L12](../../../experimental-config/gameinfo.gi#L12)) |
 | Stock gameinfo override | `1` (active, [L7](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L7)) |
-| OptimizationLock pinned upstream | `1` (active, [L163](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L163)) |
+| OptimizationLock pinned upstream | `1` (active, [L177](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L177)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8223,7 +8448,7 @@ Legacy-style top-level game metadata. The exact consumer and meaning of this fla
 | Stable | `1` (active, [L11](../../../stable-config/gameinfo.gi#L11)) |
 | Experimental | `1` (active, [L11](../../../experimental-config/gameinfo.gi#L11)) |
 | Stock gameinfo override | `1` (active, [L6](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L6)) |
-| OptimizationLock pinned upstream | `1` (active, [L162](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L162)) |
+| OptimizationLock pinned upstream | `1` (active, [L176](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L176)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8247,7 +8472,7 @@ Performance-wizard metadata. Whether a current Deadlock UI uses this flag is unk
 | Stable | `0` (active, [L20](../../../stable-config/gameinfo.gi#L20)) |
 | Experimental | `0` (active, [L20](../../../experimental-config/gameinfo.gi#L20)) |
 | Stock gameinfo override | `0` (active, [L15](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L15)) |
-| OptimizationLock pinned upstream | `0` (active, [L171](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L171)) |
+| OptimizationLock pinned upstream | `0` (active, [L185](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L185)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8271,7 +8496,7 @@ Enables the Pulse feature by name; which shipping systems consume this gameinfo 
 | Stable | `1` (active, [L217](../../../stable-config/gameinfo.gi#L217)) |
 | Experimental | `1` (active, [L217](../../../experimental-config/gameinfo.gi#L217)) |
 | Stock gameinfo override | `1` (active, [L189](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L189)) |
-| OptimizationLock pinned upstream | `1` (active, [L368](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L368)) |
+| OptimizationLock pinned upstream | `1` (active, [L382](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L382)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8295,7 +8520,7 @@ Sets the game title metadata.
 | Stable | `Citadel` (active, [L9](../../../stable-config/gameinfo.gi#L9)) |
 | Experimental | `Citadel` (active, [L9](../../../experimental-config/gameinfo.gi#L9)) |
 | Stock gameinfo override | `Citadel` (active, [L4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L4)) |
-| OptimizationLock pinned upstream | `Citadel` (active, [L160](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L160)) |
+| OptimizationLock pinned upstream | `Citadel` (active, [L174](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L174)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8319,7 +8544,7 @@ Top-level tone-mapping metadata. This is distinct from rendering ConVars; an act
 | Stable | `0` (active, [L21](../../../stable-config/gameinfo.gi#L21)) |
 | Experimental | `0` (active, [L21](../../../experimental-config/gameinfo.gi#L21)) |
 | Stock gameinfo override | `0` (active, [L16](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L16)) |
-| OptimizationLock pinned upstream | `0` (active, [L172](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L172)) |
+| OptimizationLock pinned upstream | `0` (active, [L186](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L186)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
@@ -8343,7 +8568,7 @@ Declares the game type as multiplayer_only; it does not configure an online serv
 | Stable | `multiplayer_only` (active, [L10](../../../stable-config/gameinfo.gi#L10)) |
 | Experimental | `multiplayer_only` (active, [L10](../../../experimental-config/gameinfo.gi#L10)) |
 | Stock gameinfo override | `multiplayer_only` (active, [L5](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L5)) |
-| OptimizationLock pinned upstream | `multiplayer_only` (active, [L161](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L161)) |
+| OptimizationLock pinned upstream | `multiplayer_only` (active, [L175](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L175)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 

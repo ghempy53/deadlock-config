@@ -16,7 +16,7 @@ not constraints on the current stable-derived configs. Do not clean up inherited
    registration; they do not prove cheat/dev startup application, saved/menu precedence, or client FPS benefit.
    `gameinfo_cannot_override` explicitly disallows this override path. Out-of-range behavior needs verification.
 3. Explain the intended change, original rationale or its absence, trade-offs and test conditions. Preserve the
-   owner's uncapped DX11 baseline, accepted visual cuts, FOV-mod preference and texture decisions. An upstream value
+   owner's uncapped DX11 baseline, accepted visual cuts, `r_aspectratio 2.54` FOV choice and texture decisions. An upstream value
    alone is not evidence of improvement. Make only changes authorized by the request.
 4. Edit the named current file, following its local format. Keep quote parity safe for the historical mod-manager
    parser issue. Never edit frozen versions or archived records. Commenting out an assignment does not prove the

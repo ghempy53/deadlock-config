@@ -1,6 +1,7 @@
 # Complete setting reference
 
-Reviewed **2026-10-22**, against captured Valve build **6814**, source revision **11160503**.
+Reviewed **2026-10-27**, against captured Valve build **6814**, source revision **11160503** (build 6821's dump,
+stock file and inspected DLL strings are byte-identical), and OptimizationLock **3.7.1 hotfix** (`cbb7041`).
 This covers both current configs: every scalar assignment, disabled tweak, repeated assignment, nested ConVar
 metadata field and the empty render-pipeline alias section. Parent sections and locations are inventoried in
 [coverage.json](reference/coverage.json).

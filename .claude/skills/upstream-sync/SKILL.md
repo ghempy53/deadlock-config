@@ -16,7 +16,7 @@ that it is valid, effective or faster.
 2. Use one pinned GameTracking snapshot to check changed names, defaults, ranges, flags and stock overrides. Absence
    from one dump does not prove removal; duplicate declarations do not establish which value wins.
 3. Give each change an adopt/skip/defer recommendation with evidence and trade-offs. Preserve uncapped FPS,
-   `r_aspectratio` disabled in both configs regardless of upstream (PR #84 restores the FOV-mod preference), the owner's
+   `r_aspectratio 2.54` in both configs regardless of upstream (the owner's 110 FOV equivalent since 2026-10-27), the owner's
    tested particle choice and current texture preferences.
    Engine-section changes require explicit scope and compatibility testing; do not normalize existing sections.
 4. When authorized, apply only the requested variant's changes and use `convar-change` for documentation and checks.

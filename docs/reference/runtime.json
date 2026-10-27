@@ -516,7 +516,7 @@
     "subsystem": "Camera / input",
     "purpose": "Field-of-view angle when following a hero; currently only a commented example.",
     "rationale": "Intentionally commented documentation/example; it contributes no active assignment. Original per-setting reason for retaining the example is not documented beyond upstream comments.",
-    "tradeoffs": "Commenting the gameinfo assignment does not reset saved per-user values or an FOV mod. PR84 supersedes PR83's brief stable aspect-ratio request: both configs again leave that override disabled because the owner prefers the FOV mod's slider. PR83's owner-confirmed 90-degree cap in Sandbox remains historical evidence, not an audit reproduction or a universal limit for every camera path. Actual interactions need testing.",
+    "tradeoffs": "Commenting the gameinfo assignment does not reset saved per-user values. The owner removed the FOV mod on 2026-10-27; both configs now request r_aspectratio 2.54 for a 110 FOV equivalent with this slider at 90, superseding PR84. PR83's owner-confirmed 90-degree cap in Sandbox remains historical evidence, not an audit reproduction or a universal limit for every camera path. Actual interactions need testing.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
@@ -981,14 +981,15 @@
   "ConVars/citadel_per_weapon_per_surface_impact_effects": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Name suggests selecting impact effects by weapon and hit surface; Valve supplies no detailed help.",
-    "rationale": "Activated through the OptimizationLock 3.5.3 sync. Upstream reports fewer impact visuals and loss of Yamato’s alternate-fire radius indicator.",
+    "rationale": "Activated through the OptimizationLock 3.5.3 sync; OptimizationLock 3.7 disabled it again, so stable makes no assignment after the 3.7.1 sync while experimental keeps false. Upstream reports fewer impact visuals and loss of Yamato’s alternate-fire radius indicator.",
     "tradeoffs": "Potential ability readability loss, not simply fewer bullet tracers. Replicated state may differ online; neither the warning nor a gain is tested here.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/ghempy53/deadlock-config/pull/61"
+      "https://github.com/ghempy53/deadlock-config/pull/61",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
     ],
     "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
   },
@@ -3923,5 +3924,103 @@
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi"
     ],
     "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+  },
+  "ConVars/ai_motor_max_state_time_active": {
+    "subsystem": "AI / navigation",
+    "purpose": "Undocumented AI motor state timer registered in the game/server module with a cheat flag; default 6, requested 0.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "A zero timer could change trooper or neutral movement on a local server. No client benefit is established for online matches.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for semantics and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/audio_viewing_damage_decay_time": {
+    "subsystem": "Audio / voice",
+    "purpose": "Valve help: duration for viewing damage to decay to 0.0. Default 3, requested 0.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "By the help text, 0 removes the decay of an audio state tied to viewing damage, which may shorten or remove a damage-feedback audio effect. The exact cue and any CPU saving are unverified.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/audio_viewing_damage_hold_time": {
+    "subsystem": "Audio / voice",
+    "purpose": "Valve help: duration before viewing damage begins to decay. Default 3, requested 0.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "By the help text, 0 starts the decay immediately, which may shorten a damage-feedback audio effect. The exact cue and any CPU saving are unverified.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/citadel_action_refresh_interval": {
+    "subsystem": "Runtime / gameplay presentation",
+    "purpose": "Undocumented client interval; default 0.1, requested 0.11. The dump supplies no help text.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "A 10 percent longer interval may refresh the underlying action state slightly less often. The affected system and any CPU saving are unverified.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for semantics and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/citadel_ai_path_pathing_time_ms_per_tick": {
+    "subsystem": "AI / navigation",
+    "purpose": "Undocumented AI pathing time per tick, by name in milliseconds, registered in the game/server module; default 0.5, requested 20.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "A 40 times larger per-tick pathing allowance may let NPC pathing use more frame time on a local server. It is not a client setting in online matches.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for semantics and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/citadel_always_show_active_hud_stats": {
+    "subsystem": "HUD / UI",
+    "purpose": "Archived client option, default false, disabled upstream. By upstream's comment, true would keep the active stats always visible.",
+    "rationale": "Added as a disabled example by OptimizationLock 3.7. Stable removes a stray quote from upstream's comment so the line keeps an even quote count for the Mod Manager check.",
+    "tradeoffs": "None while disabled. If enabled it is a HUD readability preference, not a performance setting.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for semantics and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/citadel_unit_status_hide_names": {
+    "subsystem": "HUD / UI",
+    "purpose": "Upstream comment: hides player names from health bars. Registered default false; requested true.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "If honored, hero names no longer appear over health bars, reducing at-a-glance target identification. No performance gain is measured.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for semantics and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
   }
 }

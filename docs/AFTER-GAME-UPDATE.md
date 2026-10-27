@@ -27,7 +27,7 @@ can contain an obsolete `PGIVersion`.
    edited guarded sections. Do not silently restore stock or copy upstream to satisfy archived rules. Matching
    the PGI token alone does not prove matchmaking compatibility. Review mod mounts too.
 7. Use upstream for provenance. Consult [owner decisions](CONFIGS.md), merged PRs and [test history](TESTED-CHANGES.md).
-   Do not reapply the archived ConVars-only fork rule. Preserve uncapped FPS, Steam Input off, aspect ratio disabled in both configs for the FOV mod,
+   Do not reapply the archived ConVars-only fork rule. Preserve uncapped FPS, Steam Input off, aspect ratio 2.54 in both configs (110 FOV equivalent),
    disabled particle-minimum-timestep overrides, and current texture choices until the owner changes them.
 8. Update reference, current docs, blocked list and audit with the same pins. Append dated clarifications to
    `CHANGES.txt`; do not turn historical claims into purported measurements. Keep proposed behavior changes
@@ -60,7 +60,7 @@ Restart; record observable ConVars after startup, loading a local match, changin
 and restarting again. Test conflicting duplicates in a separate diagnostic copy only when behavior testing is
 authorized. Hidden/unqueryable variables stay unverified: silence is not proof of removal or acceptance.
 
-Check matchmaking, ability readability, camera/FOV mod, fire/heal particles and audio cues. Measure performance
+Check matchmaking, ability readability, camera/FOV (aspect ratio 2.54), fire/heal particles and audio cues. Measure performance
 with repeated alternating runs and frame-time captures under comparable workloads. Bot/local results cannot
 establish online performance because server-only settings and workload differ. No measured gain follows just
 from successful loading.
