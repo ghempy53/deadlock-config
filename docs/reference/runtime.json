@@ -3968,5 +3968,102 @@
       "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6"
     ],
     "test_status": "Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/citadel_unit_status_max_distance_scale": {
+    "subsystem": "HUD / UI",
+    "purpose": "By its name, the health-bar overlay scale at and beyond citadel_unit_status_max_distance_distance (800); default 1, requested 1.2. The overlay includes the health number, whose 18px font is fixed in Valve's CSS, so scaling the overlay is the gameinfo route to a larger number.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "If the guess is right, far health bars, their numbers and the damage numbers that follow the bar scale (citadel_damage_text_follow_healthbar_scale) grow about 20 percent and can cover more of the target in crowded fights. If near bars change or nothing changes, the semantics differ from the name.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/panorama/styles/unit_status_v2.css"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
+  },
+  "ConVars/citadel_unit_status_offset_player_z_offset_adjustment": {
+    "subsystem": "HUD / UI",
+    "purpose": "Valve help: Z offset for all characters, independent of the model offset; default 16, requested 32. Raises hero health bars, their health numbers and, through citadel_damage_text_follow_healthbar_pos, the damage numbers.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "Bars sit higher above heads, which can clear the model in crowded fights but separates the bar further from the target.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
+  },
+  "ConVars/citadel_damage_text_height_offset_near": {
+    "subsystem": "HUD / UI",
+    "purpose": "Valve help: how much to offset damage numbers above when near the camera; default 130, requested 150.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "Lifts close-range damage numbers further above the target; whether it adds to the health-bar-following position is unverified.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
+  },
+  "ConVars/citadel_damage_text_height_offset_far": {
+    "subsystem": "HUD / UI",
+    "purpose": "Valve help: how much to offset damage numbers above when far from the camera; default 200, requested 230.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "Lifts long-range damage numbers further above the target; whether it adds to the health-bar-following position is unverified.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
+  },
+  "ConVars/citadel_damage_text_new_bullet_offset_x": {
+    "subsystem": "HUD / UI",
+    "purpose": "Undocumented horizontal offset for bullet damage numbers; default 30, requested 45. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
+  },
+  "ConVars/citadel_damage_text_new_ability_offset_x": {
+    "subsystem": "HUD / UI",
+    "purpose": "Undocumented horizontal offset for ability damage numbers; default 20, requested 35. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
+  },
+  "ConVars/citadel_damage_text_new_melee_offset_x": {
+    "subsystem": "HUD / UI",
+    "purpose": "Undocumented horizontal offset for melee damage numbers; default 20, requested 35. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
+  },
+  "ConVars/citadel_damage_text_new_pure_offset_x": {
+    "subsystem": "HUD / UI",
+    "purpose": "Undocumented horizontal offset for pure damage numbers; default 25, requested 40. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
+    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights.",
+    "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+    ],
+    "test_status": "Static dump and Panorama-file review only (2026-10-27). Untested in game: compare an enemy bot near and at long range in Sandbox."
   }
 }

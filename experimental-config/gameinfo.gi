@@ -658,6 +658,16 @@ GameInfo
         v8_maximum_heap_size_mb                         "1024"  // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
         citadel_unit_status_hide_names                  "true"  // This should hide playernames from health bars. [def: "false"]
 
+        // --- 3.1 Enemy health numbers and damage numbers (experimental, 2026-10-27) ---
+        citadel_unit_status_max_distance_scale                 "1.2"  // Health bar and health number scale at long range (by name); damage numbers follow it. [def: "1"]
+        citadel_unit_status_offset_player_z_offset_adjustment  "32"   // Raises hero health bars and health numbers; damage numbers follow the bar. [def: "16"]
+        citadel_damage_text_height_offset_near                 "150"  // Damage numbers further above the target up close. [def: "130"]
+        citadel_damage_text_height_offset_far                  "230"  // Damage numbers further above the target far away. [def: "200"]
+        citadel_damage_text_new_bullet_offset_x                "45"   // Bullet damage numbers further right. [def: "30"]
+        citadel_damage_text_new_ability_offset_x               "35"   // Ability damage numbers further right. [def: "20"]
+        citadel_damage_text_new_melee_offset_x                 "35"   // Melee damage numbers further right. [def: "20"]
+        citadel_damage_text_new_pure_offset_x                  "40"   // Pure damage numbers further right. [def: "25"]
+
         // --- 4. Lighting & Shadows ---
         lb_enable_stationary_lights "false" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]
 

@@ -6,7 +6,7 @@ maintenance regardless of assistant. The owner's current request overrides workf
 ## Current files and owner decisions
 
 - Stable is OptimizationLock **3.7.1 hotfix** (October 27) plus owner preferences. v1.4 is a frozen **3.6** copy.
-- Experimental was **reset October 27 to a byte-identical copy of stable** so owner testing starts from stable (earlier restarts: October 15 from v1.2, October 17 from stable 3.5.3). Both intentionally retain upstream engine edits and duplicates.
+- Experimental was **reset October 27 to a byte-identical copy of stable** so owner testing starts from stable; experiments since are listed in CONFIGS.md (earlier restarts: October 15 from v1.2, October 17 from stable 3.5.3). Both intentionally retain upstream engine edits and duplicates.
 - Both active files and all intentional disabled entries are covered in [SETTING-REFERENCE.md](SETTING-REFERENCE.md).
   [CONFIGS.md](CONFIGS.md) is the current owner-decision and variant record.
 - Frozen `stable-config/v*/gameinfo.gi` and `docs/archive/` are immutable historical evidence. Never edit them.

@@ -46,9 +46,19 @@ was the owner's working diagnosis, not a measurement established by this audit.
 
 ## Actual variant differences
 
-None. Since the October 27 reset, experimental is a byte-identical copy of stable, so every ConVar and engine
-section matches; `compare.py` reports no differences. New experiments start from here and are listed in the
-[changelog](CHANGES.txt) as they are made.
+Experimental is stable plus the experiments below, made since its October 27 reset to a byte-identical copy of
+stable. Engine sections match. Each experiment has a dated [changelog](CHANGES.txt) entry with its evidence and test
+plan; “default” means stable makes no assignment.
+
+| ConVar | Stable | Experimental | Experiment |
+| --- | --- | --- | --- |
+| `citadel_unit_status_max_distance_scale` | default 1 | 1.2 | Larger enemy health numbers at range (October 27) |
+| `citadel_unit_status_offset_player_z_offset_adjustment` | default 16 | 32 | Health bars and numbers higher |
+| `citadel_damage_text_height_offset_near` / `_far` | default 130 / 200 | 150 / 230 | Damage numbers higher |
+| `citadel_damage_text_new_bullet_offset_x` | default 30 | 45 | Damage numbers further right |
+| `citadel_damage_text_new_ability_offset_x` | default 20 | 35 | Damage numbers further right |
+| `citadel_damage_text_new_melee_offset_x` | default 20 | 35 | Damage numbers further right |
+| `citadel_damage_text_new_pure_offset_x` | default 25 | 40 | Damage numbers further right |
 
 Before the reset, experimental differed in 16 ConVar paths and 29 engine entries: it kept its 3.5.3-branch values
 (for example vertical camera flattening false and health-bar highlight speed 100) and the 3.6.1 engine sections.
