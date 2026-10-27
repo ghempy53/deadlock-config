@@ -34,6 +34,9 @@ appear correct. Record the actual build and menu labels when verifying a menu-to
   `citadel_damage_text_batching_window_ability 1000` remains; its effect is unresolved because it is absent from the pinned dump.
 - The old narrow health-bar-width override is absent, not a commented entry in a current “group 1c.”
   Both configs request highlight speed **999**; this is not proof of mathematically zero interpolation.
+- Owner's Interface menu (reported 2026-10-27): health numbers on, ally health numbers off, critical health effects
+  on, name above health bars none, cumulative damage off. Experimental tests larger, higher enemy health numbers and
+  higher, further-right damage numbers ([CONFIGS.md](CONFIGS.md#actual-variant-differences)); untested in game.
 - Steam Input is requested off on both occurrences. Camera-shake reduction was an owner menu preference;
   current menu state was not inspected in this audit.
 

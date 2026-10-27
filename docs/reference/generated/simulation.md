@@ -167,7 +167,7 @@ Caps AI jobs executed serially within a frame; Valve help declares -1 unlimited.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1059](../../../stable-config/gameinfo.gi#L1059)) |
-| Experimental | `1` (active, [L1059](../../../experimental-config/gameinfo.gi#L1059)) |
+| Experimental | `1` (active, [L1069](../../../experimental-config/gameinfo.gi#L1069)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1232](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1232)) |
 
@@ -195,7 +195,7 @@ Commented example absent from the pinned dump. ai_disabled exists, but that does
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L965](../../../stable-config/gameinfo.gi#L965)) |
-| Experimental | `1` (disabled, [L965](../../../experimental-config/gameinfo.gi#L965)) |
+| Experimental | `1` (disabled, [L975](../../../experimental-config/gameinfo.gi#L975)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1138](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1138)) |
 
@@ -219,7 +219,7 @@ Registered AI-disable switch with no detailed help. Upstream reports that its te
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L966](../../../stable-config/gameinfo.gi#L966)) |
-| Experimental | `1` (disabled, [L966](../../../experimental-config/gameinfo.gi#L966)) |
+| Experimental | `1` (disabled, [L976](../../../experimental-config/gameinfo.gi#L976)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1139](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1139)) |
 
@@ -247,7 +247,7 @@ The name suggests AI foot-sweep processing; Valve supplies no explanatory help i
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L1061](../../../stable-config/gameinfo.gi#L1061)) |
-| Experimental | `false` (active, [L1061](../../../experimental-config/gameinfo.gi#L1061)) |
+| Experimental | `false` (active, [L1071](../../../experimental-config/gameinfo.gi#L1071)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1234](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1234)) |
 
@@ -275,7 +275,7 @@ Valve console help: Allow gathering of conditions to be done asynchronously.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1062](../../../stable-config/gameinfo.gi#L1062)) |
-| Experimental | `true` (active, [L1062](../../../experimental-config/gameinfo.gi#L1062)) |
+| Experimental | `true` (active, [L1072](../../../experimental-config/gameinfo.gi#L1072)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1235](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1235)) |
 
@@ -303,7 +303,7 @@ The name suggests automatic AI level-of-detail selection; Valve supplies no expl
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1063](../../../stable-config/gameinfo.gi#L1063)) |
-| Experimental | `true` (active, [L1063](../../../experimental-config/gameinfo.gi#L1063)) |
+| Experimental | `true` (active, [L1073](../../../experimental-config/gameinfo.gi#L1073)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1236](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1236)) |
 
@@ -331,7 +331,7 @@ Undocumented AI motor state timer registered in the game/server module with a ch
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1070](../../../stable-config/gameinfo.gi#L1070)) |
-| Experimental | `0` (active, [L1070](../../../experimental-config/gameinfo.gi#L1070)) |
+| Experimental | `0` (active, [L1080](../../../experimental-config/gameinfo.gi#L1080)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1243](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1243)) |
 
@@ -359,7 +359,7 @@ The name suggests an AI check-stand optimization; Valve supplies no explanatory 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1064](../../../stable-config/gameinfo.gi#L1064)) |
-| Experimental | `1` (active, [L1064](../../../experimental-config/gameinfo.gi#L1064)) |
+| Experimental | `1` (active, [L1074](../../../experimental-config/gameinfo.gi#L1074)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1237](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1237)) |
 
@@ -387,7 +387,7 @@ Controls the interval between NPC think updates at normal AI detail. The dump gi
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.3` (active, [L1065](../../../stable-config/gameinfo.gi#L1065)) |
-| Experimental | `0.3` (active, [L1065](../../../experimental-config/gameinfo.gi#L1065)) |
+| Experimental | `0.3` (active, [L1075](../../../experimental-config/gameinfo.gi#L1075)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.3` (active, [L1238](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1238)) |
 
@@ -415,7 +415,7 @@ Controls the interval between NPC think updates at low AI detail. The dump gives
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1066](../../../stable-config/gameinfo.gi#L1066)) |
-| Experimental | `1` (active, [L1066](../../../experimental-config/gameinfo.gi#L1066)) |
+| Experimental | `1` (active, [L1076](../../../experimental-config/gameinfo.gi#L1076)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1239](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1239)) |
 
@@ -443,7 +443,7 @@ Controls the interval between NPC think updates at medium AI detail. The dump gi
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.4` (active, [L1067](../../../stable-config/gameinfo.gi#L1067)) |
-| Experimental | `0.4` (active, [L1067](../../../experimental-config/gameinfo.gi#L1067)) |
+| Experimental | `0.4` (active, [L1077](../../../experimental-config/gameinfo.gi#L1077)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.4` (active, [L1240](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1240)) |
 
@@ -471,7 +471,7 @@ Controls the interval between NPC think updates at very low AI detail. The dump 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2` (active, [L1068](../../../stable-config/gameinfo.gi#L1068)) |
-| Experimental | `2` (active, [L1068](../../../experimental-config/gameinfo.gi#L1068)) |
+| Experimental | `2` (active, [L1078](../../../experimental-config/gameinfo.gi#L1078)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L1241](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1241)) |
 
@@ -499,7 +499,7 @@ The name suggests asynchronous AI ragdoll correction; Valve supplies no explanat
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1069](../../../stable-config/gameinfo.gi#L1069)) |
-| Experimental | `true` (active, [L1069](../../../experimental-config/gameinfo.gi#L1069)) |
+| Experimental | `true` (active, [L1079](../../../experimental-config/gameinfo.gi#L1079)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1242](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1242)) |
 
@@ -527,7 +527,7 @@ Name suggests always doing a full spatial partition update; no detailed help is 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1346](../../../stable-config/gameinfo.gi#L1346)) |
-| Experimental | `1` (active, [L1346](../../../experimental-config/gameinfo.gi#L1346)) |
+| Experimental | `1` (active, [L1356](../../../experimental-config/gameinfo.gi#L1356)) |
 | Stock gameinfo override | `1` (active, [L660](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L660)) |
 | OptimizationLock pinned upstream | `1` (active, [L1519](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1519)) |
 
@@ -555,7 +555,7 @@ Name suggests avoiding redundant animation-graph network-variable work. The pinn
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1171](../../../stable-config/gameinfo.gi#L1171)) |
-| Experimental | `true` (active, [L1171](../../../experimental-config/gameinfo.gi#L1171)) |
+| Experimental | `true` (active, [L1181](../../../experimental-config/gameinfo.gi#L1181)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1344](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1344)) |
 
@@ -583,7 +583,7 @@ Commented parallel-animation example absent from this dump. Current name, regist
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L1039](../../../stable-config/gameinfo.gi#L1039)) |
-| Experimental | `1` (disabled, [L1039](../../../experimental-config/gameinfo.gi#L1039)) |
+| Experimental | `1` (disabled, [L1049](../../../experimental-config/gameinfo.gi#L1049)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1212](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1212)) |
 
@@ -607,7 +607,7 @@ Commented parallel-animation example absent from this dump. Current name, regist
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L1040](../../../stable-config/gameinfo.gi#L1040)) |
-| Experimental | `1` (disabled, [L1040](../../../experimental-config/gameinfo.gi#L1040)) |
+| Experimental | `1` (disabled, [L1050](../../../experimental-config/gameinfo.gi#L1050)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1213](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1213)) |
 
@@ -631,7 +631,7 @@ Name suggests controlling foot-lock tilt calculation; Valve provides no specific
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L952](../../../stable-config/gameinfo.gi#L952)) |
-| Experimental | `false` (active, [L952](../../../experimental-config/gameinfo.gi#L952)) |
+| Experimental | `false` (active, [L962](../../../experimental-config/gameinfo.gi#L962)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1125](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1125)) |
 
@@ -659,7 +659,7 @@ Valve console help: A master convar that effectively disables the entire footloc
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L953](../../../stable-config/gameinfo.gi#L953)) |
-| Experimental | `false` (active, [L953](../../../experimental-config/gameinfo.gi#L953)) |
+| Experimental | `false` (active, [L963](../../../experimental-config/gameinfo.gi#L963)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1126](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1126)) |
 
@@ -687,7 +687,7 @@ Name suggests controlling foot-lock ground-roll adjustment; Valve provides no sp
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L954](../../../stable-config/gameinfo.gi#L954)) |
-| Experimental | `false` (active, [L954](../../../experimental-config/gameinfo.gi#L954)) |
+| Experimental | `false` (active, [L964](../../../experimental-config/gameinfo.gi#L964)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1127](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1127)) |
 
@@ -715,7 +715,7 @@ Name suggests controlling foot-lock hip-offset adjustment; Valve provides no spe
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L955](../../../stable-config/gameinfo.gi#L955)) |
-| Experimental | `false` (active, [L955](../../../experimental-config/gameinfo.gi#L955)) |
+| Experimental | `false` (active, [L965](../../../experimental-config/gameinfo.gi#L965)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1128](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1128)) |
 
@@ -743,7 +743,7 @@ Valve console help: Enable IK.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L956](../../../stable-config/gameinfo.gi#L956)) |
-| Experimental | `false` (active, [L956](../../../experimental-config/gameinfo.gi#L956)) |
+| Experimental | `false` (active, [L966](../../../experimental-config/gameinfo.gi#L966)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1129](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1129)) |
 
@@ -771,7 +771,7 @@ Valve console help: Convar for toggling foot lock ground tracking.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L957](../../../stable-config/gameinfo.gi#L957)) |
-| Experimental | `false` (active, [L957](../../../experimental-config/gameinfo.gi#L957)) |
+| Experimental | `false` (active, [L967](../../../experimental-config/gameinfo.gi#L967)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1130](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1130)) |
 
@@ -799,7 +799,7 @@ Name suggests controlling foot-lock hip shifting; Valve provides no specific hel
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L958](../../../stable-config/gameinfo.gi#L958)) |
-| Experimental | `false` (active, [L958](../../../experimental-config/gameinfo.gi#L958)) |
+| Experimental | `false` (active, [L968](../../../experimental-config/gameinfo.gi#L968)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1131](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1131)) |
 
@@ -827,7 +827,7 @@ Name suggests controlling animation-graph slowdown on slopes; Valve provides no 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L959](../../../stable-config/gameinfo.gi#L959)) |
-| Experimental | `false` (active, [L959](../../../experimental-config/gameinfo.gi#L959)) |
+| Experimental | `false` (active, [L969](../../../experimental-config/gameinfo.gi#L969)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1132](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1132)) |
 
@@ -855,7 +855,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (disabled, [L794](../../../stable-config/gameinfo.gi#L794)) |
-| Experimental | `0` (disabled, [L794](../../../experimental-config/gameinfo.gi#L794)) |
+| Experimental | `0` (disabled, [L804](../../../experimental-config/gameinfo.gi#L804)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (disabled, [L967](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L967)) |
 
@@ -879,7 +879,7 @@ Controls how quickly third-person camera offsets move toward ideal angles.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L681](../../../stable-config/gameinfo.gi#L681)) |
-| Experimental | `0` (active, [L681](../../../experimental-config/gameinfo.gi#L681)) |
+| Experimental | `0` (active, [L691](../../../experimental-config/gameinfo.gi#L691)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L854](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L854)) |
 
@@ -907,7 +907,7 @@ Name suggests ideal third-person camera distance; no explanatory Valve help is p
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (disabled, [L967](../../../stable-config/gameinfo.gi#L967)) |
-| Experimental | `0` (disabled, [L967](../../../experimental-config/gameinfo.gi#L967)) |
+| Experimental | `0` (disabled, [L977](../../../experimental-config/gameinfo.gi#L977)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (disabled, [L1140](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1140)) |
 
@@ -935,7 +935,7 @@ Controls lag while the third-person offset follows ideal angles.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L682](../../../stable-config/gameinfo.gi#L682)) |
-| Experimental | `0` (active, [L682](../../../experimental-config/gameinfo.gi#L682)) |
+| Experimental | `0` (active, [L692](../../../experimental-config/gameinfo.gi#L692)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L855](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L855)) |
 
@@ -963,7 +963,7 @@ Reports missing captions: 0 none, 1 console, 2 HUD.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L861](../../../stable-config/gameinfo.gi#L861)) |
-| Experimental | `0` (active, [L861](../../../experimental-config/gameinfo.gi#L861)) |
+| Experimental | `0` (active, [L871](../../../experimental-config/gameinfo.gi#L871)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1034](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1034)) |
 
@@ -991,7 +991,7 @@ Selects particle aggregation. The dump registers the switch without explaining i
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L802](../../../stable-config/gameinfo.gi#L802)); `true` (active, [L1334](../../../stable-config/gameinfo.gi#L1334)) |
-| Experimental | `true` (active, [L802](../../../experimental-config/gameinfo.gi#L802)); `true` (active, [L1334](../../../experimental-config/gameinfo.gi#L1334)) |
+| Experimental | `true` (active, [L812](../../../experimental-config/gameinfo.gi#L812)); `true` (active, [L1344](../../../experimental-config/gameinfo.gi#L1344)) |
 | Stock gameinfo override | `true` (active, [L648](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L648)) |
 | OptimizationLock pinned upstream | `true` (active, [L975](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L975)); `true` (active, [L1507](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1507)) |
 
@@ -1019,7 +1019,7 @@ Asynchronous user-command send switch inferred from its name; the pinned dump su
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L785](../../../stable-config/gameinfo.gi#L785)); `false` (active, [L1228](../../../stable-config/gameinfo.gi#L1228)) |
-| Experimental | `true` (disabled, [L785](../../../experimental-config/gameinfo.gi#L785)); `false` (active, [L1228](../../../experimental-config/gameinfo.gi#L1228)) |
+| Experimental | `true` (disabled, [L795](../../../experimental-config/gameinfo.gi#L795)); `false` (active, [L1238](../../../experimental-config/gameinfo.gi#L1238)) |
 | Stock gameinfo override | `false` (active, [L542](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L542)) |
 | OptimizationLock pinned upstream | `true` (disabled, [L958](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L958)); `false` (active, [L1401](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1401)) |
 
@@ -1047,7 +1047,7 @@ Absent from the dump but present in Valve stock. The stock comment describes ext
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.5` (active, [L1225](../../../stable-config/gameinfo.gi#L1225)) |
-| Experimental | `0.5` (active, [L1225](../../../experimental-config/gameinfo.gi#L1225)) |
+| Experimental | `0.5` (active, [L1235](../../../experimental-config/gameinfo.gi#L1235)) |
 | Stock gameinfo override | `0.5` (active, [L539](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L539)) |
 | OptimizationLock pinned upstream | `0.5` (active, [L1398](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1398)) |
 
@@ -1071,7 +1071,7 @@ Batches entity-list insertions/removals during interpolation latching; Valve ide
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L865](../../../stable-config/gameinfo.gi#L865)) |
-| Experimental | `true` (active, [L865](../../../experimental-config/gameinfo.gi#L865)) |
+| Experimental | `true` (active, [L875](../../../experimental-config/gameinfo.gi#L875)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1038](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1038)) |
 
@@ -1099,7 +1099,7 @@ Name suggests enabling a client bone-cache optimization; Valve provides no furth
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1087](../../../stable-config/gameinfo.gi#L1087)) |
-| Experimental | `1` (active, [L1087](../../../experimental-config/gameinfo.gi#L1087)) |
+| Experimental | `1` (active, [L1097](../../../experimental-config/gameinfo.gi#L1097)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1260](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1260)) |
 
@@ -1127,7 +1127,7 @@ Adds ticks of clock-synchronization receive margin to smooth packet loss. Valve 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1226](../../../stable-config/gameinfo.gi#L1226)) |
-| Experimental | `1` (active, [L1226](../../../experimental-config/gameinfo.gi#L1226)) |
+| Experimental | `1` (active, [L1236](../../../experimental-config/gameinfo.gi#L1236)) |
 | Stock gameinfo override | `1` (active, [L540](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L540)) |
 | OptimizationLock pinned upstream | `1` (active, [L1399](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1399)) |
 
@@ -1155,7 +1155,7 @@ Ragdoll-disable toggle with no descriptive Valve help; requested 0 retains its f
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L757](../../../stable-config/gameinfo.gi#L757)) |
-| Experimental | `0` (active, [L757](../../../experimental-config/gameinfo.gi#L757)) |
+| Experimental | `0` (active, [L767](../../../experimental-config/gameinfo.gi#L767)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L930](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L930)) |
 
@@ -1183,7 +1183,7 @@ Absent from the dump; the name suggests an eye occlusion feature, but current re
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L866](../../../stable-config/gameinfo.gi#L866)) |
-| Experimental | `false` (active, [L866](../../../experimental-config/gameinfo.gi#L866)) |
+| Experimental | `false` (active, [L876](../../../experimental-config/gameinfo.gi#L876)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1039](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1039)) |
 
@@ -1207,7 +1207,7 @@ Registered temporary-entity collision-related setting; the dump gives no help de
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1000` (active, [L761](../../../stable-config/gameinfo.gi#L761)) |
-| Experimental | `1000` (active, [L761](../../../experimental-config/gameinfo.gi#L761)) |
+| Experimental | `1000` (active, [L771](../../../experimental-config/gameinfo.gi#L771)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1000` (active, [L934](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L934)) |
 
@@ -1235,7 +1235,7 @@ Enables raw keyboard input.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L977](../../../stable-config/gameinfo.gi#L977)) |
-| Experimental | `1` (disabled, [L977](../../../experimental-config/gameinfo.gi#L977)) |
+| Experimental | `1` (disabled, [L987](../../../experimental-config/gameinfo.gi#L987)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1150](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1150)) |
 
@@ -1263,7 +1263,7 @@ Commented interpolation-time example absent from the pinned dump.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.01` (disabled, [L787](../../../stable-config/gameinfo.gi#L787)) |
-| Experimental | `0.01` (disabled, [L787](../../../experimental-config/gameinfo.gi#L787)) |
+| Experimental | `0.01` (disabled, [L797](../../../experimental-config/gameinfo.gi#L797)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.01` (disabled, [L960](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L960)) |
 
@@ -1287,7 +1287,7 @@ Runs interpolation concurrently for entities without children.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L867](../../../stable-config/gameinfo.gi#L867)); `1` (active, [L1347](../../../stable-config/gameinfo.gi#L1347)) |
-| Experimental | `true` (active, [L867](../../../experimental-config/gameinfo.gi#L867)); `1` (active, [L1347](../../../experimental-config/gameinfo.gi#L1347)) |
+| Experimental | `true` (active, [L877](../../../experimental-config/gameinfo.gi#L877)); `1` (active, [L1357](../../../experimental-config/gameinfo.gi#L1357)) |
 | Stock gameinfo override | `1` (active, [L661](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L661)) |
 | OptimizationLock pinned upstream | `true` (active, [L1040](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1040)); `1` (active, [L1520](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1520)) |
 
@@ -1315,7 +1315,7 @@ Valve’s legacy-style help describes interpolation as this ratio divided by cl_
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L788](../../../stable-config/gameinfo.gi#L788)); `0` (active, [L1227](../../../stable-config/gameinfo.gi#L1227)) |
-| Experimental | `1` (disabled, [L788](../../../experimental-config/gameinfo.gi#L788)); `0` (active, [L1227](../../../experimental-config/gameinfo.gi#L1227)) |
+| Experimental | `1` (disabled, [L798](../../../experimental-config/gameinfo.gi#L798)); `0` (active, [L1237](../../../experimental-config/gameinfo.gi#L1237)) |
 | Stock gameinfo override | `0` (active, [L541](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L541)) |
 | OptimizationLock pinned upstream | `1` (disabled, [L961](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L961)); `0` (active, [L1400](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1400)) |
 
@@ -1343,7 +1343,7 @@ Appears to bound particle visibility volumes; the dump does not describe the alg
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `100` (active, [L1331](../../../stable-config/gameinfo.gi#L1331)) |
-| Experimental | `100` (active, [L1331](../../../experimental-config/gameinfo.gi#L1331)) |
+| Experimental | `100` (active, [L1341](../../../experimental-config/gameinfo.gi#L1341)) |
 | Stock gameinfo override | `100` (active, [L645](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L645)) |
 | OptimizationLock pinned upstream | `100` (active, [L1504](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1504)) |
 
@@ -1371,7 +1371,7 @@ Name suggests concurrently gathering modifier/status-effect updates; Valve suppl
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L868](../../../stable-config/gameinfo.gi#L868)) |
-| Experimental | `false` (active, [L868](../../../experimental-config/gameinfo.gi#L868)) |
+| Experimental | `false` (active, [L878](../../../experimental-config/gameinfo.gi#L878)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1041](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1041)) |
 
@@ -1399,7 +1399,7 @@ Selects a particle batch mode. The current dump supplies no enum documentation; 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L803](../../../stable-config/gameinfo.gi#L803)) |
-| Experimental | `1` (active, [L803](../../../experimental-config/gameinfo.gi#L803)) |
+| Experimental | `1` (active, [L813](../../../experimental-config/gameinfo.gi#L813)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L976](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L976)) |
 
@@ -1427,7 +1427,7 @@ Sets the base contribution to choosing cheaper particle effects under load.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `5` (active, [L804](../../../stable-config/gameinfo.gi#L804)) |
-| Experimental | `5` (active, [L804](../../../experimental-config/gameinfo.gi#L804)) |
+| Experimental | `5` (active, [L814](../../../experimental-config/gameinfo.gi#L814)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `5` (active, [L977](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L977)) |
 
@@ -1455,7 +1455,7 @@ Scales the choice of cheaper particle fallback effects under load.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `10` (active, [L805](../../../stable-config/gameinfo.gi#L805)) |
-| Experimental | `10` (active, [L805](../../../experimental-config/gameinfo.gi#L805)) |
+| Experimental | `10` (active, [L815](../../../experimental-config/gameinfo.gi#L815)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (active, [L978](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L978)) |
 
@@ -1483,7 +1483,7 @@ Appears to cap particle count; exact scope and the meaning of zero are not descr
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1500` (disabled, [L978](../../../stable-config/gameinfo.gi#L978)) |
-| Experimental | `1500` (disabled, [L978](../../../experimental-config/gameinfo.gi#L978)) |
+| Experimental | `1500` (disabled, [L988](../../../experimental-config/gameinfo.gi#L988)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1500` (disabled, [L1151](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1151)) |
 
@@ -1511,7 +1511,7 @@ Controls how aggressively newly created particle systems fall back after their s
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `100` (active, [L806](../../../stable-config/gameinfo.gi#L806)) |
-| Experimental | `100` (active, [L806](../../../experimental-config/gameinfo.gi#L806)) |
+| Experimental | `100` (active, [L816](../../../experimental-config/gameinfo.gi#L816)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `100` (active, [L979](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L979)) |
 
@@ -1539,7 +1539,7 @@ Sets the particle simulation time threshold before newly created systems begin u
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L807](../../../stable-config/gameinfo.gi#L807)); `0.3` (disabled, [L979](../../../stable-config/gameinfo.gi#L979)) |
-| Experimental | `1` (active, [L807](../../../experimental-config/gameinfo.gi#L807)); `0.3` (disabled, [L979](../../../experimental-config/gameinfo.gi#L979)) |
+| Experimental | `1` (active, [L817](../../../experimental-config/gameinfo.gi#L817)); `0.3` (disabled, [L989](../../../experimental-config/gameinfo.gi#L989)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L980](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L980)); `0.3` (disabled, [L1152](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1152)) |
 
@@ -1567,7 +1567,7 @@ Name suggests animated physics hierarchy handling; the dump has no descriptive h
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L1088](../../../stable-config/gameinfo.gi#L1088)) |
-| Experimental | `false` (active, [L1088](../../../experimental-config/gameinfo.gi#L1088)) |
+| Experimental | `false` (active, [L1098](../../../experimental-config/gameinfo.gi#L1098)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1261](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1261)) |
 
@@ -1595,7 +1595,7 @@ Chooses fixed client tick interval assumptions for physics substeps; false recal
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L869](../../../stable-config/gameinfo.gi#L869)) |
-| Experimental | `true` (active, [L869](../../../experimental-config/gameinfo.gi#L869)) |
+| Experimental | `true` (active, [L879](../../../experimental-config/gameinfo.gi#L879)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1042](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1042)) |
 
@@ -1623,7 +1623,7 @@ Master enable for client physics simulation, per Valve help.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L614](../../../stable-config/gameinfo.gi#L614)); `false` (disabled, [L980](../../../stable-config/gameinfo.gi#L980)) |
-| Experimental | `true` (active, [L614](../../../experimental-config/gameinfo.gi#L614)); `false` (disabled, [L980](../../../experimental-config/gameinfo.gi#L980)) |
+| Experimental | `true` (active, [L614](../../../experimental-config/gameinfo.gi#L614)); `false` (disabled, [L990](../../../experimental-config/gameinfo.gi#L990)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L787](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L787)); `false` (disabled, [L1153](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1153)) |
 
@@ -1651,7 +1651,7 @@ Name suggests starting networked physics bodies asleep; the dump has no descript
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1089](../../../stable-config/gameinfo.gi#L1089)) |
-| Experimental | `true` (active, [L1089](../../../experimental-config/gameinfo.gi#L1089)) |
+| Experimental | `true` (active, [L1099](../../../experimental-config/gameinfo.gi#L1099)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1262](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1262)) |
 
@@ -1679,7 +1679,7 @@ Allows dynamic physics bodies to sleep when eligible.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1090](../../../stable-config/gameinfo.gi#L1090)) |
-| Experimental | `true` (active, [L1090](../../../experimental-config/gameinfo.gi#L1090)) |
+| Experimental | `true` (active, [L1100](../../../experimental-config/gameinfo.gi#L1100)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1263](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1263)) |
 
@@ -1707,7 +1707,7 @@ When true, polls network messages every frame rather than every tick.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1219](../../../stable-config/gameinfo.gi#L1219)) |
-| Experimental | `0` (active, [L1219](../../../experimental-config/gameinfo.gi#L1219)) |
+| Experimental | `0` (active, [L1229](../../../experimental-config/gameinfo.gi#L1229)) |
 | Stock gameinfo override | `0` (active, [L533](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L533)) |
 | OptimizationLock pinned upstream | `0` (active, [L1392](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1392)) |
 
@@ -1735,7 +1735,7 @@ Name suggests the default ragdoll scale, but the dump does not define units, app
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1091](../../../stable-config/gameinfo.gi#L1091)) |
-| Experimental | `0` (active, [L1091](../../../experimental-config/gameinfo.gi#L1091)) |
+| Experimental | `0` (active, [L1101](../../../experimental-config/gameinfo.gi#L1101)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1264](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1264)) |
 
@@ -1763,7 +1763,7 @@ Caps the number of displayed ragdolls; Valve documents -1 as unlimited.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L758](../../../stable-config/gameinfo.gi#L758)) |
-| Experimental | `0` (active, [L758](../../../experimental-config/gameinfo.gi#L758)) |
+| Experimental | `0` (active, [L768](../../../experimental-config/gameinfo.gi#L768)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L931](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L931)) |
 
@@ -1791,7 +1791,7 @@ Delay in seconds before resending a connection attempt.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `15` (disabled, [L790](../../../stable-config/gameinfo.gi#L790)) |
-| Experimental | `15` (disabled, [L790](../../../experimental-config/gameinfo.gi#L790)) |
+| Experimental | `15` (disabled, [L800](../../../experimental-config/gameinfo.gi#L800)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `15` (disabled, [L963](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L963)) |
 
@@ -1819,7 +1819,7 @@ Allows higher-priority dynamic lights to replace lower-priority ones.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L741](../../../stable-config/gameinfo.gi#L741)) |
-| Experimental | `1` (active, [L741](../../../experimental-config/gameinfo.gi#L741)) |
+| Experimental | `1` (active, [L751](../../../experimental-config/gameinfo.gi#L751)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L914](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L914)) |
 
@@ -1847,7 +1847,7 @@ Name/upstream comments identify drawing splash effects; no detailed Valve help.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L769](../../../stable-config/gameinfo.gi#L769)) |
-| Experimental | `0` (active, [L769](../../../experimental-config/gameinfo.gi#L769)) |
+| Experimental | `0` (active, [L779](../../../experimental-config/gameinfo.gi#L779)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L942](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L942)) |
 
@@ -1875,7 +1875,7 @@ Name suggests simulating dormant client entities; exact dormancy conditions and 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L904](../../../stable-config/gameinfo.gi#L904)) |
-| Experimental | `false` (active, [L904](../../../experimental-config/gameinfo.gi#L904)) |
+| Experimental | `false` (active, [L914](../../../experimental-config/gameinfo.gi#L914)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1077](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1077)) |
 
@@ -1903,7 +1903,7 @@ Skips game animations when enabled, according to Valve help.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L981](../../../stable-config/gameinfo.gi#L981)) |
-| Experimental | `true` (disabled, [L981](../../../experimental-config/gameinfo.gi#L981)) |
+| Experimental | `true` (disabled, [L991](../../../experimental-config/gameinfo.gi#L991)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1154](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1154)) |
 
@@ -1931,7 +1931,7 @@ Time in seconds for smoothing the client view after a prediction error.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.01` (disabled, [L789](../../../stable-config/gameinfo.gi#L789)) |
-| Experimental | `0.01` (disabled, [L789](../../../experimental-config/gameinfo.gi#L789)) |
+| Experimental | `0.01` (disabled, [L799](../../../experimental-config/gameinfo.gi#L799)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.01` (disabled, [L962](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L962)) |
 
@@ -1959,7 +1959,7 @@ Multiplied by the tick interval and added to cl_tickpacket_recvmargin_desired to
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1224](../../../stable-config/gameinfo.gi#L1224)) |
-| Experimental | `1` (active, [L1224](../../../experimental-config/gameinfo.gi#L1224)) |
+| Experimental | `1` (active, [L1234](../../../experimental-config/gameinfo.gi#L1234)) |
 | Stock gameinfo override | `1` (active, [L538](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L538)) |
 | OptimizationLock pinned upstream | `1` (active, [L1397](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1397)) |
 
@@ -1987,7 +1987,7 @@ Target user-command arrival margin in milliseconds before the server needs the c
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `5` (active, [L1223](../../../stable-config/gameinfo.gi#L1223)) |
-| Experimental | `5` (active, [L1223](../../../experimental-config/gameinfo.gi#L1223)) |
+| Experimental | `5` (active, [L1233](../../../experimental-config/gameinfo.gi#L1233)) |
 | Stock gameinfo override | `5` (active, [L537](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L537)) |
 | OptimizationLock pinned upstream | `5` (active, [L1396](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1396)) |
 
@@ -2015,7 +2015,7 @@ Number of update packets per second requested from the server; a request is not 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `128` (disabled, [L786](../../../stable-config/gameinfo.gi#L786)); `128` (active, [L1351](../../../stable-config/gameinfo.gi#L1351)) |
-| Experimental | `128` (disabled, [L786](../../../experimental-config/gameinfo.gi#L786)); `128` (active, [L1351](../../../experimental-config/gameinfo.gi#L1351)) |
+| Experimental | `128` (disabled, [L796](../../../experimental-config/gameinfo.gi#L796)); `128` (active, [L1361](../../../experimental-config/gameinfo.gi#L1361)) |
 | Stock gameinfo override | `128` (active, [L665](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L665)) |
 | OptimizationLock pinned upstream | `128` (disabled, [L959](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L959)); `128` (active, [L1524](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1524)) |
 
@@ -2043,7 +2043,7 @@ For local listen-server connections, uses the network stack and 127.0.0.1 instea
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1218](../../../stable-config/gameinfo.gi#L1218)) |
-| Experimental | `1` (active, [L1218](../../../experimental-config/gameinfo.gi#L1218)) |
+| Experimental | `1` (active, [L1228](../../../experimental-config/gameinfo.gi#L1228)) |
 | Stock gameinfo override | `1` (active, [L532](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L532)) |
 | OptimizationLock pinned upstream | `1` (active, [L1391](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1391)) |
 
@@ -2071,7 +2071,7 @@ Enables closed captions; requested false matches the declared default.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L717](../../../stable-config/gameinfo.gi#L717)) |
-| Experimental | `false` (active, [L717](../../../experimental-config/gameinfo.gi#L717)) |
+| Experimental | `false` (active, [L727](../../../experimental-config/gameinfo.gi#L727)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L890](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L890)) |
 
@@ -2099,7 +2099,7 @@ Selects the stateless FilterTransform variant for cloth; the stock value 0 keeps
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1324](../../../stable-config/gameinfo.gi#L1324)) |
-| Experimental | `0` (active, [L1324](../../../experimental-config/gameinfo.gi#L1324)) |
+| Experimental | `0` (active, [L1334](../../../experimental-config/gameinfo.gi#L1334)) |
 | Stock gameinfo override | `0` (active, [L638](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L638)) |
 | OptimizationLock pinned upstream | `0` (active, [L1497](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1497)) |
 
@@ -2127,7 +2127,7 @@ Name suggests choosing tick-based cloth updates; Valve’s dump does not describ
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L762](../../../stable-config/gameinfo.gi#L762)) |
-| Experimental | `0` (active, [L762](../../../experimental-config/gameinfo.gi#L762)) |
+| Experimental | `0` (active, [L772](../../../experimental-config/gameinfo.gi#L772)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L935](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L935)) |
 
@@ -2155,7 +2155,7 @@ Valve console help: CPU Level - Default: High
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L795](../../../stable-config/gameinfo.gi#L795)) |
-| Experimental | `1` (disabled, [L795](../../../experimental-config/gameinfo.gi#L795)) |
+| Experimental | `1` (disabled, [L805](../../../experimental-config/gameinfo.gi#L805)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L968](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L968)) |
 
@@ -2183,7 +2183,7 @@ Maximum milliseconds of user commands the server allows a client to buffer.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `120` (active, [L1220](../../../stable-config/gameinfo.gi#L1220)) |
-| Experimental | `120` (active, [L1220](../../../experimental-config/gameinfo.gi#L1220)) |
+| Experimental | `120` (active, [L1230](../../../experimental-config/gameinfo.gi#L1230)) |
 | Stock gameinfo override | `120` (active, [L534](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L534)) |
 | OptimizationLock pinned upstream | `120` (active, [L1393](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1393)) |
 
@@ -2211,7 +2211,7 @@ Global debug-draw-related switch, but Valve provides no further help; exact cons
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L874](../../../stable-config/gameinfo.gi#L874)) |
-| Experimental | `false` (active, [L874](../../../experimental-config/gameinfo.gi#L874)) |
+| Experimental | `false` (active, [L884](../../../experimental-config/gameinfo.gi#L884)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1047](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1047)) |
 
@@ -2239,7 +2239,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1174](../../../stable-config/gameinfo.gi#L1174)) |
-| Experimental | `1` (active, [L1174](../../../experimental-config/gameinfo.gi#L1174)) |
+| Experimental | `1` (active, [L1184](../../../experimental-config/gameinfo.gi#L1184)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1347](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1347)) |
 
@@ -2263,7 +2263,7 @@ The name and upstream label indicate bone-driven flex/deformation control; Valve
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L763](../../../stable-config/gameinfo.gi#L763)) |
-| Experimental | `0` (active, [L763](../../../experimental-config/gameinfo.gi#L763)) |
+| Experimental | `0` (active, [L773](../../../experimental-config/gameinfo.gi#L773)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L936](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L936)) |
 
@@ -2291,7 +2291,7 @@ Not present in the pinned dump; the old name/comment suggests a system-performan
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L796](../../../stable-config/gameinfo.gi#L796)) |
-| Experimental | `true` (disabled, [L796](../../../experimental-config/gameinfo.gi#L796)) |
+| Experimental | `true` (disabled, [L806](../../../experimental-config/gameinfo.gi#L806)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L969](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L969)) |
 
@@ -2315,7 +2315,7 @@ Uses time since the preceding input-processing pass when processing input severa
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L677](../../../stable-config/gameinfo.gi#L677)) |
-| Experimental | `true` (active, [L677](../../../experimental-config/gameinfo.gi#L677)) |
+| Experimental | `true` (active, [L687](../../../experimental-config/gameinfo.gi#L687)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L850](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L850)) |
 
@@ -2343,7 +2343,7 @@ When low-latency mode is active, selects whether its sleep occurs after client s
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L666](../../../stable-config/gameinfo.gi#L666)) |
-| Experimental | `false` (active, [L666](../../../experimental-config/gameinfo.gi#L666)) |
+| Experimental | `false` (active, [L676](../../../experimental-config/gameinfo.gi#L676)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L839](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L839)) |
 
@@ -2371,7 +2371,7 @@ Limits simulation ticks processed per frame. Valve explicitly states that exceed
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2` (active, [L876](../../../stable-config/gameinfo.gi#L876)) |
-| Experimental | `2` (active, [L876](../../../experimental-config/gameinfo.gi#L876)) |
+| Experimental | `2` (active, [L886](../../../experimental-config/gameinfo.gi#L886)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L1049](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1049)) |
 
@@ -2399,7 +2399,7 @@ Valve console help: Draw a line between a rendered joint and its parent.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (disabled, [L1036](../../../stable-config/gameinfo.gi#L1036)) |
-| Experimental | `false` (disabled, [L1036](../../../experimental-config/gameinfo.gi#L1036)) |
+| Experimental | `false` (disabled, [L1046](../../../experimental-config/gameinfo.gi#L1046)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1209](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1209)) |
 
@@ -2427,7 +2427,7 @@ Valve console help: Draw the name of a rendered joint.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (disabled, [L1037](../../../stable-config/gameinfo.gi#L1037)) |
-| Experimental | `false` (disabled, [L1037](../../../experimental-config/gameinfo.gi#L1037)) |
+| Experimental | `false` (disabled, [L1047](../../../experimental-config/gameinfo.gi#L1047)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1210](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1210)) |
 
@@ -2455,7 +2455,7 @@ Draws metal-spark effects.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L1176](../../../stable-config/gameinfo.gi#L1176)) |
-| Experimental | `false` (active, [L1176](../../../experimental-config/gameinfo.gi#L1176)) |
+| Experimental | `false` (active, [L1186](../../../experimental-config/gameinfo.gi#L1186)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1349](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1349)) |
 
@@ -2483,7 +2483,7 @@ Valve console help: GPU Level - Default: High
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L982](../../../stable-config/gameinfo.gi#L982)) |
-| Experimental | `1` (disabled, [L982](../../../experimental-config/gameinfo.gi#L982)) |
+| Experimental | `1` (disabled, [L992](../../../experimental-config/gameinfo.gi#L992)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1155](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1155)) |
 
@@ -2511,7 +2511,7 @@ Valve console help: Memory Level - Default: High
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L797](../../../stable-config/gameinfo.gi#L797)) |
-| Experimental | `1` (disabled, [L797](../../../experimental-config/gameinfo.gi#L797)) |
+| Experimental | `1` (disabled, [L807](../../../experimental-config/gameinfo.gi#L807)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L970](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L970)) |
 
@@ -2539,7 +2539,7 @@ Name suggests controlling IK constraints; Valve provides no specific help, so pr
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L941](../../../stable-config/gameinfo.gi#L941)) |
-| Experimental | `false` (active, [L941](../../../experimental-config/gameinfo.gi#L941)) |
+| Experimental | `false` (active, [L951](../../../experimental-config/gameinfo.gi#L951)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1114](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1114)) |
 
@@ -2567,7 +2567,7 @@ Name suggests controlling the named dogleg three-bone IK path; Valve provides no
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L942](../../../stable-config/gameinfo.gi#L942)) |
-| Experimental | `false` (active, [L942](../../../experimental-config/gameinfo.gi#L942)) |
+| Experimental | `false` (active, [L952](../../../experimental-config/gameinfo.gi#L952)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1115](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1115)) |
 
@@ -2595,7 +2595,7 @@ Name suggests controlling the debug-labelled backward FABRIK IK path; Valve prov
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L943](../../../stable-config/gameinfo.gi#L943)) |
-| Experimental | `false` (active, [L943](../../../experimental-config/gameinfo.gi#L943)) |
+| Experimental | `false` (active, [L953](../../../experimental-config/gameinfo.gi#L953)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1116](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1116)) |
 
@@ -2623,7 +2623,7 @@ Name suggests controlling the debug-labelled forward FABRIK IK path; Valve provi
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L944](../../../stable-config/gameinfo.gi#L944)) |
-| Experimental | `false` (active, [L944](../../../experimental-config/gameinfo.gi#L944)) |
+| Experimental | `false` (active, [L954](../../../experimental-config/gameinfo.gi#L954)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1117](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1117)) |
 
@@ -2651,7 +2651,7 @@ Valve console help: Enable IK.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L945](../../../stable-config/gameinfo.gi#L945)) |
-| Experimental | `false` (active, [L945](../../../experimental-config/gameinfo.gi#L945)) |
+| Experimental | `false` (active, [L955](../../../experimental-config/gameinfo.gi#L955)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1118](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1118)) |
 
@@ -2679,7 +2679,7 @@ Name suggests controlling FABRIK chain alignment; Valve provides no specific hel
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L764](../../../stable-config/gameinfo.gi#L764)) |
-| Experimental | `1` (active, [L764](../../../experimental-config/gameinfo.gi#L764)) |
+| Experimental | `1` (active, [L774](../../../experimental-config/gameinfo.gi#L774)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L937](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L937)) |
 
@@ -2707,7 +2707,7 @@ Name suggests controlling the backward FABRIK IK pass; Valve provides no specifi
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L946](../../../stable-config/gameinfo.gi#L946)) |
-| Experimental | `false` (active, [L946](../../../experimental-config/gameinfo.gi#L946)) |
+| Experimental | `false` (active, [L956](../../../experimental-config/gameinfo.gi#L956)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1119](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1119)) |
 
@@ -2735,7 +2735,7 @@ Name suggests controlling the forward FABRIK IK pass; Valve provides no specific
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L947](../../../stable-config/gameinfo.gi#L947)) |
-| Experimental | `false` (active, [L947](../../../experimental-config/gameinfo.gi#L947)) |
+| Experimental | `false` (active, [L957](../../../experimental-config/gameinfo.gi#L957)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1120](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1120)) |
 
@@ -2763,7 +2763,7 @@ Name suggests controlling a final IK correction pass; Valve provides no specific
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L765](../../../stable-config/gameinfo.gi#L765)) |
-| Experimental | `0` (active, [L765](../../../experimental-config/gameinfo.gi#L765)) |
+| Experimental | `0` (active, [L775](../../../experimental-config/gameinfo.gi#L775)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L938](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L938)) |
 
@@ -2791,7 +2791,7 @@ Name suggests controlling plane-tilt adjustment; Valve provides no specific help
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L948](../../../stable-config/gameinfo.gi#L948)) |
-| Experimental | `false` (active, [L948](../../../experimental-config/gameinfo.gi#L948)) |
+| Experimental | `false` (active, [L958](../../../experimental-config/gameinfo.gi#L958)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1121](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1121)) |
 
@@ -2819,7 +2819,7 @@ Enables instant-replay recording.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L983](../../../stable-config/gameinfo.gi#L983)) |
-| Experimental | `true` (disabled, [L983](../../../experimental-config/gameinfo.gi#L983)) |
+| Experimental | `true` (disabled, [L993](../../../experimental-config/gameinfo.gi#L993)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1156](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1156)) |
 
@@ -2847,7 +2847,7 @@ Name suggests concurrent restoration of interpolated variables; the dump provide
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1295](../../../stable-config/gameinfo.gi#L1295)) |
-| Experimental | `1` (active, [L1295](../../../experimental-config/gameinfo.gi#L1295)) |
+| Experimental | `1` (active, [L1305](../../../experimental-config/gameinfo.gi#L1305)) |
 | Stock gameinfo override | `1` (active, [L609](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L609)) |
 | OptimizationLock pinned upstream | `1` (active, [L1468](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1468)) |
 
@@ -2903,7 +2903,7 @@ The name identifies a minimap update rate in hertz, but the dump supplies no fur
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `10` (active, [L1178](../../../stable-config/gameinfo.gi#L1178)) |
-| Experimental | `10` (active, [L1178](../../../experimental-config/gameinfo.gi#L1178)) |
+| Experimental | `10` (active, [L1188](../../../experimental-config/gameinfo.gi#L1188)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (active, [L1351](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1351)) |
 
@@ -2931,7 +2931,7 @@ Name suggests drawing movement statistics; no descriptive help.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L985](../../../stable-config/gameinfo.gi#L985)) |
-| Experimental | `true` (disabled, [L985](../../../experimental-config/gameinfo.gi#L985)) |
+| Experimental | `true` (disabled, [L995](../../../experimental-config/gameinfo.gi#L995)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1158](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1158)) |
 
@@ -2959,7 +2959,7 @@ Displays Hideout music-manager debug information.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L1021](../../../stable-config/gameinfo.gi#L1021)) |
-| Experimental | `true` (disabled, [L1021](../../../experimental-config/gameinfo.gi#L1021)) |
+| Experimental | `true` (disabled, [L1031](../../../experimental-config/gameinfo.gi#L1031)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1194](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1194)) |
 
@@ -2987,7 +2987,7 @@ Camera-related navigation-editor toggle; exact mode is not described.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L691](../../../stable-config/gameinfo.gi#L691)) |
-| Experimental | `0` (active, [L691](../../../experimental-config/gameinfo.gi#L691)) |
+| Experimental | `0` (active, [L701](../../../experimental-config/gameinfo.gi#L701)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L864](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L864)) |
 
@@ -3015,7 +3015,7 @@ Name suggests a navigation-generation connection distance; exact units/algorithm
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2.0` (active, [L1231](../../../stable-config/gameinfo.gi#L1231)) |
-| Experimental | `2.0` (active, [L1231](../../../experimental-config/gameinfo.gi#L1231)) |
+| Experimental | `2.0` (active, [L1241](../../../experimental-config/gameinfo.gi#L1241)) |
 | Stock gameinfo override | `2.0` (active, [L545](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L545)) |
 | OptimizationLock pinned upstream | `2.0` (active, [L1404](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1404)) |
 
@@ -3043,7 +3043,7 @@ Name suggests asynchronous navigation-obstruction updates; no detailed help.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1179](../../../stable-config/gameinfo.gi#L1179)) |
-| Experimental | `true` (active, [L1179](../../../experimental-config/gameinfo.gi#L1179)) |
+| Experimental | `true` (active, [L1189](../../../experimental-config/gameinfo.gi#L1189)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1352](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1352)) |
 
@@ -3071,7 +3071,7 @@ Restricts GatherSendProxyResults traversal to struct and array fields instead of
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1353](../../../stable-config/gameinfo.gi#L1353)) |
-| Experimental | `1` (active, [L1353](../../../experimental-config/gameinfo.gi#L1353)) |
+| Experimental | `1` (active, [L1363](../../../experimental-config/gameinfo.gi#L1363)) |
 | Stock gameinfo override | `1` (active, [L667](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L667)) |
 | OptimizationLock pinned upstream | `1` (active, [L1526](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1526)) |
 
@@ -3099,7 +3099,7 @@ Name suggests parallel physics invalidation; no detailed help is provided. The a
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (disabled, [L1045](../../../stable-config/gameinfo.gi#L1045)); `1` (active, [L1348](../../../stable-config/gameinfo.gi#L1348)) |
-| Experimental | `false` (disabled, [L1045](../../../experimental-config/gameinfo.gi#L1045)); `1` (active, [L1348](../../../experimental-config/gameinfo.gi#L1348)) |
+| Experimental | `false` (disabled, [L1055](../../../experimental-config/gameinfo.gi#L1055)); `1` (active, [L1358](../../../experimental-config/gameinfo.gi#L1358)) |
 | Stock gameinfo override | `1` (active, [L662](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L662)) |
 | OptimizationLock pinned upstream | `false` (disabled, [L1218](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1218)); `1` (active, [L1521](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1521)) |
 
@@ -3127,7 +3127,7 @@ Name suggests parallel surrounding-bounds updates; no detailed help is provided.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1345](../../../stable-config/gameinfo.gi#L1345)) |
-| Experimental | `1` (active, [L1345](../../../experimental-config/gameinfo.gi#L1345)) |
+| Experimental | `1` (active, [L1355](../../../experimental-config/gameinfo.gi#L1355)) |
 | Stock gameinfo override | `1` (active, [L659](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L659)) |
 | OptimizationLock pinned upstream | `1` (active, [L1518](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1518)) |
 
@@ -3155,7 +3155,7 @@ Registered replicated particle-cluster drawing switch. Exact cluster scope and o
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L1044](../../../stable-config/gameinfo.gi#L1044)) |
-| Experimental | `1` (disabled, [L1044](../../../experimental-config/gameinfo.gi#L1044)) |
+| Experimental | `1` (disabled, [L1054](../../../experimental-config/gameinfo.gi#L1054)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1217](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1217)) |
 
@@ -3183,7 +3183,7 @@ Registered replicated particle-cluster collision-hull switch. No evidence suppor
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (disabled, [L1035](../../../stable-config/gameinfo.gi#L1035)) |
-| Experimental | `false` (disabled, [L1035](../../../experimental-config/gameinfo.gi#L1035)) |
+| Experimental | `false` (disabled, [L1045](../../../experimental-config/gameinfo.gi#L1045)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1208](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1208)) |
 
@@ -3211,7 +3211,7 @@ Name suggests aggregate world physics compounds; no detailed help is provided. T
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1349](../../../stable-config/gameinfo.gi#L1349)) |
-| Experimental | `0` (active, [L1349](../../../experimental-config/gameinfo.gi#L1349)) |
+| Experimental | `0` (active, [L1359](../../../experimental-config/gameinfo.gi#L1359)) |
 | Stock gameinfo override | `0` (active, [L663](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L663)) |
 | OptimizationLock pinned upstream | `0` (active, [L1522](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1522)) |
 
@@ -3239,7 +3239,7 @@ Name suggests batched physics ray testing; the dump has no descriptive help. Exa
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `16` (disabled, [L992](../../../stable-config/gameinfo.gi#L992)) |
-| Experimental | `16` (disabled, [L992](../../../experimental-config/gameinfo.gi#L992)) |
+| Experimental | `16` (disabled, [L1002](../../../experimental-config/gameinfo.gi#L1002)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `16` (disabled, [L1165](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1165)) |
 
@@ -3267,7 +3267,7 @@ Name suggests culling internal mesh collision contacts. The dump supplies no hel
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L828](../../../stable-config/gameinfo.gi#L828)) |
-| Experimental | `true` (active, [L828](../../../experimental-config/gameinfo.gi#L828)) |
+| Experimental | `true` (active, [L838](../../../experimental-config/gameinfo.gi#L838)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1001](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1001)) |
 
@@ -3295,7 +3295,7 @@ Physics dynamic-scaling switch with no explanatory help. A false example is inte
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (disabled, [L964](../../../stable-config/gameinfo.gi#L964)) |
-| Experimental | `false` (disabled, [L964](../../../experimental-config/gameinfo.gi#L964)) |
+| Experimental | `false` (disabled, [L974](../../../experimental-config/gameinfo.gi#L974)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1137](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1137)) |
 
@@ -3323,7 +3323,7 @@ Name suggests threaded cloth-bone updates; the dump has no descriptive help. Exa
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L1041](../../../stable-config/gameinfo.gi#L1041)) |
-| Experimental | `1` (disabled, [L1041](../../../experimental-config/gameinfo.gi#L1041)) |
+| Experimental | `1` (disabled, [L1051](../../../experimental-config/gameinfo.gi#L1051)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1214](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1214)) |
 
@@ -3351,7 +3351,7 @@ Name suggests threaded kinematic-bone updates; the dump has no descriptive help.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L1042](../../../stable-config/gameinfo.gi#L1042)) |
-| Experimental | `1` (disabled, [L1042](../../../experimental-config/gameinfo.gi#L1042)) |
+| Experimental | `1` (disabled, [L1052](../../../experimental-config/gameinfo.gi#L1052)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1215](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1215)) |
 
@@ -3379,7 +3379,7 @@ Name suggests threaded transform updates; the dump has no descriptive help. Exac
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L1043](../../../stable-config/gameinfo.gi#L1043)) |
-| Experimental | `1` (disabled, [L1043](../../../experimental-config/gameinfo.gi#L1043)) |
+| Experimental | `1` (disabled, [L1053](../../../experimental-config/gameinfo.gi#L1053)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1216](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1216)) |
 
@@ -3407,7 +3407,7 @@ Caps breakable prop pieces created per frame; Valve documents -1 as using the mo
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L766](../../../stable-config/gameinfo.gi#L766)) |
-| Experimental | `0` (active, [L766](../../../experimental-config/gameinfo.gi#L766)) |
+| Experimental | `0` (active, [L776](../../../experimental-config/gameinfo.gi#L776)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L939](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L939)) |
 
@@ -3435,7 +3435,7 @@ Name suggests parallel ragdoll pose control; the dump has no descriptive help. E
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L1031](../../../stable-config/gameinfo.gi#L1031)) |
-| Experimental | `1` (disabled, [L1031](../../../experimental-config/gameinfo.gi#L1031)) |
+| Experimental | `1` (disabled, [L1041](../../../experimental-config/gameinfo.gi#L1041)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L1204](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1204)) |
 
@@ -3463,7 +3463,7 @@ Structured gameinfo default metadata for rate; this is not a separate ConVar nam
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `786432` (active, [L1209](../../../stable-config/gameinfo.gi#L1209)) |
-| Experimental | `786432` (active, [L1209](../../../experimental-config/gameinfo.gi#L1209)) |
+| Experimental | `786432` (active, [L1219](../../../experimental-config/gameinfo.gi#L1219)) |
 | Stock gameinfo override | `786432` (active, [L523](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L523)) |
 | OptimizationLock pinned upstream | `786432` (active, [L1382](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1382)) |
 
@@ -3491,7 +3491,7 @@ Structured gameinfo max metadata for rate; this is not a separate ConVar named m
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1000000` (active, [L1210](../../../stable-config/gameinfo.gi#L1210)) |
-| Experimental | `1000000` (active, [L1210](../../../experimental-config/gameinfo.gi#L1210)) |
+| Experimental | `1000000` (active, [L1220](../../../experimental-config/gameinfo.gi#L1220)) |
 | Stock gameinfo override | `1000000` (active, [L524](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L524)) |
 | OptimizationLock pinned upstream | `1000000` (active, [L1383](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1383)) |
 
@@ -3519,7 +3519,7 @@ Structured gameinfo min metadata for rate; this is not a separate ConVar named m
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `98304` (active, [L1208](../../../stable-config/gameinfo.gi#L1208)) |
-| Experimental | `98304` (active, [L1208](../../../experimental-config/gameinfo.gi#L1208)) |
+| Experimental | `98304` (active, [L1218](../../../experimental-config/gameinfo.gi#L1218)) |
 | Stock gameinfo override | `98304` (active, [L522](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L522)) |
 | OptimizationLock pinned upstream | `98304` (active, [L1381](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1381)) |
 
@@ -3547,7 +3547,7 @@ Valve console help: Collide rope with the world
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1149](../../../stable-config/gameinfo.gi#L1149)) |
-| Experimental | `0` (active, [L1149](../../../experimental-config/gameinfo.gi#L1149)) |
+| Experimental | `0` (active, [L1159](../../../experimental-config/gameinfo.gi#L1159)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1322](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1322)) |
 
@@ -3575,7 +3575,7 @@ Valve console help: How much to enlarge ropes in screen space for antialiasing e
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1150](../../../stable-config/gameinfo.gi#L1150)) |
-| Experimental | `0` (active, [L1150](../../../experimental-config/gameinfo.gi#L1150)) |
+| Experimental | `0` (active, [L1160](../../../experimental-config/gameinfo.gi#L1160)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1323](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1323)) |
 
@@ -3603,7 +3603,7 @@ Valve console help: Alpha for rope antialiasing effect
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1151](../../../stable-config/gameinfo.gi#L1151)) |
-| Experimental | `0` (active, [L1151](../../../experimental-config/gameinfo.gi#L1151)) |
+| Experimental | `0` (active, [L1161](../../../experimental-config/gameinfo.gi#L1161)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1324](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1324)) |
 
@@ -3631,7 +3631,7 @@ Name suggests the screen-space width associated with maximum smoothing alpha, bu
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1152](../../../stable-config/gameinfo.gi#L1152)) |
-| Experimental | `0` (active, [L1152](../../../experimental-config/gameinfo.gi#L1152)) |
+| Experimental | `0` (active, [L1162](../../../experimental-config/gameinfo.gi#L1162)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1325](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1325)) |
 
@@ -3659,7 +3659,7 @@ Valve console help: Alpha for rope antialiasing effect
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1153](../../../stable-config/gameinfo.gi#L1153)) |
-| Experimental | `0` (active, [L1153](../../../experimental-config/gameinfo.gi#L1153)) |
+| Experimental | `0` (active, [L1163](../../../experimental-config/gameinfo.gi#L1163)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1326](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1326)) |
 
@@ -3687,7 +3687,7 @@ Valve console help: When using smoothing, this is the min screenspace width it l
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1154](../../../stable-config/gameinfo.gi#L1154)) |
-| Experimental | `0` (active, [L1154](../../../experimental-config/gameinfo.gi#L1154)) |
+| Experimental | `0` (active, [L1164](../../../experimental-config/gameinfo.gi#L1164)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1327](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1327)) |
 
@@ -3715,7 +3715,7 @@ Valve console help: Rope subdivision amount
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1155](../../../stable-config/gameinfo.gi#L1155)) |
-| Experimental | `0` (active, [L1155](../../../experimental-config/gameinfo.gi#L1155)) |
+| Experimental | `0` (active, [L1165](../../../experimental-config/gameinfo.gi#L1165)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1328](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1328)) |
 
@@ -3743,7 +3743,7 @@ Valve console help: Don't use CPU applying small wind gusts to ropes when they'r
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1156](../../../stable-config/gameinfo.gi#L1156)) |
-| Experimental | `0` (active, [L1156](../../../experimental-config/gameinfo.gi#L1156)) |
+| Experimental | `0` (active, [L1166](../../../experimental-config/gameinfo.gi#L1166)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1329](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1329)) |
 
@@ -3771,7 +3771,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L692](../../../stable-config/gameinfo.gi#L692)) |
-| Experimental | `0` (active, [L692](../../../experimental-config/gameinfo.gi#L692)) |
+| Experimental | `0` (active, [L702](../../../experimental-config/gameinfo.gi#L702)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L865](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L865)) |
 
@@ -3799,7 +3799,7 @@ Allows dynamic ray-tracing acceleration structures for geometry using compute-sh
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L845](../../../stable-config/gameinfo.gi#L845)) |
-| Experimental | `false` (active, [L845](../../../experimental-config/gameinfo.gi#L845)) |
+| Experimental | `false` (active, [L855](../../../experimental-config/gameinfo.gi#L855)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1018](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1018)) |
 
@@ -3827,7 +3827,7 @@ Reuses dynamic ray-tracing acceleration structures when geometry has not changed
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L846](../../../stable-config/gameinfo.gi#L846)) |
-| Experimental | `true` (active, [L846](../../../experimental-config/gameinfo.gi#L846)) |
+| Experimental | `true` (active, [L856](../../../experimental-config/gameinfo.gi#L856)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1019](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1019)) |
 
@@ -3855,7 +3855,7 @@ Uses default ray-hit shaders instead of specialized shaders for ray-traced geome
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L847](../../../stable-config/gameinfo.gi#L847)) |
-| Experimental | `true` (active, [L847](../../../experimental-config/gameinfo.gi#L847)) |
+| Experimental | `true` (active, [L857](../../../experimental-config/gameinfo.gi#L857)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1020](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1020)) |
 
@@ -3883,7 +3883,7 @@ Sets the texture resolution requested by the ray tracer. The captured declared d
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `64` (active, [L848](../../../stable-config/gameinfo.gi#L848)) |
-| Experimental | `64` (active, [L848](../../../experimental-config/gameinfo.gi#L848)) |
+| Experimental | `64` (active, [L858](../../../experimental-config/gameinfo.gi#L858)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `64` (active, [L1021](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1021)) |
 
@@ -3911,7 +3911,7 @@ Valve describes an internal LOD-mask computation that forces every LOD group’s
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (disabled, [L1030](../../../stable-config/gameinfo.gi#L1030)); `true` (active, [L1181](../../../stable-config/gameinfo.gi#L1181)) |
-| Experimental | `false` (disabled, [L1030](../../../experimental-config/gameinfo.gi#L1030)); `true` (active, [L1181](../../../experimental-config/gameinfo.gi#L1181)) |
+| Experimental | `false` (disabled, [L1040](../../../experimental-config/gameinfo.gi#L1040)); `true` (active, [L1191](../../../experimental-config/gameinfo.gi#L1191)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1203](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1203)); `true` (active, [L1354](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1354)) |
 
@@ -3939,7 +3939,7 @@ Registered input-button timing switch with no explanatory help.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L1020](../../../stable-config/gameinfo.gi#L1020)) |
-| Experimental | `true` (disabled, [L1020](../../../experimental-config/gameinfo.gi#L1020)) |
+| Experimental | `true` (disabled, [L1030](../../../experimental-config/gameinfo.gi#L1030)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1193](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1193)) |
 
@@ -3967,7 +3967,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1187](../../../stable-config/gameinfo.gi#L1187)) |
-| Experimental | `1` (active, [L1187](../../../experimental-config/gameinfo.gi#L1187)) |
+| Experimental | `1` (active, [L1197](../../../experimental-config/gameinfo.gi#L1197)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1360](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1360)) |
 
@@ -3995,7 +3995,7 @@ Filters lag-compensation targets by player view angle when enabled.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L1217](../../../stable-config/gameinfo.gi#L1217)) |
-| Experimental | `false` (active, [L1217](../../../experimental-config/gameinfo.gi#L1217)) |
+| Experimental | `false` (active, [L1227](../../../experimental-config/gameinfo.gi#L1227)) |
 | Stock gameinfo override | `false` (active, [L531](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L531)) |
 | OptimizationLock pinned upstream | `false` (active, [L1390](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1390)) |
 
@@ -4023,7 +4023,7 @@ Maximum lag-compensation window, in seconds.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.500` (active, [L1215](../../../stable-config/gameinfo.gi#L1215)) |
-| Experimental | `0.500` (active, [L1215](../../../experimental-config/gameinfo.gi#L1215)) |
+| Experimental | `0.500` (active, [L1225](../../../experimental-config/gameinfo.gi#L1225)) |
 | Stock gameinfo override | `0.500` (active, [L529](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L529)) |
 | OptimizationLock pinned upstream | `0.500` (active, [L1388](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1388)) |
 
@@ -4051,7 +4051,7 @@ If positive, caps lag compensation for other human pawns after sv_maxunlag, acco
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.200` (active, [L1216](../../../stable-config/gameinfo.gi#L1216)) |
-| Experimental | `0.200` (active, [L1216](../../../experimental-config/gameinfo.gi#L1216)) |
+| Experimental | `0.200` (active, [L1226](../../../experimental-config/gameinfo.gi#L1226)) |
 | Stock gameinfo override | `0.200` (active, [L530](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L530)) |
 | OptimizationLock pinned upstream | `0.200` (active, [L1389](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1389)) |
 
@@ -4079,7 +4079,7 @@ Minimum bandwidth rate allowed by the server; 0 is unlimited according to the du
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `98304` (active, [L1214](../../../stable-config/gameinfo.gi#L1214)) |
-| Experimental | `98304` (active, [L1214](../../../experimental-config/gameinfo.gi#L1214)) |
+| Experimental | `98304` (active, [L1224](../../../experimental-config/gameinfo.gi#L1224)) |
 | Stock gameinfo override | `98304` (active, [L528](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L528)) |
 | OptimizationLock pinned upstream | `98304` (active, [L1387](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1387)) |
 
@@ -4107,7 +4107,7 @@ Threaded entity transmit/PVS checking: 1 for listen servers, 2 for dedicated ser
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2` (active, [L1352](../../../stable-config/gameinfo.gi#L1352)) |
-| Experimental | `2` (active, [L1352](../../../experimental-config/gameinfo.gi#L1352)) |
+| Experimental | `2` (active, [L1362](../../../experimental-config/gameinfo.gi#L1362)) |
 | Stock gameinfo override | `2` (active, [L666](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L666)) |
 | OptimizationLock pinned upstream | `2` (active, [L1525](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1525)) |
 
@@ -4135,7 +4135,7 @@ Name suggests a server entity visibility/PVS control; the dump has no explanator
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1188](../../../stable-config/gameinfo.gi#L1188)) |
-| Experimental | `1` (active, [L1188](../../../experimental-config/gameinfo.gi#L1188)) |
+| Experimental | `1` (active, [L1198](../../../experimental-config/gameinfo.gi#L1198)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1361](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1361)) |
 
@@ -4163,7 +4163,7 @@ Vertical view adjustment when eyes are near a water surface.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1189](../../../stable-config/gameinfo.gi#L1189)) |
-| Experimental | `0` (active, [L1189](../../../experimental-config/gameinfo.gi#L1189)) |
+| Experimental | `0` (active, [L1199](../../../experimental-config/gameinfo.gi#L1199)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1362](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1362)) |
 
@@ -4191,7 +4191,7 @@ Selects an engine thread-pool option; Valve’s help does not define the numeric
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2` (active, [L701](../../../stable-config/gameinfo.gi#L701)) |
-| Experimental | `2` (active, [L701](../../../experimental-config/gameinfo.gi#L701)) |
+| Experimental | `2` (active, [L711](../../../experimental-config/gameinfo.gi#L711)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L874](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L874)) |
 
@@ -4219,7 +4219,7 @@ Controls whether broadcast/TV intermediate frames use delta storage. Valve expli
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L1190](../../../stable-config/gameinfo.gi#L1190)) |
-| Experimental | `false` (active, [L1190](../../../experimental-config/gameinfo.gi#L1190)) |
+| Experimental | `false` (active, [L1200](../../../experimental-config/gameinfo.gi#L1200)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1363](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1363)) |
 
@@ -4247,7 +4247,7 @@ Name suggests updating all keyframed objects during spatial partition updates; n
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1344](../../../stable-config/gameinfo.gi#L1344)) |
-| Experimental | `0` (active, [L1344](../../../experimental-config/gameinfo.gi#L1344)) |
+| Experimental | `0` (active, [L1354](../../../experimental-config/gameinfo.gi#L1354)) |
 | Stock gameinfo override | `0` (active, [L658](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L658)) |
 | OptimizationLock pinned upstream | `0` (active, [L1517](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1517)) |
 
@@ -4275,7 +4275,7 @@ Valve console help: Draw alien blood
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L776](../../../stable-config/gameinfo.gi#L776)) |
-| Experimental | `0` (active, [L776](../../../experimental-config/gameinfo.gi#L776)) |
+| Experimental | `0` (active, [L786](../../../experimental-config/gameinfo.gi#L786)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L949](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L949)) |
 
@@ -4303,7 +4303,7 @@ Valve console help: Show alien gib entities
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L777](../../../stable-config/gameinfo.gi#L777)) |
-| Experimental | `0` (active, [L777](../../../experimental-config/gameinfo.gi#L777)) |
+| Experimental | `0` (active, [L787](../../../experimental-config/gameinfo.gi#L787)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L950](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L950)) |
 
@@ -4331,7 +4331,7 @@ Valve console help: Draw human blood
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L778](../../../stable-config/gameinfo.gi#L778)) |
-| Experimental | `0` (active, [L778](../../../experimental-config/gameinfo.gi#L778)) |
+| Experimental | `0` (active, [L788](../../../experimental-config/gameinfo.gi#L788)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L951](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L951)) |
 
@@ -4359,7 +4359,7 @@ Valve console help: Show human gib entities
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L779](../../../stable-config/gameinfo.gi#L779)) |
-| Experimental | `0` (active, [L779](../../../experimental-config/gameinfo.gi#L779)) |
+| Experimental | `0` (active, [L789](../../../experimental-config/gameinfo.gi#L789)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L952](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L952)) |
 
