@@ -453,5 +453,11 @@ TEXTURE MIP BIAS 2 -> 1 IN BOTH CONFIGS (2026-10-27)
   unverified), then check texture sharpness, VRAM use and fight frame times. To undo, set the value back to 2.
   Line numbers unchanged.
 
+UPDATE-COMMAND.MD TRIMMED TO SETUP, FIRST INSTALL AND UPDATES (2026-10-27)
+  No config or installer changes. At the owner's request docs/UPDATE-COMMAND.md now covers only setting up the
+  command, the first install and later updates; the setup snippet is unchanged. The error table moved to
+  TROUBLESHOOTING.md; old-command migration, the option table and the undo notes (covered by INSTALL.md) were dropped.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
