@@ -88,7 +88,7 @@ assertion that either active config exactly matches that revision. Use explicit 
 ```sh
 python3 utils/nondefaults.py --ref e95b323b88d48c3fc4d80066ee603fb75060b248 \
   --dump /path/to/convars.txt --stock /path/to/stock-gameinfo.gi --build 6814 \
-  --date 2026-10-22 --upstream-ref 347a6694bd7779bafa66b339cd13435c90f1c2f3
+  --date 2026-10-27 --upstream-ref cbb70417d7585d65097e96984e05bac52e2fae06
 ```
 
 Omit local inputs to download that exact capture. `--stdout` prints without writing. The generator requires a full

@@ -393,5 +393,53 @@ UPSTREAM SYNC CHECK (2026-10-23, OptimizationLock main @ 347a669)
   stock-section change, and the reference keeps its 6814 pin. Neither config changed.
   Line numbers unchanged.
 
+R_ASPECTRATIO 2.54, THE 110 FOV EQUIVALENT, IN BOTH CONFIGS (2026-10-27)
+  line 648   r_aspectratio                              (commented "2.11")  ->  "2.54"
+  Why: the owner deleted the FOV slider mod and asked for the aspect override at the equivalent of 110 FOV. This
+  supersedes the PR #77/#84 FOV-mod preference. 2.54 = 16/9 x tan(110/2) / tan(90/2) = 2.539 with the in-game FOV
+  slider at its maximum of 90, assuming the projection keeps vertical FOV and widens horizontal coverage with the
+  aspect value. The same model reproduces the deadlockgame.wiki table (2.0 = 96.7, 2.4 = 106.9, 3.0 = 118.7); neither
+  is an engine measurement. The inherited comment table (2.15 = 90fov, 2.49 = 100fov) does not fit it and was
+  replaced with the formula: by it the earlier 2.11 was about 100 FOV and upstream's 2.5 is about 109. Stable gets
+  the same line (stable-config/gameinfo.gi line 639), and both header comments now say r_aspectratio 2.54.
+  Untested in game: with the slider at 90 the view should match the mod at 110, squeezed horizontally. With the
+  slider below 90, use 1.778 x tan(55) / tan(slider/2). To undo, put // back in front of the line in either file.
+  Line numbers unchanged.
+
+STABLE: OPTIMIZATIONLOCK 3.7.1 HOTFIX (2026-10-27, OptimizationLock main @ cbb7041)
+  stable-config/gameinfo.gi rebuilt at the owner's request from Sqooky's .gi/gameinfo.gi at cbb7041: 3.7 (9a44475,
+  2026-10-26) plus the 3.7.1 particle hotfix (aa2844d); the two later commits only move mod files. Upstream records no
+  rationale beyond those commit messages. The script that rebuilds the previous stable byte-for-byte from 3.6.1 was
+  applied unchanged: repository header, credit and link comments removed, ForceVulkanForMapBuild blank line, odd-quote
+  comment fixes (one new: a stray quote in the citadel_always_show_active_hud_stats comment), and the owner edits
+  (fps_max and fps_max_ui 0, Steam Input false on both lines, mip bias 2, texture pool 6400, texture resolution cap
+  and r_particle_min_timestep commented out, r_aspectratio 2.54 per the entry above; upstream sets 2.5). Adopted:
+  - ConVars: citadel_unit_status_hide_names true (upstream: hides player names on health bars; cheat flag, so
+    acceptance from gameinfo is unverified); audio_viewing_damage_hold_time and audio_viewing_damage_decay_time 0
+    (default 3, a damage-feedback audio state per Valve help); citadel_action_refresh_interval 0.11 (default 0.1);
+    citadel_ai_path_pathing_time_ms_per_tick 20 and ai_motor_max_state_time_active 0 (server-module AI values);
+    citadel_per_weapon_per_surface_impact_effects commented out, so stable no longer requests false;
+    citadel_always_show_active_hud_stats added disabled.
+  - RenderSystem: MinStreamingPoolSizeMB 2048 -> 500 (stock 1024; read by the DX11 and Vulkan DLLs).
+    ExecuteQueuedCommandBuffers 0 and VulkanRequireSM6 false appear only in the Vulkan DLL strings: no DX11 effect expected.
+  - SceneSystem: 15 dll-var keys removed (CharacterDecals, DisableShadowFullSort, EnableAlphaTint, EnableSunlight,
+    EnableViewModelSunlight, GpuLightBinnerSupportViewModelCascade, GpuLightBinnerBinEnvMaps, SupportsInstancedFade,
+    PerVertexLighting, both PointLightShadowsEnabled lines, SelfShadowStrength, ShadowAtlas, ShadowDepth,
+    ShadowDepthBuffer, ShadowDepthBufferNoCmp) plus the commented CMTAtlasHeight/Width; ParticleBufferSize 512 -> 2048;
+    GpuLightBinnerBinLPVs 0 -> false; ShadowmapMaxFilterRadius now written twice (0, then 8; no winner assumed).
+  - Particles: GPUParticles 1; Budget_ActualTraces, Budget_RenderUS, Budget_SimulationUS and Budget_InterectionTests 1
+    (Valve's spelling); a second BindlessParticleShader 1; MixedResolution/Slices 16, which probably does nothing
+    because the DLL string is spelled MixedResoluion; GameSupportsLegacyShaders disabled (3.7.1 turned it off for
+    broken Paige, Drifter and Infernus particles).
+  Skipped: nothing. Valve shipped build 6821 (GameTracking-Deadlock d251cf9d9a796061c90f58724230b7e17b97121b, source
+  revision 11170534); its dump, stock gameinfo.gi and the inspected DLL string tables are byte-identical to the pinned
+  build 6814 capture, so the reference keeps that pin and PGIVersion is unchanged. Reference upstream pin moved to
+  cbb7041. Checks: check.py 0 errors; convars audit errors unchanged (stable 19, experimental 20; stable gains 2
+  gamedll-only warnings); stock_diff still 4 guarded-section errors per config. Stable and experimental engine sections no longer match: experimental
+  keeps the 3.6.1 ones. Untested in game: particles (fire, heals, ability effects, Paige/Drifter/Infernus) with the
+  Budget_ keys at 1 and GPUParticles on; that matchmaking starts; names missing over health bars. Rollback: the
+  previous stable file is at 7231a9e; v1.4 (3.6) stays the frozen fallback. Experimental changed only as above.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

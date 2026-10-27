@@ -1,5 +1,5 @@
 // OptimizationLock Ver. 3.5.3 by Sqooky with help from others (https://github.com/Sqooky/OptimizationLock, GPL-3.0).
-// Stable config of ghempy53/deadlock-config: 3.5.3 with ForceVulkanForMapBuild and r_aspectratio off. Credits,
+// Stable config of ghempy53/deadlock-config: 3.5.3 with ForceVulkanForMapBuild and r_aspectratio 2.54. Credits,
 // donor and link comments removed.
 
 
@@ -645,7 +645,7 @@ GameInfo
 
         // --- 2. Field of View ---
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
-        // r_aspectratio "2.11" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
+        r_aspectratio "2.54" // 110 FOV on 16:9 with the in-game FOV slider at 90. Value = 1.778 x tan(FOV/2): 100=2.12 | 105=2.32 | 110=2.54 | 115=2.79. Squeezes the image horizontally.
 
         // --- 3. HUD ---
         citadel_unit_status_stamina_low_pips            "7"     // below this threshold stamina is permanantly visble [def: "3"]

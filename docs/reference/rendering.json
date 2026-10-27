@@ -835,19 +835,20 @@
     "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
   },
   "ConVars/r_aspectratio": {
-    "purpose": "Registered camera/rendering aspect override. Both configs retain disabled examples for the owner's FOV mod. The inline aspect-to-FOV conversion is not a verified engine formula.",
-    "rationale": "PR77 disabled the aspect override in both configs for the owner's FOV mod. PR83 briefly restored stable 2.11 on October 22 after the owner reported a 90-degree hero-FOV cap in Sandbox. PR84 supersedes PR83: the owner prefers the mod's slider, so both configs again leave the aspect override disabled and future stable upstream pulls preserve that choice. This history does not establish a universal claim that aspect ratio is the only way to change FOV.",
-    "tradeoffs": "The disabled lines make no assignment and do not reset saved settings or the FOV mod. Verify the resulting view with the owner's selected mod and slider. PR83's reported Sandbox cap is historical owner evidence, not an audit reproduction or proof of every camera path. No current per-setting frame-time, memory, or visual measurement is available.",
-    "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified.",
-    "confidence": "High for captured registration/flags; low for detailed purpose and runtime effect.",
+    "purpose": "Registered aspect-ratio override, developmentonly with default 0. Both configs request 2.54 so the in-game FOV slider at 90 covers the horizontal view of 110 FOV on a 16:9 display, with the image squeezed horizontally.",
+    "rationale": "The owner removed the FOV slider mod on 2026-10-27 and asked for the aspect override at a 110 FOV equivalent, superseding the PR77/PR84 FOV-mod preference in both files. The value is 16/9 x tan(110/2) / tan(90/2) = 2.539, assuming the projection keeps vertical FOV and widens horizontal coverage with the aspect value. That model reproduces the deadlockgame.wiki table (2.0 = 96.7, 2.4 = 106.9, 3.0 = 118.7); neither source is an engine measurement. The inherited upstream comment table (2.15 = 90, 2.49 = 100) does not fit that model and was replaced. OptimizationLock 3.7.1 requests 2.5, about 109 by the same formula.",
+    "tradeoffs": "Wider horizontal view with a horizontally squeezed image; HUD, crosshair and ADS presentation may also change. With the slider below 90 the result is narrower: value = 1.778 x tan(target/2) / tan(slider/2). No frame-time measurement is available.",
+    "applicability": "Client rendering path. The owner previously played 2.11 on DX11 (v1.2); Vulkan equivalence is unverified.",
+    "confidence": "High for captured registration/flags; medium for the projection formula; low for the exact in-game FOV until measured.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://deadlockgame.wiki/settings/fov/",
+      "https://github.com/ghempy53/deadlock-config/pull/59",
       "https://github.com/ghempy53/deadlock-config/pull/77",
-      "https://github.com/ghempy53/deadlock-config/pull/83",
       "https://github.com/ghempy53/deadlock-config/pull/84"
     ],
-    "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
+    "test_status": "Static review and arithmetic only. Untested in game: with the slider at 90, compare the view against the mod at 110."
   },
   "ConVars/r_async_compute_fog": {
     "purpose": "Candidate lighting, shadows or post-processing control inherited in the config, but absent from the pinned ConVar dump. Current registration, meaning, and effect remain unknown; absence from one dump does not establish removal.",
@@ -2971,14 +2972,15 @@
   },
   "Particles/BindlessParticleShader": {
     "purpose": "Stock particle bindless-shader option retained at 1. The captured file does not document hardware fallback policy.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 adds a second identical assignment in its Particles.dll block; stable preserves both.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "High for stock presence; low for undocumented semantics and effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
     ],
     "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
   },
@@ -3200,8 +3202,8 @@
     "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
   },
   "RenderSystem/MinStreamingPoolSizeMB": {
-    "purpose": "By the key name, sets a minimum texture-streaming pool size in MB; stock specifies 1024 and this config 2048. Interaction with r_texture_pool_size and dynamic budgeting requires runtime measurement.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default.",
+    "purpose": "By the key name, sets a minimum texture-streaming pool size in MB; stock specifies 1024, stable 500 and experimental 2048. Interaction with r_texture_pool_size and dynamic budgeting requires runtime measurement.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 lowered it from 2048 to 500, citing CS2's value; stable follows and experimental keeps 2048.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "High for stock presence; low for undocumented semantics and effect.",
@@ -3209,7 +3211,8 @@
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
     ],
     "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
   },
@@ -3423,7 +3426,7 @@
   },
   "SceneSystem/CMTAtlasHeight": {
     "purpose": "Commented candidate CMT atlas height with a captured exact path. What CMT means, its units, and safe values are not established; the upstream wall-warning is anecdotal.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
@@ -3436,7 +3439,7 @@
   },
   "SceneSystem/CMTAtlasWidth": {
     "purpose": "Commented candidate CMT atlas width with a captured exact path. What CMT means, its units, and safe values are not established; the upstream wall-warning is anecdotal.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
@@ -3462,7 +3465,7 @@
   },
   "SceneSystem/CharacterDecals": {
     "purpose": "Candidate SceneSystem option named CharacterDecals. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
@@ -3540,7 +3543,7 @@
   },
   "SceneSystem/DisableShadowFullSort": {
     "purpose": "Candidate SceneSystem option named DisableShadowFullSort. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
@@ -3566,7 +3569,7 @@
   },
   "SceneSystem/EnableAlphaTint": {
     "purpose": "Candidate SceneSystem option named EnableAlphaTint. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3578,7 +3581,7 @@
   },
   "SceneSystem/EnableSunlight": {
     "purpose": "Candidate SceneSystem option named EnableSunlight. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3590,7 +3593,7 @@
   },
   "SceneSystem/EnableViewModelSunlight": {
     "purpose": "Candidate SceneSystem option named EnableViewModelSunlight. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3699,7 +3702,7 @@
   },
   "SceneSystem/GpuLightBinnerBinEnvMaps": {
     "purpose": "Candidate SceneSystem option named GpuLightBinnerBinEnvMaps. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
@@ -3712,14 +3715,15 @@
   },
   "SceneSystem/GpuLightBinnerBinLPVs": {
     "purpose": "Candidate SceneSystem option named GpuLightBinnerBinLPVs. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Stable writes false after the 3.7.1 sync and experimental keeps 0.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
     ],
     "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
   },
@@ -3737,7 +3741,7 @@
   },
   "SceneSystem/GpuLightBinnerSupportViewModelCascade": {
     "purpose": "Candidate SceneSystem option named GpuLightBinnerSupportViewModelCascade. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
@@ -3841,20 +3845,21 @@
   },
   "SceneSystem/ParticleBufferSize": {
     "purpose": "Candidate SceneSystem option named ParticleBufferSize. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Stable requests 2048 after the 3.7.1 sync (upstream's claimed 65536 default is unverified); experimental keeps 512.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
     ],
     "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
   },
   "SceneSystem/PerVertexLighting": {
     "purpose": "Candidate SceneSystem option named PerVertexLighting. The precise behavior, valid values, and default are not documented by the pinned stock file. A bare matching string is not evidence of a gameinfo reader; current recognition and effect remain unverified.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3869,7 +3874,7 @@
   },
   "SceneSystem/PointLightShadowsEnabled": {
     "purpose": "Candidate SceneSystem option named PointLightShadowsEnabled. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
@@ -3895,7 +3900,7 @@
   },
   "SceneSystem/SelfShadowStrength": {
     "purpose": "Candidate SceneSystem option named SelfShadowStrength. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3907,7 +3912,7 @@
   },
   "SceneSystem/ShadowAtlas": {
     "purpose": "Candidate SceneSystem option named ShadowAtlas. The precise behavior, valid values, and default are not documented by the pinned stock file. A bare matching string is not evidence of a gameinfo reader; current recognition and effect remain unverified.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3920,7 +3925,7 @@
   },
   "SceneSystem/ShadowDepth": {
     "purpose": "Candidate SceneSystem option named ShadowDepth. The precise behavior, valid values, and default are not documented by the pinned stock file. A bare matching string is not evidence of a gameinfo reader; current recognition and effect remain unverified.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3933,7 +3938,7 @@
   },
   "SceneSystem/ShadowDepthBuffer": {
     "purpose": "Candidate SceneSystem option named ShadowDepthBuffer. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3945,7 +3950,7 @@
   },
   "SceneSystem/ShadowDepthBufferNoCmp": {
     "purpose": "Candidate SceneSystem option named ShadowDepthBufferNoCmp. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -3957,14 +3962,15 @@
   },
   "SceneSystem/ShadowmapMaxFilterRadius": {
     "purpose": "Candidate SceneSystem option named ShadowmapMaxFilterRadius. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 writes it twice, 0 then 8 (upstream's claimed default 32 is unverified); stable preserves both and experimental keeps a single 0.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
     ],
     "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
   },
@@ -4031,7 +4037,7 @@
   },
   "SceneSystem/SupportsInstancedFade": {
     "purpose": "Candidate SceneSystem option named SupportsInstancedFade. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.",
-    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override.",
+    "rationale": "Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.",
     "tradeoffs": "No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.",
     "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
     "confidence": "Low: string-only or upstream-only evidence; effect unverified.",
@@ -4328,6 +4334,134 @@
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "Particles/Budget_ActualTraces": {
+    "purpose": "Particle budget key requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name a trace budget.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.",
+    "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "Particles/Budget_InterectionTests": {
+    "purpose": "Particle budget key requested 1 and absent from stock. The exact path, including Valve's spelling Interection, occurs in the particle DLL strings; by name an intersection-test budget.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.",
+    "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "Particles/Budget_RenderUS": {
+    "purpose": "Particle budget key requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name a render-time budget in microseconds.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.",
+    "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "Particles/Budget_SimulationUS": {
+    "purpose": "Particle budget key requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name a simulation-time budget in microseconds.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "If these are per-frame particle budgets, 1 is a near-zero allowance that could cut or degrade particle work, including ability effects. Upstream's 3.7.1 particle hotfix only disabled GameSupportsLegacyShaders and kept the budgets. Visual impact and any CPU saving are unverified.",
+    "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "Particles/GPUParticles": {
+    "purpose": "Particle option requested 1 and absent from stock. The exact path occurs in the particle DLL strings; by name it enables GPU particle simulation.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "Could move particle work to the GPU or change which effects render. Correct rendering of every hero effect and the CPU/GPU balance are unverified.",
+    "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "Particles/GameSupportsLegacyShaders": {
+    "purpose": "Disabled particle option. The key name occurs in the particle DLL strings; absent from stock.",
+    "rationale": "OptimizationLock 3.7 enabled it and the 3.7.1 hotfix commented it out, reporting broken particles. Stable carries the disabled line.",
+    "tradeoffs": "None while disabled. Upstream reports that enabling it broke Paige, Drifter and Infernus particles; check those heroes before enabling it.",
+    "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt",
+      "https://github.com/Sqooky/OptimizationLock/commit/aa2844d4a93fe11688785ede0794cde55f8b6322"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "Particles/MixedResolution/Slices": {
+    "purpose": "Nested mixed-resolution particle slice count requested 16; absent from stock. The particle DLL string is Particles/MixedResoluion/Slices (Valve spelling, no t after the u), so the path this file writes does not match the captured reader string.",
+    "rationale": "Added by OptimizationLock 3.7; stable keeps upstream's spelling because correcting it would activate an untested setting. Original individual rationale is not documented.",
+    "tradeoffs": "Probably inert as written. If the engine does read it, the slice count could change mixed-resolution particle quality.",
+    "applicability": "Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for the string mismatch; low for runtime effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "RenderSystem/ExecuteQueuedCommandBuffers": {
+    "purpose": "Render-system key requested 0 and absent from stock. The name occurs only in the Vulkan render DLL strings.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "By the string evidence it affects Vulkan only; under Vulkan, disabling queued command-buffer execution could change submission behavior or stability.",
+    "applicability": "Vulkan only by captured strings; the DX11 render DLL has no matching string. Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt"
+    ],
+    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+  },
+  "RenderSystem/VulkanRequireSM6": {
+    "purpose": "Vulkan device requirement requested false and absent from stock. A Vulkan DLL error string says device creation fails when float16/int8/16-bit storage features are missing and VulkanRequireSM6 is set.",
+    "rationale": "Added by OptimizationLock 3.7; stable takes it with the 3.7.1 sync at the owner's request. Original individual rationale is not documented.",
+    "tradeoffs": "false relaxes a Vulkan device requirement, which may let GPUs without those features create a device. The stock behavior when the key is absent is not established.",
+    "applicability": "Vulkan only; no DX11 effect is expected. Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully.",
+    "confidence": "Medium for exact captured key-path presence; low for semantics and effect.",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/9a44475aad3cd32e51938341253bd1375dfe29c6",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt"
     ],
     "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
   }

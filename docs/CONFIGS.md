@@ -8,19 +8,22 @@ The [complete setting reference](SETTING-REFERENCE.md) covers every active assig
 engine section and mod path in both files. It distinguishes console registration defaults, stock file
 assignments and upstream values, and records uncertainty rather than treating an inherited comment as proof.
 
-## Current provenance (reviewed 2026-10-22)
+## Current provenance (reviewed 2026-10-27)
 
-- **Stable:** OptimizationLock **3.6.1**, pinned to
-  [`347a6694bd7779bafa66b339cd13435c90f1c2f3`](https://github.com/Sqooky/OptimizationLock/tree/347a6694bd7779bafa66b339cd13435c90f1c2f3).
-  [PR #79](https://github.com/ghempy53/deadlock-config/pull/79) updated it on October 21.
+- **Stable:** OptimizationLock **3.7.1 hotfix**, pinned to
+  [`cbb70417d7585d65097e96984e05bac52e2fae06`](https://github.com/Sqooky/OptimizationLock/tree/cbb70417d7585d65097e96984e05bac52e2fae06),
+  pulled in on October 27 (3.6.1 before that, [PR #79](https://github.com/ghempy53/deadlock-config/pull/79)).
   **v1.4 is the last freeze (3.6), not the current file.**
 - **Experimental:** first restarted October 15 from stable v1.2 ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)),
   then restarted again **October 17 from stable 3.5.3** ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)).
   The engine update authored October 21 and merged October 22 brought its non-ConVar sections into agreement with current stable
   ([PR #80](https://github.com/ghempy53/deadlock-config/pull/80)). Its ConVars still follow the 3.5.3 branch of decisions.
+  Stable's 3.7.1 sync changed RenderSystem, SceneSystem and Particles again; experimental keeps the 3.6.1 engine sections.
 - **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
   [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
-  Matching `PGIVersion` is observed; acceptance by a current game/server was not tested.
+  Matching `PGIVersion` is observed; acceptance by a current game/server was not tested. Build 6821
+  ([GameTracking d251cf9](https://github.com/SteamTracking/GameTracking-Deadlock/tree/d251cf9d9a796061c90f58724230b7e17b97121b),
+  October 26) has a byte-identical dump, stock file and inspected DLL string tables, so the pin stands.
 
 ## Owner decisions retained in the current files
 
@@ -33,7 +36,7 @@ assignments and upstream values, and records uncertainty rather than treating an
 | `r_texturefilteringquality` | 0, bilinear per console help | Retained upstream filtering; the temporary full-resolution/8x experiment was superseded |
 | `r_texture_stream_max_resolution` | disabled | No cap requested by this line; not proof another layer cannot impose one |
 | `r_particle_min_timestep` | disabled, declared default 0 | Owner-reported bisect in [PR #70](https://github.com/ghempy53/deadlock-config/pull/70), propagated in [PR #71](https://github.com/ghempy53/deadlock-config/pull/71); no measured cost recorded |
-| `r_aspectratio` | disabled in both | [PR #84](https://github.com/ghempy53/deadlock-config/pull/84), October 22, reverts PR #83; the owner prefers the FOV mod slider and upstream pulls preserve the disabled line |
+| `r_aspectratio` | 2.54 in both | Owner request October 27 after deleting the FOV mod: the 110 FOV equivalent with the in-game slider at 90 (value = 1.778 x tan(FOV/2)). Supersedes [PR #84](https://github.com/ghempy53/deadlock-config/pull/84); upstream pulls keep 2.54 whatever upstream sets. Untested in game |
 | Damage-number lifetime/emphasis overrides | absent | Owner removed them in [PR #74](https://github.com/ghempy53/deadlock-config/pull/74); saved/menu values still matter |
 
 The owner's active renderer is **DX11**, selected by a Steam launch option. Vulkan keys remain inherited;
@@ -43,7 +46,7 @@ was the owner's working diagnosis, not a measurement established by this audit.
 
 ## Actual variant differences
 
-These are all nine differing active ConVar paths in the current files. Their non-ConVar assignments match.
+These are all sixteen differing active ConVar paths in the current files.
 “Absent” means no assignment in that file, not a verified runtime default.
 
 | ConVar | Stable | Experimental |
@@ -57,17 +60,29 @@ These are all nine differing active ConVar paths in the current files. Their non
 | `citadel_unit_status_allies_see_thru_walls_max_distance` | absent | 40 |
 | `citadel_unit_status_dpi` | absent | 10 |
 | `lb_enable_baked_shadows` | disabled | false |
+| `citadel_per_weapon_per_surface_impact_effects` | disabled | false |
+| `citadel_unit_status_hide_names` | true | absent |
+| `audio_viewing_damage_hold_time` | 0 | absent |
+| `audio_viewing_damage_decay_time` | 0 | absent |
+| `citadel_action_refresh_interval` | 0.11 | absent |
+| `citadel_ai_path_pathing_time_ms_per_tick` | 20 | absent |
+| `ai_motor_max_state_time_active` | 0 | absent |
 
-The owner briefly re-enabled stable aspect ratio in PR #83 after reporting a hero-FOV cap of 90 in Sandbox,
-then reverted it in [PR #84](https://github.com/ghempy53/deadlock-config/pull/84) to use the FOV mod's slider again.
-Both configs now keep the aspect-ratio override disabled, including future upstream pulls. The earlier cap report
-is owner-reported evidence, not an audit test or proof that aspect ratio is universally the only FOV mechanism.
-
-All nine came with stable 3.6 ([PR #75](https://github.com/ghempy53/deadlock-config/pull/75)): stable took
+The first nine came with stable 3.6 ([PR #75](https://github.com/ghempy53/deadlock-config/pull/75)): stable took
 upstream's six new or changed values, dropped the two health-bar names and commented out the light switch, while
 experimental kept its 3.5.3 values. The two health-bar names are absent from the pinned dump, which alone does not prove removal.
 The light switch is flagged `gameinfo_cannot_override`. The minimap trooper rate is game/server-module registered;
-writing it in a player's file is not evidence of changing the online server.
+writing it in a player's file is not evidence of changing the online server. The last seven came with stable 3.7.1
+(October 27); experimental keeps its earlier values. The two AI entries are also game/server-module registered.
+
+Stable's 3.7.1 sync also makes the engine sections differ: `compare.py` lists 29 RenderSystem, SceneSystem and
+Particles entries (the 500 MB streaming-pool floor, 15 SceneSystem keys removed, the new particle budget and GPU
+particle keys). Experimental keeps the 3.6.1 values; the 2026-10-27 [changelog](CHANGES.txt) entry lists them.
+
+Aspect ratio is the same in both files: 2.54 since October 27, when the owner deleted the FOV mod. Before that the
+owner briefly re-enabled stable aspect ratio in PR #83 after reporting a hero-FOV cap of 90 in Sandbox, then reverted
+it in [PR #84](https://github.com/ghempy53/deadlock-config/pull/84) for the mod's slider. The cap report is
+owner-reported evidence, not an audit test or proof that aspect ratio is universally the only FOV mechanism.
 
 ## Structural caveats
 
@@ -98,7 +113,7 @@ frozen as the next version.
 | **v1.1** (2026-10-15) | [`stable-config/v1.1/gameinfo.gi`](../stable-config/v1.1/gameinfo.gi) | Sqooky's OptimizationLock 3.5.2 at `66db906` with `r_aspectratio 2.12` and `ForceVulkanForMapBuild`, credits and donor comments removed. Tested in game by the owner. SHA-256 `82655cf1…d62a5d64`. |
 | **v1.2** (2026-10-15) | [`stable-config/v1.2/gameinfo.gi`](../stable-config/v1.2/gameinfo.gi) | v1.1 with `r_aspectratio 2.11` and `citadel_unit_status_healthbar_highlight_speed 100`. The owner's tested file, verbatim. SHA-256 `37991b5b…840b8e4b`. |
 | **v1.3** (2026-10-17) | [`stable-config/v1.3/gameinfo.gi`](../stable-config/v1.3/gameinfo.gi) | Sqooky's OptimizationLock 3.5.3 with `r_aspectratio 2.11`, uncapped FPS, `r_particle_min_timestep` at default (jagged-fire fix), mip bias 2, a 6400 MB texture pool and no texture resolution cap; the two owner lifetime/emphasis overrides removed. Locked at the owner's request. SHA-256 `b5fbeb3e…33ab3dc2`. |
-| **v1.4** (2026-10-20) | [`stable-config/v1.4/gameinfo.gi`](../stable-config/v1.4/gameinfo.gi) | Sqooky's OptimizationLock 3.6 at `aba20cd` (upstream unchanged through `690e4fb`) with `r_aspectratio` commented out (owner's FOV mod), uncapped FPS, `r_particle_min_timestep` at default, mip bias 2, a 6400 MB texture pool and no texture resolution cap. Locked at the owner's request. Byte-identical to the then-current stable file on 2026-10-20; not the current 3.6.1 file (SHA-256 `3fb7a0c6…7b790141`). |
+| **v1.4** (2026-10-20) | [`stable-config/v1.4/gameinfo.gi`](../stable-config/v1.4/gameinfo.gi) | Sqooky's OptimizationLock 3.6 at `aba20cd` (upstream unchanged through `690e4fb`) with `r_aspectratio` commented out (owner's FOV mod), uncapped FPS, `r_particle_min_timestep` at default, mip bias 2, a 6400 MB texture pool and no texture resolution cap. Locked at the owner's request. Byte-identical to the then-current stable file on 2026-10-20; not the current stable file (SHA-256 `3fb7a0c6…7b790141`). |
 
 `DeadlockConfig-Update` installs only the current stable and experimental configs. To use a frozen version, copy its
 file [by hand](INSTALL.md).

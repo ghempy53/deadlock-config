@@ -5,8 +5,8 @@ maintenance regardless of assistant. The owner's current request overrides workf
 
 ## Current files and owner decisions
 
-- Stable is OptimizationLock **3.6.1** plus owner preferences. v1.4 is a frozen **3.6** copy.
-- Experimental restarted October 15 from v1.2, then **October 17 from stable 3.5.3**. Its engine update (authored October 21, merged October 22 in PR #80) matches stable's non-ConVar assignments. Both intentionally retain upstream engine edits and duplicates.
+- Stable is OptimizationLock **3.7.1 hotfix** (October 27) plus owner preferences. v1.4 is a frozen **3.6** copy.
+- Experimental restarted October 15 from v1.2, then **October 17 from stable 3.5.3**. Its engine update (authored October 21, merged October 22 in PR #80) matched stable's 3.6.1 non-ConVar assignments; stable's 3.7.1 sync changed RenderSystem, SceneSystem and Particles again. Both intentionally retain upstream engine edits and duplicates.
 - Both active files and all intentional disabled entries are covered in [SETTING-REFERENCE.md](SETTING-REFERENCE.md).
   [CONFIGS.md](CONFIGS.md) is the current owner-decision and variant record.
 - Frozen `stable-config/v*/gameinfo.gi` and `docs/archive/` are immutable historical evidence. Never edit them.
@@ -17,9 +17,10 @@ maintenance regardless of assistant. The owner's current request overrides workf
 - Preserve `fps_max 0`, `fps_max_ui 0`, Steam Input off, mip bias 2, texture pool 6400, bilinear filtering and disabled
   resolution-cap override. Temporary full-resolution/8x texture experiments were superseded October 17.
 - Keep `r_particle_min_timestep` disabled: the owner reported a successful fire-particle bisect October 17. The
-  audit has not reproduced it or measured CPU cost. Both configs keep `r_aspectratio` disabled on every upstream pull
-  (October 22, PR #84 restores the FOV-mod preference after the brief PR #83 change). The owner prefers the mod's
-  slider. The earlier owner-reported 90-degree hero-FOV cap in Sandbox was not reproduced by this audit.
+  audit has not reproduced it or measured CPU cost. Both configs set `r_aspectratio 2.54` and keep it on every upstream
+  pull: October 27 the owner deleted the FOV mod and asked for the 110 FOV equivalent (slider at 90; value =
+  1.778 x tan(FOV/2)). This supersedes PR #84's FOV-mod preference. The earlier owner-reported 90-degree hero-FOV cap
+  in Sandbox was not reproduced by this audit.
 - The two owner damage-number lifetime/emphasis tweaks were removed October 17. Other inherited damage/HUD lines
   remain; do not say all damage-number settings are default.
 - Stable keeps vertical camera flattening true / health-bar highlight 999; experimental false / 100.

@@ -5,7 +5,7 @@ a Ryzen 7 9800X3D and RTX 5070 at 1440p, with uncapped FPS.
 
 | Config | Current base |
 | --- | --- |
-| [Stable](stable-config/gameinfo.gi) (default) | OptimizationLock 3.6.1 plus owner preferences; last frozen version is v1.4 (3.6) |
+| [Stable](stable-config/gameinfo.gi) (default) | OptimizationLock 3.7.1 hotfix plus owner preferences; last frozen version is v1.4 (3.6) |
 | [Experimental](experimental-config/gameinfo.gi) | Restarted October 17, 2026 from stable 3.5.3; later owner choices and the later engine patch retained |
 
 Set up [DeadlockConfig-Update](docs/UPDATE-COMMAND.md), then run with Deadlock closed:

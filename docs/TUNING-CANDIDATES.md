@@ -12,7 +12,7 @@
 > `r_size_cull_threshold`, `sc_screen_size_lod_scale_override`, `cl_ragdoll_limit 0`, `r_rendersun 0` and
 > `r_drawropes`. Read this page as history for those; the rest still applies.
 
-> The historical claim below that aspect ratio is the only FOV lever is not established by this audit. PR #83 records the owner's earlier Sandbox cap report; PR #84 supersedes its fixed-aspect preference and restores the FOV mod, with the aspect-ratio override disabled in both configs.
+> The historical claim below that aspect ratio is the only FOV lever is not established by this audit. PR #83 records the owner's earlier Sandbox cap report; PR #84 superseded its fixed-aspect preference for the FOV mod; on 2026-10-27 the owner deleted the mod and both configs request `r_aspectratio 2.54` (110 FOV equivalent with the slider at 90).
 
 What the research in [research/RESEARCH-2026-10-06.md](research/RESEARCH-2026-10-06.md) and the comparison in
 [research/CONFIG-COMPARISON.md](research/CONFIG-COMPARISON.md) leave on the table for this repo's goal (performance first; see
