@@ -125,7 +125,7 @@ Undocumented client interval; default 0.1, requested 0.11. The dump supplies no 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0.11` (active, [L1073](../../../stable-config/gameinfo.gi#L1073)) |
+| Stable | `0.11` (active, [L1085](../../../stable-config/gameinfo.gi#L1085)) |
 | Experimental | `0.11` (active, [L1085](../../../experimental-config/gameinfo.gi#L1085)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.11` (active, [L1246](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1246)) |
@@ -153,7 +153,7 @@ Undocumented AI pathing time per tick, by name in milliseconds, registered in th
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `20` (active, [L1060](../../../stable-config/gameinfo.gi#L1060)) |
+| Stable | `20` (active, [L1072](../../../stable-config/gameinfo.gi#L1072)) |
 | Experimental | `20` (active, [L1072](../../../experimental-config/gameinfo.gi#L1072)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `20` (active, [L1233](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1233)) |
@@ -237,7 +237,7 @@ Name suggests a fade time for bullet shot offsets; exact visual, audio, or camer
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L862](../../../stable-config/gameinfo.gi#L862)) |
+| Stable | `0` (active, [L874](../../../stable-config/gameinfo.gi#L874)) |
 | Experimental | `0` (active, [L874](../../../experimental-config/gameinfo.gi#L874)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1035](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1035)) |
@@ -265,7 +265,7 @@ Name suggests the camera’s distance from its target; the dump supplies no deta
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (disabled, [L968](../../../stable-config/gameinfo.gi#L968)) |
+| Stable | `0` (disabled, [L980](../../../stable-config/gameinfo.gi#L980)) |
 | Experimental | `0` (disabled, [L980](../../../experimental-config/gameinfo.gi#L980)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (disabled, [L1141](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1141)) |
@@ -293,7 +293,7 @@ Vertical distance between the camera’s look-at point and its base target; engi
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L683](../../../stable-config/gameinfo.gi#L683)) |
+| Stable | `0` (active, [L695](../../../stable-config/gameinfo.gi#L695)) |
 | Experimental | `0` (active, [L695](../../../experimental-config/gameinfo.gi#L695)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L856](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L856)) |
@@ -321,7 +321,7 @@ Name suggests the speed with which camera height approaches its target; exact un
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (disabled, [L969](../../../stable-config/gameinfo.gi#L969)) |
+| Stable | `0` (disabled, [L981](../../../stable-config/gameinfo.gi#L981)) |
 | Experimental | `0` (disabled, [L981](../../../experimental-config/gameinfo.gi#L981)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (disabled, [L1142](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1142)) |
@@ -349,7 +349,7 @@ Absent from the pinned dump; the name suggests a ceiling-related camera distance
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L684](../../../stable-config/gameinfo.gi#L684)) |
+| Stable | `0` (active, [L696](../../../stable-config/gameinfo.gi#L696)) |
 | Experimental | `0` (active, [L696](../../../experimental-config/gameinfo.gi#L696)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L857](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L857)) |
@@ -373,7 +373,7 @@ Field-of-view angle when following a hero; currently only a commented example.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `106` (disabled, [L970](../../../stable-config/gameinfo.gi#L970)) |
+| Stable | `106` (disabled, [L982](../../../stable-config/gameinfo.gi#L982)) |
 | Experimental | `106` (disabled, [L982](../../../experimental-config/gameinfo.gi#L982)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `106` (disabled, [L1143](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1143)) |
@@ -401,7 +401,7 @@ Registered without help; the relationship between the named camera/listening off
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `-1` (disabled, [L671](../../../stable-config/gameinfo.gi#L671)); `-1` (active, [L685](../../../stable-config/gameinfo.gi#L685)) |
+| Stable | `-1` (disabled, [L683](../../../stable-config/gameinfo.gi#L683)); `-1` (active, [L697](../../../stable-config/gameinfo.gi#L697)) |
 | Experimental | `-1` (disabled, [L683](../../../experimental-config/gameinfo.gi#L683)); `-1` (active, [L697](../../../experimental-config/gameinfo.gi#L697)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `-1` (disabled, [L844](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L844)); `-1` (active, [L858](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L858)) |
@@ -429,7 +429,7 @@ Default camera pitch. An angular unit is suggested, but the dump does not explic
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L686](../../../stable-config/gameinfo.gi#L686)) |
+| Stable | `0` (active, [L698](../../../stable-config/gameinfo.gi#L698)) |
 | Experimental | `0` (active, [L698](../../../experimental-config/gameinfo.gi#L698)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L859](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L859)) |
@@ -457,7 +457,7 @@ Caps how far away an entity can be for the camera to see it, according to the du
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `7000` (active, [L687](../../../stable-config/gameinfo.gi#L687)) |
+| Stable | `7000` (active, [L699](../../../stable-config/gameinfo.gi#L699)) |
 | Experimental | `7000` (active, [L699](../../../experimental-config/gameinfo.gi#L699)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `7000` (active, [L860](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L860)) |
@@ -485,7 +485,7 @@ Sets the soft camera collision cone angle in degrees; a larger angle begins soft
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `75` (active, [L672](../../../stable-config/gameinfo.gi#L672)) |
+| Stable | `75` (active, [L684](../../../stable-config/gameinfo.gi#L684)) |
 | Experimental | `75` (active, [L684](../../../experimental-config/gameinfo.gi#L684)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `75` (active, [L845](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L845)) |
@@ -513,7 +513,7 @@ For each camera pose set, averages X positions to reduce motion sickness, accord
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (active, [L673](../../../stable-config/gameinfo.gi#L673)) |
+| Stable | `false` (active, [L685](../../../stable-config/gameinfo.gi#L685)) |
 | Experimental | `false` (active, [L685](../../../experimental-config/gameinfo.gi#L685)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L846](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L846)) |
@@ -569,7 +569,7 @@ Name and inherited comments identify a camera-wobble disable switch; the dump pr
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L674](../../../stable-config/gameinfo.gi#L674)) |
+| Stable | `true` (active, [L686](../../../stable-config/gameinfo.gi#L686)) |
 | Experimental | `true` (active, [L686](../../../experimental-config/gameinfo.gi#L686)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L847](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L847)) |
@@ -597,7 +597,7 @@ Name suggests duration of a crosshair hit marker; Valve provides no descriptive 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0.00001` (disabled, [L971](../../../stable-config/gameinfo.gi#L971)) |
+| Stable | `0.00001` (disabled, [L983](../../../stable-config/gameinfo.gi#L983)) |
 | Experimental | `0.00001` (disabled, [L983](../../../experimental-config/gameinfo.gi#L983)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.00001` (disabled, [L1144](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1144)) |
@@ -625,7 +625,7 @@ Name suggests height of the incoming damage-direction indicator; units are not d
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `10` (active, [L1074](../../../stable-config/gameinfo.gi#L1074)) |
+| Stable | `10` (active, [L1086](../../../stable-config/gameinfo.gi#L1086)) |
 | Experimental | `10` (active, [L1086](../../../experimental-config/gameinfo.gi#L1086)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (active, [L1247](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1247)) |
@@ -653,7 +653,7 @@ Name suggests radial placement/extent of the incoming damage-direction indicator
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1075](../../../stable-config/gameinfo.gi#L1075)) |
+| Stable | `1` (active, [L1087](../../../stable-config/gameinfo.gi#L1087)) |
 | Experimental | `1` (active, [L1087](../../../experimental-config/gameinfo.gi#L1087)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1248](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1248)) |
@@ -681,7 +681,7 @@ Name suggests width of the incoming damage-direction indicator; units are not do
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `10` (active, [L1076](../../../stable-config/gameinfo.gi#L1076)) |
+| Stable | `10` (active, [L1088](../../../stable-config/gameinfo.gi#L1088)) |
 | Experimental | `10` (active, [L1088](../../../experimental-config/gameinfo.gi#L1088)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (active, [L1249](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1249)) |
@@ -789,7 +789,7 @@ Valve help: dynamically emphasize a damage number above citadel_damage_text_dyna
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `false` (active, [L670](../../../stable-config/gameinfo.gi#L670)) |
 | Experimental | `false` (active, [L670](../../../experimental-config/gameinfo.gi#L670)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -800,7 +800,7 @@ Valve help: dynamically emphasize a damage number above citadel_damage_text_dyna
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: individual damage numbers as small as possible while the enemy health numbers grow. The owner ran false October 6-17 and returned to defaults by request on October 17; no problem with the setting was recorded.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: individual damage numbers as small as possible while the enemy health numbers grow. The owner ran false October 6-17 and returned to defaults by request on October 17; no problem with the setting was recorded.
 
 **Benefits and trade-offs:** Big hits no longer pop larger, so a burst that removes a quarter of a hero's health is less conspicuous. Fonts themselves are fixed in CSS.
 
@@ -817,7 +817,7 @@ Valve help: damage text follows the victim's health-bar scale; default true, req
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `false` (active, [L671](../../../stable-config/gameinfo.gi#L671)) |
 | Experimental | `false` (active, [L671](../../../experimental-config/gameinfo.gi#L671)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -828,7 +828,7 @@ Valve help: damage text follows the victim's health-bar scale; default true, req
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: individual damage numbers as small as possible while the enemy health numbers grow.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: individual damage numbers as small as possible while the enemy health numbers grow.
 
 **Benefits and trade-offs:** Damage numbers stop inheriting citadel_unit_status_max_distance_scale. Their scale when not following is undocumented: if the health-bar scale is below 1 up close, standalone numbers could be larger up close. Offsets measured against the bar may also shift slightly.
 
@@ -845,7 +845,7 @@ Valve help: how much to offset damage numbers above when far from the camera; de
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `214` (active, [L665](../../../stable-config/gameinfo.gi#L665)) |
 | Experimental | `214` (active, [L665](../../../experimental-config/gameinfo.gi#L665)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -856,7 +856,7 @@ Valve help: how much to offset damage numbers above when far from the camera; de
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** Lifts long-range damage numbers further above the target; whether it adds to the health-bar-following position is unverified.
 
@@ -873,7 +873,7 @@ Valve help: how much to offset damage numbers above when near the camera; defaul
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `134` (active, [L664](../../../stable-config/gameinfo.gi#L664)) |
 | Experimental | `134` (active, [L664](../../../experimental-config/gameinfo.gi#L664)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -884,7 +884,7 @@ Valve help: how much to offset damage numbers above when near the camera; defaul
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** Lifts close-range damage numbers further above the target; whether it adds to the health-bar-following position is unverified.
 
@@ -901,7 +901,7 @@ Undocumented horizontal offset for ability damage numbers; default 20, requested
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `35` (active, [L667](../../../stable-config/gameinfo.gi#L667)) |
 | Experimental | `35` (active, [L667](../../../experimental-config/gameinfo.gi#L667)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -912,7 +912,7 @@ Undocumented horizontal offset for ability damage numbers; default 20, requested
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.
 
@@ -929,7 +929,7 @@ Undocumented horizontal offset for bullet damage numbers; default 30, requested 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `45` (active, [L666](../../../stable-config/gameinfo.gi#L666)) |
 | Experimental | `45` (active, [L666](../../../experimental-config/gameinfo.gi#L666)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -940,7 +940,7 @@ Undocumented horizontal offset for bullet damage numbers; default 30, requested 
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.
 
@@ -957,7 +957,7 @@ Undocumented horizontal offset for melee damage numbers; default 20, requested 3
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `35` (active, [L668](../../../stable-config/gameinfo.gi#L668)) |
 | Experimental | `35` (active, [L668](../../../experimental-config/gameinfo.gi#L668)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -968,7 +968,7 @@ Undocumented horizontal offset for melee damage numbers; default 20, requested 3
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.
 
@@ -985,7 +985,7 @@ Undocumented horizontal offset for pure damage numbers; default 25, requested 40
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `40` (active, [L669](../../../stable-config/gameinfo.gi#L669)) |
 | Experimental | `40` (active, [L669](../../../experimental-config/gameinfo.gi#L669)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -996,7 +996,7 @@ Undocumented horizontal offset for pure damage numbers; default 25, requested 40
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.
 
@@ -1013,7 +1013,7 @@ Adds damage-effectiveness information to every damage number.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (disabled, [L972](../../../stable-config/gameinfo.gi#L972)) |
+| Stable | `0` (disabled, [L984](../../../stable-config/gameinfo.gi#L984)) |
 | Experimental | `0` (disabled, [L984](../../../experimental-config/gameinfo.gi#L984)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (disabled, [L1145](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1145)) |
@@ -1065,7 +1065,7 @@ Absent from the pinned dump; the name suggests a ping-particle variant, but curr
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L1077](../../../stable-config/gameinfo.gi#L1077)) |
+| Stable | `true` (active, [L1089](../../../stable-config/gameinfo.gi#L1089)) |
 | Experimental | `true` (active, [L1089](../../../experimental-config/gameinfo.gi#L1089)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1250](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1250)) |
@@ -1089,7 +1089,7 @@ Name suggests preloading sounds referenced by Citadel vdata; detailed load behav
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L1337](../../../stable-config/gameinfo.gi#L1337)) |
+| Stable | `true` (active, [L1349](../../../stable-config/gameinfo.gi#L1349)) |
 | Experimental | `true` (active, [L1349](../../../experimental-config/gameinfo.gi#L1349)) |
 | Stock gameinfo override | `true` (active, [L651](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L651)) |
 | OptimizationLock pinned upstream | `true` (active, [L1510](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1510)) |
@@ -1117,7 +1117,7 @@ Caps the sphere size used when checking large explosion/effect line of sight, as
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `80` (active, [L1078](../../../stable-config/gameinfo.gi#L1078)) |
+| Stable | `80` (active, [L1090](../../../stable-config/gameinfo.gi#L1090)) |
 | Experimental | `80` (active, [L1090](../../../experimental-config/gameinfo.gi#L1090)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `80` (active, [L1251](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1251)) |
@@ -1145,7 +1145,7 @@ Enables a first-person viewpoint.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L973](../../../stable-config/gameinfo.gi#L973)) |
+| Stable | `true` (disabled, [L985](../../../stable-config/gameinfo.gi#L985)) |
 | Experimental | `true` (disabled, [L985](../../../experimental-config/gameinfo.gi#L985)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1146](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1146)) |
@@ -1229,7 +1229,7 @@ Name suggests enabling Hideout testing tools; no explanatory help.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L1048](../../../stable-config/gameinfo.gi#L1048)) |
+| Stable | `true` (disabled, [L1060](../../../stable-config/gameinfo.gi#L1060)) |
 | Experimental | `true` (disabled, [L1060](../../../experimental-config/gameinfo.gi#L1060)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1221](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1221)) |
@@ -1313,7 +1313,7 @@ Sets the idle timeout in seconds for hiding objective health on the HUD after da
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L1079](../../../stable-config/gameinfo.gi#L1079)) |
+| Stable | `0` (active, [L1091](../../../stable-config/gameinfo.gi#L1091)) |
 | Experimental | `0` (active, [L1091](../../../experimental-config/gameinfo.gi#L1091)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1252](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1252)) |
@@ -1341,7 +1341,7 @@ Name suggests showing distance in version-2 HUD unit indicators; Valve provides 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L1172](../../../stable-config/gameinfo.gi#L1172)) |
+| Stable | `true` (active, [L1184](../../../stable-config/gameinfo.gi#L1184)) |
 | Experimental | `true` (active, [L1184](../../../experimental-config/gameinfo.gi#L1184)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1345](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1345)) |
@@ -1397,7 +1397,7 @@ Name suggests melee camera-shake magnitude; no descriptive help or explicit unit
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L675](../../../stable-config/gameinfo.gi#L675)) |
+| Stable | `0` (active, [L687](../../../stable-config/gameinfo.gi#L687)) |
 | Experimental | `0` (active, [L687](../../../experimental-config/gameinfo.gi#L687)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L848](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L848)) |
@@ -1425,7 +1425,7 @@ Name suggests melee camera-shake duration; no descriptive help or explicit units
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L676](../../../stable-config/gameinfo.gi#L676)) |
+| Stable | `0` (active, [L688](../../../stable-config/gameinfo.gi#L688)) |
 | Experimental | `0` (active, [L688](../../../experimental-config/gameinfo.gi#L688)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L849](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L849)) |
@@ -1453,7 +1453,7 @@ Minimap overlap-scanning distance inferred from the name; Valve provides no deta
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L1080](../../../stable-config/gameinfo.gi#L1080)) |
+| Stable | `0` (active, [L1092](../../../stable-config/gameinfo.gi#L1092)) |
 | Experimental | `0` (active, [L1092](../../../experimental-config/gameinfo.gi#L1092)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1253](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1253)) |
@@ -1509,7 +1509,7 @@ Name suggests forcing NPC animation each tick, but the name is absent from the p
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (active, [L1046](../../../stable-config/gameinfo.gi#L1046)) |
+| Stable | `false` (active, [L1058](../../../stable-config/gameinfo.gi#L1058)) |
 | Experimental | `false` (active, [L1058](../../../experimental-config/gameinfo.gi#L1058)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1219](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1219)) |
@@ -1533,7 +1533,7 @@ Draws orb state; Valve describes the nonzero value as how long the state lingers
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1081](../../../stable-config/gameinfo.gi#L1081)) |
+| Stable | `1` (active, [L1093](../../../stable-config/gameinfo.gi#L1093)) |
 | Experimental | `1` (active, [L1093](../../../experimental-config/gameinfo.gi#L1093)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1254](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1254)) |
@@ -1589,7 +1589,7 @@ Interval in seconds for writing performance statistics to the log.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `100000` (disabled, [L1047](../../../stable-config/gameinfo.gi#L1047)) |
+| Stable | `100000` (disabled, [L1059](../../../stable-config/gameinfo.gi#L1059)) |
 | Experimental | `100000` (disabled, [L1059](../../../experimental-config/gameinfo.gi#L1059)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `100000` (disabled, [L1220](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1220)) |
@@ -1617,7 +1617,7 @@ Name suggests enemy outlines. The pinned dump explicitly marks the setting gamei
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (active, [L1082](../../../stable-config/gameinfo.gi#L1082)) |
+| Stable | `false` (active, [L1094](../../../stable-config/gameinfo.gi#L1094)) |
 | Experimental | `false` (active, [L1094](../../../experimental-config/gameinfo.gi#L1094)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1255](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1255)) |
@@ -1645,7 +1645,7 @@ Absent from the pinned dump; the name suggests an animation-graph path for portr
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (active, [L1083](../../../stable-config/gameinfo.gi#L1083)) |
+| Stable | `false` (active, [L1095](../../../stable-config/gameinfo.gi#L1095)) |
 | Experimental | `false` (active, [L1095](../../../experimental-config/gameinfo.gi#L1095)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1256](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1256)) |
@@ -1697,7 +1697,7 @@ Name suggests forcing roster-selection priority-token availability; no descripti
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L974](../../../stable-config/gameinfo.gi#L974)) |
+| Stable | `true` (disabled, [L986](../../../stable-config/gameinfo.gi#L986)) |
 | Experimental | `true` (disabled, [L986](../../../experimental-config/gameinfo.gi#L986)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1147](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1147)) |
@@ -1725,7 +1725,7 @@ Name/upstream comments identify rich-presence development messages; the dump con
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L975](../../../stable-config/gameinfo.gi#L975)) |
+| Stable | `true` (disabled, [L987](../../../stable-config/gameinfo.gi#L987)) |
 | Experimental | `true` (disabled, [L987](../../../experimental-config/gameinfo.gi#L987)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1148](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1148)) |
@@ -1753,7 +1753,7 @@ Moves the shooting position forward relative to the plane defined by the hero an
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L688](../../../stable-config/gameinfo.gi#L688)) |
+| Stable | `0` (active, [L700](../../../stable-config/gameinfo.gi#L700)) |
 | Experimental | `0` (active, [L700](../../../experimental-config/gameinfo.gi#L700)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L861](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L861)) |
@@ -1837,7 +1837,7 @@ Forces the survey UI to be available outside matchmaking.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L863](../../../stable-config/gameinfo.gi#L863)) |
+| Stable | `true` (active, [L875](../../../stable-config/gameinfo.gi#L875)) |
 | Experimental | `true` (active, [L875](../../../experimental-config/gameinfo.gi#L875)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1036](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1036)) |
@@ -1865,7 +1865,7 @@ Name suggests extra trace length for camera-stuck handling; Valve supplies no de
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L689](../../../stable-config/gameinfo.gi#L689)) |
+| Stable | `0` (active, [L701](../../../stable-config/gameinfo.gi#L701)) |
 | Experimental | `0` (active, [L701](../../../experimental-config/gameinfo.gi#L701)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L862](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L862)) |
@@ -1893,7 +1893,7 @@ Absent from the pinned dump; the name suggests a ranked-summary test UI, but cur
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L864](../../../stable-config/gameinfo.gi#L864)) |
+| Stable | `true` (active, [L876](../../../stable-config/gameinfo.gi#L876)) |
 | Experimental | `true` (active, [L876](../../../experimental-config/gameinfo.gi#L876)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1037](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1037)) |
@@ -1917,7 +1917,7 @@ An alternative value for a tight-camera test mode; the dump does not document th
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L690](../../../stable-config/gameinfo.gi#L690)) |
+| Stable | `1` (active, [L702](../../../stable-config/gameinfo.gi#L702)) |
 | Experimental | `1` (active, [L702](../../../experimental-config/gameinfo.gi#L702)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L863](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L863)) |
@@ -2057,7 +2057,7 @@ Name and owner report identify health-bar highlight/fill animation speed; Valve 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `999` (active, [L716](../../../stable-config/gameinfo.gi#L716)) |
+| Stable | `999` (active, [L728](../../../stable-config/gameinfo.gi#L728)) |
 | Experimental | `999` (active, [L728](../../../experimental-config/gameinfo.gi#L728)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `999` (active, [L889](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L889)) |
@@ -2113,7 +2113,7 @@ By its name, the health-bar overlay scale at and beyond citadel_unit_status_max_
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `1.3` (active, [L662](../../../stable-config/gameinfo.gi#L662)) |
 | Experimental | `1.3` (active, [L662](../../../experimental-config/gameinfo.gi#L662)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -2124,7 +2124,7 @@ By its name, the health-bar overlay scale at and beyond citadel_unit_status_max_
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** If the guess is right, far health bars and their numbers grow about 30 percent and can cover more of the target in crowded fights. Damage numbers no longer follow this scale (citadel_damage_text_follow_healthbar_scale false). If near bars change or nothing changes, the semantics differ from the name.
 
@@ -2141,7 +2141,7 @@ Valve help: Z offset for all characters, independent of the model offset; defaul
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | Not assigned |
+| Stable | `48` (active, [L663](../../../stable-config/gameinfo.gi#L663)) |
 | Experimental | `48` (active, [L663](../../../experimental-config/gameinfo.gi#L663)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | Not assigned |
@@ -2152,7 +2152,7 @@ Valve help: Z offset for all characters, independent of the model offset; defaul
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
+**Why retained / provenance:** Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.
 
 **Benefits and trade-offs:** Bars sit higher above heads, which can clear the model in crowded fights but separates the bar further from the target.
 
@@ -2269,7 +2269,7 @@ Name suggests using potentially visible sets for players, but exact behavior is 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L1084](../../../stable-config/gameinfo.gi#L1084)) |
+| Stable | `true` (active, [L1096](../../../stable-config/gameinfo.gi#L1096)) |
 | Experimental | `true` (active, [L1096](../../../experimental-config/gameinfo.gi#L1096)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1257](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1257)) |
@@ -2297,7 +2297,7 @@ Selects the rendering performance level; the dump declares a range of 0–3.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `9` (active, [L842](../../../stable-config/gameinfo.gi#L842)) |
+| Stable | `9` (active, [L854](../../../stable-config/gameinfo.gi#L854)) |
 | Experimental | `9` (active, [L854](../../../experimental-config/gameinfo.gi#L854)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `9` (active, [L1015](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1015)) |
@@ -2325,7 +2325,7 @@ Weapon-spread debug setting inferred from the name; the dump has no detailed hel
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L976](../../../stable-config/gameinfo.gi#L976)) |
+| Stable | `true` (disabled, [L988](../../../stable-config/gameinfo.gi#L988)) |
 | Experimental | `true` (disabled, [L988](../../../experimental-config/gameinfo.gi#L988)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1149](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1149)) |
@@ -2353,7 +2353,7 @@ Enables game joystick input.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L1326](../../../stable-config/gameinfo.gi#L1326)) |
+| Stable | `0` (active, [L1338](../../../stable-config/gameinfo.gi#L1338)) |
 | Experimental | `0` (active, [L1338](../../../experimental-config/gameinfo.gi#L1338)) |
 | Stock gameinfo override | `0` (active, [L640](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L640)) |
 | OptimizationLock pinned upstream | `0` (active, [L1499](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1499)) |
@@ -2381,7 +2381,7 @@ Allows activation of the developer console.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L1173](../../../stable-config/gameinfo.gi#L1173)) |
+| Stable | `true` (active, [L1185](../../../stable-config/gameinfo.gi#L1185)) |
 | Experimental | `true` (active, [L1185](../../../experimental-config/gameinfo.gi#L1185)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1346](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1346)) |
@@ -2409,7 +2409,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L875](../../../stable-config/gameinfo.gi#L875)) |
+| Stable | `0` (active, [L887](../../../stable-config/gameinfo.gi#L887)) |
 | Experimental | `0` (active, [L887](../../../experimental-config/gameinfo.gi#L887)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1048](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1048)) |
@@ -2437,7 +2437,7 @@ Frame-rate limit; Valve explicitly documents 0 as unlimited and says it does not
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L1301](../../../stable-config/gameinfo.gi#L1301)) |
+| Stable | `0` (active, [L1313](../../../stable-config/gameinfo.gi#L1313)) |
 | Experimental | `0` (active, [L1313](../../../experimental-config/gameinfo.gi#L1313)) |
 | Stock gameinfo override | `400` (active, [L615](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L615)) |
 | OptimizationLock pinned upstream | `400` (active, [L1474](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1474)) |
@@ -2465,7 +2465,7 @@ Frame-rate limit while game UI is displayed; 0 means unlimited and does not appl
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L1302](../../../stable-config/gameinfo.gi#L1302)) |
+| Stable | `0` (active, [L1314](../../../stable-config/gameinfo.gi#L1314)) |
 | Experimental | `0` (active, [L1314](../../../experimental-config/gameinfo.gi#L1314)) |
 | Stock gameinfo override | `120` (active, [L616](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L616)) |
 | OptimizationLock pinned upstream | `120` (active, [L1475](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1475)) |
@@ -2493,7 +2493,7 @@ Sets the maximum interval between presses treated as a double press; seconds are
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0.3` (active, [L1304](../../../stable-config/gameinfo.gi#L1304)) |
+| Stable | `0.3` (active, [L1316](../../../stable-config/gameinfo.gi#L1316)) |
 | Experimental | `0.3` (active, [L1316](../../../experimental-config/gameinfo.gi#L1316)) |
 | Stock gameinfo override | `0.3` (active, [L618](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L618)) |
 | OptimizationLock pinned upstream | `0.3` (active, [L1477](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1477)) |
@@ -2549,7 +2549,7 @@ Name suggests allowing UI transitions; Valve supplies no detailed help, so exact
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (active, [L718](../../../stable-config/gameinfo.gi#L718)) |
+| Stable | `false` (active, [L730](../../../stable-config/gameinfo.gi#L730)) |
 | Experimental | `false` (active, [L730](../../../experimental-config/gameinfo.gi#L730)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L891](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L891)) |
@@ -2577,7 +2577,7 @@ Absent from the dump but present in Valve stock gameinfo; the stock comment says
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0.75` (active, [L1234](../../../stable-config/gameinfo.gi#L1234)) |
+| Stable | `0.75` (active, [L1246](../../../stable-config/gameinfo.gi#L1246)) |
 | Experimental | `0.75` (active, [L1246](../../../experimental-config/gameinfo.gi#L1246)) |
 | Stock gameinfo override | `0.75` (active, [L548](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L548)) |
 | OptimizationLock pinned upstream | `0.75` (active, [L1407](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1407)) |
@@ -2629,7 +2629,7 @@ Name suggests disabling UI blur; Valve supplies no detailed help, so exact consu
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L719](../../../stable-config/gameinfo.gi#L719)) |
+| Stable | `true` (active, [L731](../../../stable-config/gameinfo.gi#L731)) |
 | Experimental | `true` (active, [L731](../../../experimental-config/gameinfo.gi#L731)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L892](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L892)) |
@@ -2657,7 +2657,7 @@ Name suggests disabling UI box shadows; Valve supplies no detailed help, so exac
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L715](../../../stable-config/gameinfo.gi#L715)) |
+| Stable | `true` (disabled, [L727](../../../stable-config/gameinfo.gi#L727)) |
 | Experimental | `true` (disabled, [L727](../../../experimental-config/gameinfo.gi#L727)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L888](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L888)) |
@@ -2685,7 +2685,7 @@ Disables filtering of descendant selectors in Panorama.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L986](../../../stable-config/gameinfo.gi#L986)) |
+| Stable | `true` (disabled, [L998](../../../stable-config/gameinfo.gi#L998)) |
 | Experimental | `true` (disabled, [L998](../../../experimental-config/gameinfo.gi#L998)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1159](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1159)) |
@@ -2713,7 +2713,7 @@ Name suggests disabling a UI quad drawing path; Valve supplies no detailed help,
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L987](../../../stable-config/gameinfo.gi#L987)) |
+| Stable | `true` (disabled, [L999](../../../stable-config/gameinfo.gi#L999)) |
 | Experimental | `true` (disabled, [L999](../../../experimental-config/gameinfo.gi#L999)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1160](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1160)) |
@@ -2741,7 +2741,7 @@ Name suggests disabling the UI render-target cache; Valve’s stock comment expl
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L1239](../../../stable-config/gameinfo.gi#L1239)) |
+| Stable | `0` (active, [L1251](../../../stable-config/gameinfo.gi#L1251)) |
 | Experimental | `0` (active, [L1251](../../../experimental-config/gameinfo.gi#L1251)) |
 | Stock gameinfo override | `0` (active, [L553](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L553)) |
 | OptimizationLock pinned upstream | `0` (active, [L1412](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1412)) |
@@ -2769,7 +2769,7 @@ Name suggests a secondary UI layout pass; Valve supplies no detailed help, so ex
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (disabled, [L988](../../../stable-config/gameinfo.gi#L988)) |
+| Stable | `false` (disabled, [L1000](../../../stable-config/gameinfo.gi#L1000)) |
 | Experimental | `false` (disabled, [L1000](../../../experimental-config/gameinfo.gi#L1000)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (disabled, [L1161](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1161)) |
@@ -2797,7 +2797,7 @@ Enables joystick input to the Panorama UI.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L1327](../../../stable-config/gameinfo.gi#L1327)) |
+| Stable | `0` (active, [L1339](../../../stable-config/gameinfo.gi#L1339)) |
 | Experimental | `0` (active, [L1339](../../../experimental-config/gameinfo.gi#L1339)) |
 | Stock gameinfo override | `0` (active, [L641](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L641)) |
 | OptimizationLock pinned upstream | `0` (active, [L1500](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1500)) |
@@ -2825,7 +2825,7 @@ Enables sending minidumps for JavaScript exceptions, per console help.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1237](../../../stable-config/gameinfo.gi#L1237)) |
+| Stable | `1` (active, [L1249](../../../stable-config/gameinfo.gi#L1249)) |
 | Experimental | `1` (active, [L1249](../../../experimental-config/gameinfo.gi#L1249)) |
 | Stock gameinfo override | `1` (active, [L551](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L551)) |
 | OptimizationLock pinned upstream | `1` (active, [L1410](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1410)) |
@@ -2853,7 +2853,7 @@ Absent from the pinned dump; inherited comments call this a UI/overlay frame cap
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `30` (active, [L667](../../../stable-config/gameinfo.gi#L667)) |
+| Stable | `30` (active, [L679](../../../stable-config/gameinfo.gi#L679)) |
 | Experimental | `30` (active, [L679](../../../experimental-config/gameinfo.gi#L679)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `30` (active, [L840](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L840)) |
@@ -2877,7 +2877,7 @@ Absent from the pinned dump; inherited comments call this a UI/overlay frame cap
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `30` (active, [L668](../../../stable-config/gameinfo.gi#L668)) |
+| Stable | `30` (active, [L680](../../../stable-config/gameinfo.gi#L680)) |
 | Experimental | `30` (active, [L680](../../../experimental-config/gameinfo.gi#L680)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `30` (active, [L841](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L841)) |
@@ -2901,7 +2901,7 @@ Name suggests maximum UI text-shadow strength; Valve supplies no detailed help, 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `10` (disabled, [L989](../../../stable-config/gameinfo.gi#L989)) |
+| Stable | `10` (disabled, [L1001](../../../stable-config/gameinfo.gi#L1001)) |
 | Experimental | `10` (disabled, [L1001](../../../experimental-config/gameinfo.gi#L1001)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (disabled, [L1162](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1162)) |
@@ -2929,7 +2929,7 @@ Name suggests UI panel occlusion; Valve supplies no detailed help, so exact cons
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (active, [L720](../../../stable-config/gameinfo.gi#L720)) |
+| Stable | `true` (active, [L732](../../../stable-config/gameinfo.gi#L732)) |
 | Experimental | `true` (active, [L732](../../../experimental-config/gameinfo.gi#L732)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L893](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L893)) |
@@ -2985,7 +2985,7 @@ Name and Valve stock comments identify a UI composition-layer optimization; exac
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1242](../../../stable-config/gameinfo.gi#L1242)) |
+| Stable | `1` (active, [L1254](../../../stable-config/gameinfo.gi#L1254)) |
 | Experimental | `1` (active, [L1254](../../../experimental-config/gameinfo.gi#L1254)) |
 | Stock gameinfo override | `1` (active, [L556](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L556)) |
 | OptimizationLock pinned upstream | `1` (active, [L1415](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1415)) |
@@ -3013,7 +3013,7 @@ Name suggests minimum temporary UI composition-layer dimension; Valve supplies n
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `128` (disabled, [L990](../../../stable-config/gameinfo.gi#L990)) |
+| Stable | `128` (disabled, [L1002](../../../stable-config/gameinfo.gi#L1002)) |
 | Experimental | `128` (disabled, [L1002](../../../experimental-config/gameinfo.gi#L1002)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `128` (disabled, [L1163](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1163)) |
@@ -3041,7 +3041,7 @@ Scales UI transition speed: Valve explicitly says 2 is twice as fast, 0.5 half a
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `2` (active, [L1180](../../../stable-config/gameinfo.gi#L1180)) |
+| Stable | `2` (active, [L1192](../../../stable-config/gameinfo.gi#L1192)) |
 | Experimental | `2` (active, [L1192](../../../experimental-config/gameinfo.gi#L1192)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L1353](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1353)) |
@@ -3069,7 +3069,7 @@ Name suggests culling updates to in-world UI panels; Valve supplies no detailed 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `true` (disabled, [L991](../../../stable-config/gameinfo.gi#L991)) |
+| Stable | `true` (disabled, [L1003](../../../stable-config/gameinfo.gi#L1003)) |
 | Experimental | `true` (disabled, [L1003](../../../experimental-config/gameinfo.gi#L1003)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (disabled, [L1164](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1164)) |
@@ -3097,7 +3097,7 @@ Enables Steam Input integration, according to Valve help.
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `false` (active, [L621](../../../stable-config/gameinfo.gi#L621)); `false` (active, [L1186](../../../stable-config/gameinfo.gi#L1186)) |
+| Stable | `false` (active, [L621](../../../stable-config/gameinfo.gi#L621)); `false` (active, [L1198](../../../stable-config/gameinfo.gi#L1198)) |
 | Experimental | `false` (active, [L621](../../../experimental-config/gameinfo.gi#L621)); `false` (active, [L1198](../../../experimental-config/gameinfo.gi#L1198)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L794](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L794)); `false` (active, [L1359](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1359)) |
@@ -3153,7 +3153,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `0` (active, [L896](../../../stable-config/gameinfo.gi#L896)) |
+| Stable | `0` (active, [L908](../../../stable-config/gameinfo.gi#L908)) |
 | Experimental | `0` (active, [L908](../../../experimental-config/gameinfo.gi#L908)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1069](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1069)) |

@@ -521,5 +521,16 @@ HEALTH NUMBERS A TAD BIGGER AND HIGHER; DAMAGE NUMBERS AS SMALL AS THE CONVARS A
   numbers got bigger, set follow_healthbar_scale back to true.
   Lines after 669 moved down by 2.
 
+STABLE: EXACT COPY OF EXPERIMENTAL (2026-10-27)
+  stable-config/gameinfo.gi replaced by a byte-identical copy of experimental-config/gameinfo.gi (SHA-256
+  ace9da9e7802e00a608414f848b3b0b3b2a7844b422d9dd25eb840347906d5e5) at the owner's request. Stable gains the ten
+  section 3.1 HUD readability lines from the two entries above: health-bar scale at range 1.3 and z offset 48,
+  damage-number height offsets 134/214 and per-type x offsets 45/35/35/40, dynamic emphasis and health-bar-scale
+  following off. Everything else was already identical. They are now owner decisions that upstream pulls keep
+  (docs/CONFIGS.md, docs/CLAUDE.md, upstream-sync skill). compare.py finds no differences. The first HUD values were
+  owner-tested in experimental; the current ones are untested in game. Stable's line numbers after 659 move down by
+  12; experimental is unchanged.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

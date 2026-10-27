@@ -3972,7 +3972,7 @@
   "ConVars/citadel_unit_status_max_distance_scale": {
     "subsystem": "HUD / UI",
     "purpose": "By its name, the health-bar overlay scale at and beyond citadel_unit_status_max_distance_distance (800); default 1, requested 1.3 (first 1.2). The overlay includes the health number, whose 18px font is fixed in Valve's CSS, so scaling the overlay is the gameinfo route to a larger number.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "If the guess is right, far health bars and their numbers grow about 30 percent and can cover more of the target in crowded fights. Damage numbers no longer follow this scale (citadel_damage_text_follow_healthbar_scale false). If near bars change or nothing changes, the semantics differ from the name.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -3985,7 +3985,7 @@
   "ConVars/citadel_unit_status_offset_player_z_offset_adjustment": {
     "subsystem": "HUD / UI",
     "purpose": "Valve help: Z offset for all characters, independent of the model offset; default 16, requested 48 (first 32). Raises hero health bars, their health numbers and, through citadel_damage_text_follow_healthbar_pos, the damage numbers.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "Bars sit higher above heads, which can clear the model in crowded fights but separates the bar further from the target.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -3997,7 +3997,7 @@
   "ConVars/citadel_damage_text_height_offset_near": {
     "subsystem": "HUD / UI",
     "purpose": "Valve help: how much to offset damage numbers above when near the camera; default 130, requested 134: first 150, then 16 lower to offset the bar rising another 16.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "Lifts close-range damage numbers further above the target; whether it adds to the health-bar-following position is unverified.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -4009,7 +4009,7 @@
   "ConVars/citadel_damage_text_height_offset_far": {
     "subsystem": "HUD / UI",
     "purpose": "Valve help: how much to offset damage numbers above when far from the camera; default 200, requested 214: first 230, then 16 lower to offset the bar rising another 16.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "Lifts long-range damage numbers further above the target; whether it adds to the health-bar-following position is unverified.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -4021,7 +4021,7 @@
   "ConVars/citadel_damage_text_new_bullet_offset_x": {
     "subsystem": "HUD / UI",
     "purpose": "Undocumented horizontal offset for bullet damage numbers; default 30, requested 45. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -4033,7 +4033,7 @@
   "ConVars/citadel_damage_text_new_ability_offset_x": {
     "subsystem": "HUD / UI",
     "purpose": "Undocumented horizontal offset for ability damage numbers; default 20, requested 35. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -4045,7 +4045,7 @@
   "ConVars/citadel_damage_text_new_melee_offset_x": {
     "subsystem": "HUD / UI",
     "purpose": "Undocumented horizontal offset for melee damage numbers; default 20, requested 35. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -4057,7 +4057,7 @@
   "ConVars/citadel_damage_text_new_pure_offset_x": {
     "subsystem": "HUD / UI",
     "purpose": "Undocumented horizontal offset for pure damage numbers; default 25, requested 40. All four per-type x defaults are positive, consistent with numbers drawn to the right of the anchor, so +15 should move them right.",
-    "rationale": "Owner request on 2026-10-27, experimental only: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: enemy health numbers and damage numbers are hard to read at 110 FOV and in long-range fights. Owner-reported in game after the first values: damage-number position right, health numbers better but a tad small.",
     "tradeoffs": "Moves this damage type's numbers further right. Units are unstated; if they move left, the sign convention is the opposite.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for the inferred direction and applied runtime effect.",
@@ -4069,7 +4069,7 @@
   "ConVars/citadel_damage_text_dynamic_emphasis": {
     "subsystem": "HUD / UI",
     "purpose": "Valve help: dynamically emphasize a damage number above citadel_damage_text_dynamic_emphasis_percent (0.25) of the target's max health; default true, requested false. Emphasized hits scale to 150 percent in Valve's hud_event_indicator.css.",
-    "rationale": "Owner request on 2026-10-27, experimental only: individual damage numbers as small as possible while the enemy health numbers grow. The owner ran false October 6-17 and returned to defaults by request on October 17; no problem with the setting was recorded.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: individual damage numbers as small as possible while the enemy health numbers grow. The owner ran false October 6-17 and returned to defaults by request on October 17; no problem with the setting was recorded.",
     "tradeoffs": "Big hits no longer pop larger, so a burst that removes a quarter of a hero's health is less conspicuous. Fonts themselves are fixed in CSS.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags and declared purpose; low for applied runtime effect.",
@@ -4082,7 +4082,7 @@
   "ConVars/citadel_damage_text_follow_healthbar_scale": {
     "subsystem": "HUD / UI",
     "purpose": "Valve help: damage text follows the victim's health-bar scale; default true, requested false so the enlarged health bar no longer enlarges damage numbers.",
-    "rationale": "Owner request on 2026-10-27, experimental only: individual damage numbers as small as possible while the enemy health numbers grow.",
+    "rationale": "Owner request on 2026-10-27, tuned in experimental and copied to stable the same day: individual damage numbers as small as possible while the enemy health numbers grow.",
     "tradeoffs": "Damage numbers stop inheriting citadel_unit_status_max_distance_scale. Their scale when not following is undocumented: if the health-bar scale is below 1 up close, standalone numbers could be larger up close. Offsets measured against the bar may also shift slightly.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags and declared purpose; low for the resulting size.",
