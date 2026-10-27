@@ -2,7 +2,7 @@
 
 Both files replace `game/citadel/gameinfo.gi`. They preserve the owner's performance-first preferences;
 this repository does not establish measured FPS gains or current matchmaking compatibility. Use the
-[installer](UPDATE-COMMAND.md) or [manual installation and rollback](INSTALL.md).
+[installer](../README.md) (`-Ex` for experimental) or [manual installation and rollback](INSTALL.md).
 
 The [complete setting reference](SETTING-REFERENCE.md) covers every active assignment, disabled tweak,
 engine section and mod path in both files. It distinguishes console registration defaults, stock file

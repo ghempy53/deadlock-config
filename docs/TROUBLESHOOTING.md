@@ -16,7 +16,7 @@ just to silence the validator. Preserve the original file for diagnosis.
 
 ## Update command errors
 
-Messages from [`DeadlockConfig-Update`](UPDATE-COMMAND.md):
+Messages from [`DeadlockConfig-Update`](../README.md):
 
 | Message | Cause |
 | --- | --- |

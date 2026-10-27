@@ -1,6 +1,6 @@
 # Install
 
-Use [`DeadlockConfig-Update`](UPDATE-COMMAND.md) for the current stable or experimental file, or copy one by hand:
+Use [`DeadlockConfig-Update`](../README.md) for the current stable file (`-Ex` for experimental), or copy one by hand:
 
 1. Close Deadlock. In Steam, use Deadlock → Properties → Installed Files → Browse, then open `game\citadel`.
 2. Back up the existing `gameinfo.gi` outside that folder, with the game build and date in the filename. The update
