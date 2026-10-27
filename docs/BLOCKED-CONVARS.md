@@ -6,7 +6,7 @@ Reviewed 2026-10-22: **124 registered names** carry this flag in the pinned Valv
 The flag declares that gameinfo is not an allowed override route. It does not mean the feature is unavailable or
 that a menu/server cannot set it. Enforcement was not exercised here. No bypass is proposed.
 
-The current stable file contains **15** active flagged names; experimental contains **16**.
+Both current files contain the same **15** active flagged names (experimental had 16 before its October 27 reset to stable).
 They are preserved owner-approved/inherited entries, not permission to delete or retune them during a documentation audit.
 Disabled flagged examples also remain in the [complete reference](SETTING-REFERENCE.md).
 
@@ -15,7 +15,6 @@ Disabled flagged examples also remain in the [complete reference](SETTING-REFERE
 | Name | Stable | Experimental |
 | --- | --- | --- |
 | `citadel_player_outline_enemies` | active | active |
-| `lb_enable_baked_shadows` | not active | active |
 | `lb_enable_dynamic_lights` | active | active |
 | `lb_enable_fog_mixed_shadows` | active | active |
 | `lb_enable_lights` | active | active |

@@ -2,7 +2,7 @@
 
 [Reference index and evidence rules](../../SETTING-REFERENCE.md). Generated; edit the JSON annotations, not this file.
 
-Research date 2026-10-27; Valve-data mirror build 6814. 343 unique setting paths.
+Research date 2026-10-27; Valve-data mirror build 6814. 326 unique setting paths.
 
 ## Contents
 
@@ -229,20 +229,13 @@ Research date 2026-10-27; Valve-data mirror build 6814. 343 unique setting paths
 - [`ResourceCompiler/WorldRendererBuilder/PrecomputedShadowmapResolutionDefault`](#setting-resourcecompiler-worldrendererbuilder-precomputedshadowmapresolutiondefault)
 - [`ResourceCompiler/WorldRendererBuilder/UseAggregateInstances`](#setting-resourcecompiler-worldrendererbuilder-useaggregateinstances)
 - [`ResourceCompiler/WorldRendererBuilder/VisibilityGuidedMeshClustering`](#setting-resourcecompiler-worldrendererbuilder-visibilityguidedmeshclustering)
-- [`SceneSystem/CMTAtlasHeight`](#setting-scenesystem-cmtatlasheight)
-- [`SceneSystem/CMTAtlasWidth`](#setting-scenesystem-cmtatlaswidth)
 - [`SceneSystem/CSMCascadeResolution`](#setting-scenesystem-csmcascaderesolution)
-- [`SceneSystem/CharacterDecals`](#setting-scenesystem-characterdecals)
 - [`SceneSystem/ComputeShaderSkinning`](#setting-scenesystem-computeshaderskinning)
 - [`SceneSystem/CubemapFog`](#setting-scenesystem-cubemapfog)
 - [`SceneSystem/DefaultShadowTextureHeight`](#setting-scenesystem-defaultshadowtextureheight)
 - [`SceneSystem/DefaultShadowTextureWidth`](#setting-scenesystem-defaultshadowtexturewidth)
 - [`SceneSystem/DisableLateAllocatedTransformBuffer`](#setting-scenesystem-disablelateallocatedtransformbuffer)
-- [`SceneSystem/DisableShadowFullSort`](#setting-scenesystem-disableshadowfullsort)
 - [`SceneSystem/DynamicShadowResolution`](#setting-scenesystem-dynamicshadowresolution)
-- [`SceneSystem/EnableAlphaTint`](#setting-scenesystem-enablealphatint)
-- [`SceneSystem/EnableSunlight`](#setting-scenesystem-enablesunlight)
-- [`SceneSystem/EnableViewModelSunlight`](#setting-scenesystem-enableviewmodelsunlight)
 - [`SceneSystem/FogCachedShadowAtlasHeightTools`](#setting-scenesystem-fogcachedshadowatlasheighttools)
 - [`SceneSystem/FogCachedShadowAtlasWidthTools`](#setting-scenesystem-fogcachedshadowatlaswidthtools)
 - [`SceneSystem/FogCachedShadowTileMaxFilterRadius`](#setting-scenesystem-fogcachedshadowtilemaxfilterradius)
@@ -250,10 +243,8 @@ Research date 2026-10-27; Valve-data mirror build 6814. 343 unique setting paths
 - [`SceneSystem/FogCachedShadowTileSizeTools`](#setting-scenesystem-fogcachedshadowtilesizetools)
 - [`SceneSystem/FrameBufferCopyFormat`](#setting-scenesystem-framebuffercopyformat)
 - [`SceneSystem/GpuLightBinner`](#setting-scenesystem-gpulightbinner)
-- [`SceneSystem/GpuLightBinnerBinEnvMaps`](#setting-scenesystem-gpulightbinnerbinenvmaps)
 - [`SceneSystem/GpuLightBinnerBinLPVs`](#setting-scenesystem-gpulightbinnerbinlpvs)
 - [`SceneSystem/GpuLightBinnerSunLightFastPath`](#setting-scenesystem-gpulightbinnersunlightfastpath)
-- [`SceneSystem/GpuLightBinnerSupportViewModelCascade`](#setting-scenesystem-gpulightbinnersupportviewmodelcascade)
 - [`SceneSystem/HDRFrameBuffer`](#setting-scenesystem-hdrframebuffer)
 - [`SceneSystem/HairShading`](#setting-scenesystem-hairshading)
 - [`SceneSystem/LayerBatchThresholdFullsort`](#setting-scenesystem-layerbatchthresholdfullsort)
@@ -262,21 +253,13 @@ Research date 2026-10-27; Valve-data mirror build 6814. 343 unique setting paths
 - [`SceneSystem/MinimumLateAllocatedVertexCacheBufferSizeMB`](#setting-scenesystem-minimumlateallocatedvertexcachebuffersizemb)
 - [`SceneSystem/NonTexturedGradientFog`](#setting-scenesystem-nontexturedgradientfog)
 - [`SceneSystem/ParticleBufferSize`](#setting-scenesystem-particlebuffersize)
-- [`SceneSystem/PerVertexLighting`](#setting-scenesystem-pervertexlighting)
-- [`SceneSystem/PointLightShadowsEnabled`](#setting-scenesystem-pointlightshadowsenabled)
 - [`SceneSystem/PunctualContactShadows`](#setting-scenesystem-punctualcontactshadows)
-- [`SceneSystem/SelfShadowStrength`](#setting-scenesystem-selfshadowstrength)
-- [`SceneSystem/ShadowAtlas`](#setting-scenesystem-shadowatlas)
-- [`SceneSystem/ShadowDepth`](#setting-scenesystem-shadowdepth)
-- [`SceneSystem/ShadowDepthBuffer`](#setting-scenesystem-shadowdepthbuffer)
-- [`SceneSystem/ShadowDepthBufferNoCmp`](#setting-scenesystem-shadowdepthbuffernocmp)
 - [`SceneSystem/ShadowmapMaxFilterRadius`](#setting-scenesystem-shadowmapmaxfilterradius)
 - [`SceneSystem/SparseShadowTrees`](#setting-scenesystem-sparseshadowtrees)
 - [`SceneSystem/SunLightManagerCount`](#setting-scenesystem-sunlightmanagercount)
 - [`SceneSystem/SunLightManagerCountTools`](#setting-scenesystem-sunlightmanagercounttools)
 - [`SceneSystem/SunLightMaxCascadeSize`](#setting-scenesystem-sunlightmaxcascadesize)
 - [`SceneSystem/SunLightShadowRenderMode`](#setting-scenesystem-sunlightshadowrendermode)
-- [`SceneSystem/SupportsInstancedFade`](#setting-scenesystem-supportsinstancedfade)
 - [`SceneSystem/Tonemapping`](#setting-scenesystem-tonemapping)
 - [`SceneSystem/TransformTextureRowCount`](#setting-scenesystem-transformtexturerowcount)
 - [`SceneSystem/TransformTextureRowCountToolsMode`](#setting-scenesystem-transformtexturerowcounttoolsmode)
@@ -358,7 +341,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `60` (active, [L554](../../../stable-config/gameinfo.gi#L554)) |
-| Experimental | `60` (active, [L571](../../../experimental-config/gameinfo.gi#L571)) |
+| Experimental | `60` (active, [L554](../../../experimental-config/gameinfo.gi#L554)) |
 | Stock gameinfo override | `60` (active, [L494](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L494)) |
 | OptimizationLock pinned upstream | `60` (active, [L719](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L719)) |
 
@@ -382,7 +365,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L552](../../../stable-config/gameinfo.gi#L552)) |
-| Experimental | `1` (active, [L569](../../../experimental-config/gameinfo.gi#L569)) |
+| Experimental | `1` (active, [L552](../../../experimental-config/gameinfo.gi#L552)) |
 | Stock gameinfo override | `1` (active, [L492](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L492)) |
 | OptimizationLock pinned upstream | `1` (active, [L717](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L717)) |
 
@@ -406,7 +389,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L551](../../../stable-config/gameinfo.gi#L551)) |
-| Experimental | `1` (active, [L568](../../../experimental-config/gameinfo.gi#L568)) |
+| Experimental | `1` (active, [L551](../../../experimental-config/gameinfo.gi#L551)) |
 | Stock gameinfo override | `1` (active, [L491](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L491)) |
 | OptimizationLock pinned upstream | `1` (active, [L716](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L716)) |
 
@@ -430,7 +413,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `60` (active, [L553](../../../stable-config/gameinfo.gi#L553)) |
-| Experimental | `60` (active, [L570](../../../experimental-config/gameinfo.gi#L570)) |
+| Experimental | `60` (active, [L553](../../../experimental-config/gameinfo.gi#L553)) |
 | Stock gameinfo override | `60` (active, [L493](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L493)) |
 | OptimizationLock pinned upstream | `60` (active, [L718](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L718)) |
 
@@ -1582,7 +1565,7 @@ Estimated CPU-memory metadata in MB by name. The value 1 differs from stock; it 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1358](../../../stable-config/gameinfo.gi#L1358)) |
-| Experimental | `1` (active, [L1342](../../../experimental-config/gameinfo.gi#L1342)) |
+| Experimental | `1` (active, [L1358](../../../experimental-config/gameinfo.gi#L1358)) |
 | Stock gameinfo override | `1` (active, [L672](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L672)) |
 | OptimizationLock pinned upstream | `1` (active, [L1531](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1531)) |
 
@@ -1606,7 +1589,7 @@ Estimated minimum GPU-memory metadata in MB by name. Setting 1 is not evidence o
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1359](../../../stable-config/gameinfo.gi#L1359)) |
-| Experimental | `1` (active, [L1343](../../../experimental-config/gameinfo.gi#L1343)) |
+| Experimental | `1` (active, [L1359](../../../experimental-config/gameinfo.gi#L1359)) |
 | Stock gameinfo override | `1` (active, [L673](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L673)) |
 | OptimizationLock pinned upstream | `1` (active, [L1532](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1532)) |
 
@@ -1630,7 +1613,7 @@ Controls whether an insufficient-page-file message box is shown, as named. Retai
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1361](../../../stable-config/gameinfo.gi#L1361)) |
-| Experimental | `1` (active, [L1345](../../../experimental-config/gameinfo.gi#L1345)) |
+| Experimental | `1` (active, [L1361](../../../experimental-config/gameinfo.gi#L1361)) |
 | Stock gameinfo override | `1` (active, [L675](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L675)) |
 | OptimizationLock pinned upstream | `1` (active, [L1534](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1534)) |
 
@@ -1654,7 +1637,7 @@ Controls the low-virtual-memory message box, as named. It does not change availa
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1362](../../../stable-config/gameinfo.gi#L1362)) |
-| Experimental | `1` (active, [L1346](../../../experimental-config/gameinfo.gi#L1346)) |
+| Experimental | `1` (active, [L1362](../../../experimental-config/gameinfo.gi#L1362)) |
 | Stock gameinfo override | `1` (active, [L676](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L676)) |
 | OptimizationLock pinned upstream | `1` (active, [L1535](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1535)) |
 
@@ -1678,7 +1661,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L561](../../../stable-config/gameinfo.gi#L561)) |
-| Experimental | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L578](../../../experimental-config/gameinfo.gi#L578)) |
+| Experimental | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L561](../../../experimental-config/gameinfo.gi#L561)) |
 | Stock gameinfo override | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L501](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L501)) |
 | OptimizationLock pinned upstream | `modelconfig;gamepreview;wireframe_backfaces;distancefield` (active, [L726](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L726)) |
 
@@ -1702,7 +1685,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `models_gamedata.fgd` (active, [L560](../../../stable-config/gameinfo.gi#L560)) |
-| Experimental | `models_gamedata.fgd` (active, [L577](../../../experimental-config/gameinfo.gi#L577)) |
+| Experimental | `models_gamedata.fgd` (active, [L560](../../../experimental-config/gameinfo.gi#L560)) |
 | Stock gameinfo override | `models_gamedata.fgd` (active, [L500](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L500)) |
 | OptimizationLock pinned upstream | `models_gamedata.fgd` (active, [L725](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L725)) |
 
@@ -1774,7 +1757,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2.0` (active, [L533](../../../stable-config/gameinfo.gi#L533)) |
-| Experimental | `2.0` (active, [L550](../../../experimental-config/gameinfo.gi#L550)) |
+| Experimental | `2.0` (active, [L533](../../../experimental-config/gameinfo.gi#L533)) |
 | Stock gameinfo override | `2.0` (active, [L473](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L473)) |
 | OptimizationLock pinned upstream | `2.0` (active, [L698](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L698)) |
 
@@ -1798,7 +1781,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1.5` (active, [L532](../../../stable-config/gameinfo.gi#L532)) |
-| Experimental | `1.5` (active, [L549](../../../experimental-config/gameinfo.gi#L549)) |
+| Experimental | `1.5` (active, [L532](../../../experimental-config/gameinfo.gi#L532)) |
 | Stock gameinfo override | `1.5` (active, [L472](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L472)) |
 | OptimizationLock pinned upstream | `1.5` (active, [L697](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L697)) |
 
@@ -1822,7 +1805,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `120.0` (active, [L544](../../../stable-config/gameinfo.gi#L544)) |
-| Experimental | `120.0` (active, [L561](../../../experimental-config/gameinfo.gi#L561)) |
+| Experimental | `120.0` (active, [L544](../../../experimental-config/gameinfo.gi#L544)) |
 | Stock gameinfo override | `120.0` (active, [L484](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L484)) |
 | OptimizationLock pinned upstream | `120.0` (active, [L709](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L709)) |
 
@@ -1846,7 +1829,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2.0` (active, [L545](../../../stable-config/gameinfo.gi#L545)) |
-| Experimental | `2.0` (active, [L562](../../../experimental-config/gameinfo.gi#L562)) |
+| Experimental | `2.0` (active, [L545](../../../experimental-config/gameinfo.gi#L545)) |
 | Stock gameinfo override | `2.0` (active, [L485](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L485)) |
 | OptimizationLock pinned upstream | `2.0` (active, [L710](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L710)) |
 
@@ -1870,7 +1853,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `51.0` (active, [L542](../../../stable-config/gameinfo.gi#L542)) |
-| Experimental | `51.0` (active, [L559](../../../experimental-config/gameinfo.gi#L559)) |
+| Experimental | `51.0` (active, [L542](../../../experimental-config/gameinfo.gi#L542)) |
 | Stock gameinfo override | `51.0` (active, [L482](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L482)) |
 | OptimizationLock pinned upstream | `51.0` (active, [L707](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L707)) |
 
@@ -1894,7 +1877,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1200` (active, [L541](../../../stable-config/gameinfo.gi#L541)) |
-| Experimental | `1200` (active, [L558](../../../experimental-config/gameinfo.gi#L558)) |
+| Experimental | `1200` (active, [L541](../../../experimental-config/gameinfo.gi#L541)) |
 | Stock gameinfo override | `1200` (active, [L481](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L481)) |
 | OptimizationLock pinned upstream | `1200` (active, [L706](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L706)) |
 
@@ -1918,7 +1901,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `default` (active, [L537](../../../stable-config/gameinfo.gi#L537)) |
-| Experimental | `default` (active, [L554](../../../experimental-config/gameinfo.gi#L554)) |
+| Experimental | `default` (active, [L537](../../../experimental-config/gameinfo.gi#L537)) |
 | Stock gameinfo override | `default` (active, [L477](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L477)) |
 | OptimizationLock pinned upstream | `default` (active, [L702](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L702)) |
 
@@ -1942,7 +1925,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `20` (active, [L540](../../../stable-config/gameinfo.gi#L540)) |
-| Experimental | `20` (active, [L557](../../../experimental-config/gameinfo.gi#L557)) |
+| Experimental | `20` (active, [L540](../../../experimental-config/gameinfo.gi#L540)) |
 | Stock gameinfo override | `20` (active, [L480](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L480)) |
 | OptimizationLock pinned upstream | `20` (active, [L705](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L705)) |
 
@@ -1966,7 +1949,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `8` (active, [L539](../../../stable-config/gameinfo.gi#L539)) |
-| Experimental | `8` (active, [L556](../../../experimental-config/gameinfo.gi#L556)) |
+| Experimental | `8` (active, [L539](../../../experimental-config/gameinfo.gi#L539)) |
 | Stock gameinfo override | `8` (active, [L479](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L479)) |
 | OptimizationLock pinned upstream | `8` (active, [L704](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L704)) |
 
@@ -1990,7 +1973,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `81.0` (active, [L546](../../../stable-config/gameinfo.gi#L546)) |
-| Experimental | `81.0` (active, [L563](../../../experimental-config/gameinfo.gi#L563)) |
+| Experimental | `81.0` (active, [L546](../../../experimental-config/gameinfo.gi#L546)) |
 | Stock gameinfo override | `81.0` (active, [L486](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L486)) |
 | OptimizationLock pinned upstream | `81.0` (active, [L711](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L711)) |
 
@@ -2014,7 +1997,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `128.0` (active, [L531](../../../stable-config/gameinfo.gi#L531)) |
-| Experimental | `128.0` (active, [L548](../../../experimental-config/gameinfo.gi#L548)) |
+| Experimental | `128.0` (active, [L531](../../../experimental-config/gameinfo.gi#L531)) |
 | Stock gameinfo override | `128.0` (active, [L471](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L471)) |
 | OptimizationLock pinned upstream | `128.0` (active, [L696](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L696)) |
 
@@ -2038,7 +2021,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `4` (active, [L543](../../../stable-config/gameinfo.gi#L543)) |
-| Experimental | `4` (active, [L560](../../../experimental-config/gameinfo.gi#L560)) |
+| Experimental | `4` (active, [L543](../../../experimental-config/gameinfo.gi#L543)) |
 | Stock gameinfo override | `4` (active, [L483](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L483)) |
 | OptimizationLock pinned upstream | `4` (active, [L708](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L708)) |
 
@@ -2230,13 +2213,13 @@ Stock particle bindless-shader option retained at 1. The captured file does not 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L568](../../../stable-config/gameinfo.gi#L568)); `1` (active, [L576](../../../stable-config/gameinfo.gi#L576)) |
-| Experimental | `1` (active, [L585](../../../experimental-config/gameinfo.gi#L585)) |
+| Experimental | `1` (active, [L568](../../../experimental-config/gameinfo.gi#L568)); `1` (active, [L576](../../../experimental-config/gameinfo.gi#L576)) |
 | Stock gameinfo override | `1` (active, [L509](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L509)) |
 | OptimizationLock pinned upstream | `1` (active, [L733](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L733)); `1` (active, [L741](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L741)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 adds a second identical assignment in its Particles.dll block; stable preserves both.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 adds a second identical assignment in its Particles.dll block; both configs preserve both.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -2254,7 +2237,7 @@ Particle budget key requested 1 and absent from stock. The exact path occurs in 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L577](../../../stable-config/gameinfo.gi#L577)) |
-| Experimental | Not assigned |
+| Experimental | `1` (active, [L577](../../../experimental-config/gameinfo.gi#L577)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L742](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L742)) |
 
@@ -2278,7 +2261,7 @@ Particle budget key requested 1 and absent from stock. The exact path, including
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L580](../../../stable-config/gameinfo.gi#L580)) |
-| Experimental | Not assigned |
+| Experimental | `1` (active, [L580](../../../experimental-config/gameinfo.gi#L580)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L745](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L745)) |
 
@@ -2302,7 +2285,7 @@ Particle budget key requested 1 and absent from stock. The exact path occurs in 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L578](../../../stable-config/gameinfo.gi#L578)) |
-| Experimental | Not assigned |
+| Experimental | `1` (active, [L578](../../../experimental-config/gameinfo.gi#L578)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L743](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L743)) |
 
@@ -2326,7 +2309,7 @@ Particle budget key requested 1 and absent from stock. The exact path occurs in 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L579](../../../stable-config/gameinfo.gi#L579)) |
-| Experimental | Not assigned |
+| Experimental | `1` (active, [L579](../../../experimental-config/gameinfo.gi#L579)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L744](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L744)) |
 
@@ -2350,7 +2333,7 @@ Candidate mixed-resolution particle option, absent from stock. The inspected par
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L575](../../../stable-config/gameinfo.gi#L575)) |
-| Experimental | `1` (active, [L592](../../../experimental-config/gameinfo.gi#L592)) |
+| Experimental | `1` (active, [L575](../../../experimental-config/gameinfo.gi#L575)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L740](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L740)) |
 
@@ -2374,7 +2357,7 @@ Stock particle shader-feature-branching option retained at 1. The name suggests 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L569](../../../stable-config/gameinfo.gi#L569)) |
-| Experimental | `1` (active, [L586](../../../experimental-config/gameinfo.gi#L586)) |
+| Experimental | `1` (active, [L569](../../../experimental-config/gameinfo.gi#L569)) |
 | Stock gameinfo override | `1` (active, [L506](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L506)) |
 | OptimizationLock pinned upstream | `1` (active, [L734](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L734)) |
 
@@ -2398,7 +2381,7 @@ Stock particle feature string non_homogenous_forward_layer_only. Accepted featur
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `non_homogenous_forward_layer_only` (active, [L570](../../../stable-config/gameinfo.gi#L570)) |
-| Experimental | `non_homogenous_forward_layer_only` (active, [L587](../../../experimental-config/gameinfo.gi#L587)) |
+| Experimental | `non_homogenous_forward_layer_only` (active, [L570](../../../experimental-config/gameinfo.gi#L570)) |
 | Stock gameinfo override | `non_homogenous_forward_layer_only` (active, [L510](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L510)) |
 | OptimizationLock pinned upstream | `non_homogenous_forward_layer_only` (active, [L735](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L735)) |
 
@@ -2422,7 +2405,7 @@ Stock particle 16-bit floating-point HDR backbuffer option. Internal HDR process
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L571](../../../stable-config/gameinfo.gi#L571)) |
-| Experimental | `1` (active, [L588](../../../experimental-config/gameinfo.gi#L588)) |
+| Experimental | `1` (active, [L571](../../../experimental-config/gameinfo.gi#L571)) |
 | Stock gameinfo override | `1` (active, [L507](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L507)) |
 | OptimizationLock pinned upstream | `1` (active, [L736](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L736)) |
 
@@ -2446,7 +2429,7 @@ Particle option requested 1 and absent from stock. The exact path occurs in the 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L587](../../../stable-config/gameinfo.gi#L587)) |
-| Experimental | Not assigned |
+| Experimental | `1` (active, [L587](../../../experimental-config/gameinfo.gi#L587)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L752](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L752)) |
 
@@ -2470,7 +2453,7 @@ Disabled particle option. The key name occurs in the particle DLL strings; absen
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (disabled, [L586](../../../stable-config/gameinfo.gi#L586)) |
-| Experimental | Not assigned |
+| Experimental | `1` (disabled, [L586](../../../experimental-config/gameinfo.gi#L586)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (disabled, [L751](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L751)) |
 
@@ -2480,7 +2463,7 @@ Disabled particle option. The key name occurs in the particle DLL strings; absen
 
 **Benefits and trade-offs:** None while disabled. Upstream reports that enabling it broke Paige, Drifter and Infernus particles; check those heroes before enabling it.
 
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in stable; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
@@ -2494,7 +2477,7 @@ Bare MPropertyFlattenIntoParentRow appears in the particle strings among propert
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L581](../../../stable-config/gameinfo.gi#L581)) |
-| Experimental | `1` (active, [L593](../../../experimental-config/gameinfo.gi#L593)) |
+| Experimental | `1` (active, [L581](../../../experimental-config/gameinfo.gi#L581)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L746](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L746)) |
 
@@ -2518,13 +2501,13 @@ Nested mixed-resolution particle slice count requested 16; absent from stock. Th
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `16` (active, [L590](../../../stable-config/gameinfo.gi#L590)) |
-| Experimental | Not assigned |
+| Experimental | `16` (active, [L590](../../../experimental-config/gameinfo.gi#L590)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `16` (active, [L755](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L755)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Added by OptimizationLock 3.7; stable keeps upstream's spelling because correcting it would activate an untested setting. Original individual rationale is not documented.
+**Why retained / provenance:** Added by OptimizationLock 3.7; the configs keep upstream's spelling because correcting it would activate an untested setting. Original individual rationale is not documented.
 
 **Benefits and trade-offs:** Probably inert as written. If the engine does read it, the slice count could change mixed-resolution particle quality.
 
@@ -2542,7 +2525,7 @@ Stock feature flag whose name suggests support for fading opaque particle models
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L572](../../../stable-config/gameinfo.gi#L572)) |
-| Experimental | `1` (active, [L589](../../../experimental-config/gameinfo.gi#L589)) |
+| Experimental | `1` (active, [L572](../../../experimental-config/gameinfo.gi#L572)) |
 | Stock gameinfo override | `1` (active, [L508](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L508)) |
 | OptimizationLock pinned upstream | `1` (active, [L737](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L737)) |
 
@@ -2566,7 +2549,7 @@ Candidate particle trace-offset policy with an exact Particles/ path in the capt
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L582](../../../stable-config/gameinfo.gi#L582)) |
-| Experimental | `1` (active, [L594](../../../experimental-config/gameinfo.gi#L594)) |
+| Experimental | `1` (active, [L582](../../../experimental-config/gameinfo.gi#L582)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L747](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L747)) |
 
@@ -2590,7 +2573,7 @@ Bare particle fog-default name appears in the strings, but a recognized gameinfo
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L583](../../../stable-config/gameinfo.gi#L583)) |
-| Experimental | `0` (active, [L595](../../../experimental-config/gameinfo.gi#L595)) |
+| Experimental | `0` (active, [L583](../../../experimental-config/gameinfo.gi#L583)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L748](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L748)) |
 
@@ -2614,7 +2597,7 @@ Bare PerVertexLighting appears in several rendering modules; that alone does not
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L584](../../../stable-config/gameinfo.gi#L584)) |
-| Experimental | `0` (active, [L596](../../../experimental-config/gameinfo.gi#L596)) |
+| Experimental | `0` (active, [L584](../../../experimental-config/gameinfo.gi#L584)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L749](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L749)) |
 
@@ -2638,7 +2621,7 @@ Bare PostSimulate appears in particle strings, but it may name an internal metho
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L585](../../../stable-config/gameinfo.gi#L585)) |
-| Experimental | `0` (active, [L597](../../../experimental-config/gameinfo.gi#L597)) |
+| Experimental | `0` (active, [L585](../../../experimental-config/gameinfo.gi#L585)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L750](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L750)) |
 
@@ -2662,7 +2645,7 @@ Configuration metadata whose exact semantics are not documented in the captured 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L596](../../../stable-config/gameinfo.gi#L596)) |
-| Experimental | `1` (active, [L602](../../../experimental-config/gameinfo.gi#L602)) |
+| Experimental | `1` (active, [L596](../../../experimental-config/gameinfo.gi#L596)) |
 | Stock gameinfo override | `1` (active, [L515](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L515)) |
 | OptimizationLock pinned upstream | `1` (active, [L761](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L761)) |
 
@@ -2710,7 +2693,7 @@ Appears to allow immediate texture loads with a partial mip chain; its exact pat
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L162](../../../stable-config/gameinfo.gi#L162)) |
-| Experimental | `1` (active, [L163](../../../experimental-config/gameinfo.gi#L163)) |
+| Experimental | `1` (active, [L162](../../../experimental-config/gameinfo.gi#L162)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L327](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L327)) |
 
@@ -2734,7 +2717,7 @@ Render-system key requested 0 and absent from stock. The name occurs only in the
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L163](../../../stable-config/gameinfo.gi#L163)) |
-| Experimental | Not assigned |
+| Experimental | `0` (active, [L163](../../../experimental-config/gameinfo.gi#L163)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L328](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L328)) |
 
@@ -2830,7 +2813,7 @@ Appears to limit preloaded texture resolution. The exact path occurs in both DX1
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L161](../../../stable-config/gameinfo.gi#L161)) |
-| Experimental | `0` (active, [L162](../../../experimental-config/gameinfo.gi#L162)) |
+| Experimental | `0` (active, [L161](../../../experimental-config/gameinfo.gi#L161)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L326](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L326)) |
 
@@ -2849,18 +2832,18 @@ Appears to limit preloaded texture resolution. The exact path occurs in both DX1
 <a id="setting-rendersystem-minstreamingpoolsizemb"></a>
 ## `RenderSystem/MinStreamingPoolSizeMB`
 
-By the key name, sets a minimum texture-streaming pool size in MB; stock specifies 1024, stable 500 and experimental 2048. Interaction with r_texture_pool_size and dynamic budgeting requires runtime measurement.
+By the key name, sets a minimum texture-streaming pool size in MB; stock specifies 1024 and both configs 500. Interaction with r_texture_pool_size and dynamic budgeting requires runtime measurement.
 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `500` (active, [L142](../../../stable-config/gameinfo.gi#L142)) |
-| Experimental | `2048` (active, [L142](../../../experimental-config/gameinfo.gi#L142)) |
+| Experimental | `500` (active, [L142](../../../experimental-config/gameinfo.gi#L142)) |
 | Stock gameinfo override | `1024` (active, [L136](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L136)) |
 | OptimizationLock pinned upstream | `500` (active, [L307](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L307)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 lowered it from 2048 to 500, citing CS2's value; stable follows and experimental keeps 2048.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. Valve stock also contains this key; the reference records whether the configured value differs. A stock gameinfo value is not an engine-declared default. OptimizationLock 3.7 lowered it from 2048 to 500, citing CS2's value; stable follows, and experimental matches since its 2026-10-27 reset to stable.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -3142,7 +3125,7 @@ Vulkan device requirement requested false and absent from stock. A Vulkan DLL er
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L164](../../../stable-config/gameinfo.gi#L164)) |
-| Experimental | Not assigned |
+| Experimental | `false` (active, [L164](../../../experimental-config/gameinfo.gi#L164)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L329](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L329)) |
 
@@ -5702,54 +5685,6 @@ Resource compilation/build configuration. The key names a compiler, bake, or enc
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L280); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L459).
 
-<a id="setting-scenesystem-cmtatlasheight"></a>
-## `SceneSystem/CMTAtlasHeight`
-
-Commented candidate CMT atlas height with a captured exact path. What CMT means, its units, and safe values are not established; the upstream wall-warning is anecdotal.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (disabled, [L506](../../../experimental-config/gameinfo.gi#L506)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in experimental; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
-<a id="setting-scenesystem-cmtatlaswidth"></a>
-## `SceneSystem/CMTAtlasWidth`
-
-Commented candidate CMT atlas width with a captured exact path. What CMT means, its units, and safe values are not established; the upstream wall-warning is anecdotal.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (disabled, [L507](../../../experimental-config/gameinfo.gi#L507)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. This commented candidate is not an active request. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Disabled in experimental; not present in the other file: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
 <a id="setting-scenesystem-csmcascaderesolution"></a>
 ## `SceneSystem/CSMCascadeResolution`
 
@@ -5774,30 +5709,6 @@ Names the cascaded-shadow-map resolution; stock requests 2048 and this config 0.
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
 
-<a id="setting-scenesystem-characterdecals"></a>
-## `SceneSystem/CharacterDecals`
-
-Candidate SceneSystem option named CharacterDecals. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L508](../../../experimental-config/gameinfo.gi#L508)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
 <a id="setting-scenesystem-computeshaderskinning"></a>
 ## `SceneSystem/ComputeShaderSkinning`
 
@@ -5806,7 +5717,7 @@ Enables the stock compute-shader skinning option. It is a rendering mechanism ra
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L526](../../../stable-config/gameinfo.gi#L526)) |
-| Experimental | `1` (active, [L543](../../../experimental-config/gameinfo.gi#L543)) |
+| Experimental | `1` (active, [L526](../../../experimental-config/gameinfo.gi#L526)) |
 | Stock gameinfo override | `1` (active, [L466](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L466)) |
 | OptimizationLock pinned upstream | `1` (active, [L691](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L691)) |
 
@@ -5918,30 +5829,6 @@ Candidate disabling switch for a late-allocated transform buffer. Its exact path
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
 
-<a id="setting-scenesystem-disableshadowfullsort"></a>
-## `SceneSystem/DisableShadowFullSort`
-
-Candidate SceneSystem option named DisableShadowFullSort. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `1` (active, [L510](../../../experimental-config/gameinfo.gi#L510)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
 <a id="setting-scenesystem-dynamicshadowresolution"></a>
 ## `SceneSystem/DynamicShadowResolution`
 
@@ -5965,78 +5852,6 @@ Candidate SceneSystem option named DynamicShadowResolution. The precise behavior
 **Evidence / test status:** High for stock presence; low for undocumented semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
-<a id="setting-scenesystem-enablealphatint"></a>
-## `SceneSystem/EnableAlphaTint`
-
-Candidate SceneSystem option named EnableAlphaTint. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L511](../../../experimental-config/gameinfo.gi#L511)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
-
-<a id="setting-scenesystem-enablesunlight"></a>
-## `SceneSystem/EnableSunlight`
-
-Candidate SceneSystem option named EnableSunlight. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L512](../../../experimental-config/gameinfo.gi#L512)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
-
-<a id="setting-scenesystem-enableviewmodelsunlight"></a>
-## `SceneSystem/EnableViewModelSunlight`
-
-Candidate SceneSystem option named EnableViewModelSunlight. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L513](../../../experimental-config/gameinfo.gi#L513)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
 <a id="setting-scenesystem-fogcachedshadowatlasheighttools"></a>
 ## `SceneSystem/FogCachedShadowAtlasHeightTools`
@@ -6094,7 +5909,7 @@ Names a maximum filtering radius for cached-fog-shadow tiles; a captured exact p
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L506](../../../stable-config/gameinfo.gi#L506)) |
-| Experimental | `0` (active, [L509](../../../experimental-config/gameinfo.gi#L509)) |
+| Experimental | `0` (active, [L506](../../../experimental-config/gameinfo.gi#L506)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L671](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L671)) |
 
@@ -6206,30 +6021,6 @@ Selects the stock GPU light-binner path. The capture does not describe an altern
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
 
-<a id="setting-scenesystem-gpulightbinnerbinenvmaps"></a>
-## `SceneSystem/GpuLightBinnerBinEnvMaps`
-
-Candidate SceneSystem option named GpuLightBinnerBinEnvMaps. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `1` (active, [L516](../../../experimental-config/gameinfo.gi#L516)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
 <a id="setting-scenesystem-gpulightbinnerbinlpvs"></a>
 ## `SceneSystem/GpuLightBinnerBinLPVs`
 
@@ -6238,13 +6029,13 @@ Candidate SceneSystem option named GpuLightBinnerBinLPVs. The precise behavior, 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L507](../../../stable-config/gameinfo.gi#L507)) |
-| Experimental | `0` (active, [L517](../../../experimental-config/gameinfo.gi#L517)) |
+| Experimental | `false` (active, [L507](../../../experimental-config/gameinfo.gi#L507)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L672](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L672)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Stable writes false after the 3.7.1 sync and experimental keeps 0.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Both configs write false after the 3.7.1 sync (experimental since its 2026-10-27 reset to stable).
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6278,30 +6069,6 @@ Names the shipped sunlight fast-path option for the GPU light binner. Stock rete
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
-<a id="setting-scenesystem-gpulightbinnersupportviewmodelcascade"></a>
-## `SceneSystem/GpuLightBinnerSupportViewModelCascade`
-
-Candidate SceneSystem option named GpuLightBinnerSupportViewModelCascade. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L514](../../../experimental-config/gameinfo.gi#L514)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
 <a id="setting-scenesystem-hdrframebuffer"></a>
 ## `SceneSystem/HDRFrameBuffer`
 
@@ -6334,7 +6101,7 @@ Candidate SceneSystem option named HairShading. The precise behavior, valid valu
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L508](../../../stable-config/gameinfo.gi#L508)) |
-| Experimental | `false` (active, [L515](../../../experimental-config/gameinfo.gi#L515)) |
+| Experimental | `false` (active, [L508](../../../experimental-config/gameinfo.gi#L508)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L673](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L673)) |
 
@@ -6382,7 +6149,7 @@ Candidate SceneSystem option named LightCookieAllocGranularity. The precise beha
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L509](../../../stable-config/gameinfo.gi#L509)) |
-| Experimental | `1` (active, [L518](../../../experimental-config/gameinfo.gi#L518)) |
+| Experimental | `1` (active, [L509](../../../experimental-config/gameinfo.gi#L509)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L674](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L674)) |
 
@@ -6406,7 +6173,7 @@ Candidate SceneSystem option named LightCookieMinAllocSize. The precise behavior
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L510](../../../stable-config/gameinfo.gi#L510)) |
-| Experimental | `0` (active, [L519](../../../experimental-config/gameinfo.gi#L519)) |
+| Experimental | `0` (active, [L510](../../../experimental-config/gameinfo.gi#L510)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L675](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L675)) |
 
@@ -6478,13 +6245,13 @@ Candidate SceneSystem option named ParticleBufferSize. The precise behavior, val
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2048` (active, [L511](../../../stable-config/gameinfo.gi#L511)) |
-| Experimental | `512` (active, [L521](../../../experimental-config/gameinfo.gi#L521)) |
+| Experimental | `2048` (active, [L511](../../../experimental-config/gameinfo.gi#L511)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2048` (active, [L676](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L676)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Stable requests 2048 after the 3.7.1 sync (upstream's claimed 65536 default is unverified); experimental keeps 512.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. Both configs request 2048 after the 3.7.1 sync (upstream's claimed 65536 default is unverified); experimental had 512 until its 2026-10-27 reset to stable.
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6494,54 +6261,6 @@ Candidate SceneSystem option named ParticleBufferSize. The precise behavior, val
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt); [evidence 4](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi).
 
-<a id="setting-scenesystem-pervertexlighting"></a>
-## `SceneSystem/PerVertexLighting`
-
-Candidate SceneSystem option named PerVertexLighting. The precise behavior, valid values, and default are not documented by the pinned stock file. A bare matching string is not evidence of a gameinfo reader; current recognition and effect remain unverified.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L522](../../../experimental-config/gameinfo.gi#L522)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/worldrenderer_strings.txt); [evidence 4](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt); [evidence 5](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
-<a id="setting-scenesystem-pointlightshadowsenabled"></a>
-## `SceneSystem/PointLightShadowsEnabled`
-
-Candidate SceneSystem option named PointLightShadowsEnabled. The precise behavior, valid values, and default are not documented by the pinned stock file. An exact path occurs in a captured engine string dump, supporting the key name but not proving it is read or effective.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L523](../../../experimental-config/gameinfo.gi#L523)); `0` (active, [L524](../../../experimental-config/gameinfo.gi#L524)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Repeated keys are preserved in file order; search/render paths are ordered lists, not duplicate scalar ConVars. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Medium for exact captured key-path presence; low for semantics and effect. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
 <a id="setting-scenesystem-punctualcontactshadows"></a>
 ## `SceneSystem/PunctualContactShadows`
 
@@ -6550,7 +6269,7 @@ Candidate SceneSystem option named PunctualContactShadows. The precise behavior,
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L512](../../../stable-config/gameinfo.gi#L512)) |
-| Experimental | `0` (active, [L525](../../../experimental-config/gameinfo.gi#L525)) |
+| Experimental | `0` (active, [L512](../../../experimental-config/gameinfo.gi#L512)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L677](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L677)) |
 
@@ -6566,126 +6285,6 @@ Candidate SceneSystem option named PunctualContactShadows. The precise behavior,
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
 
-<a id="setting-scenesystem-selfshadowstrength"></a>
-## `SceneSystem/SelfShadowStrength`
-
-Candidate SceneSystem option named SelfShadowStrength. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L526](../../../experimental-config/gameinfo.gi#L526)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
-
-<a id="setting-scenesystem-shadowatlas"></a>
-## `SceneSystem/ShadowAtlas`
-
-Candidate SceneSystem option named ShadowAtlas. The precise behavior, valid values, and default are not documented by the pinned stock file. A bare matching string is not evidence of a gameinfo reader; current recognition and effect remain unverified.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L527](../../../experimental-config/gameinfo.gi#L527)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
-<a id="setting-scenesystem-shadowdepth"></a>
-## `SceneSystem/ShadowDepth`
-
-Candidate SceneSystem option named ShadowDepth. The precise behavior, valid values, and default are not documented by the pinned stock file. A bare matching string is not evidence of a gameinfo reader; current recognition and effect remain unverified.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L528](../../../experimental-config/gameinfo.gi#L528)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt).
-
-<a id="setting-scenesystem-shadowdepthbuffer"></a>
-## `SceneSystem/ShadowDepthBuffer`
-
-Candidate SceneSystem option named ShadowDepthBuffer. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L529](../../../experimental-config/gameinfo.gi#L529)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
-
-<a id="setting-scenesystem-shadowdepthbuffernocmp"></a>
-## `SceneSystem/ShadowDepthBufferNoCmp`
-
-Candidate SceneSystem option named ShadowDepthBufferNoCmp. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L530](../../../experimental-config/gameinfo.gi#L530)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
-
 <a id="setting-scenesystem-shadowmapmaxfilterradius"></a>
 ## `SceneSystem/ShadowmapMaxFilterRadius`
 
@@ -6694,13 +6293,13 @@ Candidate SceneSystem option named ShadowmapMaxFilterRadius. The precise behavio
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L513](../../../stable-config/gameinfo.gi#L513)); `8` (active, [L514](../../../stable-config/gameinfo.gi#L514)) |
-| Experimental | `0` (active, [L531](../../../experimental-config/gameinfo.gi#L531)) |
+| Experimental | `0` (active, [L513](../../../experimental-config/gameinfo.gi#L513)); `8` (active, [L514](../../../experimental-config/gameinfo.gi#L514)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L678](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L678)); `8` (active, [L679](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L679)) |
 
 **Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
 
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 writes it twice, 0 then 8 (upstream's claimed default 32 is unverified); stable preserves both and experimental keeps a single 0.
+**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 writes it twice, 0 then 8 (upstream's claimed default 32 is unverified); both configs preserve both (experimental since its 2026-10-27 reset to stable).
 
 **Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
 
@@ -6718,7 +6317,7 @@ Candidate SceneSystem option named SparseShadowTrees. The precise behavior, vali
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L515](../../../stable-config/gameinfo.gi#L515)) |
-| Experimental | `0` (active, [L532](../../../experimental-config/gameinfo.gi#L532)) |
+| Experimental | `0` (active, [L515](../../../experimental-config/gameinfo.gi#L515)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L680](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L680)) |
 
@@ -6830,30 +6429,6 @@ Selects Depth as the sunlight shadow render mode, matching stock.
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
 
-<a id="setting-scenesystem-supportsinstancedfade"></a>
-## `SceneSystem/SupportsInstancedFade`
-
-Candidate SceneSystem option named SupportsInstancedFade. The precise behavior, valid values, and default are not documented by the pinned stock file. Neither stock presence nor an exact path in the inspected rendering strings establishes recognition; this is an explicit unknown.
-
-| Source | Assignments in source order |
-| --- | --- |
-| Stable | Not assigned |
-| Experimental | `0` (active, [L520](../../../experimental-config/gameinfo.gi#L520)) |
-| Stock gameinfo override | Not assigned |
-| OptimizationLock pinned upstream | Not assigned |
-
-**Valve registration:** Not a ConVar. Stock values above are file assignments, not declared engine defaults; type/range/flags and undocumented sentinel values are unknown unless the annotation cites them.
-
-**Why retained / provenance:** Retained from the OptimizationLock-derived engine sections to preserve the owner's chosen configuration. Original individual rationale is not documented beyond upstream comments. It is absent from current stock; a string or a CS2-derived comment does not establish a supported Deadlock override. OptimizationLock 3.7 removed it; stable dropped it with the 3.7.1 sync and only experimental still writes it.
-
-**Benefits and trade-offs:** No current measured benefit. Changing render resources or feature paths can alter visuals, resource usage, or stability; undocumented zero values are not guaranteed safe disable switches.
-
-**Applicability and effectiveness:** Runtime acceptance is not documented in these captures. Do not infer online compatibility from parsing successfully. This is an engine/configuration key, not a console variable; dump flags and defaults do not apply. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
-
-**Evidence / test status:** Low: string-only or upstream-only evidence; effect unverified. Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run.
-
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
-
 <a id="setting-scenesystem-tonemapping"></a>
 ## `SceneSystem/Tonemapping`
 
@@ -6958,7 +6533,7 @@ Maps the blank light-cookie name to Valve's texture resource path; this is a res
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `materials/effects/lightcookies/blank.vtex` (active, [L522](../../../stable-config/gameinfo.gi#L522)) |
-| Experimental | `materials/effects/lightcookies/blank.vtex` (active, [L539](../../../experimental-config/gameinfo.gi#L539)) |
+| Experimental | `materials/effects/lightcookies/blank.vtex` (active, [L522](../../../experimental-config/gameinfo.gi#L522)) |
 | Stock gameinfo override | `materials/effects/lightcookies/blank.vtex` (active, [L462](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L462)) |
 | OptimizationLock pinned upstream | `materials/effects/lightcookies/blank.vtex` (active, [L687](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L687)) |
 
@@ -6982,7 +6557,7 @@ Maps the flashlight light-cookie name to Valve's texture resource path; this is 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `materials/effects/lightcookies/flashlight.vtex` (active, [L523](../../../stable-config/gameinfo.gi#L523)) |
-| Experimental | `materials/effects/lightcookies/flashlight.vtex` (active, [L540](../../../experimental-config/gameinfo.gi#L540)) |
+| Experimental | `materials/effects/lightcookies/flashlight.vtex` (active, [L523](../../../experimental-config/gameinfo.gi#L523)) |
 | Stock gameinfo override | `materials/effects/lightcookies/flashlight.vtex` (active, [L463](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L463)) |
 | OptimizationLock pinned upstream | `materials/effects/lightcookies/flashlight.vtex` (active, [L688](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L688)) |
 

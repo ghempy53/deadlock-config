@@ -6,7 +6,7 @@ maintenance regardless of assistant. The owner's current request overrides workf
 ## Current files and owner decisions
 
 - Stable is OptimizationLock **3.7.1 hotfix** (October 27) plus owner preferences. v1.4 is a frozen **3.6** copy.
-- Experimental restarted October 15 from v1.2, then **October 17 from stable 3.5.3**. Its engine update (authored October 21, merged October 22 in PR #80) matched stable's 3.6.1 non-ConVar assignments; stable's 3.7.1 sync changed RenderSystem, SceneSystem and Particles again. Both intentionally retain upstream engine edits and duplicates.
+- Experimental was **reset October 27 to a byte-identical copy of stable** so owner testing starts from stable (earlier restarts: October 15 from v1.2, October 17 from stable 3.5.3). Both intentionally retain upstream engine edits and duplicates.
 - Both active files and all intentional disabled entries are covered in [SETTING-REFERENCE.md](SETTING-REFERENCE.md).
   [CONFIGS.md](CONFIGS.md) is the current owner-decision and variant record.
 - Frozen `stable-config/v*/gameinfo.gi` and `docs/archive/` are immutable historical evidence. Never edit them.
@@ -23,7 +23,7 @@ maintenance regardless of assistant. The owner's current request overrides workf
   in Sandbox was not reproduced by this audit.
 - The two owner damage-number lifetime/emphasis tweaks were removed October 17. Other inherited damage/HUD lines
   remain; do not say all damage-number settings are default.
-- Stable keeps vertical camera flattening true / health-bar highlight 999; experimental false / 100.
+- Since the October 27 reset both configs request vertical camera flattening true and health-bar highlight 999 (experimental previously false / 100).
 - October 6–7 camera/input/turn-stutter performance results were retired by the owner October 15 because of PC
   problems. Historical symptoms do not justify reverts. The owner accepted v1.2's visibility/performance trade-offs.
 - Experimental is the test bed: unless a request names stable, a config change targets

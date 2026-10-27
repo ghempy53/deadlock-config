@@ -598,7 +598,7 @@
   "ConVars/citadel_camera_use_vmdl_flatten_vertical": {
     "subsystem": "Camera / input",
     "purpose": "Zeros the camera’s relative Z movement as a motion-sickness reduction.",
-    "rationale": "Stable took true in OptimizationLock 3.6 (PR #75); experimental keeps the 3.5.3 false value. This is an intentional variant difference.",
+    "rationale": "Stable took true in OptimizationLock 3.6 (PR #75); experimental kept the 3.5.3 false value until its 2026-10-27 reset to stable; both now request true. It is no longer a variant difference.",
     "tradeoffs": "May change hero-specific aim-down-sights vertical camera motion; no mouse-latency improvement is established.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
@@ -941,7 +941,7 @@
   "ConVars/citadel_minimap_trooper_size": {
     "subsystem": "HUD / UI",
     "purpose": "Name and upstream comments identify the minimap trooper marker size; units are not documented.",
-    "rationale": "Stable adopted 2 from upstream 3.6; experimental has no assignment. The declared default is 3.",
+    "rationale": "Stable adopted 2 from upstream 3.6; experimental had no assignment until its 2026-10-27 reset to stable. The declared default is 3.",
     "tradeoffs": "Smaller markers can change readability. No CPU or GPU improvement is measured.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
@@ -981,7 +981,7 @@
   "ConVars/citadel_per_weapon_per_surface_impact_effects": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Name suggests selecting impact effects by weapon and hit surface; Valve supplies no detailed help.",
-    "rationale": "Activated through the OptimizationLock 3.5.3 sync; OptimizationLock 3.7 disabled it again, so stable makes no assignment after the 3.7.1 sync while experimental keeps false. Upstream reports fewer impact visuals and loss of Yamato’s alternate-fire radius indicator.",
+    "rationale": "Activated through the OptimizationLock 3.5.3 sync; OptimizationLock 3.7 disabled it again, so neither config makes an assignment (experimental since its 2026-10-27 reset to stable). Upstream reports fewer impact visuals and loss of Yamato’s alternate-fire radius indicator.",
     "tradeoffs": "Potential ability readability loss, not simply fewer bullet tracers. Replicated state may differ online; neither the warning nor a gain is tested here.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
@@ -1084,36 +1084,10 @@
     ],
     "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
   },
-  "ConVars/citadel_show_chat_wheel_angle_threshold": {
-    "subsystem": "Runtime / gameplay presentation",
-    "purpose": "Absent from the pinned dump; upstream comments describe camera-angle movement that immediately opens the chat wheel.",
-    "rationale": "Intentionally commented documentation/example; it contributes no active assignment. Original per-setting reason for retaining the example is not documented beyond upstream comments.",
-    "tradeoffs": "Commented example only; the historical degree interpretation does not establish a supported current input setting.",
-    "applicability": "",
-    "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
-    "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
-    ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
-  },
-  "ConVars/citadel_show_chat_wheel_time": {
-    "subsystem": "Runtime / gameplay presentation",
-    "purpose": "Delay before the chat wheel appears after pressing the ping command.",
-    "rationale": "Intentionally commented documentation/example; it contributes no active assignment. Original per-setting reason for retaining the example is not documented beyond upstream comments.",
-    "tradeoffs": "Commented 15 example does not change current behavior. Exact units are not stated in help; the declared default is 0.23.",
-    "applicability": "No renderer-specific applicability found.",
-    "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
-    "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
-    ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
-  },
   "ConVars/citadel_show_minimap_reveal_indicators": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Name suggests showing minimap reveal indicators; no descriptive help is present.",
-    "rationale": "Stable adopted true in PR #75; experimental has no assignment.",
+    "rationale": "Stable adopted true in PR #75; experimental had no assignment until its 2026-10-27 reset to stable.",
     "tradeoffs": "Intended HUD preference; exact conditions and readability need visual checking, not an FPS claim.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
@@ -1127,7 +1101,7 @@
   "ConVars/citadel_show_old_neutral_camp_icons": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Selects the old neutral-camp icons on the minimap.",
-    "rationale": "Stable adopted false in PR #75; experimental has no assignment.",
+    "rationale": "Stable adopted false in PR #75; experimental had no assignment until its 2026-10-27 reset to stable.",
     "tradeoffs": "Changes which icon presentation is requested, with no measured performance consequence.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
@@ -1217,20 +1191,6 @@
     ],
     "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
   },
-  "ConVars/citadel_unit_status_allies_see_thru_walls_max_distance": {
-    "subsystem": "HUD / UI",
-    "purpose": "Historical health-bar/UI setting absent from the pinned dump. The original comment indicates intent, but current registration and implementation remain unresolved.",
-    "rationale": "Preserved from the repository’s inherited configuration; original individual rationale is not documented. Current upstream absence does not establish that the setting is invalid.",
-    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental retains them.",
-    "applicability": "",
-    "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
-    "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/ghempy53/deadlock-config/pull/75"
-    ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
-  },
   "ConVars/citadel_unit_status_delta_decay_delay": {
     "subsystem": "HUD / UI",
     "purpose": "Name/upstream comment indicate delay before the damage-delta bar begins decaying; Valve provides no detailed help or explicit units.",
@@ -1257,24 +1217,10 @@
     ],
     "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
   },
-  "ConVars/citadel_unit_status_dpi": {
-    "subsystem": "HUD / UI",
-    "purpose": "Historical health-bar/UI setting absent from the pinned dump. The original comment indicates intent, but current registration and implementation remain unresolved.",
-    "rationale": "Preserved from the repository’s inherited configuration; original individual rationale is not documented. Current upstream absence does not establish that the setting is invalid.",
-    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental retains them.",
-    "applicability": "",
-    "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
-    "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/ghempy53/deadlock-config/pull/75"
-    ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
-  },
   "ConVars/citadel_unit_status_healthbar_highlight_speed": {
     "subsystem": "HUD / UI",
     "purpose": "Name and owner report identify health-bar highlight/fill animation speed; Valve supplies no detailed help, range, or units.",
-    "rationale": "Owner introduced 100 in tested v1.2 (PR #59); stable adopted upstream 999 in PR #75, while experimental remains 100.",
+    "rationale": "Owner introduced 100 in tested v1.2 (PR #59); stable adopted upstream 999 in PR #75, while experimental stayed at 100 until its 2026-10-27 reset to stable; both now request 999.",
     "tradeoffs": "A faster visual highlight may be easier to read but cannot make authoritative health updates arrive sooner. Exact interpolation and online display behavior are unmeasured.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
@@ -1290,7 +1236,7 @@
     "subsystem": "HUD / UI",
     "purpose": "Historical health-bar/UI setting absent from the pinned dump. The original comment indicates intent, but current registration and implementation remain unresolved.",
     "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental retains them.",
+    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental dropped them with its 2026-10-27 reset to stable.",
     "applicability": "",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
@@ -1317,7 +1263,7 @@
     "subsystem": "HUD / UI",
     "purpose": "Historical health-bar/UI setting absent from the pinned dump. The original comment indicates intent, but current registration and implementation remain unresolved.",
     "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental retains them.",
+    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental dropped them with its 2026-10-27 reset to stable.",
     "applicability": "",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
@@ -1331,7 +1277,7 @@
     "subsystem": "HUD / UI",
     "purpose": "Historical health-bar/UI setting absent from the pinned dump. The original comment indicates intent, but current registration and implementation remain unresolved.",
     "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental retains them.",
+    "tradeoffs": "Do not assert current HUD refresh, layout, distance, or stamina behavior from this old name. Stable removed the dpi and ally-distance entries in PR #75; experimental dropped them with its 2026-10-27 reset to stable.",
     "applicability": "",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
@@ -2326,7 +2272,7 @@
   "ConVars/minimap_trooper_update_rate_hz": {
     "subsystem": "HUD / UI",
     "purpose": "The name identifies a minimap update rate in hertz, but the dump supplies no further help about the update path.",
-    "rationale": "Stable adopted 2 from upstream 3.6; experimental has no assignment. The declared default is 5.",
+    "rationale": "Stable adopted 2 from upstream 3.6; experimental had no assignment until its 2026-10-27 reset to stable. The declared default is 5.",
     "tradeoffs": "These are server-module-only registrations. A local client file cannot set the remote match’s update cadence; possible local-server savings and marker staleness are unmeasured.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
