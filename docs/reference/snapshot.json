@@ -569,6 +569,26 @@
       "max": null,
       "min": null
     },
+    "citadel_damage_text_dynamic_emphasis": {
+      "default": "true",
+      "description": "Dynamically emphasize damage number over a certain percent of the targets max health. See citadel_damage_text_dynamic_emphasis_percent",
+      "flags": [
+        "clientdll",
+        "developmentonly"
+      ],
+      "max": null,
+      "min": null
+    },
+    "citadel_damage_text_follow_healthbar_scale": {
+      "default": "true",
+      "description": "Damage text follows the victim's healthbar scale",
+      "flags": [
+        "clientdll",
+        "developmentonly"
+      ],
+      "max": null,
+      "min": null
+    },
     "citadel_damage_text_height_offset_far": {
       "default": "200",
       "description": "How much to offset damage numbers above when far from the camera",
@@ -5206,6 +5226,8 @@
     "ConVars/citadel_damage_offscreen_indicator_disabled",
     "ConVars/citadel_damage_report_enable",
     "ConVars/citadel_damage_text_batching_window_ability",
+    "ConVars/citadel_damage_text_dynamic_emphasis",
+    "ConVars/citadel_damage_text_follow_healthbar_scale",
     "ConVars/citadel_damage_text_height_offset_far",
     "ConVars/citadel_damage_text_height_offset_near",
     "ConVars/citadel_damage_text_new_ability_offset_x",

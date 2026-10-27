@@ -659,14 +659,16 @@ GameInfo
         citadel_unit_status_hide_names                  "true"  // This should hide playernames from health bars. [def: "false"]
 
         // --- 3.1 Enemy health numbers and damage numbers (experimental, 2026-10-27) ---
-        citadel_unit_status_max_distance_scale                 "1.2"  // Health bar and health number scale at long range (by name); damage numbers follow it. [def: "1"]
-        citadel_unit_status_offset_player_z_offset_adjustment  "32"   // Raises hero health bars and health numbers; damage numbers follow the bar. [def: "16"]
-        citadel_damage_text_height_offset_near                 "150"  // Damage numbers further above the target up close. [def: "130"]
-        citadel_damage_text_height_offset_far                  "230"  // Damage numbers further above the target far away. [def: "200"]
+        citadel_unit_status_max_distance_scale                 "1.3"  // Health bar and health number scale at long range (by name). [def: "1"]
+        citadel_unit_status_offset_player_z_offset_adjustment  "48"   // Raises hero health bars and health numbers; damage numbers follow the bar. [def: "16"]
+        citadel_damage_text_height_offset_near                 "134"  // Damage numbers above the target up close; 16 lower to offset the raised bar. [def: "130"]
+        citadel_damage_text_height_offset_far                  "214"  // Damage numbers above the target far away; 16 lower to offset the raised bar. [def: "200"]
         citadel_damage_text_new_bullet_offset_x                "45"   // Bullet damage numbers further right. [def: "30"]
         citadel_damage_text_new_ability_offset_x               "35"   // Ability damage numbers further right. [def: "20"]
         citadel_damage_text_new_melee_offset_x                 "35"   // Melee damage numbers further right. [def: "20"]
         citadel_damage_text_new_pure_offset_x                  "40"   // Pure damage numbers further right. [def: "25"]
+        citadel_damage_text_dynamic_emphasis                   "false" // No 150 percent pop on big hits, keeping damage numbers small. [def: "true"]
+        citadel_damage_text_follow_healthbar_scale             "false" // Damage numbers no longer grow with the enlarged health bar. [def: "true"]
 
         // --- 4. Lighting & Shadows ---
         lb_enable_stationary_lights "false" // *Disables stationary lights (map looks flatter but more performant).         [def: "1"]

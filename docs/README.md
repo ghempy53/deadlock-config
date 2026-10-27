@@ -7,7 +7,7 @@ Start with the [complete setting reference](SETTING-REFERENCE.md) for explanatio
 
 | Document | Purpose |
 | --- | --- |
-| [Complete reference](SETTING-REFERENCE.md) | All 876 unique setting paths across both configs, including disabled tweaks, engine metadata and mod paths |
+| [Complete reference](SETTING-REFERENCE.md) | All 878 unique setting paths across both configs, including disabled tweaks, engine metadata and mod paths |
 | [Config provenance and differences](CONFIGS.md) | Owner choices, experiments on top of stable, frozen versions and testing limits |
 | [Install and rollback](INSTALL.md) | Manual install, backups, Steam restoration, renderer and saved-settings context |
 | [Install and update](../README.md) | `DeadlockConfig-Update` setup, install and self-update; add `-Ex` for experimental |
