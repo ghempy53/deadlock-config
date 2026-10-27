@@ -5,8 +5,8 @@ maintenance regardless of assistant. The owner's current request overrides workf
 
 ## Current files and owner decisions
 
-- Stable is OptimizationLock **3.7.1 hotfix** (October 27) plus owner preferences. v1.4 is a frozen **3.6** copy.
-- Experimental was **reset October 27 to a byte-identical copy of stable** so owner testing starts from stable; experiments since are listed in CONFIGS.md (earlier restarts: October 15 from v1.2, October 17 from stable 3.5.3). Both intentionally retain upstream engine edits and duplicates.
+- Stable is OptimizationLock **3.7.1 hotfix** (October 27) plus owner preferences, including the HUD readability block tuned in experimental and copied over verbatim October 27. v1.4 is a frozen **3.6** copy.
+- Experimental was **reset October 27 to a byte-identical copy of stable** so owner testing starts from stable; stable then took experimental verbatim the same day, so both are byte-identical and new experiments are listed in CONFIGS.md (earlier restarts: October 15 from v1.2, October 17 from stable 3.5.3). Both intentionally retain upstream engine edits and duplicates.
 - Both active files and all intentional disabled entries are covered in [SETTING-REFERENCE.md](SETTING-REFERENCE.md).
   [CONFIGS.md](CONFIGS.md) is the current owner-decision and variant record.
 - Frozen `stable-config/v*/gameinfo.gi` and `docs/archive/` are immutable historical evidence. Never edit them.
@@ -15,7 +15,8 @@ maintenance regardless of assistant. The owner's current request overrides workf
   uncapped FPS. CPU-bound fight lows are a working owner diagnosis; do not assert a measurement without a capture.
 - Never recommend FPS caps or scaling/DLSS changes; those preferences are settled.
 - Preserve `fps_max 0`, `fps_max_ui 0`, Steam Input off, mip bias 1 (October 27; was 2), texture pool 6400, bilinear filtering and disabled
-  resolution-cap override. Temporary full-resolution/8x texture experiments were superseded October 17.
+  resolution-cap override, and the section 3.1 HUD readability block (health-bar scale and height, damage-number offsets, emphasis and health-bar-scale following off) on every upstream pull.
+  Temporary full-resolution/8x texture experiments were superseded October 17.
 - Keep `r_particle_min_timestep` disabled: the owner reported a successful fire-particle bisect October 17. The
   audit has not reproduced it or measured CPU cost. Both configs set `r_aspectratio 2.54` and keep it on every upstream
   pull: October 27 the owner deleted the FOV mod and asked for the 110 FOV equivalent (slider at 90; value =

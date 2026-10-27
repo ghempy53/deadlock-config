@@ -1564,7 +1564,7 @@ Estimated CPU-memory metadata in MB by name. The value 1 differs from stock; it 
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1358](../../../stable-config/gameinfo.gi#L1358)) |
+| Stable | `1` (active, [L1370](../../../stable-config/gameinfo.gi#L1370)) |
 | Experimental | `1` (active, [L1370](../../../experimental-config/gameinfo.gi#L1370)) |
 | Stock gameinfo override | `1` (active, [L672](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L672)) |
 | OptimizationLock pinned upstream | `1` (active, [L1531](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1531)) |
@@ -1588,7 +1588,7 @@ Estimated minimum GPU-memory metadata in MB by name. Setting 1 is not evidence o
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1359](../../../stable-config/gameinfo.gi#L1359)) |
+| Stable | `1` (active, [L1371](../../../stable-config/gameinfo.gi#L1371)) |
 | Experimental | `1` (active, [L1371](../../../experimental-config/gameinfo.gi#L1371)) |
 | Stock gameinfo override | `1` (active, [L673](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L673)) |
 | OptimizationLock pinned upstream | `1` (active, [L1532](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1532)) |
@@ -1612,7 +1612,7 @@ Controls whether an insufficient-page-file message box is shown, as named. Retai
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1361](../../../stable-config/gameinfo.gi#L1361)) |
+| Stable | `1` (active, [L1373](../../../stable-config/gameinfo.gi#L1373)) |
 | Experimental | `1` (active, [L1373](../../../experimental-config/gameinfo.gi#L1373)) |
 | Stock gameinfo override | `1` (active, [L675](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L675)) |
 | OptimizationLock pinned upstream | `1` (active, [L1534](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1534)) |
@@ -1636,7 +1636,7 @@ Controls the low-virtual-memory message box, as named. It does not change availa
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1362](../../../stable-config/gameinfo.gi#L1362)) |
+| Stable | `1` (active, [L1374](../../../stable-config/gameinfo.gi#L1374)) |
 | Experimental | `1` (active, [L1374](../../../experimental-config/gameinfo.gi#L1374)) |
 | Stock gameinfo override | `1` (active, [L676](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L676)) |
 | OptimizationLock pinned upstream | `1` (active, [L1535](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L1535)) |

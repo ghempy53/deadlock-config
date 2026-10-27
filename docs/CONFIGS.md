@@ -13,12 +13,15 @@ assignments and upstream values, and records uncertainty rather than treating an
 - **Stable:** OptimizationLock **3.7.1 hotfix**, pinned to
   [`cbb70417d7585d65097e96984e05bac52e2fae06`](https://github.com/Sqooky/OptimizationLock/tree/cbb70417d7585d65097e96984e05bac52e2fae06),
   pulled in on October 27 (3.6.1 before that, [PR #79](https://github.com/ghempy53/deadlock-config/pull/79)).
+  Later on October 27 the owner had experimental copied over it verbatim, adding the HUD readability block below.
+  Stable and experimental are byte-identical (SHA-256 `ace9da9e…7906d5e5`).
   **v1.4 is the last freeze (3.6), not the current file.**
 - **Experimental:** **reset October 27 to a byte-identical copy of stable** (SHA-256 `7f96df95…d895600f`) so owner
   testing restarts from the current stable file. Earlier restarts were October 15 from stable v1.2
   ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)) and October 17 from stable 3.5.3
   ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)); the differences that accumulated since are recorded
-  in the [changelog](CHANGES.txt) and git history.
+  in the [changelog](CHANGES.txt) and git history. The HUD block tuned on it ([PR #95](https://github.com/ghempy53/deadlock-config/pull/95),
+  [PR #96](https://github.com/ghempy53/deadlock-config/pull/96)) then became stable's, so the files match again.
 - **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
   [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
   Matching `PGIVersion` is observed; acceptance by a current game/server was not tested. Build 6821
@@ -37,7 +40,8 @@ assignments and upstream values, and records uncertainty rather than treating an
 | `r_texture_stream_max_resolution` | disabled | No cap requested by this line; not proof another layer cannot impose one |
 | `r_particle_min_timestep` | disabled, declared default 0 | Owner-reported bisect in [PR #70](https://github.com/ghempy53/deadlock-config/pull/70), propagated in [PR #71](https://github.com/ghempy53/deadlock-config/pull/71); no measured cost recorded |
 | `r_aspectratio` | 2.54 in both | Owner request October 27 after deleting the FOV mod: the 110 FOV equivalent with the in-game slider at 90 (value = 1.778 x tan(FOV/2)). Supersedes [PR #84](https://github.com/ghempy53/deadlock-config/pull/84); upstream pulls keep 2.54 whatever upstream sets. Untested in game |
-| Damage-number lifetime/emphasis overrides | absent | Owner removed them in [PR #74](https://github.com/ghempy53/deadlock-config/pull/74); saved/menu values still matter |
+| Damage-number lifetime override | absent | Owner removed it in [PR #74](https://github.com/ghempy53/deadlock-config/pull/74); saved/menu values still matter |
+| HUD readability block (section 3.1, 10 lines) | listed below | Owner request October 27: bigger, higher enemy health numbers and small damage numbers, tuned in experimental ([PR #95](https://github.com/ghempy53/deadlock-config/pull/95), [PR #96](https://github.com/ghempy53/deadlock-config/pull/96)) and copied to stable. Upstream pulls keep the block. First values owner-tested; current values untested in game |
 
 The owner's active renderer is **DX11**, selected by a Steam launch option. Vulkan keys remain inherited;
 no Vulkan validation is claimed. `ForceVulkanForMapBuild` is a map-compiler key, not the game renderer selection.
@@ -46,21 +50,22 @@ was the owner's working diagnosis, not a measurement established by this audit.
 
 ## Actual variant differences
 
-Experimental is stable plus the experiments below, made since its October 27 reset to a byte-identical copy of
-stable. Engine sections match. Each experiment has a dated [changelog](CHANGES.txt) entry with its evidence and test
-plan; “default” means stable makes no assignment.
+None: the two files are byte-identical since stable took experimental verbatim on October 27. New experiments
+start from here and get a dated [changelog](CHANGES.txt) entry.
 
-| ConVar | Stable | Experimental | Experiment |
+Both files carry the HUD readability block from those experiments (“default” is Valve's registered value):
+
+| ConVar | Default | Both configs | Purpose |
 | --- | --- | --- | --- |
-| `citadel_unit_status_max_distance_scale` | default 1 | 1.3 | Larger enemy health numbers at range (October 27; first 1.2) |
-| `citadel_unit_status_offset_player_z_offset_adjustment` | default 16 | 48 | Health bars and numbers higher (first 32) |
-| `citadel_damage_text_height_offset_near` / `_far` | default 130 / 200 | 134 / 214 | Damage numbers higher; lowered 16 to offset the bar's second rise |
-| `citadel_damage_text_new_bullet_offset_x` | default 30 | 45 | Damage numbers further right |
-| `citadel_damage_text_new_ability_offset_x` | default 20 | 35 | Damage numbers further right |
-| `citadel_damage_text_new_melee_offset_x` | default 20 | 35 | Damage numbers further right |
-| `citadel_damage_text_new_pure_offset_x` | default 25 | 40 | Damage numbers further right |
-| `citadel_damage_text_dynamic_emphasis` | default true | false | Damage numbers small: no 150% pop on big hits |
-| `citadel_damage_text_follow_healthbar_scale` | default true | false | Damage numbers do not grow with the bigger health bar |
+| `citadel_unit_status_max_distance_scale` | 1 | 1.3 | Larger enemy health numbers at range (October 27; first 1.2) |
+| `citadel_unit_status_offset_player_z_offset_adjustment` | 16 | 48 | Health bars and numbers higher (first 32) |
+| `citadel_damage_text_height_offset_near` / `_far` | 130 / 200 | 134 / 214 | Damage numbers higher; lowered 16 to offset the bar's second rise |
+| `citadel_damage_text_new_bullet_offset_x` | 30 | 45 | Damage numbers further right |
+| `citadel_damage_text_new_ability_offset_x` | 20 | 35 | Damage numbers further right |
+| `citadel_damage_text_new_melee_offset_x` | 20 | 35 | Damage numbers further right |
+| `citadel_damage_text_new_pure_offset_x` | 25 | 40 | Damage numbers further right |
+| `citadel_damage_text_dynamic_emphasis` | true | false | Damage numbers small: no 150% pop on big hits |
+| `citadel_damage_text_follow_healthbar_scale` | true | false | Damage numbers do not grow with the bigger health bar |
 
 Before the reset, experimental differed in 16 ConVar paths and 29 engine entries: it kept its 3.5.3-branch values
 (for example vertical camera flattening false and health-bar highlight speed 100) and the 3.6.1 engine sections.

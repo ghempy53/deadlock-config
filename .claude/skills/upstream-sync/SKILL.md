@@ -17,7 +17,7 @@ that it is valid, effective or faster.
    from one dump does not prove removal; duplicate declarations do not establish which value wins.
 3. Give each change an adopt/skip/defer recommendation with evidence and trade-offs. Preserve uncapped FPS,
    `r_aspectratio 2.54` in both configs regardless of upstream (the owner's 110 FOV equivalent since 2026-10-27), the owner's
-   tested particle choice and current texture preferences.
+   tested particle choice, current texture preferences and the section 3.1 HUD readability block (health-bar scale and height, damage-number offsets, emphasis and health-bar-scale following off).
    Engine-section changes require explicit scope and compatibility testing; do not normalize existing sections.
 4. When authorized, apply only the requested variant's changes and use `convar-change` for documentation and checks.
    Preserve all frozen and archived files. Record the actual adopted commit and any deviations in `docs/CONFIGS.md`

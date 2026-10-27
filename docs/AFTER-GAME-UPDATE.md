@@ -27,7 +27,7 @@ can contain an obsolete `PGIVersion`.
    edited guarded sections. Do not silently restore stock or copy upstream to satisfy archived rules. Matching
    the PGI token alone does not prove matchmaking compatibility. Review mod mounts too.
 7. Use upstream for provenance. Consult [owner decisions](CONFIGS.md), merged PRs and [test history](TESTED-CHANGES.md).
-   Do not reapply the archived ConVars-only fork rule. Preserve uncapped FPS, Steam Input off, aspect ratio 2.54 in both configs (110 FOV equivalent),
+   Do not reapply the archived ConVars-only fork rule. Preserve uncapped FPS, Steam Input off, aspect ratio 2.54 in both configs (110 FOV equivalent), the section 3.1 HUD block,
    disabled particle-minimum-timestep overrides, and current texture choices until the owner changes them.
 8. Update reference, current docs, blocked list and audit with the same pins. Append dated clarifications to
    `CHANGES.txt`; do not turn historical claims into purported measurements. Keep proposed behavior changes
