@@ -14,6 +14,20 @@ Run `python3 utils/check.py --config both` on the repository copy. This checks s
 not whether the installed game accepts a value. Duplicate warnings describe existing assignments; do not remove them
 just to silence the validator. Preserve the original file for diagnosis.
 
+## Update command errors
+
+Messages from [`DeadlockConfig-Update`](UPDATE-COMMAND.md):
+
+| Message | Cause |
+| --- | --- |
+| `Deadlock (game\citadel folder) not found in any Steam library.` | Steam or Deadlock is not installed for this Windows user. |
+| A 404 error | The config file is missing on `main`. |
+| `Could not resolve main to a commit` (warning) | The API was unreachable, rate limited, or returned an invalid SHA. The install uses the branch URL with unknown cache age. |
+| `A parameter cannot be found that matches parameter name ...` | The option is unavailable in this copy, or was removed. Use the options above. To refresh the command, run `DeadlockConfig-Update -SelfUpdate` (or step 2) and open a new terminal. |
+| `Download is not a gameinfo.gi` | The download failed the basic content checks. The installed file was not copied over. |
+| Access denied or copy verification failed | The copy did not complete successfully. Check permissions, file attributes and available space, then restore your backup if needed. |
+| `Deadlock is running` (warning) | The file was installed. Restart the game to load it. |
+
 ## Matchmaking refuses with `Citadel_StartMatchmaking_UnverifiedPGI`
 
 Both current configs inherit differences from stock engine sections. The earlier advice that experimental was a
