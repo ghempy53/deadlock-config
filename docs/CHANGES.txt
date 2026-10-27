@@ -459,5 +459,12 @@ UPDATE-COMMAND.MD TRIMMED TO SETUP, FIRST INSTALL AND UPDATES (2026-10-27)
   TROUBLESHOOTING.md; old-command migration, the option table and the undo notes (covered by INSTALL.md) were dropped.
   Line numbers unchanged.
 
+UPDATE-COMMAND.MD MERGED INTO THE ROOT README (2026-10-27)
+  No config changes. At the owner's request the root README is now only the install steps (set up the command,
+  install, update) for the default stable config, and docs/UPDATE-COMMAND.md is deleted. The config table and
+  experimental mentions left the README; -Ex is documented in docs/README.md, INSTALL.md and CONFIGS.md. Links and
+  the installer's header comment now point to README.md (comment only; not run on Windows).
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

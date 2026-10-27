@@ -8,9 +8,9 @@ Start with the [complete setting reference](SETTING-REFERENCE.md) for explanatio
 | Document | Purpose |
 | --- | --- |
 | [Complete reference](SETTING-REFERENCE.md) | All 889 unique setting paths across both configs, including disabled tweaks, engine metadata and mod paths |
-| [Config provenance and differences](CONFIGS.md) | Owner choices, nine variant differences, frozen versions and testing limits |
+| [Config provenance and differences](CONFIGS.md) | Owner choices, variant differences, frozen versions and testing limits |
 | [Install and rollback](INSTALL.md) | Manual install, backups, Steam restoration, renderer and saved-settings context |
-| [Update command](UPDATE-COMMAND.md) | PowerShell setup, stable/experimental install and self-update |
+| [Install and update](../README.md) | `DeadlockConfig-Update` setup, install and self-update; add `-Ex` for experimental |
 | [In-game settings](IN-GAME-SETTINGS.md) | Texture, camera, HUD and saved-value reconciliation |
 | [Troubleshooting](TROUBLESHOOTING.md) | Parse/Mod Manager failures, matchmaking, mods, HUD and ineffective settings |
 | [Windows, driver and BIOS](WINDOWS11.md) | Owner baseline and evidence limits for platform tuning |

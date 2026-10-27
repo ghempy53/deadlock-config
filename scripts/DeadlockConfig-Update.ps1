@@ -1,5 +1,5 @@
 # DeadlockConfig-Update: install this repo's gameinfo.gi into Deadlock. Always overwrites the installed file.
-# Dot-source this file from your PowerShell profile. Setup: docs/UPDATE-COMMAND.md
+# Dot-source this file from your PowerShell profile. Setup: README.md
 #
 #   DeadlockConfig-Update              stable-config (default)
 #   DeadlockConfig-Update -Ex          experimental-config
