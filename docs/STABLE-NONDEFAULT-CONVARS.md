@@ -69,7 +69,7 @@ Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/G
 | 692 | `rpg_camera_yaw` | `0` | `90` | Preferences / 7. Camera Responsivity Tweaks | replicated, cheat, developmentonly |
 | 695 | `r_texture_budget_threshold` | `0.7` | `0.9` | Preferences / 8. Texture Quality | developmentonly |
 | 696 | `r_texture_budget_update_period` | `0.5` | `0.1` | Preferences / 8. Texture Quality | developmentonly |
-| 697 | `r_texture_stream_mip_bias` | `2` | `0` | Preferences / 8. Texture Quality | developmentonly |
+| 697 | `r_texture_stream_mip_bias` | `1` | `0` | Preferences / 8. Texture Quality | developmentonly |
 | 698 | `r_texturefilteringquality` | `0` | `1` | Preferences / 8. Texture Quality | developmentonly |
 | 701 | `thread_pool_option` | `2` | `-1` | IMPORTANT |  |
 | 716 | `citadel_unit_status_healthbar_highlight_speed` | `999` | `2` | UI | developmentonly |

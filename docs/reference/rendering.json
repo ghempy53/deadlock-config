@@ -2260,7 +2260,7 @@
   },
   "ConVars/r_texture_stream_mip_bias": {
     "purpose": "Biases the mip level requested by texture streaming. Positive values favor coarser mip levels; this is not a guaranteed fixed resolution for every texture.",
-    "rationale": "Owner selected bias 2 in PR72 after the particle bisect; PR73 carried it to stable. Earlier full-resolution and bias-3 experiments are superseded. Captured preset 0 uses 2, preset 1 uses 1, presets 2 and 3 use 0; preset data alone does not establish menu labels or runtime precedence.",
+    "rationale": "Owner selected bias 2 in PR72 after the particle bisect; PR73 carried it to stable. On 2026-10-27 the owner asked for slightly better textures and both configs moved one step to 1, the value captured preset 1 uses. Earlier full-resolution and bias-3 experiments are superseded. Captured preset 0 uses 2, preset 1 uses 1, presets 2 and 3 use 0; preset data alone does not establish menu labels or runtime precedence.",
     "tradeoffs": "Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.",
     "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified.",
     "confidence": "High for captured registration/flags; moderate for purpose; runtime effect unverified.",
@@ -2274,7 +2274,7 @@
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_2.txt",
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_3.txt"
     ],
-    "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
+    "test_status": "Static source and history review only. Untested in game: texture sharpness, VRAM use and frame times at bias 1, with the menu Texture Quality set to match."
   },
   "ConVars/r_texture_stream_resolution_bias": {
     "purpose": "Candidate texture streaming, sampling or lightmap resources control inherited in the config, but absent from the pinned ConVar dump. Current registration, meaning, and effect remain unknown; absence from one dump does not establish removal.",

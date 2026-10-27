@@ -14,7 +14,7 @@ maintenance regardless of assistant. The owner's current request overrides workf
 - Hardware/intent: Ryzen 7 9800X3D (owner reports SMT off), RTX 5070 12 GB, 1440p/270 Hz, **DX11**, Reflex On,
   uncapped FPS. CPU-bound fight lows are a working owner diagnosis; do not assert a measurement without a capture.
 - Never recommend FPS caps or scaling/DLSS changes; those preferences are settled.
-- Preserve `fps_max 0`, `fps_max_ui 0`, Steam Input off, mip bias 2, texture pool 6400, bilinear filtering and disabled
+- Preserve `fps_max 0`, `fps_max_ui 0`, Steam Input off, mip bias 1 (October 27; was 2), texture pool 6400, bilinear filtering and disabled
   resolution-cap override. Temporary full-resolution/8x texture experiments were superseded October 17.
 - Keep `r_particle_min_timestep` disabled: the owner reported a successful fire-particle bisect October 17. The
   audit has not reproduced it or measured CPU cost. Both configs set `r_aspectratio 2.54` and keep it on every upstream

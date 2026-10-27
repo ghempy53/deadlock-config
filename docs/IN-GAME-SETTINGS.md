@@ -5,11 +5,11 @@ These are owner choices, not newly tested recommendations. [CONFIGS.md](CONFIGS.
 
 ## Video and textures
 
-Both configs request mip bias **2**, texture pool **6400 MB**, bilinear filtering **0**, and leave the maximum
-texture-resolution override disabled. The earlier “Texture High / full-resolution / 8x” trial was superseded
-on October 17. The pinned Valve preset files request mip biases **2, 1, 0, 0** for preset indices **0–3**;
-this supports matching the Low preset's bias, not an unconditional assertion about the current menu label or
-load order. See the [rendering audit and pinned preset sources](research/AUDIT-RENDERING-2026-10-22.md).
+Both configs request mip bias **1** (October 27, one step up from 2), texture pool **6400 MB**, bilinear
+filtering **0**, and leave the maximum texture-resolution override disabled. The earlier “Texture High /
+full-resolution / 8x” trial was superseded on October 17. The pinned Valve preset files request mip biases
+**2, 1, 0, 0** for preset indices **0–3**; this supports matching the Medium preset's bias, so set the menu
+Texture Quality to Medium too. It is not an unconditional assertion about the current menu label or load order. See the [rendering audit and pinned preset sources](research/AUDIT-RENDERING-2026-10-22.md).
 
 The October 5 menu checklist (Stretch 100%, FXAA, SSAO off, shadows/fog low, effects off) is historical owner
 context. Keep current owner choices; do not set a menu FPS limit to 1,000 as a substitute for the uncapped rule.

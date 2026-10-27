@@ -441,5 +441,17 @@ STABLE: OPTIMIZATIONLOCK 3.7.1 HOTFIX (2026-10-27, OptimizationLock main @ cbb70
   previous stable file is at 7231a9e; v1.4 (3.6) stays the frozen fallback. Experimental changed only as above.
   Line numbers unchanged.
 
+TEXTURE MIP BIAS 2 -> 1 IN BOTH CONFIGS (2026-10-27)
+  line 705   r_texture_stream_mip_bias                  "2"  ->  "1"
+  Why: the owner reports excellent performance and asked for slightly better textures. Each mip step halves width and
+  height, so 1 streams textures at half resolution per axis instead of a quarter: one step, the smallest the integer
+  setting allows. The pinned Valve presets request 2, 1, 0, 0 for presets 0-3, so this matches preset 1 (Medium); the
+  registered default is 0 (the inline [def: 1] comment is upstream's and wrong). Top mips need about 4 times the
+  texture memory of bias 2, inside the 6400 MB pool on a 12 GB card; no FPS or VRAM measurement exists. Stable gets
+  the same edit (stable-config/gameinfo.gi line 697). Pool, bilinear filtering and the disabled resolution cap stay.
+  Untested in game: set the menu Texture Quality to Medium too (load order between the menu and this file is
+  unverified), then check texture sharpness, VRAM use and fight frame times. To undo, set the value back to 2.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
