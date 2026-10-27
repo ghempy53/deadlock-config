@@ -14,11 +14,11 @@ assignments and upstream values, and records uncertainty rather than treating an
   [`cbb70417d7585d65097e96984e05bac52e2fae06`](https://github.com/Sqooky/OptimizationLock/tree/cbb70417d7585d65097e96984e05bac52e2fae06),
   pulled in on October 27 (3.6.1 before that, [PR #79](https://github.com/ghempy53/deadlock-config/pull/79)).
   **v1.4 is the last freeze (3.6), not the current file.**
-- **Experimental:** first restarted October 15 from stable v1.2 ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)),
-  then restarted again **October 17 from stable 3.5.3** ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)).
-  The engine update authored October 21 and merged October 22 brought its non-ConVar sections into agreement with current stable
-  ([PR #80](https://github.com/ghempy53/deadlock-config/pull/80)). Its ConVars still follow the 3.5.3 branch of decisions.
-  Stable's 3.7.1 sync changed RenderSystem, SceneSystem and Particles again; experimental keeps the 3.6.1 engine sections.
+- **Experimental:** **reset October 27 to a byte-identical copy of stable** (SHA-256 `7f96df95…d895600f`) so owner
+  testing restarts from the current stable file. Earlier restarts were October 15 from stable v1.2
+  ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)) and October 17 from stable 3.5.3
+  ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)); the differences that accumulated since are recorded
+  in the [changelog](CHANGES.txt) and git history.
 - **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
   [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
   Matching `PGIVersion` is observed; acceptance by a current game/server was not tested. Build 6821
@@ -46,38 +46,12 @@ was the owner's working diagnosis, not a measurement established by this audit.
 
 ## Actual variant differences
 
-These are all sixteen differing active ConVar paths in the current files.
-“Absent” means no assignment in that file, not a verified runtime default.
+None. Since the October 27 reset, experimental is a byte-identical copy of stable, so every ConVar and engine
+section matches; `compare.py` reports no differences. New experiments start from here and are listed in the
+[changelog](CHANGES.txt) as they are made.
 
-| ConVar | Stable | Experimental |
-| --- | --- | --- |
-| `citadel_camera_use_vmdl_flatten_vertical` | true | false |
-| `citadel_unit_status_healthbar_highlight_speed` | 999 | 100 |
-| `citadel_minimap_trooper_size` | 2 | absent |
-| `citadel_show_minimap_reveal_indicators` | true | absent |
-| `citadel_show_old_neutral_camp_icons` | false | absent |
-| `minimap_trooper_update_rate_hz` | 2 | absent |
-| `citadel_unit_status_allies_see_thru_walls_max_distance` | absent | 40 |
-| `citadel_unit_status_dpi` | absent | 10 |
-| `lb_enable_baked_shadows` | disabled | false |
-| `citadel_per_weapon_per_surface_impact_effects` | disabled | false |
-| `citadel_unit_status_hide_names` | true | absent |
-| `audio_viewing_damage_hold_time` | 0 | absent |
-| `audio_viewing_damage_decay_time` | 0 | absent |
-| `citadel_action_refresh_interval` | 0.11 | absent |
-| `citadel_ai_path_pathing_time_ms_per_tick` | 20 | absent |
-| `ai_motor_max_state_time_active` | 0 | absent |
-
-The first nine came with stable 3.6 ([PR #75](https://github.com/ghempy53/deadlock-config/pull/75)): stable took
-upstream's six new or changed values, dropped the two health-bar names and commented out the light switch, while
-experimental kept its 3.5.3 values. The two health-bar names are absent from the pinned dump, which alone does not prove removal.
-The light switch is flagged `gameinfo_cannot_override`. The minimap trooper rate is game/server-module registered;
-writing it in a player's file is not evidence of changing the online server. The last seven came with stable 3.7.1
-(October 27); experimental keeps its earlier values. The two AI entries are also game/server-module registered.
-
-Stable's 3.7.1 sync also makes the engine sections differ: `compare.py` lists 29 RenderSystem, SceneSystem and
-Particles entries (the 500 MB streaming-pool floor, 15 SceneSystem keys removed, the new particle budget and GPU
-particle keys). Experimental keeps the 3.6.1 values; the 2026-10-27 [changelog](CHANGES.txt) entry lists them.
+Before the reset, experimental differed in 16 ConVar paths and 29 engine entries: it kept its 3.5.3-branch values
+(for example vertical camera flattening false and health-bar highlight speed 100) and the 3.6.1 engine sections.
 
 Aspect ratio is the same in both files: 2.54 since October 27, when the owner deleted the FOV mod. Before that the
 owner briefly re-enabled stable aspect ratio in PR #83 after reporting a hero-FOV cap of 90 in Sandbox, then reverted

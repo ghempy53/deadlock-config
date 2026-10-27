@@ -26,14 +26,14 @@ appear correct. Record the actual build and menu labels when verifying a menu-to
   equivalent is 1.778 x tan(target/2) / tan(slider/2). Remove the FOV mod from `citadel/addons` so the two do not
   stack. The earlier owner-reported hero-FOV cap of 90 in Sandbox was not reproduced by this audit; the 2.54 view is
   untested in game.
-- Stable requests vertical model-camera flattening **true**; experimental requests **false**. Both request
-  horizontal flattening **false**. Valve's help describes motion-sickness/camera-axis handling, not lower input latency.
+- Both configs request vertical model-camera flattening **true** (experimental was **false** until its October 27
+  reset to stable) and horizontal flattening **false**. Valve's help describes motion-sickness/camera-axis handling, not lower input latency.
 - Both retain inherited wobble/height/pitch/lag changes. Older “all camera lines at defaults” guidance is superseded.
 - Damage-number lifetime/emphasis overrides were removed October 17. The menu and saved values can still differ
   from registered defaults; absence from gameinfo does not reset them. The inherited active
   `citadel_damage_text_batching_window_ability 1000` remains; its effect is unresolved because it is absent from the pinned dump.
 - The old narrow health-bar-width override is absent, not a commented entry in a current “group 1c.”
-  Stable highlight speed is **999**, experimental **100**; this is not proof of mathematically zero interpolation.
+  Both configs request highlight speed **999**; this is not proof of mathematically zero interpolation.
 - Steam Input is requested off on both occurrences. Camera-shake reduction was an owner menu preference;
   current menu state was not inspected in this audit.
 
