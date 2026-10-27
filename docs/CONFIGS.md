@@ -52,13 +52,15 @@ plan; “default” means stable makes no assignment.
 
 | ConVar | Stable | Experimental | Experiment |
 | --- | --- | --- | --- |
-| `citadel_unit_status_max_distance_scale` | default 1 | 1.2 | Larger enemy health numbers at range (October 27) |
-| `citadel_unit_status_offset_player_z_offset_adjustment` | default 16 | 32 | Health bars and numbers higher |
-| `citadel_damage_text_height_offset_near` / `_far` | default 130 / 200 | 150 / 230 | Damage numbers higher |
+| `citadel_unit_status_max_distance_scale` | default 1 | 1.3 | Larger enemy health numbers at range (October 27; first 1.2) |
+| `citadel_unit_status_offset_player_z_offset_adjustment` | default 16 | 48 | Health bars and numbers higher (first 32) |
+| `citadel_damage_text_height_offset_near` / `_far` | default 130 / 200 | 134 / 214 | Damage numbers higher; lowered 16 to offset the bar's second rise |
 | `citadel_damage_text_new_bullet_offset_x` | default 30 | 45 | Damage numbers further right |
 | `citadel_damage_text_new_ability_offset_x` | default 20 | 35 | Damage numbers further right |
 | `citadel_damage_text_new_melee_offset_x` | default 20 | 35 | Damage numbers further right |
 | `citadel_damage_text_new_pure_offset_x` | default 25 | 40 | Damage numbers further right |
+| `citadel_damage_text_dynamic_emphasis` | default true | false | Damage numbers small: no 150% pop on big hits |
+| `citadel_damage_text_follow_healthbar_scale` | default true | false | Damage numbers do not grow with the bigger health bar |
 
 Before the reset, experimental differed in 16 ConVar paths and 29 engine entries: it kept its 3.5.3-branch values
 (for example vertical camera flattening false and health-bar highlight speed 100) and the 3.6.1 engine sections.

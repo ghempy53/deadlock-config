@@ -36,7 +36,8 @@ appear correct. Record the actual build and menu labels when verifying a menu-to
   Both configs request highlight speed **999**; this is not proof of mathematically zero interpolation.
 - Owner's Interface menu (reported 2026-10-27): health numbers on, ally health numbers off, critical health effects
   on, name above health bars none, cumulative damage off. Experimental tests larger, higher enemy health numbers and
-  higher, further-right damage numbers ([CONFIGS.md](CONFIGS.md#actual-variant-differences)); untested in game.
+  small, higher, further-right damage numbers ([CONFIGS.md](CONFIGS.md#actual-variant-differences)). Owner-reported
+  after the first values: damage-number position right, health numbers a tad small; the second values are untested.
 - Steam Input is requested off on both occurrences. Camera-shake reduction was an owner menu preference;
   current menu state was not inspected in this audit.
 
