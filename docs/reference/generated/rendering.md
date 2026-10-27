@@ -5151,8 +5151,8 @@ Biases the mip level requested by texture streaming. Positive values favor coars
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `2` (active, [L697](../../../stable-config/gameinfo.gi#L697)) |
-| Experimental | `2` (active, [L705](../../../experimental-config/gameinfo.gi#L705)) |
+| Stable | `1` (active, [L697](../../../stable-config/gameinfo.gi#L697)) |
+| Experimental | `1` (active, [L705](../../../experimental-config/gameinfo.gi#L705)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `3` (active, [L870](https://github.com/Sqooky/OptimizationLock/blob/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi#L870)) |
 
@@ -5162,13 +5162,13 @@ Biases the mip level requested by texture streaming. Positive values favor coars
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Owner selected bias 2 in PR72 after the particle bisect; PR73 carried it to stable. Earlier full-resolution and bias-3 experiments are superseded. Captured preset 0 uses 2, preset 1 uses 1, presets 2 and 3 use 0; preset data alone does not establish menu labels or runtime precedence.
+**Why retained / provenance:** Owner selected bias 2 in PR72 after the particle bisect; PR73 carried it to stable. On 2026-10-27 the owner asked for slightly better textures and both configs moved one step to 1, the value captured preset 1 uses. Earlier full-resolution and bias-3 experiments are superseded. Captured preset 0 uses 2, preset 1 uses 1, presets 2 and 3 use 0; preset data alone does not establish menu labels or runtime precedence.
 
 **Benefits and trade-offs:** Texture detail, sampling quality, memory pressure, and streaming I/O can trade against each other. Neither a larger pool nor coarser mips proves an FPS improvement; these are not guaranteed to be GPU-only costs.
 
 **Applicability and effectiveness:** Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified. No client/server module scope is established by these flags alone. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
-**Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit.
+**Evidence / test status:** High for captured registration/flags; moderate for purpose; runtime effect unverified. Static source and history review only. Untested in game: texture sharpness, VRAM use and frame times at bias 1, with the menu Texture Quality set to match.
 
 **Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/pull/72); [evidence 4](https://github.com/ghempy53/deadlock-config/pull/73); [evidence 5](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_0.txt); [evidence 6](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_1.txt); [evidence 7](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_2.txt); [evidence 8](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_3.txt).
 

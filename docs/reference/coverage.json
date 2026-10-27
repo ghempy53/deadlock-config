@@ -1,7 +1,7 @@
 {
   "configs_sha256": {
-    "experimental": "1c9b3c4f3cb1e8359538bf6dcb6883f6fd53ba95242a4d842f41e591c73447d5",
-    "stable": "608759bef0f5223478ae1cb685eb2b370037c2318531b3d87efa8c0825e1c49c"
+    "experimental": "2b22f681edd56cea8ecf1835710b321fbebaa870b4bf8be3b60049ce5bad7183",
+    "stable": "7f96df95f0cfb963c589e726efd99d73302784a05e6150eee762934bd895600f"
   },
   "counts": {
     "audio": 60,
@@ -3293,7 +3293,7 @@
       "kind": "scalar",
       "line": 697,
       "path": "ConVars/r_texture_stream_mip_bias",
-      "value": "2",
+      "value": "1",
       "variant": "stable"
     },
     {
@@ -10549,7 +10549,7 @@
       "kind": "scalar",
       "line": 705,
       "path": "ConVars/r_texture_stream_mip_bias",
-      "value": "2",
+      "value": "1",
       "variant": "experimental"
     },
     {

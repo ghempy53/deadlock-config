@@ -31,7 +31,7 @@ assignments and upstream values, and records uncertainty rather than treating an
 | --- | --- | --- |
 | `fps_max`, `fps_max_ui` | 0 / 0, uncapped | [PR #73](https://github.com/ghempy53/deadlock-config/pull/73); preserve uncapped preference |
 | `steam_inputhandler_enabled` | false on both occurrences | Same PR; identical requests do not need a last-wins assumption |
-| `r_texture_stream_mip_bias` | 2 | Owner choice, [PR #72](https://github.com/ghempy53/deadlock-config/pull/72); preset 0 also requests 2 |
+| `r_texture_stream_mip_bias` | 1 in both | Owner request October 27 for slightly better textures, one step up from 2 ([PR #72](https://github.com/ghempy53/deadlock-config/pull/72)); preset 1 also requests 1. Upstream pulls keep 1 whatever upstream sets. Untested in game |
 | `r_texture_pool_size` | 6400 MB | [PR #73](https://github.com/ghempy53/deadlock-config/pull/73); not a guarantee of physical VRAM residency or a measured gain |
 | `r_texturefilteringquality` | 0, bilinear per console help | Retained upstream filtering; the temporary full-resolution/8x experiment was superseded |
 | `r_texture_stream_max_resolution` | disabled | No cap requested by this line; not proof another layer cannot impose one |
