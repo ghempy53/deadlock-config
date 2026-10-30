@@ -8,11 +8,12 @@ The [complete setting reference](SETTING-REFERENCE.md) covers every active assig
 engine section and mod path in both files. It distinguishes console registration defaults, stock file
 assignments and upstream values, and records uncertainty rather than treating an inherited comment as proof.
 
-## Current provenance (reviewed 2026-10-27)
+## Current provenance (reviewed 2026-10-30)
 
 - **Stable:** OptimizationLock **3.7.1 hotfix**, pinned to
   [`cbb70417d7585d65097e96984e05bac52e2fae06`](https://github.com/Sqooky/OptimizationLock/tree/cbb70417d7585d65097e96984e05bac52e2fae06),
-  pulled in on October 27 (3.6.1 before that, [PR #79](https://github.com/ghempy53/deadlock-config/pull/79)).
+  pulled in on October 27 (3.6.1 before that, [PR #79](https://github.com/ghempy53/deadlock-config/pull/79)). Upstream `main` @ `4108842`
+  (checked October 30) has the same `gameinfo.gi`.
   Later on October 27 the owner had experimental copied over it verbatim, adding the HUD readability block below.
   Stable and experimental are byte-identical (SHA-256 `ace9da9e…7906d5e5`).
   **v1.4 is the last freeze (3.6), not the current file.**

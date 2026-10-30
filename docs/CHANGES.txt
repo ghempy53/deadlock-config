@@ -532,5 +532,15 @@ STABLE: EXACT COPY OF EXPERIMENTAL (2026-10-27)
   12; experimental is unchanged.
   Line numbers unchanged.
 
+UPSTREAM SYNC CHECK (2026-10-30, OptimizationLock main @ 4108842)
+  main moved cbb7041 -> 4108842 (2026-10-29), which only edits auto updater/README.md. Sqooky's .gi/gameinfo.gi is
+  byte-identical (SHA-256 c14c40e0...), so there is nothing to sync into either config. Adopted: nothing. Skipped:
+  nothing. Both configs still equal 3.7.1 hotfix except the owner settings in docs/CONFIGS.md: fps_max and fps_max_ui
+  0, Steam Input false on both lines, mip bias 1, texture pool 6400, r_aspectratio 2.54, r_particle_min_timestep and
+  the texture resolution cap commented out, and the ten section 3.1 HUD lines; engine sections match upstream
+  exactly (compare.py). Valve GameTracking-Deadlock is still d251cf9 (build 6821), whose data matches the pinned 6814
+  capture. The reference keeps upstream pin cbb7041 (same gameinfo bytes). Neither config changed.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
