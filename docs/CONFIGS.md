@@ -15,14 +15,16 @@ assignments and upstream values, and records uncertainty rather than treating an
   (3.8 landed in [`01992b4`](https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05);
   `69a665c` only adds an image), pulled in on November 2 at the owner's request with every owner setting below kept.
   Before that: 3.7.1 hotfix (`cbb7041`, October 27) plus the HUD readability block copied from experimental the same day.
-  Stable SHA-256 `8c43fccb…4088b478`. **v1.4 is the last freeze (3.6), not the current file.**
-- **Experimental:** **reset October 27 to a byte-identical copy of stable** (SHA-256 `7f96df95…d895600f`) so owner
-  testing restarts from the then-current stable file; it took the HUD block the same day (SHA-256 `ace9da9e…7906d5e5`)
-  and is still that 3.7.1-based file. Earlier restarts were October 15 from stable v1.2
+  Stable and experimental are byte-identical (SHA-256 `8c43fccb…4088b478`).
+  **v1.4 is the last freeze (3.6), not the current file.**
+- **Experimental:** synced to 3.8 the same day at the owner's request. It was still byte-identical to the pre-sync
+  stable file, so the same rebuild gives exactly the new stable file. History: reset October 27 to a byte-identical
+  copy of stable (SHA-256 `7f96df95…d895600f`), then the HUD block tuned on it
+  ([PR #95](https://github.com/ghempy53/deadlock-config/pull/95), [PR #96](https://github.com/ghempy53/deadlock-config/pull/96))
+  became stable's (`ace9da9e…7906d5e5`). Earlier restarts were October 15 from stable v1.2
   ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)) and October 17 from stable 3.5.3
   ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)); the differences that accumulated since are recorded
-  in the [changelog](CHANGES.txt) and git history. The HUD block tuned on it ([PR #95](https://github.com/ghempy53/deadlock-config/pull/95),
-  [PR #96](https://github.com/ghempy53/deadlock-config/pull/96)) became stable's.
+  in the [changelog](CHANGES.txt) and git history.
 - **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
   [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
   Matching `PGIVersion` is observed; acceptance by a current game/server was not tested. Build 6821
@@ -53,24 +55,25 @@ was the owner's working diagnosis, not a measurement established by this audit.
 
 ## Actual variant differences
 
-Stable took OptimizationLock 3.8 on November 2; experimental stays on the 3.7.1-based file. Every difference is an
-upstream 3.8 change (“default” is Valve's registered value; see the [changelog](CHANGES.txt) entry for evidence):
+None: both files are byte-identical since both took OptimizationLock 3.8 on November 2. New experiments start
+from here and get a dated [changelog](CHANGES.txt) entry.
 
-| Setting | Experimental (3.7.1) | Stable (3.8) | Note |
+What the 3.8 sync changed in both files (“default” is Valve's registered value; evidence in the changelog):
+
+| Setting | 3.7.1-based (before) | 3.8 (both now) | Note |
 | --- | --- | --- | --- |
 | `r_farz`, `r_mapextents` | 7000 | 6800 | Nearer far clip plane; pop-in risk |
 | `thread_pool_option` | 2 | 4 | Default -1; upstream comment maps 4 to `auto_threads` |
 | `debug_draw_enable` | false | true | Registered default |
 | `panorama_min_comp_layer_cache_cost` | (unset, default 4096) | 0 | Cache every HUD layer; upstream reports about +300 MB VRAM |
 | `cl_generate_postdataupdatepreserved` | (unset, default true) | false | Skip callbacks for unchanged entities |
-| `r_light_sensitivity_mode` | true | (removed) | Archived per-user; saved/menu value applies in stable |
-| `r_muzzleflashbrightness` | 0.01 | (removed, default 0.4) | Brighter muzzle flashes in stable |
+| `r_light_sensitivity_mode` | true | (removed) | Archived per-user; saved/menu value applies |
+| `r_muzzleflashbrightness` | 0.01 | (removed, default 0.4) | Brighter muzzle flashes |
 | `r_smooth_morph_normals`, `r_ssao_blur` | 0 | false | Same boolean |
-| `Engine2/DefensiveConCommands` | 1 (stock) | 0 | Guarded section; undocumented; first revert if stable fails to connect |
+| `Engine2/DefensiveConCommands` | 1 (stock) | 0 | Guarded section; undocumented; first revert if a config fails to connect |
 | `RenderSystem/MinDXLevel` | (unset) | 80 | Guarded section; consumer unresolved |
 
-Stable also has 3.8's audio-block order, RenderSystem alignment and comment/version text. New experiments get a
-dated [changelog](CHANGES.txt) entry; say if experimental should take 3.8 too.
+Both also have 3.8's audio-block order, RenderSystem alignment and comment/version text.
 
 Both files carry the HUD readability block from the October 27 experiments:
 
@@ -97,7 +100,7 @@ owner-reported evidence, not an audit test or proof that aspect ratio is univers
 ## Structural caveats
 
 Both configs inherit edits in **RenderSystem, WorldRenderer, SceneSystem and Particles** compared with stock;
-since the 3.8 sync stable also differs in **Engine2** (`DefensiveConCommands 0`), five of seven.
+since the 3.8 sync both also differ in **Engine2** (`DefensiveConCommands 0`), five of seven.
 Historical guard strings name these among seven sections, but that is not a current enforcement test.
 Switching from stable to experimental does not restore stock engine sections. If matching fails, use
 Steam verification to restore stock and follow [troubleshooting](TROUBLESHOOTING.md).

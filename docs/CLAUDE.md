@@ -6,7 +6,7 @@ maintenance regardless of assistant. The owner's current request overrides workf
 ## Current files and owner decisions
 
 - Stable is OptimizationLock **3.8** (main `69a665c`, synced November 2) plus owner preferences, including the HUD readability block tuned in experimental and copied over verbatim October 27. v1.4 is a frozen **3.6** copy.
-- Experimental was **reset October 27 to a byte-identical copy of stable** so owner testing starts from stable; stable took experimental verbatim the same day. Experimental is still that 3.7.1-based file, so after stable's 3.8 sync the files differ only by upstream 3.8 changes, listed in CONFIGS.md (earlier restarts: October 15 from v1.2, October 17 from stable 3.5.3). Both intentionally retain upstream engine edits and duplicates.
+- Experimental was **reset October 27 to a byte-identical copy of stable** so owner testing starts from stable; stable took experimental verbatim the same day. Both took **3.8** on November 2 and are byte-identical again; new experiments are listed in CONFIGS.md (earlier restarts: October 15 from v1.2, October 17 from stable 3.5.3). Both intentionally retain upstream engine edits and duplicates.
 - Both active files and all intentional disabled entries are covered in [SETTING-REFERENCE.md](SETTING-REFERENCE.md).
   [CONFIGS.md](CONFIGS.md) is the current owner-decision and variant record.
 - Frozen `stable-config/v*/gameinfo.gi` and `docs/archive/` are immutable historical evidence. Never edit them.
@@ -43,9 +43,9 @@ not a mandate to rewrite current owner-approved files. Keep existing style when 
 No ASCII double quotes should be introduced inside prose comments; the repository's Mod Manager compatibility
 check rejects odd quote counts per line. Balanced quoted disabled values remain valid historical file content.
 
-Matching `PGIVersion` alone does not establish matchmaking compatibility. Experimental differs from stock in four
-of the seven historically named guarded sections, stable (3.8) in five (also Engine2). Do not recommend experimental
-as a stock-section fallback.
+Matching `PGIVersion` alone does not establish matchmaking compatibility. Both configs differ from stock in five
+of the seven historically named guarded sections (Engine2 since 3.8). Do not recommend experimental as a
+stock-section fallback.
 
 ## Research and claims
 

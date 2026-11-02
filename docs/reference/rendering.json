@@ -1476,7 +1476,7 @@
   },
   "ConVars/r_farz": {
     "purpose": "Overrides the far clipping plane; -1 uses env_fog_controller. Closer clipping can remove distant geometry rather than merely reduce detail.",
-    "rationale": "Retained from OptimizationLock lineage. OptimizationLock 3.8 lowered it from 7000 to 6800 without a stated reason; stable takes 6800 with the 3.8 sync, experimental keeps 7000. Upstream comments record intended rationale, not evidence that the setting improves this repository.",
+    "rationale": "Retained from OptimizationLock lineage. OptimizationLock 3.8 lowered it from 7000 to 6800 without a stated reason; both configs take 6800 with the 3.8 sync. Upstream comments record intended rationale, not evidence that the setting improves this repository.",
     "tradeoffs": "A nearer clip plane can make distant buildings or players pop in rather than merely reduce detail. Any frame-time gain from 7000 to 6800 is unmeasured. No current per-setting frame-time, memory, or visual measurement is available.",
     "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified.",
     "confidence": "High for captured registration/flags; moderate for purpose; runtime effect unverified.",
@@ -1631,19 +1631,6 @@
     ],
     "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
   },
-  "ConVars/r_light_sensitivity_mode": {
-    "purpose": "Registered archived, per-user light-sensitivity setting. This should be treated as an accessibility preference, not an evidence-backed performance tweak.",
-    "rationale": "OptimizationLock 3.8 removed this line without a stated reason, so stable no longer sets it and the registered or saved value applies. Experimental (still 3.7.1-based) keeps the inherited assignment.",
-    "tradeoffs": "Registered archive per_user, so without the gameinfo line the saved or menu value decides. If it is the light-sensitivity accessibility option, stable may now show brighter flashes or effects than before. No performance effect is established.",
-    "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified.",
-    "confidence": "High for captured registration/flags; low for detailed purpose and runtime effect.",
-    "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05"
-    ],
-    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
-  },
   "ConVars/r_lightmap_bicubic_filtering": {
     "purpose": "Candidate texture streaming, sampling or lightmap resources control inherited in the config, but absent from the pinned ConVar dump. Current registration, meaning, and effect remain unknown; absence from one dump does not establish removal.",
     "rationale": "Retained from OptimizationLock lineage. The pinned upstream file contains this key; its comments record intended rationale or experiments, not evidence that the setting improves this repository.",
@@ -1707,7 +1694,7 @@
   },
   "ConVars/r_mapextents": {
     "purpose": "Sets the maximum map dimension used to determine the far clipping plane. Interaction with r_farz is not established here.",
-    "rationale": "Retained from OptimizationLock lineage. OptimizationLock 3.8 lowered it from 7000 to 6800 without a stated reason; stable takes 6800 with the 3.8 sync, experimental keeps 7000. Upstream comments record intended rationale, not evidence that the setting improves this repository.",
+    "rationale": "Retained from OptimizationLock lineage. OptimizationLock 3.8 lowered it from 7000 to 6800 without a stated reason; both configs take 6800 with the 3.8 sync. Upstream comments record intended rationale, not evidence that the setting improves this repository.",
     "tradeoffs": "A nearer clip plane can make distant buildings or players pop in rather than merely reduce detail. Any frame-time gain from 7000 to 6800 is unmeasured. No current per-setting frame-time, memory, or visual measurement is available.",
     "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified.",
     "confidence": "High for captured registration/flags; moderate for purpose; runtime effect unverified.",
@@ -1753,19 +1740,6 @@
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
     ],
     "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
-  },
-  "ConVars/r_muzzleflashbrightness": {
-    "purpose": "Registered muzzle-flash brightness control with replication; the server can matter to the runtime value.",
-    "rationale": "OptimizationLock 3.8 removed this line without a stated reason, so stable no longer sets it and the registered or saved value applies. Experimental (still 3.7.1-based) keeps the inherited assignment.",
-    "tradeoffs": "Stable falls back to the registered 0.4 (cheat, replicated), so muzzle flashes may look brighter than with the inherited 0.01. Replication means the server can matter. No performance effect is established.",
-    "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified.",
-    "confidence": "High for captured registration/flags; low for detailed purpose and runtime effect.",
-    "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05"
-    ],
-    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
   },
   "ConVars/r_opaque": {
     "purpose": "Candidate rendering control inherited in the config, but absent from the pinned ConVar dump. Current registration, meaning, and effect remain unknown; absence from one dump does not establish removal.",
@@ -4255,7 +4229,7 @@
   },
   "RenderSystem/MinDXLevel": {
     "purpose": "Render-system initialization key whose name suggests a minimum DirectX feature level; the gameinfo consumer is unresolved. The inspected DX11 and Vulkan render-system string tables contain setting.MinDXLevel (a device-support key) and a message that DXLevel below 110 is unsupported, but not this bare key.",
-    "rationale": "Added by OptimizationLock 3.8 with an empty comment and no stated rationale; stable takes it with the 3.8 sync at the owner's request. Valve stock does not set it and experimental does not set it.",
+    "rationale": "Added by OptimizationLock 3.8 with an empty comment and no stated rationale; both configs take it with the 3.8 sync at the owner's request. Valve stock does not set it.",
     "tradeoffs": "80 is below the supported DXLevel floor named in the string tables, so if the key is read it plausibly has no effect on a DX11-class GPU; that is inference. It adds a RenderSystem difference from stock, a historically guarded section; matchmaking acceptance is untested. No performance benefit is established.",
     "applicability": "Engine initialization; renderer-specific consumers are unresolved.",
     "confidence": "High for the written assignment and absence from stock; low for consumer and runtime effect",

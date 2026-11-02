@@ -75,7 +75,7 @@ Enables the mix layer that mutes selected sounds at map-load boundaries.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L920](../../../stable-config/gameinfo.gi#L920)) |
-| Experimental | `false` (active, [L929](../../../experimental-config/gameinfo.gi#L929)) |
+| Experimental | `false` (active, [L920](../../../experimental-config/gameinfo.gi#L920)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1083](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1083)) |
 
@@ -131,7 +131,7 @@ Enables calculations classifying entities as indoors or outdoors.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1303](../../../stable-config/gameinfo.gi#L1303)) |
-| Experimental | `0` (active, [L1302](../../../experimental-config/gameinfo.gi#L1302)) |
+| Experimental | `0` (active, [L1303](../../../experimental-config/gameinfo.gi#L1303)) |
 | Stock gameinfo override | `0` (active, [L604](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L604)) |
 | OptimizationLock pinned upstream | `0` (active, [L1466](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1466)) |
 
@@ -159,7 +159,7 @@ Valve help: duration for viewing damage to decay to 0.0. Default 3, requested 0.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L922](../../../stable-config/gameinfo.gi#L922)) |
-| Experimental | `0` (active, [L919](../../../experimental-config/gameinfo.gi#L919)) |
+| Experimental | `0` (active, [L922](../../../experimental-config/gameinfo.gi#L922)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1085](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1085)) |
 
@@ -187,7 +187,7 @@ Valve help: duration before viewing damage begins to decay. Default 3, requested
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L923](../../../stable-config/gameinfo.gi#L923)) |
-| Experimental | `0` (active, [L920](../../../experimental-config/gameinfo.gi#L920)) |
+| Experimental | `0` (active, [L923](../../../experimental-config/gameinfo.gi#L923)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1086](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1086)) |
 
@@ -215,7 +215,7 @@ Name of the sound event invoked on disconnect to stop selected playing events.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `citadel.convar.stop_all_game_layer_soundevents` (active, [L1281](../../../stable-config/gameinfo.gi#L1281)) |
-| Experimental | `citadel.convar.stop_all_game_layer_soundevents` (active, [L1280](../../../experimental-config/gameinfo.gi#L1280)) |
+| Experimental | `citadel.convar.stop_all_game_layer_soundevents` (active, [L1281](../../../experimental-config/gameinfo.gi#L1281)) |
 | Stock gameinfo override | `citadel.convar.stop_all_game_layer_soundevents` (active, [L582](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L582)) |
 | OptimizationLock pinned upstream | `citadel.convar.stop_all_game_layer_soundevents` (active, [L1444](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1444)) |
 
@@ -243,7 +243,7 @@ Bypasses individual audio-source soundscape lookup when enabled.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (disabled, [L1052](../../../stable-config/gameinfo.gi#L1052)); `1` (active, [L1311](../../../stable-config/gameinfo.gi#L1311)) |
-| Experimental | `true` (disabled, [L1050](../../../experimental-config/gameinfo.gi#L1050)); `1` (active, [L1310](../../../experimental-config/gameinfo.gi#L1310)) |
+| Experimental | `true` (disabled, [L1052](../../../experimental-config/gameinfo.gi#L1052)); `1` (active, [L1311](../../../experimental-config/gameinfo.gi#L1311)) |
 | Stock gameinfo override | `1` (active, [L612](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L612)) |
 | OptimizationLock pinned upstream | `true` (disabled, [L1215](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1215)); `1` (active, [L1474](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1474)) |
 
@@ -271,7 +271,7 @@ Audio DSP-related volume control inferred from the name; no detailed help or ran
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1188](../../../stable-config/gameinfo.gi#L1188)) |
-| Experimental | `0` (active, [L1187](../../../experimental-config/gameinfo.gi#L1187)) |
+| Experimental | `0` (active, [L1188](../../../experimental-config/gameinfo.gi#L1188)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1351](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1351)) |
 
@@ -299,7 +299,7 @@ When true, resets the input device after a sufficiently long gap in callbacks.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1300](../../../stable-config/gameinfo.gi#L1300)) |
-| Experimental | `0` (active, [L1299](../../../experimental-config/gameinfo.gi#L1299)) |
+| Experimental | `0` (active, [L1300](../../../experimental-config/gameinfo.gi#L1300)) |
 | Stock gameinfo override | `0` (active, [L601](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L601)) |
 | OptimizationLock pinned upstream | `0` (active, [L1463](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1463)) |
 
@@ -327,7 +327,7 @@ Selects the SIMD implementation of shoebox reverb processing.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L924](../../../stable-config/gameinfo.gi#L924)) |
-| Experimental | `false` (active, [L930](../../../experimental-config/gameinfo.gi#L930)) |
+| Experimental | `false` (active, [L924](../../../experimental-config/gameinfo.gi#L924)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1087](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1087)) |
 
@@ -355,7 +355,7 @@ Registered audio graph setting with no descriptive help; meaning of the corenull
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L925](../../../stable-config/gameinfo.gi#L925)) |
-| Experimental | `false` (active, [L931](../../../experimental-config/gameinfo.gi#L931)) |
+| Experimental | `false` (active, [L925](../../../experimental-config/gameinfo.gi#L925)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `false` (active, [L1088](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1088)) |
 
@@ -383,7 +383,7 @@ Stock comment identifies a sound-volume rate-change limiter; exact units and sca
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `100.0` (active, [L1324](../../../stable-config/gameinfo.gi#L1324)) |
-| Experimental | `100.0` (active, [L1323](../../../experimental-config/gameinfo.gi#L1323)) |
+| Experimental | `100.0` (active, [L1324](../../../experimental-config/gameinfo.gi#L1324)) |
 | Stock gameinfo override | `100.0` (active, [L625](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L625)) |
 | OptimizationLock pinned upstream | `100.0` (active, [L1487](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1487)) |
 
@@ -411,7 +411,7 @@ Absent from the dump but set by Valve stock; the name suggests default event-bro
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `citadel_default_3d` (active, [L1282](../../../stable-config/gameinfo.gi#L1282)) |
-| Experimental | `citadel_default_3d` (active, [L1281](../../../experimental-config/gameinfo.gi#L1281)) |
+| Experimental | `citadel_default_3d` (active, [L1282](../../../experimental-config/gameinfo.gi#L1282)) |
 | Stock gameinfo override | `citadel_default_3d` (active, [L583](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L583)) |
 | OptimizationLock pinned upstream | `citadel_default_3d` (active, [L1445](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1445)) |
 
@@ -435,7 +435,7 @@ Absent from the dump but set by Valve stock; the name suggests event-browser eve
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1342](../../../stable-config/gameinfo.gi#L1342)) |
-| Experimental | `true` (active, [L1341](../../../experimental-config/gameinfo.gi#L1341)) |
+| Experimental | `true` (active, [L1342](../../../experimental-config/gameinfo.gi#L1342)) |
 | Stock gameinfo override | `true` (active, [L643](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L643)) |
 | OptimizationLock pinned upstream | `true` (active, [L1505](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1505)) |
 
@@ -459,7 +459,7 @@ Registered without explanatory help. Upstream treats it as an audio mixing lead-
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.05` (active, [L926](../../../stable-config/gameinfo.gi#L926)) |
-| Experimental | `0.05` (active, [L922](../../../experimental-config/gameinfo.gi#L922)) |
+| Experimental | `0.05` (active, [L926](../../../experimental-config/gameinfo.gi#L926)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0.05` (active, [L1089](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1089)) |
 
@@ -487,7 +487,7 @@ Name suggests a sound-occlusion bounce count; no detailed help is present.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L927](../../../stable-config/gameinfo.gi#L927)) |
-| Experimental | `0` (active, [L923](../../../experimental-config/gameinfo.gi#L923)) |
+| Experimental | `0` (active, [L927](../../../experimental-config/gameinfo.gi#L927)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1090](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1090)) |
 
@@ -515,7 +515,7 @@ Name suggests a sound-occlusion ray count; no detailed help is present.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L928](../../../stable-config/gameinfo.gi#L928)) |
-| Experimental | `0` (active, [L924](../../../experimental-config/gameinfo.gi#L924)) |
+| Experimental | `0` (active, [L928](../../../experimental-config/gameinfo.gi#L928)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1091](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1091)) |
 
@@ -543,7 +543,7 @@ Name suggests reporting invalid non-number audio values; no detailed help is pre
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1288](../../../stable-config/gameinfo.gi#L1288)) |
-| Experimental | `1` (active, [L1287](../../../experimental-config/gameinfo.gi#L1287)) |
+| Experimental | `1` (active, [L1288](../../../experimental-config/gameinfo.gi#L1288)) |
 | Stock gameinfo override | `1` (active, [L589](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L589)) |
 | OptimizationLock pinned upstream | `1` (active, [L1451](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1451)) |
 
@@ -571,7 +571,7 @@ Name suggests maximum base-event nesting depth in the sound-operator system; the
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `10` (active, [L1291](../../../stable-config/gameinfo.gi#L1291)) |
-| Experimental | `10` (active, [L1290](../../../experimental-config/gameinfo.gi#L1290)) |
+| Experimental | `10` (active, [L1291](../../../experimental-config/gameinfo.gi#L1291)) |
 | Stock gameinfo override | `10` (active, [L592](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L592)) |
 | OptimizationLock pinned upstream | `10` (active, [L1454](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1454)) |
 
@@ -599,7 +599,7 @@ Selects a named sound mix; the requested Default_Mix matches Valve stock and dec
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `Default_Mix` (active, [L1336](../../../stable-config/gameinfo.gi#L1336)) |
-| Experimental | `Default_Mix` (active, [L1335](../../../experimental-config/gameinfo.gi#L1335)) |
+| Experimental | `Default_Mix` (active, [L1336](../../../experimental-config/gameinfo.gi#L1336)) |
 | Stock gameinfo override | `Default_Mix` (active, [L637](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L637)) |
 | OptimizationLock pinned upstream | `Default_Mix` (active, [L1499](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1499)) |
 
@@ -627,7 +627,7 @@ Name/stock placement suggest a maximum update rate for the sound mixer; no detai
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1325](../../../stable-config/gameinfo.gi#L1325)) |
-| Experimental | `0` (active, [L1324](../../../experimental-config/gameinfo.gi#L1324)) |
+| Experimental | `0` (active, [L1325](../../../experimental-config/gameinfo.gi#L1325)) |
 | Stock gameinfo override | `0` (active, [L626](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L626)) |
 | OptimizationLock pinned upstream | `0` (active, [L1488](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1488)) |
 
@@ -655,7 +655,7 @@ Sound-mixer implementation/version selector inferred from the name; no mode desc
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2` (active, [L929](../../../stable-config/gameinfo.gi#L929)) |
-| Experimental | `2` (active, [L925](../../../experimental-config/gameinfo.gi#L925)) |
+| Experimental | `2` (active, [L929](../../../experimental-config/gameinfo.gi#L929)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `2` (active, [L1092](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1092)) |
 
@@ -683,7 +683,7 @@ Index of the active head-related transfer function.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1266](../../../stable-config/gameinfo.gi#L1266)) |
-| Experimental | `0` (active, [L1265](../../../experimental-config/gameinfo.gi#L1265)) |
+| Experimental | `0` (active, [L1266](../../../experimental-config/gameinfo.gi#L1266)) |
 | Stock gameinfo override | `0` (active, [L567](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L567)) |
 | OptimizationLock pinned upstream | `0` (active, [L1429](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1429)) |
 
@@ -711,7 +711,7 @@ Selects an alternate listener-dimensions lookup using a k-d tree of probe positi
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1276](../../../stable-config/gameinfo.gi#L1276)) |
-| Experimental | `1` (active, [L1275](../../../experimental-config/gameinfo.gi#L1275)) |
+| Experimental | `1` (active, [L1276](../../../experimental-config/gameinfo.gi#L1276)) |
 | Stock gameinfo override | `1` (active, [L577](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L577)) |
 | OptimizationLock pinned upstream | `1` (active, [L1439](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1439)) |
 
@@ -739,7 +739,7 @@ Valve console help: Enable baking outside field for probes baking custom dimensi
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1278](../../../stable-config/gameinfo.gi#L1278)) |
-| Experimental | `0` (active, [L1277](../../../experimental-config/gameinfo.gi#L1277)) |
+| Experimental | `0` (active, [L1278](../../../experimental-config/gameinfo.gi#L1278)) |
 | Stock gameinfo override | `0` (active, [L579](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L579)) |
 | OptimizationLock pinned upstream | `0` (active, [L1441](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1441)) |
 
@@ -767,7 +767,7 @@ Valve console help: Enable baking size and inout data for probes when baking cus
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1277](../../../stable-config/gameinfo.gi#L1277)) |
-| Experimental | `1` (active, [L1276](../../../experimental-config/gameinfo.gi#L1276)) |
+| Experimental | `1` (active, [L1277](../../../experimental-config/gameinfo.gi#L1277)) |
 | Stock gameinfo override | `1` (active, [L578](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L578)) |
 | OptimizationLock pinned upstream | `1` (active, [L1440](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1440)) |
 
@@ -795,7 +795,7 @@ Valve console help: Enable baking insize size field for probes when baking custo
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1279](../../../stable-config/gameinfo.gi#L1279)) |
-| Experimental | `0` (active, [L1278](../../../experimental-config/gameinfo.gi#L1278)) |
+| Experimental | `0` (active, [L1279](../../../experimental-config/gameinfo.gi#L1279)) |
 | Stock gameinfo override | `0` (active, [L580](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L580)) |
 | OptimizationLock pinned upstream | `0` (active, [L1442](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1442)) |
 
@@ -823,7 +823,7 @@ Maximum height in meters above the initial probe layer where extra probes can be
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `100` (active, [L1275](../../../stable-config/gameinfo.gi#L1275)) |
-| Experimental | `100` (active, [L1274](../../../experimental-config/gameinfo.gi#L1274)) |
+| Experimental | `100` (active, [L1275](../../../experimental-config/gameinfo.gi#L1275)) |
 | Stock gameinfo override | `100` (active, [L576](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L576)) |
 | OptimizationLock pinned upstream | `100` (active, [L1438](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1438)) |
 
@@ -851,7 +851,7 @@ Maximum ray length for dimensions-size/enclosure calculations in game units; 0 d
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2500` (active, [L1280](../../../stable-config/gameinfo.gi#L1280)) |
-| Experimental | `2500` (active, [L1279](../../../experimental-config/gameinfo.gi#L1279)) |
+| Experimental | `2500` (active, [L1280](../../../experimental-config/gameinfo.gi#L1280)) |
 | Stock gameinfo override | `2500` (active, [L581](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L581)) |
 | OptimizationLock pinned upstream | `2500` (active, [L1443](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1443)) |
 
@@ -879,7 +879,7 @@ Allows loading custom head-related transfer functions.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1265](../../../stable-config/gameinfo.gi#L1265)) |
-| Experimental | `0` (active, [L1264](../../../experimental-config/gameinfo.gi#L1264)) |
+| Experimental | `0` (active, [L1265](../../../experimental-config/gameinfo.gi#L1265)) |
 | Stock gameinfo override | `0` (active, [L566](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L566)) |
 | OptimizationLock pinned upstream | `0` (active, [L1428](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1428)) |
 
@@ -907,7 +907,7 @@ Global sound-stack gate for Steam Audio pathing.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1269](../../../stable-config/gameinfo.gi#L1269)); `0` (active, [L1272](../../../stable-config/gameinfo.gi#L1272)) |
-| Experimental | `0` (active, [L1268](../../../experimental-config/gameinfo.gi#L1268)); `0` (active, [L1271](../../../experimental-config/gameinfo.gi#L1271)) |
+| Experimental | `0` (active, [L1269](../../../experimental-config/gameinfo.gi#L1269)); `0` (active, [L1272](../../../experimental-config/gameinfo.gi#L1272)) |
 | Stock gameinfo override | `0` (active, [L570](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L570)); `0` (active, [L573](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L573)) |
 | OptimizationLock pinned upstream | `0` (active, [L1432](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1432)); `0` (active, [L1435](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1435)) |
 
@@ -935,7 +935,7 @@ Enables the Steam Audio reverb processor.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1270](../../../stable-config/gameinfo.gi#L1270)) |
-| Experimental | `0` (active, [L1269](../../../experimental-config/gameinfo.gi#L1269)) |
+| Experimental | `0` (active, [L1270](../../../experimental-config/gameinfo.gi#L1270)) |
 | Stock gameinfo override | `0` (active, [L571](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L571)) |
 | OptimizationLock pinned upstream | `0` (active, [L1433](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1433)) |
 
@@ -963,7 +963,7 @@ Path-length fallback in inches; Valve explicitly says 0 uses direct distance.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.0` (active, [L1273](../../../stable-config/gameinfo.gi#L1273)) |
-| Experimental | `0.0` (active, [L1272](../../../experimental-config/gameinfo.gi#L1272)) |
+| Experimental | `0.0` (active, [L1273](../../../experimental-config/gameinfo.gi#L1273)) |
 | Stock gameinfo override | `0.0` (active, [L574](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L574)) |
 | OptimizationLock pinned upstream | `0.0` (active, [L1436](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1436)) |
 
@@ -991,7 +991,7 @@ Time between sound emission and the final audible Steam Audio reflection.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1.0` (active, [L1195](../../../stable-config/gameinfo.gi#L1195)) |
-| Experimental | `1.0` (active, [L1194](../../../experimental-config/gameinfo.gi#L1194)) |
+| Experimental | `1.0` (active, [L1195](../../../experimental-config/gameinfo.gi#L1195)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1.0` (active, [L1358](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1358)) |
 
@@ -1019,7 +1019,7 @@ Controls loading precomputed Steam Audio dimensions data.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1261](../../../stable-config/gameinfo.gi#L1261)) |
-| Experimental | `1` (active, [L1260](../../../experimental-config/gameinfo.gi#L1260)) |
+| Experimental | `1` (active, [L1261](../../../experimental-config/gameinfo.gi#L1261)) |
 | Stock gameinfo override | `1` (active, [L562](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L562)) |
 | OptimizationLock pinned upstream | `1` (active, [L1424](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1424)) |
 
@@ -1047,7 +1047,7 @@ Controls loading precomputed Steam Audio materials data.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1262](../../../stable-config/gameinfo.gi#L1262)) |
-| Experimental | `0` (active, [L1261](../../../experimental-config/gameinfo.gi#L1261)) |
+| Experimental | `0` (active, [L1262](../../../experimental-config/gameinfo.gi#L1262)) |
 | Stock gameinfo override | `0` (active, [L563](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L563)) |
 | OptimizationLock pinned upstream | `0` (active, [L1425](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1425)) |
 
@@ -1075,7 +1075,7 @@ Controls loading precomputed Steam Audio occlusion data.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1260](../../../stable-config/gameinfo.gi#L1260)) |
-| Experimental | `0` (active, [L1259](../../../experimental-config/gameinfo.gi#L1259)) |
+| Experimental | `0` (active, [L1260](../../../experimental-config/gameinfo.gi#L1260)) |
 | Stock gameinfo override | `0` (active, [L561](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L561)) |
 | OptimizationLock pinned upstream | `0` (active, [L1423](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1423)) |
 
@@ -1103,7 +1103,7 @@ Controls loading precomputed Steam Audio pathing data.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1259](../../../stable-config/gameinfo.gi#L1259)) |
-| Experimental | `0` (active, [L1258](../../../experimental-config/gameinfo.gi#L1258)) |
+| Experimental | `0` (active, [L1259](../../../experimental-config/gameinfo.gi#L1259)) |
 | Stock gameinfo override | `0` (active, [L560](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L560)) |
 | OptimizationLock pinned upstream | `0` (active, [L1422](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1422)) |
 
@@ -1131,7 +1131,7 @@ Controls loading precomputed Steam Audio reverb data.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1258](../../../stable-config/gameinfo.gi#L1258)) |
-| Experimental | `0` (active, [L1257](../../../experimental-config/gameinfo.gi#L1257)) |
+| Experimental | `0` (active, [L1258](../../../experimental-config/gameinfo.gi#L1258)) |
 | Stock gameinfo override | `0` (active, [L559](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L559)) |
 | OptimizationLock pinned upstream | `0` (active, [L1421](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1421)) |
 
@@ -1187,7 +1187,7 @@ Maximum probe count when baking custom dimensions data.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `100000` (active, [L1274](../../../stable-config/gameinfo.gi#L1274)) |
-| Experimental | `100000` (active, [L1273](../../../experimental-config/gameinfo.gi#L1273)) |
+| Experimental | `100000` (active, [L1274](../../../experimental-config/gameinfo.gi#L1274)) |
 | Stock gameinfo override | `100000` (active, [L575](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L575)) |
 | OptimizationLock pinned upstream | `100000` (active, [L1437](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1437)) |
 
@@ -1243,7 +1243,7 @@ Number of threads used for real-time Steam Audio reflection processing.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `4` (active, [L930](../../../stable-config/gameinfo.gi#L930)) |
-| Experimental | `4` (active, [L928](../../../experimental-config/gameinfo.gi#L928)) |
+| Experimental | `4` (active, [L930](../../../experimental-config/gameinfo.gi#L930)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `4` (active, [L1093](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1093)) |
 
@@ -1271,7 +1271,7 @@ Directional detail order for simulated Steam Audio pathing.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `3` (active, [L1267](../../../stable-config/gameinfo.gi#L1267)) |
-| Experimental | `3` (active, [L1266](../../../experimental-config/gameinfo.gi#L1266)) |
+| Experimental | `3` (active, [L1267](../../../experimental-config/gameinfo.gi#L1267)) |
 | Stock gameinfo override | `3` (active, [L568](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L568)) |
 | OptimizationLock pinned upstream | `3` (active, [L1430](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1430)) |
 
@@ -1299,7 +1299,7 @@ Directional detail order for rendered Steam Audio pathing.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `3` (active, [L1268](../../../stable-config/gameinfo.gi#L1268)) |
-| Experimental | `3` (active, [L1267](../../../experimental-config/gameinfo.gi#L1267)) |
+| Experimental | `3` (active, [L1268](../../../experimental-config/gameinfo.gi#L1268)) |
 | Stock gameinfo override | `3` (active, [L569](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L569)) |
 | OptimizationLock pinned upstream | `3` (active, [L1431](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1431)) |
 
@@ -1327,7 +1327,7 @@ Output volume of the Steam Audio reverb processor, in dB.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `-6` (active, [L1271](../../../stable-config/gameinfo.gi#L1271)) |
-| Experimental | `-6` (active, [L1270](../../../experimental-config/gameinfo.gi#L1270)) |
+| Experimental | `-6` (active, [L1271](../../../experimental-config/gameinfo.gi#L1271)) |
 | Stock gameinfo override | `-6` (active, [L572](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L572)) |
 | OptimizationLock pinned upstream | `-6` (active, [L1434](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1434)) |
 
@@ -1355,7 +1355,7 @@ Ambisonics order for convolution reverb: Valve documents order 0 as one channel 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L931](../../../stable-config/gameinfo.gi#L931)) |
-| Experimental | `0` (active, [L926](../../../experimental-config/gameinfo.gi#L926)) |
+| Experimental | `0` (active, [L931](../../../experimental-config/gameinfo.gi#L931)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `0` (active, [L1094](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1094)) |
 
@@ -1383,7 +1383,7 @@ Maximum reverb update rate in Hz.
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `10` (active, [L1196](../../../stable-config/gameinfo.gi#L1196)) |
-| Experimental | `10` (active, [L1195](../../../experimental-config/gameinfo.gi#L1195)) |
+| Experimental | `10` (active, [L1196](../../../experimental-config/gameinfo.gi#L1196)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `10` (active, [L1359](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1359)) |
 
@@ -1411,7 +1411,7 @@ Name and Valve stock comments identify spatial positioning of UI audio; exact im
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `false` (active, [L932](../../../stable-config/gameinfo.gi#L932)); `1` (active, [L1320](../../../stable-config/gameinfo.gi#L1320)) |
-| Experimental | `false` (active, [L927](../../../experimental-config/gameinfo.gi#L927)); `1` (active, [L1319](../../../experimental-config/gameinfo.gi#L1319)) |
+| Experimental | `false` (active, [L932](../../../experimental-config/gameinfo.gi#L932)); `1` (active, [L1320](../../../experimental-config/gameinfo.gi#L1320)) |
 | Stock gameinfo override | `1` (active, [L621](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L621)) |
 | OptimizationLock pinned upstream | `false` (active, [L1095](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1095)); `1` (active, [L1483](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1483)) |
 
@@ -1439,7 +1439,7 @@ Controls UI-audio spatialization spread, according to the stock section comment;
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2.4` (active, [L1321](../../../stable-config/gameinfo.gi#L1321)) |
-| Experimental | `2.4` (active, [L1320](../../../experimental-config/gameinfo.gi#L1320)) |
+| Experimental | `2.4` (active, [L1321](../../../experimental-config/gameinfo.gi#L1321)) |
 | Stock gameinfo override | `2.4` (active, [L622](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L622)) |
 | OptimizationLock pinned upstream | `2.4` (active, [L1484](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1484)) |
 
@@ -1467,7 +1467,7 @@ Name suggests use of precomputed audio occlusion; the dump provides no detailed 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1197](../../../stable-config/gameinfo.gi#L1197)) |
-| Experimental | `1` (active, [L1196](../../../experimental-config/gameinfo.gi#L1196)) |
+| Experimental | `1` (active, [L1197](../../../experimental-config/gameinfo.gi#L1197)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1360](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1360)) |
 
@@ -1495,7 +1495,7 @@ Name suggests GUID-based filtering in the sound-operator system; exact purpose i
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1292](../../../stable-config/gameinfo.gi#L1292)) |
-| Experimental | `1` (active, [L1291](../../../experimental-config/gameinfo.gi#L1291)) |
+| Experimental | `1` (active, [L1292](../../../experimental-config/gameinfo.gi#L1292)) |
 | Stock gameinfo override | `1` (active, [L593](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L593)) |
 | OptimizationLock pinned upstream | `1` (active, [L1455](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1455)) |
 
@@ -1523,7 +1523,7 @@ Structured gameinfo default metadata for speaker_config; this is not a separate 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1331](../../../stable-config/gameinfo.gi#L1331)) |
-| Experimental | `0` (active, [L1330](../../../experimental-config/gameinfo.gi#L1330)) |
+| Experimental | `0` (active, [L1331](../../../experimental-config/gameinfo.gi#L1331)) |
 | Stock gameinfo override | `0` (active, [L632](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L632)) |
 | OptimizationLock pinned upstream | `0` (active, [L1494](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1494)) |
 
@@ -1551,7 +1551,7 @@ Structured gameinfo max metadata for speaker_config; this is not a separate ConV
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2` (active, [L1332](../../../stable-config/gameinfo.gi#L1332)) |
-| Experimental | `2` (active, [L1331](../../../experimental-config/gameinfo.gi#L1331)) |
+| Experimental | `2` (active, [L1332](../../../experimental-config/gameinfo.gi#L1332)) |
 | Stock gameinfo override | `2` (active, [L633](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L633)) |
 | OptimizationLock pinned upstream | `2` (active, [L1495](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1495)) |
 
@@ -1579,7 +1579,7 @@ Structured gameinfo min metadata for speaker_config; this is not a separate ConV
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1330](../../../stable-config/gameinfo.gi#L1330)) |
-| Experimental | `0` (active, [L1329](../../../experimental-config/gameinfo.gi#L1329)) |
+| Experimental | `0` (active, [L1330](../../../experimental-config/gameinfo.gi#L1330)) |
 | Stock gameinfo override | `0` (active, [L631](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L631)) |
 | OptimizationLock pinned upstream | `0` (active, [L1493](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1493)) |
 
@@ -1607,7 +1607,7 @@ Name suggests lower-priority updates for audio voices; the dump does not define 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `true` (active, [L1204](../../../stable-config/gameinfo.gi#L1204)) |
-| Experimental | `true` (active, [L1203](../../../experimental-config/gameinfo.gi#L1203)) |
+| Experimental | `true` (active, [L1204](../../../experimental-config/gameinfo.gi#L1204)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `true` (active, [L1367](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1367)) |
 
@@ -1635,7 +1635,7 @@ Structured gameinfo default metadata for voice_always_sample_mic; this is not a 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0` (active, [L1297](../../../stable-config/gameinfo.gi#L1297)) |
-| Experimental | `0` (active, [L1296](../../../experimental-config/gameinfo.gi#L1296)) |
+| Experimental | `0` (active, [L1297](../../../experimental-config/gameinfo.gi#L1297)) |
 | Stock gameinfo override | `0` (active, [L598](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L598)) |
 | OptimizationLock pinned upstream | `0` (active, [L1460](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1460)) |
 
@@ -1663,7 +1663,7 @@ Structured gameinfo version metadata for voice_always_sample_mic; this is not a 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `2` (active, [L1296](../../../stable-config/gameinfo.gi#L1296)) |
-| Experimental | `2` (active, [L1295](../../../experimental-config/gameinfo.gi#L1295)) |
+| Experimental | `2` (active, [L1296](../../../experimental-config/gameinfo.gi#L1296)) |
 | Stock gameinfo override | `2` (active, [L597](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L597)) |
 | OptimizationLock pinned upstream | `2` (active, [L1459](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1459)) |
 
@@ -1691,7 +1691,7 @@ Voice-processing placement switch inferred from the name; the dump provides no a
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `1` (active, [L1285](../../../stable-config/gameinfo.gi#L1285)) |
-| Experimental | `1` (active, [L1284](../../../experimental-config/gameinfo.gi#L1284)) |
+| Experimental | `1` (active, [L1285](../../../experimental-config/gameinfo.gi#L1285)) |
 | Stock gameinfo override | `1` (active, [L586](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L586)) |
 | OptimizationLock pinned upstream | `1` (active, [L1448](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1448)) |
 
@@ -1719,7 +1719,7 @@ Time before microphone input is treated as stalled and needing reset; units are 
 | Source | Assignments in source order |
 | --- | --- |
 | Stable | `0.5` (active, [L1301](../../../stable-config/gameinfo.gi#L1301)) |
-| Experimental | `0.5` (active, [L1300](../../../experimental-config/gameinfo.gi#L1300)) |
+| Experimental | `0.5` (active, [L1301](../../../experimental-config/gameinfo.gi#L1301)) |
 | Stock gameinfo override | `0.5` (active, [L602](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L602)) |
 | OptimizationLock pinned upstream | `0.5` (active, [L1464](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1464)) |
 

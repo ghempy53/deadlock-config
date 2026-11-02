@@ -177,9 +177,9 @@
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/engine2_strings.txt"
     ],
     "purpose": "Engine initialization metadata. The name indicates a defensive console-command policy, but its exact current-build consumer and performance effect are undocumented; the exact key string is absent from the inspected engine2, materialsystem2 and rendersystem string tables, so the consumer is unresolved rather than proven absent.",
-    "rationale": "Valve stock sets 1. OptimizationLock 3.8 changed it to 0 without a comment or stated rationale; stable takes 0 with the 3.8 sync at the owner's request, experimental keeps stock 1. Many active ConVars in both files already carry the dump's defensive flag while this was 1, so this audit does not assume the key gates those assignments.",
+    "rationale": "Valve stock sets 1. OptimizationLock 3.8 changed it to 0 without a comment or stated rationale; both configs take 0 with the 3.8 sync at the owner's request. Many active ConVars in both files already carry the dump's defensive flag while this was 1, so this audit does not assume the key gates those assignments.",
     "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result.",
-    "tradeoffs": "No measured FPS, memory or latency benefit is established. Engine2 is one of the historically guarded sections, so stable now differs from stock there as well; matchmaking acceptance of the changed section is untested. If stable fails to connect or behaves oddly at startup, restoring 1 is the first revert to try."
+    "tradeoffs": "No measured FPS, memory or latency benefit is established. Engine2 is one of the historically guarded sections, so both configs now differ from stock there as well; matchmaking acceptance of the changed section is untested. If a config fails to connect or behaves oddly at startup, restoring 1 is the first revert to try."
   },
   "Engine2/DisableLoadingPlaque": {
     "applicability": "Engine initialization; client/server or renderer-specific applicability remains undocumented unless explicitly stated above.",

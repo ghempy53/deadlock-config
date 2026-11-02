@@ -14,9 +14,9 @@ NEW EXPERIMENTAL BASE: STABLE V1.2 (2026-10-15)
   Line numbers unchanged.
 
 OWNER'S CONFIRMED PREFERENCES (2026-10-15)
-  line 1313  fps_max                                       "400"  ->  "0"
-  line 1314  fps_max_ui                                    "120"  ->  "0"
-  line 621   steam_inputhandler_enabled                    "true"  ->  "false"
+  line 1314  fps_max                                       "400"  ->  "0"
+  line 1315  fps_max_ui                                    "120"  ->  "0"
+  line 620   steam_inputhandler_enabled                    "true"  ->  "false"
   line --    citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
   line --    citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
   Why: the owner confirmed these from docs/TESTED-CHANGES.md: uncapped FPS, Steam Input off, per-hit damage numbers
@@ -49,11 +49,11 @@ DEADLOCKCONFIG-UPDATE ALWAYS REPLACES THE FILE (2026-10-17)
   Line numbers unchanged.
 
 NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-17)
-  line 621   steam_inputhandler_enabled                    "true"  ->  "false"
+  line 620   steam_inputhandler_enabled                    "true"  ->  "false"
   line --    citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
   line --    citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
-  line 1313  fps_max                                       "400"  ->  "0"
-  line 1314  fps_max_ui                                    "120"  ->  "0"
+  line 1314  fps_max                                       "400"  ->  "0"
+  line 1315  fps_max_ui                                    "120"  ->  "0"
   Why: owner's request: experimental-config/gameinfo.gi restarts as a copy of the current stable config (Sqooky's
   OptimizationLock 3.5.3 with r_aspectratio 2.11, PR #61). Stable does not carry the owner's confirmed preferences, so
   they are re-applied as before: uncapped FPS, Steam Input off on both lines, 4 s final damage total, no big-hit
@@ -101,7 +101,7 @@ TEXTURE LAYERS RESTORED; PARTICLES ENGINE SECTION BACK TO VALVE STOCK (2026-10-1
   Lines after 591 moved up by 8.
 
 FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE VALUES (2026-10-17)
-  line 618   r_particle_max_size_cull                      "900"  ->  (commented -> engine default)
+  line 617   r_particle_max_size_cull                      "900"  ->  (commented -> engine default)
   line 816   cl_particle_fallback_base                     "5"  ->  (commented -> engine default)
   line 817   cl_particle_fallback_multiplier               "10"  ->  (commented -> engine default)
   line 818   cl_particle_sim_fallback_base_multiplier      "100"  ->  (commented -> engine default)
@@ -116,10 +116,10 @@ FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE 
   line 830   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
   line 831   r_physics_particle_op_spawn_scale             "0"  ->  (commented -> engine default)
   line 832   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
-  line 900   r_particle_model_new8                         "false"  ->  (commented -> engine default)
-  line 901   r_particle_newinput                           "true"  ->  (commented -> engine default)
-  line 1142  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
-  line 1177  sc_hdr_enabled_override                       "0"  ->  (commented -> engine default)
+  line 901   r_particle_model_new8                         "false"  ->  (commented -> engine default)
+  line 902   r_particle_newinput                           "true"  ->  (commented -> engine default)
+  line 1144  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  line 1178  sc_hdr_enabled_override                       "0"  ->  (commented -> engine default)
   line --    SceneSystem/HDRFrameBuffer                    "0"  ->  removed (not in Valve's stock file)
   line --    SceneSystem/EnableAlphaTint                   "0"  ->  removed (not in Valve's stock file)
   line --    SceneSystem/ParticleBufferSize                "512"  ->  removed (not in Valve's stock file)
@@ -138,7 +138,7 @@ FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE 
   Lines after 492 moved up by 4.
 
 FIRE-EFFECT BISECT, STEP 2: HDR STAYS ON, EVERYTHING ELSE BACK (2026-10-17)
-  line 1177  sc_hdr_enabled_override                       (commented, HDR on; unchanged from step 1)
+  line 1178  sc_hdr_enabled_override                       (commented, HDR on; unchanged from step 1)
   Why: the owner tested step 1 and the jetpack fire is fixed, so the cause is in that set. This step keeps only the
   HDR pair at Valve's values (sc_hdr_enabled_override commented out, SceneSystem HDRFrameBuffer removed) and
   restores everything else from before step 1: the 18 particle lines (fallbacks, post-sim skip, job lines, texture
@@ -155,9 +155,9 @@ FIRE-EFFECT BISECT, STEP 3: PARTICLE SIMULATION AND TIMING LINES TO VALVE VALUES
   line 829   r_particle_model_per_thread_count             "64"  ->  (commented -> engine default)
   line 830   r_particle_skip_postsim                       "true"  ->  (commented -> engine default)
   line 832   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
-  line 900   r_particle_model_new8                         "false"  ->  (commented -> engine default)
-  line 901   r_particle_newinput                           "true"  ->  (commented -> engine default)
-  line 1142  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  line 901   r_particle_model_new8                         "false"  ->  (commented -> engine default)
+  line 902   r_particle_newinput                           "true"  ->  (commented -> engine default)
+  line 1144  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
   Why: step 2 (HDR on, everything else restored) brought the jagged jetpack fire back, so the cause is among the 18
   particle lines and three SceneSystem keys restored there, not HDR. This step sets the 9 lines that change how and
   when particles simulate to Valve's values and keeps the other 12. Prime suspect: r_particle_min_timestep 0.00241.
@@ -176,9 +176,9 @@ FIRE-EFFECT BISECT, STEP 4: ONLY R_PARTICLE_MIN_TIMESTEP STAYS AT VALVE'S VALUE 
   line 829   r_particle_model_per_thread_count             (commented)  ->  "64"  (restored)
   line 830   r_particle_skip_postsim                       (commented)  ->  "true"  (restored)
   line 832   r_update_particles_on_render_only_frames      (commented)  ->  "true"  (restored)
-  line 900   r_particle_model_new8                         (commented)  ->  "false"  (restored)
-  line 901   r_particle_newinput                           (commented)  ->  "true"  (restored)
-  line 1142  r_late_particle_job_sync                      (commented)  ->  "1"  (restored)
+  line 901   r_particle_model_new8                         (commented)  ->  "false"  (restored)
+  line 902   r_particle_newinput                           (commented)  ->  "true"  (restored)
+  line 1144  r_late_particle_job_sync                      (commented)  ->  "1"  (restored)
   line 828   r_particle_min_timestep                       (commented -> engine default 0; unchanged from step 3)
   Why: the owner tested step 3 and the jetpack fire is fixed, so the cause is one of its 9 simulation and timing
   lines. This step restores 8 of them and keeps only r_particle_min_timestep at Valve's default (0, simulate every
@@ -189,7 +189,7 @@ FIRE-EFFECT BISECT, STEP 4: ONLY R_PARTICLE_MIN_TIMESTEP STAYS AT VALVE'S VALUE 
 
 JAGGED FIRE FIXED: R_PARTICLE_MIN_TIMESTEP AT VALVE'S DEFAULT; HDR OFF AGAIN (2026-10-17)
   line 828   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default 0; confirmed fix)
-  line 1177  sc_hdr_enabled_override                       (commented)  ->  "0"  (restored, as in stable)
+  line 1178  sc_hdr_enabled_override                       (commented)  ->  "0"  (restored, as in stable)
   line --    SceneSystem/HDRFrameBuffer                    (removed)  ->  "0"  (restored, as in stable)
   Why: the owner tested step 4 (only r_particle_min_timestep at Valve's default) and the jetpack fire stays clean, so
   the bisect is done: Sqooky's 0.00241 minimum timestep was the cause. Valve: particle simulation more frequent than
@@ -282,7 +282,7 @@ UPSTREAM SYNC CHECK (2026-10-19, OptimizationLock main @ 690e4fb)
   Line numbers unchanged.
 
 R_ASPECTRATIO COMMENTED OUT IN BOTH CONFIGS (2026-10-20)
-  line 639   r_aspectratio                              "2.11"   ->  (commented -> engine default 0)
+  line 638   r_aspectratio                              "2.11"   ->  (commented -> engine default 0)
   Why: the owner now sets FOV with an in-game FOV mod, and the 2.11 squeeze would stack with it. Stable gets the same
   edit (stable-config/gameinfo.gi line 645), and later upstream pulls keep it commented out. No performance effect.
   Untested in game: check that the mod's FOV applies and the image isn't stretched or squeezed horizontally. To undo,
@@ -311,12 +311,12 @@ UPSTREAM SYNC CHECK (2026-10-21, OptimizationLock main @ 347a669)
 
 BUILD 6810 CHECK: VALVE'S 2026-10-20 ENGINE-SECTION PATCH (2026-10-21; Valve data: GameTracking-Deadlock c90ff49, build 6810)
   line 24    PGIVersion                                 39A735A4...  ->  48C04ECA... (Valve's new stock value)
-  line 306   WorldRendererBuilder fog precomputed-shadow keys (6, BakePrecomputedShadows ... ResolutionDefault)  added
-  line 328   BakedLighting Version                      "4"      ->  "5"
-  line 332   LightmapChannels directional_irradiance_sh2_r/_g/_b  ->  directional_irradiance_sh2_lum (DXT1)
-  line 485   FogCachedShadowAtlasHeightTools            (was FogCachedShadowAtlasHeight)  ->  "0"
-  line 486   FogCachedShadowAtlasWidthTools             (was FogCachedShadowAtlasWidth)   ->  "0"
-  line 487   FogCachedShadowTileSizeTools               (new)    ->  "0"
+  line 305   WorldRendererBuilder fog precomputed-shadow keys (6, BakePrecomputedShadows ... ResolutionDefault)  added
+  line 327   BakedLighting Version                      "4"      ->  "5"
+  line 331   LightmapChannels directional_irradiance_sh2_r/_g/_b  ->  directional_irradiance_sh2_lum (DXT1)
+  line 484   FogCachedShadowAtlasHeightTools            (was FogCachedShadowAtlasHeight)  ->  "0"
+  line 485   FogCachedShadowAtlasWidthTools             (was FogCachedShadowAtlasWidth)   ->  "0"
+  line 486   FogCachedShadowTileSizeTools               (new)    ->  "0"
   Why: Valve's patch changed the stock engine sections and PGIVersion; the old PGIVersion no longer matches the game.
   Applied exactly as Sqooky's 3.6.1 does for stable, so experimental's engine sections now equal stable's: Sqooky's
   values (Tools keys and PrecomputedShadowmapResolutionDefault at 0) rather than Valve's 2048/2048/128. The other
@@ -394,7 +394,7 @@ UPSTREAM SYNC CHECK (2026-10-23, OptimizationLock main @ 347a669)
   Line numbers unchanged.
 
 R_ASPECTRATIO 2.54, THE 110 FOV EQUIVALENT, IN BOTH CONFIGS (2026-10-27)
-  line 639   r_aspectratio                              (commented "2.11")  ->  "2.54"
+  line 638   r_aspectratio                              (commented "2.11")  ->  "2.54"
   Why: the owner deleted the FOV slider mod and asked for the aspect override at the equivalent of 110 FOV. This
   supersedes the PR #77/#84 FOV-mod preference. 2.54 = 16/9 x tan(110/2) / tan(90/2) = 2.539 with the in-game FOV
   slider at its maximum of 90, assuming the projection keeps vertical FOV and widens horizontal coverage with the
@@ -570,6 +570,31 @@ STABLE: OPTIMIZATIONLOCK 3.8 SYNC (2026-11-02, OptimizationLock main @ 69a665c)
   VRAM, muzzle-flash brightness and the light-sensitivity menu option. Experimental is unchanged (still 3.7.1-based),
   so the two files now differ. Stable's line numbers shift throughout.
   Line numbers unchanged.
+
+EXPERIMENTAL: OPTIMIZATIONLOCK 3.8 SYNC (2026-11-02, OptimizationLock main @ 69a665c)
+  line 623   r_farz                                 "7000"   ->  "6800"
+  line 624   r_mapextents                           "7000"   ->  "6800"
+  line 642   panorama_min_comp_layer_cache_cost     (absent, default 4096)  ->  "0"
+  line 713   thread_pool_option                     "2"      ->  "4"
+  line 879   cl_generate_postdataupdatepreserved    (absent, default true)  ->  "false"
+  line 887   debug_draw_enable                      "false"  ->  "true"
+  line 1148  r_smooth_morph_normals                 "0"      ->  "false"
+  line 1149  r_ssao_blur                            "0"      ->  "false"
+  line 185   DefensiveConCommands                   "1"      ->  "0"
+  line 163   MinDXLevel                             (absent)  ->  "80"
+  line --    r_light_sensitivity_mode               "true"   ->  (removed)
+  line --    r_muzzleflashbrightness                "0.01"   ->  (removed)
+  Why: the owner asked for experimental to take 3.8 as well. Experimental was byte-identical to the pre-sync stable
+  file, so applying the same rebuild (upstream 3.8 plus the owner delta) gives exactly the new stable file;
+  experimental is now a byte-identical copy of stable-config/gameinfo.gi (SHA-256 8c43fccb5c08c9ea868a74be22a68fc200acc28d4df01d270beae8cd4088b478),
+  including stable's 3.8 header text. All owner settings in docs/CONFIGS.md are unchanged. Evidence and caveats are in
+  the stable entry above: every changed ConVar resolves identically in builds 6814 and 6841, and the Engine2 and
+  RenderSystem keys have unresolved consumers. Both configs now differ from stock in 5 of the 7 historically
+  guarded sections. compare.py finds no differences between the two files. check.py --fix renumbered 27 earlier
+  line N rows (line numbers only; the steam_inputhandler_enabled rows still point at the first occurrence).
+  Untested in game: same plan as stable; connect to a match first, and if it fails set DefensiveConCommands back to 1,
+  then remove MinDXLevel.
+  Lines renumbered throughout (whole file replaced).
 
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

@@ -1850,8 +1850,8 @@
   "ConVars/debug_draw_enable": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Global debug-draw-related switch, but Valve provides no further help; exact consumers are unknown.",
-    "rationale": "Inherited false from OptimizationLock; 3.8 sets true, the registered default, with a default tag. Stable takes true with the 3.8 sync, experimental keeps false. No original rationale for either value is recorded.",
-    "tradeoffs": "Requesting the default makes this line effectively a no-op in stable. Disabling a debug path may have no cost impact when no debug overlays are requested. Replication further prevents assuming the local value controls online rendering.",
+    "rationale": "Inherited false from OptimizationLock; 3.8 sets true, the registered default, with a default tag. Both configs take true with the 3.8 sync. No original rationale for either value is recorded.",
+    "tradeoffs": "Requesting the default makes this line effectively a no-op. Disabling a debug path may have no cost impact when no debug overlays are requested. Replication further prevents assuming the local value controls online rendering.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
@@ -3716,7 +3716,7 @@
   "ConVars/thread_pool_option": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Selects an engine thread-pool option; Valve’s help does not define the numeric modes.",
-    "rationale": "OptimizationLock 3.8 changed the inherited 2 to 4; stable takes 4 with the 3.8 sync, experimental keeps 2. The upstream comment maps 4 to GlobalThreadPoolMode auto_threads in boot.vcfg (2 removed the key) while still saying the value is -1; treat that mapping as upstream observation, not Valve documentation.",
+    "rationale": "OptimizationLock 3.8 changed the inherited 2 to 4; both configs take 4 with the 3.8 sync. The upstream comment maps 4 to GlobalThreadPoolMode auto_threads in boot.vcfg (2 removed the key) while still saying the value is -1; treat that mapping as upstream observation, not Valve documentation.",
     "tradeoffs": "Thread count, affinity, scheduler behavior, and benefit on the owner's 8-thread CPU (SMT off) are unresolved. No reason to claim that 4 increases performance.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
@@ -4097,7 +4097,7 @@
   "ConVars/panorama_min_comp_layer_cache_cost": {
     "subsystem": "HUD / UI",
     "purpose": "Name and upstream comment: minimum cost (size) of a Panorama element before its composition layer is cached; 0 caches everything. The dump gives no help text; registered default 4096, flags defensive developmentonly hidden.",
-    "rationale": "Added by OptimizationLock 3.8; stable takes it with the 3.8 sync at the owner's request; experimental (still 3.7.1-based) does not set it.",
+    "rationale": "Added by OptimizationLock 3.8; both configs take it with the 3.8 sync at the owner's request (stable first, experimental the same day).",
     "tradeoffs": "Upstream reports roughly 300 MB more VRAM. More caching could reduce HUD repaint work, or add memory pressure; neither is measured here.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; low for declared purpose and applied runtime effect",
@@ -4111,7 +4111,7 @@
   "ConVars/cl_generate_postdataupdatepreserved": {
     "subsystem": "Networking / interpolation",
     "purpose": "Valve help: whether PostDataUpdatePreserved callbacks run for entities that had no changes but are still in the PVS. Default true, requested false.",
-    "rationale": "Added by OptimizationLock 3.8; stable takes it with the 3.8 sync at the owner's request; experimental (still 3.7.1-based) does not set it.",
+    "rationale": "Added by OptimizationLock 3.8; both configs take it with the 3.8 sync at the owner's request (stable first, experimental the same day).",
     "tradeoffs": "Skipping callbacks for unchanged entities may save client CPU; if any client logic relies on those callbacks, state could update late. Both the saving and any side effect are unverified.",
     "applicability": "",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect",

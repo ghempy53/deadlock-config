@@ -3398,17 +3398,6 @@
       "max": null,
       "min": null
     },
-    "r_light_sensitivity_mode": {
-      "default": "false",
-      "description": "",
-      "flags": [
-        "archive",
-        "clientdll",
-        "per_user"
-      ],
-      "max": null,
-      "min": null
-    },
     "r_lightmap_size": {
       "default": "65536",
       "description": "Maximum lightmap resolution.",
@@ -3486,17 +3475,6 @@
       "description": "",
       "flags": [
         "cheat"
-      ],
-      "max": null,
-      "min": null
-    },
-    "r_muzzleflashbrightness": {
-      "default": "0.4",
-      "description": "",
-      "flags": [
-        "cheat",
-        "clientdll",
-        "replicated"
       ],
       "max": null,
       "min": null
@@ -5548,7 +5526,6 @@
     "ConVars/r_impacts_alt_orientation",
     "ConVars/r_late_particle_job_sync",
     "ConVars/r_light_flickering_enabled",
-    "ConVars/r_light_sensitivity_mode",
     "ConVars/r_lightmap_bicubic_filtering",
     "ConVars/r_lightmap_size",
     "ConVars/r_lightmap_size_directional_irradiance",
@@ -5559,7 +5536,6 @@
     "ConVars/r_monitor_3dskybox",
     "ConVars/r_morphing_enabled",
     "ConVars/r_multiscattering",
-    "ConVars/r_muzzleflashbrightness",
     "ConVars/r_opaque",
     "ConVars/r_particle_allowprerender",
     "ConVars/r_particle_batch_collections",
