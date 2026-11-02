@@ -1850,15 +1850,16 @@
   "ConVars/debug_draw_enable": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Global debug-draw-related switch, but Valve provides no further help; exact consumers are unknown.",
-    "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Disabling a debug path may have no cost impact when no debug overlays are requested. Replication further prevents assuming the local value controls online rendering.",
+    "rationale": "Inherited false from OptimizationLock; 3.8 sets true, the registered default, with a default tag. Both configs take true with the 3.8 sync. No original rationale for either value is recorded.",
+    "tradeoffs": "Requesting the default makes this line effectively a no-op. Disabling a debug path may have no cost impact when no debug overlays are requested. Replication further prevents assuming the local value controls online rendering.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05"
     ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
   },
   "ConVars/default_fov": {
     "subsystem": "Camera / input",
@@ -3715,15 +3716,16 @@
   "ConVars/thread_pool_option": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Selects an engine thread-pool option; Valve’s help does not define the numeric modes.",
-    "rationale": "Inherited value 2. The upstream comment simultaneously says it is set to -1 and lists speculative boot.vcfg mappings; treat that prose as inconsistent provenance, not documentation of supported mode 2.",
-    "tradeoffs": "Thread count, affinity, scheduler behavior, and benefit on the owner’s 8-thread CPU are unresolved. No reason to claim that 2 increases performance.",
+    "rationale": "OptimizationLock 3.8 changed the inherited 2 to 4; both configs take 4 with the 3.8 sync. The upstream comment maps 4 to GlobalThreadPoolMode auto_threads in boot.vcfg (2 removed the key) while still saying the value is -1; treat that mapping as upstream observation, not Valve documentation.",
+    "tradeoffs": "Thread count, affinity, scheduler behavior, and benefit on the owner's 8-thread CPU (SMT off) are unresolved. No reason to claim that 4 increases performance.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05"
     ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
   },
   "ConVars/tv_enable_delta_frames": {
     "subsystem": "Networking / interpolation",
@@ -4091,5 +4093,33 @@
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/panorama/styles/hud_event_indicator.css"
     ],
     "test_status": "Static review only. Untested in game: compare damage-number size near and far; if close numbers grew, set it back to true."
+  },
+  "ConVars/panorama_min_comp_layer_cache_cost": {
+    "subsystem": "HUD / UI",
+    "purpose": "Name and upstream comment: minimum cost (size) of a Panorama element before its composition layer is cached; 0 caches everything. The dump gives no help text; registered default 4096, flags defensive developmentonly hidden.",
+    "rationale": "Added by OptimizationLock 3.8; both configs take it with the 3.8 sync at the owner's request (stable first, experimental the same day).",
+    "tradeoffs": "Upstream reports roughly 300 MB more VRAM. More caching could reduce HUD repaint work, or add memory pressure; neither is measured here.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; low for declared purpose and applied runtime effect",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/cl_generate_postdataupdatepreserved": {
+    "subsystem": "Networking / interpolation",
+    "purpose": "Valve help: whether PostDataUpdatePreserved callbacks run for entities that had no changes but are still in the PVS. Default true, requested false.",
+    "rationale": "Added by OptimizationLock 3.8; both configs take it with the 3.8 sync at the owner's request (stable first, experimental the same day).",
+    "tradeoffs": "Skipping callbacks for unchanged entities may save client CPU; if any client logic relies on those callbacks, state could update late. Both the saving and any side effect are unverified.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
   }
 }

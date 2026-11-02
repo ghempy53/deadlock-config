@@ -15,11 +15,11 @@
     },
     "upstream-README.md": {
       "sha256": "d98a81b5ccf6353db22e124aeebeefd6711791dbd5166cdf40a2efbb85c3dc6a",
-      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/cbb70417d7585d65097e96984e05bac52e2fae06/README.md"
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/69a665c27524040072e66f7b7b4afdc57c6b320e/README.md"
     },
     "upstream-gameinfo.gi": {
-      "sha256": "c14c40e08ce60c9b73cfe18b15cc632edbe68f8512ceaefd4bcd7ede61e52a0f",
-      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/cbb70417d7585d65097e96984e05bac52e2fae06/Sqooky%27s%20.gi/gameinfo.gi"
+      "sha256": "635b2c8caca2cee617ca85ab4764168c868d7be92f6cd5220c4e75be88229dab",
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi"
     }
   },
   "historical_provenance": {
@@ -186,9 +186,9 @@
     "stable-config/v1.4/gameinfo.gi": "3fb7a0c6ee8d2cd3daee851780fda0afd8e80076f99538e31e4787317b790141"
   },
   "previous_valve_commit": "a94d8b455203f12b176de75a5598dd8e6e8a94d4",
-  "refresh_note": "2026-10-27: upstream repinned to OptimizationLock 3.7.1 hotfix (cbb7041) for the stable sync. Valve data keeps the build 6814 capture: build 6821 (GameTracking d251cf9d9a796061c90f58724230b7e17b97121b, source revision 11170534) has a hash-identical dump, stock gameinfo and inspected string tables; steam.inf changed.",
-  "repository_commit": "7231a9e781584298b49560f01801cbfd4b52924f",
-  "research_date": "2026-10-27",
+  "refresh_note": "2026-11-02: upstream repinned to OptimizationLock main 69a665c for the stable 3.8 sync (3.8 introduced at 01992b4ddd1b0dd2ff493770da2246f1e46dac05; 69a665c only adds media/ted.png, gameinfo.gi byte-identical). Valve data keeps the build 6814 capture: build 6841 (GameTracking e7cb6805c7925c119bd4781789528543f59b28bd, source revision 11195544) has a hash-identical stock gameinfo; its dump adds 14 ConVars and changes no default, range or flag of any name either config uses; steam.inf changed.",
+  "repository_commit": "aca0d3186b16c50cf4a850d206a98e941d6c6eb3",
+  "research_date": "2026-11-02",
   "source_revision": "11160503",
   "supplementary_evidence": {
     "engine2_strings.txt": {
@@ -236,7 +236,7 @@
       "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/worldrenderer_strings.txt"
     }
   },
-  "upstream_commit": "cbb70417d7585d65097e96984e05bac52e2fae06",
+  "upstream_commit": "69a665c27524040072e66f7b7b4afdc57c6b320e",
   "valve_commit": "e95b323b88d48c3fc4d80066ee603fb75060b248",
   "valve_provenance": "SteamTracking is a third-party mirror of captured Valve files and console help, not Valve publication or source code."
 }
