@@ -542,5 +542,34 @@ UPSTREAM SYNC CHECK (2026-10-30, OptimizationLock main @ 4108842)
   capture. The reference keeps upstream pin cbb7041 (same gameinfo bytes). Neither config changed.
   Line numbers unchanged.
 
+STABLE: OPTIMIZATIONLOCK 3.8 SYNC (2026-11-02, OptimizationLock main @ 69a665c)
+  stable-config/gameinfo.gi rebuilt from OptimizationLock 3.8 (introduced at 01992b4; main 69a665c only adds an
+  image, gameinfo.gi SHA-256 635b2c8c...) by re-applying the owner delta from 3.7.1 hotfix, at the owner's request to
+  sync with upstream without touching personal settings. compare.py against upstream 3.8 shows only the owner
+  settings in docs/CONFIGS.md: fps_max and fps_max_ui 0, Steam Input false on both lines, mip bias 1, texture pool
+  6400, r_aspectratio 2.54, r_particle_min_timestep and the texture resolution cap commented out, and the ten section
+  3.1 HUD lines. Engine sections equal upstream 3.8. New stable SHA-256 8c43fccb5c08c9ea868a74be22a68fc200acc28d4df01d270beae8cd4088b478.
+  Adopted from upstream (stable old -> new):
+    r_farz, r_mapextents                   7000 -> 6800   nearer far clip; distant pop-in possible sooner
+    thread_pool_option                     2 -> 4         upstream comment: GlobalThreadPoolMode auto_threads
+    debug_draw_enable                      false -> true  the registered default
+    panorama_min_comp_layer_cache_cost     new 0          cache every HUD layer; upstream reports about +300 MB VRAM
+    cl_generate_postdataupdatepreserved    new false      skip callbacks for unchanged entities in the PVS
+    r_light_sensitivity_mode               true removed   archived per-user ConVar; the saved or menu value applies
+    r_muzzleflashbrightness                0.01 removed   registered 0.4, so muzzle flashes may be brighter
+    r_smooth_morph_normals, r_ssao_blur    0 -> false     same boolean, respelled
+    Engine2/DefensiveConCommands           1 -> 0        stock is 1; no upstream rationale; consumer unresolved
+    RenderSystem/MinDXLevel                new 80         consumer unresolved; string tables say DXLevel under 110 is unsupported
+  plus the audio-block reorder (no value change), RenderSystem realignment and upstream comment and version text.
+  Skipped, as in every stable sync: credit, donor and link comments, and two joke comments after the closing brace.
+  Evidence: every changed ConVar resolves with the same default, range and flags in the pinned dump (e95b323, build
+  6814) and in build 6841 (e7cb680); none is gameinfo_cannot_override. check.py 0 errors; convars.py audit errors
+  unchanged at 19, with 26 new warnings from upstream placeholder def tags; stock_diff now also flags Engine2, so 5 of
+  the 7 historically guarded sections differ from stock (was 4). Untested in game: connect to a match first (if it
+  fails, set DefensiveConCommands back to 1, then remove MinDXLevel); then check distant pop-in, HUD responsiveness and
+  VRAM, muzzle-flash brightness and the light-sensitivity menu option. Experimental is unchanged (still 3.7.1-based),
+  so the two files now differ. Stable's line numbers shift throughout.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

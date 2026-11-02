@@ -172,12 +172,14 @@
     "confidence": "Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L158",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L337"
+      "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/engine2_strings.txt"
     ],
-    "purpose": "Engine initialization metadata. The name indicates the requested capability/policy, but its exact current-build consumer and performance effect are undocumented.",
-    "rationale": "Retains the pinned stock gameinfo assignment. No repository-specific optimization rationale is documented or needed for retaining it.",
-    "test_status": "Static source comparison only; no in-game or tool-build test performed in this audit.",
-    "tradeoffs": "No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested."
+    "purpose": "Engine initialization metadata. The name indicates a defensive console-command policy, but its exact current-build consumer and performance effect are undocumented; the exact key string is absent from the inspected engine2, materialsystem2 and rendersystem string tables, so the consumer is unresolved rather than proven absent.",
+    "rationale": "Valve stock sets 1. OptimizationLock 3.8 changed it to 0 without a comment or stated rationale; stable takes 0 with the 3.8 sync at the owner's request, experimental keeps stock 1. Many active ConVars in both files already carry the dump's defensive flag while this was 1, so this audit does not assume the key gates those assignments.",
+    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result.",
+    "tradeoffs": "No measured FPS, memory or latency benefit is established. Engine2 is one of the historically guarded sections, so stable now differs from stock there as well; matchmaking acceptance of the changed section is untested. If stable fails to connect or behaves oddly at startup, restoring 1 is the first revert to try."
   },
   "Engine2/DisableLoadingPlaque": {
     "applicability": "Engine initialization; client/server or renderer-specific applicability remains undocumented unless explicitly stated above.",
