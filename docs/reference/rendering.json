@@ -3147,9 +3147,10 @@
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt",
+      "https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-TEST-2026-11-03.md"
     ],
-    "test_status": "Static comparison and captured-string review only. No current-build engine acceptance, gameplay, matchmaking, or performance test was run."
+    "test_status": "Owner log 2026-11-03 (build 6842, DX11): the index-buffer pool started at 134.22 MB, which is 128 MiB (stock 32 would be 33.55 MB), so the value is applied; it doubled once to 268.44 MB when the hideout loaded every hero model. No performance comparison was made."
   },
   "RenderSystem/LowLatency": {
     "purpose": "Startup rendering-system low-latency key also present in stock. Its relationship with r_low_latency and device-specific modes is not explained by the gameinfo file.",
@@ -4230,15 +4231,16 @@
   "RenderSystem/MinDXLevel": {
     "purpose": "Render-system initialization key whose name suggests a minimum DirectX feature level; the gameinfo consumer is unresolved. The inspected DX11 and Vulkan render-system string tables contain setting.MinDXLevel (a device-support key) and a message that DXLevel below 110 is unsupported, but not this bare key.",
     "rationale": "Added by OptimizationLock 3.8 with an empty comment and no stated rationale; both configs take it with the 3.8 sync at the owner's request. Valve stock does not set it.",
-    "tradeoffs": "80 is below the supported DXLevel floor named in the string tables, so if the key is read it plausibly has no effect on a DX11-class GPU; that is inference. It adds a RenderSystem difference from stock, a historically guarded section; matchmaking acceptance is untested. No performance benefit is established.",
+    "tradeoffs": "80 is below the supported DXLevel floor named in the string tables, so if the key is read it plausibly has no effect on a DX11-class GPU; that is inference. It adds a RenderSystem difference from stock, a historically guarded section; the owner's 2026-11-03 Street Brawl connected with it, but regular 6v6 acceptance is untested. No performance benefit is established.",
     "applicability": "Engine initialization; renderer-specific consumers are unresolved.",
     "confidence": "High for the written assignment and absence from stock; low for consumer and runtime effect",
     "evidence": [
       "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05",
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt",
+      "https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-TEST-2026-11-03.md"
     ],
-    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
+    "test_status": "Owner-reported 2026-11-03 (build 6842): with this value the game ran in the hideout and Sandbox and through one full matchmade Street Brawl, so matchmaking accepted it for that mode; a regular 6v6 match is untested and no individual effect was measured. Otherwise static file, dump and upstream review only."
   }
 }

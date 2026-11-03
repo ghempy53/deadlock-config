@@ -596,5 +596,17 @@ EXPERIMENTAL: OPTIMIZATIONLOCK 3.8 SYNC (2026-11-02, OptimizationLock main @ 69a
   then remove MinDXLevel.
   Lines renumbered throughout (whole file replaced).
 
+OWNER TEST: 3.8 IN HIDEOUT, SANDBOX AND STREET BRAWL (2026-11-03)
+  Documentation only; neither config changed. The owner ran the 3.8 file (both configs identical, SHA-256 8c43fccb...)
+  on build 6842, DX11, uncapped, and pasted the console output. Owner-reported results: the hideout, Sandbox and one
+  full matchmade Street Brawl ran normally, so matchmaking accepted DefensiveConCommands 0 and MinDXLevel 80 for that
+  mode (regular 6v6 untested). The log shows the index-buffer pool starting at 128 MiB, so IndexBufferPoolSizeMB 128
+  is applied. Street Brawl averaged about 580 FPS from the game's own frame counts; match 1% lows were not captured.
+  Present-wait stalls and repredict bursts were alt-tabbing (owner-confirmed); tick corrections occurred only at
+  respawns. Build 6842 (GameTracking fc53d8b) has the same stock gameinfo as the 6814 pin and the same dump as 6841,
+  so the pin stands. Still untested: 6v6, match 1% lows, and visual checks of the 3.8 changes and owner settings.
+  Details: docs/research/OWNER-TEST-2026-11-03.md.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

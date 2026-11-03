@@ -174,12 +174,13 @@
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L158",
       "https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi",
       "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/engine2_strings.txt"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/engine2_strings.txt",
+      "https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-TEST-2026-11-03.md"
     ],
     "purpose": "Engine initialization metadata. The name indicates a defensive console-command policy, but its exact current-build consumer and performance effect are undocumented; the exact key string is absent from the inspected engine2, materialsystem2 and rendersystem string tables, so the consumer is unresolved rather than proven absent.",
     "rationale": "Valve stock sets 1. OptimizationLock 3.8 changed it to 0 without a comment or stated rationale; both configs take 0 with the 3.8 sync at the owner's request. Many active ConVars in both files already carry the dump's defensive flag while this was 1, so this audit does not assume the key gates those assignments.",
-    "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result.",
-    "tradeoffs": "No measured FPS, memory or latency benefit is established. Engine2 is one of the historically guarded sections, so both configs now differ from stock there as well; matchmaking acceptance of the changed section is untested. If a config fails to connect or behaves oddly at startup, restoring 1 is the first revert to try."
+    "test_status": "Owner-reported 2026-11-03 (build 6842): with this value the game ran in the hideout and Sandbox and through one full matchmade Street Brawl, so matchmaking accepted it for that mode; a regular 6v6 match is untested and no individual effect was measured. Otherwise static file, dump and upstream review only.",
+    "tradeoffs": "No measured FPS, memory or latency benefit is established. Engine2 is one of the historically guarded sections, so both configs now differ from stock there as well; the owner's 2026-11-03 Street Brawl connected with it, but regular 6v6 acceptance is untested. If a config fails to connect or behaves oddly at startup, restoring 1 is the first revert to try."
   },
   "Engine2/DisableLoadingPlaque": {
     "applicability": "Engine initialization; client/server or renderer-specific applicability remains undocumented unless explicitly stated above.",

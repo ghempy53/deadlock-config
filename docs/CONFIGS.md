@@ -27,11 +27,16 @@ assignments and upstream values, and records uncertainty rather than treating an
   in the [changelog](CHANGES.txt) and git history.
 - **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
   [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
-  Matching `PGIVersion` is observed; acceptance by a current game/server was not tested. Build 6821
+  Matching `PGIVersion` is observed. Build 6821
   ([GameTracking d251cf9](https://github.com/SteamTracking/GameTracking-Deadlock/tree/d251cf9d9a796061c90f58724230b7e17b97121b),
   October 26) has a byte-identical dump, stock file and inspected DLL string tables. Build 6841
   ([GameTracking e7cb680](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e7cb6805c7925c119bd4781789528543f59b28bd),
-  November 2) has the same stock file; its dump adds 14 ConVars and changes nothing either config sets, so the pin stands.
+  November 2) has the same stock file; its dump adds 14 ConVars and changes nothing either config sets. Build 6842
+  ([GameTracking fc53d8b](https://github.com/SteamTracking/GameTracking-Deadlock/tree/fc53d8b267db6949b03d3fdb975dff4c9028f77b),
+  November 2) has the same stock file and the same dump as 6841, so the pin stands.
+- **Owner test (2026-11-03):** on build 6842 the 3.8 file ran in the hideout and Sandbox and through one full
+  matchmade Street Brawl, so matchmaking accepted the 3.8 engine edits for that mode; a regular 6v6 match is untested.
+  Owner-reported, one session; details in [research/OWNER-TEST-2026-11-03.md](research/OWNER-TEST-2026-11-03.md).
 
 ## Owner decisions retained in the current files
 

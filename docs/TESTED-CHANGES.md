@@ -29,6 +29,18 @@ Section 4 is settled: the owner accepts every item there as v1.2 has it. The 202
   heal particles jagged at uncapped FPS. Ruled out along the way: HDR on/off, `r_particle_max_texture_layers` (no cap
   looked worse), the six extra Particles section keys, and the other 8 simulation and timing lines.
 
+## 0c. Owner session on the 3.8 configs (2026-11-03)
+
+Details and evidence: [research/OWNER-TEST-2026-11-03.md](research/OWNER-TEST-2026-11-03.md). Owner-reported, one
+session on build 6842, DX11, uncapped:
+- Hideout, Sandbox and one full matchmade Street Brawl ran normally. Matchmaking accepted the 3.8 engine edits
+  (`DefensiveConCommands 0`, `MinDXLevel 80`) for Street Brawl; a regular 6v6 match is untested.
+- The log confirms `IndexBufferPoolSizeMB 128` is applied (pool starts at 128 MiB).
+- Street Brawl averaged about 580 FPS by the game's frame counts; 1% lows for the match were not captured.
+- Stalls in the log were alt-tabbing (owner-confirmed). Tick corrections occurred only at respawns.
+- No feedback yet on pop-in at 6800, muzzle flashes, the light-sensitivity option, aspect ratio 2.54, mip bias 1 or
+  the HUD readability block.
+
 ## 1. Historical owner reports: adopted at the time
 
 | Change | Value | Evidence | In v1.2 |
