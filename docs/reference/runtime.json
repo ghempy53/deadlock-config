@@ -968,15 +968,16 @@
   "ConVars/citadel_orb_debug_draw_state": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Draws orb state; Valve describes the nonzero value as how long the state lingers after the orb expires.",
-    "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "The active 1 requests server-side debug drawing, not removal of work. Actual local/online visibility and duration units are unverified.",
+    "rationale": "Inherited 1 from OptimizationLock (no stated rationale). Disabled in both configs on 2026-11-03 at the owner's request after it drew red and green debug circles on soul orbs in the hideout soul-confirm practice; the disabled line keeps the inherited value for provenance. Upstream pulls keep it disabled.",
+    "tradeoffs": "1 requests server-side debug drawing, not removal of work, so it adds visual clutter where it acts. It most likely became visible once the 3.8 sync set debug_draw_enable back to true; that link is inference.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-TEST-2026-11-03.md"
     ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+    "test_status": "Owner-reported 2026-11-03 (build 6842): with 1 active, debug circles followed soul orbs in the hideout soul-confirm practice and did not appear in a Street Brawl on Valve's server. The disabled state is untested in game."
   },
   "ConVars/citadel_per_weapon_per_surface_impact_effects": {
     "subsystem": "Runtime / gameplay presentation",

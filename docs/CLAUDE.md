@@ -16,7 +16,8 @@ maintenance regardless of assistant. The owner's current request overrides workf
   assert a measurement without a capture.
 - Never recommend FPS caps or scaling/DLSS changes; those preferences are settled.
 - Preserve `fps_max 0`, `fps_max_ui 0`, Steam Input off, mip bias 1 (October 27; was 2), texture pool 6400, bilinear filtering and disabled
-  resolution-cap override, and the section 3.1 HUD readability block (health-bar scale and height, damage-number offsets, emphasis and health-bar-scale following off) on every upstream pull.
+  resolution-cap override, the section 3.1 HUD readability block (health-bar scale and height, damage-number offsets, emphasis and health-bar-scale following off)
+  and the disabled soul-orb debug drawing (`citadel_orb_debug_draw_state`, November 3) on every upstream pull.
   Temporary full-resolution/8x texture experiments were superseded October 17.
 - Owner-tested November 3 on build 6842 ([runtime probe](research/OWNER-PROBE-2026-11-03.md)): a value saved in
   `machine_convars.vcfg` beats this file for `archive` ConVars, so uncapped needs the launch options

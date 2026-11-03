@@ -1092,7 +1092,7 @@ GameInfo
         citadel_fibonnaci_sphere_trace_los_max    "80"    //
         citadel_hud_objective_health_idle_timeout "0"     //
         citadel_minimap_overlap_scan_distance     "0"     //
-        citadel_orb_debug_draw_state              "1"     //
+        // citadel_orb_debug_draw_state           "1"     // Off: drew red and green debug circles on soul orbs in local games (owner, 2026-11-03). Valve default -1.
         citadel_player_outline_enemies            "false" //
         citadel_portrait_unit_ag2_enable          "false" //
         citadel_use_pvs_for_players               "true"  //

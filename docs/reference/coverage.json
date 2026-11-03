@@ -1,17 +1,17 @@
 {
   "configs_sha256": {
-    "experimental": "8c43fccb5c08c9ea868a74be22a68fc200acc28d4df01d270beae8cd4088b478",
-    "stable": "8c43fccb5c08c9ea868a74be22a68fc200acc28d4df01d270beae8cd4088b478"
+    "experimental": "f2bf25cb1e4e35d67ee7bf8661475dfb3e8623c5f3e138f2315acda9e148cf55",
+    "stable": "f2bf25cb1e4e35d67ee7bf8661475dfb3e8623c5f3e138f2315acda9e148cf55"
   },
   "counts": {
     "audio": 60,
     "engine": 327,
     "experimental": {
-      "active_direct_convars": 447,
-      "active_occurrences": 790,
-      "active_scalar_occurrences": 789,
-      "disabled_direct_convars": 114,
-      "disabled_occurrences": 123,
+      "active_direct_convars": 446,
+      "active_occurrences": 789,
+      "active_scalar_occurrences": 788,
+      "disabled_direct_convars": 115,
+      "disabled_occurrences": 124,
       "empty_sections": 1,
       "sections": 56,
       "unique_paths": 879
@@ -20,11 +20,11 @@
     "rendering": 227,
     "simulation": 153,
     "stable": {
-      "active_direct_convars": 447,
-      "active_occurrences": 790,
-      "active_scalar_occurrences": 789,
-      "disabled_direct_convars": 114,
-      "disabled_occurrences": 123,
+      "active_direct_convars": 446,
+      "active_occurrences": 789,
+      "active_scalar_occurrences": 788,
+      "disabled_direct_convars": 115,
+      "disabled_occurrences": 124,
       "empty_sections": 1,
       "sections": 56,
       "unique_paths": 879
@@ -5817,7 +5817,7 @@
       "variant": "stable"
     },
     {
-      "active": true,
+      "active": false,
       "kind": "scalar",
       "line": 1095,
       "path": "ConVars/citadel_orb_debug_draw_state",
@@ -13121,7 +13121,7 @@
       "variant": "experimental"
     },
     {
-      "active": true,
+      "active": false,
       "kind": "scalar",
       "line": 1095,
       "path": "ConVars/citadel_orb_debug_draw_state",

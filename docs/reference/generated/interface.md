@@ -1534,8 +1534,8 @@ Draws orb state; Valve describes the nonzero value as how long the state lingers
 
 | Source | Assignments in source order |
 | --- | --- |
-| Stable | `1` (active, [L1095](../../../stable-config/gameinfo.gi#L1095)) |
-| Experimental | `1` (active, [L1095](../../../experimental-config/gameinfo.gi#L1095)) |
+| Stable | `1` (disabled, [L1095](../../../stable-config/gameinfo.gi#L1095)) |
+| Experimental | `1` (disabled, [L1095](../../../experimental-config/gameinfo.gi#L1095)) |
 | Stock gameinfo override | Not assigned |
 | OptimizationLock pinned upstream | `1` (active, [L1258](https://github.com/Sqooky/OptimizationLock/blob/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi#L1258)) |
 
@@ -1545,15 +1545,15 @@ Draws orb state; Valve describes the nonzero value as how long the state lingers
 
 **Type, units, special values:** this dump does not declare a formal type. Numeric/boolean spelling is not a type guarantee. Use only units/sentinel meanings explicitly stated in the help or annotation; other meanings and out-of-range behavior remain unverified.
 
-**Why retained / provenance:** Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.
+**Why retained / provenance:** Inherited 1 from OptimizationLock (no stated rationale). Disabled in both configs on 2026-11-03 at the owner's request after it drew red and green debug circles on soul orbs in the hideout soul-confirm practice; the disabled line keeps the inherited value for provenance. Upstream pulls keep it disabled.
 
-**Benefits and trade-offs:** The active 1 requests server-side debug drawing, not removal of work. Actual local/online visibility and duration units are unverified.
+**Benefits and trade-offs:** 1 requests server-side debug drawing, not removal of work, so it adds visual clutter where it acts. It most likely became visible once the 3.8 sync set debug_draw_enable back to true; that link is inference.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Registered in the game/server module; a client file is not evidence of changing an online server. Local/listen-server behavior needs checking. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
-**Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
+**Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Owner-reported 2026-11-03 (build 6842): with 1 active, debug circles followed soul orbs in the hideout soul-confirm practice and did not appear in a Street Brawl on Valve's server. The disabled state is untested in game.
 
-**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi).
+**Sources:** [evidence 1](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt); [evidence 2](https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi); [evidence 3](https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-TEST-2026-11-03.md).
 
 <a id="setting-convars-citadel_per_weapon_per_surface_impact_effects"></a>
 ## `ConVars/citadel_per_weapon_per_surface_impact_effects`
