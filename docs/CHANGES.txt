@@ -608,5 +608,21 @@ OWNER TEST: 3.8 IN HIDEOUT, SANDBOX AND STREET BRAWL (2026-11-03)
   Details: docs/research/OWNER-TEST-2026-11-03.md.
   Line numbers unchanged.
 
+OWNER RUNTIME PROBE: SAVED VALUES VERSUS GAMEINFO (2026-11-03)
+  Documentation and tooling only; neither config changed (both still SHA-256 8c43fccb...). The owner queried 11
+  ConVars with exec probe in the Hideout (local server) on build 6842 and read machine_convars.vcfg before and after.
+  Owner-tested results: the archived fps_max, fps_max_ui, cam_ideallag, cl_ragdoll_limit and snd_mixahead read the
+  saved values (1000, 1000, 4, 20, 0.001), not this file, and the game writes them back on exit. The launch options
+  +fps_max 0 +fps_max_ui 0 gave 0 / 0 and the game then saved 0; the menu sliders stop at 1000. Two
+  gameinfo_cannot_override lines (r_texture_lod_scale 8, sc_disable_spotlight_shadows 1) read Valve's defaults. Two
+  plain lines and two cheat lines (r_farz 6800, r_size_cull_threshold_shadow 2.4) applied locally; online untested.
+  Correction to the entry above: that session was capped at 1000 by the saved value, not uncapped, and its Hideout
+  1380 FPS figure is not a presented frame rate. Task Manager shows 16 logical processors, so SMT is on (earlier
+  records said off). Tooling: convars.py audit warns on archived assignments that differ from Valve's default, and
+  the generated archive, cheat and gameinfo_cannot_override caveats cite this probe. Reproduces issue #89 on this
+  file. Still untested: a profile with nothing saved, online values, and the archived and flagged lines not queried.
+  Details: docs/research/OWNER-PROBE-2026-11-03.md.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

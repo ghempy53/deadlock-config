@@ -61,7 +61,9 @@ tail. Nested `rate/min`, `rate/default`, `rate/max` and version/default blocks a
 structural comparisons and the complete reference, not invented as ConVar names.
 
 `gameinfo_cannot_override` and values outside declared ranges are errors. Absent names, default-tag mismatches and
-`gamedll`-only registrations are warnings. Absence from one dump does not prove removal; flags do not establish
+`gamedll`-only registrations are warnings. So is an `archive`-flagged active line whose value differs from Valve's
+default: on a profile that has saved that name, the saved value wins (owner-tested 2026-11-03,
+[runtime probe](../docs/research/OWNER-PROBE-2026-11-03.md)). Absence from one dump does not prove removal; flags do not establish
 runtime application. Scope labels describe captured registration. Exit 0 does not certify a config as effective.
 
 Stock comparison reports top-level or historically guarded-section differences as errors, other differences as

@@ -25,6 +25,11 @@ The owner's supported test baseline is **Windows 11, DX11, Reflex On, uncapped F
 option retained by owner choice. Do not remove that option merely because a renderer is described as the default.
 Record launch options with every comparison. Upstream launch-option lists are provenance, not evidence of benefit.
 
+Uncapped FPS also needs `+fps_max 0 +fps_max_ui 0` in the launch options on any profile that has saved a frame
+limit. The configs' `fps_max 0` only sets a default, and a saved value wins (owner-tested 2026-11-03,
+[runtime probe](research/OWNER-PROBE-2026-11-03.md)). The owner's current line is
+`-dx11 -condebug -high -fullscreen -threads 16 +fps_max 0 +fps_max_ui 0`.
+
 The files include some Vulkan-specific settings, but their presence does not verify Vulkan behavior. Older Vulkan
 60 FPS and hitching reports are historical anecdotes, not a current diagnosis or a reason to change renderer. No
 DX11/Vulkan comparison was performed in this audit. Renderer-specific applicability and unknowns are recorded in the
@@ -38,5 +43,9 @@ location. Verify the actual file and its modification time on the tested install
 reproduction; this audit did not inspect a Windows install. Back it up with the config and record menu settings.
 
 Do not comment out `UserSettingsPathID` as a tuning step. The earlier assertion that doing so necessarily forces
-low-violence mode was not supported by the audited sources. The exact load order between saved values, menu changes,
-stock defaults and custom assignments still requires runtime observation.
+low-violence mode was not supported by the audited sources.
+
+The same folder holds `machine_convars.vcfg`, where the game saves `archive` ConVars, including the frame limits.
+The owner's install had both files there on 2026-11-03. For archived ConVars the saved value wins over
+`gameinfo.gi` and is written back on exit (owner-tested). Edit it only with the game closed, and back it up first.
+The order among `video.txt`, menu changes and the other layers still requires runtime observation.

@@ -22,6 +22,7 @@ Start with the [complete setting reference](SETTING-REFERENCE.md) for explanatio
 | --- | --- |
 | [2026-10-22 audit](research/AUDIT-2026-10-22.md) | Corrections, review inventory, source pins, coverage, validation and prioritized open checks |
 | [2026-11-03 owner test](research/OWNER-TEST-2026-11-03.md) | Owner-reported 3.8 session: hideout, Sandbox and one matchmade Street Brawl on build 6842, with log analysis |
+| [2026-11-03 runtime probe](research/OWNER-PROBE-2026-11-03.md) | Owner console queries: saved archived values beat gameinfo, blocked lines ignored, uncapped needs launch options |
 | [Rendering review](research/AUDIT-RENDERING-2026-10-22.md) | Textures, particles, lighting and engine keys |
 | [Runtime review](research/AUDIT-RUNTIME-2026-10-22.md) | CPU, animation, physics, audio, networking, camera/input/HUD and historical upstream provenance |
 | [Tooling review](research/AUDIT-TOOLING-2026-10-22.md) | Parser/checker defects, installer, operational docs and test results |

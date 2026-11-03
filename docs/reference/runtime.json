@@ -3717,7 +3717,7 @@
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Selects an engine thread-pool option; Valve’s help does not define the numeric modes.",
     "rationale": "OptimizationLock 3.8 changed the inherited 2 to 4; both configs take 4 with the 3.8 sync. The upstream comment maps 4 to GlobalThreadPoolMode auto_threads in boot.vcfg (2 removed the key) while still saying the value is -1; treat that mapping as upstream observation, not Valve documentation.",
-    "tradeoffs": "Thread count, affinity, scheduler behavior, and benefit on the owner's 8-thread CPU (SMT off) are unresolved. No reason to claim that 4 increases performance.",
+    "tradeoffs": "Thread count, affinity, scheduler behavior, and benefit on the owner's 8-core, 16-thread CPU (SMT on; -threads 16 launch option) are unresolved. No reason to claim that 4 increases performance.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [

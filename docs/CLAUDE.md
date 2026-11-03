@@ -11,12 +11,17 @@ maintenance regardless of assistant. The owner's current request overrides workf
   [CONFIGS.md](CONFIGS.md) is the current owner-decision and variant record.
 - Frozen `stable-config/v*/gameinfo.gi` and `docs/archive/` are immutable historical evidence. Never edit them.
   Research notes dated October 6/10 and the comparison CSV are historical, not current rules or defaults.
-- Hardware/intent: Ryzen 7 9800X3D (owner reports SMT off), RTX 5070 12 GB, 1440p/270 Hz, **DX11**, Reflex On,
-  uncapped FPS. CPU-bound fight lows are a working owner diagnosis; do not assert a measurement without a capture.
+- Hardware/intent: Ryzen 7 9800X3D (SMT on: 16 logical processors, corrected November 3), RTX 5070 12 GB,
+  1440p/270 Hz, **DX11**, Reflex On, uncapped FPS. CPU-bound fight lows are a working owner diagnosis; do not
+  assert a measurement without a capture.
 - Never recommend FPS caps or scaling/DLSS changes; those preferences are settled.
 - Preserve `fps_max 0`, `fps_max_ui 0`, Steam Input off, mip bias 1 (October 27; was 2), texture pool 6400, bilinear filtering and disabled
   resolution-cap override, and the section 3.1 HUD readability block (health-bar scale and height, damage-number offsets, emphasis and health-bar-scale following off) on every upstream pull.
   Temporary full-resolution/8x texture experiments were superseded October 17.
+- Owner-tested November 3 on build 6842 ([runtime probe](research/OWNER-PROBE-2026-11-03.md)): a value saved in
+  `machine_convars.vcfg` beats this file for `archive` ConVars, so uncapped needs the launch options
+  `+fps_max 0 +fps_max_ui 0`, now in the owner's launch line. Two `gameinfo_cannot_override` lines read Valve's
+  defaults. Plain and `cheat` lines applied in a local session; online values are untested.
 - Keep `r_particle_min_timestep` disabled: the owner reported a successful fire-particle bisect October 17. The
   audit has not reproduced it or measured CPU cost. Both configs set `r_aspectratio 2.54` and keep it on every upstream
   pull: October 27 the owner deleted the FOV mod and asked for the 110 FOV equivalent (slider at 90; value =

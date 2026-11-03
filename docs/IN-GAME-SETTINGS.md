@@ -3,6 +3,24 @@
 Current owner intent: **DX11, uncapped FPS, Reflex On**, 1440p/270 Hz; retain existing scaling preferences.
 These are owner choices, not newly tested recommendations. [CONFIGS.md](CONFIGS.md) records the active files.
 
+## Saved values beat this file for archived ConVars
+
+Owner-tested 2026-11-03 on build 6842 ([runtime probe](research/OWNER-PROBE-2026-11-03.md)): for a ConVar flagged
+`archive`, the value saved in `Steam\userdata\<id>\1422450\local\cfg\machine_convars.vcfg` wins over `gameinfo.gi`,
+and the game writes it back on exit. Both configs request 21 archived names, 18 of them non-default.
+
+- **Uncapped FPS:** add `+fps_max 0 +fps_max_ui 0` to the Steam launch options. Without them the owner's profile ran
+  at its saved 1000 cap. The menu sliders run from 60 to 1000 and cannot express 0, so moving one writes a cap again;
+  Valve's tooltip says an out-of-range value disables the slider. After one run with the launch options the game
+  saved 0.
+- The inherited archived tweaks (camera lag, ragdoll limit, boneflex, violence, tracers, `snd_mixahead`, `dsp_volume`,
+  `con_enable` and others) do nothing on a profile that has saved those names. They stay in the files because a
+  profile with nothing saved was not tested. Setting one on purpose through a launch option or the console is an
+  owner choice outside these files.
+- To read a live value, put one name per line in `game/citadel/cfg/probe.cfg`, run `exec probe` in the console and
+  read the `[Console] name = value` lines. `developmentonly` names, such as mip bias, texture pool and aspect ratio,
+  cannot be read this way.
+
 ## Video and textures
 
 Both configs request mip bias **1** (October 27, one step up from 2), texture pool **6400 MB**, bilinear

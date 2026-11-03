@@ -6,6 +6,12 @@ the maintenance session. Stable and experimental were byte-identical (SHA-256 `8
 both files. Nothing here was reproduced by the audit; it is one session, not a benchmark. Steam IDs, player names,
 match IDs and relay locations from the log are deliberately left out.
 
+> **Correction (2026-11-03, later the same day):** this session was capped at **1000 FPS**, not uncapped. The
+> frame-limit row below came from the file, not a runtime read. The owner's saved `machine_convars.vcfg` held
+> `fps_max 1000` when this session exited, and a console probe without a launch option read 1000
+> ([owner runtime probe](OWNER-PROBE-2026-11-03.md)). The Hideout average of 1380 FPS is therefore not a presented
+> frame rate; re-check that derivation before using it. The other results stand.
+
 ## Setup
 
 | Item | Value |
