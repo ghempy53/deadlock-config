@@ -69,7 +69,8 @@ A screenshot from the same day showed red and green circles following soul orbs 
 practice; the owner saw them only there, not in the Street Brawl. The cause is `citadel_orb_debug_draw_state 1`
 (Valve: set to non-zero to draw state of orb), a server-side line from OptimizationLock, so it acts only on servers the
 owner's PC runs. It most likely became visible when 3.8 set `debug_draw_enable` back to its default true; that link is
-inference. The line was commented out in both configs the same day; the fix is untested in game.
+inference. The line was commented out in both configs the same day ([PR #103](https://github.com/ghempy53/deadlock-config/pull/103)). After
+installing that stable file, the owner confirmed the circles are gone from the soul-confirm practice.
 
 ## Not covered
 
