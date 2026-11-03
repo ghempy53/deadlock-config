@@ -977,7 +977,7 @@
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
       "https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-TEST-2026-11-03.md"
     ],
-    "test_status": "Owner-reported 2026-11-03 (build 6842): with 1 active, debug circles followed soul orbs in the hideout soul-confirm practice and did not appear in a Street Brawl on Valve's server. The disabled state is untested in game."
+    "test_status": "Owner-reported 2026-11-03 (build 6842): with 1 active, debug circles followed soul orbs in the hideout soul-confirm practice and did not appear in a Street Brawl on Valve's server. With the line disabled (stable installed the same day), the owner confirmed the circles are gone."
   },
   "ConVars/citadel_per_weapon_per_surface_impact_effects": {
     "subsystem": "Runtime / gameplay presentation",

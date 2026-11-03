@@ -42,7 +42,8 @@ session on build 6842, DX11, uncapped:
   the HUD readability block.
 - Correction the same day: that session was capped at 1000 FPS by the saved value, not uncapped (see 0d).
 - Red and green debug circles tracked soul orbs in the hideout soul-confirm practice (local server only). Cause:
-  `citadel_orb_debug_draw_state 1`, inherited from OptimizationLock; turned off in both configs the same day.
+  `citadel_orb_debug_draw_state 1`, inherited from OptimizationLock; turned off in both configs the same day. The
+  owner confirmed the circles are gone after installing that stable file.
 
 ## 0d. Owner runtime probe: saved values versus gameinfo (2026-11-03)
 

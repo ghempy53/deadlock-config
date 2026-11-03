@@ -636,5 +636,12 @@ SOUL-ORB DEBUG DRAWING OFF (2026-11-03)
   pulls keep the line disabled. Untested in game: the soul-confirm practice should show no circles.
   Line numbers unchanged.
 
+SOUL-ORB DEBUG DRAWING OFF: OWNER-CONFIRMED (2026-11-03)
+  Documentation only; neither config changed (both still SHA-256 f2bf25cb...). After installing the stable file from
+  the entry above (PR #103), the owner confirmed that the red and green debug circles are gone from the hideout
+  soul-confirm practice, so citadel_orb_debug_draw_state 1 was the cause. CONFIGS.md, the test history, the session
+  note and the reference annotation now record the result.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.
