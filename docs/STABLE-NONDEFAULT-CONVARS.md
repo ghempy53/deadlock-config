@@ -1,6 +1,6 @@
 # Stable config: convars changed from Valve's defaults
 
-Generated 2026-11-02 by `python3 utils/nondefaults.py` from [`stable-config/gameinfo.gi`](../stable-config/gameinfo.gi)
+Generated 2026-11-03 by `python3 utils/nondefaults.py` from [`stable-config/gameinfo.gi`](../stable-config/gameinfo.gi)
 (upstream comparison: OptimizationLock `69a665c27524040072e66f7b7b4afdc57c6b320e`; adoption history and owner edits are in [CONFIGS.md](CONFIGS.md)).
 Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248), build 6814 (`DumpSource2/convars.txt` and
 `game/citadel/gameinfo.gi`). Regenerate after every upstream sync or game patch; don't edit by hand.
@@ -17,7 +17,7 @@ Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/G
   This generated report is an assignment inventory, not a list of effective changes.
 - **Line** is the line in `stable-config/gameinfo.gi`; **Group** is the nearest section header above it.
 
-## Nondefault custom assignments (323)
+## Nondefault custom assignments (322)
 
 | Line | Convar | Stable | Valve default | Group | Flags |
 | ---: | --- | --- | --- | --- | --- |
@@ -253,7 +253,6 @@ Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/G
 | 1092 | `citadel_fibonnaci_sphere_trace_los_max` | `80` | `160` | citadel_ Commands | replicated, developmentonly |
 | 1093 | `citadel_hud_objective_health_idle_timeout` | `0` | `7` | citadel_ Commands | developmentonly |
 | 1094 | `citadel_minimap_overlap_scan_distance` | `0` | `12.5` | citadel_ Commands |  |
-| 1095 | `citadel_orb_debug_draw_state` | `1` | `-1` | citadel_ Commands | developmentonly, gamedll-only registration |
 | 1096 | `citadel_player_outline_enemies` | `false` | `true` | citadel_ Commands | developmentonly, gameinfo_cannot_override |
 | 1097 | `citadel_portrait_unit_ag2_enable` | `false` | (not in dump) | citadel_ Commands | absent from captured dump; status unresolved |
 | 1098 | `citadel_use_pvs_for_players` | `true` | `false` | citadel_ Commands | developmentonly, gamedll-only registration |

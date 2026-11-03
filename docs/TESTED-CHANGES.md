@@ -41,6 +41,8 @@ session on build 6842, DX11, uncapped:
 - No feedback yet on pop-in at 6800, muzzle flashes, the light-sensitivity option, aspect ratio 2.54, mip bias 1 or
   the HUD readability block.
 - Correction the same day: that session was capped at 1000 FPS by the saved value, not uncapped (see 0d).
+- Red and green debug circles tracked soul orbs in the hideout soul-confirm practice (local server only). Cause:
+  `citadel_orb_debug_draw_state 1`, inherited from OptimizationLock; turned off in both configs the same day.
 
 ## 0d. Owner runtime probe: saved values versus gameinfo (2026-11-03)
 

@@ -624,5 +624,17 @@ OWNER RUNTIME PROBE: SAVED VALUES VERSUS GAMEINFO (2026-11-03)
   Details: docs/research/OWNER-PROBE-2026-11-03.md.
   Line numbers unchanged.
 
+SOUL-ORB DEBUG DRAWING OFF (2026-11-03)
+  line 1095  citadel_orb_debug_draw_state           "1"  ->  commented out (Valve default -1)
+  Why: the owner saw red and green debug circles tracking soul orbs in the hideout soul-confirm practice and only
+  there, not in the Street Brawl match. Valve's help for this ConVar: set to non-zero to draw state of orb; the
+  value is how long the state lingers after the orb expires. It is registered gamedll developmentonly, so it acts
+  only on servers the owner's PC runs (hideout, Sandbox, bot games), not on Valve's match servers. The line came from
+  OptimizationLock (present since at least v1.3); it most likely became visible when the 3.8 sync set
+  debug_draw_enable back to true, Valve's default (3.7.1 had false). That link is inference. debug_draw_enable stays
+  true as upstream has it. Applied to both configs at the owner's request; they remain byte-identical. Upstream
+  pulls keep the line disabled. Untested in game: the soul-confirm practice should show no circles.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

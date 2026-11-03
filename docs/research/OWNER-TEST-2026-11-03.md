@@ -63,6 +63,14 @@ lowers them. The end-of-match report with 1% lows and the frame-time breakdown w
 | `prediction distance … teleporting` before the match starts | Movement input while the server holds players in place during the intro; stops at `GameInProgress` | None |
 | Voice-rule, missing-resource, texture, animation and localization warnings | Valve content noise, the same with any config | None |
 
+## Follow-up: soul-orb debug drawing
+
+A screenshot from the same day showed red and green circles following soul orbs in the hideout soul-confirm
+practice; the owner saw them only there, not in the Street Brawl. The cause is `citadel_orb_debug_draw_state 1`
+(Valve: set to non-zero to draw state of orb), a server-side line from OptimizationLock, so it acts only on servers the
+owner's PC runs. It most likely became visible when 3.8 set `debug_draw_enable` back to its default true; that link is
+inference. The line was commented out in both configs the same day; the fix is untested in game.
+
 ## Not covered
 
 - A regular 6v6 match, where the owner's diagnosis places CPU-bound fight drops.
