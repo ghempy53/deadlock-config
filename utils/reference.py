@@ -23,6 +23,8 @@ DATA = ROOT / "docs/reference"
 MANIFEST = DATA / "sources.json"
 SNAPSHOT = DATA / "snapshot.json"
 CONFIGS = {k: ROOT / f"{k}-config/gameinfo.gi" for k in ("stable", "experimental")}
+# Owner runtime evidence cited by generated flag caveats; the link is relative to docs/reference/generated/.
+PROBE = "owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)"
 # Deliberately strict: excludes prose, recognizes quoted/unquoted numeric disabled keys.
 DISABLED = re.compile(r'^\s*//\s*([A-Za-z_][\w.]*)\s+(?:"([^"]*)"|([-+]?\d+(?:\.\d+)?|true|false))\s*(?://.*)?$')
 
@@ -150,7 +152,8 @@ def applicability(cv, path, entries):
     if cv:
         flags = set(cv["flags"])
         if "gameinfo_cannot_override" in flags:
-            notes.append("Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar.")
+            notes.append("Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. "
+                         f"Two such lines read Valve's defaults at runtime ({PROBE}).")
         if "replicated" in flags:
             notes.append("Replicated: server authority may replace a local request online; startup assignment does not prove online value.")
         elif "gamedll" in flags and "clientdll" not in flags:
@@ -160,9 +163,13 @@ def applicability(cv, path, entries):
         else:
             notes.append("No client/server module scope is established by these flags alone.")
         if "archive" in flags:
-            notes.append("Archive flag: persistence is relevant; saved values and UI precedence need a runtime check.")
+            notes.append("Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that "
+                         f"has saved it ({PROBE}, five names); a profile with nothing saved is untested.")
         if flags & {"cheat", "developmentonly"}:
-            notes.append("Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions.")
+            note = "Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions."
+            if "cheat" in flags:
+                note += f" Two cheat-flagged lines read this file's values in a local session ({PROBE}); online values are untested."
+            notes.append(note)
     elif path.startswith("ConVars/"):
         notes.append("Absent from this dump snapshot; removal, renaming, module coverage and recognition remain unresolved.")
     else:

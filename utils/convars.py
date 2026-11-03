@@ -11,6 +11,7 @@ Common options: --ref REF (GameTracking commit or branch, default master), --dum
 Audit findings:
   error    active line with gameinfo_cannot_override or outside the dump's declared [min, max]
   warn     name absent from this dump (not proof of removal), or gamedll-only registration
+  warn     archive-flagged active line whose value differs from Valve's default (a saved value overrides it)
   warn     [def: X] tag that disagrees with Valve's default (or says gone for a convar that exists)
   info     active line whose value equals Valve's default (a pin; fine if deliberate)
 """
@@ -99,6 +100,10 @@ def cmd_audit(dump: dict[str, gi.ConVar], show_pins: bool, path=gi.GI) -> int:
             errors += 1
         elif sc == "server":
             print(f"warn   {where}: gamedll-only registration: do not infer a client performance benefit; online authority needs verification")
+            warns += 1
+        if "archive" in cv.flags and gi.normalize(s.value) != gi.normalize(cv.default):
+            print(f"warn   {where}: archive: a value saved in machine_convars.vcfg overrides this on a profile "
+                  "that has saved it (owner-tested 2026-11-03); the request only changes the default")
             warns += 1
         if not in_range(s.value, cv):
             print(f"error  {where}: {s.value!r} outside [{cv.min}, {cv.max}] (runtime handling not tested)")

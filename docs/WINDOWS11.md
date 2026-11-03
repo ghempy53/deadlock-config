@@ -1,6 +1,7 @@
 # Windows 11, driver and BIOS guidance
 
-Reviewed **2026-10-22**. The owner's recorded setup is a Ryzen 7 9800X3D with SMT off, RTX 5070 12 GB,
+Reviewed **2026-10-22**; SMT corrected 2026-11-03. The owner's recorded setup is a Ryzen 7 9800X3D with SMT on
+(Task Manager: 8 cores, 16 logical processors; earlier records said off), RTX 5070 12 GB,
 32 GB DDR5-6000 EXPO, 2560×1440 at 270 Hz, **DX11, Reflex On and uncapped FPS**. These are owner preferences and
 reported configuration, not measurements collected by this audit. Keep them fixed when testing the game files.
 
@@ -9,7 +10,7 @@ reported configuration, not measurements collected by this audit. Keep them fixe
 - Record Windows, NVIDIA driver, AMD chipset driver and motherboard BIOS versions. Use the hardware vendors'
   supported releases and motherboard instructions when an update addresses a relevant issue. This document does
   not prescribe a BIOS flash or clean driver install for every game patch.
-- Preserve the owner's SMT and EXPO choices. Neither SMT-off nor a motherboard's bundled *Turbo Game Mode* is a
+- Preserve the owner's SMT (on) and EXPO choices. Neither SMT-off nor a motherboard's bundled *Turbo Game Mode* is a
   demonstrated Deadlock optimization in this repository. Do not add affinity/core-parking tweaks without a
   reproducible problem and measurements.
 - An access violation (`0xc0000005`) does not identify a memory fault on its own. If stability is in question, record

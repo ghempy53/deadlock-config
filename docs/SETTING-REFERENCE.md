@@ -34,9 +34,11 @@ Some prefixes span subsystems; each path still has one canonical entry. The
   boolean, clamp, units or sentinel from numeric spelling alone. Help and annotations state supported meanings;
   otherwise these are unknown. `rate/min`, `speaker_config/default` and similar paths describe a parent ConVar.
 - **Flags:** client/server registration does not prove online execution. `replicated` makes server authority
-  relevant. `archive` indicates persistence, not complete saved-settings/menu load order. `cheat` and
-  `developmentonly` do not establish that gameinfo bypasses restrictions. `gameinfo_cannot_override` identifies
-  entries prohibited through this file.
+  relevant. `archive` indicates persistence; on an existing profile the saved value wins over this file
+  (owner-tested 2026-11-03 for five names, [runtime probe](research/OWNER-PROBE-2026-11-03.md)). `cheat` and
+  `developmentonly` do not establish that gameinfo bypasses restrictions; two cheat lines applied in a local session,
+  online untested. `gameinfo_cannot_override` identifies entries prohibited through this file; two tested lines read
+  Valve's defaults.
 - **Repeated values:** no engine winner is assumed. SearchPaths and RenderModes are repeated-key lists. A Python
   dictionary's last value is not evidence of Source 2 precedence.
 - **Effectiveness:** matching stock/default may be a deliberate pin, not necessarily redundant when another

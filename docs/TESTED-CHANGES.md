@@ -40,6 +40,19 @@ session on build 6842, DX11, uncapped:
 - Stalls in the log were alt-tabbing (owner-confirmed). Tick corrections occurred only at respawns.
 - No feedback yet on pop-in at 6800, muzzle flashes, the light-sensitivity option, aspect ratio 2.54, mip bias 1 or
   the HUD readability block.
+- Correction the same day: that session was capped at 1000 FPS by the saved value, not uncapped (see 0d).
+
+## 0d. Owner runtime probe: saved values versus gameinfo (2026-11-03)
+
+Details and evidence: [research/OWNER-PROBE-2026-11-03.md](research/OWNER-PROBE-2026-11-03.md). Owner-run console
+queries in the Hideout (local server) on build 6842 with the current file:
+- Archived ConVars read the value saved in `machine_convars.vcfg`, not this file: `fps_max` and `fps_max_ui` 1000,
+  `cam_ideallag` 4, `cl_ragdoll_limit` 20, `snd_mixahead` 0.001. The game writes the saved values back on exit.
+- Steam launch options `+fps_max 0 +fps_max_ui 0` give 0 / 0, and the game then saves 0. Uncapped needs them.
+- Two `gameinfo_cannot_override` lines (`r_texture_lod_scale 8`, `sc_disable_spotlight_shadows 1`) read Valve's defaults.
+- Two plain lines and two `cheat` lines (`r_farz 6800`, `r_size_cull_threshold_shadow 2.4`) read this file's
+  values locally. Online values are untested.
+- Task Manager shows 16 logical processors: SMT is on, and `-threads 16` matches.
 
 ## 1. Historical owner reports: adopted at the time
 

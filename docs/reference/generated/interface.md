@@ -197,7 +197,7 @@ Archived client option, default false, disabled upstream. By upstream's comment,
 
 **Benefits and trade-offs:** None while disabled. If enabled it is a HUD readability preference, not a performance setting.
 
-**Applicability and effectiveness:** Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; low for semantics and applied runtime effect. Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result.
 
@@ -309,7 +309,7 @@ Vertical distance between the camera’s look-at point and its base target; engi
 
 **Benefits and trade-offs:** Requested 0 changes camera composition if honored; it does not directly measure input responsiveness.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Two cheat-flagged lines read this file's values in a local session (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)); online values are untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -337,7 +337,7 @@ Name suggests the speed with which camera height approaches its target; exact un
 
 **Benefits and trade-offs:** Commented 0 example only. Upstream reports a black camera at zero, but that observation is not verified here; no responsiveness improvement is established.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Two cheat-flagged lines read this file's values in a local session (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)); online values are untested. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -389,7 +389,7 @@ Field-of-view angle when following a hero; currently only a commented example.
 
 **Benefits and trade-offs:** Commenting the gameinfo assignment does not reset saved per-user values. The owner removed the FOV mod on 2026-10-27; both configs now request r_aspectratio 2.54 for a 110 FOV equivalent with this slider at 90, superseding PR84. PR83's owner-confirmed 90-degree cap in Sandbox remains historical evidence, not an audit reproduction or a universal limit for every camera path. Actual interactions need testing.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -613,7 +613,7 @@ Name suggests duration of a crosshair hit marker; Valve provides no descriptive 
 
 **Benefits and trade-offs:** The near-zero example is commented. No claim that current hit markers are removed is justified.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1029,7 +1029,7 @@ Adds damage-effectiveness information to every damage number.
 
 **Benefits and trade-offs:** Commented false matches the declared default. It does not currently disable an enabled feature.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Two cheat-flagged lines read this file's values in a local session (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)); online values are untested. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1357,7 +1357,7 @@ Name suggests showing distance in version-2 HUD unit indicators; Valve provides 
 
 **Benefits and trade-offs:** Requested true matches the declared default. Archived/userinfo flags mean saved values and user information participate; current display behavior is unverified.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1633,7 +1633,7 @@ Name suggests enemy outlines. The pinned dump explicitly marks the setting gamei
 
 **Benefits and trade-offs:** Preserve the inherited line for this documentation-only project, but do not claim its false value removes enemy outlines.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Flagged gameinfo_cannot_override: this file is not an authorized override for this ConVar. Two such lines read Valve's defaults at runtime (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)). Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1881,7 +1881,7 @@ Name suggests extra trace length for camera-stuck handling; Valve supplies no de
 
 **Benefits and trade-offs:** Requested 0 could affect collision recovery if honored. It is replicated and cheat flagged; no responsiveness benefit is established.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Replicated: server authority may replace a local request online; startup assignment does not prove online value. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Two cheat-flagged lines read this file's values in a local session (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)); online values are untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -1933,7 +1933,7 @@ An alternative value for a tight-camera test mode; the dump does not document th
 
 **Benefits and trade-offs:** Requested 1 is an inherited test setting; it is not demonstrated to improve gameplay responsiveness.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2101,7 +2101,7 @@ Upstream comment: hides player names from health bars. Registered default false;
 
 **Benefits and trade-offs:** If honored, hero names no longer appear over health bars, reducing at-a-glance target identification. No performance gain is measured.
 
-**Applicability and effectiveness:** Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Two cheat-flagged lines read this file's values in a local session (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)); online values are untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; low for semantics and applied runtime effect. Static file, dump and upstream review only (2026-10-27 sync). No in-game test or measured FPS/latency result.
 
@@ -2313,7 +2313,7 @@ Selects the rendering performance level; the dump declares a range of 0–3.
 
 **Benefits and trade-offs:** The inherited request 9 lies outside the declared range and is not a documented preset. The snapshot does not establish whether startup rejects, clamps or otherwise transforms it; saved/menu settings can also participate. Do not describe 9 as an effective special performance mode.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2369,7 +2369,7 @@ Enables game joystick input.
 
 **Benefits and trade-offs:** Game joystick input and Steam Input are separate settings; neither alone proves all controller input routes are disabled.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2397,7 +2397,7 @@ Allows activation of the developer console.
 
 **Benefits and trade-offs:** Requested true enables a control/diagnostic surface, with no established gameplay-performance benefit.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2425,7 +2425,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 
 **Benefits and trade-offs:** The requested value should not be interpreted as disabling the camera, enabling automatic FOV, or improving latency. Relevance to Deadlock’s hero camera is unverified.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Two cheat-flagged lines read this file's values in a local session (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)); online values are untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2453,7 +2453,7 @@ Frame-rate limit; Valve explicitly documents 0 as unlimited and says it does not
 
 **Benefits and trade-offs:** Allows higher render throughput when resources permit; no measured improvement is claimed and no alternate cap is proposed.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2481,7 +2481,7 @@ Frame-rate limit while game UI is displayed; 0 means unlimited and does not appl
 
 **Benefits and trade-offs:** Potentially more rendering work in UI than with Valve’s stock limit; no measured effect here.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2537,7 +2537,7 @@ Requests preference for matching with other solo players when not in a party.
 
 **Benefits and trade-offs:** Commented only. It concerns matchmaking preference, not rendering performance; upstream’s subjective matchmaking experience is not an FPS result.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Disabled in both current files: the written example makes no assignment. Other configuration layers may supply a value. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -2813,7 +2813,7 @@ Enables joystick input to the Panorama UI.
 
 **Benefits and trade-offs:** Valve stock disables this input path; it is not a measured UI CPU optimization.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: persistence is relevant; saved values and UI precedence need a runtime check. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. No client/server module scope is established by these flags alone. Archive flag: a value saved in machine_convars.vcfg overrides this request on a profile that has saved it (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md), five names); a profile with nothing saved is untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 
@@ -3197,7 +3197,7 @@ Camera/viewmodel angle control suggested by the name, with no explanatory help i
 
 **Benefits and trade-offs:** The requested value should not be interpreted as disabling the camera, enabling automatic FOV, or improving latency. Relevance to Deadlock’s hero camera is unverified.
 
-**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
+**Applicability and effectiveness:** No renderer-specific applicability found. Client registration is captured; it does not establish startup load order or effectiveness. Restricted cheat/development registration; the dump does not establish acceptance from gameinfo or a bypass of runtime restrictions. Two cheat-flagged lines read this file's values in a local session (owner-tested 2026-11-03 on build 6842, [runtime probe](../../research/OWNER-PROBE-2026-11-03.md)); online values are untested. Restart Deadlock for a controlled gameinfo comparison; per-key hot-reload behavior was not tested.
 
 **Evidence / test status:** High for snapshot comparison; low for functional meaning and applied runtime effect. Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit.
 

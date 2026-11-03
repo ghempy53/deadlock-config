@@ -37,12 +37,18 @@ assignments and upstream values, and records uncertainty rather than treating an
 - **Owner test (2026-11-03):** on build 6842 the 3.8 file ran in the hideout and Sandbox and through one full
   matchmade Street Brawl, so matchmaking accepted the 3.8 engine edits for that mode; a regular 6v6 match is untested.
   Owner-reported, one session; details in [research/OWNER-TEST-2026-11-03.md](research/OWNER-TEST-2026-11-03.md).
+  Correction the same day: that session was capped at 1000 FPS by the saved value, not uncapped.
+- **Owner runtime probe (2026-11-03):** console queries on build 6842 with the current file showed that a value saved
+  in `machine_convars.vcfg` overrides this file for `archive` ConVars, that two `gameinfo_cannot_override` lines read
+  Valve's defaults, and that plain and `cheat` lines apply in a local session (online untested). Uncapped FPS needs
+  the Steam launch options `+fps_max 0 +fps_max_ui 0`. Details in
+  [research/OWNER-PROBE-2026-11-03.md](research/OWNER-PROBE-2026-11-03.md).
 
 ## Owner decisions retained in the current files
 
 | Setting | Written intent | Evidence / limit |
 | --- | --- | --- |
-| `fps_max`, `fps_max_ui` | 0 / 0, uncapped | [PR #73](https://github.com/ghempy53/deadlock-config/pull/73); preserve uncapped preference |
+| `fps_max`, `fps_max_ui` | 0 / 0, uncapped | [PR #73](https://github.com/ghempy53/deadlock-config/pull/73); preserve uncapped preference. Both are archived: a saved value wins, and the menu sliders stop at 1000. The owner's profile needed Steam launch options `+fps_max 0 +fps_max_ui 0` (owner-tested 2026-11-03; the game then saves 0) |
 | `steam_inputhandler_enabled` | false on both occurrences | Same PR; identical requests do not need a last-wins assumption |
 | `r_texture_stream_mip_bias` | 1 in both | Owner request October 27 for slightly better textures, one step up from 2 ([PR #72](https://github.com/ghempy53/deadlock-config/pull/72)); preset 1 also requests 1. Upstream pulls keep 1 whatever upstream sets. Untested in game |
 | `r_texture_pool_size` | 6400 MB | [PR #73](https://github.com/ghempy53/deadlock-config/pull/73); not a guarantee of physical VRAM residency or a measured gain |
@@ -55,8 +61,10 @@ assignments and upstream values, and records uncertainty rather than treating an
 
 The owner's active renderer is **DX11**, selected by a Steam launch option. Vulkan keys remain inherited;
 no Vulkan validation is claimed. `ForceVulkanForMapBuild` is a map-compiler key, not the game renderer selection.
-Hardware context: Ryzen 7 9800X3D (owner reports SMT off), RTX 5070 12 GB, 1440p/270 Hz. A CPU bottleneck
-was the owner's working diagnosis, not a measurement established by this audit.
+The owner's launch options (2026-11-03): `-dx11 -condebug -high -fullscreen -threads 16 +fps_max 0 +fps_max_ui 0`.
+Hardware context: Ryzen 7 9800X3D with SMT on (Task Manager, 2026-11-03: 8 cores, 16 logical processors; earlier
+records said off), RTX 5070 12 GB, 1440p/270 Hz. A CPU bottleneck was the owner's working diagnosis, not a
+measurement established by this audit.
 
 ## Actual variant differences
 

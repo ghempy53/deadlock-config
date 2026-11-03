@@ -4,7 +4,11 @@ Reviewed 2026-10-22: **124 registered names** carry this flag in the pinned Valv
 
 [GameTracking dump, full commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt) is a **third-party mirror** of Valve console metadata.
 The flag declares that gameinfo is not an allowed override route. It does not mean the feature is unavailable or
-that a menu/server cannot set it. Enforcement was not exercised here. No bypass is proposed.
+that a menu/server cannot set it. No bypass is proposed. Enforcement was owner-tested on 2026-11-03 for two active
+lines (build 6842, local Hideout): `r_texture_lod_scale 8` read 1 and `sc_disable_spotlight_shadows 1` read false,
+both Valve's defaults ([runtime probe](research/OWNER-PROBE-2026-11-03.md)). Issue #89 reports the same for
+`r_shadows` and `r_drawskybox`. Treat the other flagged lines that request a non-default value as very likely
+ineffective; they were not queried.
 
 Both current files contain the same **15** active flagged names (experimental had 16 before its October 27 reset to stable).
 They are preserved owner-approved/inherited entries, not permission to delete or retune them during a documentation audit.

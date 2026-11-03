@@ -65,5 +65,13 @@ online match, changing the video menu and restarting: duplicates, saved settings
 may matter, but their precedence is not established by this repository's text parsers. A name absent from one dump
 is unresolved, not proven removed. Never interpret an offline bot FPS improvement as an online result.
 
+To read running values, put one ConVar name per line in `game/citadel/cfg/probe.cfg`, run `exec probe` and read
+the `[Console] name = value` replies. Names joined with semicolons print nothing. Owner-tested 2026-11-03
+([runtime probe](research/OWNER-PROBE-2026-11-03.md)):
+- An `archive` ConVar shows the value saved in `machine_convars.vcfg`, not this file. For the frame limit, use the
+  launch options `+fps_max 0 +fps_max_ui 0`; the menu sliders stop at 1000.
+- A `gameinfo_cannot_override` line shows Valve's default. That is expected, not a broken install.
+- `developmentonly` names print nothing or `Unknown command` (issue #89), which proves neither removal nor effect.
+
 Keep the owner's uncapped DX11 setup. Historical Vulkan reports and general OS tuning are covered, with evidence
 limits, in [INSTALL.md](INSTALL.md) and [WINDOWS11.md](WINDOWS11.md).

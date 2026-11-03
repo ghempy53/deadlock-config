@@ -60,6 +60,12 @@ Restart; record observable ConVars after startup, loading a local match, changin
 and restarting again. Test conflicting duplicates in a separate diagnostic copy only when behavior testing is
 authorized. Hidden/unqueryable variables stay unverified: silence is not proof of removal or acceptance.
 
+Repeat the [2026-11-03 runtime probe](research/OWNER-PROBE-2026-11-03.md) after a patch. It covers two control
+lines, five archived, two `cheat` and two `gameinfo_cannot_override` lines: one name per line in
+`game/citadel/cfg/probe.cfg`, then `exec probe` in the Hideout and again in a matchmade game. Read
+`machine_convars.vcfg` before and after with the game closed. A change from the recorded results means precedence
+or enforcement changed.
+
 Check matchmaking, ability readability, camera/FOV (aspect ratio 2.54), fire/heal particles and audio cues. Measure performance
 with repeated alternating runs and frame-time captures under comparable workloads. Bot/local results cannot
 establish online performance because server-only settings and workload differ. No measured gain follows just

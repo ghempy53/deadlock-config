@@ -97,6 +97,21 @@ class InventoryTests(unittest.TestCase):
         self.assertFalse(convars.in_range('5', dump['example']))
         self.assertEqual(convars.scope(dump['missingflag']), 'engine/unspecified')
 
+    def test_audit_warns_on_archived_nondefault_requests_only(self):
+        dump = gi.parse_dump('capped 120 (archive)\n\npinned 4 (archive)\n\nplain 1 ()\n\nblocked 1 (archive, gameinfo_cannot_override)\n')
+        text = '"GameInfo" {\n    "ConVars" {\n        capped "0"\n        pinned "4"\n        plain "2"\n        // capped "5"\n    }\n}\n'
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'gameinfo.gi'
+            path.write_text(text, encoding='utf-8')
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                status = convars.cmd_audit(dump, False, path)
+        archived = [line for line in out.getvalue().splitlines() if ': archive:' in line]
+        self.assertEqual(status, 0)
+        self.assertEqual(len(archived), 1, out.getvalue())
+        self.assertIn('capped', archived[0])
+        self.assertTrue(archived[0].startswith('warn'))
+
     def test_stock_report_excludes_range_metadata_and_preserves_duplicates(self):
         self.assertEqual(nondefaults.stock_convars(FIXTURE), {'example': ['1', '6'], 'custom_after_marker': ['4']})
 
