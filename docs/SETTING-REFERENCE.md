@@ -1,9 +1,8 @@
 # Complete setting reference
 
-Reviewed **2026-11-02**, against captured Valve build **6814**, source revision **11160503** (build 6821's dump,
-stock file and inspected DLL strings are byte-identical; the dump changed at build 6826, identical through 6842,
-and changes nothing either config sets), and
-OptimizationLock **3.8** (`69a665c`).
+Reviewed **2026-11-04**, against captured Valve build **6814**, source revision **11160503** (build 6821's dump,
+stock file and inspected DLL strings are byte-identical; the dump changed at builds 6826 and 6849 and changes nothing
+either config sets; the stock file is unchanged through 6849), and OptimizationLock **3.9** (`1dbf679`).
 This covers both current configs: every scalar assignment, disabled tweak, repeated assignment, nested ConVar
 metadata field and the empty render-pipeline alias section. Parent sections and locations are inventoried in
 [coverage.json](reference/coverage.json).
