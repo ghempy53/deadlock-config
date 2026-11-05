@@ -863,15 +863,16 @@
   "ConVars/citadel_hud_objective_health_idle_timeout": {
     "subsystem": "HUD / UI",
     "purpose": "Sets the idle timeout in seconds for hiding objective health on the HUD after damage, according to Valve’s help.",
-    "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Requested 0 changes a timeout, but zero may have special semantics not documented by the dump. Do not promise permanent display or immediate hiding without a test.",
+    "rationale": "OptimizationLock set 0 through 3.8; 3.9 removed the active line and keeps it commented with a note that 0 caused issues with patron health bars. Both configs follow 3.9, so Valve's default 7 applies.",
+    "tradeoffs": "Now a disabled example only. The default hides an objective's HUD health after 7 seconds without damage, per the help; the inherited 0 may have had special semantics the dump does not document.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/1dbf67941fff4c92881119f92b548f13c5175225/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e"
     ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+    "test_status": "Static file, dump and upstream review only (2026-11-04 sync). No in-game test or measured FPS/latency result."
   },
   "ConVars/citadel_hud_unit_indicators_v2_show_distance": {
     "subsystem": "HUD / UI",
@@ -968,13 +969,14 @@
   "ConVars/citadel_orb_debug_draw_state": {
     "subsystem": "Runtime / gameplay presentation",
     "purpose": "Draws orb state; Valve describes the nonzero value as how long the state lingers after the orb expires.",
-    "rationale": "Inherited 1 from OptimizationLock (no stated rationale). Disabled in both configs on 2026-11-03 at the owner's request after it drew red and green debug circles on soul orbs in the hideout soul-confirm practice; the disabled line keeps the inherited value for provenance. Upstream pulls keep it disabled.",
+    "rationale": "Inherited 1 from OptimizationLock through 3.8. The owner had it disabled on 2026-11-03 after it drew red and green debug circles on soul orbs in the hideout soul-confirm practice; OptimizationLock 3.9 then disabled it too, keeping a commented -1 line whose comment says it gives a debug sphere to the soul orb in the player hideout. Both configs carry that upstream line. Upstream pulls keep it disabled.",
     "tradeoffs": "1 requests server-side debug drawing, not removal of work, so it adds visual clutter where it acts. It most likely became visible once the 3.8 sync set debug_draw_enable back to true; that link is inference.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/blob/1dbf67941fff4c92881119f92b548f13c5175225/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e",
       "https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-TEST-2026-11-03.md"
     ],
     "test_status": "Owner-reported 2026-11-03 (build 6842): with 1 active, debug circles followed soul orbs in the hideout soul-confirm practice and did not appear in a Street Brawl on Valve's server. With the line disabled (stable installed the same day), the owner confirmed the circles are gone."
@@ -2990,15 +2992,16 @@
   "ConVars/snd_boxverb_simd": {
     "subsystem": "Audio / voice",
     "purpose": "Selects the SIMD implementation of shoebox reverb processing.",
-    "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Requested false disables that SIMD path. The upstream claim that disabling it helps performance is unsubstantiated; measure rather than assuming a slower-looking value is faster.",
+    "rationale": "Inherited false from OptimizationLock; 3.9 changed it to true, Valve's default, with an upstream comment that the SIMD path should cut audio CPU cost. Both configs take true with the 3.9 sync.",
+    "tradeoffs": "Requesting the default makes this line effectively a no-op. The earlier false disabled the SIMD path; neither the old nor the new upstream performance claim is measured here.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/1dbf67941fff4c92881119f92b548f13c5175225/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e"
     ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+    "test_status": "Static file, dump and upstream review only (2026-11-04 sync). No in-game test or measured FPS/latency result."
   },
   "ConVars/snd_enable_subgraph_corenull_passthrough": {
     "subsystem": "Audio / voice",
@@ -3058,15 +3061,17 @@
   "ConVars/snd_mixahead": {
     "subsystem": "Audio / voice",
     "purpose": "Registered without explanatory help. Upstream treats it as an audio mixing lead-time setting, but units and modern path semantics are not defined by the pinned dump.",
-    "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Requested 0.05 versus 0.001 must not be stated as a measured extra 50 ms of output latency or as imperceptible. Measure end-to-end audio timing/dropouts before drawing that conclusion.",
+    "rationale": "Inherited from OptimizationLock (0.05 through 3.8); 3.9 lowered it to 0.01 without a stated reason and both configs take 0.01. On the owner's profile the archived saved value 0.001 overrode this file in the 2026-11-03 probe, so the line likely has no effect there.",
+    "tradeoffs": "Requested 0.01 versus 0.001 must not be stated as a measured latency change or as imperceptible. Measure end-to-end audio timing and dropouts before drawing that conclusion.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/1dbf67941fff4c92881119f92b548f13c5175225/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e",
+      "https://github.com/ghempy53/deadlock-config/blob/main/docs/research/OWNER-PROBE-2026-11-03.md"
     ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+    "test_status": "Static file, dump and upstream review only (2026-11-04 sync). No in-game test or measured FPS/latency result."
   },
   "ConVars/snd_occlusion_bounces": {
     "subsystem": "Audio / voice",
@@ -4122,5 +4127,19 @@
       "https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05"
     ],
     "test_status": "Static file, dump and upstream review only (2026-11-02 sync). No in-game test or measured FPS/latency result."
+  },
+  "ConVars/snd_diffusor_simd": {
+    "subsystem": "Audio / voice",
+    "purpose": "Valve help: enables the SIMD code path for the diffusor processor. Default false, requested true.",
+    "rationale": "Added by OptimizationLock 3.9 next to snd_boxverb_simd, with an upstream comment assuming the same CPU benefit; both configs take it with the 3.9 sync at the owner's request.",
+    "tradeoffs": "A SIMD path could lower audio CPU cost, but Valve ships it off, so maturity is unknown; listen for crackle, dropouts or changed reverb. No measurement.",
+    "applicability": "",
+    "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect",
+    "evidence": [
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/Sqooky/OptimizationLock/blob/1dbf67941fff4c92881119f92b548f13c5175225/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e"
+    ],
+    "test_status": "Static file, dump and upstream review only (2026-11-04 sync). No in-game test or measured FPS/latency result."
   }
 }

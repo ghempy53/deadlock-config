@@ -14,8 +14,8 @@ NEW EXPERIMENTAL BASE: STABLE V1.2 (2026-10-15)
   Line numbers unchanged.
 
 OWNER'S CONFIRMED PREFERENCES (2026-10-15)
-  line 1314  fps_max                                       "400"  ->  "0"
-  line 1315  fps_max_ui                                    "120"  ->  "0"
+  line 1299  fps_max                                       "400"  ->  "0"
+  line 1300  fps_max_ui                                    "120"  ->  "0"
   line 620   steam_inputhandler_enabled                    "true"  ->  "false"
   line --    citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
   line --    citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
@@ -52,8 +52,8 @@ NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-1
   line 620   steam_inputhandler_enabled                    "true"  ->  "false"
   line --    citadel_damage_text_cumulative_final_lifetime (default 3)  ->  "4"
   line --    citadel_damage_text_dynamic_emphasis          (default true)  ->  "false"
-  line 1314  fps_max                                       "400"  ->  "0"
-  line 1315  fps_max_ui                                    "120"  ->  "0"
+  line 1299  fps_max                                       "400"  ->  "0"
+  line 1300  fps_max_ui                                    "120"  ->  "0"
   Why: owner's request: experimental-config/gameinfo.gi restarts as a copy of the current stable config (Sqooky's
   OptimizationLock 3.5.3 with r_aspectratio 2.11, PR #61). Stable does not carry the owner's confirmed preferences, so
   they are re-applied as before: uncapped FPS, Steam Input off on both lines, 4 s final damage total, no big-hit
@@ -63,8 +63,8 @@ NEW EXPERIMENTAL BASE: STABLE 3.5.3, CONFIRMED PREFERENCES RE-APPLIED (2026-10-1
 TEXTURES BACK TO FULL RESOLUTION, 8X ANISOTROPIC (2026-10-17)
   line 709   r_texture_stream_mip_bias                     "3"  ->  "0"
   line 710   r_texturefilteringquality                     "0"  ->  "4"
-  line 1154  r_texture_pool_size                           "256"  ->  (commented -> engine default 1600)
-  line 1155  r_texture_stream_max_resolution               "128"  ->  (commented -> engine default, no cap)
+  line 1145  r_texture_pool_size                           "256"  ->  (commented -> engine default 1600)
+  line 1146  r_texture_stream_max_resolution               "128"  ->  (commented -> engine default, no cap)
   Why: the owner sees jagged textures everywhere and jagged healing particles. Mip bias 3 streams textures at about
   1/8 resolution, the 128 px cap (clamped to the engine minimum 512) and the 256 MB pool keep them small, and bilinear
   filtering shimmers at angles. All four cost GPU memory and bandwidth only; fight lows are CPU-bound and the RTX
@@ -118,8 +118,8 @@ FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE 
   line 832   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
   line 901   r_particle_model_new8                         "false"  ->  (commented -> engine default)
   line 902   r_particle_newinput                           "true"  ->  (commented -> engine default)
-  line 1144  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
-  line 1178  sc_hdr_enabled_override                       "0"  ->  (commented -> engine default)
+  line 1135  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  line 1169  sc_hdr_enabled_override                       "0"  ->  (commented -> engine default)
   line --    SceneSystem/HDRFrameBuffer                    "0"  ->  removed (not in Valve's stock file)
   line --    SceneSystem/EnableAlphaTint                   "0"  ->  removed (not in Valve's stock file)
   line --    SceneSystem/ParticleBufferSize                "512"  ->  removed (not in Valve's stock file)
@@ -138,7 +138,7 @@ FIRE-EFFECT BISECT, STEP 1: EVERY RENDER-SIDE PARTICLE AND HDR SUSPECT TO VALVE 
   Lines after 492 moved up by 4.
 
 FIRE-EFFECT BISECT, STEP 2: HDR STAYS ON, EVERYTHING ELSE BACK (2026-10-17)
-  line 1178  sc_hdr_enabled_override                       (commented, HDR on; unchanged from step 1)
+  line 1169  sc_hdr_enabled_override                       (commented, HDR on; unchanged from step 1)
   Why: the owner tested step 1 and the jetpack fire is fixed, so the cause is in that set. This step keeps only the
   HDR pair at Valve's values (sc_hdr_enabled_override commented out, SceneSystem HDRFrameBuffer removed) and
   restores everything else from before step 1: the 18 particle lines (fallbacks, post-sim skip, job lines, texture
@@ -157,7 +157,7 @@ FIRE-EFFECT BISECT, STEP 3: PARTICLE SIMULATION AND TIMING LINES TO VALVE VALUES
   line 832   r_update_particles_on_render_only_frames      "true"  ->  (commented -> engine default)
   line 901   r_particle_model_new8                         "false"  ->  (commented -> engine default)
   line 902   r_particle_newinput                           "true"  ->  (commented -> engine default)
-  line 1144  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
+  line 1135  r_late_particle_job_sync                      "1"  ->  (commented -> engine default)
   Why: step 2 (HDR on, everything else restored) brought the jagged jetpack fire back, so the cause is among the 18
   particle lines and three SceneSystem keys restored there, not HDR. This step sets the 9 lines that change how and
   when particles simulate to Valve's values and keeps the other 12. Prime suspect: r_particle_min_timestep 0.00241.
@@ -178,7 +178,7 @@ FIRE-EFFECT BISECT, STEP 4: ONLY R_PARTICLE_MIN_TIMESTEP STAYS AT VALVE'S VALUE 
   line 832   r_update_particles_on_render_only_frames      (commented)  ->  "true"  (restored)
   line 901   r_particle_model_new8                         (commented)  ->  "false"  (restored)
   line 902   r_particle_newinput                           (commented)  ->  "true"  (restored)
-  line 1144  r_late_particle_job_sync                      (commented)  ->  "1"  (restored)
+  line 1135  r_late_particle_job_sync                      (commented)  ->  "1"  (restored)
   line 828   r_particle_min_timestep                       (commented -> engine default 0; unchanged from step 3)
   Why: the owner tested step 3 and the jetpack fire is fixed, so the cause is one of its 9 simulation and timing
   lines. This step restores 8 of them and keeps only r_particle_min_timestep at Valve's default (0, simulate every
@@ -189,7 +189,7 @@ FIRE-EFFECT BISECT, STEP 4: ONLY R_PARTICLE_MIN_TIMESTEP STAYS AT VALVE'S VALUE 
 
 JAGGED FIRE FIXED: R_PARTICLE_MIN_TIMESTEP AT VALVE'S DEFAULT; HDR OFF AGAIN (2026-10-17)
   line 828   r_particle_min_timestep                       "0.00241"  ->  (commented -> engine default 0; confirmed fix)
-  line 1178  sc_hdr_enabled_override                       (commented)  ->  "0"  (restored, as in stable)
+  line 1169  sc_hdr_enabled_override                       (commented)  ->  "0"  (restored, as in stable)
   line --    SceneSystem/HDRFrameBuffer                    (removed)  ->  "0"  (restored, as in stable)
   Why: the owner tested step 4 (only r_particle_min_timestep at Valve's default) and the jetpack fire stays clean, so
   the bisect is done: Sqooky's 0.00241 minimum timestep was the cause. Valve: particle simulation more frequent than
@@ -220,7 +220,7 @@ TEXTURES BACK TO STABLE EXCEPT POOL AND CAP; PARTICLES SECTION BACK; STABLE DROP
 
 TEXTURE POOL 3200 MB, MIP BIAS 2 (2026-10-17)
   line 709   r_texture_stream_mip_bias                     "3"  ->  "2"
-  line 1154  r_texture_pool_size                           (commented, default 1600)  ->  "3200"
+  line 1145  r_texture_pool_size                           (commented, default 1600)  ->  "3200"
   Why: owner's request while testing textures on experimental. Mip bias one step toward quality: 2 streams textures
   one mip level sharper than 3 (same as the in-game Texture quality Low; High is 0). Texture pool doubled from the
   engine default 1600 MB to 3200 MB, well within the RTX 5070's 12 GB, so fewer textures get dropped to lower mips
@@ -230,7 +230,7 @@ TEXTURE POOL 3200 MB, MIP BIAS 2 (2026-10-17)
   Line numbers unchanged.
 
 TEXTURE POOL 6400 MB (2026-10-17)
-  line 1154  r_texture_pool_size                           "3200"  ->  "6400"
+  line 1145  r_texture_pool_size                           "3200"  ->  "6400"
   Why: owner's request while testing textures on experimental. Doubles the texture pool again so fewer textures are
   dropped to lower mips under memory pressure. 6400 MB is about half of the RTX 5070's 12 GB; the rest still covers
   render targets, buffers and the driver at 1440p. GPU memory only; fight lows are CPU-bound. Stable unchanged.
@@ -578,8 +578,8 @@ EXPERIMENTAL: OPTIMIZATIONLOCK 3.8 SYNC (2026-11-02, OptimizationLock main @ 69a
   line 713   thread_pool_option                     "2"      ->  "4"
   line 879   cl_generate_postdataupdatepreserved    (absent, default true)  ->  "false"
   line 887   debug_draw_enable                      "false"  ->  "true"
-  line 1148  r_smooth_morph_normals                 "0"      ->  "false"
-  line 1149  r_ssao_blur                            "0"      ->  "false"
+  line 1139  r_smooth_morph_normals                 "0"      ->  "false"
+  line 1140  r_ssao_blur                            "0"      ->  "false"
   line 185   DefensiveConCommands                   "1"      ->  "0"
   line 163   MinDXLevel                             (absent)  ->  "80"
   line --    r_light_sensitivity_mode               "true"   ->  (removed)
@@ -625,7 +625,7 @@ OWNER RUNTIME PROBE: SAVED VALUES VERSUS GAMEINFO (2026-11-03)
   Line numbers unchanged.
 
 SOUL-ORB DEBUG DRAWING OFF (2026-11-03)
-  line 1095  citadel_orb_debug_draw_state           "1"  ->  commented out (Valve default -1)
+  line 976   citadel_orb_debug_draw_state           "1"  ->  commented out (Valve default -1)
   Why: the owner saw red and green debug circles tracking soul orbs in the hideout soul-confirm practice and only
   there, not in the Street Brawl match. Valve's help for this ConVar: set to non-zero to draw state of orb; the
   value is how long the state lingers after the orb expires. It is registered gamedll developmentonly, so it acts
@@ -642,6 +642,32 @@ SOUL-ORB DEBUG DRAWING OFF: OWNER-CONFIRMED (2026-11-03)
   soul-confirm practice, so citadel_orb_debug_draw_state 1 was the cause. CONFIGS.md, the test history, the session
   note and the reference annotation now record the result.
   Line numbers unchanged.
+
+OPTIMIZATIONLOCK 3.9 SYNC, BOTH CONFIGS (2026-11-04, OptimizationLock main @ 1dbf679)
+  line 924   snd_boxverb_simd                       "false"  ->  "true"
+  line 925   snd_diffusor_simd                      (absent, default false)  ->  "true"
+  line 927   snd_mixahead                           "0.05"   ->  "0.01"
+  line --    citadel_hud_objective_health_idle_timeout  "0"  ->  removed (Valve default 7)
+  line --    fog_enableskybox                       "false"  ->  removed
+  Why: the owner asked to sync both configs with upstream. Built as for 3.8: upstream main 1dbf679 (3.9 landed in
+  7d2cb2b; 334b09b realigned it and moved the END OF CONFIG banner; gameinfo SHA-256 d5e4e6678eabfc61...) plus the owner
+  delta. compare.py against upstream 3.9 shows only the owner settings in docs/CONFIGS.md; engine sections equal
+  upstream. Upstream 3.9 now disables citadel_orb_debug_draw_state itself (commented, -1; its comment says it gives a
+  debug sphere to the soul orb in the player hideout), which matches the 2026-11-03 diagnosis; upstream's disabled
+  line replaces the owner's, so it stays off. snd_boxverb_simd true is Valve's default. snd_diffusor_simd true turns
+  on Valve's SIMD diffusor path (help text), off by default; no measurement. snd_mixahead is archived, so on the
+  owner's profile the saved 0.001 overrides this file (2026-11-03 probe) and 0.01 likely has no effect there.
+  citadel_hud_objective_health_idle_timeout returns to Valve's 7 (help: seconds after damage before an objective's
+  health hides on the HUD); upstream notes 0 caused issues with patron health bars and keeps a commented line.
+  fog_enableskybox is absent from the dump. Also from upstream: the END OF CONFIG banner now sits just before the
+  stock tail, one README comment removed, whitespace realigned. As in every stable sync, the header credits and
+  links and a new thank-you phrase in the snd_boxverb_simd comment are omitted. Valve build 6849 (GameTracking
+  3e41d1b) has the pin's stock file and changes one ConVar neither config sets, so the 6814 pin stands.
+  check.py --fix renumbered 17 earlier line N rows (numbers only). Both configs stay byte-identical (SHA-256
+  7103614dc641743b4529d30bcc973888069c95b33ebba8fa51a2aa7561286bc7).
+  Untested in game: audio for crackle or dropouts (snd_diffusor_simd), patron and walker health bars on the HUD,
+  and the soul-confirm practice still clean.
+  Lines renumbered throughout (both files rebuilt).
 
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

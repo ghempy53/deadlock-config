@@ -301,18 +301,6 @@
     ],
     "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
   },
-  "ConVars/fog_enableskybox": {
-    "purpose": "Candidate lighting, shadows or post-processing control inherited in the config, but absent from the pinned ConVar dump. Current registration, meaning, and effect remain unknown; absence from one dump does not establish removal.",
-    "rationale": "Retained from OptimizationLock lineage. The pinned upstream file contains this key; its comments record intended rationale or experiments, not evidence that the setting improves this repository.",
-    "tradeoffs": "Lighting/shadow reductions can alter visibility, depth cues, and effect readability. A requested reduction is not proof the relevant pass is disabled or cheaper.",
-    "applicability": "Intended for the client rendering path; exact DX11/Vulkan equivalence is unverified.",
-    "confidence": "High for captured registration/flags; low for detailed purpose and runtime effect.",
-    "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
-    ],
-    "test_status": "Static source and history review only; no game launch, matchmaking check, renderer comparison, or benchmark during this audit."
-  },
   "ConVars/lb_allow_time_sliced_shadow_map_rendering": {
     "purpose": "Candidate lighting, shadows or post-processing control inherited in the config, but absent from the pinned ConVar dump. Current registration, meaning, and effect remain unknown; absence from one dump does not establish removal.",
     "rationale": "Retained from OptimizationLock lineage. The pinned upstream file contains this key; its comments record intended rationale or experiments, not evidence that the setting improves this repository.",

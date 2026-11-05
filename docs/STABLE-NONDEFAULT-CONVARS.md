@@ -1,7 +1,7 @@
 # Stable config: convars changed from Valve's defaults
 
-Generated 2026-11-03 by `python3 utils/nondefaults.py` from [`stable-config/gameinfo.gi`](../stable-config/gameinfo.gi)
-(upstream comparison: OptimizationLock `69a665c27524040072e66f7b7b4afdc57c6b320e`; adoption history and owner edits are in [CONFIGS.md](CONFIGS.md)).
+Generated 2026-11-04 by `python3 utils/nondefaults.py` from [`stable-config/gameinfo.gi`](../stable-config/gameinfo.gi)
+(upstream comparison: OptimizationLock `1dbf67941fff4c92881119f92b548f13c5175225`; adoption history and owner edits are in [CONFIGS.md](CONFIGS.md)).
 Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248), build 6814 (`DumpSource2/convars.txt` and
 `game/citadel/gameinfo.gi`). Regenerate after every upstream sync or game patch; don't edit by hand.
 
@@ -17,7 +17,7 @@ Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/G
   This generated report is an assignment inventory, not a list of effective changes.
 - **Line** is the line in `stable-config/gameinfo.gi`; **Group** is the nearest section header above it.
 
-## Nondefault custom assignments (322)
+## Nondefault custom assignments (320)
 
 | Line | Convar | Stable | Valve default | Group | Flags |
 | ---: | --- | --- | --- | --- | --- |
@@ -195,154 +195,152 @@ Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/G
 | 921 | `audio_enable_vmix_mastering` | `false` | `true` | Audio | cheat |
 | 922 | `audio_viewing_damage_decay_time` | `0` | `3` | Audio | developmentonly |
 | 923 | `audio_viewing_damage_hold_time` | `0` | `3` | Audio | developmentonly |
-| 924 | `snd_boxverb_simd` | `false` | `true` | Audio | developmentonly |
-| 925 | `snd_enable_subgraph_corenull_passthrough` | `false` | `true` | Audio | developmentonly |
-| 926 | `snd_mixahead` | `0.05` | `0.001` | Audio | archive |
-| 927 | `snd_occlusion_bounces` | `0` | `1` | Audio | replicated, cheat |
-| 928 | `snd_occlusion_rays` | `0` | `4` | Audio | replicated, cheat |
-| 930 | `snd_steamaudio_num_threads` | `4` | `2` | Audio | cheat |
-| 931 | `snd_steamaudio_reverb_order_rendering` | `0` | `1` | Audio | developmentonly |
-| 939 | `csm_cascade0_override_dist` | `0` | `-1` | Csm Shadows | cheat |
-| 940 | `csm_cascade1_override_dist` | `0` | `-1` | Csm Shadows | cheat |
-| 941 | `csm_cascade2_override_dist` | `0` | `-1` | Csm Shadows | cheat |
-| 942 | `csm_cascade3_override_dist` | `0` | `-1` | Csm Shadows | cheat |
-| 943 | `csm_max_dist_between_caster_and_receiver` | `0` | `15000` | Csm Shadows | cheat |
-| 944 | `csm_max_num_cascades_override` | `2` | `-1` | Csm Shadows | developmentonly |
-| 945 | `csm_max_visible_dist` | `0` | `7500` | Csm Shadows | cheat |
-| 946 | `csm_res_override_0` | `1` | `0` | Csm Shadows | cheat |
-| 947 | `csm_res_override_1` | `1` | `0` | Csm Shadows | cheat |
-| 948 | `csm_res_override_2` | `1` | `0` | Csm Shadows | cheat |
-| 949 | `csm_res_override_3` | `1` | `0` | Csm Shadows | cheat |
-| 954 | `ik_constraints_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
-| 955 | `ik_debug_dogleg3bone_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
-| 956 | `ik_debug_fabrik_backwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
-| 957 | `ik_debug_fabrik_forwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
-| 958 | `ik_enable` | `false` | `true` | Disabling Inverse Kinematics | replicated, cheat |
-| 959 | `ik_fabrik_backwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
-| 960 | `ik_fabrik_forwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
-| 961 | `ik_planetilt_enable` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
-| 965 | `animgraph_footlock_calculate_tilt` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
-| 966 | `animgraph_footlock_enabled` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
-| 967 | `animgraph_footlock_ground_roll` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
-| 968 | `animgraph_footlock_hip_offset_enable` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
-| 969 | `animgraph_footlock_ik_enable` | `false` | `true` | Disabling Animgraph Stuff | replicated, cheat |
-| 970 | `animgraph_footlock_trace_ground_enabled` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
-| 971 | `animgraph_footlock_use_hip_shift` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
-| 972 | `animgraph_slowdownonslopes_enabled` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
-| 1035 | `fog_enable` | `false` | `true` | Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation | cheat |
-| 1036 | `fog_enableskybox` | `false` | (not in dump) | Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation | absent from captured dump; status unresolved |
+| 925 | `snd_diffusor_simd` | `true` | `false` | Audio | developmentonly |
+| 926 | `snd_enable_subgraph_corenull_passthrough` | `false` | `true` | Audio | developmentonly |
+| 927 | `snd_mixahead` | `0.01` | `0.001` | Audio | archive |
+| 928 | `snd_occlusion_bounces` | `0` | `1` | Audio | replicated, cheat |
+| 929 | `snd_occlusion_rays` | `0` | `4` | Audio | replicated, cheat |
+| 931 | `snd_steamaudio_num_threads` | `4` | `2` | Audio | cheat |
+| 932 | `snd_steamaudio_reverb_order_rendering` | `0` | `1` | Audio | developmentonly |
+| 938 | `csm_cascade0_override_dist` | `0` | `-1` | Csm Shadows | cheat |
+| 939 | `csm_cascade1_override_dist` | `0` | `-1` | Csm Shadows | cheat |
+| 940 | `csm_cascade2_override_dist` | `0` | `-1` | Csm Shadows | cheat |
+| 941 | `csm_cascade3_override_dist` | `0` | `-1` | Csm Shadows | cheat |
+| 942 | `csm_max_dist_between_caster_and_receiver` | `0` | `15000` | Csm Shadows | cheat |
+| 943 | `csm_max_num_cascades_override` | `2` | `-1` | Csm Shadows | developmentonly |
+| 944 | `csm_max_visible_dist` | `0` | `7500` | Csm Shadows | cheat |
+| 945 | `csm_res_override_0` | `1` | `0` | Csm Shadows | cheat |
+| 946 | `csm_res_override_1` | `1` | `0` | Csm Shadows | cheat |
+| 947 | `csm_res_override_2` | `1` | `0` | Csm Shadows | cheat |
+| 948 | `csm_res_override_3` | `1` | `0` | Csm Shadows | cheat |
+| 953 | `ik_constraints_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
+| 954 | `ik_debug_dogleg3bone_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
+| 955 | `ik_debug_fabrik_backwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
+| 956 | `ik_debug_fabrik_forwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
+| 957 | `ik_enable` | `false` | `true` | Disabling Inverse Kinematics | replicated, cheat |
+| 958 | `ik_fabrik_backwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
+| 959 | `ik_fabrik_forwards_enabled` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
+| 960 | `ik_planetilt_enable` | `false` | `true` | Disabling Inverse Kinematics | replicated, developmentonly |
+| 964 | `animgraph_footlock_calculate_tilt` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
+| 965 | `animgraph_footlock_enabled` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
+| 966 | `animgraph_footlock_ground_roll` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
+| 967 | `animgraph_footlock_hip_offset_enable` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
+| 968 | `animgraph_footlock_ik_enable` | `false` | `true` | Disabling Animgraph Stuff | replicated, cheat |
+| 969 | `animgraph_footlock_trace_ground_enabled` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
+| 970 | `animgraph_footlock_use_hip_shift` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
+| 971 | `animgraph_slowdownonslopes_enabled` | `false` | `true` | Disabling Animgraph Stuff | replicated, developmentonly |
+| 1036 | `fog_enable` | `false` | `true` | Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation | cheat |
 | 1037 | `volume_fog_enable_jitter` | `false` | `true` | Convars You Shouldn't/Can't Mess With But I Want to Maintain the Documentation | cheat |
-| 1060 | `citadel_npc_force_animate_every_tick` | `false` | (not in dump) | Commands we cannot change but I want to maintain documentation for | absent from captured dump; status unresolved |
-| 1073 | `ai_async_queue_max_jobs` | `1` | `-1` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1074 | `citadel_ai_path_pathing_time_ms_per_tick` | `20` | `0.5` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1075 | `ai_foot_sweep_enable` | `false` | `true` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1076 | `ai_gather_conditions_async` | `true` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1077 | `ai_lod_auto_enabled` | `true` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1078 | `ai_strong_optimizations_no_checkstand` | `1` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1079 | `ai_think_interval` | `0.3` | `0.1` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1080 | `ai_think_interval_lod_low` | `1` | `0.5` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1081 | `ai_think_interval_lod_med` | `0.4` | `0.25` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1082 | `ai_think_interval_lod_very_low` | `2` | `1` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1083 | `ai_use_async_ragdoll_fixup` | `true` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
-| 1084 | `ai_motor_max_state_time_active` | `0` | `6` | ai_ Commands | cheat, gamedll-only registration |
-| 1087 | `citadel_action_refresh_interval` | `0.11` | `0.1` | citadel_ Commands | developmentonly |
-| 1088 | `citadel_damage_indicator_height` | `10` | `120` | citadel_ Commands | developmentonly |
-| 1089 | `citadel_damage_indicator_radius` | `1` | `300` | citadel_ Commands | developmentonly |
-| 1090 | `citadel_damage_indicator_width` | `10` | `120` | citadel_ Commands | developmentonly |
-| 1091 | `citadel_enable_new_ping_particle` | `true` | (not in dump) | citadel_ Commands | absent from captured dump; status unresolved |
-| 1092 | `citadel_fibonnaci_sphere_trace_los_max` | `80` | `160` | citadel_ Commands | replicated, developmentonly |
-| 1093 | `citadel_hud_objective_health_idle_timeout` | `0` | `7` | citadel_ Commands | developmentonly |
-| 1094 | `citadel_minimap_overlap_scan_distance` | `0` | `12.5` | citadel_ Commands |  |
-| 1096 | `citadel_player_outline_enemies` | `false` | `true` | citadel_ Commands | developmentonly, gameinfo_cannot_override |
-| 1097 | `citadel_portrait_unit_ag2_enable` | `false` | (not in dump) | citadel_ Commands | absent from captured dump; status unresolved |
-| 1098 | `citadel_use_pvs_for_players` | `true` | `false` | citadel_ Commands | developmentonly, gamedll-only registration |
-| 1102 | `cl_phys_animated_hierarchy` | `false` | `true` | cl_ Commands | developmentonly |
-| 1103 | `cl_phys_networked_start_sleep` | `true` | `false` | cl_ Commands | developmentonly |
-| 1105 | `cl_ragdoll_default_scale` | `0` | `1` | cl_ Commands | developmentonly |
-| 1108 | `lb_allow_time_sliced_shadow_map_rendering` | `false` | (not in dump) | lb_ Commands | absent from captured dump; status unresolved |
-| 1109 | `lb_bin_slices` | `0` | `8192` | lb_ Commands | developmentonly |
-| 1110 | `lb_csm_cross_fade_override` | `0` | `-1` | lb_ Commands | developmentonly |
-| 1111 | `lb_csm_distance_fade_override` | `0` | `-1` | lb_ Commands | developmentonly |
-| 1112 | `lb_csm_receiver_plane_depth_bias` | `0` | `0.000015` | lb_ Commands | developmentonly |
-| 1113 | `lb_csm_receiver_plane_depth_bias_transmissive_backface` | `0` | `0.00015` | lb_ Commands | developmentonly |
-| 1114 | `lb_cubemap_normalization_roughness_begin` | `0.01` | `0.1` | lb_ Commands | developmentonly |
-| 1115 | `lb_dynamic_shadow_penumbra` | `false` | `true` | lb_ Commands | developmentonly |
-| 1116 | `lb_dynamic_shadow_resolution_quantization` | `8` | `64` | lb_ Commands | developmentonly |
-| 1117 | `lb_enable_fog_mixed_shadows` | `false` | `true` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
-| 1118 | `lb_enable_lights` | `0` | `true` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
-| 1119 | `lb_enable_newsum` | `false` | (not in dump) | lb_ Commands | absent from captured dump; status unresolved |
-| 1120 | `lb_max_visible_barn_lights_override` | `1` | `-1` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
-| 1121 | `lb_mixed_shadows` | `false` | `true` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
-| 1122 | `lb_precomputed_shadowmap_enable` | `false` | `true` | lb_ Commands | developmentonly |
-| 1123 | `lb_shadow_map_cull_empty_mixed` | `true` | `false` | lb_ Commands | cheat, gameinfo_cannot_override |
-| 1124 | `lb_shadow_texture_height_override` | `16` | `-1` | lb_ Commands | developmentonly |
-| 1125 | `lb_shadow_texture_width_override` | `16` | `-1` | lb_ Commands | developmentonly |
-| 1128 | `r_aoproxy_cull_dist` | `0.01` | `12` | r_ Commands | developmentonly |
-| 1129 | `r_arealights` | `false` | `true` | r_ Commands | developmentonly |
-| 1130 | `r_character_decal_monitor_render_res` | `64` | `512` | r_ Commands | developmentonly |
-| 1132 | `r_citadel_fog_quality` | `0` | `1` | r_ Commands | developmentonly |
-| 1133 | `r_citadel_fsr_enable_mip_bias` | `false` | `true` | r_ Commands | developmentonly |
-| 1134 | `r_citadel_shadowdb` | `8` | `2048` | r_ Commands | developmentonly |
-| 1135 | `r_citadel_ssao_denoise_passes` | `0` | (not in dump) | r_ Commands | absent from captured dump; status unresolved |
-| 1136 | `r_citadel_ssao_radius` | `0` | (not in dump) | r_ Commands | absent from captured dump; status unresolved |
-| 1137 | `r_enable_cubemap_fog` | `false` | `true` | r_ Commands | cheat, developmentonly, gameinfo_cannot_override |
-| 1138 | `r_enable_gradient_fog` | `false` | `true` | r_ Commands | cheat, developmentonly, gameinfo_cannot_override |
-| 1139 | `r_enable_volume_fog` | `false` | `true` | r_ Commands | cheat, developmentonly, gameinfo_cannot_override |
-| 1140 | `r_hair_indirect_transmittance` | `false` | `true` | r_ Commands | developmentonly |
-| 1141 | `r_hair_shadowtile` | `false` | `true` | r_ Commands | developmentonly |
-| 1142 | `r_haircull_percent` | `100` | `-1` | r_ Commands | cheat, developmentonly |
-| 1143 | `r_impacts_alt_orientation` | `false` | `true` | r_ Commands | developmentonly |
-| 1144 | `r_late_particle_job_sync` | `1` | `false` | r_ Commands | developmentonly |
-| 1145 | `r_monitor_3dskybox` | `0` | `true` | r_ Commands | developmentonly |
-| 1146 | `r_morphing_enabled` | `false` | `true` | r_ Commands | cheat |
-| 1147 | `r_ropetranslucent` | `false` | `true` | r_ Commands | developmentonly |
-| 1148 | `r_smooth_morph_normals` | `false` | `true` | r_ Commands |  |
-| 1149 | `r_ssao_blur` | `false` | `true` | r_ Commands | developmentonly |
-| 1151 | `r_texture_lod_scale` | `8` | `1` | r_ Commands | cheat, gameinfo_cannot_override |
-| 1153 | `r_texture_pool_reduce_rate` | `512` | `256` | r_ Commands | developmentonly |
-| 1154 | `r_texture_pool_size` | `6400` | `1600` | r_ Commands | developmentonly |
-| 1156 | `r_texture_stream_resolution_bias` | `0.01` | (not in dump) | r_ Commands | absent from captured dump; status unresolved |
-| 1157 | `r_world_wind_frequency_grass` | `0` | `0.03` | r_ Commands | developmentonly |
-| 1158 | `r_world_wind_frequency_trees` | `0` | `0.003` | r_ Commands | developmentonly |
-| 1162 | `rope_collide` | `0` | `1` | rope_ Commands | developmentonly |
-| 1163 | `rope_smooth_enlarge` | `0` | `1.4` | rope_ Commands | developmentonly |
-| 1164 | `rope_smooth_maxalpha` | `0` | `0.5` | rope_ Commands | developmentonly |
-| 1165 | `rope_smooth_maxalphawidth` | `0` | `1.75` | rope_ Commands | developmentonly |
-| 1166 | `rope_smooth_minalpha` | `0` | `0.2` | rope_ Commands | developmentonly |
-| 1167 | `rope_smooth_minwidth` | `0` | `0.3` | rope_ Commands | developmentonly |
-| 1168 | `rope_subdiv` | `0` | `2` | rope_ Commands | developmentonly |
-| 1169 | `rope_wind_dist` | `0` | `1000` | rope_ Commands | developmentonly |
-| 1172 | `sc_aggregate_gpu_vis_culling` | `true` | (not in dump) | sc_ Commands | absent from captured dump; status unresolved |
-| 1174 | `sc_clutter_density_full_size` | `0.5` | `0.0075` | sc_ Commands | developmentonly |
-| 1175 | `sc_clutter_density_none_size` | `1` | `0.0035` | sc_ Commands | developmentonly |
-| 1176 | `sc_disable_spotlight_shadows` | `1` | `false` | sc_ Commands | cheat, gameinfo_cannot_override |
-| 1177 | `sc_dithered_lod_transition_amt` | `0` | `0.075` | sc_ Commands | developmentonly |
-| 1178 | `sc_hdr_enabled_override` | `0` | `-1` | sc_ Commands | developmentonly |
-| 1179 | `sc_instanced_mesh_enable` | `false` | `true` | sc_ Commands | cheat, developmentonly |
-| 1180 | `sc_instanced_mesh_gpu_density_culling` | `false` | `true` | sc_ Commands | developmentonly |
-| 1181 | `sc_max_framebuffer_copies_per_layer` | `0` | `1` | sc_ Commands | developmentonly |
-| 1186 | `con_enable` | `true` | `false` | Misc Testing Commands | archive |
-| 1187 | `dsd_slow_cpu` | `1` | (not in dump) | Misc Testing Commands | absent from captured dump; status unresolved |
-| 1188 | `dsp_volume` | `0` | `0.8` | Misc Testing Commands | archive |
-| 1189 | `fx_drawmetalspark` | `false` | `true` | Misc Testing Commands | developmentonly |
-| 1190 | `mat_tonemap_bloom_scale` | `0` | `-1` | Misc Testing Commands | cheat |
-| 1191 | `minimap_update_rate_hz` | `10` | `30` | Misc Testing Commands | developmentonly, gamedll-only registration |
-| 1192 | `nav_obstruction_async_update` | `true` | `false` | Misc Testing Commands | developmentonly, gamedll-only registration |
-| 1193 | `panorama_transition_time_factor` | `2` | `1` | Misc Testing Commands | developmentonly |
-| 1194 | `skeleton_instance_lod_optimization` | `true` | `false` | Misc Testing Commands | replicated, developmentonly |
-| 1195 | `snd_steamaudio_ir_duration` | `1.0` | `2` | Misc Testing Commands | cheat |
-| 1196 | `snd_steamaudio_reverb_update_rate` | `10` | `30` | Misc Testing Commands | developmentonly |
-| 1197 | `snd_use_baked_occlusion` | `1` | `0` | Misc Testing Commands | replicated, cheat |
-| 1199 | `steam_inputhandler_enabled` | `false` | `true` | Misc Testing Commands | developmentonly, duplicate assignments; runtime precedence unverified |
-| 1200 | `sv_hide_ent_in_pvs` | `1` | `-1` | Misc Testing Commands | developmentonly, gamedll-only registration |
-| 1201 | `sv_remove_ent_from_pvs` | `1` | `0` | Misc Testing Commands | developmentonly, gamedll-only registration |
-| 1202 | `sv_waterdist` | `0` | `12` | Misc Testing Commands | replicated, developmentonly |
-| 1203 | `tv_enable_delta_frames` | `false` | `true` | Misc Testing Commands |  |
-| 1204 | `update_voices_low_priority` | `true` | `false` | Misc Testing Commands | developmentonly |
-| 1205 | `vis_sunlight_enable` | `false` | `true` | Misc Testing Commands | cheat, developmentonly |
-| 1206 | `wind_system_default_resolution_xy` | `0` | `256` | Misc Testing Commands | developmentonly |
-| 1207 | `wind_system_temporal_smoothing` | `false` | `true` | Misc Testing Commands | developmentonly |
-| 1314 | `fps_max` | `0` | `120` | Valve stock tail | archive, stock assignments: 400 |
+| 1056 | `citadel_npc_force_animate_every_tick` | `false` | (not in dump) | Commands we cannot change but I want to maintain documentation for | absent from captured dump; status unresolved |
+| 1066 | `ai_async_queue_max_jobs` | `1` | `-1` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1067 | `citadel_ai_path_pathing_time_ms_per_tick` | `20` | `0.5` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1068 | `ai_foot_sweep_enable` | `false` | `true` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1069 | `ai_gather_conditions_async` | `true` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1070 | `ai_lod_auto_enabled` | `true` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1071 | `ai_strong_optimizations_no_checkstand` | `1` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1072 | `ai_think_interval` | `0.3` | `0.1` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1073 | `ai_think_interval_lod_low` | `1` | `0.5` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1074 | `ai_think_interval_lod_med` | `0.4` | `0.25` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1075 | `ai_think_interval_lod_very_low` | `2` | `1` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1076 | `ai_use_async_ragdoll_fixup` | `true` | `false` | ai_ Commands | developmentonly, gamedll-only registration |
+| 1077 | `ai_motor_max_state_time_active` | `0` | `6` | ai_ Commands | cheat, gamedll-only registration |
+| 1080 | `citadel_action_refresh_interval` | `0.11` | `0.1` | citadel_ Commands | developmentonly |
+| 1081 | `citadel_damage_indicator_height` | `10` | `120` | citadel_ Commands | developmentonly |
+| 1082 | `citadel_damage_indicator_radius` | `1` | `300` | citadel_ Commands | developmentonly |
+| 1083 | `citadel_damage_indicator_width` | `10` | `120` | citadel_ Commands | developmentonly |
+| 1084 | `citadel_enable_new_ping_particle` | `true` | (not in dump) | citadel_ Commands | absent from captured dump; status unresolved |
+| 1085 | `citadel_fibonnaci_sphere_trace_los_max` | `80` | `160` | citadel_ Commands | replicated, developmentonly |
+| 1086 | `citadel_minimap_overlap_scan_distance` | `0` | `12.5` | citadel_ Commands |  |
+| 1087 | `citadel_player_outline_enemies` | `false` | `true` | citadel_ Commands | developmentonly, gameinfo_cannot_override |
+| 1088 | `citadel_portrait_unit_ag2_enable` | `false` | (not in dump) | citadel_ Commands | absent from captured dump; status unresolved |
+| 1089 | `citadel_use_pvs_for_players` | `true` | `false` | citadel_ Commands | developmentonly, gamedll-only registration |
+| 1093 | `cl_phys_animated_hierarchy` | `false` | `true` | cl_ Commands | developmentonly |
+| 1094 | `cl_phys_networked_start_sleep` | `true` | `false` | cl_ Commands | developmentonly |
+| 1096 | `cl_ragdoll_default_scale` | `0` | `1` | cl_ Commands | developmentonly |
+| 1099 | `lb_allow_time_sliced_shadow_map_rendering` | `false` | (not in dump) | lb_ Commands | absent from captured dump; status unresolved |
+| 1100 | `lb_bin_slices` | `0` | `8192` | lb_ Commands | developmentonly |
+| 1101 | `lb_csm_cross_fade_override` | `0` | `-1` | lb_ Commands | developmentonly |
+| 1102 | `lb_csm_distance_fade_override` | `0` | `-1` | lb_ Commands | developmentonly |
+| 1103 | `lb_csm_receiver_plane_depth_bias` | `0` | `0.000015` | lb_ Commands | developmentonly |
+| 1104 | `lb_csm_receiver_plane_depth_bias_transmissive_backface` | `0` | `0.00015` | lb_ Commands | developmentonly |
+| 1105 | `lb_cubemap_normalization_roughness_begin` | `0.01` | `0.1` | lb_ Commands | developmentonly |
+| 1106 | `lb_dynamic_shadow_penumbra` | `false` | `true` | lb_ Commands | developmentonly |
+| 1107 | `lb_dynamic_shadow_resolution_quantization` | `8` | `64` | lb_ Commands | developmentonly |
+| 1108 | `lb_enable_fog_mixed_shadows` | `false` | `true` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
+| 1109 | `lb_enable_lights` | `0` | `true` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
+| 1110 | `lb_enable_newsum` | `false` | (not in dump) | lb_ Commands | absent from captured dump; status unresolved |
+| 1111 | `lb_max_visible_barn_lights_override` | `1` | `-1` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
+| 1112 | `lb_mixed_shadows` | `false` | `true` | lb_ Commands | cheat, developmentonly, gameinfo_cannot_override |
+| 1113 | `lb_precomputed_shadowmap_enable` | `false` | `true` | lb_ Commands | developmentonly |
+| 1114 | `lb_shadow_map_cull_empty_mixed` | `true` | `false` | lb_ Commands | cheat, gameinfo_cannot_override |
+| 1115 | `lb_shadow_texture_height_override` | `16` | `-1` | lb_ Commands | developmentonly |
+| 1116 | `lb_shadow_texture_width_override` | `16` | `-1` | lb_ Commands | developmentonly |
+| 1119 | `r_aoproxy_cull_dist` | `0.01` | `12` | r_ Commands | developmentonly |
+| 1120 | `r_arealights` | `false` | `true` | r_ Commands | developmentonly |
+| 1121 | `r_character_decal_monitor_render_res` | `64` | `512` | r_ Commands | developmentonly |
+| 1123 | `r_citadel_fog_quality` | `0` | `1` | r_ Commands | developmentonly |
+| 1124 | `r_citadel_fsr_enable_mip_bias` | `false` | `true` | r_ Commands | developmentonly |
+| 1125 | `r_citadel_shadowdb` | `8` | `2048` | r_ Commands | developmentonly |
+| 1126 | `r_citadel_ssao_denoise_passes` | `0` | (not in dump) | r_ Commands | absent from captured dump; status unresolved |
+| 1127 | `r_citadel_ssao_radius` | `0` | (not in dump) | r_ Commands | absent from captured dump; status unresolved |
+| 1128 | `r_enable_cubemap_fog` | `false` | `true` | r_ Commands | cheat, developmentonly, gameinfo_cannot_override |
+| 1129 | `r_enable_gradient_fog` | `false` | `true` | r_ Commands | cheat, developmentonly, gameinfo_cannot_override |
+| 1130 | `r_enable_volume_fog` | `false` | `true` | r_ Commands | cheat, developmentonly, gameinfo_cannot_override |
+| 1131 | `r_hair_indirect_transmittance` | `false` | `true` | r_ Commands | developmentonly |
+| 1132 | `r_hair_shadowtile` | `false` | `true` | r_ Commands | developmentonly |
+| 1133 | `r_haircull_percent` | `100` | `-1` | r_ Commands | cheat, developmentonly |
+| 1134 | `r_impacts_alt_orientation` | `false` | `true` | r_ Commands | developmentonly |
+| 1135 | `r_late_particle_job_sync` | `1` | `false` | r_ Commands | developmentonly |
+| 1136 | `r_monitor_3dskybox` | `0` | `true` | r_ Commands | developmentonly |
+| 1137 | `r_morphing_enabled` | `false` | `true` | r_ Commands | cheat |
+| 1138 | `r_ropetranslucent` | `false` | `true` | r_ Commands | developmentonly |
+| 1139 | `r_smooth_morph_normals` | `false` | `true` | r_ Commands |  |
+| 1140 | `r_ssao_blur` | `false` | `true` | r_ Commands | developmentonly |
+| 1142 | `r_texture_lod_scale` | `8` | `1` | r_ Commands | cheat, gameinfo_cannot_override |
+| 1144 | `r_texture_pool_reduce_rate` | `512` | `256` | r_ Commands | developmentonly |
+| 1145 | `r_texture_pool_size` | `6400` | `1600` | r_ Commands | developmentonly |
+| 1147 | `r_texture_stream_resolution_bias` | `0.01` | (not in dump) | r_ Commands | absent from captured dump; status unresolved |
+| 1148 | `r_world_wind_frequency_grass` | `0` | `0.03` | r_ Commands | developmentonly |
+| 1149 | `r_world_wind_frequency_trees` | `0` | `0.003` | r_ Commands | developmentonly |
+| 1153 | `rope_collide` | `0` | `1` | rope_ Commands | developmentonly |
+| 1154 | `rope_smooth_enlarge` | `0` | `1.4` | rope_ Commands | developmentonly |
+| 1155 | `rope_smooth_maxalpha` | `0` | `0.5` | rope_ Commands | developmentonly |
+| 1156 | `rope_smooth_maxalphawidth` | `0` | `1.75` | rope_ Commands | developmentonly |
+| 1157 | `rope_smooth_minalpha` | `0` | `0.2` | rope_ Commands | developmentonly |
+| 1158 | `rope_smooth_minwidth` | `0` | `0.3` | rope_ Commands | developmentonly |
+| 1159 | `rope_subdiv` | `0` | `2` | rope_ Commands | developmentonly |
+| 1160 | `rope_wind_dist` | `0` | `1000` | rope_ Commands | developmentonly |
+| 1163 | `sc_aggregate_gpu_vis_culling` | `true` | (not in dump) | sc_ Commands | absent from captured dump; status unresolved |
+| 1165 | `sc_clutter_density_full_size` | `0.5` | `0.0075` | sc_ Commands | developmentonly |
+| 1166 | `sc_clutter_density_none_size` | `1` | `0.0035` | sc_ Commands | developmentonly |
+| 1167 | `sc_disable_spotlight_shadows` | `1` | `false` | sc_ Commands | cheat, gameinfo_cannot_override |
+| 1168 | `sc_dithered_lod_transition_amt` | `0` | `0.075` | sc_ Commands | developmentonly |
+| 1169 | `sc_hdr_enabled_override` | `0` | `-1` | sc_ Commands | developmentonly |
+| 1170 | `sc_instanced_mesh_enable` | `false` | `true` | sc_ Commands | cheat, developmentonly |
+| 1171 | `sc_instanced_mesh_gpu_density_culling` | `false` | `true` | sc_ Commands | developmentonly |
+| 1172 | `sc_max_framebuffer_copies_per_layer` | `0` | `1` | sc_ Commands | developmentonly |
+| 1177 | `con_enable` | `true` | `false` | Misc Testing Commands | archive |
+| 1178 | `dsd_slow_cpu` | `1` | (not in dump) | Misc Testing Commands | absent from captured dump; status unresolved |
+| 1179 | `dsp_volume` | `0` | `0.8` | Misc Testing Commands | archive |
+| 1180 | `fx_drawmetalspark` | `false` | `true` | Misc Testing Commands | developmentonly |
+| 1181 | `mat_tonemap_bloom_scale` | `0` | `-1` | Misc Testing Commands | cheat |
+| 1182 | `minimap_update_rate_hz` | `10` | `30` | Misc Testing Commands | developmentonly, gamedll-only registration |
+| 1183 | `nav_obstruction_async_update` | `true` | `false` | Misc Testing Commands | developmentonly, gamedll-only registration |
+| 1184 | `panorama_transition_time_factor` | `2` | `1` | Misc Testing Commands | developmentonly |
+| 1185 | `skeleton_instance_lod_optimization` | `true` | `false` | Misc Testing Commands | replicated, developmentonly |
+| 1186 | `snd_steamaudio_ir_duration` | `1.0` | `2` | Misc Testing Commands | cheat |
+| 1187 | `snd_steamaudio_reverb_update_rate` | `10` | `30` | Misc Testing Commands | developmentonly |
+| 1188 | `snd_use_baked_occlusion` | `1` | `0` | Misc Testing Commands | replicated, cheat |
+| 1190 | `steam_inputhandler_enabled` | `false` | `true` | Misc Testing Commands | developmentonly, duplicate assignments; runtime precedence unverified |
+| 1191 | `sv_hide_ent_in_pvs` | `1` | `-1` | Misc Testing Commands | developmentonly, gamedll-only registration |
+| 1192 | `sv_remove_ent_from_pvs` | `1` | `0` | Misc Testing Commands | developmentonly, gamedll-only registration |
+| 1193 | `sv_waterdist` | `0` | `12` | Misc Testing Commands | replicated, developmentonly |
+| 1194 | `tv_enable_delta_frames` | `false` | `true` | Misc Testing Commands |  |
+| 1195 | `update_voices_low_priority` | `true` | `false` | Misc Testing Commands | developmentonly |
+| 1196 | `vis_sunlight_enable` | `false` | `true` | Misc Testing Commands | cheat, developmentonly |
+| 1197 | `wind_system_default_resolution_xy` | `0` | `256` | Misc Testing Commands | developmentonly |
+| 1198 | `wind_system_temporal_smoothing` | `false` | `true` | Misc Testing Commands | developmentonly |
+| 1299 | `fps_max` | `0` | `120` | Valve stock tail | archive, stock assignments: 400 |
 
 ## Assignments matching Valve stock (63)
 
@@ -354,63 +352,63 @@ depends on startup processing and other authorities.
 | 814 | `cl_aggregate_particles` | `true` | `false` | Particles | developmentonly, duplicate assignments; runtime precedence unverified |
 | 825 | `r_particle_batch_collections` | `true` | `false` | Particles | developmentonly, duplicate assignments; runtime precedence unverified |
 | 880 | `cl_interp_parallel` | `true` | `false` | Misc | developmentonly, duplicate assignments; runtime precedence unverified |
-| 1227 | `sv_minrate` | `98304` | `5000` | Valve stock tail / Networking - General | replicated |
-| 1228 | `sv_maxunlag` | `0.500` | `1` | Valve stock tail / Networking - General | gamedll-only registration |
-| 1229 | `sv_maxunlag_player` | `0.200` | `-1` | Valve stock tail / Networking - General | gamedll-only registration |
-| 1230 | `sv_lagcomp_filterbyviewangle` | `false` | `true` | Valve stock tail / Networking - General | cheat, gamedll-only registration |
-| 1231 | `cl_usesocketsforloopback` | `1` | `false` | Valve stock tail / Networking - General | developmentonly |
-| 1232 | `cl_poll_network_early` | `0` | `true` | Valve stock tail / Networking - General |  |
-| 1233 | `cq_buffer_bloat_msecs_max` | `120` | `150` | Valve stock tail / Networking - General | replicated |
-| 1237 | `cl_tickpacket_desired_queuelength` | `1` | `0` | Valve stock tail / Networking - Induced latency (pred offset) |  |
-| 1238 | `cl_async_usercmd_send_disabled_recvmargin_min` | `0.5` | (not in dump) | Valve stock tail / Networking - Induced latency (pred offset) | absent from captured dump; status unresolved |
-| 1239 | `cl_clock_buffer_ticks` | `1` | `0` | Valve stock tail / Networking - Induced latency (pred offset) | developmentonly |
-| 1240 | `cl_interp_ratio` | `0` | `2` | Valve stock tail / Networking - Induced latency (pred offset) |  |
-| 1241 | `cl_async_usercmd_send` | `false` | `true` | Valve stock tail / Networking - Induced latency (pred offset) | developmentonly |
-| 1244 | `nav_gen_connect_dist_a` | `2.0` | `1` | Valve stock tail / Nav gen | cheat, gamedll-only registration |
-| 1247 | `panorama_classes_perf_warning_threshold_ms` | `0.75` | (not in dump) | Valve stock tail / Spew warning when adding/removing classes to/from the top of the hierarchy | absent from captured dump; status unresolved |
-| 1250 | `panorama_js_minidumps` | `1` | `false` | Valve stock tail / Panorama - enable minidumps on JS exceptions | developmentonly |
-| 1252 | `panorama_disable_render_target_cache` | `0` | `true` | Valve stock tail / Enable the render target cache optimization | developmentonly |
-| 1258 | `snd_steamaudio_load_reverb_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
-| 1259 | `snd_steamaudio_load_pathing_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
-| 1260 | `snd_steamaudio_load_occlusion_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
-| 1262 | `snd_steamaudio_load_materials_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
-| 1267 | `snd_steamaudio_pathing_order` | `3` | `1` | Valve stock tail / Steam Audio project specific convars | cheat |
-| 1268 | `snd_steamaudio_pathing_order_rendering` | `3` | `1` | Valve stock tail / Steam Audio project specific convars | cheat |
-| 1271 | `snd_steamaudio_reverb_level_db` | `-6` | `-3` | Valve stock tail / Steam Audio project specific convars |  |
-| 1274 | `snd_steamaudio_max_probes_customdata_dimensions` | `100000` | `4294967295` | Valve stock tail / Steam Audio project specific convars | developmentonly |
-| 1276 | `snd_steamaudio_baked_dimensions_probelookup_usealternate` | `1` | `false` | Valve stock tail / Steam Audio project specific convars | developmentonly |
-| 1278 | `snd_steamaudio_custombake_dimensions_outsidefield_bake_enabled` | `0` | `true` | Valve stock tail / Steam Audio project specific convars | developmentonly |
-| 1279 | `snd_steamaudio_custombake_dimensions_smallsizefield_bake_enabled` | `0` | `true` | Valve stock tail / Steam Audio project specific convars | developmentonly |
-| 1280 | `snd_steamaudio_dimensions_max_ray_length` | `2500` | `0` | Valve stock tail / Steam Audio project specific convars | developmentonly |
-| 1281 | `cl_disconnect_soundevent` | `citadel.convar.stop_all_game_layer_soundevents` | `core.stop_all_soundevents` | Valve stock tail / Steam Audio project specific convars | developmentonly |
-| 1282 | `snd_event_browser_default_stack` | `citadel_default_3d` | (not in dump) | Valve stock tail / Steam Audio project specific convars | absent from captured dump; status unresolved |
-| 1285 | `voice_in_process` | `1` | `false` | Valve stock tail / voip | developmentonly |
-| 1288 | `snd_report_audio_nan` | `1` | `false` | Valve stock tail / Sound debugging |  |
-| 1291 | `snd_sos_max_event_base_depth` | `10` | `4` | Valve stock tail / Audio system settings | developmentonly |
-| 1292 | `sos_use_guid_filter` | `1` | `false` | Valve stock tail / Audio system settings | replicated, developmentonly |
-| 1301 | `voice_input_stallout` | `0.5` | `2` | Valve stock tail |  |
-| 1303 | `audio_enclosure_calc_enabled` | `0` | `true` | Valve stock tail | replicated, developmentonly |
-| 1305 | `sc_layer_batch_threshold_fullsort` | `20` | `80` | Valve stock tail | developmentonly, duplicate assignments; runtime precedence unverified |
-| 1308 | `iv_parallel_restore` | `1` | `false` | Valve stock tail / Perf/Parallelism | developmentonly |
-| 1311 | `disable_source_soundscape_trace` | `1` | `false` | Valve stock tail / For perf reasons, since we don't use source-based DSP | developmentonly, gamedll-only registration |
-| 1317 | `in_button_double_press_window` | `0.3` | `0.22` | Valve stock tail | replicated, developmentonly |
-| 1320 | `snd_ui_positional` | `1` | `false` | Valve stock tail / Convars that control spatialization of UI audio | cheat, developmentonly, duplicate assignments; runtime precedence unverified |
-| 1321 | `snd_ui_spatialization_spread` | `2.4` | `1` | Valve stock tail / Convars that control spatialization of UI audio | cheat, developmentonly |
-| 1324 | `snd_envelope_rate` | `100.0` | `0.9` | Valve stock tail / sound volume rate change limiting | cheat |
-| 1325 | `snd_soundmixer_update_maximum_frame_rate` | `0` | `10` | Valve stock tail / sound volume rate change limiting | cheat |
-| 1339 | `cl_joystick_enabled` | `0` | `true` | Valve stock tail | archive |
-| 1340 | `panorama_joystick_enabled` | `0` | `true` | Valve stock tail | archive |
-| 1342 | `snd_event_browser_focus_events` | `true` | (not in dump) | Valve stock tail | absent from captured dump; status unresolved |
-| 1344 | `cl_max_particle_pvs_aabb_edge_length` | `100` | `0` | Valve stock tail |  |
-| 1347 | `cl_aggregate_particles` | `true` | `false` | Valve stock tail / Particles | developmentonly, duplicate assignments; runtime precedence unverified |
-| 1348 | `r_particle_batch_collections` | `1` | `false` | Valve stock tail / Particles | developmentonly, duplicate assignments; runtime precedence unverified |
-| 1352 | `r_add_views_in_pre_output` | `1` | `false` | Valve stock tail | developmentonly |
-| 1355 | `lb_cubemap_normalization_max` | `1` | `32` | Valve stock tail / Disable Cubemap Brightening | developmentonly |
-| 1357 | `update_all_keyframed_in_spatial_partition_update` | `0` | `true` | Valve stock tail | replicated, developmentonly |
-| 1358 | `parallel_update_surrounding_bounds_in_spatial_partition_update` | `1` | `false` | Valve stock tail | replicated, developmentonly |
-| 1359 | `always_perform_full_spatial_partition_update` | `1` | `false` | Valve stock tail | replicated, developmentonly |
-| 1360 | `cl_interp_parallel` | `1` | `false` | Valve stock tail | developmentonly, duplicate assignments; runtime precedence unverified |
-| 1361 | `parallel_perform_invalidate_physics` | `1` | `false` | Valve stock tail | replicated, developmentonly |
-| 1364 | `cl_updaterate` | `128` | `20` | Valve stock tail | archive |
-| 1365 | `sv_parallel_checktransmit` | `2` | `0` | Valve stock tail | gamedll-only registration |
-| 1366 | `net_gather_child_fields_only` | `1` | `false` | Valve stock tail |  |
+| 1212 | `sv_minrate` | `98304` | `5000` | Valve stock tail / Networking - General | replicated |
+| 1213 | `sv_maxunlag` | `0.500` | `1` | Valve stock tail / Networking - General | gamedll-only registration |
+| 1214 | `sv_maxunlag_player` | `0.200` | `-1` | Valve stock tail / Networking - General | gamedll-only registration |
+| 1215 | `sv_lagcomp_filterbyviewangle` | `false` | `true` | Valve stock tail / Networking - General | cheat, gamedll-only registration |
+| 1216 | `cl_usesocketsforloopback` | `1` | `false` | Valve stock tail / Networking - General | developmentonly |
+| 1217 | `cl_poll_network_early` | `0` | `true` | Valve stock tail / Networking - General |  |
+| 1218 | `cq_buffer_bloat_msecs_max` | `120` | `150` | Valve stock tail / Networking - General | replicated |
+| 1222 | `cl_tickpacket_desired_queuelength` | `1` | `0` | Valve stock tail / Networking - Induced latency (pred offset) |  |
+| 1223 | `cl_async_usercmd_send_disabled_recvmargin_min` | `0.5` | (not in dump) | Valve stock tail / Networking - Induced latency (pred offset) | absent from captured dump; status unresolved |
+| 1224 | `cl_clock_buffer_ticks` | `1` | `0` | Valve stock tail / Networking - Induced latency (pred offset) | developmentonly |
+| 1225 | `cl_interp_ratio` | `0` | `2` | Valve stock tail / Networking - Induced latency (pred offset) |  |
+| 1226 | `cl_async_usercmd_send` | `false` | `true` | Valve stock tail / Networking - Induced latency (pred offset) | developmentonly |
+| 1229 | `nav_gen_connect_dist_a` | `2.0` | `1` | Valve stock tail / Nav gen | cheat, gamedll-only registration |
+| 1232 | `panorama_classes_perf_warning_threshold_ms` | `0.75` | (not in dump) | Valve stock tail / Spew warning when adding/removing classes to/from the top of the hierarchy | absent from captured dump; status unresolved |
+| 1235 | `panorama_js_minidumps` | `1` | `false` | Valve stock tail / Panorama - enable minidumps on JS exceptions | developmentonly |
+| 1237 | `panorama_disable_render_target_cache` | `0` | `true` | Valve stock tail / Enable the render target cache optimization | developmentonly |
+| 1243 | `snd_steamaudio_load_reverb_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
+| 1244 | `snd_steamaudio_load_pathing_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
+| 1245 | `snd_steamaudio_load_occlusion_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
+| 1247 | `snd_steamaudio_load_materials_data` | `0` | `true` | Valve stock tail / Steam audio loading data | developmentonly |
+| 1252 | `snd_steamaudio_pathing_order` | `3` | `1` | Valve stock tail / Steam Audio project specific convars | cheat |
+| 1253 | `snd_steamaudio_pathing_order_rendering` | `3` | `1` | Valve stock tail / Steam Audio project specific convars | cheat |
+| 1256 | `snd_steamaudio_reverb_level_db` | `-6` | `-3` | Valve stock tail / Steam Audio project specific convars |  |
+| 1259 | `snd_steamaudio_max_probes_customdata_dimensions` | `100000` | `4294967295` | Valve stock tail / Steam Audio project specific convars | developmentonly |
+| 1261 | `snd_steamaudio_baked_dimensions_probelookup_usealternate` | `1` | `false` | Valve stock tail / Steam Audio project specific convars | developmentonly |
+| 1263 | `snd_steamaudio_custombake_dimensions_outsidefield_bake_enabled` | `0` | `true` | Valve stock tail / Steam Audio project specific convars | developmentonly |
+| 1264 | `snd_steamaudio_custombake_dimensions_smallsizefield_bake_enabled` | `0` | `true` | Valve stock tail / Steam Audio project specific convars | developmentonly |
+| 1265 | `snd_steamaudio_dimensions_max_ray_length` | `2500` | `0` | Valve stock tail / Steam Audio project specific convars | developmentonly |
+| 1266 | `cl_disconnect_soundevent` | `citadel.convar.stop_all_game_layer_soundevents` | `core.stop_all_soundevents` | Valve stock tail / Steam Audio project specific convars | developmentonly |
+| 1267 | `snd_event_browser_default_stack` | `citadel_default_3d` | (not in dump) | Valve stock tail / Steam Audio project specific convars | absent from captured dump; status unresolved |
+| 1270 | `voice_in_process` | `1` | `false` | Valve stock tail / voip | developmentonly |
+| 1273 | `snd_report_audio_nan` | `1` | `false` | Valve stock tail / Sound debugging |  |
+| 1276 | `snd_sos_max_event_base_depth` | `10` | `4` | Valve stock tail / Audio system settings | developmentonly |
+| 1277 | `sos_use_guid_filter` | `1` | `false` | Valve stock tail / Audio system settings | replicated, developmentonly |
+| 1286 | `voice_input_stallout` | `0.5` | `2` | Valve stock tail |  |
+| 1288 | `audio_enclosure_calc_enabled` | `0` | `true` | Valve stock tail | replicated, developmentonly |
+| 1290 | `sc_layer_batch_threshold_fullsort` | `20` | `80` | Valve stock tail | developmentonly, duplicate assignments; runtime precedence unverified |
+| 1293 | `iv_parallel_restore` | `1` | `false` | Valve stock tail / Perf/Parallelism | developmentonly |
+| 1296 | `disable_source_soundscape_trace` | `1` | `false` | Valve stock tail / For perf reasons, since we don't use source-based DSP | developmentonly, gamedll-only registration |
+| 1302 | `in_button_double_press_window` | `0.3` | `0.22` | Valve stock tail | replicated, developmentonly |
+| 1305 | `snd_ui_positional` | `1` | `false` | Valve stock tail / Convars that control spatialization of UI audio | cheat, developmentonly, duplicate assignments; runtime precedence unverified |
+| 1306 | `snd_ui_spatialization_spread` | `2.4` | `1` | Valve stock tail / Convars that control spatialization of UI audio | cheat, developmentonly |
+| 1309 | `snd_envelope_rate` | `100.0` | `0.9` | Valve stock tail / sound volume rate change limiting | cheat |
+| 1310 | `snd_soundmixer_update_maximum_frame_rate` | `0` | `10` | Valve stock tail / sound volume rate change limiting | cheat |
+| 1324 | `cl_joystick_enabled` | `0` | `true` | Valve stock tail | archive |
+| 1325 | `panorama_joystick_enabled` | `0` | `true` | Valve stock tail | archive |
+| 1327 | `snd_event_browser_focus_events` | `true` | (not in dump) | Valve stock tail | absent from captured dump; status unresolved |
+| 1329 | `cl_max_particle_pvs_aabb_edge_length` | `100` | `0` | Valve stock tail |  |
+| 1332 | `cl_aggregate_particles` | `true` | `false` | Valve stock tail / Particles | developmentonly, duplicate assignments; runtime precedence unverified |
+| 1333 | `r_particle_batch_collections` | `1` | `false` | Valve stock tail / Particles | developmentonly, duplicate assignments; runtime precedence unverified |
+| 1337 | `r_add_views_in_pre_output` | `1` | `false` | Valve stock tail | developmentonly |
+| 1340 | `lb_cubemap_normalization_max` | `1` | `32` | Valve stock tail / Disable Cubemap Brightening | developmentonly |
+| 1342 | `update_all_keyframed_in_spatial_partition_update` | `0` | `true` | Valve stock tail | replicated, developmentonly |
+| 1343 | `parallel_update_surrounding_bounds_in_spatial_partition_update` | `1` | `false` | Valve stock tail | replicated, developmentonly |
+| 1344 | `always_perform_full_spatial_partition_update` | `1` | `false` | Valve stock tail | replicated, developmentonly |
+| 1345 | `cl_interp_parallel` | `1` | `false` | Valve stock tail | developmentonly, duplicate assignments; runtime precedence unverified |
+| 1346 | `parallel_perform_invalidate_physics` | `1` | `false` | Valve stock tail | replicated, developmentonly |
+| 1349 | `cl_updaterate` | `128` | `20` | Valve stock tail | archive |
+| 1350 | `sv_parallel_checktransmit` | `2` | `0` | Valve stock tail | gamedll-only registration |
+| 1351 | `net_gather_child_fields_only` | `1` | `false` | Valve stock tail |  |

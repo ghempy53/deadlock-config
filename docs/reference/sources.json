@@ -14,12 +14,12 @@
       "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi"
     },
     "upstream-README.md": {
-      "sha256": "d98a81b5ccf6353db22e124aeebeefd6711791dbd5166cdf40a2efbb85c3dc6a",
-      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/69a665c27524040072e66f7b7b4afdc57c6b320e/README.md"
+      "sha256": "2b8814578a752d9c7d4ead4df09654bcc1cfadef2a3789c88caf991b18ecc354",
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/1dbf67941fff4c92881119f92b548f13c5175225/README.md"
     },
     "upstream-gameinfo.gi": {
-      "sha256": "635b2c8caca2cee617ca85ab4764168c868d7be92f6cd5220c4e75be88229dab",
-      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/69a665c27524040072e66f7b7b4afdc57c6b320e/Sqooky%27s%20.gi/gameinfo.gi"
+      "sha256": "d5e4e6678eabfc61280f518367428fed555720d3924f5c24c623595be8df4619",
+      "url": "https://raw.githubusercontent.com/Sqooky/OptimizationLock/1dbf67941fff4c92881119f92b548f13c5175225/Sqooky%27s%20.gi/gameinfo.gi"
     }
   },
   "historical_provenance": {
@@ -186,9 +186,9 @@
     "stable-config/v1.4/gameinfo.gi": "3fb7a0c6ee8d2cd3daee851780fda0afd8e80076f99538e31e4787317b790141"
   },
   "previous_valve_commit": "a94d8b455203f12b176de75a5598dd8e6e8a94d4",
-  "refresh_note": "2026-11-02: upstream repinned to OptimizationLock main 69a665c for the stable 3.8 sync (3.8 introduced at 01992b4ddd1b0dd2ff493770da2246f1e46dac05; 69a665c only adds media/ted.png, gameinfo.gi byte-identical). Valve data keeps the build 6814 capture: build 6841 (GameTracking e7cb6805c7925c119bd4781789528543f59b28bd, source revision 11195544) has a hash-identical stock gameinfo; its dump adds 14 ConVars and changes no default, range or flag of any name either config uses; steam.inf changed.",
-  "repository_commit": "aca0d3186b16c50cf4a850d206a98e941d6c6eb3",
-  "research_date": "2026-11-02",
+  "refresh_note": "2026-11-04: upstream repinned to OptimizationLock main 1dbf679 for the 3.9 sync of both configs (3.9 introduced at 7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e; 334b09b realigned it and moved the END OF CONFIG banner; later commits only touch translations and credits). Valve data keeps the build 6814 capture: through build 6849 (GameTracking 3e41d1b1f0e5d618857da005aef1e8aec5a657ca, source revision 11205876) the stock gameinfo is hash-identical; the dump changed at build 6826 and again at 6849 without touching any name either config or upstream 3.9 sets.",
+  "repository_commit": "b5d6835ce955a80ddc987b0f912949be98c6598f",
+  "research_date": "2026-11-04",
   "source_revision": "11160503",
   "supplementary_evidence": {
     "engine2_strings.txt": {
@@ -236,7 +236,7 @@
       "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/worldrenderer_strings.txt"
     }
   },
-  "upstream_commit": "69a665c27524040072e66f7b7b4afdc57c6b320e",
+  "upstream_commit": "1dbf67941fff4c92881119f92b548f13c5175225",
   "valve_commit": "e95b323b88d48c3fc4d80066ee603fb75060b248",
   "valve_provenance": "SteamTracking is a third-party mirror of captured Valve files and console help, not Valve publication or source code."
 }

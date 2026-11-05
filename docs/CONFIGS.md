@@ -8,17 +8,18 @@ The [complete setting reference](SETTING-REFERENCE.md) covers every active assig
 engine section and mod path in both files. It distinguishes console registration defaults, stock file
 assignments and upstream values, and records uncertainty rather than treating an inherited comment as proof.
 
-## Current provenance (reviewed 2026-11-02)
+## Current provenance (reviewed 2026-11-04)
 
-- **Stable:** OptimizationLock **3.8**, pinned to `main` @
-  [`69a665c27524040072e66f7b7b4afdc57c6b320e`](https://github.com/Sqooky/OptimizationLock/tree/69a665c27524040072e66f7b7b4afdc57c6b320e)
-  (3.8 landed in [`01992b4`](https://github.com/Sqooky/OptimizationLock/commit/01992b4ddd1b0dd2ff493770da2246f1e46dac05);
-  `69a665c` only adds an image), pulled in on November 2 at the owner's request with every owner setting below kept.
-  Before that: 3.7.1 hotfix (`cbb7041`, October 27) plus the HUD readability block copied from experimental the same day.
-  Stable and experimental are byte-identical (SHA-256 `8c43fccb…4088b478`).
+- **Stable:** OptimizationLock **3.9**, pinned to `main` @
+  [`1dbf67941fff4c92881119f92b548f13c5175225`](https://github.com/Sqooky/OptimizationLock/tree/1dbf67941fff4c92881119f92b548f13c5175225)
+  (3.9 landed in [`7d2cb2b`](https://github.com/Sqooky/OptimizationLock/commit/7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e);
+  `334b09b` realigned it and moved the `END OF CONFIG` banner; later commits only touch translations and credits),
+  pulled in on November 4 at the owner's request with every owner setting below kept. Before that: 3.8 (`69a665c`,
+  November 2), then the soul-orb debug drawing turned off on November 3, and 3.7.1 hotfix (`cbb7041`, October 27).
+  Stable and experimental are byte-identical (SHA-256 `7103614d…61286bc7`).
   **v1.4 is the last freeze (3.6), not the current file.**
-- **Experimental:** synced to 3.8 the same day at the owner's request. It was still byte-identical to the pre-sync
-  stable file, so the same rebuild gives exactly the new stable file. History: reset October 27 to a byte-identical
+- **Experimental:** synced to 3.8 and 3.9 together with stable at the owner's request; both syncs rebuilt one file
+  for both configs. History: reset October 27 to a byte-identical
   copy of stable (SHA-256 `7f96df95…d895600f`), then the HUD block tuned on it
   ([PR #95](https://github.com/ghempy53/deadlock-config/pull/95), [PR #96](https://github.com/ghempy53/deadlock-config/pull/96))
   became stable's (`ace9da9e…7906d5e5`). Earlier restarts were October 15 from stable v1.2
@@ -34,7 +35,8 @@ assignments and upstream values, and records uncertainty rather than treating an
   October 30): it adds 14 ConVars and changes 9 others, none of which either config sets. Every later build through
   6841 ([GameTracking e7cb680](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e7cb6805c7925c119bd4781789528543f59b28bd),
   November 2) and 6842 ([GameTracking fc53d8b](https://github.com/SteamTracking/GameTracking-Deadlock/tree/fc53d8b267db6949b03d3fdb975dff4c9028f77b),
-  November 2) has that same dump and the pin's stock file, so the pin stands.
+  November 2) has that same dump and the pin's stock file. Build 6849 ([GameTracking 3e41d1b](https://github.com/SteamTracking/GameTracking-Deadlock/tree/3e41d1b1f0e5d618857da005aef1e8aec5a657ca),
+  November 4) has the pin's stock file and changes one more ConVar, which neither config sets, so the pin stands.
 - **Owner test (2026-11-03):** on build 6842 the 3.8 file ran in the hideout and Sandbox and through one full
   matchmade Street Brawl, so matchmaking accepted the 3.8 engine edits for that mode; a regular 6v6 match is untested.
   Owner-reported, one session; details in [research/OWNER-TEST-2026-11-03.md](research/OWNER-TEST-2026-11-03.md).
@@ -58,7 +60,7 @@ assignments and upstream values, and records uncertainty rather than treating an
 | `r_particle_min_timestep` | disabled, declared default 0 | Owner-reported bisect in [PR #70](https://github.com/ghempy53/deadlock-config/pull/70), propagated in [PR #71](https://github.com/ghempy53/deadlock-config/pull/71); no measured cost recorded |
 | `r_aspectratio` | 2.54 in both | Owner request October 27 after deleting the FOV mod: the 110 FOV equivalent with the in-game slider at 90 (value = 1.778 x tan(FOV/2)). Supersedes [PR #84](https://github.com/ghempy53/deadlock-config/pull/84); upstream pulls keep 2.54 whatever upstream sets. Untested in game |
 | Damage-number lifetime override | absent | Owner removed it in [PR #74](https://github.com/ghempy53/deadlock-config/pull/74); saved/menu values still matter |
-| `citadel_orb_debug_draw_state` | disabled in both, Valve default -1 | Owner report 2026-11-03: red and green debug circles on soul orbs in the hideout soul-confirm practice, only on local servers (the ConVar is server-side). Most likely visible since 3.8 set `debug_draw_enable` back to true, its default. Upstream pulls keep it disabled. Owner-confirmed the same day after installing stable: no circles in the soul-confirm practice |
+| `citadel_orb_debug_draw_state` | disabled in both, Valve default -1 | Owner report 2026-11-03: red and green debug circles on soul orbs in the hideout soul-confirm practice, only on local servers (the ConVar is server-side). Most likely visible since 3.8 set `debug_draw_enable` back to true, its default. OptimizationLock 3.9 disabled it too (commented -1; its comment says it gives a debug sphere to the soul orb in the player hideout), and both configs now carry that upstream line. Upstream pulls keep it disabled. Owner-confirmed the same day after installing stable: no circles in the soul-confirm practice |
 | HUD readability block (section 3.1, 10 lines) | listed below | Owner request October 27: bigger, higher enemy health numbers and small damage numbers, tuned in experimental ([PR #95](https://github.com/ghempy53/deadlock-config/pull/95), [PR #96](https://github.com/ghempy53/deadlock-config/pull/96)) and copied to stable. Upstream pulls keep the block. First values owner-tested; current values untested in game |
 
 The owner's active renderer is **DX11**, selected by a Steam launch option. Vulkan keys remain inherited;
@@ -70,12 +72,26 @@ measurement established by this audit.
 
 ## Actual variant differences
 
-None: both files are byte-identical since both took OptimizationLock 3.8 on November 2. New experiments start
+None: both files are byte-identical since both took OptimizationLock 3.9 on November 4. New experiments start
 from here and get a dated [changelog](CHANGES.txt) entry.
+
+What the 3.9 sync changed in both files (evidence in the changelog):
+
+| Setting | 3.8 (before) | 3.9 (both now) | Note |
+| --- | --- | --- | --- |
+| `snd_boxverb_simd` | false | true | Valve's default; upstream expects lower audio CPU cost |
+| `snd_diffusor_simd` | (unset, default false) | true | Valve's SIMD diffusor path, off by default; listen for crackle or dropouts |
+| `snd_mixahead` | 0.05 | 0.01 | Archived: on the owner's profile the saved 0.001 overrides this file (2026-11-03 probe) |
+| `citadel_hud_objective_health_idle_timeout` | 0 | (removed, default 7) | Upstream notes 0 caused issues with patron health bars |
+| `fog_enableskybox` | false | (removed) | Absent from the dump |
+| `citadel_orb_debug_draw_state` | disabled (owner line) | disabled (upstream line, -1) | Still off |
+
+Upstream also moved the `END OF CONFIG` banner to just before the stock tail, removed one comment and realigned
+whitespace. The table below records the earlier 3.8 sync.
 
 What the 3.8 sync changed in both files (“default” is Valve's registered value; evidence in the changelog):
 
-| Setting | 3.7.1-based (before) | 3.8 (both now) | Note |
+| Setting | 3.7.1-based (before) | 3.8 | Note |
 | --- | --- | --- | --- |
 | `r_farz`, `r_mapextents` | 7000 | 6800 | Nearer far clip plane; pop-in risk |
 | `thread_pool_option` | 2 | 4 | Default -1; upstream comment maps 4 to `auto_threads` |
