@@ -26,6 +26,11 @@ assignments and upstream values, and records uncertainty rather than treating an
   ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)) and October 17 from stable 3.5.3
   ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)); the differences that accumulated since are recorded
   in the [changelog](CHANGES.txt) and git history.
+- **Upstream check (2026-11-17):** `main` had moved to
+  [`c876906`](https://github.com/Sqooky/OptimizationLock/tree/c876906a64043c1c5b189a8697ee6f8ce96af3e6) (November 11)
+  through three commits that touch only `README.md` and the readme of Kaizuchaneru's minimum-spec config.
+  `utils/upstream_diff.py` reports the upstream `gameinfo.gi` byte-identical to the 3.9 pin, so neither config
+  changed and the pin stays `1dbf679`.
 - **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
   [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
   Matching `PGIVersion` is observed. Build 6821
