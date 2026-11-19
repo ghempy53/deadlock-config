@@ -13,7 +13,7 @@ Errors (exit 1):
 Warnings:
   - duplicate direct ConVars assignments (runtime precedence unverified; --strict-duplicates makes these errors)
   - a double quote inside comment text in ConVars (other than a commented-out setting's own value)
-  - an active tweak line has no [def: X] tag
+  - an active tweak line has no [def: X] tag (OptimizationLock 4.0's leading `default: X |` comment column counts)
 """
 
 from __future__ import annotations

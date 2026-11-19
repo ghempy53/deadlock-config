@@ -8,17 +8,19 @@ The [complete setting reference](SETTING-REFERENCE.md) covers every active assig
 engine section and mod path in both files. It distinguishes console registration defaults, stock file
 assignments and upstream values, and records uncertainty rather than treating an inherited comment as proof.
 
-## Current provenance (reviewed 2026-11-04)
+## Current provenance (reviewed 2026-11-19)
 
-- **Stable:** OptimizationLock **3.9**, pinned to `main` @
-  [`1dbf67941fff4c92881119f92b548f13c5175225`](https://github.com/Sqooky/OptimizationLock/tree/1dbf67941fff4c92881119f92b548f13c5175225)
-  (3.9 landed in [`7d2cb2b`](https://github.com/Sqooky/OptimizationLock/commit/7d2cb2b171c77637e4b4c7d276efc6ff9c036d4e);
-  `334b09b` realigned it and moved the `END OF CONFIG` banner; later commits only touch translations and credits),
-  pulled in on November 4 at the owner's request with every owner setting below kept. Before that: 3.8 (`69a665c`,
-  November 2), then the soul-orb debug drawing turned off on November 3, and 3.7.1 hotfix (`cbb7041`, October 27).
-  Stable and experimental are byte-identical (SHA-256 `7103614d…61286bc7`).
+- **Stable:** OptimizationLock **4.0**, pinned to `main` @
+  [`48f2ed1f4c2235bdcde665f3ae0c47c62b904eca`](https://github.com/Sqooky/OptimizationLock/tree/48f2ed1f4c2235bdcde665f3ae0c47c62b904eca)
+  (4.0 landed in [`18e46c6`](https://github.com/Sqooky/OptimizationLock/commit/18e46c6af3cb965efd3a8f96ff74e6b6ac0c52a5)
+  with a comment reformat; [`21fcc62`](https://github.com/Sqooky/OptimizationLock/commit/21fcc624b6de605493f804cdd08eee2960428c72)
+  made the last `gameinfo.gi` change; `48f2ed1` only deletes an addon symlink), pulled in on November 19 at the
+  owner's request with every owner setting below kept. Before that: 3.9 (`1dbf679`, November 4; rechecked November 17
+  at `c876906`, which only touched readmes), 3.8 (`69a665c`, November 2), then the soul-orb debug drawing turned off
+  on November 3, and 3.7.1 hotfix (`cbb7041`, October 27).
+  Stable and experimental are byte-identical (SHA-256 `880be41a…559ba3bb`).
   **v1.4 is the last freeze (3.6), not the current file.**
-- **Experimental:** synced to 3.8 and 3.9 together with stable at the owner's request; both syncs rebuilt one file
+- **Experimental:** synced to 3.8, 3.9 and 4.0 together with stable at the owner's request; each sync rebuilt one file
   for both configs. History: reset October 27 to a byte-identical
   copy of stable (SHA-256 `7f96df95…d895600f`), then the HUD block tuned on it
   ([PR #95](https://github.com/ghempy53/deadlock-config/pull/95), [PR #96](https://github.com/ghempy53/deadlock-config/pull/96))
@@ -26,11 +28,6 @@ assignments and upstream values, and records uncertainty rather than treating an
   ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)) and October 17 from stable 3.5.3
   ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)); the differences that accumulated since are recorded
   in the [changelog](CHANGES.txt) and git history.
-- **Upstream check (2026-11-17):** `main` had moved to
-  [`c876906`](https://github.com/Sqooky/OptimizationLock/tree/c876906a64043c1c5b189a8697ee6f8ce96af3e6) (November 11)
-  through three commits that touch only `README.md` and the readme of Kaizuchaneru's minimum-spec config.
-  `utils/upstream_diff.py` reports the upstream `gameinfo.gi` byte-identical to the 3.9 pin, so neither config
-  changed and the pin stays `1dbf679`.
 - **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
   [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
   Matching `PGIVersion` is observed. Build 6821
@@ -42,6 +39,12 @@ assignments and upstream values, and records uncertainty rather than treating an
   November 2) and 6842 ([GameTracking fc53d8b](https://github.com/SteamTracking/GameTracking-Deadlock/tree/fc53d8b267db6949b03d3fdb975dff4c9028f77b),
   November 2) has that same dump and the pin's stock file. Build 6849 ([GameTracking 3e41d1b](https://github.com/SteamTracking/GameTracking-Deadlock/tree/3e41d1b1f0e5d618857da005aef1e8aec5a657ca),
   November 4) has the pin's stock file and changes one more ConVar, which neither config sets, so the pin stands.
+  Build 6857 (November 5) changes the dump again, still touching no name either config or upstream 4.0 sets.
+  **Stock-file drift since build 6863** ([GameTracking 10c3b1d](https://github.com/SteamTracking/GameTracking-Deadlock/tree/10c3b1ddab77d16249cc5fbeffffad84315432cc),
+  November 18): Valve raised the stock tail's `rate/min` and `sv_minrate` from 98304 to 133120. Upstream 4.0 predates
+  it, so both configs keep 98304 for now; adopting it is deferred to a Valve-data repin. Build 6864
+  ([GameTracking 5546341](https://github.com/SteamTracking/GameTracking-Deadlock/tree/554634163b8c55d4e3fde34fe1a277357bcd3d98))
+  is the latest checked.
 - **Owner test (2026-11-03):** on build 6842 the 3.8 file ran in the hideout and Sandbox and through one full
   matchmade Street Brawl, so matchmaking accepted the 3.8 engine edits for that mode; a regular 6v6 match is untested.
   Owner-reported, one session; details in [research/OWNER-TEST-2026-11-03.md](research/OWNER-TEST-2026-11-03.md).
@@ -77,8 +80,18 @@ measurement established by this audit.
 
 ## Actual variant differences
 
-None: both files are byte-identical since both took OptimizationLock 3.9 on November 4. New experiments start
+None: both files are byte-identical since both took OptimizationLock 4.0 on November 19. New experiments start
 from here and get a dated [changelog](CHANGES.txt) entry.
+
+What the 4.0 sync changed in both files (evidence in the changelog):
+
+| Setting | 3.9 (before) | 4.0 (both now) | Note |
+| --- | --- | --- | --- |
+| `citadel_use_pvs_for_players` | true | false | Valve's default. Upstream says true culls players at certain distances, hurting very long-range shots. Server-side and developmentonly, so it acts only on local servers (hideout, Sandbox, bot games) |
+
+Everything else in 4.0 is comment text: upstream's formatter replaced the `[def: X]` tags with a leading
+`default: X |` column (the repository tools read both), and the version text says 4.0. The owner lines keep their
+own comments. The tables below record the earlier 3.9 and 3.8 syncs.
 
 What the 3.9 sync changed in both files (evidence in the changelog):
 
@@ -92,7 +105,7 @@ What the 3.9 sync changed in both files (evidence in the changelog):
 | `citadel_orb_debug_draw_state` | disabled (owner line) | disabled (upstream line, -1) | Still off |
 
 Upstream also moved the `END OF CONFIG` banner to just before the stock tail, removed one comment and realigned
-whitespace. The table below records the earlier 3.8 sync.
+whitespace.
 
 What the 3.8 sync changed in both files (“default” is Valve's registered value; evidence in the changelog):
 
