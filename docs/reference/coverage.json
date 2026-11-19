@@ -1,7 +1,7 @@
 {
   "configs_sha256": {
-    "experimental": "7103614dc641743b4529d30bcc973888069c95b33ebba8fa51a2aa7561286bc7",
-    "stable": "7103614dc641743b4529d30bcc973888069c95b33ebba8fa51a2aa7561286bc7"
+    "experimental": "880be41afcfb1c949278c9a974b8fbbab294bbb205b35c1adb815279559ba3bb",
+    "stable": "880be41afcfb1c949278c9a974b8fbbab294bbb205b35c1adb815279559ba3bb"
   },
   "counts": {
     "audio": 61,
@@ -2875,7 +2875,15 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 623,
+      "line": 621,
+      "path": "ConVars/citadel_use_pvs_for_players",
+      "value": "false",
+      "variant": "stable"
+    },
+    {
+      "active": true,
+      "kind": "scalar",
+      "line": 624,
       "path": "ConVars/r_farz",
       "value": "6800",
       "variant": "stable"
@@ -2883,7 +2891,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 624,
+      "line": 625,
       "path": "ConVars/r_mapextents",
       "value": "6800",
       "variant": "stable"
@@ -2891,7 +2899,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 627,
+      "line": 628,
       "path": "ConVars/citadel_unit_status_delta_decay_delay",
       "value": "0",
       "variant": "stable"
@@ -2899,7 +2907,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 628,
+      "line": 629,
       "path": "ConVars/citadel_unit_status_delta_decay_rate",
       "value": "10",
       "variant": "stable"
@@ -2907,7 +2915,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 629,
+      "line": 630,
       "path": "ConVars/citadel_unit_status_recent_damage_time",
       "value": "inf",
       "variant": "stable"
@@ -2915,7 +2923,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 632,
+      "line": 633,
       "path": "ConVars/citadel_boss_glow_disabled",
       "value": "1",
       "variant": "stable"
@@ -2923,7 +2931,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 633,
+      "line": 634,
       "path": "ConVars/citadel_damage_offscreen_indicator_disabled",
       "value": "true",
       "variant": "stable"
@@ -2931,7 +2939,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 634,
+      "line": 635,
       "path": "ConVars/citadel_unit_status_allies_see_thru_walls",
       "value": "true",
       "variant": "stable"
@@ -2939,7 +2947,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 638,
+      "line": 639,
       "path": "ConVars/r_aspectratio",
       "value": "2.54",
       "variant": "stable"
@@ -2947,7 +2955,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 641,
+      "line": 642,
       "path": "ConVars/panorama_render_target_cache_max_size",
       "value": "134217728",
       "variant": "stable"
@@ -2955,7 +2963,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 642,
+      "line": 643,
       "path": "ConVars/panorama_min_comp_layer_cache_cost",
       "value": "0",
       "variant": "stable"
@@ -2963,7 +2971,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 643,
+      "line": 644,
       "path": "ConVars/citadel_damage_report_enable",
       "value": "1",
       "variant": "stable"
@@ -2971,7 +2979,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 644,
+      "line": 645,
       "path": "ConVars/citadel_damage_text_batching_window_ability",
       "value": "1000",
       "variant": "stable"
@@ -2979,7 +2987,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 645,
+      "line": 646,
       "path": "ConVars/citadel_distance_mouse_move_for_minimap_drawing",
       "value": "1",
       "variant": "stable"
@@ -2987,7 +2995,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 646,
+      "line": 647,
       "path": "ConVars/citadel_hideout_ball_show_juggle_count",
       "value": "1",
       "variant": "stable"
@@ -2995,7 +3003,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 647,
+      "line": 648,
       "path": "ConVars/citadel_hideout_ball_show_juggle_fx",
       "value": "1",
       "variant": "stable"
@@ -3003,7 +3011,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 648,
+      "line": 649,
       "path": "ConVars/citadel_hud_objective_health_debug_show_midboss",
       "value": "false",
       "variant": "stable"
@@ -3011,7 +3019,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 649,
+      "line": 650,
       "path": "ConVars/citadel_hud_objective_health_enabled",
       "value": "2",
       "variant": "stable"
@@ -3019,7 +3027,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 650,
+      "line": 651,
       "path": "ConVars/citadel_minimap_trooper_size",
       "value": "2",
       "variant": "stable"
@@ -3027,7 +3035,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 651,
+      "line": 652,
       "path": "ConVars/citadel_show_minimap_reveal_indicators",
       "value": "true",
       "variant": "stable"
@@ -3035,7 +3043,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 652,
+      "line": 653,
       "path": "ConVars/citadel_show_old_neutral_camp_icons",
       "value": "false",
       "variant": "stable"
@@ -3043,7 +3051,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 653,
+      "line": 654,
       "path": "ConVars/citadel_unit_status_old_update_rate",
       "value": "15",
       "variant": "stable"
@@ -3051,7 +3059,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 654,
+      "line": 655,
       "path": "ConVars/citadel_unit_status_single_bar_mode",
       "value": "false",
       "variant": "stable"
@@ -3059,7 +3067,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 655,
+      "line": 656,
       "path": "ConVars/citadel_unit_status_stamina_low_pips",
       "value": "7",
       "variant": "stable"
@@ -3067,7 +3075,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 656,
+      "line": 657,
       "path": "ConVars/minimap_trooper_update_rate_hz",
       "value": "2",
       "variant": "stable"
@@ -3075,7 +3083,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 657,
+      "line": 658,
       "path": "ConVars/panorama_comp_layer_lru_lifetime",
       "value": "4",
       "variant": "stable"
@@ -3083,7 +3091,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 658,
+      "line": 659,
       "path": "ConVars/v8_maximum_heap_size_mb",
       "value": "1024",
       "variant": "stable"
@@ -3091,7 +3099,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 659,
+      "line": 660,
       "path": "ConVars/citadel_unit_status_hide_names",
       "value": "true",
       "variant": "stable"
@@ -3099,7 +3107,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 662,
+      "line": 663,
       "path": "ConVars/citadel_unit_status_max_distance_scale",
       "value": "1.3",
       "variant": "stable"
@@ -3107,7 +3115,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 663,
+      "line": 664,
       "path": "ConVars/citadel_unit_status_offset_player_z_offset_adjustment",
       "value": "48",
       "variant": "stable"
@@ -3115,7 +3123,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 664,
+      "line": 665,
       "path": "ConVars/citadel_damage_text_height_offset_near",
       "value": "134",
       "variant": "stable"
@@ -3123,7 +3131,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 665,
+      "line": 666,
       "path": "ConVars/citadel_damage_text_height_offset_far",
       "value": "214",
       "variant": "stable"
@@ -3131,7 +3139,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 666,
+      "line": 667,
       "path": "ConVars/citadel_damage_text_new_bullet_offset_x",
       "value": "45",
       "variant": "stable"
@@ -3139,7 +3147,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 667,
+      "line": 668,
       "path": "ConVars/citadel_damage_text_new_ability_offset_x",
       "value": "35",
       "variant": "stable"
@@ -3147,7 +3155,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 668,
+      "line": 669,
       "path": "ConVars/citadel_damage_text_new_melee_offset_x",
       "value": "35",
       "variant": "stable"
@@ -3155,7 +3163,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 669,
+      "line": 670,
       "path": "ConVars/citadel_damage_text_new_pure_offset_x",
       "value": "40",
       "variant": "stable"
@@ -3163,7 +3171,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 670,
+      "line": 671,
       "path": "ConVars/citadel_damage_text_dynamic_emphasis",
       "value": "false",
       "variant": "stable"
@@ -3171,7 +3179,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 671,
+      "line": 672,
       "path": "ConVars/citadel_damage_text_follow_healthbar_scale",
       "value": "false",
       "variant": "stable"
@@ -3179,7 +3187,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 674,
+      "line": 675,
       "path": "ConVars/lb_enable_stationary_lights",
       "value": "false",
       "variant": "stable"
@@ -3187,7 +3195,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 678,
+      "line": 679,
       "path": "ConVars/engine_low_latency_sleep_after_client_tick",
       "value": "false",
       "variant": "stable"
@@ -3195,7 +3203,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 679,
+      "line": 680,
       "path": "ConVars/panorama_max_fps",
       "value": "30",
       "variant": "stable"
@@ -3203,7 +3211,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 680,
+      "line": 681,
       "path": "ConVars/panorama_max_overlay_fps",
       "value": "30",
       "variant": "stable"
@@ -3211,7 +3219,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 683,
+      "line": 684,
       "path": "ConVars/citadel_camera_listening_offset",
       "value": "-1",
       "variant": "stable"
@@ -3219,7 +3227,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 684,
+      "line": 685,
       "path": "ConVars/citadel_camera_soft_collision_angle",
       "value": "75",
       "variant": "stable"
@@ -3227,7 +3235,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 685,
+      "line": 686,
       "path": "ConVars/citadel_camera_use_vmdl_flatten_horizontal",
       "value": "false",
       "variant": "stable"
@@ -3235,7 +3243,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 686,
+      "line": 687,
       "path": "ConVars/citadel_camera_wobble_disable",
       "value": "true",
       "variant": "stable"
@@ -3243,7 +3251,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 687,
+      "line": 688,
       "path": "ConVars/citadel_melee_shake_amplitude",
       "value": "0",
       "variant": "stable"
@@ -3251,7 +3259,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 688,
+      "line": 689,
       "path": "ConVars/citadel_melee_shake_duration",
       "value": "0",
       "variant": "stable"
@@ -3259,7 +3267,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 689,
+      "line": 690,
       "path": "ConVars/engine_accurate_input_processing_delta_time",
       "value": "true",
       "variant": "stable"
@@ -3267,7 +3275,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 690,
+      "line": 691,
       "path": "ConVars/r_citadel_clip_sphere_min_opacity",
       "value": "0",
       "variant": "stable"
@@ -3275,7 +3283,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 693,
+      "line": 694,
       "path": "ConVars/cam_idealdelta",
       "value": "0",
       "variant": "stable"
@@ -3283,7 +3291,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 694,
+      "line": 695,
       "path": "ConVars/cam_ideallag",
       "value": "0",
       "variant": "stable"
@@ -3291,7 +3299,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 695,
+      "line": 696,
       "path": "ConVars/citadel_camera_height",
       "value": "0",
       "variant": "stable"
@@ -3299,7 +3307,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 696,
+      "line": 697,
       "path": "ConVars/citadel_camera_height_ceiling_distance",
       "value": "0",
       "variant": "stable"
@@ -3307,7 +3315,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 697,
+      "line": 698,
       "path": "ConVars/citadel_camera_listening_offset",
       "value": "-1",
       "variant": "stable"
@@ -3315,7 +3323,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 698,
+      "line": 699,
       "path": "ConVars/citadel_camera_pitch_default",
       "value": "0",
       "variant": "stable"
@@ -3323,7 +3331,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 699,
+      "line": 700,
       "path": "ConVars/citadel_camera_see_distance_max",
       "value": "7000",
       "variant": "stable"
@@ -3331,7 +3339,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 700,
+      "line": 701,
       "path": "ConVars/citadel_shoot_forward_offset",
       "value": "0",
       "variant": "stable"
@@ -3339,7 +3347,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 701,
+      "line": 702,
       "path": "ConVars/citadel_stuck_camera_trace_extra_length",
       "value": "0",
       "variant": "stable"
@@ -3347,7 +3355,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 702,
+      "line": 703,
       "path": "ConVars/citadel_tightcamera_alternative",
       "value": "1",
       "variant": "stable"
@@ -3355,7 +3363,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 703,
+      "line": 704,
       "path": "ConVars/nav_edit_use_camera",
       "value": "0",
       "variant": "stable"
@@ -3363,7 +3371,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 704,
+      "line": 705,
       "path": "ConVars/rpg_camera_yaw",
       "value": "0",
       "variant": "stable"
@@ -3371,7 +3379,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 707,
+      "line": 708,
       "path": "ConVars/r_texture_budget_threshold",
       "value": "0.7",
       "variant": "stable"
@@ -3379,7 +3387,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 708,
+      "line": 709,
       "path": "ConVars/r_texture_budget_update_period",
       "value": "0.5",
       "variant": "stable"
@@ -3387,7 +3395,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 709,
+      "line": 710,
       "path": "ConVars/r_texture_stream_mip_bias",
       "value": "1",
       "variant": "stable"
@@ -3395,7 +3403,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 710,
+      "line": 711,
       "path": "ConVars/r_texturefilteringquality",
       "value": "0",
       "variant": "stable"
@@ -3403,7 +3411,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 713,
+      "line": 714,
       "path": "ConVars/thread_pool_option",
       "value": "4",
       "variant": "stable"
@@ -3411,7 +3419,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 727,
+      "line": 728,
       "path": "ConVars/panorama_disable_box_shadow",
       "value": "true",
       "variant": "stable"
@@ -3419,7 +3427,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 728,
+      "line": 729,
       "path": "ConVars/citadel_unit_status_healthbar_highlight_speed",
       "value": "999",
       "variant": "stable"
@@ -3427,7 +3435,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 729,
+      "line": 730,
       "path": "ConVars/closecaption",
       "value": "false",
       "variant": "stable"
@@ -3435,7 +3443,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 730,
+      "line": 731,
       "path": "ConVars/panorama_allow_transitions",
       "value": "false",
       "variant": "stable"
@@ -3443,7 +3451,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 731,
+      "line": 732,
       "path": "ConVars/panorama_disable_blur",
       "value": "true",
       "variant": "stable"
@@ -3451,7 +3459,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 732,
+      "line": 733,
       "path": "ConVars/panorama_panel_occlusion",
       "value": "true",
       "variant": "stable"
@@ -3459,7 +3467,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 733,
+      "line": 734,
       "path": "ConVars/r_dashboard_render_quality",
       "value": "1",
       "variant": "stable"
@@ -3467,7 +3475,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 736,
+      "line": 737,
       "path": "ConVars/lb_barnlight_shadowmap_scale",
       "value": "0",
       "variant": "stable"
@@ -3475,7 +3483,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 737,
+      "line": 738,
       "path": "ConVars/lb_csm_cascade_size_override",
       "value": "1",
       "variant": "stable"
@@ -3483,7 +3491,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 738,
+      "line": 739,
       "path": "ConVars/lb_csm_draw_alpha_tested",
       "value": "0",
       "variant": "stable"
@@ -3491,7 +3499,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 739,
+      "line": 740,
       "path": "ConVars/lb_csm_draw_translucent",
       "value": "0",
       "variant": "stable"
@@ -3499,7 +3507,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 740,
+      "line": 741,
       "path": "ConVars/lb_csm_override_staticgeo_cascades",
       "value": "true",
       "variant": "stable"
@@ -3507,7 +3515,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 741,
+      "line": 742,
       "path": "ConVars/lb_csm_override_staticgeo_cascades_value",
       "value": "true",
       "variant": "stable"
@@ -3515,7 +3523,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 742,
+      "line": 743,
       "path": "ConVars/lb_dynamic_shadow_resolution_base",
       "value": "16",
       "variant": "stable"
@@ -3523,7 +3531,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 743,
+      "line": 744,
       "path": "ConVars/lb_enable_shadow_casting",
       "value": "0",
       "variant": "stable"
@@ -3531,7 +3539,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 744,
+      "line": 745,
       "path": "ConVars/lb_ssss_samples",
       "value": "0",
       "variant": "stable"
@@ -3539,7 +3547,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 745,
+      "line": 746,
       "path": "ConVars/lb_sun_csm_size_cull_threshold_texels",
       "value": "60",
       "variant": "stable"
@@ -3547,7 +3555,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 746,
+      "line": 747,
       "path": "ConVars/r_citadel_shadow_caching",
       "value": "true",
       "variant": "stable"
@@ -3555,7 +3563,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 747,
+      "line": 748,
       "path": "ConVars/r_citadel_shadow_quality",
       "value": "0",
       "variant": "stable"
@@ -3563,7 +3571,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 748,
+      "line": 749,
       "path": "ConVars/r_size_cull_threshold_shadow",
       "value": "2.4",
       "variant": "stable"
@@ -3571,7 +3579,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 749,
+      "line": 750,
       "path": "ConVars/sparseshadowtree_disable_for_viewmodel",
       "value": "1",
       "variant": "stable"
@@ -3579,7 +3587,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 750,
+      "line": 751,
       "path": "ConVars/sparseshadowtree_enable_rendering",
       "value": "0",
       "variant": "stable"
@@ -3587,7 +3595,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 753,
+      "line": 754,
       "path": "ConVars/cl_retire_low_priority_lights",
       "value": "1",
       "variant": "stable"
@@ -3595,7 +3603,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 754,
+      "line": 755,
       "path": "ConVars/mat_async_shader_load",
       "value": "1",
       "variant": "stable"
@@ -3603,7 +3611,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 755,
+      "line": 756,
       "path": "ConVars/mat_max_lighting_complexity",
       "value": "0",
       "variant": "stable"
@@ -3611,7 +3619,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 756,
+      "line": 757,
       "path": "ConVars/r_citadel_ssao_quality",
       "value": "0",
       "variant": "stable"
@@ -3619,7 +3627,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 757,
+      "line": 758,
       "path": "ConVars/r_citadel_ssao_thin_occluder_compensation",
       "value": "0",
       "variant": "stable"
@@ -3627,7 +3635,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 758,
+      "line": 759,
       "path": "ConVars/r_citadel_sun_shadow_slope_scale_depth_bias",
       "value": "0",
       "variant": "stable"
@@ -3635,7 +3643,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 759,
+      "line": 760,
       "path": "ConVars/r_distancefield_enable",
       "value": "1",
       "variant": "stable"
@@ -3643,7 +3651,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 760,
+      "line": 761,
       "path": "ConVars/r_lightmap_bicubic_filtering",
       "value": "1",
       "variant": "stable"
@@ -3651,7 +3659,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 761,
+      "line": 762,
       "path": "ConVars/r_lightmap_size",
       "value": "2048",
       "variant": "stable"
@@ -3659,7 +3667,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 762,
+      "line": 763,
       "path": "ConVars/r_lightmap_size_directional_irradiance",
       "value": "0",
       "variant": "stable"
@@ -3667,7 +3675,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 763,
+      "line": 764,
       "path": "ConVars/r_multiscattering",
       "value": "1",
       "variant": "stable"
@@ -3675,7 +3683,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 764,
+      "line": 765,
       "path": "ConVars/r_rendersun",
       "value": "0",
       "variant": "stable"
@@ -3683,7 +3691,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 765,
+      "line": 766,
       "path": "ConVars/r_ssao",
       "value": "0",
       "variant": "stable"
@@ -3691,7 +3699,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 766,
+      "line": 767,
       "path": "ConVars/r_ssao_strength",
       "value": "0",
       "variant": "stable"
@@ -3699,7 +3707,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 769,
+      "line": 770,
       "path": "ConVars/cl_disable_ragdolls",
       "value": "0",
       "variant": "stable"
@@ -3707,7 +3715,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 770,
+      "line": 771,
       "path": "ConVars/cl_ragdoll_limit",
       "value": "0",
       "variant": "stable"
@@ -3715,7 +3723,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 773,
+      "line": 774,
       "path": "ConVars/cl_fasttempentcollision",
       "value": "1000",
       "variant": "stable"
@@ -3723,7 +3731,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 774,
+      "line": 775,
       "path": "ConVars/cloth_sim_on_tick",
       "value": "0",
       "variant": "stable"
@@ -3731,7 +3739,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 775,
+      "line": 776,
       "path": "ConVars/enable_boneflex",
       "value": "0",
       "variant": "stable"
@@ -3739,7 +3747,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 776,
+      "line": 777,
       "path": "ConVars/ik_fabrik_align_chain",
       "value": "1",
       "variant": "stable"
@@ -3747,7 +3755,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 777,
+      "line": 778,
       "path": "ConVars/ik_final_fixup_enable",
       "value": "0",
       "variant": "stable"
@@ -3755,7 +3763,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 778,
+      "line": 779,
       "path": "ConVars/props_break_max_pieces_perframe",
       "value": "0",
       "variant": "stable"
@@ -3763,7 +3771,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 781,
+      "line": 782,
       "path": "ConVars/cl_show_splashes",
       "value": "0",
       "variant": "stable"
@@ -3771,7 +3779,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 782,
+      "line": 783,
       "path": "ConVars/mat_colorcorrection",
       "value": "1",
       "variant": "stable"
@@ -3779,7 +3787,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 783,
+      "line": 784,
       "path": "ConVars/r_character_decal_resolution",
       "value": "4",
       "variant": "stable"
@@ -3787,7 +3795,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 784,
+      "line": 785,
       "path": "ConVars/r_depth_of_field",
       "value": "0",
       "variant": "stable"
@@ -3795,7 +3803,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 785,
+      "line": 786,
       "path": "ConVars/r_effects_bloom",
       "value": "0",
       "variant": "stable"
@@ -3803,7 +3811,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 786,
+      "line": 787,
       "path": "ConVars/r_post_bloom",
       "value": "0",
       "variant": "stable"
@@ -3811,7 +3819,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 787,
+      "line": 788,
       "path": "ConVars/sc_clutter_enable",
       "value": "false",
       "variant": "stable"
@@ -3819,7 +3827,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 788,
+      "line": 789,
       "path": "ConVars/violence_ablood",
       "value": "0",
       "variant": "stable"
@@ -3827,7 +3835,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 789,
+      "line": 790,
       "path": "ConVars/violence_agibs",
       "value": "0",
       "variant": "stable"
@@ -3835,7 +3843,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 790,
+      "line": 791,
       "path": "ConVars/violence_hblood",
       "value": "0",
       "variant": "stable"
@@ -3843,7 +3851,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 791,
+      "line": 792,
       "path": "ConVars/violence_hgibs",
       "value": "0",
       "variant": "stable"
@@ -3851,7 +3859,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 792,
+      "line": 793,
       "path": "ConVars/volume_fog_intermediate_textures_hdr",
       "value": "false",
       "variant": "stable"
@@ -3859,7 +3867,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 797,
+      "line": 798,
       "path": "ConVars/cl_async_usercmd_send",
       "value": "true",
       "variant": "stable"
@@ -3867,7 +3875,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 798,
+      "line": 799,
       "path": "ConVars/cl_updaterate",
       "value": "128",
       "variant": "stable"
@@ -3875,7 +3883,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 799,
+      "line": 800,
       "path": "ConVars/cl_interp",
       "value": "0.01",
       "variant": "stable"
@@ -3883,7 +3891,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 800,
+      "line": 801,
       "path": "ConVars/cl_interp_ratio",
       "value": "1",
       "variant": "stable"
@@ -3891,7 +3899,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 801,
+      "line": 802,
       "path": "ConVars/cl_smoothtime",
       "value": "0.01",
       "variant": "stable"
@@ -3899,7 +3907,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 802,
+      "line": 803,
       "path": "ConVars/cl_resend",
       "value": "15",
       "variant": "stable"
@@ -3907,7 +3915,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 806,
+      "line": 807,
       "path": "ConVars/battery_saver",
       "value": "0",
       "variant": "stable"
@@ -3915,7 +3923,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 807,
+      "line": 808,
       "path": "ConVars/cpu_level",
       "value": "1",
       "variant": "stable"
@@ -3923,7 +3931,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 808,
+      "line": 809,
       "path": "ConVars/enable_priority_boost",
       "value": "true",
       "variant": "stable"
@@ -3931,7 +3939,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 809,
+      "line": 810,
       "path": "ConVars/gpu_mem_level",
       "value": "1",
       "variant": "stable"
@@ -3939,7 +3947,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 812,
+      "line": 813,
       "path": "ConVars/r_particle_mixed_resolution_viewstart",
       "value": "16",
       "variant": "stable"
@@ -3947,7 +3955,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 813,
+      "line": 814,
       "path": "ConVars/r_particle_timescale",
       "value": "1",
       "variant": "stable"
@@ -3955,7 +3963,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 814,
+      "line": 815,
       "path": "ConVars/cl_aggregate_particles",
       "value": "true",
       "variant": "stable"
@@ -3963,7 +3971,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 815,
+      "line": 816,
       "path": "ConVars/cl_particle_batch_mode",
       "value": "1",
       "variant": "stable"
@@ -3971,7 +3979,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 816,
+      "line": 817,
       "path": "ConVars/cl_particle_fallback_base",
       "value": "5",
       "variant": "stable"
@@ -3979,7 +3987,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 817,
+      "line": 818,
       "path": "ConVars/cl_particle_fallback_multiplier",
       "value": "10",
       "variant": "stable"
@@ -3987,7 +3995,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 818,
+      "line": 819,
       "path": "ConVars/cl_particle_sim_fallback_base_multiplier",
       "value": "100",
       "variant": "stable"
@@ -3995,7 +4003,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 819,
+      "line": 820,
       "path": "ConVars/cl_particle_sim_fallback_threshold_ms",
       "value": "1",
       "variant": "stable"
@@ -4003,7 +4011,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 820,
+      "line": 821,
       "path": "ConVars/r_citadel_disable_particle_lights",
       "value": "true",
       "variant": "stable"
@@ -4011,7 +4019,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 821,
+      "line": 822,
       "path": "ConVars/r_citadel_screenspace_particles_full_res",
       "value": "true",
       "variant": "stable"
@@ -4019,7 +4027,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 822,
+      "line": 823,
       "path": "ConVars/r_draw_particle_children_with_parents",
       "value": "1",
       "variant": "stable"
@@ -4027,7 +4035,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 823,
+      "line": 824,
       "path": "ConVars/r_limit_particle_job_duration",
       "value": "true",
       "variant": "stable"
@@ -4035,7 +4043,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 824,
+      "line": 825,
       "path": "ConVars/r_particle_allowprerender",
       "value": "true",
       "variant": "stable"
@@ -4043,7 +4051,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 825,
+      "line": 826,
       "path": "ConVars/r_particle_batch_collections",
       "value": "true",
       "variant": "stable"
@@ -4051,7 +4059,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 826,
+      "line": 827,
       "path": "ConVars/r_particle_fixedrandomseeds",
       "value": "true",
       "variant": "stable"
@@ -4059,7 +4067,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 827,
+      "line": 828,
       "path": "ConVars/r_particle_max_texture_layers",
       "value": "4",
       "variant": "stable"
@@ -4067,7 +4075,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 828,
+      "line": 829,
       "path": "ConVars/r_particle_min_timestep",
       "value": "0.00241",
       "variant": "stable"
@@ -4075,7 +4083,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 829,
+      "line": 830,
       "path": "ConVars/r_particle_model_per_thread_count",
       "value": "64",
       "variant": "stable"
@@ -4083,7 +4091,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 830,
+      "line": 831,
       "path": "ConVars/r_particle_skip_postsim",
       "value": "true",
       "variant": "stable"
@@ -4091,7 +4099,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 831,
+      "line": 832,
       "path": "ConVars/r_physics_particle_op_spawn_scale",
       "value": "0",
       "variant": "stable"
@@ -4099,7 +4107,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 832,
+      "line": 833,
       "path": "ConVars/r_update_particles_on_render_only_frames",
       "value": "true",
       "variant": "stable"
@@ -4107,7 +4115,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 833,
+      "line": 834,
       "path": "ConVars/r_world_wind_strength",
       "value": "0",
       "variant": "stable"
@@ -4115,7 +4123,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 836,
+      "line": 837,
       "path": "ConVars/sc_instanced_mesh_size_cull_bias",
       "value": "10",
       "variant": "stable"
@@ -4123,7 +4131,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 837,
+      "line": 838,
       "path": "ConVars/mat_viewportscale",
       "value": "0.01",
       "variant": "stable"
@@ -4131,7 +4139,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 838,
+      "line": 839,
       "path": "ConVars/sc_instanced_mesh_lod_bias",
       "value": "0.001",
       "variant": "stable"
@@ -4139,7 +4147,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 839,
+      "line": 840,
       "path": "ConVars/sc_instanced_mesh_lod_bias_shadow",
       "value": "0.001",
       "variant": "stable"
@@ -4147,7 +4155,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 840,
+      "line": 841,
       "path": "ConVars/phys_cull_internal_mesh_contacts",
       "value": "true",
       "variant": "stable"
@@ -4155,7 +4163,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 841,
+      "line": 842,
       "path": "ConVars/sc_aggregate_bvh_threshold",
       "value": "256",
       "variant": "stable"
@@ -4163,7 +4171,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 842,
+      "line": 843,
       "path": "ConVars/sc_allow_dithered_lod",
       "value": "false",
       "variant": "stable"
@@ -4171,7 +4179,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 843,
+      "line": 844,
       "path": "ConVars/sc_instanced_mesh_motion_vectors",
       "value": "0",
       "variant": "stable"
@@ -4179,7 +4187,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 844,
+      "line": 845,
       "path": "ConVars/sc_instanced_mesh_size_cull_bias_shadow",
       "value": "10",
       "variant": "stable"
@@ -4187,7 +4195,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 845,
+      "line": 846,
       "path": "ConVars/sc_layer_batch_threshold",
       "value": "256",
       "variant": "stable"
@@ -4195,7 +4203,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 846,
+      "line": 847,
       "path": "ConVars/sc_layer_batch_threshold_fullsort",
       "value": "120",
       "variant": "stable"
@@ -4203,7 +4211,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 849,
+      "line": 850,
       "path": "ConVars/sc_aggregate_indirect_draw_compaction_threshold",
       "value": "1",
       "variant": "stable"
@@ -4211,7 +4219,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 850,
+      "line": 851,
       "path": "ConVars/r_force_zprepass",
       "value": "0",
       "variant": "stable"
@@ -4219,7 +4227,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 851,
+      "line": 852,
       "path": "ConVars/sc_aggregate_render_mesh_shader",
       "value": "true",
       "variant": "stable"
@@ -4227,7 +4235,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 852,
+      "line": 853,
       "path": "ConVars/sc_aggregate_rtproxy_instanced_geo",
       "value": "false",
       "variant": "stable"
@@ -4235,7 +4243,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 853,
+      "line": 854,
       "path": "ConVars/sc_aggregate_rtproxy_unique_geo",
       "value": "false",
       "variant": "stable"
@@ -4243,7 +4251,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 854,
+      "line": 855,
       "path": "ConVars/citadel_video_preset",
       "value": "9",
       "variant": "stable"
@@ -4251,7 +4259,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 855,
+      "line": 856,
       "path": "ConVars/r_citadel_gpu_culling",
       "value": "true",
       "variant": "stable"
@@ -4259,7 +4267,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 856,
+      "line": 857,
       "path": "ConVars/r_vma_defrag_algorithm",
       "value": "0",
       "variant": "stable"
@@ -4267,7 +4275,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 857,
+      "line": 858,
       "path": "ConVars/rtx_dynamic_blas",
       "value": "false",
       "variant": "stable"
@@ -4275,7 +4283,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 858,
+      "line": 859,
       "path": "ConVars/rtx_dynamic_blas_caching",
       "value": "true",
       "variant": "stable"
@@ -4283,7 +4291,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 859,
+      "line": 860,
       "path": "ConVars/rtx_force_default_hitgroup",
       "value": "true",
       "variant": "stable"
@@ -4291,7 +4299,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 860,
+      "line": 861,
       "path": "ConVars/rtx_texture_resolution",
       "value": "64",
       "variant": "stable"
@@ -4299,7 +4307,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 861,
+      "line": 862,
       "path": "ConVars/sc_instanced_mesh_opaque_fade",
       "value": "false",
       "variant": "stable"
@@ -4307,7 +4315,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 865,
+      "line": 866,
       "path": "ConVars/snd_steamaudio_max_occlusion_samples",
       "value": "32",
       "variant": "stable"
@@ -4315,7 +4323,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 866,
+      "line": 867,
       "path": "ConVars/snd_steamaudio_num_diffuse_samples",
       "value": "512",
       "variant": "stable"
@@ -4323,7 +4331,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 871,
+      "line": 872,
       "path": "ConVars/r_low_latency",
       "value": "0",
       "variant": "stable"
@@ -4331,7 +4339,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 872,
+      "line": 873,
       "path": "ConVars/sc_force_materials_batchable",
       "value": "true",
       "variant": "stable"
@@ -4339,7 +4347,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 873,
+      "line": 874,
       "path": "ConVars/cc_captiontrace",
       "value": "0",
       "variant": "stable"
@@ -4347,7 +4355,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 874,
+      "line": 875,
       "path": "ConVars/citadel_bullet_shot_offset_fade_time",
       "value": "0",
       "variant": "stable"
@@ -4355,7 +4363,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 875,
+      "line": 876,
       "path": "ConVars/citadel_show_survey",
       "value": "true",
       "variant": "stable"
@@ -4363,7 +4371,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 876,
+      "line": 877,
       "path": "ConVars/citadel_test_ranked_summary",
       "value": "true",
       "variant": "stable"
@@ -4371,7 +4379,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 877,
+      "line": 878,
       "path": "ConVars/cl_batch_entity_list_ops_during_latch",
       "value": "true",
       "variant": "stable"
@@ -4379,7 +4387,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 878,
+      "line": 879,
       "path": "ConVars/cl_enable_eye_occlusion",
       "value": "false",
       "variant": "stable"
@@ -4387,7 +4395,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 879,
+      "line": 880,
       "path": "ConVars/cl_generate_postdataupdatepreserved",
       "value": "false",
       "variant": "stable"
@@ -4395,7 +4403,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 880,
+      "line": 881,
       "path": "ConVars/cl_interp_parallel",
       "value": "true",
       "variant": "stable"
@@ -4403,7 +4411,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 881,
+      "line": 882,
       "path": "ConVars/cl_modifier_parallel_gather_status_effect_updates",
       "value": "false",
       "variant": "stable"
@@ -4411,7 +4419,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 882,
+      "line": 883,
       "path": "ConVars/cl_phys_assume_fixed_tick_interval",
       "value": "true",
       "variant": "stable"
@@ -4419,7 +4427,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 883,
+      "line": 884,
       "path": "ConVars/csm_viewmodel_farz",
       "value": "1",
       "variant": "stable"
@@ -4427,7 +4435,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 884,
+      "line": 885,
       "path": "ConVars/csm_viewmodel_max_shadow_dist",
       "value": "1",
       "variant": "stable"
@@ -4435,7 +4443,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 885,
+      "line": 886,
       "path": "ConVars/csm_viewmodel_max_visible_dist",
       "value": "1",
       "variant": "stable"
@@ -4443,7 +4451,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 886,
+      "line": 887,
       "path": "ConVars/csm_viewmodel_nearz",
       "value": "512",
       "variant": "stable"
@@ -4451,7 +4459,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 887,
+      "line": 888,
       "path": "ConVars/debug_draw_enable",
       "value": "true",
       "variant": "stable"
@@ -4459,7 +4467,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 888,
+      "line": 889,
       "path": "ConVars/default_fov",
       "value": "0",
       "variant": "stable"
@@ -4467,7 +4475,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 889,
+      "line": 890,
       "path": "ConVars/engine_max_ticks_to_simulate",
       "value": "2",
       "variant": "stable"
@@ -4475,7 +4483,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 890,
+      "line": 891,
       "path": "ConVars/r_async_compute_fog",
       "value": "true",
       "variant": "stable"
@@ -4483,7 +4491,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 891,
+      "line": 892,
       "path": "ConVars/r_citadel_depth_prepass_dynamic_objects",
       "value": "false",
       "variant": "stable"
@@ -4491,7 +4499,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 892,
+      "line": 893,
       "path": "ConVars/r_citadel_glow_health_bar_debug",
       "value": "false",
       "variant": "stable"
@@ -4499,7 +4507,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 893,
+      "line": 894,
       "path": "ConVars/r_citadel_gpu_preview_denoise_passes",
       "value": "0",
       "variant": "stable"
@@ -4507,7 +4515,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 894,
+      "line": 895,
       "path": "ConVars/r_drawropes",
       "value": "false",
       "variant": "stable"
@@ -4515,7 +4523,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 895,
+      "line": 896,
       "path": "ConVars/r_drawtracers_firstperson",
       "value": "false",
       "variant": "stable"
@@ -4523,7 +4531,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 896,
+      "line": 897,
       "path": "ConVars/r_drawviewmodel",
       "value": "false",
       "variant": "stable"
@@ -4531,7 +4539,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 897,
+      "line": 898,
       "path": "ConVars/r_enable_rigid_animation",
       "value": "false",
       "variant": "stable"
@@ -4539,7 +4547,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 898,
+      "line": 899,
       "path": "ConVars/r_hair_ao",
       "value": "0",
       "variant": "stable"
@@ -4547,7 +4555,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 899,
+      "line": 900,
       "path": "ConVars/r_max_portal_render_targets",
       "value": "2",
       "variant": "stable"
@@ -4555,7 +4563,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 900,
+      "line": 901,
       "path": "ConVars/r_particle_model_new",
       "value": "false",
       "variant": "stable"
@@ -4563,7 +4571,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 901,
+      "line": 902,
       "path": "ConVars/r_particle_model_new8",
       "value": "false",
       "variant": "stable"
@@ -4571,7 +4579,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 902,
+      "line": 903,
       "path": "ConVars/r_particle_newinput",
       "value": "true",
       "variant": "stable"
@@ -4579,7 +4587,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 903,
+      "line": 904,
       "path": "ConVars/r_pixelvisibility_partial",
       "value": "false",
       "variant": "stable"
@@ -4587,7 +4595,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 904,
+      "line": 905,
       "path": "ConVars/r_render_hair",
       "value": "false",
       "variant": "stable"
@@ -4595,7 +4603,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 905,
+      "line": 906,
       "path": "ConVars/r_renderdoc_auto_shader_pdbs",
       "value": "false",
       "variant": "stable"
@@ -4603,7 +4611,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 906,
+      "line": 907,
       "path": "ConVars/r_skip_precache_validation_check",
       "value": "true",
       "variant": "stable"
@@ -4611,7 +4619,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 907,
+      "line": 908,
       "path": "ConVars/r_strip_invisible_during_sceneobject_update",
       "value": "1",
       "variant": "stable"
@@ -4619,7 +4627,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 908,
+      "line": 909,
       "path": "ConVars/sparseshadowtree_leaf_precision_viewmodel",
       "value": "0",
       "variant": "stable"
@@ -4627,7 +4635,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 909,
+      "line": 910,
       "path": "ConVars/viewmodel_fov",
       "value": "0",
       "variant": "stable"
@@ -4635,7 +4643,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 912,
+      "line": 913,
       "path": "ConVars/r_grass_end_fade",
       "value": "0",
       "variant": "stable"
@@ -4643,7 +4651,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 913,
+      "line": 914,
       "path": "ConVars/r_grass_quality",
       "value": "0",
       "variant": "stable"
@@ -4651,7 +4659,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 914,
+      "line": 915,
       "path": "ConVars/r_grass_start_fade",
       "value": "0",
       "variant": "stable"
@@ -4659,7 +4667,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 917,
+      "line": 918,
       "path": "ConVars/cl_simulate_dormant_entities",
       "value": "false",
       "variant": "stable"
@@ -4667,7 +4675,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 920,
+      "line": 921,
       "path": "ConVars/audio_enable_spawn_mask_mix_layer",
       "value": "false",
       "variant": "stable"
@@ -4675,7 +4683,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 921,
+      "line": 922,
       "path": "ConVars/audio_enable_vmix_mastering",
       "value": "false",
       "variant": "stable"
@@ -4683,7 +4691,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 922,
+      "line": 923,
       "path": "ConVars/audio_viewing_damage_decay_time",
       "value": "0",
       "variant": "stable"
@@ -4691,7 +4699,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 923,
+      "line": 924,
       "path": "ConVars/audio_viewing_damage_hold_time",
       "value": "0",
       "variant": "stable"
@@ -4699,7 +4707,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 924,
+      "line": 925,
       "path": "ConVars/snd_boxverb_simd",
       "value": "true",
       "variant": "stable"
@@ -4707,7 +4715,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 925,
+      "line": 926,
       "path": "ConVars/snd_diffusor_simd",
       "value": "true",
       "variant": "stable"
@@ -4715,7 +4723,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 926,
+      "line": 927,
       "path": "ConVars/snd_enable_subgraph_corenull_passthrough",
       "value": "false",
       "variant": "stable"
@@ -4723,7 +4731,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 927,
+      "line": 928,
       "path": "ConVars/snd_mixahead",
       "value": "0.01",
       "variant": "stable"
@@ -4731,7 +4739,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 928,
+      "line": 929,
       "path": "ConVars/snd_occlusion_bounces",
       "value": "0",
       "variant": "stable"
@@ -4739,7 +4747,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 929,
+      "line": 930,
       "path": "ConVars/snd_occlusion_rays",
       "value": "0",
       "variant": "stable"
@@ -4747,7 +4755,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 930,
+      "line": 931,
       "path": "ConVars/snd_soundmixer_version",
       "value": "2",
       "variant": "stable"
@@ -4755,7 +4763,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 931,
+      "line": 932,
       "path": "ConVars/snd_steamaudio_num_threads",
       "value": "4",
       "variant": "stable"
@@ -4763,7 +4771,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 932,
+      "line": 933,
       "path": "ConVars/snd_steamaudio_reverb_order_rendering",
       "value": "0",
       "variant": "stable"
@@ -4771,7 +4779,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 933,
+      "line": 934,
       "path": "ConVars/snd_ui_positional",
       "value": "false",
       "variant": "stable"
@@ -4779,7 +4787,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 938,
+      "line": 939,
       "path": "ConVars/csm_cascade0_override_dist",
       "value": "0",
       "variant": "stable"
@@ -4787,7 +4795,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 939,
+      "line": 940,
       "path": "ConVars/csm_cascade1_override_dist",
       "value": "0",
       "variant": "stable"
@@ -4795,7 +4803,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 940,
+      "line": 941,
       "path": "ConVars/csm_cascade2_override_dist",
       "value": "0",
       "variant": "stable"
@@ -4803,7 +4811,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 941,
+      "line": 942,
       "path": "ConVars/csm_cascade3_override_dist",
       "value": "0",
       "variant": "stable"
@@ -4811,7 +4819,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 942,
+      "line": 943,
       "path": "ConVars/csm_max_dist_between_caster_and_receiver",
       "value": "0",
       "variant": "stable"
@@ -4819,7 +4827,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 943,
+      "line": 944,
       "path": "ConVars/csm_max_num_cascades_override",
       "value": "2",
       "variant": "stable"
@@ -4827,7 +4835,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 944,
+      "line": 945,
       "path": "ConVars/csm_max_visible_dist",
       "value": "0",
       "variant": "stable"
@@ -4835,7 +4843,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 945,
+      "line": 946,
       "path": "ConVars/csm_res_override_0",
       "value": "1",
       "variant": "stable"
@@ -4843,7 +4851,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 946,
+      "line": 947,
       "path": "ConVars/csm_res_override_1",
       "value": "1",
       "variant": "stable"
@@ -4851,7 +4859,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 947,
+      "line": 948,
       "path": "ConVars/csm_res_override_2",
       "value": "1",
       "variant": "stable"
@@ -4859,7 +4867,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 948,
+      "line": 949,
       "path": "ConVars/csm_res_override_3",
       "value": "1",
       "variant": "stable"
@@ -4867,7 +4875,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 949,
+      "line": 950,
       "path": "ConVars/csm_viewmodel_shadows",
       "value": "false",
       "variant": "stable"
@@ -4875,7 +4883,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 953,
+      "line": 954,
       "path": "ConVars/ik_constraints_enabled",
       "value": "false",
       "variant": "stable"
@@ -4883,7 +4891,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 954,
+      "line": 955,
       "path": "ConVars/ik_debug_dogleg3bone_enabled",
       "value": "false",
       "variant": "stable"
@@ -4891,7 +4899,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 955,
+      "line": 956,
       "path": "ConVars/ik_debug_fabrik_backwards_enabled",
       "value": "false",
       "variant": "stable"
@@ -4899,7 +4907,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 956,
+      "line": 957,
       "path": "ConVars/ik_debug_fabrik_forwards_enabled",
       "value": "false",
       "variant": "stable"
@@ -4907,7 +4915,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 957,
+      "line": 958,
       "path": "ConVars/ik_enable",
       "value": "false",
       "variant": "stable"
@@ -4915,7 +4923,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 958,
+      "line": 959,
       "path": "ConVars/ik_fabrik_backwards_enabled",
       "value": "false",
       "variant": "stable"
@@ -4923,7 +4931,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 959,
+      "line": 960,
       "path": "ConVars/ik_fabrik_forwards_enabled",
       "value": "false",
       "variant": "stable"
@@ -4931,7 +4939,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 960,
+      "line": 961,
       "path": "ConVars/ik_planetilt_enable",
       "value": "false",
       "variant": "stable"
@@ -4939,7 +4947,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 964,
+      "line": 965,
       "path": "ConVars/animgraph_footlock_calculate_tilt",
       "value": "false",
       "variant": "stable"
@@ -4947,7 +4955,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 965,
+      "line": 966,
       "path": "ConVars/animgraph_footlock_enabled",
       "value": "false",
       "variant": "stable"
@@ -4955,7 +4963,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 966,
+      "line": 967,
       "path": "ConVars/animgraph_footlock_ground_roll",
       "value": "false",
       "variant": "stable"
@@ -4963,7 +4971,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 967,
+      "line": 968,
       "path": "ConVars/animgraph_footlock_hip_offset_enable",
       "value": "false",
       "variant": "stable"
@@ -4971,7 +4979,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 968,
+      "line": 969,
       "path": "ConVars/animgraph_footlock_ik_enable",
       "value": "false",
       "variant": "stable"
@@ -4979,7 +4987,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 969,
+      "line": 970,
       "path": "ConVars/animgraph_footlock_trace_ground_enabled",
       "value": "false",
       "variant": "stable"
@@ -4987,7 +4995,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 970,
+      "line": 971,
       "path": "ConVars/animgraph_footlock_use_hip_shift",
       "value": "false",
       "variant": "stable"
@@ -4995,7 +5003,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 971,
+      "line": 972,
       "path": "ConVars/animgraph_slowdownonslopes_enabled",
       "value": "false",
       "variant": "stable"
@@ -5003,7 +5011,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 975,
+      "line": 976,
       "path": "ConVars/citadel_hud_objective_health_idle_timeout",
       "value": "0",
       "variant": "stable"
@@ -5011,7 +5019,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 976,
+      "line": 977,
       "path": "ConVars/citadel_orb_debug_draw_state",
       "value": "-1",
       "variant": "stable"
@@ -5019,7 +5027,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 977,
+      "line": 978,
       "path": "ConVars/lb_enable_baked_shadows",
       "value": "false",
       "variant": "stable"
@@ -5027,7 +5035,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 978,
+      "line": 979,
       "path": "ConVars/phys_dynamic_scaling",
       "value": "false",
       "variant": "stable"
@@ -5035,7 +5043,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 979,
+      "line": 980,
       "path": "ConVars/ai_disable",
       "value": "1",
       "variant": "stable"
@@ -5043,7 +5051,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 980,
+      "line": 981,
       "path": "ConVars/ai_disabled",
       "value": "1",
       "variant": "stable"
@@ -5051,7 +5059,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 981,
+      "line": 982,
       "path": "ConVars/cam_idealdist",
       "value": "0",
       "variant": "stable"
@@ -5059,7 +5067,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 982,
+      "line": 983,
       "path": "ConVars/citadel_camera_dist",
       "value": "0",
       "variant": "stable"
@@ -5067,7 +5075,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 983,
+      "line": 984,
       "path": "ConVars/citadel_camera_height_approach_speed",
       "value": "0",
       "variant": "stable"
@@ -5075,7 +5083,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 984,
+      "line": 985,
       "path": "ConVars/citadel_camera_hero_fov",
       "value": "106",
       "variant": "stable"
@@ -5083,7 +5091,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 985,
+      "line": 986,
       "path": "ConVars/citadel_crosshair_hit_marker_duration",
       "value": "0.00001",
       "variant": "stable"
@@ -5091,7 +5099,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 986,
+      "line": 987,
       "path": "ConVars/citadel_damage_text_show_effectiveness",
       "value": "0",
       "variant": "stable"
@@ -5099,7 +5107,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 987,
+      "line": 988,
       "path": "ConVars/citadel_first_person",
       "value": "true",
       "variant": "stable"
@@ -5107,7 +5115,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 988,
+      "line": 989,
       "path": "ConVars/citadel_roster_select_force_enable_priority_token",
       "value": "true",
       "variant": "stable"
@@ -5115,7 +5123,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 989,
+      "line": 990,
       "path": "ConVars/citadel_rp_show_dev_messages",
       "value": "true",
       "variant": "stable"
@@ -5123,7 +5131,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 990,
+      "line": 991,
       "path": "ConVars/citadel_weapon_spread_debug",
       "value": "true",
       "variant": "stable"
@@ -5131,7 +5139,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 991,
+      "line": 992,
       "path": "ConVars/cl_input_enable_raw_keyboard",
       "value": "1",
       "variant": "stable"
@@ -5139,7 +5147,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 992,
+      "line": 993,
       "path": "ConVars/cl_particle_max_count",
       "value": "1500",
       "variant": "stable"
@@ -5147,7 +5155,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 993,
+      "line": 994,
       "path": "ConVars/cl_particle_sim_fallback_threshold_ms",
       "value": "0.3",
       "variant": "stable"
@@ -5155,7 +5163,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 994,
+      "line": 995,
       "path": "ConVars/cl_phys_enabled",
       "value": "false",
       "variant": "stable"
@@ -5163,7 +5171,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 995,
+      "line": 996,
       "path": "ConVars/cl_skip_update_animations",
       "value": "true",
       "variant": "stable"
@@ -5171,7 +5179,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 996,
+      "line": 997,
       "path": "ConVars/gpu_level",
       "value": "1",
       "variant": "stable"
@@ -5179,7 +5187,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 997,
+      "line": 998,
       "path": "ConVars/instant_replay",
       "value": "true",
       "variant": "stable"
@@ -5187,7 +5195,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 998,
+      "line": 999,
       "path": "ConVars/lb_enable_envmaps",
       "value": "false",
       "variant": "stable"
@@ -5195,7 +5203,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 999,
+      "line": 1000,
       "path": "ConVars/movement_stats_debug_draw",
       "value": "true",
       "variant": "stable"
@@ -5203,7 +5211,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1000,
+      "line": 1001,
       "path": "ConVars/panorama_disable_descendant_filtering",
       "value": "true",
       "variant": "stable"
@@ -5211,7 +5219,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1001,
+      "line": 1002,
       "path": "ConVars/panorama_disable_draw_fancy_quad",
       "value": "true",
       "variant": "stable"
@@ -5219,7 +5227,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1002,
+      "line": 1003,
       "path": "ConVars/panorama_enable_secondary_layout_pass",
       "value": "false",
       "variant": "stable"
@@ -5227,7 +5235,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1003,
+      "line": 1004,
       "path": "ConVars/panorama_max_text_shadow_strength",
       "value": "10",
       "variant": "stable"
@@ -5235,7 +5243,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1004,
+      "line": 1005,
       "path": "ConVars/panorama_temp_comp_layer_min_dimension",
       "value": "128",
       "variant": "stable"
@@ -5243,7 +5251,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1005,
+      "line": 1006,
       "path": "ConVars/panorama_worldpanel_update_culling",
       "value": "true",
       "variant": "stable"
@@ -5251,7 +5259,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1006,
+      "line": 1007,
       "path": "ConVars/phys_batch_ray_test",
       "value": "16",
       "variant": "stable"
@@ -5259,7 +5267,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1007,
+      "line": 1008,
       "path": "ConVars/r_citadel_gpu_culling_two_pass",
       "value": "false",
       "variant": "stable"
@@ -5267,7 +5275,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1008,
+      "line": 1009,
       "path": "ConVars/r_citadel_npr_force_solid_outline",
       "value": "false",
       "variant": "stable"
@@ -5275,7 +5283,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1009,
+      "line": 1010,
       "path": "ConVars/r_citadel_npr_outlines",
       "value": "false",
       "variant": "stable"
@@ -5283,7 +5291,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1010,
+      "line": 1011,
       "path": "ConVars/r_citadel_npr_outlines_max_dist",
       "value": "1",
       "variant": "stable"
@@ -5291,7 +5299,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1011,
+      "line": 1012,
       "path": "ConVars/r_citadel_selection_outline2_alpha",
       "value": "0.2",
       "variant": "stable"
@@ -5299,7 +5307,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1012,
+      "line": 1013,
       "path": "ConVars/r_dopixelvisibility",
       "value": "0",
       "variant": "stable"
@@ -5307,7 +5315,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1013,
+      "line": 1014,
       "path": "ConVars/r_draw3dskybox",
       "value": "0",
       "variant": "stable"
@@ -5315,7 +5323,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1014,
+      "line": 1015,
       "path": "ConVars/r_draw_first_tri_only",
       "value": "true",
       "variant": "stable"
@@ -5323,7 +5331,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1015,
+      "line": 1016,
       "path": "ConVars/r_draw_instances",
       "value": "0",
       "variant": "stable"
@@ -5331,7 +5339,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1016,
+      "line": 1017,
       "path": "ConVars/r_draw_overlays",
       "value": "0",
       "variant": "stable"
@@ -5339,7 +5347,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1017,
+      "line": 1018,
       "path": "ConVars/r_drawdecals",
       "value": "1",
       "variant": "stable"
@@ -5347,7 +5355,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1018,
+      "line": 1019,
       "path": "ConVars/r_drawskybox",
       "value": "true",
       "variant": "stable"
@@ -5355,7 +5363,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1019,
+      "line": 1020,
       "path": "ConVars/r_drawtracers",
       "value": "0",
       "variant": "stable"
@@ -5363,7 +5371,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1020,
+      "line": 1021,
       "path": "ConVars/r_dx11_software_cmd_lists",
       "value": "0",
       "variant": "stable"
@@ -5371,7 +5379,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1021,
+      "line": 1022,
       "path": "ConVars/r_extra_render_frames",
       "value": "1",
       "variant": "stable"
@@ -5379,7 +5387,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1022,
+      "line": 1023,
       "path": "ConVars/r_frame_sync_enable",
       "value": "false",
       "variant": "stable"
@@ -5387,7 +5395,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1023,
+      "line": 1024,
       "path": "ConVars/r_opaque",
       "value": "false",
       "variant": "stable"
@@ -5395,7 +5403,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1024,
+      "line": 1025,
       "path": "ConVars/r_showdebugoverlays",
       "value": "true",
       "variant": "stable"
@@ -5403,7 +5411,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1025,
+      "line": 1026,
       "path": "ConVars/r_skinning_enabled",
       "value": "false",
       "variant": "stable"
@@ -5411,7 +5419,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1026,
+      "line": 1027,
       "path": "ConVars/r_translucent",
       "value": "false",
       "variant": "stable"
@@ -5419,7 +5427,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1027,
+      "line": 1028,
       "path": "ConVars/r_wait_on_present",
       "value": "true",
       "variant": "stable"
@@ -5427,7 +5435,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1028,
+      "line": 1029,
       "path": "ConVars/sc_aggregate_gpu_culling_show_culled",
       "value": "true",
       "variant": "stable"
@@ -5435,7 +5443,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1029,
+      "line": 1030,
       "path": "ConVars/sc_aggregate_render_mesh_shader",
       "value": "false",
       "variant": "stable"
@@ -5443,7 +5451,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1030,
+      "line": 1031,
       "path": "ConVars/sc_aggregate_show_outside_vis",
       "value": "true",
       "variant": "stable"
@@ -5451,7 +5459,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1031,
+      "line": 1032,
       "path": "ConVars/sc_disable_procedural_layer_rendering",
       "value": "false",
       "variant": "stable"
@@ -5459,7 +5467,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1032,
+      "line": 1033,
       "path": "ConVars/sc_skip_traversal",
       "value": "true",
       "variant": "stable"
@@ -5467,7 +5475,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1033,
+      "line": 1034,
       "path": "ConVars/sc_throw_away_all_layers",
       "value": "true",
       "variant": "stable"
@@ -5475,7 +5483,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1034,
+      "line": 1035,
       "path": "ConVars/subtick_buttons_enabled",
       "value": "true",
       "variant": "stable"
@@ -5483,7 +5491,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1035,
+      "line": 1036,
       "path": "ConVars/music_hideout_debug_enabled",
       "value": "true",
       "variant": "stable"
@@ -5491,7 +5499,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1036,
+      "line": 1037,
       "path": "ConVars/fog_enable",
       "value": "false",
       "variant": "stable"
@@ -5499,7 +5507,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1037,
+      "line": 1038,
       "path": "ConVars/volume_fog_enable_jitter",
       "value": "false",
       "variant": "stable"
@@ -5507,7 +5515,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1040,
+      "line": 1041,
       "path": "ConVars/skeleton_instance_lod_optimization",
       "value": "false",
       "variant": "stable"
@@ -5515,7 +5523,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1041,
+      "line": 1042,
       "path": "ConVars/ragdoll_parallel_pose_control",
       "value": "1",
       "variant": "stable"
@@ -5523,7 +5531,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1042,
+      "line": 1043,
       "path": "ConVars/r_light_flickering_enabled",
       "value": "0",
       "variant": "stable"
@@ -5531,7 +5539,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1043,
+      "line": 1044,
       "path": "ConVars/r_decals",
       "value": "1",
       "variant": "stable"
@@ -5539,7 +5547,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1044,
+      "line": 1045,
       "path": "ConVars/r_decals_default_fade_duration",
       "value": "1",
       "variant": "stable"
@@ -5547,7 +5555,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1045,
+      "line": 1046,
       "path": "ConVars/particle_cluster_use_collision_hulls",
       "value": "false",
       "variant": "stable"
@@ -5555,7 +5563,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1046,
+      "line": 1047,
       "path": "ConVars/ent_joint_lines",
       "value": "false",
       "variant": "stable"
@@ -5563,7 +5571,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1047,
+      "line": 1048,
       "path": "ConVars/ent_joint_names",
       "value": "false",
       "variant": "stable"
@@ -5571,7 +5579,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1048,
+      "line": 1049,
       "path": "ConVars/disable_source_soundscape_trace",
       "value": "true",
       "variant": "stable"
@@ -5579,7 +5587,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1049,
+      "line": 1050,
       "path": "ConVars/animgraph_enable_parallel_op_evaluation",
       "value": "1",
       "variant": "stable"
@@ -5587,7 +5595,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1050,
+      "line": 1051,
       "path": "ConVars/animgraph_enable_parallel_preupdate",
       "value": "1",
       "variant": "stable"
@@ -5595,7 +5603,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1051,
+      "line": 1052,
       "path": "ConVars/phys_threaded_cloth_bone_update",
       "value": "1",
       "variant": "stable"
@@ -5603,7 +5611,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1052,
+      "line": 1053,
       "path": "ConVars/phys_threaded_kinematic_bone_update",
       "value": "1",
       "variant": "stable"
@@ -5611,7 +5619,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1053,
+      "line": 1054,
       "path": "ConVars/phys_threaded_transform_update",
       "value": "1",
       "variant": "stable"
@@ -5619,7 +5627,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1054,
+      "line": 1055,
       "path": "ConVars/particle_cluster_nodraw",
       "value": "1",
       "variant": "stable"
@@ -5627,7 +5635,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1055,
+      "line": 1056,
       "path": "ConVars/parallel_perform_invalidate_physics",
       "value": "false",
       "variant": "stable"
@@ -5635,7 +5643,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1056,
+      "line": 1057,
       "path": "ConVars/citadel_npc_force_animate_every_tick",
       "value": "false",
       "variant": "stable"
@@ -5643,7 +5651,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1057,
+      "line": 1058,
       "path": "ConVars/citadel_perf_interval_report_s",
       "value": "100000",
       "variant": "stable"
@@ -5651,7 +5659,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1058,
+      "line": 1059,
       "path": "ConVars/citadel_hideout_enable_testing_tools",
       "value": "true",
       "variant": "stable"
@@ -5659,7 +5667,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1061,
+      "line": 1062,
       "path": "ConVars/r_fallback_texture_lod_scale",
       "value": "8",
       "variant": "stable"
@@ -5667,7 +5675,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1062,
+      "line": 1063,
       "path": "ConVars/r_propsmaxdist",
       "value": "600",
       "variant": "stable"
@@ -5675,7 +5683,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1066,
+      "line": 1067,
       "path": "ConVars/ai_async_queue_max_jobs",
       "value": "1",
       "variant": "stable"
@@ -5683,7 +5691,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1067,
+      "line": 1068,
       "path": "ConVars/citadel_ai_path_pathing_time_ms_per_tick",
       "value": "20",
       "variant": "stable"
@@ -5691,7 +5699,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1068,
+      "line": 1069,
       "path": "ConVars/ai_foot_sweep_enable",
       "value": "false",
       "variant": "stable"
@@ -5699,7 +5707,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1069,
+      "line": 1070,
       "path": "ConVars/ai_gather_conditions_async",
       "value": "true",
       "variant": "stable"
@@ -5707,7 +5715,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1070,
+      "line": 1071,
       "path": "ConVars/ai_lod_auto_enabled",
       "value": "true",
       "variant": "stable"
@@ -5715,7 +5723,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1071,
+      "line": 1072,
       "path": "ConVars/ai_strong_optimizations_no_checkstand",
       "value": "1",
       "variant": "stable"
@@ -5723,7 +5731,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1072,
+      "line": 1073,
       "path": "ConVars/ai_think_interval",
       "value": "0.3",
       "variant": "stable"
@@ -5731,7 +5739,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1073,
+      "line": 1074,
       "path": "ConVars/ai_think_interval_lod_low",
       "value": "1",
       "variant": "stable"
@@ -5739,7 +5747,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1074,
+      "line": 1075,
       "path": "ConVars/ai_think_interval_lod_med",
       "value": "0.4",
       "variant": "stable"
@@ -5747,7 +5755,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1075,
+      "line": 1076,
       "path": "ConVars/ai_think_interval_lod_very_low",
       "value": "2",
       "variant": "stable"
@@ -5755,7 +5763,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1076,
+      "line": 1077,
       "path": "ConVars/ai_use_async_ragdoll_fixup",
       "value": "true",
       "variant": "stable"
@@ -5763,7 +5771,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1077,
+      "line": 1078,
       "path": "ConVars/ai_motor_max_state_time_active",
       "value": "0",
       "variant": "stable"
@@ -5771,7 +5779,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1080,
+      "line": 1081,
       "path": "ConVars/citadel_action_refresh_interval",
       "value": "0.11",
       "variant": "stable"
@@ -5779,7 +5787,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1081,
+      "line": 1082,
       "path": "ConVars/citadel_damage_indicator_height",
       "value": "10",
       "variant": "stable"
@@ -5787,7 +5795,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1082,
+      "line": 1083,
       "path": "ConVars/citadel_damage_indicator_radius",
       "value": "1",
       "variant": "stable"
@@ -5795,7 +5803,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1083,
+      "line": 1084,
       "path": "ConVars/citadel_damage_indicator_width",
       "value": "10",
       "variant": "stable"
@@ -5803,7 +5811,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1084,
+      "line": 1085,
       "path": "ConVars/citadel_enable_new_ping_particle",
       "value": "true",
       "variant": "stable"
@@ -5811,7 +5819,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1085,
+      "line": 1086,
       "path": "ConVars/citadel_fibonnaci_sphere_trace_los_max",
       "value": "80",
       "variant": "stable"
@@ -5819,7 +5827,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1086,
+      "line": 1087,
       "path": "ConVars/citadel_minimap_overlap_scan_distance",
       "value": "0",
       "variant": "stable"
@@ -5827,7 +5835,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1087,
+      "line": 1088,
       "path": "ConVars/citadel_player_outline_enemies",
       "value": "false",
       "variant": "stable"
@@ -5835,17 +5843,9 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1088,
+      "line": 1089,
       "path": "ConVars/citadel_portrait_unit_ag2_enable",
       "value": "false",
-      "variant": "stable"
-    },
-    {
-      "active": true,
-      "kind": "scalar",
-      "line": 1089,
-      "path": "ConVars/citadel_use_pvs_for_players",
-      "value": "true",
       "variant": "stable"
     },
     {
@@ -10179,7 +10179,15 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 623,
+      "line": 621,
+      "path": "ConVars/citadel_use_pvs_for_players",
+      "value": "false",
+      "variant": "experimental"
+    },
+    {
+      "active": true,
+      "kind": "scalar",
+      "line": 624,
       "path": "ConVars/r_farz",
       "value": "6800",
       "variant": "experimental"
@@ -10187,7 +10195,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 624,
+      "line": 625,
       "path": "ConVars/r_mapextents",
       "value": "6800",
       "variant": "experimental"
@@ -10195,7 +10203,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 627,
+      "line": 628,
       "path": "ConVars/citadel_unit_status_delta_decay_delay",
       "value": "0",
       "variant": "experimental"
@@ -10203,7 +10211,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 628,
+      "line": 629,
       "path": "ConVars/citadel_unit_status_delta_decay_rate",
       "value": "10",
       "variant": "experimental"
@@ -10211,7 +10219,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 629,
+      "line": 630,
       "path": "ConVars/citadel_unit_status_recent_damage_time",
       "value": "inf",
       "variant": "experimental"
@@ -10219,7 +10227,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 632,
+      "line": 633,
       "path": "ConVars/citadel_boss_glow_disabled",
       "value": "1",
       "variant": "experimental"
@@ -10227,7 +10235,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 633,
+      "line": 634,
       "path": "ConVars/citadel_damage_offscreen_indicator_disabled",
       "value": "true",
       "variant": "experimental"
@@ -10235,7 +10243,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 634,
+      "line": 635,
       "path": "ConVars/citadel_unit_status_allies_see_thru_walls",
       "value": "true",
       "variant": "experimental"
@@ -10243,7 +10251,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 638,
+      "line": 639,
       "path": "ConVars/r_aspectratio",
       "value": "2.54",
       "variant": "experimental"
@@ -10251,7 +10259,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 641,
+      "line": 642,
       "path": "ConVars/panorama_render_target_cache_max_size",
       "value": "134217728",
       "variant": "experimental"
@@ -10259,7 +10267,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 642,
+      "line": 643,
       "path": "ConVars/panorama_min_comp_layer_cache_cost",
       "value": "0",
       "variant": "experimental"
@@ -10267,7 +10275,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 643,
+      "line": 644,
       "path": "ConVars/citadel_damage_report_enable",
       "value": "1",
       "variant": "experimental"
@@ -10275,7 +10283,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 644,
+      "line": 645,
       "path": "ConVars/citadel_damage_text_batching_window_ability",
       "value": "1000",
       "variant": "experimental"
@@ -10283,7 +10291,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 645,
+      "line": 646,
       "path": "ConVars/citadel_distance_mouse_move_for_minimap_drawing",
       "value": "1",
       "variant": "experimental"
@@ -10291,7 +10299,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 646,
+      "line": 647,
       "path": "ConVars/citadel_hideout_ball_show_juggle_count",
       "value": "1",
       "variant": "experimental"
@@ -10299,7 +10307,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 647,
+      "line": 648,
       "path": "ConVars/citadel_hideout_ball_show_juggle_fx",
       "value": "1",
       "variant": "experimental"
@@ -10307,7 +10315,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 648,
+      "line": 649,
       "path": "ConVars/citadel_hud_objective_health_debug_show_midboss",
       "value": "false",
       "variant": "experimental"
@@ -10315,7 +10323,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 649,
+      "line": 650,
       "path": "ConVars/citadel_hud_objective_health_enabled",
       "value": "2",
       "variant": "experimental"
@@ -10323,7 +10331,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 650,
+      "line": 651,
       "path": "ConVars/citadel_minimap_trooper_size",
       "value": "2",
       "variant": "experimental"
@@ -10331,7 +10339,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 651,
+      "line": 652,
       "path": "ConVars/citadel_show_minimap_reveal_indicators",
       "value": "true",
       "variant": "experimental"
@@ -10339,7 +10347,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 652,
+      "line": 653,
       "path": "ConVars/citadel_show_old_neutral_camp_icons",
       "value": "false",
       "variant": "experimental"
@@ -10347,7 +10355,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 653,
+      "line": 654,
       "path": "ConVars/citadel_unit_status_old_update_rate",
       "value": "15",
       "variant": "experimental"
@@ -10355,7 +10363,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 654,
+      "line": 655,
       "path": "ConVars/citadel_unit_status_single_bar_mode",
       "value": "false",
       "variant": "experimental"
@@ -10363,7 +10371,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 655,
+      "line": 656,
       "path": "ConVars/citadel_unit_status_stamina_low_pips",
       "value": "7",
       "variant": "experimental"
@@ -10371,7 +10379,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 656,
+      "line": 657,
       "path": "ConVars/minimap_trooper_update_rate_hz",
       "value": "2",
       "variant": "experimental"
@@ -10379,7 +10387,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 657,
+      "line": 658,
       "path": "ConVars/panorama_comp_layer_lru_lifetime",
       "value": "4",
       "variant": "experimental"
@@ -10387,7 +10395,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 658,
+      "line": 659,
       "path": "ConVars/v8_maximum_heap_size_mb",
       "value": "1024",
       "variant": "experimental"
@@ -10395,7 +10403,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 659,
+      "line": 660,
       "path": "ConVars/citadel_unit_status_hide_names",
       "value": "true",
       "variant": "experimental"
@@ -10403,7 +10411,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 662,
+      "line": 663,
       "path": "ConVars/citadel_unit_status_max_distance_scale",
       "value": "1.3",
       "variant": "experimental"
@@ -10411,7 +10419,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 663,
+      "line": 664,
       "path": "ConVars/citadel_unit_status_offset_player_z_offset_adjustment",
       "value": "48",
       "variant": "experimental"
@@ -10419,7 +10427,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 664,
+      "line": 665,
       "path": "ConVars/citadel_damage_text_height_offset_near",
       "value": "134",
       "variant": "experimental"
@@ -10427,7 +10435,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 665,
+      "line": 666,
       "path": "ConVars/citadel_damage_text_height_offset_far",
       "value": "214",
       "variant": "experimental"
@@ -10435,7 +10443,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 666,
+      "line": 667,
       "path": "ConVars/citadel_damage_text_new_bullet_offset_x",
       "value": "45",
       "variant": "experimental"
@@ -10443,7 +10451,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 667,
+      "line": 668,
       "path": "ConVars/citadel_damage_text_new_ability_offset_x",
       "value": "35",
       "variant": "experimental"
@@ -10451,7 +10459,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 668,
+      "line": 669,
       "path": "ConVars/citadel_damage_text_new_melee_offset_x",
       "value": "35",
       "variant": "experimental"
@@ -10459,7 +10467,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 669,
+      "line": 670,
       "path": "ConVars/citadel_damage_text_new_pure_offset_x",
       "value": "40",
       "variant": "experimental"
@@ -10467,7 +10475,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 670,
+      "line": 671,
       "path": "ConVars/citadel_damage_text_dynamic_emphasis",
       "value": "false",
       "variant": "experimental"
@@ -10475,7 +10483,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 671,
+      "line": 672,
       "path": "ConVars/citadel_damage_text_follow_healthbar_scale",
       "value": "false",
       "variant": "experimental"
@@ -10483,7 +10491,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 674,
+      "line": 675,
       "path": "ConVars/lb_enable_stationary_lights",
       "value": "false",
       "variant": "experimental"
@@ -10491,7 +10499,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 678,
+      "line": 679,
       "path": "ConVars/engine_low_latency_sleep_after_client_tick",
       "value": "false",
       "variant": "experimental"
@@ -10499,7 +10507,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 679,
+      "line": 680,
       "path": "ConVars/panorama_max_fps",
       "value": "30",
       "variant": "experimental"
@@ -10507,7 +10515,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 680,
+      "line": 681,
       "path": "ConVars/panorama_max_overlay_fps",
       "value": "30",
       "variant": "experimental"
@@ -10515,7 +10523,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 683,
+      "line": 684,
       "path": "ConVars/citadel_camera_listening_offset",
       "value": "-1",
       "variant": "experimental"
@@ -10523,7 +10531,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 684,
+      "line": 685,
       "path": "ConVars/citadel_camera_soft_collision_angle",
       "value": "75",
       "variant": "experimental"
@@ -10531,7 +10539,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 685,
+      "line": 686,
       "path": "ConVars/citadel_camera_use_vmdl_flatten_horizontal",
       "value": "false",
       "variant": "experimental"
@@ -10539,7 +10547,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 686,
+      "line": 687,
       "path": "ConVars/citadel_camera_wobble_disable",
       "value": "true",
       "variant": "experimental"
@@ -10547,7 +10555,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 687,
+      "line": 688,
       "path": "ConVars/citadel_melee_shake_amplitude",
       "value": "0",
       "variant": "experimental"
@@ -10555,7 +10563,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 688,
+      "line": 689,
       "path": "ConVars/citadel_melee_shake_duration",
       "value": "0",
       "variant": "experimental"
@@ -10563,7 +10571,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 689,
+      "line": 690,
       "path": "ConVars/engine_accurate_input_processing_delta_time",
       "value": "true",
       "variant": "experimental"
@@ -10571,7 +10579,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 690,
+      "line": 691,
       "path": "ConVars/r_citadel_clip_sphere_min_opacity",
       "value": "0",
       "variant": "experimental"
@@ -10579,7 +10587,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 693,
+      "line": 694,
       "path": "ConVars/cam_idealdelta",
       "value": "0",
       "variant": "experimental"
@@ -10587,7 +10595,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 694,
+      "line": 695,
       "path": "ConVars/cam_ideallag",
       "value": "0",
       "variant": "experimental"
@@ -10595,7 +10603,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 695,
+      "line": 696,
       "path": "ConVars/citadel_camera_height",
       "value": "0",
       "variant": "experimental"
@@ -10603,7 +10611,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 696,
+      "line": 697,
       "path": "ConVars/citadel_camera_height_ceiling_distance",
       "value": "0",
       "variant": "experimental"
@@ -10611,7 +10619,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 697,
+      "line": 698,
       "path": "ConVars/citadel_camera_listening_offset",
       "value": "-1",
       "variant": "experimental"
@@ -10619,7 +10627,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 698,
+      "line": 699,
       "path": "ConVars/citadel_camera_pitch_default",
       "value": "0",
       "variant": "experimental"
@@ -10627,7 +10635,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 699,
+      "line": 700,
       "path": "ConVars/citadel_camera_see_distance_max",
       "value": "7000",
       "variant": "experimental"
@@ -10635,7 +10643,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 700,
+      "line": 701,
       "path": "ConVars/citadel_shoot_forward_offset",
       "value": "0",
       "variant": "experimental"
@@ -10643,7 +10651,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 701,
+      "line": 702,
       "path": "ConVars/citadel_stuck_camera_trace_extra_length",
       "value": "0",
       "variant": "experimental"
@@ -10651,7 +10659,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 702,
+      "line": 703,
       "path": "ConVars/citadel_tightcamera_alternative",
       "value": "1",
       "variant": "experimental"
@@ -10659,7 +10667,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 703,
+      "line": 704,
       "path": "ConVars/nav_edit_use_camera",
       "value": "0",
       "variant": "experimental"
@@ -10667,7 +10675,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 704,
+      "line": 705,
       "path": "ConVars/rpg_camera_yaw",
       "value": "0",
       "variant": "experimental"
@@ -10675,7 +10683,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 707,
+      "line": 708,
       "path": "ConVars/r_texture_budget_threshold",
       "value": "0.7",
       "variant": "experimental"
@@ -10683,7 +10691,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 708,
+      "line": 709,
       "path": "ConVars/r_texture_budget_update_period",
       "value": "0.5",
       "variant": "experimental"
@@ -10691,7 +10699,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 709,
+      "line": 710,
       "path": "ConVars/r_texture_stream_mip_bias",
       "value": "1",
       "variant": "experimental"
@@ -10699,7 +10707,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 710,
+      "line": 711,
       "path": "ConVars/r_texturefilteringquality",
       "value": "0",
       "variant": "experimental"
@@ -10707,7 +10715,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 713,
+      "line": 714,
       "path": "ConVars/thread_pool_option",
       "value": "4",
       "variant": "experimental"
@@ -10715,7 +10723,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 727,
+      "line": 728,
       "path": "ConVars/panorama_disable_box_shadow",
       "value": "true",
       "variant": "experimental"
@@ -10723,7 +10731,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 728,
+      "line": 729,
       "path": "ConVars/citadel_unit_status_healthbar_highlight_speed",
       "value": "999",
       "variant": "experimental"
@@ -10731,7 +10739,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 729,
+      "line": 730,
       "path": "ConVars/closecaption",
       "value": "false",
       "variant": "experimental"
@@ -10739,7 +10747,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 730,
+      "line": 731,
       "path": "ConVars/panorama_allow_transitions",
       "value": "false",
       "variant": "experimental"
@@ -10747,7 +10755,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 731,
+      "line": 732,
       "path": "ConVars/panorama_disable_blur",
       "value": "true",
       "variant": "experimental"
@@ -10755,7 +10763,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 732,
+      "line": 733,
       "path": "ConVars/panorama_panel_occlusion",
       "value": "true",
       "variant": "experimental"
@@ -10763,7 +10771,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 733,
+      "line": 734,
       "path": "ConVars/r_dashboard_render_quality",
       "value": "1",
       "variant": "experimental"
@@ -10771,7 +10779,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 736,
+      "line": 737,
       "path": "ConVars/lb_barnlight_shadowmap_scale",
       "value": "0",
       "variant": "experimental"
@@ -10779,7 +10787,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 737,
+      "line": 738,
       "path": "ConVars/lb_csm_cascade_size_override",
       "value": "1",
       "variant": "experimental"
@@ -10787,7 +10795,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 738,
+      "line": 739,
       "path": "ConVars/lb_csm_draw_alpha_tested",
       "value": "0",
       "variant": "experimental"
@@ -10795,7 +10803,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 739,
+      "line": 740,
       "path": "ConVars/lb_csm_draw_translucent",
       "value": "0",
       "variant": "experimental"
@@ -10803,7 +10811,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 740,
+      "line": 741,
       "path": "ConVars/lb_csm_override_staticgeo_cascades",
       "value": "true",
       "variant": "experimental"
@@ -10811,7 +10819,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 741,
+      "line": 742,
       "path": "ConVars/lb_csm_override_staticgeo_cascades_value",
       "value": "true",
       "variant": "experimental"
@@ -10819,7 +10827,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 742,
+      "line": 743,
       "path": "ConVars/lb_dynamic_shadow_resolution_base",
       "value": "16",
       "variant": "experimental"
@@ -10827,7 +10835,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 743,
+      "line": 744,
       "path": "ConVars/lb_enable_shadow_casting",
       "value": "0",
       "variant": "experimental"
@@ -10835,7 +10843,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 744,
+      "line": 745,
       "path": "ConVars/lb_ssss_samples",
       "value": "0",
       "variant": "experimental"
@@ -10843,7 +10851,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 745,
+      "line": 746,
       "path": "ConVars/lb_sun_csm_size_cull_threshold_texels",
       "value": "60",
       "variant": "experimental"
@@ -10851,7 +10859,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 746,
+      "line": 747,
       "path": "ConVars/r_citadel_shadow_caching",
       "value": "true",
       "variant": "experimental"
@@ -10859,7 +10867,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 747,
+      "line": 748,
       "path": "ConVars/r_citadel_shadow_quality",
       "value": "0",
       "variant": "experimental"
@@ -10867,7 +10875,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 748,
+      "line": 749,
       "path": "ConVars/r_size_cull_threshold_shadow",
       "value": "2.4",
       "variant": "experimental"
@@ -10875,7 +10883,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 749,
+      "line": 750,
       "path": "ConVars/sparseshadowtree_disable_for_viewmodel",
       "value": "1",
       "variant": "experimental"
@@ -10883,7 +10891,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 750,
+      "line": 751,
       "path": "ConVars/sparseshadowtree_enable_rendering",
       "value": "0",
       "variant": "experimental"
@@ -10891,7 +10899,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 753,
+      "line": 754,
       "path": "ConVars/cl_retire_low_priority_lights",
       "value": "1",
       "variant": "experimental"
@@ -10899,7 +10907,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 754,
+      "line": 755,
       "path": "ConVars/mat_async_shader_load",
       "value": "1",
       "variant": "experimental"
@@ -10907,7 +10915,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 755,
+      "line": 756,
       "path": "ConVars/mat_max_lighting_complexity",
       "value": "0",
       "variant": "experimental"
@@ -10915,7 +10923,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 756,
+      "line": 757,
       "path": "ConVars/r_citadel_ssao_quality",
       "value": "0",
       "variant": "experimental"
@@ -10923,7 +10931,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 757,
+      "line": 758,
       "path": "ConVars/r_citadel_ssao_thin_occluder_compensation",
       "value": "0",
       "variant": "experimental"
@@ -10931,7 +10939,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 758,
+      "line": 759,
       "path": "ConVars/r_citadel_sun_shadow_slope_scale_depth_bias",
       "value": "0",
       "variant": "experimental"
@@ -10939,7 +10947,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 759,
+      "line": 760,
       "path": "ConVars/r_distancefield_enable",
       "value": "1",
       "variant": "experimental"
@@ -10947,7 +10955,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 760,
+      "line": 761,
       "path": "ConVars/r_lightmap_bicubic_filtering",
       "value": "1",
       "variant": "experimental"
@@ -10955,7 +10963,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 761,
+      "line": 762,
       "path": "ConVars/r_lightmap_size",
       "value": "2048",
       "variant": "experimental"
@@ -10963,7 +10971,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 762,
+      "line": 763,
       "path": "ConVars/r_lightmap_size_directional_irradiance",
       "value": "0",
       "variant": "experimental"
@@ -10971,7 +10979,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 763,
+      "line": 764,
       "path": "ConVars/r_multiscattering",
       "value": "1",
       "variant": "experimental"
@@ -10979,7 +10987,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 764,
+      "line": 765,
       "path": "ConVars/r_rendersun",
       "value": "0",
       "variant": "experimental"
@@ -10987,7 +10995,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 765,
+      "line": 766,
       "path": "ConVars/r_ssao",
       "value": "0",
       "variant": "experimental"
@@ -10995,7 +11003,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 766,
+      "line": 767,
       "path": "ConVars/r_ssao_strength",
       "value": "0",
       "variant": "experimental"
@@ -11003,7 +11011,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 769,
+      "line": 770,
       "path": "ConVars/cl_disable_ragdolls",
       "value": "0",
       "variant": "experimental"
@@ -11011,7 +11019,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 770,
+      "line": 771,
       "path": "ConVars/cl_ragdoll_limit",
       "value": "0",
       "variant": "experimental"
@@ -11019,7 +11027,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 773,
+      "line": 774,
       "path": "ConVars/cl_fasttempentcollision",
       "value": "1000",
       "variant": "experimental"
@@ -11027,7 +11035,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 774,
+      "line": 775,
       "path": "ConVars/cloth_sim_on_tick",
       "value": "0",
       "variant": "experimental"
@@ -11035,7 +11043,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 775,
+      "line": 776,
       "path": "ConVars/enable_boneflex",
       "value": "0",
       "variant": "experimental"
@@ -11043,7 +11051,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 776,
+      "line": 777,
       "path": "ConVars/ik_fabrik_align_chain",
       "value": "1",
       "variant": "experimental"
@@ -11051,7 +11059,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 777,
+      "line": 778,
       "path": "ConVars/ik_final_fixup_enable",
       "value": "0",
       "variant": "experimental"
@@ -11059,7 +11067,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 778,
+      "line": 779,
       "path": "ConVars/props_break_max_pieces_perframe",
       "value": "0",
       "variant": "experimental"
@@ -11067,7 +11075,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 781,
+      "line": 782,
       "path": "ConVars/cl_show_splashes",
       "value": "0",
       "variant": "experimental"
@@ -11075,7 +11083,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 782,
+      "line": 783,
       "path": "ConVars/mat_colorcorrection",
       "value": "1",
       "variant": "experimental"
@@ -11083,7 +11091,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 783,
+      "line": 784,
       "path": "ConVars/r_character_decal_resolution",
       "value": "4",
       "variant": "experimental"
@@ -11091,7 +11099,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 784,
+      "line": 785,
       "path": "ConVars/r_depth_of_field",
       "value": "0",
       "variant": "experimental"
@@ -11099,7 +11107,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 785,
+      "line": 786,
       "path": "ConVars/r_effects_bloom",
       "value": "0",
       "variant": "experimental"
@@ -11107,7 +11115,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 786,
+      "line": 787,
       "path": "ConVars/r_post_bloom",
       "value": "0",
       "variant": "experimental"
@@ -11115,7 +11123,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 787,
+      "line": 788,
       "path": "ConVars/sc_clutter_enable",
       "value": "false",
       "variant": "experimental"
@@ -11123,7 +11131,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 788,
+      "line": 789,
       "path": "ConVars/violence_ablood",
       "value": "0",
       "variant": "experimental"
@@ -11131,7 +11139,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 789,
+      "line": 790,
       "path": "ConVars/violence_agibs",
       "value": "0",
       "variant": "experimental"
@@ -11139,7 +11147,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 790,
+      "line": 791,
       "path": "ConVars/violence_hblood",
       "value": "0",
       "variant": "experimental"
@@ -11147,7 +11155,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 791,
+      "line": 792,
       "path": "ConVars/violence_hgibs",
       "value": "0",
       "variant": "experimental"
@@ -11155,7 +11163,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 792,
+      "line": 793,
       "path": "ConVars/volume_fog_intermediate_textures_hdr",
       "value": "false",
       "variant": "experimental"
@@ -11163,7 +11171,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 797,
+      "line": 798,
       "path": "ConVars/cl_async_usercmd_send",
       "value": "true",
       "variant": "experimental"
@@ -11171,7 +11179,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 798,
+      "line": 799,
       "path": "ConVars/cl_updaterate",
       "value": "128",
       "variant": "experimental"
@@ -11179,7 +11187,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 799,
+      "line": 800,
       "path": "ConVars/cl_interp",
       "value": "0.01",
       "variant": "experimental"
@@ -11187,7 +11195,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 800,
+      "line": 801,
       "path": "ConVars/cl_interp_ratio",
       "value": "1",
       "variant": "experimental"
@@ -11195,7 +11203,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 801,
+      "line": 802,
       "path": "ConVars/cl_smoothtime",
       "value": "0.01",
       "variant": "experimental"
@@ -11203,7 +11211,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 802,
+      "line": 803,
       "path": "ConVars/cl_resend",
       "value": "15",
       "variant": "experimental"
@@ -11211,7 +11219,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 806,
+      "line": 807,
       "path": "ConVars/battery_saver",
       "value": "0",
       "variant": "experimental"
@@ -11219,7 +11227,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 807,
+      "line": 808,
       "path": "ConVars/cpu_level",
       "value": "1",
       "variant": "experimental"
@@ -11227,7 +11235,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 808,
+      "line": 809,
       "path": "ConVars/enable_priority_boost",
       "value": "true",
       "variant": "experimental"
@@ -11235,7 +11243,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 809,
+      "line": 810,
       "path": "ConVars/gpu_mem_level",
       "value": "1",
       "variant": "experimental"
@@ -11243,7 +11251,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 812,
+      "line": 813,
       "path": "ConVars/r_particle_mixed_resolution_viewstart",
       "value": "16",
       "variant": "experimental"
@@ -11251,7 +11259,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 813,
+      "line": 814,
       "path": "ConVars/r_particle_timescale",
       "value": "1",
       "variant": "experimental"
@@ -11259,7 +11267,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 814,
+      "line": 815,
       "path": "ConVars/cl_aggregate_particles",
       "value": "true",
       "variant": "experimental"
@@ -11267,7 +11275,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 815,
+      "line": 816,
       "path": "ConVars/cl_particle_batch_mode",
       "value": "1",
       "variant": "experimental"
@@ -11275,7 +11283,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 816,
+      "line": 817,
       "path": "ConVars/cl_particle_fallback_base",
       "value": "5",
       "variant": "experimental"
@@ -11283,7 +11291,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 817,
+      "line": 818,
       "path": "ConVars/cl_particle_fallback_multiplier",
       "value": "10",
       "variant": "experimental"
@@ -11291,7 +11299,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 818,
+      "line": 819,
       "path": "ConVars/cl_particle_sim_fallback_base_multiplier",
       "value": "100",
       "variant": "experimental"
@@ -11299,7 +11307,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 819,
+      "line": 820,
       "path": "ConVars/cl_particle_sim_fallback_threshold_ms",
       "value": "1",
       "variant": "experimental"
@@ -11307,7 +11315,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 820,
+      "line": 821,
       "path": "ConVars/r_citadel_disable_particle_lights",
       "value": "true",
       "variant": "experimental"
@@ -11315,7 +11323,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 821,
+      "line": 822,
       "path": "ConVars/r_citadel_screenspace_particles_full_res",
       "value": "true",
       "variant": "experimental"
@@ -11323,7 +11331,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 822,
+      "line": 823,
       "path": "ConVars/r_draw_particle_children_with_parents",
       "value": "1",
       "variant": "experimental"
@@ -11331,7 +11339,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 823,
+      "line": 824,
       "path": "ConVars/r_limit_particle_job_duration",
       "value": "true",
       "variant": "experimental"
@@ -11339,7 +11347,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 824,
+      "line": 825,
       "path": "ConVars/r_particle_allowprerender",
       "value": "true",
       "variant": "experimental"
@@ -11347,7 +11355,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 825,
+      "line": 826,
       "path": "ConVars/r_particle_batch_collections",
       "value": "true",
       "variant": "experimental"
@@ -11355,7 +11363,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 826,
+      "line": 827,
       "path": "ConVars/r_particle_fixedrandomseeds",
       "value": "true",
       "variant": "experimental"
@@ -11363,7 +11371,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 827,
+      "line": 828,
       "path": "ConVars/r_particle_max_texture_layers",
       "value": "4",
       "variant": "experimental"
@@ -11371,7 +11379,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 828,
+      "line": 829,
       "path": "ConVars/r_particle_min_timestep",
       "value": "0.00241",
       "variant": "experimental"
@@ -11379,7 +11387,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 829,
+      "line": 830,
       "path": "ConVars/r_particle_model_per_thread_count",
       "value": "64",
       "variant": "experimental"
@@ -11387,7 +11395,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 830,
+      "line": 831,
       "path": "ConVars/r_particle_skip_postsim",
       "value": "true",
       "variant": "experimental"
@@ -11395,7 +11403,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 831,
+      "line": 832,
       "path": "ConVars/r_physics_particle_op_spawn_scale",
       "value": "0",
       "variant": "experimental"
@@ -11403,7 +11411,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 832,
+      "line": 833,
       "path": "ConVars/r_update_particles_on_render_only_frames",
       "value": "true",
       "variant": "experimental"
@@ -11411,7 +11419,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 833,
+      "line": 834,
       "path": "ConVars/r_world_wind_strength",
       "value": "0",
       "variant": "experimental"
@@ -11419,7 +11427,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 836,
+      "line": 837,
       "path": "ConVars/sc_instanced_mesh_size_cull_bias",
       "value": "10",
       "variant": "experimental"
@@ -11427,7 +11435,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 837,
+      "line": 838,
       "path": "ConVars/mat_viewportscale",
       "value": "0.01",
       "variant": "experimental"
@@ -11435,7 +11443,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 838,
+      "line": 839,
       "path": "ConVars/sc_instanced_mesh_lod_bias",
       "value": "0.001",
       "variant": "experimental"
@@ -11443,7 +11451,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 839,
+      "line": 840,
       "path": "ConVars/sc_instanced_mesh_lod_bias_shadow",
       "value": "0.001",
       "variant": "experimental"
@@ -11451,7 +11459,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 840,
+      "line": 841,
       "path": "ConVars/phys_cull_internal_mesh_contacts",
       "value": "true",
       "variant": "experimental"
@@ -11459,7 +11467,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 841,
+      "line": 842,
       "path": "ConVars/sc_aggregate_bvh_threshold",
       "value": "256",
       "variant": "experimental"
@@ -11467,7 +11475,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 842,
+      "line": 843,
       "path": "ConVars/sc_allow_dithered_lod",
       "value": "false",
       "variant": "experimental"
@@ -11475,7 +11483,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 843,
+      "line": 844,
       "path": "ConVars/sc_instanced_mesh_motion_vectors",
       "value": "0",
       "variant": "experimental"
@@ -11483,7 +11491,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 844,
+      "line": 845,
       "path": "ConVars/sc_instanced_mesh_size_cull_bias_shadow",
       "value": "10",
       "variant": "experimental"
@@ -11491,7 +11499,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 845,
+      "line": 846,
       "path": "ConVars/sc_layer_batch_threshold",
       "value": "256",
       "variant": "experimental"
@@ -11499,7 +11507,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 846,
+      "line": 847,
       "path": "ConVars/sc_layer_batch_threshold_fullsort",
       "value": "120",
       "variant": "experimental"
@@ -11507,7 +11515,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 849,
+      "line": 850,
       "path": "ConVars/sc_aggregate_indirect_draw_compaction_threshold",
       "value": "1",
       "variant": "experimental"
@@ -11515,7 +11523,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 850,
+      "line": 851,
       "path": "ConVars/r_force_zprepass",
       "value": "0",
       "variant": "experimental"
@@ -11523,7 +11531,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 851,
+      "line": 852,
       "path": "ConVars/sc_aggregate_render_mesh_shader",
       "value": "true",
       "variant": "experimental"
@@ -11531,7 +11539,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 852,
+      "line": 853,
       "path": "ConVars/sc_aggregate_rtproxy_instanced_geo",
       "value": "false",
       "variant": "experimental"
@@ -11539,7 +11547,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 853,
+      "line": 854,
       "path": "ConVars/sc_aggregate_rtproxy_unique_geo",
       "value": "false",
       "variant": "experimental"
@@ -11547,7 +11555,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 854,
+      "line": 855,
       "path": "ConVars/citadel_video_preset",
       "value": "9",
       "variant": "experimental"
@@ -11555,7 +11563,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 855,
+      "line": 856,
       "path": "ConVars/r_citadel_gpu_culling",
       "value": "true",
       "variant": "experimental"
@@ -11563,7 +11571,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 856,
+      "line": 857,
       "path": "ConVars/r_vma_defrag_algorithm",
       "value": "0",
       "variant": "experimental"
@@ -11571,7 +11579,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 857,
+      "line": 858,
       "path": "ConVars/rtx_dynamic_blas",
       "value": "false",
       "variant": "experimental"
@@ -11579,7 +11587,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 858,
+      "line": 859,
       "path": "ConVars/rtx_dynamic_blas_caching",
       "value": "true",
       "variant": "experimental"
@@ -11587,7 +11595,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 859,
+      "line": 860,
       "path": "ConVars/rtx_force_default_hitgroup",
       "value": "true",
       "variant": "experimental"
@@ -11595,7 +11603,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 860,
+      "line": 861,
       "path": "ConVars/rtx_texture_resolution",
       "value": "64",
       "variant": "experimental"
@@ -11603,7 +11611,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 861,
+      "line": 862,
       "path": "ConVars/sc_instanced_mesh_opaque_fade",
       "value": "false",
       "variant": "experimental"
@@ -11611,7 +11619,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 865,
+      "line": 866,
       "path": "ConVars/snd_steamaudio_max_occlusion_samples",
       "value": "32",
       "variant": "experimental"
@@ -11619,7 +11627,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 866,
+      "line": 867,
       "path": "ConVars/snd_steamaudio_num_diffuse_samples",
       "value": "512",
       "variant": "experimental"
@@ -11627,7 +11635,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 871,
+      "line": 872,
       "path": "ConVars/r_low_latency",
       "value": "0",
       "variant": "experimental"
@@ -11635,7 +11643,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 872,
+      "line": 873,
       "path": "ConVars/sc_force_materials_batchable",
       "value": "true",
       "variant": "experimental"
@@ -11643,7 +11651,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 873,
+      "line": 874,
       "path": "ConVars/cc_captiontrace",
       "value": "0",
       "variant": "experimental"
@@ -11651,7 +11659,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 874,
+      "line": 875,
       "path": "ConVars/citadel_bullet_shot_offset_fade_time",
       "value": "0",
       "variant": "experimental"
@@ -11659,7 +11667,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 875,
+      "line": 876,
       "path": "ConVars/citadel_show_survey",
       "value": "true",
       "variant": "experimental"
@@ -11667,7 +11675,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 876,
+      "line": 877,
       "path": "ConVars/citadel_test_ranked_summary",
       "value": "true",
       "variant": "experimental"
@@ -11675,7 +11683,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 877,
+      "line": 878,
       "path": "ConVars/cl_batch_entity_list_ops_during_latch",
       "value": "true",
       "variant": "experimental"
@@ -11683,7 +11691,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 878,
+      "line": 879,
       "path": "ConVars/cl_enable_eye_occlusion",
       "value": "false",
       "variant": "experimental"
@@ -11691,7 +11699,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 879,
+      "line": 880,
       "path": "ConVars/cl_generate_postdataupdatepreserved",
       "value": "false",
       "variant": "experimental"
@@ -11699,7 +11707,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 880,
+      "line": 881,
       "path": "ConVars/cl_interp_parallel",
       "value": "true",
       "variant": "experimental"
@@ -11707,7 +11715,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 881,
+      "line": 882,
       "path": "ConVars/cl_modifier_parallel_gather_status_effect_updates",
       "value": "false",
       "variant": "experimental"
@@ -11715,7 +11723,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 882,
+      "line": 883,
       "path": "ConVars/cl_phys_assume_fixed_tick_interval",
       "value": "true",
       "variant": "experimental"
@@ -11723,7 +11731,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 883,
+      "line": 884,
       "path": "ConVars/csm_viewmodel_farz",
       "value": "1",
       "variant": "experimental"
@@ -11731,7 +11739,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 884,
+      "line": 885,
       "path": "ConVars/csm_viewmodel_max_shadow_dist",
       "value": "1",
       "variant": "experimental"
@@ -11739,7 +11747,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 885,
+      "line": 886,
       "path": "ConVars/csm_viewmodel_max_visible_dist",
       "value": "1",
       "variant": "experimental"
@@ -11747,7 +11755,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 886,
+      "line": 887,
       "path": "ConVars/csm_viewmodel_nearz",
       "value": "512",
       "variant": "experimental"
@@ -11755,7 +11763,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 887,
+      "line": 888,
       "path": "ConVars/debug_draw_enable",
       "value": "true",
       "variant": "experimental"
@@ -11763,7 +11771,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 888,
+      "line": 889,
       "path": "ConVars/default_fov",
       "value": "0",
       "variant": "experimental"
@@ -11771,7 +11779,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 889,
+      "line": 890,
       "path": "ConVars/engine_max_ticks_to_simulate",
       "value": "2",
       "variant": "experimental"
@@ -11779,7 +11787,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 890,
+      "line": 891,
       "path": "ConVars/r_async_compute_fog",
       "value": "true",
       "variant": "experimental"
@@ -11787,7 +11795,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 891,
+      "line": 892,
       "path": "ConVars/r_citadel_depth_prepass_dynamic_objects",
       "value": "false",
       "variant": "experimental"
@@ -11795,7 +11803,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 892,
+      "line": 893,
       "path": "ConVars/r_citadel_glow_health_bar_debug",
       "value": "false",
       "variant": "experimental"
@@ -11803,7 +11811,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 893,
+      "line": 894,
       "path": "ConVars/r_citadel_gpu_preview_denoise_passes",
       "value": "0",
       "variant": "experimental"
@@ -11811,7 +11819,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 894,
+      "line": 895,
       "path": "ConVars/r_drawropes",
       "value": "false",
       "variant": "experimental"
@@ -11819,7 +11827,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 895,
+      "line": 896,
       "path": "ConVars/r_drawtracers_firstperson",
       "value": "false",
       "variant": "experimental"
@@ -11827,7 +11835,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 896,
+      "line": 897,
       "path": "ConVars/r_drawviewmodel",
       "value": "false",
       "variant": "experimental"
@@ -11835,7 +11843,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 897,
+      "line": 898,
       "path": "ConVars/r_enable_rigid_animation",
       "value": "false",
       "variant": "experimental"
@@ -11843,7 +11851,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 898,
+      "line": 899,
       "path": "ConVars/r_hair_ao",
       "value": "0",
       "variant": "experimental"
@@ -11851,7 +11859,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 899,
+      "line": 900,
       "path": "ConVars/r_max_portal_render_targets",
       "value": "2",
       "variant": "experimental"
@@ -11859,7 +11867,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 900,
+      "line": 901,
       "path": "ConVars/r_particle_model_new",
       "value": "false",
       "variant": "experimental"
@@ -11867,7 +11875,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 901,
+      "line": 902,
       "path": "ConVars/r_particle_model_new8",
       "value": "false",
       "variant": "experimental"
@@ -11875,7 +11883,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 902,
+      "line": 903,
       "path": "ConVars/r_particle_newinput",
       "value": "true",
       "variant": "experimental"
@@ -11883,7 +11891,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 903,
+      "line": 904,
       "path": "ConVars/r_pixelvisibility_partial",
       "value": "false",
       "variant": "experimental"
@@ -11891,7 +11899,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 904,
+      "line": 905,
       "path": "ConVars/r_render_hair",
       "value": "false",
       "variant": "experimental"
@@ -11899,7 +11907,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 905,
+      "line": 906,
       "path": "ConVars/r_renderdoc_auto_shader_pdbs",
       "value": "false",
       "variant": "experimental"
@@ -11907,7 +11915,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 906,
+      "line": 907,
       "path": "ConVars/r_skip_precache_validation_check",
       "value": "true",
       "variant": "experimental"
@@ -11915,7 +11923,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 907,
+      "line": 908,
       "path": "ConVars/r_strip_invisible_during_sceneobject_update",
       "value": "1",
       "variant": "experimental"
@@ -11923,7 +11931,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 908,
+      "line": 909,
       "path": "ConVars/sparseshadowtree_leaf_precision_viewmodel",
       "value": "0",
       "variant": "experimental"
@@ -11931,7 +11939,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 909,
+      "line": 910,
       "path": "ConVars/viewmodel_fov",
       "value": "0",
       "variant": "experimental"
@@ -11939,7 +11947,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 912,
+      "line": 913,
       "path": "ConVars/r_grass_end_fade",
       "value": "0",
       "variant": "experimental"
@@ -11947,7 +11955,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 913,
+      "line": 914,
       "path": "ConVars/r_grass_quality",
       "value": "0",
       "variant": "experimental"
@@ -11955,7 +11963,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 914,
+      "line": 915,
       "path": "ConVars/r_grass_start_fade",
       "value": "0",
       "variant": "experimental"
@@ -11963,7 +11971,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 917,
+      "line": 918,
       "path": "ConVars/cl_simulate_dormant_entities",
       "value": "false",
       "variant": "experimental"
@@ -11971,7 +11979,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 920,
+      "line": 921,
       "path": "ConVars/audio_enable_spawn_mask_mix_layer",
       "value": "false",
       "variant": "experimental"
@@ -11979,7 +11987,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 921,
+      "line": 922,
       "path": "ConVars/audio_enable_vmix_mastering",
       "value": "false",
       "variant": "experimental"
@@ -11987,7 +11995,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 922,
+      "line": 923,
       "path": "ConVars/audio_viewing_damage_decay_time",
       "value": "0",
       "variant": "experimental"
@@ -11995,7 +12003,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 923,
+      "line": 924,
       "path": "ConVars/audio_viewing_damage_hold_time",
       "value": "0",
       "variant": "experimental"
@@ -12003,7 +12011,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 924,
+      "line": 925,
       "path": "ConVars/snd_boxverb_simd",
       "value": "true",
       "variant": "experimental"
@@ -12011,7 +12019,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 925,
+      "line": 926,
       "path": "ConVars/snd_diffusor_simd",
       "value": "true",
       "variant": "experimental"
@@ -12019,7 +12027,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 926,
+      "line": 927,
       "path": "ConVars/snd_enable_subgraph_corenull_passthrough",
       "value": "false",
       "variant": "experimental"
@@ -12027,7 +12035,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 927,
+      "line": 928,
       "path": "ConVars/snd_mixahead",
       "value": "0.01",
       "variant": "experimental"
@@ -12035,7 +12043,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 928,
+      "line": 929,
       "path": "ConVars/snd_occlusion_bounces",
       "value": "0",
       "variant": "experimental"
@@ -12043,7 +12051,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 929,
+      "line": 930,
       "path": "ConVars/snd_occlusion_rays",
       "value": "0",
       "variant": "experimental"
@@ -12051,7 +12059,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 930,
+      "line": 931,
       "path": "ConVars/snd_soundmixer_version",
       "value": "2",
       "variant": "experimental"
@@ -12059,7 +12067,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 931,
+      "line": 932,
       "path": "ConVars/snd_steamaudio_num_threads",
       "value": "4",
       "variant": "experimental"
@@ -12067,7 +12075,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 932,
+      "line": 933,
       "path": "ConVars/snd_steamaudio_reverb_order_rendering",
       "value": "0",
       "variant": "experimental"
@@ -12075,7 +12083,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 933,
+      "line": 934,
       "path": "ConVars/snd_ui_positional",
       "value": "false",
       "variant": "experimental"
@@ -12083,7 +12091,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 938,
+      "line": 939,
       "path": "ConVars/csm_cascade0_override_dist",
       "value": "0",
       "variant": "experimental"
@@ -12091,7 +12099,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 939,
+      "line": 940,
       "path": "ConVars/csm_cascade1_override_dist",
       "value": "0",
       "variant": "experimental"
@@ -12099,7 +12107,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 940,
+      "line": 941,
       "path": "ConVars/csm_cascade2_override_dist",
       "value": "0",
       "variant": "experimental"
@@ -12107,7 +12115,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 941,
+      "line": 942,
       "path": "ConVars/csm_cascade3_override_dist",
       "value": "0",
       "variant": "experimental"
@@ -12115,7 +12123,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 942,
+      "line": 943,
       "path": "ConVars/csm_max_dist_between_caster_and_receiver",
       "value": "0",
       "variant": "experimental"
@@ -12123,7 +12131,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 943,
+      "line": 944,
       "path": "ConVars/csm_max_num_cascades_override",
       "value": "2",
       "variant": "experimental"
@@ -12131,7 +12139,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 944,
+      "line": 945,
       "path": "ConVars/csm_max_visible_dist",
       "value": "0",
       "variant": "experimental"
@@ -12139,7 +12147,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 945,
+      "line": 946,
       "path": "ConVars/csm_res_override_0",
       "value": "1",
       "variant": "experimental"
@@ -12147,7 +12155,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 946,
+      "line": 947,
       "path": "ConVars/csm_res_override_1",
       "value": "1",
       "variant": "experimental"
@@ -12155,7 +12163,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 947,
+      "line": 948,
       "path": "ConVars/csm_res_override_2",
       "value": "1",
       "variant": "experimental"
@@ -12163,7 +12171,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 948,
+      "line": 949,
       "path": "ConVars/csm_res_override_3",
       "value": "1",
       "variant": "experimental"
@@ -12171,7 +12179,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 949,
+      "line": 950,
       "path": "ConVars/csm_viewmodel_shadows",
       "value": "false",
       "variant": "experimental"
@@ -12179,7 +12187,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 953,
+      "line": 954,
       "path": "ConVars/ik_constraints_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12187,7 +12195,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 954,
+      "line": 955,
       "path": "ConVars/ik_debug_dogleg3bone_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12195,7 +12203,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 955,
+      "line": 956,
       "path": "ConVars/ik_debug_fabrik_backwards_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12203,7 +12211,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 956,
+      "line": 957,
       "path": "ConVars/ik_debug_fabrik_forwards_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12211,7 +12219,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 957,
+      "line": 958,
       "path": "ConVars/ik_enable",
       "value": "false",
       "variant": "experimental"
@@ -12219,7 +12227,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 958,
+      "line": 959,
       "path": "ConVars/ik_fabrik_backwards_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12227,7 +12235,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 959,
+      "line": 960,
       "path": "ConVars/ik_fabrik_forwards_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12235,7 +12243,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 960,
+      "line": 961,
       "path": "ConVars/ik_planetilt_enable",
       "value": "false",
       "variant": "experimental"
@@ -12243,7 +12251,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 964,
+      "line": 965,
       "path": "ConVars/animgraph_footlock_calculate_tilt",
       "value": "false",
       "variant": "experimental"
@@ -12251,7 +12259,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 965,
+      "line": 966,
       "path": "ConVars/animgraph_footlock_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12259,7 +12267,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 966,
+      "line": 967,
       "path": "ConVars/animgraph_footlock_ground_roll",
       "value": "false",
       "variant": "experimental"
@@ -12267,7 +12275,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 967,
+      "line": 968,
       "path": "ConVars/animgraph_footlock_hip_offset_enable",
       "value": "false",
       "variant": "experimental"
@@ -12275,7 +12283,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 968,
+      "line": 969,
       "path": "ConVars/animgraph_footlock_ik_enable",
       "value": "false",
       "variant": "experimental"
@@ -12283,7 +12291,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 969,
+      "line": 970,
       "path": "ConVars/animgraph_footlock_trace_ground_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12291,7 +12299,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 970,
+      "line": 971,
       "path": "ConVars/animgraph_footlock_use_hip_shift",
       "value": "false",
       "variant": "experimental"
@@ -12299,7 +12307,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 971,
+      "line": 972,
       "path": "ConVars/animgraph_slowdownonslopes_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12307,7 +12315,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 975,
+      "line": 976,
       "path": "ConVars/citadel_hud_objective_health_idle_timeout",
       "value": "0",
       "variant": "experimental"
@@ -12315,7 +12323,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 976,
+      "line": 977,
       "path": "ConVars/citadel_orb_debug_draw_state",
       "value": "-1",
       "variant": "experimental"
@@ -12323,7 +12331,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 977,
+      "line": 978,
       "path": "ConVars/lb_enable_baked_shadows",
       "value": "false",
       "variant": "experimental"
@@ -12331,7 +12339,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 978,
+      "line": 979,
       "path": "ConVars/phys_dynamic_scaling",
       "value": "false",
       "variant": "experimental"
@@ -12339,7 +12347,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 979,
+      "line": 980,
       "path": "ConVars/ai_disable",
       "value": "1",
       "variant": "experimental"
@@ -12347,7 +12355,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 980,
+      "line": 981,
       "path": "ConVars/ai_disabled",
       "value": "1",
       "variant": "experimental"
@@ -12355,7 +12363,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 981,
+      "line": 982,
       "path": "ConVars/cam_idealdist",
       "value": "0",
       "variant": "experimental"
@@ -12363,7 +12371,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 982,
+      "line": 983,
       "path": "ConVars/citadel_camera_dist",
       "value": "0",
       "variant": "experimental"
@@ -12371,7 +12379,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 983,
+      "line": 984,
       "path": "ConVars/citadel_camera_height_approach_speed",
       "value": "0",
       "variant": "experimental"
@@ -12379,7 +12387,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 984,
+      "line": 985,
       "path": "ConVars/citadel_camera_hero_fov",
       "value": "106",
       "variant": "experimental"
@@ -12387,7 +12395,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 985,
+      "line": 986,
       "path": "ConVars/citadel_crosshair_hit_marker_duration",
       "value": "0.00001",
       "variant": "experimental"
@@ -12395,7 +12403,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 986,
+      "line": 987,
       "path": "ConVars/citadel_damage_text_show_effectiveness",
       "value": "0",
       "variant": "experimental"
@@ -12403,7 +12411,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 987,
+      "line": 988,
       "path": "ConVars/citadel_first_person",
       "value": "true",
       "variant": "experimental"
@@ -12411,7 +12419,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 988,
+      "line": 989,
       "path": "ConVars/citadel_roster_select_force_enable_priority_token",
       "value": "true",
       "variant": "experimental"
@@ -12419,7 +12427,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 989,
+      "line": 990,
       "path": "ConVars/citadel_rp_show_dev_messages",
       "value": "true",
       "variant": "experimental"
@@ -12427,7 +12435,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 990,
+      "line": 991,
       "path": "ConVars/citadel_weapon_spread_debug",
       "value": "true",
       "variant": "experimental"
@@ -12435,7 +12443,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 991,
+      "line": 992,
       "path": "ConVars/cl_input_enable_raw_keyboard",
       "value": "1",
       "variant": "experimental"
@@ -12443,7 +12451,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 992,
+      "line": 993,
       "path": "ConVars/cl_particle_max_count",
       "value": "1500",
       "variant": "experimental"
@@ -12451,7 +12459,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 993,
+      "line": 994,
       "path": "ConVars/cl_particle_sim_fallback_threshold_ms",
       "value": "0.3",
       "variant": "experimental"
@@ -12459,7 +12467,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 994,
+      "line": 995,
       "path": "ConVars/cl_phys_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12467,7 +12475,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 995,
+      "line": 996,
       "path": "ConVars/cl_skip_update_animations",
       "value": "true",
       "variant": "experimental"
@@ -12475,7 +12483,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 996,
+      "line": 997,
       "path": "ConVars/gpu_level",
       "value": "1",
       "variant": "experimental"
@@ -12483,7 +12491,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 997,
+      "line": 998,
       "path": "ConVars/instant_replay",
       "value": "true",
       "variant": "experimental"
@@ -12491,7 +12499,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 998,
+      "line": 999,
       "path": "ConVars/lb_enable_envmaps",
       "value": "false",
       "variant": "experimental"
@@ -12499,7 +12507,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 999,
+      "line": 1000,
       "path": "ConVars/movement_stats_debug_draw",
       "value": "true",
       "variant": "experimental"
@@ -12507,7 +12515,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1000,
+      "line": 1001,
       "path": "ConVars/panorama_disable_descendant_filtering",
       "value": "true",
       "variant": "experimental"
@@ -12515,7 +12523,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1001,
+      "line": 1002,
       "path": "ConVars/panorama_disable_draw_fancy_quad",
       "value": "true",
       "variant": "experimental"
@@ -12523,7 +12531,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1002,
+      "line": 1003,
       "path": "ConVars/panorama_enable_secondary_layout_pass",
       "value": "false",
       "variant": "experimental"
@@ -12531,7 +12539,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1003,
+      "line": 1004,
       "path": "ConVars/panorama_max_text_shadow_strength",
       "value": "10",
       "variant": "experimental"
@@ -12539,7 +12547,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1004,
+      "line": 1005,
       "path": "ConVars/panorama_temp_comp_layer_min_dimension",
       "value": "128",
       "variant": "experimental"
@@ -12547,7 +12555,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1005,
+      "line": 1006,
       "path": "ConVars/panorama_worldpanel_update_culling",
       "value": "true",
       "variant": "experimental"
@@ -12555,7 +12563,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1006,
+      "line": 1007,
       "path": "ConVars/phys_batch_ray_test",
       "value": "16",
       "variant": "experimental"
@@ -12563,7 +12571,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1007,
+      "line": 1008,
       "path": "ConVars/r_citadel_gpu_culling_two_pass",
       "value": "false",
       "variant": "experimental"
@@ -12571,7 +12579,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1008,
+      "line": 1009,
       "path": "ConVars/r_citadel_npr_force_solid_outline",
       "value": "false",
       "variant": "experimental"
@@ -12579,7 +12587,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1009,
+      "line": 1010,
       "path": "ConVars/r_citadel_npr_outlines",
       "value": "false",
       "variant": "experimental"
@@ -12587,7 +12595,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1010,
+      "line": 1011,
       "path": "ConVars/r_citadel_npr_outlines_max_dist",
       "value": "1",
       "variant": "experimental"
@@ -12595,7 +12603,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1011,
+      "line": 1012,
       "path": "ConVars/r_citadel_selection_outline2_alpha",
       "value": "0.2",
       "variant": "experimental"
@@ -12603,7 +12611,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1012,
+      "line": 1013,
       "path": "ConVars/r_dopixelvisibility",
       "value": "0",
       "variant": "experimental"
@@ -12611,7 +12619,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1013,
+      "line": 1014,
       "path": "ConVars/r_draw3dskybox",
       "value": "0",
       "variant": "experimental"
@@ -12619,7 +12627,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1014,
+      "line": 1015,
       "path": "ConVars/r_draw_first_tri_only",
       "value": "true",
       "variant": "experimental"
@@ -12627,7 +12635,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1015,
+      "line": 1016,
       "path": "ConVars/r_draw_instances",
       "value": "0",
       "variant": "experimental"
@@ -12635,7 +12643,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1016,
+      "line": 1017,
       "path": "ConVars/r_draw_overlays",
       "value": "0",
       "variant": "experimental"
@@ -12643,7 +12651,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1017,
+      "line": 1018,
       "path": "ConVars/r_drawdecals",
       "value": "1",
       "variant": "experimental"
@@ -12651,7 +12659,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1018,
+      "line": 1019,
       "path": "ConVars/r_drawskybox",
       "value": "true",
       "variant": "experimental"
@@ -12659,7 +12667,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1019,
+      "line": 1020,
       "path": "ConVars/r_drawtracers",
       "value": "0",
       "variant": "experimental"
@@ -12667,7 +12675,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1020,
+      "line": 1021,
       "path": "ConVars/r_dx11_software_cmd_lists",
       "value": "0",
       "variant": "experimental"
@@ -12675,7 +12683,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1021,
+      "line": 1022,
       "path": "ConVars/r_extra_render_frames",
       "value": "1",
       "variant": "experimental"
@@ -12683,7 +12691,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1022,
+      "line": 1023,
       "path": "ConVars/r_frame_sync_enable",
       "value": "false",
       "variant": "experimental"
@@ -12691,7 +12699,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1023,
+      "line": 1024,
       "path": "ConVars/r_opaque",
       "value": "false",
       "variant": "experimental"
@@ -12699,7 +12707,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1024,
+      "line": 1025,
       "path": "ConVars/r_showdebugoverlays",
       "value": "true",
       "variant": "experimental"
@@ -12707,7 +12715,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1025,
+      "line": 1026,
       "path": "ConVars/r_skinning_enabled",
       "value": "false",
       "variant": "experimental"
@@ -12715,7 +12723,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1026,
+      "line": 1027,
       "path": "ConVars/r_translucent",
       "value": "false",
       "variant": "experimental"
@@ -12723,7 +12731,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1027,
+      "line": 1028,
       "path": "ConVars/r_wait_on_present",
       "value": "true",
       "variant": "experimental"
@@ -12731,7 +12739,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1028,
+      "line": 1029,
       "path": "ConVars/sc_aggregate_gpu_culling_show_culled",
       "value": "true",
       "variant": "experimental"
@@ -12739,7 +12747,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1029,
+      "line": 1030,
       "path": "ConVars/sc_aggregate_render_mesh_shader",
       "value": "false",
       "variant": "experimental"
@@ -12747,7 +12755,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1030,
+      "line": 1031,
       "path": "ConVars/sc_aggregate_show_outside_vis",
       "value": "true",
       "variant": "experimental"
@@ -12755,7 +12763,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1031,
+      "line": 1032,
       "path": "ConVars/sc_disable_procedural_layer_rendering",
       "value": "false",
       "variant": "experimental"
@@ -12763,7 +12771,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1032,
+      "line": 1033,
       "path": "ConVars/sc_skip_traversal",
       "value": "true",
       "variant": "experimental"
@@ -12771,7 +12779,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1033,
+      "line": 1034,
       "path": "ConVars/sc_throw_away_all_layers",
       "value": "true",
       "variant": "experimental"
@@ -12779,7 +12787,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1034,
+      "line": 1035,
       "path": "ConVars/subtick_buttons_enabled",
       "value": "true",
       "variant": "experimental"
@@ -12787,7 +12795,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1035,
+      "line": 1036,
       "path": "ConVars/music_hideout_debug_enabled",
       "value": "true",
       "variant": "experimental"
@@ -12795,7 +12803,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1036,
+      "line": 1037,
       "path": "ConVars/fog_enable",
       "value": "false",
       "variant": "experimental"
@@ -12803,7 +12811,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1037,
+      "line": 1038,
       "path": "ConVars/volume_fog_enable_jitter",
       "value": "false",
       "variant": "experimental"
@@ -12811,7 +12819,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1040,
+      "line": 1041,
       "path": "ConVars/skeleton_instance_lod_optimization",
       "value": "false",
       "variant": "experimental"
@@ -12819,7 +12827,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1041,
+      "line": 1042,
       "path": "ConVars/ragdoll_parallel_pose_control",
       "value": "1",
       "variant": "experimental"
@@ -12827,7 +12835,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1042,
+      "line": 1043,
       "path": "ConVars/r_light_flickering_enabled",
       "value": "0",
       "variant": "experimental"
@@ -12835,7 +12843,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1043,
+      "line": 1044,
       "path": "ConVars/r_decals",
       "value": "1",
       "variant": "experimental"
@@ -12843,7 +12851,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1044,
+      "line": 1045,
       "path": "ConVars/r_decals_default_fade_duration",
       "value": "1",
       "variant": "experimental"
@@ -12851,7 +12859,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1045,
+      "line": 1046,
       "path": "ConVars/particle_cluster_use_collision_hulls",
       "value": "false",
       "variant": "experimental"
@@ -12859,7 +12867,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1046,
+      "line": 1047,
       "path": "ConVars/ent_joint_lines",
       "value": "false",
       "variant": "experimental"
@@ -12867,7 +12875,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1047,
+      "line": 1048,
       "path": "ConVars/ent_joint_names",
       "value": "false",
       "variant": "experimental"
@@ -12875,7 +12883,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1048,
+      "line": 1049,
       "path": "ConVars/disable_source_soundscape_trace",
       "value": "true",
       "variant": "experimental"
@@ -12883,7 +12891,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1049,
+      "line": 1050,
       "path": "ConVars/animgraph_enable_parallel_op_evaluation",
       "value": "1",
       "variant": "experimental"
@@ -12891,7 +12899,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1050,
+      "line": 1051,
       "path": "ConVars/animgraph_enable_parallel_preupdate",
       "value": "1",
       "variant": "experimental"
@@ -12899,7 +12907,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1051,
+      "line": 1052,
       "path": "ConVars/phys_threaded_cloth_bone_update",
       "value": "1",
       "variant": "experimental"
@@ -12907,7 +12915,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1052,
+      "line": 1053,
       "path": "ConVars/phys_threaded_kinematic_bone_update",
       "value": "1",
       "variant": "experimental"
@@ -12915,7 +12923,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1053,
+      "line": 1054,
       "path": "ConVars/phys_threaded_transform_update",
       "value": "1",
       "variant": "experimental"
@@ -12923,7 +12931,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1054,
+      "line": 1055,
       "path": "ConVars/particle_cluster_nodraw",
       "value": "1",
       "variant": "experimental"
@@ -12931,7 +12939,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1055,
+      "line": 1056,
       "path": "ConVars/parallel_perform_invalidate_physics",
       "value": "false",
       "variant": "experimental"
@@ -12939,7 +12947,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1056,
+      "line": 1057,
       "path": "ConVars/citadel_npc_force_animate_every_tick",
       "value": "false",
       "variant": "experimental"
@@ -12947,7 +12955,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1057,
+      "line": 1058,
       "path": "ConVars/citadel_perf_interval_report_s",
       "value": "100000",
       "variant": "experimental"
@@ -12955,7 +12963,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1058,
+      "line": 1059,
       "path": "ConVars/citadel_hideout_enable_testing_tools",
       "value": "true",
       "variant": "experimental"
@@ -12963,7 +12971,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1061,
+      "line": 1062,
       "path": "ConVars/r_fallback_texture_lod_scale",
       "value": "8",
       "variant": "experimental"
@@ -12971,7 +12979,7 @@
     {
       "active": false,
       "kind": "scalar",
-      "line": 1062,
+      "line": 1063,
       "path": "ConVars/r_propsmaxdist",
       "value": "600",
       "variant": "experimental"
@@ -12979,7 +12987,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1066,
+      "line": 1067,
       "path": "ConVars/ai_async_queue_max_jobs",
       "value": "1",
       "variant": "experimental"
@@ -12987,7 +12995,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1067,
+      "line": 1068,
       "path": "ConVars/citadel_ai_path_pathing_time_ms_per_tick",
       "value": "20",
       "variant": "experimental"
@@ -12995,7 +13003,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1068,
+      "line": 1069,
       "path": "ConVars/ai_foot_sweep_enable",
       "value": "false",
       "variant": "experimental"
@@ -13003,7 +13011,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1069,
+      "line": 1070,
       "path": "ConVars/ai_gather_conditions_async",
       "value": "true",
       "variant": "experimental"
@@ -13011,7 +13019,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1070,
+      "line": 1071,
       "path": "ConVars/ai_lod_auto_enabled",
       "value": "true",
       "variant": "experimental"
@@ -13019,7 +13027,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1071,
+      "line": 1072,
       "path": "ConVars/ai_strong_optimizations_no_checkstand",
       "value": "1",
       "variant": "experimental"
@@ -13027,7 +13035,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1072,
+      "line": 1073,
       "path": "ConVars/ai_think_interval",
       "value": "0.3",
       "variant": "experimental"
@@ -13035,7 +13043,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1073,
+      "line": 1074,
       "path": "ConVars/ai_think_interval_lod_low",
       "value": "1",
       "variant": "experimental"
@@ -13043,7 +13051,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1074,
+      "line": 1075,
       "path": "ConVars/ai_think_interval_lod_med",
       "value": "0.4",
       "variant": "experimental"
@@ -13051,7 +13059,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1075,
+      "line": 1076,
       "path": "ConVars/ai_think_interval_lod_very_low",
       "value": "2",
       "variant": "experimental"
@@ -13059,7 +13067,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1076,
+      "line": 1077,
       "path": "ConVars/ai_use_async_ragdoll_fixup",
       "value": "true",
       "variant": "experimental"
@@ -13067,7 +13075,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1077,
+      "line": 1078,
       "path": "ConVars/ai_motor_max_state_time_active",
       "value": "0",
       "variant": "experimental"
@@ -13075,7 +13083,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1080,
+      "line": 1081,
       "path": "ConVars/citadel_action_refresh_interval",
       "value": "0.11",
       "variant": "experimental"
@@ -13083,7 +13091,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1081,
+      "line": 1082,
       "path": "ConVars/citadel_damage_indicator_height",
       "value": "10",
       "variant": "experimental"
@@ -13091,7 +13099,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1082,
+      "line": 1083,
       "path": "ConVars/citadel_damage_indicator_radius",
       "value": "1",
       "variant": "experimental"
@@ -13099,7 +13107,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1083,
+      "line": 1084,
       "path": "ConVars/citadel_damage_indicator_width",
       "value": "10",
       "variant": "experimental"
@@ -13107,7 +13115,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1084,
+      "line": 1085,
       "path": "ConVars/citadel_enable_new_ping_particle",
       "value": "true",
       "variant": "experimental"
@@ -13115,7 +13123,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1085,
+      "line": 1086,
       "path": "ConVars/citadel_fibonnaci_sphere_trace_los_max",
       "value": "80",
       "variant": "experimental"
@@ -13123,7 +13131,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1086,
+      "line": 1087,
       "path": "ConVars/citadel_minimap_overlap_scan_distance",
       "value": "0",
       "variant": "experimental"
@@ -13131,7 +13139,7 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1087,
+      "line": 1088,
       "path": "ConVars/citadel_player_outline_enemies",
       "value": "false",
       "variant": "experimental"
@@ -13139,17 +13147,9 @@
     {
       "active": true,
       "kind": "scalar",
-      "line": 1088,
+      "line": 1089,
       "path": "ConVars/citadel_portrait_unit_ag2_enable",
       "value": "false",
-      "variant": "experimental"
-    },
-    {
-      "active": true,
-      "kind": "scalar",
-      "line": 1089,
-      "path": "ConVars/citadel_use_pvs_for_players",
-      "value": "true",
       "variant": "experimental"
     },
     {

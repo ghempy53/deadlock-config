@@ -145,6 +145,18 @@ class InventoryTests(unittest.TestCase):
                 stock_diff.compare(path, FIXTURE)
         self.assertIn('rate/extra', output.getvalue())
 
+    def test_default_tags_in_bracket_and_column_forms(self):
+        text = ('GameInfo {\nConVars {\n'
+                'a "1" // text [def: "2"]\n'
+                'b "1" // default: "3"   | text\n'
+                'c "1" // default: 0.55 | text\n'
+                'd "1" //                | text [default: "4"]\n'
+                'e "1" //                | no tag; the default: "5" is prose\n'
+                'f "1" // default: ""\n'
+                '}\n}')
+        self.assertEqual({s.name: s.def_tag for s in gi.settings(text.splitlines())},
+                         {'a': '"2"', 'b': '"3"', 'c': '0.55', 'd': '"4"', 'e': None, 'f': '""'})
+
     def test_normalization_preserves_unknown_string_case(self):
         self.assertEqual(gi.normalize('TRUE'), '1')
         self.assertEqual(gi.normalize('1.0'), '1')

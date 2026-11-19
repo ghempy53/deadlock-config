@@ -39,7 +39,8 @@ file as errors. Changing the severity is **not** a config fix. Valve's own repea
 assignment is exempt from that duplicate policy check but remains visible in inventories and comparisons.
 
 Quote parity is a conservative check for the historically reported Deadlock Mod Manager parser issue, not a complete
-implementation of that manager. Other warnings cover quotes in comments and missing `[def:]` tags. Current inherited
+implementation of that manager. Other warnings cover quotes in comments and missing default tags (`[def: X]`, or
+OptimizationLock 4.0's leading `default: X |` comment column; `convars.py` checks either against the dump). Current inherited
 comment styles intentionally produce many warnings. Do not rewrite settings or comments just to reduce the count.
 
 `--fix` changes only stale `line N` references in `docs/CHANGES.txt`, which refer to experimental. It follows unchanged
@@ -90,7 +91,7 @@ assertion that either active config exactly matches that revision. Use explicit 
 ```sh
 python3 utils/nondefaults.py --ref e95b323b88d48c3fc4d80066ee603fb75060b248 \
   --dump /path/to/convars.txt --stock /path/to/stock-gameinfo.gi --build 6814 \
-  --date 2026-11-04 --upstream-ref 1dbf67941fff4c92881119f92b548f13c5175225
+  --date 2026-11-19 --upstream-ref 48f2ed1f4c2235bdcde665f3ae0c47c62b904eca
 ```
 
 Omit local inputs to download that exact capture. `--stdout` prints without writing. The generator requires a full

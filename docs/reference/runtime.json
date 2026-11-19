@@ -1292,16 +1292,17 @@
   },
   "ConVars/citadel_use_pvs_for_players": {
     "subsystem": "Runtime / gameplay presentation",
-    "purpose": "Name suggests using potentially visible sets for players, but exact behavior is undocumented.",
-    "rationale": "Inherited from OptimizationLock through the adopted stable baseline and subsequent syncs. Upstream inclusion documents provenance, not measured efficacy; an individual owner benchmark or original rationale is not recorded.",
-    "tradeoffs": "Server-module-only setting; the local file cannot change the remote server’s visibility logic. It is not an established client culling optimization.",
+    "purpose": "Name suggests using potentially visible sets for players. OptimizationLock 4.0's comment says true culls players at certain distances, which can get in the way of very long-range shots; that is upstream's description, not a verified mechanism.",
+    "rationale": "Inherited true from OptimizationLock through 3.9. OptimizationLock 4.0 (21fcc62, on main 48f2ed1) moved the line into the user-facing preferences block and set it to false, which is Valve's registered default, because of the long-range culling it describes; both configs take false. The upstream comment is internally inconsistent about which value it recommends; its value is what is adopted.",
+    "tradeoffs": "Server-module-only and developmentonly, so it can act only on servers the owner's PC runs (hideout, Sandbox, bot games), not on Valve's match servers. false is the registered default, so the line now requests no change from Valve's value. It is not an established client culling optimization either way.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for snapshot comparison; low for functional meaning and applied runtime effect.",
     "evidence": [
       "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi"
+      "https://github.com/Sqooky/OptimizationLock/blob/48f2ed1f4c2235bdcde665f3ae0c47c62b904eca/Sqooky%27s%20.gi/gameinfo.gi",
+      "https://github.com/Sqooky/OptimizationLock/commit/21fcc624b6de605493f804cdd08eee2960428c72"
     ],
-    "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
+    "test_status": "Static file, dump and upstream review only. No in-game test; on a local server, players at long range should stay visible."
   },
   "ConVars/citadel_video_preset": {
     "subsystem": "Runtime / gameplay presentation",

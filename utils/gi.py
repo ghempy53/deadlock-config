@@ -136,7 +136,8 @@ def flatten(node: KV, prefix: tuple[str, ...] = ()) -> list[tuple[tuple[str, ...
 # --------------------------------------------------------------------------------------------------------------------
 
 SETTING_RE = re.compile(r'^(?P<indent>\s*)(?P<off>//\s*)?(?P<name>[A-Za-z_][\w.]*)\s+(?:"(?P<value>[^"]*)"|(?P<bare>[-+]?\d+(?:\.\d+)?|true|false)(?=\s|$))(?P<rest>.*)$')
-DEF_RE = re.compile(r"\[def:\s*(?P<def>[^\]]*)\]")
+# Default tags: the bracketed `[def: X]` (also `[default: X]`) and OptimizationLock 4.0's leading `default: X |` column.
+DEF_RE = re.compile(r'\[def(?:ault)?:\s*(?P<def>[^\]]*)\]|^\s*default:\s*(?P<col>"[^"]*"|[^\s|]+)')
 
 
 @dataclass
@@ -151,7 +152,7 @@ class Setting:
     @property
     def def_tag(self) -> str | None:
         m = DEF_RE.search(self.note)
-        return m.group("def").strip() if m else None
+        return (m.group("def") if m.group("def") is not None else m.group("col")).strip() if m else None
 
 
 def convars_bounds(lines: list[str]) -> tuple[int, int]:
