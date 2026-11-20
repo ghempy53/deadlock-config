@@ -1,17 +1,17 @@
 {
-  "build": 6814,
+  "build": 6864,
   "files": {
     "convars.txt": {
-      "sha256": "d0cccd7a34f882cf346e8a6b151315d28c6704fa681a19e91164a851dbac5094",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt"
+      "sha256": "9163ebb202d3a757d0c1553eee85e295e32a294011f18f151596760691f695d7",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/DumpSource2/convars.txt"
     },
     "steam.inf": {
-      "sha256": "e8b05d309d247a37d15b5ca63cc57cd7eb47f5f1cfb64a8d05c412d231b300e3",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/steam.inf"
+      "sha256": "02dc863058bd820da528e998ea71e5d956154ad2ff0b7488d952d7679b48dadb",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/steam.inf"
     },
     "stock-gameinfo.gi": {
-      "sha256": "a79f1382c1b7f290f556e5f43e22c9ac54f27cdba55c3e6d688f8f23b0da7476",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi"
+      "sha256": "7a2d04f33d6a9e44bc655c7ac92785b2a13ca06371ae328d0ec215bab3a3d191",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/gameinfo.gi"
     },
     "upstream-README.md": {
       "sha256": "caadc9576dfbaf34886ff24c4bdbf2fff1814f4677af6bbd3dec9df352f03e6f",
@@ -185,58 +185,58 @@
     "stable-config/v1.3/gameinfo.gi": "b5fbeb3ec6cf9ff5cf7980520bb99faf4600b5367fa80252ac4df20833ab3dc2",
     "stable-config/v1.4/gameinfo.gi": "3fb7a0c6ee8d2cd3daee851780fda0afd8e80076f99538e31e4787317b790141"
   },
-  "previous_valve_commit": "a94d8b455203f12b176de75a5598dd8e6e8a94d4",
-  "refresh_note": "2026-11-19: upstream repinned to OptimizationLock main 48f2ed1 for the 4.0 sync of both configs (4.0 introduced at 18e46c6af3cb965efd3a8f96ff74e6b6ac0c52a5 with a comment reformat; 21fcc624b6de605493f804cdd08eee2960428c72 made the last gameinfo.gi change; 48f2ed1 only deletes an addon symlink). Valve data keeps the build 6814 capture for ConVars: through build 6864 (GameTracking 554634163b8c55d4e3fde34fe1a277357bcd3d98, source revision 11254827) the dump changed at builds 6826, 6849 and 6857 without touching any name either config or upstream 4.0 sets. The stock gameinfo is hash-identical through 6861 (82735ebcc9c89d1b3f6b3262c23c9580798ad362); build 6863 (10c3b1ddab77d16249cc5fbeffffad84315432cc) raised the stock tail rate/min and sv_minrate from 98304 to 133120, which neither upstream 4.0 nor either config carries yet; a repin is pending.",
-  "repository_commit": "687ecdc72832ffa89e184fb2f27e175d4bc44d45",
-  "research_date": "2026-11-19",
-  "source_revision": "11160503",
+  "previous_valve_commit": "e95b323b88d48c3fc4d80066ee603fb75060b248",
+  "refresh_note": "2026-11-20: Valve data repinned from build 6814 (GameTracking e95b323) to build 6864, source revision 11254827 (GameTracking 8e7a86aac3fc547d33b02169b352e812702e1d4c, November 20; it re-ran the dump but its convars.txt and stock gameinfo equal 554634163b8c55d4e3fde34fe1a277357bcd3d98). Since the old pin the stock gameinfo changed only at build 6863 (stock tail rate/min and sv_minrate 98304 -> 133120, now in both configs); the dump changed at builds 6826, 6849 and 6857 (16 added, 9 changed) without touching any name either config or upstream 4.0 sets; of the supplementary files only engine2_strings.txt changed (build dates and int8 parser symbols). Annotation evidence links that cite e95b323 record the capture each explanation was researched against; every name they describe is unchanged at the new pin except the two stock-tail values, whose annotations cite the new pin. Upstream stays at OptimizationLock main 48f2ed1 (4.0); b29993a after it only updates the upstream clean stock copy with the same 6863 change.",
+  "repository_commit": "3350588ac1452f550a0253f0084a48b13016af94",
+  "research_date": "2026-11-20",
+  "source_revision": "11254827",
   "supplementary_evidence": {
     "engine2_strings.txt": {
-      "sha256": "c18dd96f03829dbedf28b35234174195fab896cc894c4055cc3da266ef2945fa",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/engine2_strings.txt"
+      "sha256": "bf1325670f9ad0e26bbf032ce10806ccff48fbbaa219448c6b0a209ecf3ed90b",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/bin/win64/engine2_strings.txt"
     },
     "materialsystem2_strings.txt": {
       "sha256": "3fd8d8d9fa18b81f8510a16f9a62c2c938ae2c59c825e496c558c69a3ad0f33c",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/materialsystem2_strings.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/bin/win64/materialsystem2_strings.txt"
     },
     "particles_strings.txt": {
       "sha256": "2c1d37ab9385f55cf727193d1b43560d73d594cf7f87dc292771afc36bd23a46",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/particles_strings.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/bin/win64/particles_strings.txt"
     },
     "rendersystemdx11_strings.txt": {
       "sha256": "1515cd397bad8ee1ebf55b95a228e6aaae314d96e357c9335fd3242d58fe99e8",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemdx11_strings.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/bin/win64/rendersystemdx11_strings.txt"
     },
     "rendersystemvulkan_strings.txt": {
       "sha256": "36d579ad6888ff827af5621b951360691d50a39bb7ceacb219c0dc59670729cd",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/rendersystemvulkan_strings.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/bin/win64/rendersystemvulkan_strings.txt"
     },
     "scenesystem_strings.txt": {
       "sha256": "afe80b25857711657425140f05503dc834caf1aaaede6247a98a4ef72721e01a",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/scenesystem_strings.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/bin/win64/scenesystem_strings.txt"
     },
     "video_defaults_0.txt": {
       "sha256": "94db7235757e9223e846908095bfe379ab883d51a98584c04e00bf6e639954c1",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_0.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/pak01_dir/cfg/video_defaults_0.txt"
     },
     "video_defaults_1.txt": {
       "sha256": "c47aab6a3bc4dad82c9b735f4f9873889a056ae22657eafc4a6460afa5a1bd84",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_1.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/pak01_dir/cfg/video_defaults_1.txt"
     },
     "video_defaults_2.txt": {
       "sha256": "68b1ca93023f3def74a03f9466c6a5ea26eb73614c9851cd7e534df43ff8d6a8",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_2.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/pak01_dir/cfg/video_defaults_2.txt"
     },
     "video_defaults_3.txt": {
       "sha256": "4858e218e9529e81d591de9a28204e0f0fb74e5346f8b4382935ec890f53a9ba",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/pak01_dir/cfg/video_defaults_3.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/pak01_dir/cfg/video_defaults_3.txt"
     },
     "worldrenderer_strings.txt": {
       "sha256": "ddd73bd48c118bfaf5b857bbe328b5bbd0fc0a4a58168f8b6e46d7b2c9182fbe",
-      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/e95b323b88d48c3fc4d80066ee603fb75060b248/game/bin/win64/worldrenderer_strings.txt"
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Deadlock/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/bin/win64/worldrenderer_strings.txt"
     }
   },
   "upstream_commit": "48f2ed1f4c2235bdcde665f3ae0c47c62b904eca",
-  "valve_commit": "e95b323b88d48c3fc4d80066ee603fb75060b248",
+  "valve_commit": "8e7a86aac3fc547d33b02169b352e812702e1d4c",
   "valve_provenance": "SteamTracking is a third-party mirror of captured Valve files and console help, not Valve publication or source code."
 }

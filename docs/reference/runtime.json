@@ -3670,13 +3670,14 @@
     "subsystem": "Networking / interpolation",
     "purpose": "Minimum bandwidth rate allowed by the server; 0 is unlimited according to the dump.",
     "rationale": "Retains a setting present in Valve’s pinned stock gameinfo. A difference from the declared dump default is not by itself a repository optimization. Check all listed occurrences for earlier conflicting values.",
-    "tradeoffs": "Retains stock 98304. A local file cannot change a remote server’s replicated minimum; actual bandwidth and negotiation remain unverified.",
+    "tradeoffs": "Retains stock 133120 (Valve raised it from 98304 in build 6863; both configs followed on 2026-11-20). A local file cannot change a remote server’s replicated minimum; actual bandwidth and negotiation remain unverified.",
     "applicability": "No renderer-specific applicability found.",
     "confidence": "High for captured registration/default/flags; medium for declared purpose; low for applied runtime effect.",
     "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/8e7a86aac3fc547d33b02169b352e812702e1d4c/DumpSource2/convars.txt",
       "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi",
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/gameinfo.gi#L528",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/commit/10c3b1ddab77d16249cc5fbeffffad84315432cc"
     ],
     "test_status": "Static file, dump, upstream and repository-history review only. No in-game test or measured FPS/latency result from this audit."
   },

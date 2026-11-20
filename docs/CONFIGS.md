@@ -8,7 +8,7 @@ The [complete setting reference](SETTING-REFERENCE.md) covers every active assig
 engine section and mod path in both files. It distinguishes console registration defaults, stock file
 assignments and upstream values, and records uncertainty rather than treating an inherited comment as proof.
 
-## Current provenance (reviewed 2026-11-19)
+## Current provenance (reviewed 2026-11-20)
 
 - **Stable:** OptimizationLock **4.0**, pinned to `main` @
   [`48f2ed1f4c2235bdcde665f3ae0c47c62b904eca`](https://github.com/Sqooky/OptimizationLock/tree/48f2ed1f4c2235bdcde665f3ae0c47c62b904eca)
@@ -17,8 +17,9 @@ assignments and upstream values, and records uncertainty rather than treating an
   made the last `gameinfo.gi` change; `48f2ed1` only deletes an addon symlink), pulled in on November 19 at the
   owner's request with every owner setting below kept. Before that: 3.9 (`1dbf679`, November 4; rechecked November 17
   at `c876906`, which only touched readmes), 3.8 (`69a665c`, November 2), then the soul-orb debug drawing turned off
-  on November 3, and 3.7.1 hotfix (`cbb7041`, October 27).
-  Stable and experimental are byte-identical (SHA-256 `880be41a…559ba3bb`).
+  on November 3, and 3.7.1 hotfix (`cbb7041`, October 27). On November 20 both took Valve's new stock-tail rate
+  minimum with the build 6864 repin below.
+  Stable and experimental are byte-identical (SHA-256 `59240e7b…1a7d6d10`).
   **v1.4 is the last freeze (3.6), not the current file.**
 - **Experimental:** synced to 3.8, 3.9 and 4.0 together with stable at the owner's request; each sync rebuilt one file
   for both configs. History: reset October 27 to a byte-identical
@@ -28,23 +29,19 @@ assignments and upstream values, and records uncertainty rather than treating an
   ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)) and October 17 from stable 3.5.3
   ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)); the differences that accumulated since are recorded
   in the [changelog](CHANGES.txt) and git history.
-- **Valve-data baseline:** build **6814**, source revision **11160503**, third-party
-  [SteamTracking mirror commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248).
-  Matching `PGIVersion` is observed. Build 6821
-  ([GameTracking d251cf9](https://github.com/SteamTracking/GameTracking-Deadlock/tree/d251cf9d9a796061c90f58724230b7e17b97121b),
-  October 26) has a byte-identical dump, stock file and inspected DLL string tables. The dump first changed at
-  build 6826 ([GameTracking fd21313](https://github.com/SteamTracking/GameTracking-Deadlock/tree/fd21313e755aaac0a1625e0851b8d5c3f03ff46d),
-  October 30): it adds 14 ConVars and changes 9 others, none of which either config sets. Every later build through
-  6841 ([GameTracking e7cb680](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e7cb6805c7925c119bd4781789528543f59b28bd),
-  November 2) and 6842 ([GameTracking fc53d8b](https://github.com/SteamTracking/GameTracking-Deadlock/tree/fc53d8b267db6949b03d3fdb975dff4c9028f77b),
-  November 2) has that same dump and the pin's stock file. Build 6849 ([GameTracking 3e41d1b](https://github.com/SteamTracking/GameTracking-Deadlock/tree/3e41d1b1f0e5d618857da005aef1e8aec5a657ca),
-  November 4) has the pin's stock file and changes one more ConVar, which neither config sets, so the pin stands.
-  Build 6857 (November 5) changes the dump again, still touching no name either config or upstream 4.0 sets.
-  **Stock-file drift since build 6863** ([GameTracking 10c3b1d](https://github.com/SteamTracking/GameTracking-Deadlock/tree/10c3b1ddab77d16249cc5fbeffffad84315432cc),
-  November 18): Valve raised the stock tail's `rate/min` and `sv_minrate` from 98304 to 133120. Upstream 4.0 predates
-  it, so both configs keep 98304 for now; adopting it is deferred to a Valve-data repin. Build 6864
-  ([GameTracking 5546341](https://github.com/SteamTracking/GameTracking-Deadlock/tree/554634163b8c55d4e3fde34fe1a277357bcd3d98))
-  is the latest checked.
+- **Valve-data baseline (repinned 2026-11-20):** build **6864**, source revision **11254827**, third-party
+  [SteamTracking mirror commit 8e7a86aac3fc547d33b02169b352e812702e1d4c](https://github.com/SteamTracking/GameTracking-Deadlock/tree/8e7a86aac3fc547d33b02169b352e812702e1d4c)
+  (November 20). Matching `PGIVersion` is observed. Since the previous pin, build 6814
+  ([GameTracking e95b323](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248)),
+  the stock file changed only at build 6863
+  ([GameTracking 10c3b1d](https://github.com/SteamTracking/GameTracking-Deadlock/tree/10c3b1ddab77d16249cc5fbeffffad84315432cc),
+  November 18): Valve raised the stock tail's `rate/min` and `sv_minrate` from 98304 to 133120, and both configs took
+  133120 with the repin. The dump changed at builds 6826, 6849 and 6857 (16 ConVars added, 9 changed), none of which
+  either config sets; the pinned audit is unchanged. Of the pinned supplementary string and preset files only
+  `engine2_strings.txt` changed (build dates and parser symbols). OptimizationLock's main config still has 98304; its
+  clean stock copy took 133120 in [`b29993a`](https://github.com/Sqooky/OptimizationLock/commit/b29993a80c01c4bea79273f0a035e93bad4607d1).
+  Annotation evidence links that cite `e95b323` record the capture they were researched against; every name they
+  describe is unchanged at the new pin.
 - **Owner test (2026-11-03):** on build 6842 the 3.8 file ran in the hideout and Sandbox and through one full
   matchmade Street Brawl, so matchmaking accepted the 3.8 engine edits for that mode; a regular 6v6 match is untested.
   Owner-reported, one session; details in [research/OWNER-TEST-2026-11-03.md](research/OWNER-TEST-2026-11-03.md).

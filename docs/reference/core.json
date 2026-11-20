@@ -75,12 +75,13 @@
     "applicability": "Applies to the parent ConVar registration/settings object. Exact load order versus saved values is unverified.",
     "confidence": "Stock/upstream assignment observed in pinned files; inferred or unknown semantics are explicitly labelled",
     "evidence": [
-      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/game/citadel/gameinfo.gi#L522",
-      "https://github.com/Sqooky/OptimizationLock/blob/347a6694bd7779bafa66b339cd13435c90f1c2f3/Sqooky%27s%20.gi/gameinfo.gi#L1366"
+      "https://github.com/SteamTracking/GameTracking-Deadlock/blob/8e7a86aac3fc547d33b02169b352e812702e1d4c/game/citadel/gameinfo.gi#L522",
+      "https://github.com/SteamTracking/GameTracking-Deadlock/commit/10c3b1ddab77d16249cc5fbeffffad84315432cc",
+      "https://github.com/Sqooky/OptimizationLock/commit/b29993a80c01c4bea79273f0a035e93bad4607d1"
     ],
-    "purpose": "Structured gameinfo min metadata for rate; this is not a separate ConVar named min. Declares a lower bound override.",
-    "rationale": "Retains the pinned stock gameinfo assignment. No repository-specific optimization rationale is documented or needed for retaining it.",
-    "test_status": "Static source comparison only; no in-game or tool-build test performed in this audit.",
+    "purpose": "Structured gameinfo min metadata for rate; this is not a separate ConVar named min. Declares a lower bound override for rate (registered archive userinfo, default 80000).",
+    "rationale": "Retains the pinned stock gameinfo assignment. Valve raised it from 98304 to 133120 in build 6863 (stock sv_minrate moved with it); both configs took 133120 on 2026-11-20 with the build 6864 repin. OptimizationLock 4.0's main config still has 98304, while its clean stock copy has 133120 since b29993a. No repository-specific optimization rationale is documented or needed for retaining stock.",
+    "test_status": "Static source comparison only. Whether a saved rate below 133120 is raised at startup is untested.",
     "tradeoffs": "No measured FPS, memory or latency benefit is established. Tool settings can alter compiled assets when used in a build; metadata changes can affect initialization and compatibility. Preserve the owner-approved file until individually tested."
   },
   "ConVars/speaker_config/default": {

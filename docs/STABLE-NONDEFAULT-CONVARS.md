@@ -1,8 +1,8 @@
 # Stable config: convars changed from Valve's defaults
 
-Generated 2026-11-19 by `python3 utils/nondefaults.py` from [`stable-config/gameinfo.gi`](../stable-config/gameinfo.gi)
+Generated 2026-11-20 by `python3 utils/nondefaults.py` from [`stable-config/gameinfo.gi`](../stable-config/gameinfo.gi)
 (upstream comparison: OptimizationLock `48f2ed1f4c2235bdcde665f3ae0c47c62b904eca`; adoption history and owner edits are in [CONFIGS.md](CONFIGS.md)).
-Valve data: [GameTracking-Deadlock `e95b323`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/e95b323b88d48c3fc4d80066ee603fb75060b248), build 6814 (`DumpSource2/convars.txt` and
+Valve data: [GameTracking-Deadlock `8e7a86a`](https://github.com/SteamTracking/GameTracking-Deadlock/tree/8e7a86aac3fc547d33b02169b352e812702e1d4c), build 6864 (`DumpSource2/convars.txt` and
 `game/citadel/gameinfo.gi`). Regenerate after every upstream sync or game patch; don't edit by hand.
 
 - Only active lines count; commented-out lines are ignored. Values are compared after normalising booleans
@@ -351,7 +351,7 @@ depends on startup processing and other authorities.
 | 815 | `cl_aggregate_particles` | `true` | `false` | Particles | developmentonly, duplicate assignments; runtime precedence unverified |
 | 826 | `r_particle_batch_collections` | `true` | `false` | Particles | developmentonly, duplicate assignments; runtime precedence unverified |
 | 881 | `cl_interp_parallel` | `true` | `false` | Misc | developmentonly, duplicate assignments; runtime precedence unverified |
-| 1212 | `sv_minrate` | `98304` | `5000` | Valve stock tail / Networking - General | replicated |
+| 1212 | `sv_minrate` | `133120` | `5000` | Valve stock tail / Networking - General | replicated |
 | 1213 | `sv_maxunlag` | `0.500` | `1` | Valve stock tail / Networking - General | gamedll-only registration |
 | 1214 | `sv_maxunlag_player` | `0.200` | `-1` | Valve stock tail / Networking - General | gamedll-only registration |
 | 1215 | `sv_lagcomp_filterbyviewangle` | `false` | `true` | Valve stock tail / Networking - General | cheat, gamedll-only registration |

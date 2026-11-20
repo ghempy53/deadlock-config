@@ -1,7 +1,8 @@
 # Documentation
 
 Start with the [complete setting reference](SETTING-REFERENCE.md) for explanations and evidence, or
-[CONFIGS.md](CONFIGS.md) to choose a file. Current guidance was reconciled on **2026-10-22** against build **6814**.
+[CONFIGS.md](CONFIGS.md) to choose a file. Current guidance was reconciled on **2026-10-22** against build **6814**;
+Valve data was repinned to build **6864** on 2026-11-20.
 
 ## Current use
 

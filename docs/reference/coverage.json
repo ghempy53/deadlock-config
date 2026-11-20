@@ -1,7 +1,7 @@
 {
   "configs_sha256": {
-    "experimental": "880be41afcfb1c949278c9a974b8fbbab294bbb205b35c1adb815279559ba3bb",
-    "stable": "880be41afcfb1c949278c9a974b8fbbab294bbb205b35c1adb815279559ba3bb"
+    "experimental": "59240e7bfd7493c35bc80254b5e518cb83fe84c2c146d3528efbd1d31a7d6d10",
+    "stable": "59240e7bfd7493c35bc80254b5e518cb83fe84c2c146d3528efbd1d31a7d6d10"
   },
   "counts": {
     "audio": 61,
@@ -6621,7 +6621,7 @@
       "kind": "scalar",
       "line": 1206,
       "path": "ConVars/rate/min",
-      "value": "98304",
+      "value": "133120",
       "variant": "stable"
     },
     {
@@ -6645,7 +6645,7 @@
       "kind": "scalar",
       "line": 1212,
       "path": "ConVars/sv_minrate",
-      "value": "98304",
+      "value": "133120",
       "variant": "stable"
     },
     {
@@ -13925,7 +13925,7 @@
       "kind": "scalar",
       "line": 1206,
       "path": "ConVars/rate/min",
-      "value": "98304",
+      "value": "133120",
       "variant": "experimental"
     },
     {
@@ -13949,7 +13949,7 @@
       "kind": "scalar",
       "line": 1212,
       "path": "ConVars/sv_minrate",
-      "value": "98304",
+      "value": "133120",
       "variant": "experimental"
     },
     {

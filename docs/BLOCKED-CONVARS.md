@@ -1,8 +1,9 @@
 # ConVars flagged gameinfo_cannot_override
 
-Reviewed 2026-10-22: **124 registered names** carry this flag in the pinned Valve-data capture, build **6814**.
+Reviewed 2026-10-22 against build 6814 and re-checked 2026-11-20 against the pinned Valve-data capture, build **6864**:
+the same **124 registered names** carry this flag, with the same declared defaults.
 
-[GameTracking dump, full commit e95b323b88d48c3fc4d80066ee603fb75060b248](https://github.com/SteamTracking/GameTracking-Deadlock/blob/e95b323b88d48c3fc4d80066ee603fb75060b248/DumpSource2/convars.txt) is a **third-party mirror** of Valve console metadata.
+[GameTracking dump, full commit 8e7a86aac3fc547d33b02169b352e812702e1d4c](https://github.com/SteamTracking/GameTracking-Deadlock/blob/8e7a86aac3fc547d33b02169b352e812702e1d4c/DumpSource2/convars.txt) is a **third-party mirror** of Valve console metadata.
 The flag declares that gameinfo is not an allowed override route. It does not mean the feature is unavailable or
 that a menu/server cannot set it. No bypass is proposed. Enforcement was owner-tested on 2026-11-03 for two active
 lines (build 6842, local Hideout): `r_texture_lod_scale 8` read 1 and `sc_disable_spotlight_shadows 1` read false,
