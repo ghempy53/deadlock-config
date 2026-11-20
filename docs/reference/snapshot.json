@@ -6051,9 +6051,9 @@
     "tonemapping",
     "type"
   ],
-  "dump_total": 4867,
-  "manifest_sha256": "7f583a80d42899dbe1d2a64079fc3d0dd3589985979c47128684e306fd373a3f",
-  "steam_inf": "ClientVersion=6814\nServerVersion=6814\nProductName=citadel\nappID=1422450\nServerAppID=1422460\nToolsAppID=211\nSourceRevision=11160503\nVersionDate=Oct 22 2026\nVersionTime=11:09:14\n",
+  "dump_total": 4883,
+  "manifest_sha256": "5ae49205c7e54f67fa2a3b072381d4c550beb3ff0e4e595c14dab79c7b7a72b3",
+  "steam_inf": "ClientVersion=6864\nServerVersion=6864\nProductName=citadel\nappID=1422450\nServerAppID=1422460\nToolsAppID=211\nSourceRevision=11254827\nVersionDate=Nov 18 2026\nVersionTime=14:12:48\n",
   "stock": [
     {
       "active": true,
@@ -8069,7 +8069,7 @@
       "kind": "scalar",
       "line": 522,
       "path": "ConVars/rate/min",
-      "value": "98304"
+      "value": "133120"
     },
     {
       "active": true,
@@ -8090,7 +8090,7 @@
       "kind": "scalar",
       "line": 528,
       "path": "ConVars/sv_minrate",
-      "value": "98304"
+      "value": "133120"
     },
     {
       "active": true,

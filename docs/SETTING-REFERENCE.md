@@ -1,9 +1,8 @@
 # Complete setting reference
 
-Reviewed **2026-11-19**, against captured Valve build **6814**, source revision **11160503** (build 6821's dump,
-stock file and inspected DLL strings are byte-identical; the dump changed at builds 6826, 6849 and 6857 and changes
-nothing either config sets; the stock file is unchanged through 6861, and build 6863 raised the stock tail's `rate/min`
-and `sv_minrate` to 133120, not yet adopted), and OptimizationLock **4.0** (`48f2ed1`).
+Reviewed **2026-11-20**, against captured Valve build **6864**, source revision **11254827** (GameTracking `8e7a86a`;
+repinned from build 6814: the stock file changed only in the tail's `rate/min` and `sv_minrate`, now 133120 in both
+configs, and the dump changes touch nothing either config sets), and OptimizationLock **4.0** (`48f2ed1`).
 This covers both current configs: every scalar assignment, disabled tweak, repeated assignment, nested ConVar
 metadata field and the empty render-pipeline alias section. Parent sections and locations are inventoried in
 [coverage.json](reference/coverage.json).

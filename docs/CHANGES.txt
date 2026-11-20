@@ -692,5 +692,24 @@ OPTIMIZATIONLOCK 4.0 SYNC, BOTH CONFIGS (2026-11-19, OptimizationLock main @ 48f
   Untested in game: on a local server, players at long range should stay visible; no other behavior change is expected.
   Lines 621 to 1088 moved down by 1 (upstream moved one line up); other line numbers unchanged.
 
+VALVE REPIN TO BUILD 6864, STOCK-TAIL RATE MINIMUM, BOTH CONFIGS (2026-11-20)
+  line 1206  min                                    "98304"  ->  "133120"   (rate block, rate/min)
+  line 1212  sv_minrate                             "98304"  ->  "133120"
+  Why: the owner asked for the Valve-data repin deferred in the 4.0 sync. Valve data is now pinned to build 6864,
+  source revision 11254827 (GameTracking 8e7a86aac3fc547d33b02169b352e812702e1d4c, November 20; was build 6814 at
+  e95b323). Valve build 6863 changed exactly these two stock-tail values; no other stock line changed since the old
+  pin, PGIVersion is unchanged, and OptimizationLock b29993a updated its clean stock copy the same way (its main
+  config still has 98304). Both lines are Valve stock, not tuning: the configs now match stock there again.
+  sv_minrate is replicated (help: min bandwidth rate allowed on server), so a local file sets it only for servers
+  the owner's PC runs; rate is archive userinfo (registered 80000), and the rate block's min is its lower bound in
+  this file; whether a saved rate below 133120 is raised at startup is untested. The dump changed at builds 6826,
+  6849 and 6857 (16 added, 9 changed since the old pin), touching no name either config sets; convars.py audit is
+  unchanged at 19 errors and 137 warnings per config and stock_diff is back to 5 errors and 4 warnings per config.
+  Of the eleven pinned supplementary string and preset files only engine2_strings.txt changed (build-date stamps and
+  int8 parser symbols); DefensiveConCommands is still absent from it. Both configs stay byte-identical (SHA-256
+  59240e7bfd7493c35bc80254b5e518cb83fe84c2c146d3528efbd1d31a7d6d10).
+  Untested in game: connect to a match as usual; querying rate in the console should not show a value below 133120.
+  Line numbers unchanged.
+
 NOTES
   - Changes go in dated sections above NOTES, one line N row per convar.

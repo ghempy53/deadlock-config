@@ -89,9 +89,9 @@ assertion that either active config exactly matches that revision. Use explicit 
 ## Stable nondefault report
 
 ```sh
-python3 utils/nondefaults.py --ref e95b323b88d48c3fc4d80066ee603fb75060b248 \
-  --dump /path/to/convars.txt --stock /path/to/stock-gameinfo.gi --build 6814 \
-  --date 2026-11-19 --upstream-ref 48f2ed1f4c2235bdcde665f3ae0c47c62b904eca
+python3 utils/nondefaults.py --ref 8e7a86aac3fc547d33b02169b352e812702e1d4c \
+  --dump /path/to/convars.txt --stock /path/to/stock-gameinfo.gi --build 6864 \
+  --date 2026-11-20 --upstream-ref 48f2ed1f4c2235bdcde665f3ae0c47c62b904eca
 ```
 
 Omit local inputs to download that exact capture. `--stdout` prints without writing. The generator requires a full
