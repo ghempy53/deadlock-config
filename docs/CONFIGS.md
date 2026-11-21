@@ -29,6 +29,14 @@ assignments and upstream values, and records uncertainty rather than treating an
   ([PR #60](https://github.com/ghempy53/deadlock-config/pull/60)) and October 17 from stable 3.5.3
   ([PR #63](https://github.com/ghempy53/deadlock-config/pull/63)); the differences that accumulated since are recorded
   in the [changelog](CHANGES.txt) and git history.
+- **Upstream check (2026-11-21):** `main` had moved to
+  [`0f0bd06`](https://github.com/Sqooky/OptimizationLock/tree/0f0bd065160c8ad4f18aeaae34c509af1d2df602) (November 21)
+  through two commits: [`b29993a`](https://github.com/Sqooky/OptimizationLock/commit/b29993a80c01c4bea79273f0a035e93bad4607d1)
+  (the clean stock copy's rate minimum, already taken here with the build 6864 repin) and `0f0bd06` (Kaizuchaneru's
+  minimum-spec configs: the same rate minimum and `lb_enable_binning` commented out; not used here).
+  `utils/upstream_diff.py` reports the upstream `gameinfo.gi` byte-identical to the 4.0 pin (SHA-256
+  `ee003ebf…5cd058`), so neither config changed and the pin stays `48f2ed1`. Against upstream, both files differ
+  only by the owner settings below and the stock-tail `rate/min` and `sv_minrate` 133120 (upstream main still 98304).
 - **Valve-data baseline (repinned 2026-11-20):** build **6864**, source revision **11254827**, third-party
   [SteamTracking mirror commit 8e7a86aac3fc547d33b02169b352e812702e1d4c](https://github.com/SteamTracking/GameTracking-Deadlock/tree/8e7a86aac3fc547d33b02169b352e812702e1d4c)
   (November 20). Matching `PGIVersion` is observed. Since the previous pin, build 6814
