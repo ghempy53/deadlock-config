@@ -37,6 +37,14 @@ assignments and upstream values, and records uncertainty rather than treating an
   `utils/upstream_diff.py` reports the upstream `gameinfo.gi` byte-identical to the 4.0 pin (SHA-256
   `ee003ebf…5cd058`), so neither config changed and the pin stays `48f2ed1`. Against upstream, both files differ
   only by the owner settings below and the stock-tail `rate/min` and `sv_minrate` 133120 (upstream main still 98304).
+- **Upstream check (2026-11-24):** `main` moved to
+  [`c636bda`](https://github.com/Sqooky/OptimizationLock/tree/c636bda3de1bfa5c06faa7a12f03d30aebd59401) (November 23),
+  which deletes `cvarlist.txt` and `cvars_we_can_modify.txt` and adds `cvars_we_cannot_set.txt`. The upstream
+  `gameinfo.gi` is still byte-identical to the 4.0 pin, so neither config changed and the pin stays `48f2ed1`. The new
+  list names every ConVar flagged `gameinfo_cannot_override` or `replicated`; it matches the pinned build 6864 dump name
+  for name (124 and 985 names, flags equal), so it adds no evidence beyond the
+  [blocked-ConVar list](BLOCKED-CONVARS.md) and the pinned audit. Both configs' 15 active flagged lines are on it, as
+  that list already records; they stay as preserved inherited entries.
 - **Valve-data baseline (repinned 2026-11-20):** build **6864**, source revision **11254827**, third-party
   [SteamTracking mirror commit 8e7a86aac3fc547d33b02169b352e812702e1d4c](https://github.com/SteamTracking/GameTracking-Deadlock/tree/8e7a86aac3fc547d33b02169b352e812702e1d4c)
   (November 20). Matching `PGIVersion` is observed. Since the previous pin, build 6814
